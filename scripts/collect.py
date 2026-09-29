@@ -25,6 +25,19 @@ def matches(pattern, text):
     return sorted({m.group(0).lower() for m in re.finditer(pattern, text, re.I)})
 
 
+def author_metadata(item):
+    """Do not present deposit placeholders as verified personal names."""
+    names, placeholders = [], []
+    for author in item.get("author", []) or []:
+        name = clean(" ".join(filter(None, [author.get("given"), author.get("family")])) or author.get("name", ""))
+        if name.casefold().strip(" .") in {"anonymous", "unknown", "n/a", "not available", "author unknown"}:
+            placeholders.append(name)
+        elif name:
+            names.append(name)
+    status = "partial" if names and placeholders else "placeholder" if placeholders else "available" if names else "missing"
+    return {"authors": names, "author_metadata_status": status, "author_placeholders": placeholders}
+
+
 def publication_date(item):
     for key in ("published-online", "published-print", "published", "issued"):
         parts = item.get(key, {}).get("date-parts", [])
@@ -55,38 +68,44 @@ def screen(item, config, today):
     doi = item.get("DOI", "").strip().lower()
     if not re.fullmatch(r"10\.\d{4,9}/\S+", doi):
         return None, "missing_doi"
+    issns = set(item.get("ISSN", []))
+    journal = next((j for j in config["journals"] if issns.intersection(j["issns"])), None)
+    if journal is None:
+        return None, "journal_not_whitelisted"
     abstract = clean(item.get("abstract", ""))
-    if matches(rules["materials_title"], title) and not matches(rules["graph_evidence"], title + " " + abstract):
+    # Editorial scope, not a judgment that biological network analysis is invalid.
+    # An organism-specific model needs a core research-task signal in its title;
+    # generic structure/community vocabulary in an abstract cannot rescue it.
+    if (matches(rules["application_model_title"], title)
+            and matches(rules["biomedical_context"], title)
+            and not matches(rules["core_contribution_title"], title)):
+        return None, "application_led_biomedical_model"
+    if matches(rules["materials_title"], title) and matches(rules["network_object"], title) and not matches(rules["graph_evidence"], title + " " + abstract):
         return None, "material_network_without_graph_evidence"
     if matches(rules["ml_title"], title) and not matches(rules["ml_core_exception"], title):
         return None, "general_machine_learning"
-    direct = matches(rules["explicit"], title)
-    mechanism = matches(rules["mechanism"], title)
-    network_title = matches(rules["network"], title)
-    abstract_direct = matches(rules["explicit"], abstract)
-    if direct:
-        evidence, basis = direct, "title_explicit"
-    elif network_title and mechanism:
-        evidence, basis = network_title + mechanism, "title_network_mechanism"
-    elif network_title and abstract_direct and matches(rules["mechanism"], abstract):
-        evidence, basis = abstract_direct, "abstract_support"
-    else:
+    network_direct = matches(rules["network_explicit"], title)
+    network_object = matches(rules["network_object"], title)
+    network_mechanism = matches(rules["network_mechanism"], title)
+    text = title + " " + abstract
+    network_abstract = matches(rules["network_explicit"], abstract)
+    is_network = bool(network_direct or (network_object and network_mechanism) or (network_object and network_abstract and matches(rules["network_mechanism"], abstract)))
+    if not is_network:
         return None, "not_core"
-    categories = [c["id"] for c in config["categories"] if matches(c["pattern"], title)]
-    if not categories:
-        categories = [c["id"] for c in config["categories"] if matches(c["pattern"], abstract)]
-    if not categories:
-        categories = ["unclassified"]
-    issns = set(item.get("ISSN", []))
-    featured = next((j["short"] for j in config["featured_journals"] if issns.intersection(j["issns"])), None)
+    categories = []
+    for c in config["network_categories"]:
+        if matches(c["pattern"], text):
+            categories.append(c["id"])
+    evidence = sorted(set(network_direct + network_object + network_mechanism + network_abstract))
     return {
         "doi": doi, "url": "https://doi.org/" + quote(doi, safe="/"),
         "title": title,
-        "authors": [clean(" ".join(filter(None, [a.get("given"), a.get("family")])) or a.get("name", "")) for a in item.get("author", [])],
-        "journal": clean(" / ".join(item.get("container-title", []))),
+        **author_metadata(item),
+        "journal": journal["name"],
         "issns": sorted(issns), "date": published.isoformat(), "date_source": date_source,
-        "categories": categories, "featured": featured, "evidence": evidence,
-        "screening_basis": basis, "source": "Crossref", "abstract_available": bool(abstract),
+        "categories": categories or ["other"],
+        "featured": journal["short"] if journal["short"] in config["featured_journals"] else None, "journal_short": journal["short"], "evidence": evidence,
+        "screening_basis": "network", "source": "Crossref", "abstract_available": bool(abstract),
         "metadata_url": "https://api.crossref.org/works/" + quote(doi, safe=""),
         "has_update": bool(item.get("updated-by"))
     }, "included"
@@ -117,16 +136,16 @@ def write_json(path, value):
 def collect(config, today, out=OUT, fetch=request_json):
     start = today - timedelta(days=config["window_days"] - 1)
     timestamp = datetime.now(timezone.utc).isoformat()
-    jobs = [("topic: " + q, "https://api.crossref.org/works", q) for q in config["queries"]]
-    jobs += [("journal: " + j["name"], "https://api.crossref.org/journals/" + j["issns"][0] + "/works", "network") for j in config["featured_journals"]]
+    jobs = [("journal: " + j["name"], "https://api.crossref.org/journals/" + j["issns"][0] + "/works", j) for j in config["journals"]]
     candidates, coverage, errors = {}, [], []
     for label, endpoint, query in jobs:
         report = {"label": label, "query": query, "retrieved": 0, "total_results": None, "truncated": False, "urls": []}
-        cursor = "*"
         try:
-            for _ in range(config["max_pages_per_query"]):
-                params = {"query": query, "filter": f"type:journal-article,from-pub-date:{start},until-pub-date:{today}",
-                          "rows": config["rows_per_page"], "cursor": cursor, "sort": "relevance", "order": "desc"}
+            # Crossref rejects publication-date sorting with cursor pagination.
+            # This bounded collection stays below the 10,000 offset limit.
+            for page in range(config["max_pages_per_journal"]):
+                params = {"filter": f"type:journal-article,from-pub-date:{start},until-pub-date:{today}",
+                          "rows": config["rows_per_page"], "offset": page * config["rows_per_page"], "sort": "published", "order": "desc"}
                 url = endpoint + "?" + urlencode(params)
                 message = fetch(url)
                 report["urls"].append(url)
@@ -139,10 +158,8 @@ def collect(config, today, out=OUT, fetch=request_json):
                         if key not in candidates:
                             candidates[key] = {"item": item, "queries": []}
                         candidates[key]["queries"].append(label)
-                next_cursor = message.get("next-cursor")
-                if not items or report["retrieved"] >= report["total_results"] or not next_cursor or next_cursor == cursor:
+                if not items or report["retrieved"] >= report["total_results"]:
                     break
-                cursor = next_cursor
                 time.sleep(0.25)
             report["truncated"] = report["retrieved"] < report["total_results"]
             print(f"{label}: {report['retrieved']}/{report['total_results']}", flush=True)
@@ -165,8 +182,8 @@ def collect(config, today, out=OUT, fetch=request_json):
         payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "window_start": start.isoformat(), "window_end": today.isoformat(),
                    "window_days": config["window_days"], "source": "Crossref", "screening_version": config["version"],
                    "config_sha256": hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest(),
-                   "categories": [{"id": c["id"], "label": c["label"]} for c in config["categories"]] + [{"id": "unclassified", "label": "待分类"}],
-                   "featured_journals": config["featured_journals"], "coverage": coverage,
+                   "categories": [{"id": c["id"], "label": c["label"]} for c in config["network_categories"]] + [{"id": "other", "label": "其他"}],
+                   "featured_journals": config["featured_journals"], "featured_order_year": config["featured_order_year"], "journals": config["journals"], "coverage": coverage,
                    "candidate_count": len(candidates), "screening_counts": dict(stats), "papers": papers}
         write_json(out / "papers.json", payload)
     write_json(out / "status.json", status)
