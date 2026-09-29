@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="关注复杂网络结构与网络上的动力学，按研究方向浏览近90天期刊文献。">
+  <meta name="color-scheme" content="light">
+  <title>Network Observatory · 复杂网络文献观察</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#latest">跳转至文献列表</a>
+  <header class="masthead wrap">
+    <a class="brand" href="./" aria-label="复杂网络文献观察首页"><span class="brand-mark" aria-hidden="true">N<span>·</span></span><span>NETWORK<br>OBSERVATORY</span></a>
+    <div class="header-note">复杂网络文献观察 <span class="beta">BETA</span></div>
+    <a class="quiet-link source-link" href="https://github.com/hjyu14/complex-network-papers" target="_blank" rel="noopener noreferrer">项目与收录规则 ↗</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> STRUCTURE · DYNAMICS · DISCOVERY</p>
+        <h1 id="page-title">看见网络科学的<br><em>最新进展。</em></h1>
+        <p class="intro">从网络结构到集体动力学，追踪近 90 天的期刊文献。<br class="desktop-break">少一点检索负担，多一点研究视野。</p>
+      </div>
+      <div class="hero-aside">
+        <p class="issue-label">THE LATEST / 最近 90 天</p>
+        <div class="stat-line"><span>收录文献</span><strong id="total-stat">—</strong></div>
+        <div class="stat-line"><span>重点期刊文献</span><strong id="featured-stat">—</strong></div>
+        <p id="updated" class="update-note">正在读取文献快照…</p>
+      </div>
+    </section>
+
+    <div id="status" class="notice" role="status" aria-live="polite">正在加载数据…</div>
+
+    <section class="featured-section" aria-labelledby="featured-title">
+      <div class="section-heading"><div><p class="eyebrow">JOURNAL SPOTLIGHT</p><h2 id="featured-title">重点期刊 · 最新文章</h2></div><button id="featured-all" class="text-button" type="button">查看全部重点文献 <span aria-hidden="true">↗</span></button></div>
+      <p class="section-caption">NC · PNAS · PRL · Science Advances · Nature · Science · Nature Physics<br>按明确期刊白名单标记；所有文章均需通过主题筛选。</p>
+      <div id="featured-list" class="featured-grid"><p class="empty">等待真实文献数据。</p></div>
+    </section>
+
+    <section id="latest" class="browse-section" aria-labelledby="latest-title">
+      <aside class="sidebar">
+        <p class="eyebrow">EXPLORE BY TOPIC</p><h2>研究方向</h2>
+        <nav id="categories" aria-label="研究方向筛选"></nav>
+        <div class="sidebar-note"><span class="dot"></span> 每日更新计划<br><span>北京时间 06:20<br>实际更新可能延迟</span></div>
+      </aside>
+      <div class="results-column">
+        <div class="section-heading results-heading"><h2 id="latest-title">最新文献</h2><span class="sort-label">发表日期 ↓</span></div>
+        <div class="toolbar">
+          <label class="search-field"><span class="sr-only">搜索标题、作者、期刊或 DOI</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索标题、作者、期刊或 DOI" autocomplete="off"></label>
+          <label><span class="sr-only">发表时间范围</span><select id="period"><option value="90">近 90 天</option><option value="30">近 30 天</option><option value="7">近 7 天</option></select></label>
+        </div>
+        <div class="result-meta"><p id="result-count" aria-live="polite">等待数据</p><button id="clear" type="button" class="text-button" hidden>清除筛选 ×</button></div>
+        <div id="paper-list"><p class="empty">正在加载文献…</p></div>
+        <button id="load-more" type="button" class="load-more" hidden>加载更多文献</button>
+      </div>
+    </section>
+
+    <section class="methodology" aria-labelledby="method-title">
+      <details><summary id="method-title">这些文献如何被收录？<span>数据来源、筛选依据与覆盖限制</span></summary>
+        <div class="method-body">
+          <p>数据来自 Crossref 出版方元数据。以复杂网络结构和网络上的动力学为核心，使用英文标题与可用摘要进行规则筛选；这不是人工审稿，可能误收或漏收。一般神经网络应用不在核心范围。摘要仅用于筛选，不在本站转载。</p>
+          <p>日期优先采用在线发表日；缺失时依次回退到纸刊、出版或 issued 日期，并在每篇文章中标明。日期不完整或晚于快照截止日的文章不收录。只收录 journal-article 类型，可能包含综述，不包含预印本。</p>
+          <p>研究分类允许一文多类。重点期刊标记来自 ISSN 白名单，不代表文章质量评定。每篇文章可展开查看规则命中词与来源；请以出版方原文及最新更正、撤稿信息为准。</p>
+          <p>查询存在预算上限，数据库可能延迟收录。本站不是全量、实时或无遗漏的文献索引。采集失败时保留最近完整快照，并显示警告。</p>
+          <p id="coverage-summary">尚无采集报告。</p>
+          <div class="method-links"><a href="data/papers.json" target="_blank" rel="noopener">论文快照与查询报告 ↗</a><a href="data/status.json" target="_blank" rel="noopener">最近采集状态 ↗</a><a href="https://github.com/hjyu14/complex-network-papers/blob/main/config/sources.json" target="_blank" rel="noopener">查看筛选配置 ↗</a></div>
+        </div>
+      </details>
+    </section>
+  </main>
+  <footer class="wrap"><span>NETWORK OBSERVATORY</span><p>连接文献与问题。<span class="footer-separator"> / </span>元数据来自 Crossref · 原文版权归出版方或作者所有</p></footer>
+  <noscript><p class="wrap">此页面需要 JavaScript 才能筛选文献。也可以直接读取 <a href="data/papers.json">文献数据文件</a>。</p></noscript>
+</body>
+</html>

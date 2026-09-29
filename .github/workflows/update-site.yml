@@ -1,0 +1,74 @@
+name: Update literature and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: Fetch a fresh Crossref snapshot
+        type: boolean
+        default: true
+  schedule:
+    - cron: '20 22 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: literature-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    outputs:
+      collection_outcome: ${{ steps.collect.outcome }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify screening and failure handling
+        run: |
+          python -m unittest discover -s tests -v
+          node --check site/app.js
+      - name: Collect online metadata
+        id: collect
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh)
+        continue-on-error: true
+        run: python scripts/collect.py
+      - name: Preserve snapshot and attempt status
+        if: steps.collect.outcome == 'success' || steps.collect.outcome == 'failure'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data
+          if ! git diff --cached --quiet; then
+            git commit -m "data: update Crossref snapshot and collection status"
+            git push
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Report incomplete collection after publishing the warning
+        if: needs.build.outputs.collection_outcome == 'failure'
+        run: |
+          echo 'Collection incomplete. The previous snapshot and failure status have been deployed.'
+          exit 1

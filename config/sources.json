@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "window_days": 90,
+  "rows_per_page": 100,
+  "max_pages_per_query": 2,
+  "queries": ["complex networks", "network topology", "network community detection", "network percolation", "epidemic spreading networks", "synchronization networks", "cascading failures networks", "network resilience", "multilayer networks", "temporal networks", "higher order networks", "hypergraph dynamics", "evolutionary games networks", "network controllability"],
+  "featured_journals": [
+    {"name": "Nature Communications", "short": "NC", "issns": ["2041-1723"]},
+    {"name": "Proceedings of the National Academy of Sciences", "short": "PNAS", "issns": ["1091-6490", "0027-8424"]},
+    {"name": "Physical Review Letters", "short": "PRL", "issns": ["1079-7114", "0031-9007"]},
+    {"name": "Science Advances", "short": "SA", "issns": ["2375-2548"]},
+    {"name": "Nature", "short": "Nature", "issns": ["1476-4687", "0028-0836"]},
+    {"name": "Science", "short": "Science", "issns": ["1095-9203", "0036-8075"]},
+    {"name": "Nature Physics", "short": "Nat. Phys.", "issns": ["1745-2481", "1745-2473"]}
+  ],
+  "categories": [
+    {"id": "structure", "label": "结构与生成", "pattern": "complex networks?|network science|network (?:structure|topolog|growth)|random graphs?|scale.free|small.world|degree distribution|preferential attachment|network motifs?"},
+    {"id": "inference", "label": "社区与推断", "pattern": "community detect|community structure|link prediction|network reconstruct|network inference|stochastic block|graph partition"},
+    {"id": "spreading", "label": "传播与渗流", "pattern": "percolation|epidemic|contagion|spreading|cascad(?:e|ing)|diffusion"},
+    {"id": "collective", "label": "同步与集体行为", "pattern": "synchroni[sz]|kuramoto|collective behavio|consensus|evolutionary games?|cooperation|oscillators?"},
+    {"id": "resilience", "label": "韧性与控制", "pattern": "resilien|robustness|controllability|network control|network dismantl|critical transition|tipping point"},
+    {"id": "higher", "label": "多层、时变与高阶", "pattern": "multilayer|multiplex|interdependent networks?|temporal networks?|time.varying networks?|higher.order|hypergraphs?|simplicial"},
+    {"id": "applications", "label": "实际网络应用", "pattern": "social networks?|biological networks?|ecological networks?|food webs?|connectom|brain networks?|power grids?|transport(?:ation)? networks?|infrastructure networks?"}
+  ],
+  "screening": {
+    "explicit": "complex networks?|network science|network topolog|network motifs?|degree distribution|preferential attachment|scale.free networks?|small.world networks?|multilayer networks?|multiplex networks?|temporal networks?|interdependent networks?|higher.order (?:networks?|interactions?)|hypergraphs?|simplicial complexes?|community detection|stochastic block models?",
+    "network": "\\b(?:networks?|graphs?|hypergraphs?|connectomes?)\\b|food webs?|power grids?",
+    "mechanism": "\\b(?:topolog\\w*|structur(?:e|es|al)|percolation|synchroni[sz]\\w*|kuramoto|cascad\\w*|epidemic\\w*|contagion|spreading|diffusion|collective|cooperation|evolutionary games?|controllability|dismantl\\w*|resilien\\w*|robustness|community|degree distribution|critical transition|tipping|link prediction|reconstruct\\w*|growth|oscillat\\w*)\\b",
+    "ml_title": "neural networks?|deep learning|graph learning|graph neural|convolutional|transformer|classification|object detection|anomaly detection|sentiment analysis|recommendation|knowledge distillation|few.shot|segmentation|recognition",
+    "ml_core_exception": "complex networks?|percolation|synchroni[sz]|kuramoto|cascading|contagion|epidemic|network topology|network controllability",
+    "materials_title": "hydrogels?|polymer|electrodes?|emulsion|fibrous|nanowires?|cross.linked|elastomer",
+    "graph_evidence": "\\b(?:nodes?|edges?|vertices|adjacency|centrality|percolation)\\b|degree distribution|complex networks?|network science|small.world|scale.free",
+    "non_article_title": "^(?:correction|erratum|corrigendum|retraction|author correction|publisher correction|editorial|addendum)\\b"
+  }
+}
