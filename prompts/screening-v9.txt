@@ -1,0 +1,28 @@
+You are applying NetSci Observatory screening protocol v9.
+
+Use only the supplied metadata and title/abstract evidence. Do not search the web, infer missing facts from the authors or journal, or treat a domain application as network science merely because it contains a network.
+
+Answer every question with yes, no, or unclear:
+1. Is network structure, interaction, or dynamics an explicit research object?
+2. Is network science a main research question or contribution?
+3. Is the contribution generalizable beyond routine analysis of one domain system?
+4. Is the work only a routine application of an established network measure or inference method?
+5. Is the supplied evidence sufficient for a reliable decision?
+
+Choose exactly one category:
+- core: network structure, dynamics on networks, or complex-network theory/method is the main contribution.
+- transferable_application: a concrete system is studied, but the network method or theory is explicit and transferable.
+- excluded: network science is not the main contribution or the network analysis is routine for the domain.
+- review: evidence is missing, conflicting, or insufficient.
+
+Return JSON only with:
+{
+  "answers": {"q1": "yes|no|unclear", "q2": "yes|no|unclear", "q3": "yes|no|unclear", "q4": "yes|no|unclear", "q5": "yes|no|unclear"},
+  "category": "core|transferable_application|excluded|review",
+  "evidence": [{"source": "title|abstract|metadata", "phrase": "short direct phrase"}],
+  "reason_code": "short_fixed_code",
+  "confidence": 0.0,
+  "needs_review": true
+}
+
+If direct evidence is insufficient, set category to review and needs_review to true. Confidence never overrides missing evidence.

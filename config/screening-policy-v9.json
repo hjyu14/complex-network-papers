@@ -1,0 +1,43 @@
+{
+  "version": "v9",
+  "status": "discussion_only",
+  "collection": {
+    "initial_start": "2026-09-01",
+    "initial_end": "2026-09-30",
+    "public_window_days": 90,
+    "rolling_daily": true,
+    "backfill_before_initial_start": false
+  },
+  "date_policy": {
+    "priority": ["published-online", "print", "published", "issued"],
+    "reject_incomplete": true,
+    "reject_future": true
+  },
+  "metadata": {
+    "primary_source": "crossref",
+    "fallback_source": "doi_publisher_page",
+    "fallback_triggers": [
+      "missing_abstract",
+      "missing_title",
+      "missing_date",
+      "missing_article_type",
+      "journal_identity_conflict",
+      "metadata_conflict"
+    ],
+    "random_quality_check_rate": 0.05,
+    "store_full_abstract": false
+  },
+  "ai_review": {
+    "allowed_inputs": ["title", "abstract", "journal", "issn", "doi", "date", "article_type"],
+    "require_direct_evidence": true,
+    "no_evidence_action": "review",
+    "classes": ["core", "transferable_application", "excluded", "review"]
+  },
+  "publisher_access": {
+    "allow_doi_resolution": true,
+    "allow_paywall_bypass": false,
+    "allow_login": false,
+    "allow_captcha_bypass": false,
+    "store_pdf": false
+  }
+}
