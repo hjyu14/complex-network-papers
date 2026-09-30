@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       refresh:
-        description: Fetch a fresh Crossref snapshot
+        description: Re-screen the fixed original cohort (no new papers)
         type: boolean
         default: true
   schedule:
@@ -36,11 +36,17 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           node --check site/app.js
-      - name: Collect online metadata
+          node --test tests/test_app.cjs
+      - name: Re-screen existing cohort only
         id: collect
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh)
         continue-on-error: true
-        run: python scripts/collect.py
+        run: python scripts/rescreen_existing.py --source site/data/baseline-v6.json --out site/data
+      - name: Validate re-screened cohort before publishing
+        if: steps.collect.outcome == 'success'
+        run: |
+          python -m unittest discover -s tests -v
+          node --test tests/test_app.cjs
       - name: Preserve snapshot and attempt status
         if: steps.collect.outcome == 'success' || steps.collect.outcome == 'failure'
         run: |

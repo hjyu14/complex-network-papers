@@ -1,9 +1,10 @@
 "use strict";
 const $ = (selector) => document.querySelector(selector);
-const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", query: "", days: 90, limit: 30 };
+const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", method: "all", query: "", days: 90, page: 1, pageSize: 10 };
 const scopeLabel = (id) => ({ all: tr("All journals", "全部期刊"), featured: tr("Spotlight journals", "重点期刊"), other: tr("Other journals", "其他期刊") })[id];
 const dateLabel = (id) => ({ "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print date (fallback)", "纸刊日期（回退）"), published: tr("Publication date (fallback)", "出版日期（回退）"), issued: tr("Issued date (fallback)", "issued 日期（回退）") })[id] || id;
 const englishCategories = { network_structure: "Structure & formation", network_inference: "Community detection, inference & reconstruction", network_spreading: "Spreading, diffusion & percolation", network_collective: "Synchronization, games & collective behavior", network_resilience: "Robustness, cascades & control", other: "Other" };
+const englishMethods = { theory: "Theory", empirical: "Empirical", simulation: "Simulation", ai_ml: "AI / ML" };
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -23,6 +24,22 @@ function link(text, url, className = "") {
 }
 function categoryLabel(id) {
   return tr(englishCategories[id] || "Other", state.data.categories.find((c) => c.id === id)?.label || "其他");
+}
+function methodLabel(id) {
+  const chinese = { theory: "理论模型", empirical: "实证数据", simulation: "数值模拟", ai_ml: "人工智能 / 机器学习" };
+  return tr(englishMethods[id] || id, chinese[id] || id);
+}
+function renderMethods() {
+  const select = $("#method");
+  const all = element("option", "", tr("All methods", "全部方法"));
+  all.value = "all";
+  select.replaceChildren(all);
+  const present = new Set(state.papers.flatMap((paper) => paper.methods || []));
+  Object.keys(englishMethods).filter((id) => present.has(id)).forEach((id) => {
+    const option = element("option", "", methodLabel(id)); option.value = id; select.append(option);
+  });
+  select.value = state.method;
+  select.disabled = !present.size;
 }
 function timeNode(paper) {
   const node = element("time", "", paper.date);
@@ -57,10 +74,12 @@ function paperCard(paper) {
   const bottom = element("div", "paper-bottom");
   const tags = element("div", "tags");
   paper.categories.forEach((id) => tags.append(element("span", "tag", categoryLabel(id))));
+  (paper.methods || []).forEach((id) => tags.append(element("span", "tag method-tag", methodLabel(id))));
   bottom.append(tags, link(tr("Read paper ↗", "原文 ↗"), paper.url, "paper-link"));
   const details = element("details", "evidence");
   details.append(element("summary", "", tr("Inclusion evidence & date source", "收录依据与日期来源")));
   details.append(element("p", "", tr("Network structure/dynamics rule matches: ", "网络结构／网络动力学规则命中：") + paper.evidence.join(" / ")));
+  if ((paper.methods || []).length) details.append(element("p", "", tr("Method evidence: ", "方法证据：") + Object.values(paper.method_evidence || {}).flat().join(" / ")));
   details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));
   details.append(element("p", "", tr("Query: ", "检索路径：") + paper.retrieved_by.join("; ") + tr(". Automated screening, not individually reviewed.", "。规则筛选，未经人工逐篇审定。")));
   if (paper.author_metadata_status !== "available") details.append(element("p", "", tr("Crossref author metadata is missing or contains placeholders. This does not establish publication status; check the publisher. Metadata is reread on each collection.", "Crossref 作者信息缺失或包含占位值，不能据此判断出版状态；请核对出版方。每次采集会重新读取元数据。")));
@@ -80,7 +99,7 @@ function renderCategories() {
     button.append(element("span", "", category.id === "all" ? tr("All topics", "全部主题") : categoryLabel(category.id)), element("span", "", String(count)));
     button.addEventListener("click", () => {
       state.category = category.id;
-      state.limit = 30;
+      state.page = 1;
       renderCategories();
       renderResults();
     });
@@ -88,12 +107,13 @@ function renderCategories() {
   });
 }
 function resetFilters(scope = "all") {
-  Object.assign(state, { category: "all", journal: "all", scope, query: "", days: 90, limit: 30 });
+  Object.assign(state, { category: "all", journal: "all", scope, method: "all", query: "", days: 90, page: 1 });
   $("#search").value = ""; $("#period").value = "90";
-  $("#journal").value = "all"; $("#scope").value = scope;
+  $("#journal").value = "all"; $("#scope").value = scope; $("#method").value = "all";
   renderCategories(); renderResults();
 }
 function renderResults() {
+  $("#method-filter-label").textContent = state.method === "all" ? tr("Research method (optional)", "研究方法（可选）") : tr("Research method: ", "研究方法：") + methodLabel(state.method);
   const end = new Date(state.data.window_end + "T00:00:00Z");
   const cutoff = new Date(end.getTime() - (state.days - 1) * 86400000).toISOString().slice(0, 10);
   const query = state.query.trim().toLowerCase();
@@ -101,18 +121,45 @@ function renderResults() {
     paper.date >= cutoff && (state.category === "all" || paper.categories.includes(state.category)) &&
     (state.journal === "all" || paper.journal_short === state.journal) &&
     (state.scope === "all" || (state.scope === "featured" ? Boolean(paper.featured) : !paper.featured)) &&
+    (state.method === "all" || (paper.methods || []).includes(state.method)) &&
     (!query || [paper.title, paper.journal, paper.journal_short, paper.doi, ...paper.authors].join(" ").toLowerCase().includes(query))
   );
   $("#latest-title").textContent = state.scope === "featured" ? tr("Spotlight papers", "重点期刊文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("Latest papers", "最新文献");
   const journalName = state.data.journals.find((j) => j.short === state.journal)?.name;
   $("#result-count").textContent = `${results.length} ${tr("papers", "篇文献")} · ${journalName || scopeLabel(state.scope)} · ${state.category === "all" ? tr("All topics", "全部主题") : categoryLabel(state.category)} · ${tr("through", "截至")} ${state.data.window_end}`;
-  $("#paper-list").replaceChildren(...results.slice(0, state.limit).map(paperCard));
+  const pages = Math.max(1, Math.ceil(results.length / state.pageSize));
+  if (state.page > pages) state.page = pages;
+  const start = (state.page - 1) * state.pageSize;
+  $("#paper-list").replaceChildren(...results.slice(start, start + state.pageSize).map(paperCard));
   if (!results.length) $("#paper-list").append(element("p", "empty", tr("No matching papers. Clear filters or expand the date range.", "当前条件下没有匹配文献。可以清除筛选或扩大时间范围。")));
-  $("#load-more").hidden = results.length <= state.limit;
-  const remaining = Math.max(0, results.length - state.limit);
-  $("#load-more").textContent = tr(`Load more papers (${remaining} remaining)`, `加载更多文献（还有 ${remaining} 篇）`);
-  $("#clear").hidden = [state.category, state.journal, state.scope].every((v) => v === "all") && !state.query && state.days === 90;
+  renderPagination(pages);
+  $("#clear").hidden = [state.category, state.journal, state.scope, state.method].every((v) => v === "all") && !state.query && state.days === 90;
   $("#back-all").hidden = state.scope === "all";
+}
+function renderPagination(pages) {
+  const nav = $("#pagination");
+  nav.replaceChildren();
+  if (pages <= 1) return;
+  const previous = element("button", "page-button", tr("← Previous", "← 上一页"));
+  previous.disabled = state.page === 1;
+  const go = (page) => { state.page = page; renderResults(); $("#latest").scrollIntoView({behavior:"auto"}); };
+  previous.addEventListener("click", () => go(state.page - 1));
+  nav.append(previous);
+  for (let page = 1; page <= pages; page += 1) {
+    if (pages > 7 && page !== 1 && page !== pages && Math.abs(page - state.page) > 1) {
+      if (page === 2 || page === pages - 1) nav.append(element("span", "page-gap", "…"));
+      continue;
+    }
+    const button = element("button", `page-button${page === state.page ? " active" : ""}`, String(page));
+    button.setAttribute("aria-label", tr(`Page ${page}`, `第 ${page} 页`));
+    if (page === state.page) button.setAttribute("aria-current", "page");
+    button.addEventListener("click", () => go(page));
+    nav.append(button);
+  }
+  const next = element("button", "page-button", tr("Next →", "下一页 →"));
+  next.disabled = state.page === pages;
+  next.addEventListener("click", () => go(state.page + 1));
+  nav.append(next);
 }
 function bindControls() {
   state.data.journals.forEach((journal) => {
@@ -122,16 +169,16 @@ function bindControls() {
     state.journal = event.target.value;
     // Selecting a journal must not leave an incompatible hidden spotlight filter.
     if (state.journal !== "all") { state.scope = "all"; $("#scope").value = "all"; }
-    state.limit = 30; renderResults();
+    state.page = 1; renderResults();
   });
   $("#scope").addEventListener("change", (event) => {
     state.scope = event.target.value;
     state.journal = "all"; $("#journal").value = "all";
-    state.limit = 30; renderResults();
+    state.page = 1; renderResults();
   });
-  $("#search").addEventListener("input", (event) => { state.query = event.target.value; state.limit = 30; renderResults(); });
-  $("#period").addEventListener("change", (event) => { state.days = Number(event.target.value); state.limit = 30; renderResults(); });
-  $("#load-more").addEventListener("click", () => { state.limit += 30; renderResults(); });
+  $("#method").addEventListener("change", (event) => { state.method = event.target.value; state.page = 1; renderResults(); });
+  $("#search").addEventListener("input", (event) => { state.query = event.target.value; state.page = 1; renderResults(); });
+  $("#period").addEventListener("change", (event) => { state.days = Number(event.target.value); state.page = 1; renderResults(); });
   $("#featured-all").addEventListener("click", () => {
     resetFilters("featured"); $("#latest").scrollIntoView({ behavior: "auto" });
   });
@@ -150,7 +197,7 @@ function renderSnapshot() {
   const data = state.data;
   const featured = state.papers.filter((p) => p.featured);
   $("#featured-journals").textContent = data.featured_journals.map((short) => short === "PNAS" ? short : data.journals.find((j) => j.short === short)?.name || short).join(" · ");
-  $("#featured-order").textContent = tr(`Journal names ordered by ${data.featured_order_year} impact factor; six newest papers shown by publication date.`, `期刊名称按 ${data.featured_order_year} 年影响因子降序排列；文章按发表日期展示最新六篇。`);
+  $("#featured-order").textContent = tr("Network-science research published in these selected leading journals, subject to the same inclusion criteria as the full feed.", "精选上述重点期刊中的网络科学研究，与全站文章采用相同的主题收录标准。");
   $("#total-stat").textContent = String(state.papers.length);
   $("#featured-stat").textContent = String(featured.length);
   const updated = new Date(data.generated_at).toLocaleString(language === "zh" ? "zh-CN" : "en-GB", { timeZone: "Asia/Shanghai", hour12: false });
@@ -159,8 +206,11 @@ function renderSnapshot() {
   if (!featured.length) $("#featured-list").append(element("p", "empty", tr("No spotlight papers passed this snapshot's screening. This does not mean no relevant papers were published.", "本次快照没有通过筛选的重点期刊文章；这不代表近期没有相关论文。")));
   const truncated = data.coverage.filter((q) => q.truncated).length;
   if (truncated) $("#status").classList.add("warning");
-  $("#status").textContent = tr(`Snapshot ${data.window_start} — ${data.window_end} · Crossref · Automated screening may miss or misclassify papers. ${truncated} queries reached the collection limit.`, `快照范围 ${data.window_start} — ${data.window_end} · Crossref 元数据 · 自动规则筛选，可能误收或漏收 · ${truncated} 个查询达到采集上限。`);
-  $("#coverage-summary").textContent = tr(`${data.coverage.length} queries; ${data.candidate_count} unique candidates; ${data.papers.length} included; ${truncated} queries truncated. Rules v${data.screening_version}. Topic counts overlap. Date filters are relative to the snapshot end date.`, `本次共 ${data.coverage.length} 个查询，${data.candidate_count} 条去重候选，收录 ${data.papers.length} 篇；${truncated} 个查询未取尽结果。规则版本 v${data.screening_version}。分类数量可重叠，时间筛选以快照截止日为基准。`);
+  $("#status").textContent = tr(`90-day feed · journal whitelist · network structure and dynamics · automated first-pass screening.`, `近 90 天 · 期刊白名单 · 网络结构与网络动力学 · 自动规则初筛。`);
+  $("#coverage-summary").textContent = tr(`${data.coverage.length} journal queries; ${data.candidate_count} unique candidates; ${data.papers.length} included. Rules v${data.screening_version}. ${truncated ? `${truncated} queries reached the retrieval budget.` : "All journal queries stayed within the retrieval budget."} Topic counts overlap. Date filters are relative to the snapshot end date.`, `查询 ${data.coverage.length} 本期刊，去重候选 ${data.candidate_count} 条，收录 ${data.papers.length} 篇。规则版本 v${data.screening_version}。${truncated ? `${truncated} 个查询达到采集预算。` : "所有期刊查询均未达到采集预算。"} 主题分类可重叠，时间筛选以快照截止日为基准。`);
+  if (data.rescreening?.scope === "existing_papers_only") {
+    $("#coverage-summary").textContent = tr(`Rules v${data.screening_version}: re-screened the existing ${data.rescreening.input_count} papers; ${data.papers.length} retained, no new papers added. Earlier unreviewed candidates were not processed in this run. Topics may overlap; date filters use the snapshot end date.`, `规则 v${data.screening_version}：仅重筛原有 ${data.rescreening.input_count} 篇，保留 ${data.papers.length} 篇，未新增文献。此前待核查候选未在本轮处理。主题可重叠，时间筛选以快照截止日为基准。`);
+  }
   const pending = Object.entries(data.screening_counts || {}).filter(([reason]) => reason.startsWith("review_") || reason === "missing_or_partial_date").reduce((sum, [, count]) => sum + count, 0);
   $("#coverage-summary").textContent += tr(` ${pending} candidates awaiting review, not displayed as papers.`, ` ${pending} 条候选待核查，未作为论文展示。`);
   if (Date.now() - new Date(data.generated_at).getTime() > 48 * 3600000) {
@@ -171,7 +221,7 @@ function renderSnapshot() {
     $("#status").textContent += state.attempt ? tr(" The latest collection failed; the previous valid snapshot is retained.", " 最近一次采集未完整成功，当前保留上次有效快照。") : tr(" Latest collection status unavailable.", " 最近采集状态不可用。");
     $("#status").classList.add("warning");
   }
-  renderCategories(); renderResults();
+  renderMethods(); renderCategories(); renderResults();
 }
 function renderUnavailable() {
   $("#status").textContent = tr("Paper snapshot unavailable or incompatible with current rules. No sample papers are substituted. Please retry later.", "文献快照暂不可用或为旧版快照，不符合当前规则。未使用示例论文，请稍后重试。");
@@ -186,7 +236,7 @@ function renderUnavailable() {
 async function init() {
   try {
     const data = await getJSON("data/papers.json");
-    if (!Array.isArray(data.papers) || !data.window_end || !Array.isArray(data.coverage) || data.screening_version !== 6 || !data.featured_journals || !data.journals) throw new Error("Invalid or outdated snapshot");
+    if (!Array.isArray(data.papers) || !data.window_end || !Array.isArray(data.coverage) || ![6, 7].includes(data.screening_version) || !data.featured_journals || !data.journals) throw new Error("Invalid or outdated snapshot");
     state.data = data;
     state.papers = [...data.papers].sort((a, b) => b.date.localeCompare(a.date) || b.doi.localeCompare(a.doi));
     try { state.attempt = await getJSON("data/status.json"); } catch { state.attempt = null; }

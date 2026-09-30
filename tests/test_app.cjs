@@ -41,9 +41,10 @@ const ready = () => new Promise(setImmediate);
 
 test('spotlight can exit through scope, journal, return and reset', async () => {
   const { node, context } = setup(); await ready();
-  assert.equal(node('#paper-list').children.length, 30);
-  node('#load-more').events.click();
-  assert.equal(node('#paper-list').children.length, 35);
+  assert.equal(node('#paper-list').children.length, 10);
+  node('#pagination').children.at(-1).events.click();
+  assert.equal(node('#paper-list').children.length, 10);
+  assert.equal(vm.runInContext('state.page', context), 2);
   node('#featured-all').events.click();
   assert.match(node('#result-count').textContent, /^8 papers/);
   assert.equal(node('#scope').value, 'featured');
@@ -143,7 +144,7 @@ test('public rules article is linked and bilingual', () => {
   assert.match(home, /<html lang="en">/);
   assert.match(rules, /data-language="en"/);
   assert.match(rules, /data-language="zh" hidden/);
-  assert.match(rules, /Screening v6/);
+  assert.match(rules, /Screening v7/);
 });
 
 test('pending candidates are disclosed separately in both languages', async () => {
@@ -159,7 +160,9 @@ test('pending candidates are disclosed separately in both languages', async () =
 test('published artifact has consistent rules, date bounds, counts and unique DOIs', () => {
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/papers.json'), 'utf8'));
   const audit = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/screening-report.json'), 'utf8'));
-  assert.equal(data.screening_version, config.version);
+  // A frozen inclusion snapshot may predate the method-only annotations.
+  assert.ok([6, 7].includes(data.screening_version));
+  assert.equal(data.screening_version, audit.screening_version);
   assert.equal(audit.config_sha256, data.config_sha256);
   assert.equal(audit.window_end, data.window_end);
   assert.equal(audit.window_start, data.window_start);
@@ -170,4 +173,58 @@ test('published artifact has consistent rules, date bounds, counts and unique DO
   assert.ok(data.papers.every(p => p.date >= data.window_start && p.date <= data.window_end && !('abstract' in p)));
   assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 90);
   assert.ok(data.coverage.every(q => !q.truncated && !q.failed));
+});
+
+test('pagination has ten papers, last page, language persistence and filter reset', async () => {
+  const {node, context} = setup(7); await ready();
+  const firstTitle = node('#paper-list').children[0].children[1].children[0].textContent;
+  node('#pagination').children[2].events.click();
+  assert.notEqual(node('#paper-list').children[0].children[1].children[0].textContent, firstTitle);
+  node('#language-toggle').events.click();
+  assert.equal(vm.runInContext('state.page',context),2);
+  node('#pagination').children[4].events.click();
+  assert.equal(node('#paper-list').children.length,5);
+  assert.equal(node('#pagination').children.at(-1).disabled,true);
+  node('#search').events.input({target:{value:'PNAS'}});
+  assert.equal(vm.runInContext('state.page',context),1);
+  assert.equal(node('#pagination').children.length,0);
+});
+
+test('method filtering is optional, multi-label and translated without resetting', async () => {
+  const {node, context, data} = setup(7);
+  data.papers[0].methods = ['ai_ml','simulation'];
+  data.papers[0].method_evidence = {ai_ml:['graph neural network'],simulation:['Monte Carlo']};
+  await ready();
+  node('#method').events.change({target:{value:'ai_ml'}});
+  assert.match(node('#result-count').textContent,/^1 papers/);
+  node('#language-toggle').events.click();
+  assert.equal(node('#method').value,'ai_ml');
+  assert.equal(vm.runInContext('state.method',context),'ai_ml');
+  assert.ok(node('#method').children.some(n=>n.textContent==='人工智能 / 机器学习'));
+  node('#clear').events.click();
+  assert.equal(node('#method').value,'all');
+  assert.equal(node('#paper-list').children.length,10);
+});
+
+test('method labels are part of the v7 inclusion snapshot with traceable evidence', () => {
+  const raw = fs.readFileSync(path.join(__dirname, '../site/data/papers.json'));
+  const data = JSON.parse(raw);
+  assert.equal(data.screening_version,config.version);
+  for (const entry of data.papers) {
+    assert.ok(!('abstract' in entry));
+    for (const method of entry.methods) {
+      assert.ok(['theory','empirical','simulation','ai_ml'].includes(method));
+      assert.ok(entry.method_evidence[method].length > 0);
+    }
+  }
+});
+
+test('fixed-cohort coverage does not masquerade as a fresh journal crawl', async () => {
+  const {node,data} = setup(7);
+  data.rescreening = {scope:'existing_papers_only',input_count:181};
+  await ready();
+  assert.match(node('#coverage-summary').textContent,/existing 181 papers/);
+  assert.doesNotMatch(node('#coverage-summary').textContent,/journal queries/);
+  node('#language-toggle').events.click();
+  assert.match(node('#coverage-summary').textContent,/未新增文献/);
 });

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Recent research on complex network structure and dynamics, from a curated journal whitelist.">
   <meta name="color-scheme" content="light">
-  <title>Network Observatory</title>
+  <title>NetSci Observatory</title>
   <link rel="stylesheet" href="styles.css">
   <script src="i18n.js" defer></script>
   <script src="app.js" defer></script>
@@ -13,14 +13,14 @@
 <body>
   <a class="skip" href="#latest" data-en="Skip to papers" data-zh="跳转至文献列表">Skip to papers</a>
   <header class="masthead wrap">
-    <a class="brand" href="./" aria-label="Network Observatory home"><span class="brand-mark" aria-hidden="true">N<span>·</span></span><span>NETWORK<br>OBSERVATORY</span></a>
+    <a class="brand" href="./" aria-label="NetSci Observatory home"><span class="brand-mark" aria-hidden="true">N<span>·</span></span><span>NETSCI<br>OBSERVATORY</span></a>
     <div class="header-note" data-en="A network science reading list" data-zh="复杂网络文献观察">A network science reading list</div>
     <div class="header-actions"><a class="quiet-link source-link" href="rules.html" data-en="Inclusion rules ↗" data-zh="项目与收录规则 ↗">Inclusion rules ↗</a><button id="language-toggle" class="language-toggle" type="button">中文</button></div>
   </header>
   <main class="wrap">
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
-        <p class="eyebrow">STRUCTURE · DYNAMICS · DISCOVERY</p>
+        <p class="eyebrow" data-en="NETWORK STRUCTURE · DYNAMICS ON NETWORKS" data-zh="网络结构 · 网络上的动力学">NETWORK STRUCTURE · DYNAMICS ON NETWORKS</p>
         <h1 id="page-title"><span data-en="Complex networks." data-zh="聚焦复杂网络">Complex networks.</span><br><em data-en="Recent research, in focus." data-zh="最新文献观察。">Recent research, in focus.</em></h1>
         <p class="intro" data-en="Network structure and dynamics over the past 90 days. Explore by research topic, journal and publication date." data-zh="从网络结构到网络上的动力学，追踪近 90 天文献。按研究主题、期刊和发表时间浏览。">Network structure and dynamics over the past 90 days. Explore by research topic, journal and publication date.</p>
       </div>
@@ -54,10 +54,14 @@
           <label><span data-en="Journal" data-zh="期刊">Journal</span><select id="journal"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option></select></label>
           <label><span data-en="Journal scope" data-zh="期刊范围">Journal scope</span><select id="scope"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option><option value="featured" data-en="Spotlight journals" data-zh="重点期刊">Spotlight journals</option><option value="other" data-en="Other journals" data-zh="其他期刊">Other journals</option></select></label>
         </div>
+        <details class="method-filter"><summary id="method-filter-label">Research method (optional)</summary>
+          <label><span class="sr-only" data-en="Research method" data-zh="研究方法">Research method</span><select id="method"><option value="all">All methods</option></select></label>
+          <p data-en="Labels reflect available evidence; an unlabelled paper may still use these methods." data-zh="只标注现有证据可识别的方法；没有标签不代表未使用该方法。">Labels reflect available evidence; an unlabelled paper may still use these methods.</p>
+        </details>
         <button id="back-all" type="button" class="back-all" hidden data-en="← Back to all papers" data-zh="← 返回全部文献">← Back to all papers</button>
         <div class="result-meta"><p id="result-count" aria-live="polite">Waiting for data</p><button id="clear" type="button" class="text-button" hidden data-en="Clear filters ×" data-zh="清除筛选 ×">Clear filters ×</button></div>
         <div id="paper-list"><p class="empty">Loading papers…</p></div>
-        <button id="load-more" type="button" class="load-more" hidden>Load more papers</button>
+        <nav id="pagination" class="pagination" aria-label="Paper pages"></nav>
       </div>
     </section>
     <section class="methodology" aria-labelledby="method-title">
@@ -70,7 +74,7 @@
       </details>
     </section>
   </main>
-  <footer class="wrap"><span>NETWORK OBSERVATORY</span><p data-en="Metadata: Crossref · Original works belong to their publishers or authors." data-zh="元数据来自 Crossref · 原文版权归出版方或作者所有">Metadata: Crossref · Original works belong to their publishers or authors.</p></footer>
+  <footer class="wrap"><span>NETSCI OBSERVATORY</span><p data-en="Metadata: Crossref · Original works belong to their publishers or authors." data-zh="元数据来自 Crossref · 原文版权归出版方或作者所有">Metadata: Crossref · Original works belong to their publishers or authors.</p></footer>
   <noscript><p class="wrap">JavaScript is required for filtering. / 文献筛选需要 JavaScript。 <a href="data/papers.json">Raw data / 原始数据</a></p></noscript>
 </body>
 </html>

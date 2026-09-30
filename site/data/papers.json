@@ -1,11 +1,20 @@
 {
-  "generated_at": "2026-09-30T01:44:33.254955+00:00",
+  "generated_at": "2026-09-30T08:04:33.753535+00:00",
   "window_start": "2026-07-02",
   "window_end": "2026-09-29",
   "window_days": 90,
   "source": "Crossref",
-  "screening_version": 6,
-  "config_sha256": "25628df13210b0e822dfbdae836e6e64f63e1b2d862967be31c9a0996b1a3720",
+  "screening_version": 7,
+  "config_sha256": "2f2a281fc225fad9323acba9c444892b1750eade66259ec9a9138fb11263a1d9",
+  "rescreening": {
+    "scope": "existing_papers_only",
+    "source_snapshot_sha256": "deb4a2d9fb26c31a6e86f06948470bc49fe149113efb23a718a1818379afbfbe",
+    "source_screening_version": 6,
+    "source_generated_at": "2026-09-30T01:44:33.254955+00:00",
+    "input_count": 181,
+    "added_dois": [],
+    "new_candidates_queried": false
+  },
   "categories": [
     {
       "id": "network_structure",
@@ -273,494 +282,18 @@
   ],
   "coverage": [
     {
-      "label": "journal: Nature",
-      "query": {
-        "name": "Nature",
-        "short": "Nature",
-        "tier": "flagship",
-        "issns": [
-          "1476-4687",
-          "0028-0836"
-        ]
-      },
-      "retrieved": 1018,
-      "total_results": 1018,
+      "label": "Existing-paper DOI lookups",
+      "retrieved": 181,
+      "total_results": 181,
       "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1476-4687/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by",
-        "https://api.crossref.org/journals/1476-4687/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=1000&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Science",
-      "query": {
-        "name": "Science",
-        "short": "Science",
-        "tier": "flagship",
-        "issns": [
-          "1095-9203",
-          "0036-8075"
-        ]
-      },
-      "retrieved": 524,
-      "total_results": 524,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1095-9203/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Physical Review X",
-      "query": {
-        "name": "Physical Review X",
-        "short": "PRX",
-        "tier": "flagship",
-        "issns": [
-          "2160-3308"
-        ]
-      },
-      "retrieved": 125,
-      "total_results": 125,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2160-3308/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Nature Physics",
-      "query": {
-        "name": "Nature Physics",
-        "short": "Nat. Phys.",
-        "tier": "flagship",
-        "issns": [
-          "1745-2481",
-          "1745-2473"
-        ]
-      },
-      "retrieved": 95,
-      "total_results": 95,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1745-2481/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Nature Communications",
-      "query": {
-        "name": "Nature Communications",
-        "short": "NC",
-        "tier": "gatekeeper",
-        "issns": [
-          "2041-1723"
-        ]
-      },
-      "retrieved": 3132,
-      "total_results": 3132,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2041-1723/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by",
-        "https://api.crossref.org/journals/2041-1723/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=1000&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by",
-        "https://api.crossref.org/journals/2041-1723/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=2000&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by",
-        "https://api.crossref.org/journals/2041-1723/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=3000&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Science Advances",
-      "query": {
-        "name": "Science Advances",
-        "short": "SA",
-        "tier": "gatekeeper",
-        "issns": [
-          "2375-2548"
-        ]
-      },
-      "retrieved": 1117,
-      "total_results": 1117,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2375-2548/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by",
-        "https://api.crossref.org/journals/2375-2548/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=1000&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Physical Review Letters",
-      "query": {
-        "name": "Physical Review Letters",
-        "short": "PRL",
-        "tier": "gatekeeper",
-        "issns": [
-          "1079-7114",
-          "0031-9007"
-        ]
-      },
-      "retrieved": 1059,
-      "total_results": 1059,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1079-7114/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by",
-        "https://api.crossref.org/journals/1079-7114/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=1000&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Proceedings of the National Academy of Sciences",
-      "query": {
-        "name": "Proceedings of the National Academy of Sciences",
-        "short": "PNAS",
-        "tier": "gatekeeper",
-        "issns": [
-          "1091-6490",
-          "0027-8424"
-        ]
-      },
-      "retrieved": 1216,
-      "total_results": 1216,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1091-6490/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by",
-        "https://api.crossref.org/journals/1091-6490/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=1000&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Nature Machine Intelligence",
-      "query": {
-        "name": "Nature Machine Intelligence",
-        "short": "NMI",
-        "tier": "cross-disciplinary",
-        "issns": [
-          "2522-5839"
-        ]
-      },
-      "retrieved": 48,
-      "total_results": 48,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2522-5839/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Nature Computational Science",
-      "query": {
-        "name": "Nature Computational Science",
-        "short": "NCS",
-        "tier": "cross-disciplinary",
-        "issns": [
-          "2662-8457"
-        ]
-      },
-      "retrieved": 45,
-      "total_results": 45,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2662-8457/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Nature Human Behaviour",
-      "query": {
-        "name": "Nature Human Behaviour",
-        "short": "NHB",
-        "tier": "cross-disciplinary",
-        "issns": [
-          "2397-3374"
-        ]
-      },
-      "retrieved": 87,
-      "total_results": 87,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2397-3374/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Communications Physics",
-      "query": {
-        "name": "Communications Physics",
-        "short": "Commun. Phys.",
-        "tier": "cross-disciplinary",
-        "issns": [
-          "2399-3650"
-        ]
-      },
-      "retrieved": 154,
-      "total_results": 154,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2399-3650/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Physical Review Research",
-      "query": {
-        "name": "Physical Review Research",
-        "short": "PRResearch",
-        "tier": "cross-disciplinary",
-        "issns": [
-          "2643-1564"
-        ]
-      },
-      "retrieved": 545,
-      "total_results": 545,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2643-1564/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Physical Review E",
-      "query": {
-        "name": "Physical Review E",
-        "short": "PRE",
-        "tier": "field",
-        "issns": [
-          "2470-0053",
-          "2470-0045"
-        ]
-      },
-      "retrieved": 678,
-      "total_results": 678,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2470-0053/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Chaos",
-      "query": {
-        "name": "Chaos",
-        "short": "Chaos",
-        "tier": "field",
-        "issns": [
-          "1089-7682",
-          "1054-1500"
-        ]
-      },
-      "retrieved": 117,
-      "total_results": 117,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1089-7682/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Chaos, Solitons & Fractals",
-      "query": {
-        "name": "Chaos, Solitons & Fractals",
-        "short": "CSF",
-        "tier": "field",
-        "issns": [
-          "0960-0779"
-        ]
-      },
-      "retrieved": 291,
-      "total_results": 291,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/0960-0779/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Physica A: Statistical Mechanics and its Applications",
-      "query": {
-        "name": "Physica A: Statistical Mechanics and its Applications",
-        "short": "Physica A",
-        "tier": "field",
-        "issns": [
-          "0378-4371"
-        ]
-      },
-      "retrieved": 194,
-      "total_results": 194,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/0378-4371/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Physica D: Nonlinear Phenomena",
-      "query": {
-        "name": "Physica D: Nonlinear Phenomena",
-        "short": "Physica D",
-        "tier": "field",
-        "issns": [
-          "0167-2789",
-          "1872-8022"
-        ]
-      },
-      "retrieved": 48,
-      "total_results": 48,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/0167-2789/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Journal of Complex Networks",
-      "query": {
-        "name": "Journal of Complex Networks",
-        "short": "J. Complex Networks",
-        "tier": "field",
-        "issns": [
-          "2051-1329"
-        ]
-      },
-      "retrieved": 5,
-      "total_results": 5,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2051-1329/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Network Science",
-      "query": {
-        "name": "Network Science",
-        "short": "Network Science",
-        "tier": "field",
-        "issns": [
-          "2050-1242",
-          "2050-1250"
-        ]
-      },
-      "retrieved": 0,
-      "total_results": 0,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2050-1242/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Journal of Nonlinear Science",
-      "query": {
-        "name": "Journal of Nonlinear Science",
-        "short": "J. Nonlinear Sci.",
-        "tier": "field",
-        "issns": [
-          "0938-8974",
-          "1432-1467"
-        ]
-      },
-      "retrieved": 30,
-      "total_results": 30,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/0938-8974/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Nonlinear Dynamics",
-      "query": {
-        "name": "Nonlinear Dynamics",
-        "short": "Nonlinear Dynamics",
-        "tier": "field",
-        "issns": [
-          "0924-090X",
-          "1573-269X"
-        ]
-      },
-      "retrieved": 234,
-      "total_results": 234,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/0924-090X/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: SIAM Journal on Applied Dynamical Systems",
-      "query": {
-        "name": "SIAM Journal on Applied Dynamical Systems",
-        "short": "SIADS",
-        "tier": "field",
-        "issns": [
-          "1536-0040"
-        ]
-      },
-      "retrieved": 28,
-      "total_results": 28,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1536-0040/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Journal of Statistical Physics",
-      "query": {
-        "name": "Journal of Statistical Physics",
-        "short": "J. Stat. Phys.",
-        "tier": "field",
-        "issns": [
-          "1572-9613",
-          "0022-4715"
-        ]
-      },
-      "retrieved": 48,
-      "total_results": 48,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/1572-9613/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Reviews of Modern Physics",
-      "query": {
-        "name": "Reviews of Modern Physics",
-        "short": "RMP",
-        "tier": "review",
-        "issns": [
-          "0034-6861",
-          "1539-0756"
-        ]
-      },
-      "retrieved": 17,
-      "total_results": 17,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/0034-6861/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Physics Reports",
-      "query": {
-        "name": "Physics Reports",
-        "short": "Physics Reports",
-        "tier": "review",
-        "issns": [
-          "0370-1573"
-        ]
-      },
-      "retrieved": 10,
-      "total_results": 10,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/0370-1573/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
-    },
-    {
-      "label": "journal: Nature Reviews Physics",
-      "query": {
-        "name": "Nature Reviews Physics",
-        "short": "Nat. Rev. Phys.",
-        "tier": "review",
-        "issns": [
-          "2522-5820"
-        ]
-      },
-      "retrieved": 27,
-      "total_results": 27,
-      "truncated": false,
-      "urls": [
-        "https://api.crossref.org/journals/2522-5820/works?filter=type%3Ajournal-article%2Cfrom-pub-date%3A2026-07-02%2Cuntil-pub-date%3A2026-09-29&rows=1000&offset=0&sort=published&order=desc&select=DOI%2Ctitle%2Ctype%2CISSN%2Cabstract%2Cauthor%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2Cupdate-to%2Cupdated-by"
-      ]
+      "failed": false
     }
   ],
-  "candidate_count": 10892,
+  "candidate_count": 181,
   "screening_counts": {
-    "review_missing_abstract": 4904,
-    "notice": 280,
-    "review_no_signal": 3656,
-    "review_context": 1341,
-    "included": 181,
-    "general_machine_learning": 3,
-    "missing_or_partial_date": 527
+    "included": 162,
+    "review_missing_abstract": 5,
+    "review_context": 14
   },
   "papers": [
     {
@@ -782,6 +315,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -805,8 +340,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fv1vq-skr1",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/33lg-7kmc",
@@ -827,6 +363,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -847,8 +385,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F33lg-7kmc",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2601203123",
@@ -876,6 +415,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -904,8 +445,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2601203123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s42005-026-02852-9",
@@ -928,6 +470,14 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "theoretical framework"
+        ]
+      },
       "featured": null,
       "journal_short": "Commun. Phys.",
       "evidence": [
@@ -985,8 +535,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02852-9",
       "has_update": false,
       "retrieved_by": [
-        "journal: Communications Physics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/l51k-63y5",
@@ -1007,6 +558,14 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [
+        "ai_ml"
+      ],
+      "method_evidence": {
+        "ai_ml": [
+          "machine learning"
+        ]
+      },
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -1029,8 +588,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fl51k-63y5",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0351619",
@@ -1055,6 +615,8 @@
         "network_structure",
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -1090,8 +652,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0351619",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s42256-026-01306-9",
@@ -1119,6 +682,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "NMI",
       "evidence": [
@@ -1139,8 +704,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42256-026-01306-9",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Machine Intelligence"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-13058-7",
@@ -1163,6 +729,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -1197,8 +765,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-13058-7",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-13025-2",
@@ -1220,6 +789,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -1240,8 +811,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-13025-2",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1126/sciadv.aef3787",
@@ -1280,6 +852,8 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "SA",
       "journal_short": "SA",
       "evidence": [
@@ -1300,8 +874,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aef3787",
       "has_update": false,
       "retrieved_by": [
-        "journal: Science Advances"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/d6lk-4f62",
@@ -1324,6 +899,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -1344,8 +921,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fd6lk-4f62",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/3v5l-pgzz",
@@ -1366,6 +944,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -1389,52 +969,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F3v5l-pgzz",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
-    },
-    {
-      "doi": "10.1038/s42254-026-00981-2",
-      "url": "https://doi.org/10.1038/s42254-026-00981-2",
-      "title": "Interplay of topology and reversible associations in multi-responsive macromolecular networks",
-      "authors": [
-        "Evelyne van Ruymbeke",
-        "Dimitris Vlassopoulos"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Nature Reviews Physics",
-      "issns": [
-        "2522-5820"
-      ],
-      "date": "2026-09-25",
-      "date_source": "published-online",
-      "categories": [
-        "other"
-      ],
-      "featured": null,
-      "journal_short": "Nat. Rev. Phys.",
-      "evidence": [
-        "networks",
-        "topology"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "networks",
-            "topology"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": false,
-      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42254-026-00981-2",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Nature Reviews Physics"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1103/c44l-89p7",
@@ -1455,6 +992,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -1477,8 +1016,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fc44l-89p7",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2537815123",
@@ -1503,6 +1043,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -1531,8 +1073,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2537815123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0347364",
@@ -1557,6 +1100,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -1594,8 +1139,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0347364",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2603770123",
@@ -1624,6 +1170,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -1644,8 +1192,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2603770123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/9y9m-q7qj",
@@ -1666,6 +1215,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PRL",
       "journal_short": "PRL",
       "evidence": [
@@ -1686,8 +1237,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F9y9m-q7qj",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Letters"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0331194",
@@ -1710,16 +1262,28 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
         "collective",
+        "coupled pendula",
         "networks",
         "oscillator",
-        "synchronization"
+        "synchronization",
+        "synchrony"
       ],
       "screening_basis": "network",
       "screening_routes": [
+        {
+          "route": "implicit_interaction_dynamics",
+          "source": "title",
+          "matches": [
+            "coupled pendula",
+            "synchrony"
+          ]
+        },
         {
           "route": "network_structure_or_dynamics",
           "source": "abstract",
@@ -1738,8 +1302,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0331194",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s42005-026-02773-7",
@@ -1761,6 +1326,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Commun. Phys.",
       "evidence": [
@@ -1781,70 +1348,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02773-7",
       "has_update": false,
       "retrieved_by": [
-        "journal: Communications Physics"
-      ]
-    },
-    {
-      "doi": "10.1126/sciadv.aed3966",
-      "url": "https://doi.org/10.1126/sciadv.aed3966",
-      "title": "Dietary records in cosmopolitan copepod Calanus spp. revealed large contribution of dinoflagellates in subarctic Pacific",
-      "authors": [
-        "Hyuntae Choi",
-        "Bohyung Choi",
-        "Jee-Hoon Kim",
-        "Nayeon Park",
-        "Haemin Won",
-        "Jieun Kim",
-        "Jinyoung Jung",
-        "Youngju Lee",
-        "Eun Jin Yang",
-        "Min-Seob Kim",
-        "Wonseok Yang",
-        "Yeonjung Lee",
-        "Dong Han Choi",
-        "Jae Hoon Noh",
-        "Brian N. Popp",
-        "Kyung-Hoon Shin"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Science Advances",
-      "issns": [
-        "2375-2548"
-      ],
-      "date": "2026-09-18",
-      "date_source": "published-print",
-      "categories": [
-        "network_spreading",
-        "network_resilience"
-      ],
-      "featured": "SA",
-      "journal_short": "SA",
-      "evidence": [
-        "cascading",
-        "food webs",
-        "resilience"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "food webs",
-            "cascading",
-            "resilience",
-            "cascading"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aed3966",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Science Advances"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1103/32qy-2v16",
@@ -1865,6 +1371,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -1885,61 +1393,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F32qy-2v16",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
-    },
-    {
-      "doi": "10.1073/pnas.2607769123",
-      "url": "https://doi.org/10.1073/pnas.2607769123",
-      "title": "Host-mediated insecticide sequestration in target-site-resistant pests impacts parasitoid fitness and evolution",
-      "authors": [
-        "Zhihan Liu",
-        "Ting Feng",
-        "Lei Guo",
-        "Tianhao Zhou",
-        "Qingqing Luo",
-        "Xinzhong Zhang",
-        "Xiaomu Qiao",
-        "Jianhua Huang",
-        "Jia Huang"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Proceedings of the National Academy of Sciences",
-      "issns": [
-        "0027-8424",
-        "1091-6490"
-      ],
-      "date": "2026-09-18",
-      "date_source": "published-online",
-      "categories": [
-        "network_spreading"
-      ],
-      "featured": "PNAS",
-      "journal_short": "PNAS",
-      "evidence": [
-        "cascading",
-        "networks"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "cascading",
-            "cascading"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2607769123",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-77838-w",
@@ -1963,6 +1419,8 @@
       "categories": [
         "network_inference"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -1983,8 +1441,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77838-w",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1126/science.aeg3946",
@@ -2007,6 +1466,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Science",
       "evidence": [
@@ -2048,8 +1509,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fscience.aeg3946",
       "has_update": false,
       "retrieved_by": [
-        "journal: Science"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12990-y",
@@ -2072,6 +1534,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -2094,55 +1558,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12990-y",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
-    },
-    {
-      "doi": "10.1103/ch8n-wrv6",
-      "url": "https://doi.org/10.1103/ch8n-wrv6",
-      "title": "Stabilizing generative adversarial networks with adaptive noise injection",
-      "authors": [
-        "Yamin Zhang",
-        "Fabing Duan",
-        "François Chapeau-Blondeau",
-        "Derek Abbott"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Physical Review E",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-16",
-      "date_source": "published-online",
-      "categories": [
-        "other"
-      ],
-      "featured": null,
-      "journal_short": "PRE",
-      "evidence": [
-        "networks",
-        "stabilizing"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "networks",
-            "stabilizing"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": false,
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fch8n-wrv6",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0351862",
@@ -2166,6 +1584,14 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [
+        "simulation"
+      ],
+      "method_evidence": {
+        "simulation": [
+          "monte carlo"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -2201,8 +1627,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0351862",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0349918",
@@ -2224,6 +1651,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -2273,8 +1702,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0349918",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75453-3",
@@ -2303,6 +1733,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -2323,8 +1755,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75453-3",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/xsg5-cb6l",
@@ -2348,18 +1781,20 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
-        "higher-order interaction"
+        "inferring three-body interactions"
       ],
       "screening_basis": "network",
       "screening_routes": [
         {
-          "route": "explicit_network_concept",
-          "source": "abstract",
+          "route": "network_method",
+          "source": "title",
           "matches": [
-            "higher-order interaction"
+            "inferring three-body interactions"
           ]
         }
       ],
@@ -2368,8 +1803,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fxsg5-cb6l",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/tmkq-33c4",
@@ -2395,10 +1831,11 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
-        "complex networks",
         "network",
         "network topolog",
         "networks",
@@ -2430,13 +1867,6 @@
             "network",
             "structural"
           ]
-        },
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
-            "complex networks"
-          ]
         }
       ],
       "source": "Crossref",
@@ -2444,8 +1874,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Ftmkq-33c4",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/k9b1-n8mb",
@@ -2467,6 +1898,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -2487,8 +1920,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fk9b1-n8mb",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0342298",
@@ -2515,11 +1949,18 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "theoretical framework"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
         "epidemic",
-        "network",
         "networks",
         "spreading"
       ],
@@ -2533,15 +1974,6 @@
             "epidemic",
             "spreading"
           ]
-        },
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "network",
-            "epidemic",
-            "spreading"
-          ]
         }
       ],
       "source": "Crossref",
@@ -2549,8 +1981,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0342298",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-77381-8",
@@ -2573,6 +2006,8 @@
       "categories": [
         "network_inference"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -2593,8 +2028,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77381-8",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/p6qp-2s9f",
@@ -2619,6 +2055,8 @@
       "categories": [
         "network_inference"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -2639,8 +2077,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fp6qp-2s9f",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/81gf-mlhm",
@@ -2663,6 +2102,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -2688,8 +2129,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F81gf-mlhm",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-13029-y",
@@ -2714,6 +2156,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -2734,8 +2178,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-13029-y",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2614238123",
@@ -2758,6 +2203,15 @@
         "network_structure",
         "network_resilience"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field",
+          "theoretical framework"
+        ]
+      },
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -2807,51 +2261,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2614238123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
-    },
-    {
-      "doi": "10.1038/s42005-026-02750-0",
-      "url": "https://doi.org/10.1038/s42005-026-02750-0",
-      "title": "Mean-field path-integral diffusion from samples to interacting agents",
-      "authors": [
-        "Michael Chertkov"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Communications Physics",
-      "issns": [
-        "2399-3650"
-      ],
-      "date": "2026-09-10",
-      "date_source": "published-online",
-      "categories": [
-        "network_spreading"
-      ],
-      "featured": null,
-      "journal_short": "Commun. Phys.",
-      "evidence": [
-        "diffusion",
-        "interacting agents"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "implicit_interaction_dynamics",
-          "source": "title",
-          "matches": [
-            "interacting agents",
-            "diffusion"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02750-0",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Communications Physics"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1103/wysx-f9l3",
@@ -2872,6 +2284,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -2895,8 +2309,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fwysx-f9l3",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/ppm1-mxhz",
@@ -2917,6 +2332,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -2937,8 +2354,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fppm1-mxhz",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/6jqp-bz2r",
@@ -2959,6 +2377,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -2983,8 +2403,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F6jqp-bz2r",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/43yn-sh6g",
@@ -3005,6 +2426,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -3028,8 +2451,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F43yn-sh6g",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41586-026-10876-y",
@@ -3074,21 +2498,22 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nature",
       "evidence": [
-        "networks",
-        "synchronized"
+        "long-range inhibition",
+        "synchrony"
       ],
       "screening_basis": "network",
       "screening_routes": [
         {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
+          "route": "implicit_interaction_dynamics",
+          "source": "title",
           "matches": [
-            "networks",
-            "synchronized",
-            "synchronized"
+            "long-range inhibition",
+            "synchrony"
           ]
         }
       ],
@@ -3097,8 +2522,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41586-026-10876-y",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/n4ps-wmd7",
@@ -3119,6 +2545,8 @@
       "categories": [
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -3139,8 +2567,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fn4ps-wmd7",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/lfwy-bbmv",
@@ -3163,6 +2592,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PRL",
       "journal_short": "PRL",
       "evidence": [
@@ -3185,8 +2616,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Flfwy-bbmv",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Letters"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/gp7d-fsk5",
@@ -3209,6 +2641,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -3229,52 +2663,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fgp7d-fsk5",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
-    },
-    {
-      "doi": "10.1103/cxs1-3pzf",
-      "url": "https://doi.org/10.1103/cxs1-3pzf",
-      "title": "Bayesian phase stabilization at the shot-noise limit for scalable quantum networks",
-      "authors": [],
-      "author_metadata_status": "placeholder",
-      "author_placeholders": [
-        "Anonymous"
+        "fixed-cohort DOI lookup"
       ],
-      "journal": "Physical Review Letters",
-      "issns": [
-        "0031-9007",
-        "1079-7114"
-      ],
-      "date": "2026-09-08",
-      "date_source": "published-online",
-      "categories": [
-        "other"
-      ],
-      "featured": "PRL",
-      "journal_short": "PRL",
-      "evidence": [
-        "networks",
-        "stabilization"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "networks",
-            "stabilization"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": false,
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fcxs1-3pzf",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Physical Review Letters"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2620995123",
@@ -3298,6 +2689,8 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -3328,8 +2721,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2620995123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2611584123",
@@ -3353,6 +2747,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -3375,8 +2771,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2611584123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0346196",
@@ -3399,6 +2796,14 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -3419,56 +2824,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0346196",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
-    },
-    {
-      "doi": "10.1038/s41467-026-77430-2",
-      "url": "https://doi.org/10.1038/s41467-026-77430-2",
-      "title": "Ki-67 regulates heterochromatin organization in neurons and forms condensates with heterochromatic components",
-      "authors": [
-        "Lannah S. Abasi",
-        "Challana Tea",
-        "Rushabh Bhakta",
-        "Donald Le",
-        "Tien M. Phan",
-        "Jeetain Mittal",
-        "Cole J. Ferguson",
-        "Galia T. Debelouchina"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Nature Communications",
-      "issns": [
-        "2041-1723"
-      ],
-      "date": "2026-09-08",
-      "date_source": "published-online",
-      "categories": [
-        "network_structure"
-      ],
-      "featured": "NC",
-      "journal_short": "NC",
-      "evidence": [
-        "complex network"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
-            "complex network"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77430-2",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-13031-4",
@@ -3491,6 +2849,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -3513,8 +2873,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-13031-4",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1126/sciadv.aef2894",
@@ -3542,6 +2903,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "SA",
       "journal_short": "SA",
       "evidence": [
@@ -3562,8 +2925,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aef2894",
       "has_update": false,
       "retrieved_by": [
-        "journal: Science Advances"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0349270",
@@ -3586,11 +2950,12 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
         "coupling matrix",
-        "diffusion",
         "networks",
         "oscillations",
         "stability",
@@ -3624,15 +2989,6 @@
             "coupling matrix",
             "stability"
           ]
-        },
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "diffusion",
-            "diffusion"
-          ]
         }
       ],
       "source": "Crossref",
@@ -3640,8 +2996,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0349270",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1137/26m1837459",
@@ -3661,6 +3018,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "SIADS",
       "evidence": [
@@ -3693,8 +3052,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1137%2F26m1837459",
       "has_update": false,
       "retrieved_by": [
-        "journal: SIAM Journal on Applied Dynamical Systems"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1137/25m1821569",
@@ -3717,6 +3077,14 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "SIADS",
       "evidence": [
@@ -3740,8 +3108,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1137%2F25m1821569",
       "has_update": false,
       "retrieved_by": [
-        "journal: SIAM Journal on Applied Dynamical Systems"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/q9bd-4h4j",
@@ -3765,6 +3134,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -3793,8 +3164,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fq9bd-4h4j",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12875-0",
@@ -3818,6 +3190,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -3840,8 +3214,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12875-0",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/rt96-mb8q",
@@ -3862,6 +3237,8 @@
       "categories": [
         "network_inference"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -3904,8 +3281,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Frt96-mb8q",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0343851",
@@ -3928,6 +3306,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -3960,8 +3340,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0343851",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0338836",
@@ -3984,6 +3365,8 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -4006,8 +3389,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0338836",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0337453",
@@ -4030,6 +3414,14 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -4050,8 +3442,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0337453",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-77443-x",
@@ -4095,6 +3488,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -4115,8 +3510,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77443-x",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-77302-9",
@@ -4146,6 +3542,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -4166,53 +3564,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77302-9",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
-    },
-    {
-      "doi": "10.1073/pnas.2608891123",
-      "url": "https://doi.org/10.1073/pnas.2608891123",
-      "title": "Leveraging latent space models for enzyme discovery and sampling",
-      "authors": [
-        "Chang-Hwa Chiang",
-        "Daniel Ong",
-        "Alison R. H. Narayan",
-        "Charles L. Brooks"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Proceedings of the National Academy of Sciences",
-      "issns": [
-        "0027-8424",
-        "1091-6490"
-      ],
-      "date": "2026-09-01",
-      "date_source": "published-online",
-      "categories": [
-        "other"
-      ],
-      "featured": "PNAS",
-      "journal_short": "PNAS",
-      "evidence": [
-        "higher-order interactions"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
-            "higher-order interactions"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2608891123",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0348359",
@@ -4235,15 +3589,14 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
-        "evolutionary game",
         "higher-order networks",
         "hypergraphs",
-        "networks",
-        "simplicial complexes",
-        "structure"
+        "simplicial complexes"
       ],
       "screening_basis": "network",
       "screening_routes": [
@@ -4252,15 +3605,6 @@
           "source": "title",
           "matches": [
             "higher-order networks"
-          ]
-        },
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "evolutionary game",
-            "structure"
           ]
         },
         {
@@ -4277,8 +3621,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0348359",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0336997",
@@ -4305,12 +3650,13 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
         "network",
-        "synchronization",
-        "synchronized"
+        "synchronization"
       ],
       "screening_basis": "network",
       "screening_routes": [
@@ -4322,15 +3668,6 @@
             "synchronization",
             "synchronization"
           ]
-        },
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "network",
-            "synchronized",
-            "synchronized"
-          ]
         }
       ],
       "source": "Crossref",
@@ -4338,8 +3675,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0336997",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12809-w",
@@ -4365,6 +3703,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -4385,8 +3725,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12809-w",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1093/comnet/cnag033",
@@ -4406,6 +3747,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "J. Complex Networks",
       "evidence": [
@@ -4438,60 +3781,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1093%2Fcomnet%2Fcnag033",
       "has_update": false,
       "retrieved_by": [
-        "journal: Journal of Complex Networks"
-      ]
-    },
-    {
-      "doi": "10.1007/s11071-026-12975-x",
-      "url": "https://doi.org/10.1007/s11071-026-12975-x",
-      "title": "Jamming mitigation via hyperchaos underactuated synchronization",
-      "authors": [
-        "Kevin Herman Muraro Gularte",
-        "Willian Arvey Molano Gabalán",
-        "José Alfredo Ruiz Vargas",
-        "João Paulo Javidi da Costa",
-        "Antonio Santos da Silva",
-        "Giovani Almeida Santos",
-        "Juan Carlos González Gómez",
-        "Guillermo Alvarez Bestard"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Nonlinear Dynamics",
-      "issns": [
-        "0924-090X",
-        "1573-269X"
-      ],
-      "date": "2026-08-31",
-      "date_source": "published-online",
-      "categories": [
-        "network_collective",
-        "network_resilience"
-      ],
-      "featured": null,
-      "journal_short": "Nonlinear Dynamics",
-      "evidence": [
-        "networks",
-        "robustness"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "robustness"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12975-x",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12959-x",
@@ -4515,6 +3807,8 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -4535,8 +3829,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12959-x",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s42005-026-02819-w",
@@ -4558,6 +3853,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Commun. Phys.",
       "evidence": [
@@ -4603,59 +3900,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02819-w",
       "has_update": false,
       "retrieved_by": [
-        "journal: Communications Physics"
-      ]
-    },
-    {
-      "doi": "10.1038/s41467-026-76944-z",
-      "url": "https://doi.org/10.1038/s41467-026-76944-z",
-      "title": "Hydrogen Bond-Enabled Carbon Dot-Based Network for Efficient Inverted Organic Solar Cells with Prolonged Photoelectrical-Mechanical-Moist Stability",
-      "authors": [
-        "Mengqi Cui",
-        "Yi Yang",
-        "Huanhuan Gao",
-        "Ruijia Zhang",
-        "Xinjun He",
-        "Hao Wang",
-        "Haibin Su",
-        "Alex K.-Y. Jen",
-        "Wallace C. H. Choy"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Nature Communications",
-      "issns": [
-        "2041-1723"
-      ],
-      "date": "2026-08-29",
-      "date_source": "published-online",
-      "categories": [
-        "other"
-      ],
-      "featured": "NC",
-      "journal_short": "NC",
-      "evidence": [
-        "network",
-        "stability"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "network",
-            "stability"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": false,
-      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-76944-z",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1103/25qf-sfsw",
@@ -4676,6 +3923,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -4698,8 +3947,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F25qf-sfsw",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/xc5g-t9dj",
@@ -4722,6 +3972,8 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -4745,8 +3997,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fxc5g-t9dj",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1093/comnet/cnag029",
@@ -4770,6 +4023,14 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [
+        "simulation"
+      ],
+      "method_evidence": {
+        "simulation": [
+          "agent-based model"
+        ]
+      },
       "featured": null,
       "journal_short": "J. Complex Networks",
       "evidence": [
@@ -4792,8 +4053,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1093%2Fcomnet%2Fcnag029",
       "has_update": false,
       "retrieved_by": [
-        "journal: Journal of Complex Networks"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0337419",
@@ -4814,6 +4076,14 @@
       "categories": [
         "other"
       ],
+      "methods": [
+        "ai_ml"
+      ],
+      "method_evidence": {
+        "ai_ml": [
+          "machine learning"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -4844,62 +4114,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0337419",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
-    },
-    {
-      "doi": "10.1038/s41467-026-77230-8",
-      "url": "https://doi.org/10.1038/s41467-026-77230-8",
-      "title": "Automated transition state generation for mechanistic exploration in organic synthesis",
-      "authors": [
-        "Li-Cheng Xu",
-        "Junyi An",
-        "Weiqi Liu",
-        "Yun-Fei Shi",
-        "Chong-Lei Ji",
-        "Fenglei Cao",
-        "Yuan Qi"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Nature Communications",
-      "issns": [
-        "2041-1723"
-      ],
-      "date": "2026-08-27",
-      "date_source": "published-online",
-      "categories": [
-        "network_spreading"
-      ],
-      "featured": "NC",
-      "journal_short": "NC",
-      "evidence": [
-        "diffusion",
-        "graphs",
-        "network",
-        "structures"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "graphs",
-            "network",
-            "diffusion",
-            "structures",
-            "diffusion"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77230-8",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1103/t86l-31d5",
@@ -4923,10 +4140,11 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
-        "complex networks",
         "higher-order networks"
       ],
       "screening_basis": "network",
@@ -4936,13 +4154,6 @@
           "source": "title",
           "matches": [
             "higher-order networks"
-          ]
-        },
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
-            "complex networks"
           ]
         },
         {
@@ -4965,8 +4176,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Ft86l-31d5",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/sxl4-6mdm",
@@ -4988,13 +4200,16 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
         "collective",
         "coupled oscillator",
         "networks",
-        "oscillator"
+        "oscillator",
+        "synchrony"
       ],
       "screening_basis": "network",
       "screening_routes": [
@@ -5003,7 +4218,8 @@
           "source": "title",
           "matches": [
             "networks",
-            "oscillator"
+            "oscillator",
+            "synchrony"
           ]
         },
         {
@@ -5020,8 +4236,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fsxl4-6mdm",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1093/comnet/cnag030",
@@ -5042,6 +4259,8 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "J. Complex Networks",
       "evidence": [
@@ -5079,8 +4298,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1093%2Fcomnet%2Fcnag030",
       "has_update": false,
       "retrieved_by": [
-        "journal: Journal of Complex Networks"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2518287123",
@@ -5104,6 +4324,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -5127,8 +4349,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2518287123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-72311-0",
@@ -5158,6 +4381,14 @@
       "categories": [
         "other"
       ],
+      "methods": [
+        "empirical"
+      ],
+      "method_evidence": {
+        "empirical": [
+          "empirical network"
+        ]
+      },
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -5178,8 +4409,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-72311-0",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0340300",
@@ -5202,14 +4434,13 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
-        "collective",
         "networks",
-        "oscillators",
-        "synchronization",
-        "synchronizing"
+        "synchronization"
       ],
       "screening_basis": "network",
       "screening_routes": [
@@ -5221,18 +4452,6 @@
             "synchronization",
             "synchronization"
           ]
-        },
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "collective",
-            "oscillators",
-            "synchronizing",
-            "collective",
-            "synchronizing"
-          ]
         }
       ],
       "source": "Crossref",
@@ -5240,8 +4459,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0340300",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/7839-3xhy",
@@ -5263,6 +4483,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -5285,8 +4507,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F7839-3xhy",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2609240123",
@@ -5311,6 +4534,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -5331,72 +4556,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2609240123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
-    },
-    {
-      "doi": "10.1073/pnas.2601583123",
-      "url": "https://doi.org/10.1073/pnas.2601583123",
-      "title": "Pelagic food web realignment supports resilient larvae of Southern Bluefin Tuna in a warming ocean",
-      "authors": [
-        "Michael R. Landry",
-        "Raúl Laiz-Carrión",
-        "Estrella Malca",
-        "Rasmus Swalethorp",
-        "Moira Décima",
-        "José M. Quintanilla",
-        "Ricardo Borrego-Santos",
-        "Claire H. Davies",
-        "Sven A. Kranz",
-        "Karen E. Selph",
-        "Michael R. Stukel",
-        "David Die",
-        "Lynnath E. Beckley",
-        "Barbara A. Muhling",
-        "Akihiro Shiroza",
-        "Lindsey E. Kim",
-        "Grace F. Cawley",
-        "Claudia Traboni",
-        "Kamran Walsh",
-        "Alejandro Jivanjee",
-        "Luke Matisons"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Proceedings of the National Academy of Sciences",
-      "issns": [
-        "0027-8424",
-        "1091-6490"
-      ],
-      "date": "2026-08-24",
-      "date_source": "published-online",
-      "categories": [
-        "network_resilience"
-      ],
-      "featured": "PNAS",
-      "journal_short": "PNAS",
-      "evidence": [
-        "food web",
-        "resilient"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "food web",
-            "resilient"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2601583123",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0343072",
@@ -5419,10 +4581,17 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
-        "higher-order interactions",
         "simplicial complexes"
       ],
       "screening_basis": "network",
@@ -5438,13 +4607,6 @@
           "route": "explicit_network_concept",
           "source": "abstract",
           "matches": [
-            "higher-order interactions"
-          ]
-        },
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
             "simplicial complexes"
           ]
         }
@@ -5454,8 +4616,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0343072",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0336276",
@@ -5478,6 +4641,14 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -5498,8 +4669,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0336276",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-76885-7",
@@ -5522,13 +4694,23 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
+        "network analyses",
         "network analysis"
       ],
       "screening_basis": "network",
       "screening_routes": [
+        {
+          "route": "network_method",
+          "source": "title",
+          "matches": [
+            "network analyses"
+          ]
+        },
         {
           "route": "network_method",
           "source": "abstract",
@@ -5542,100 +4724,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-76885-7",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
-    },
-    {
-      "doi": "10.1038/s41467-026-76854-0",
-      "url": "https://doi.org/10.1038/s41467-026-76854-0",
-      "title": "Soft microgel networks stabilize and extend nozzle-free water jets",
-      "authors": [
-        "Atieh Razavi",
-        "Mehrzad Roudini",
-        "Andreas Winkler",
-        "Benno Liebchen",
-        "Regine von Klitzing",
-        "Suvendu Mandal",
-        "Amin Rahimzadeh"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Nature Communications",
-      "issns": [
-        "2041-1723"
-      ],
-      "date": "2026-08-22",
-      "date_source": "published-online",
-      "categories": [
-        "other"
-      ],
-      "featured": "NC",
-      "journal_short": "NC",
-      "evidence": [
-        "networks",
-        "stabilize"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "networks",
-            "stabilize"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-76854-0",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Nature Communications"
-      ]
-    },
-    {
-      "doi": "10.1126/sciadv.aee9649",
-      "url": "https://doi.org/10.1126/sciadv.aee9649",
-      "title": "Programmable photonic neural engine with all-optical nonlinear activation and 40,000 connections",
-      "authors": [
-        "Hao Sun",
-        "Xinyi Zhu",
-        "José Azaña"
-      ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Science Advances",
-      "issns": [
-        "2375-2548"
-      ],
-      "date": "2026-08-21",
-      "date_source": "published-print",
-      "categories": [
-        "network_structure"
-      ],
-      "featured": "SA",
-      "journal_short": "SA",
-      "evidence": [
-        "network topolog"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
-            "network topolog"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee9649",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Science Advances"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1126/sciadv.aee8016",
@@ -5658,18 +4749,35 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "SA",
       "journal_short": "SA",
       "evidence": [
+        "interaction topology theory",
         "network topolog"
       ],
       "screening_basis": "network",
       "screening_routes": [
         {
+          "route": "network_method",
+          "source": "title",
+          "matches": [
+            "interaction topology theory"
+          ]
+        },
+        {
           "route": "explicit_network_concept",
           "source": "abstract",
           "matches": [
             "network topolog"
+          ]
+        },
+        {
+          "route": "network_method",
+          "source": "abstract",
+          "matches": [
+            "interaction topology theory"
           ]
         }
       ],
@@ -5678,8 +4786,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee8016",
       "has_update": false,
       "retrieved_by": [
-        "journal: Science Advances"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0338320",
@@ -5701,6 +4810,8 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -5756,8 +4867,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0338320",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2523784123",
@@ -5793,6 +4905,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -5813,8 +4927,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2523784123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12958-y",
@@ -5837,6 +4952,8 @@
         "network_collective",
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -5862,8 +4979,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12958-y",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0347760",
@@ -5887,6 +5005,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -5907,8 +5027,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0347760",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/zdpg-dr6t",
@@ -5934,6 +5055,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -5956,8 +5079,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fzdpg-dr6t",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0349658",
@@ -5983,6 +5107,14 @@
         "network_spreading",
         "network_resilience"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -6011,8 +5143,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0349658",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/v4k3-49dx",
@@ -6036,6 +5169,8 @@
         "network_collective",
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -6064,8 +5199,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fv4k3-49dx",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/qvlk-6df6",
@@ -6091,10 +5227,14 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
-        "complex networks"
+        "complex networks",
+        "networks",
+        "oscillatory"
       ],
       "screening_basis": "network",
       "screening_routes": [
@@ -6106,10 +5246,11 @@
           ]
         },
         {
-          "route": "explicit_network_concept",
+          "route": "network_structure_or_dynamics",
           "source": "abstract",
           "matches": [
-            "complex networks"
+            "networks",
+            "oscillatory"
           ]
         },
         {
@@ -6125,8 +5266,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fqvlk-6df6",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/f5n5-8mr3",
@@ -6149,6 +5291,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -6182,8 +5326,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Ff5n5-8mr3",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s42005-026-02820-3",
@@ -6205,6 +5350,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Commun. Phys.",
       "evidence": [
@@ -6225,8 +5372,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02820-3",
       "has_update": false,
       "retrieved_by": [
-        "journal: Communications Physics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75107-4",
@@ -6250,6 +5398,14 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "stochastic model"
+        ]
+      },
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -6270,8 +5426,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75107-4",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12942-6",
@@ -6294,6 +5451,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -6314,8 +5473,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12942-6",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1126/sciadv.aeg0180",
@@ -6342,6 +5502,8 @@
         "network_inference",
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "SA",
       "journal_short": "SA",
       "evidence": [
@@ -6362,8 +5524,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeg0180",
       "has_update": false,
       "retrieved_by": [
-        "journal: Science Advances"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1126/sciadv.ady4193",
@@ -6399,6 +5562,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "SA",
       "journal_short": "SA",
       "evidence": [
@@ -6419,8 +5584,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.ady4193",
       "has_update": false,
       "retrieved_by": [
-        "journal: Science Advances"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/vswp-h4hx",
@@ -6445,6 +5611,8 @@
         "network_inference",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -6465,8 +5633,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fvswp-h4hx",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/pngx-s5xx",
@@ -6486,6 +5655,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -6506,8 +5677,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fpngx-s5xx",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0345566",
@@ -6532,6 +5704,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -6574,8 +5748,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0345566",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0344013",
@@ -6599,6 +5774,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -6619,8 +5796,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0344013",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/xq8k-864y",
@@ -6645,6 +5823,8 @@
       "categories": [
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -6667,8 +5847,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fxq8k-864y",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/sc46-82hl",
@@ -6691,6 +5872,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -6713,8 +5896,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fsc46-82hl",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2600800123",
@@ -6739,6 +5923,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -6761,8 +5947,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2600800123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0339676",
@@ -6784,6 +5971,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -6805,13 +5994,6 @@
           "matches": [
             "higher-order interactions"
           ]
-        },
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
-            "higher-order interactions"
-          ]
         }
       ],
       "source": "Crossref",
@@ -6819,8 +6001,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0339676",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-76342-5",
@@ -6845,28 +6028,16 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
-        "consensus",
         "kuramoto",
-        "networks",
-        "power grid",
-        "synchronization"
+        "networks"
       ],
       "screening_basis": "network",
       "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "power grid",
-            "synchronization",
-            "consensus",
-            "synchronization"
-          ]
-        },
         {
           "route": "network_structure_or_dynamics",
           "source": "abstract",
@@ -6881,55 +6052,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-76342-5",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
-    },
-    {
-      "doi": "10.1073/pnas.2613258123",
-      "url": "https://doi.org/10.1073/pnas.2613258123",
-      "title": "Structure and dynamics of confined water in amyloid protein fibril nanochannels",
-      "authors": [
-        "Fiona Mon",
-        "Conor B. Abraham",
-        "John E. Straub"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Proceedings of the National Academy of Sciences",
-      "issns": [
-        "0027-8424",
-        "1091-6490"
-      ],
-      "date": "2026-08-12",
-      "date_source": "published-online",
-      "categories": [
-        "network_spreading"
-      ],
-      "featured": "PNAS",
-      "journal_short": "PNAS",
-      "evidence": [
-        "diffusion",
-        "networks"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "diffusion",
-            "diffusion"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2613258123",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0335154",
@@ -6956,6 +6081,8 @@
         "network_structure",
         "network_inference"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -6991,8 +6118,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0335154",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12885-y",
@@ -7015,6 +6143,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -7035,8 +6165,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12885-y",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/48z3-6cmb",
@@ -7060,6 +6191,8 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -7080,8 +6213,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F48z3-6cmb",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2609531123",
@@ -7106,6 +6240,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -7126,8 +6262,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2609531123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0337926",
@@ -7153,6 +6290,14 @@
         "network_spreading",
         "network_resilience"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -7187,8 +6332,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0337926",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0332921",
@@ -7216,6 +6362,8 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -7244,8 +6392,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0332921",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/wzv4-5p67",
@@ -7268,6 +6417,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -7288,8 +6439,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fwzv4-5p67",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/kqkn-mymm",
@@ -7312,6 +6464,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -7334,8 +6488,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fkqkn-mymm",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/cnmt-5cxk",
@@ -7361,6 +6516,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -7381,8 +6538,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fcnmt-5cxk",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1137/25m1725486",
@@ -7404,6 +6562,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "SIADS",
       "evidence": [
@@ -7426,8 +6586,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1137%2F25m1725486",
       "has_update": false,
       "retrieved_by": [
-        "journal: SIAM Journal on Applied Dynamical Systems"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1126/sciadv.aef2184",
@@ -7449,6 +6610,8 @@
       "categories": [
         "network_inference"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "SA",
       "journal_short": "SA",
       "evidence": [
@@ -7520,8 +6683,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aef2184",
       "has_update": false,
       "retrieved_by": [
-        "journal: Science Advances"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/xyx5-3tz3",
@@ -7546,6 +6710,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PRL",
       "journal_short": "PRL",
       "evidence": [
@@ -7569,8 +6735,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fxyx5-3tz3",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Letters"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0346436",
@@ -7595,6 +6762,8 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -7634,8 +6803,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0346436",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0313720",
@@ -7667,6 +6837,8 @@
         "network_structure",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -7695,8 +6867,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0313720",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/vvrf-qd6f",
@@ -7719,6 +6892,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -7744,8 +6919,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fvvrf-qd6f",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2619078123",
@@ -7772,10 +6948,17 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "stochastic model"
+        ]
+      },
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
-        "higher-order interactions",
         "higher-order networks",
         "hypergraphs"
       ],
@@ -7799,13 +6982,6 @@
           "route": "explicit_network_concept",
           "source": "abstract",
           "matches": [
-            "higher-order interactions"
-          ]
-        },
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
             "hypergraphs"
           ]
         },
@@ -7822,8 +6998,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2619078123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0335719",
@@ -7844,6 +7021,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -7871,63 +7050,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0335719",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
-    },
-    {
-      "doi": "10.1073/pnas.2604124123",
-      "url": "https://doi.org/10.1073/pnas.2604124123",
-      "title": "Bladder mucosal afferents detect UTI and aid pathogen clearance",
-      "authors": [
-        "Cindy Tay",
-        "Harman Sharma",
-        "Stewart Ramsay",
-        "Georgia Bourlotos",
-        "Sarah K. Manning",
-        "Natalie E. Stevens",
-        "Sophie J. Miller",
-        "Geraint B. Rogers",
-        "David J. Lynn",
-        "Feargal J. Ryan",
-        "Andrea M. Harrington",
-        "Vladimir Zagorodnyuk",
-        "Steven L. Taylor",
-        "Luke Grundy"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Proceedings of the National Academy of Sciences",
-      "issns": [
-        "0027-8424",
-        "1091-6490"
-      ],
-      "date": "2026-08-03",
-      "date_source": "published-online",
-      "categories": [
-        "network_structure"
-      ],
-      "featured": "PNAS",
-      "journal_short": "PNAS",
-      "evidence": [
-        "complex network"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
-            "complex network"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2604124123",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0336490",
@@ -7951,6 +7076,14 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -8008,8 +7141,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0336490",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1063/5.0320572",
@@ -8033,6 +7167,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Chaos",
       "evidence": [
@@ -8071,8 +7207,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0320572",
       "has_update": false,
       "retrieved_by": [
-        "journal: Chaos"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12926-6",
@@ -8097,6 +7234,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -8117,8 +7256,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12926-6",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12918-6",
@@ -8141,6 +7281,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -8161,8 +7303,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12918-6",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12848-3",
@@ -8186,6 +7329,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -8206,8 +7351,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12848-3",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75293-1",
@@ -8229,6 +7375,8 @@
       "categories": [
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -8251,8 +7399,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75293-1",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1007/s11071-026-12855-4",
@@ -8276,6 +7425,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Nonlinear Dynamics",
       "evidence": [
@@ -8296,8 +7447,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12855-4",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nonlinear Dynamics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/x6hc-jb2r",
@@ -8323,6 +7475,8 @@
         "network_spreading",
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -8364,8 +7518,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fx6hc-jb2r",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/gppc-1j4z",
@@ -8387,6 +7542,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -8425,8 +7582,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fgppc-1j4z",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/4rsq-ybmk",
@@ -8449,11 +7607,20 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "langevin"
+        ]
+      },
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
         "coupled oscillators",
-        "diffusion"
+        "diffusion",
+        "symmetry breaking"
       ],
       "screening_basis": "network",
       "screening_routes": [
@@ -8462,7 +7629,8 @@
           "source": "abstract",
           "matches": [
             "coupled oscillators",
-            "diffusion"
+            "diffusion",
+            "symmetry breaking"
           ]
         }
       ],
@@ -8471,60 +7639,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F4rsq-ybmk",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
-    },
-    {
-      "doi": "10.1038/s43588-026-01029-2",
-      "url": "https://doi.org/10.1038/s43588-026-01029-2",
-      "title": "Structure-alignment-driven cross-graph modeling for functional RNA design",
-      "authors": [
-        "Shengfan Wang",
-        "Jun Wang",
-        "Xiaojian Liu",
-        "Weimin Zhu",
-        "Jiaqi Huang",
-        "Yiming Xue",
-        "Junchi Yan",
-        "Hong-Bin Shen",
-        "Jie Song",
-        "Xiaoyong Pan"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Nature Computational Science",
-      "issns": [
-        "2662-8457"
-      ],
-      "date": "2026-07-30",
-      "date_source": "published-online",
-      "categories": [
-        "other"
-      ],
-      "featured": null,
-      "journal_short": "NCS",
-      "evidence": [
-        "graph",
-        "structure"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "graph",
-            "structure"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": false,
-      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs43588-026-01029-2",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Nature Computational Science"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2613187123",
@@ -8549,6 +7666,14 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -8583,8 +7708,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2613187123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2513423123",
@@ -8608,6 +7734,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -8628,8 +7756,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2513423123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75956-z",
@@ -8651,6 +7780,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -8671,8 +7802,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75956-z",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/rn1f-zsgb",
@@ -8694,6 +7826,14 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [
+        "simulation"
+      ],
+      "method_evidence": {
+        "simulation": [
+          "monte carlo"
+        ]
+      },
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -8714,8 +7854,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Frn1f-zsgb",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/bvsj-7pmq",
@@ -8737,6 +7878,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -8757,8 +7900,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fbvsj-7pmq",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75565-w",
@@ -8782,18 +7926,34 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
-        "higher-order interactions"
+        "topological kuramoto"
       ],
       "screening_basis": "network",
       "screening_routes": [
         {
           "route": "explicit_network_concept",
+          "source": "title",
+          "matches": [
+            "topological kuramoto"
+          ]
+        },
+        {
+          "route": "explicit_network_concept",
           "source": "abstract",
           "matches": [
-            "higher-order interactions"
+            "topological kuramoto"
+          ]
+        },
+        {
+          "route": "explicit_network_concept",
+          "source": "abstract",
+          "matches": [
+            "topological kuramoto"
           ]
         }
       ],
@@ -8802,8 +7962,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75565-w",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/t6rh-7mnl",
@@ -8826,6 +7987,8 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -8846,8 +8009,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Ft6rh-7mnl",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-74958-1",
@@ -8881,6 +8045,8 @@
         "network_inference",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -8901,8 +8067,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-74958-1",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1137/24m1706700",
@@ -8924,6 +8091,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "SIADS",
       "evidence": [
@@ -8944,8 +8113,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1137%2F24m1706700",
       "has_update": false,
       "retrieved_by": [
-        "journal: SIAM Journal on Applied Dynamical Systems"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75714-1",
@@ -8974,28 +8144,22 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
-        "collective",
-        "networks",
-        "oscillations",
-        "stability",
-        "synchronization"
+        "frequencies lock",
+        "long-range coupling"
       ],
       "screening_basis": "network",
       "screening_routes": [
         {
-          "route": "network_structure_or_dynamics",
+          "route": "implicit_interaction_dynamics",
           "source": "abstract",
           "matches": [
-            "networks",
-            "collective",
-            "oscillations",
-            "synchronization",
-            "collective",
-            "stability",
-            "synchronization"
+            "long-range coupling",
+            "frequencies lock"
           ]
         }
       ],
@@ -9004,8 +8168,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75714-1",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75624-2",
@@ -9040,6 +8205,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -9060,8 +8227,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75624-2",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/zj7x-6hpk",
@@ -9084,6 +8252,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -9104,8 +8274,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fzj7x-6hpk",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s42005-026-02742-0",
@@ -9131,10 +8302,11 @@
         "network_collective",
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Commun. Phys.",
       "evidence": [
-        "higher-order networks",
         "hypergraphs"
       ],
       "screening_basis": "network",
@@ -9150,13 +8322,6 @@
           "route": "explicit_network_concept",
           "source": "abstract",
           "matches": [
-            "higher-order networks"
-          ]
-        },
-        {
-          "route": "explicit_network_concept",
-          "source": "abstract",
-          "matches": [
             "hypergraphs"
           ]
         }
@@ -9166,8 +8331,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02742-0",
       "has_update": false,
       "retrieved_by": [
-        "journal: Communications Physics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75843-7",
@@ -9192,6 +8358,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -9212,8 +8380,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75843-7",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/s2n5-4ps2",
@@ -9238,6 +8407,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -9258,8 +8429,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fs2n5-4ps2",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2601657123",
@@ -9288,6 +8460,8 @@
       "categories": [
         "network_inference"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -9308,8 +8482,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2601657123",
       "has_update": true,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75402-0",
@@ -9332,6 +8507,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -9352,70 +8529,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75402-0",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
-    },
-    {
-      "doi": "10.1103/z6zz-vw5q",
-      "url": "https://doi.org/10.1103/z6zz-vw5q",
-      "title": "Autonomous Stabilization of Remote Entanglement in a Cascaded Quantum Network",
-      "authors": [
-        "Abdullah Irfan",
-        "Kaushik Singirikonda",
-        "Mingxing Yao",
-        "Andrew Lingenfelter",
-        "Michael Mollenhauer",
-        "Xi Cao",
-        "Aashish A. Clerk",
-        "Wolfgang Pfaff"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Physical Review X",
-      "issns": [
-        "2160-3308"
-      ],
-      "date": "2026-07-13",
-      "date_source": "published-online",
-      "categories": [
-        "network_spreading"
-      ],
-      "featured": "PRX",
-      "journal_short": "PRX",
-      "evidence": [
-        "cascaded",
-        "network",
-        "stabilization"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "title",
-          "matches": [
-            "network",
-            "cascaded",
-            "cascaded",
-            "stabilization"
-          ]
-        },
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "network",
-            "cascaded",
-            "cascaded"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fz6zz-vw5q",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Physical Review X"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1103/yknm-1qpr",
@@ -9442,6 +8558,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -9462,8 +8580,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fyknm-1qpr",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75436-4",
@@ -9493,6 +8612,8 @@
         "network_structure",
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -9513,8 +8634,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75436-4",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/hkrb-wpdr",
@@ -9538,6 +8660,8 @@
       "categories": [
         "network_structure"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRResearch",
       "evidence": [
@@ -9573,8 +8697,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fhkrb-wpdr",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review Research"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2534923123",
@@ -9598,6 +8723,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -9621,8 +8748,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2534923123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1137/24m1704956",
@@ -9642,6 +8770,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "SIADS",
       "evidence": [
@@ -9674,8 +8804,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1137%2F24m1704956",
       "has_update": false,
       "retrieved_by": [
-        "journal: SIAM Journal on Applied Dynamical Systems"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2534542123",
@@ -9702,6 +8833,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -9724,8 +8857,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2534542123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s41467-026-75255-7",
@@ -9756,6 +8890,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "NC",
       "journal_short": "NC",
       "evidence": [
@@ -9776,8 +8912,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75255-7",
       "has_update": false,
       "retrieved_by": [
-        "journal: Nature Communications"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/9qxp-zv57",
@@ -9801,6 +8938,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -9821,8 +8960,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F9qxp-zv57",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/6h5q-tv19",
@@ -9844,6 +8984,8 @@
       "categories": [
         "other"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -9864,8 +9006,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F6h5q-tv19",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2532072123",
@@ -9889,6 +9032,8 @@
       "categories": [
         "network_collective"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -9912,8 +9057,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2532072123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1073/pnas.2530131123",
@@ -9940,6 +9086,14 @@
         "network_spreading",
         "network_collective"
       ],
+      "methods": [
+        "theory"
+      ],
+      "method_evidence": {
+        "theory": [
+          "mean-field"
+        ]
+      },
       "featured": "PNAS",
       "journal_short": "PNAS",
       "evidence": [
@@ -9974,8 +9128,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2530131123",
       "has_update": false,
       "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1038/s42005-026-02727-z",
@@ -9999,6 +9154,8 @@
       "categories": [
         "network_resilience"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "Commun. Phys.",
       "evidence": [
@@ -10023,8 +9180,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02727-z",
       "has_update": false,
       "retrieved_by": [
-        "journal: Communications Physics"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     },
     {
       "doi": "10.1103/9wrc-j8m9",
@@ -10046,6 +9204,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -10092,57 +9252,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F9wrc-j8m9",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
-    },
-    {
-      "doi": "10.1073/pnas.2536065123",
-      "url": "https://doi.org/10.1073/pnas.2536065123",
-      "title": "Transregional astrocyte-dependent metaplasticity in the hippocampus",
-      "authors": [
-        "Shruthi Sateesh",
-        "Barbara J. Logan",
-        "Miki Suzuki",
-        "David Stellwagen",
-        "Wickliffe C. Abraham"
+        "fixed-cohort DOI lookup"
       ],
-      "author_metadata_status": "available",
-      "author_placeholders": [],
-      "journal": "Proceedings of the National Academy of Sciences",
-      "issns": [
-        "0027-8424",
-        "1091-6490"
-      ],
-      "date": "2026-07-07",
-      "date_source": "published-online",
-      "categories": [
-        "network_spreading"
-      ],
-      "featured": "PNAS",
-      "journal_short": "PNAS",
-      "evidence": [
-        "cascade",
-        "networks"
-      ],
-      "screening_basis": "network",
-      "screening_routes": [
-        {
-          "route": "network_structure_or_dynamics",
-          "source": "abstract",
-          "matches": [
-            "networks",
-            "cascade",
-            "cascade"
-          ]
-        }
-      ],
-      "source": "Crossref",
-      "abstract_available": true,
-      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2536065123",
-      "has_update": false,
-      "retrieved_by": [
-        "journal: Proceedings of the National Academy of Sciences"
-      ]
+      "screening_version": 7
     },
     {
       "doi": "10.1103/1qmt-gx5f",
@@ -10165,6 +9277,8 @@
       "categories": [
         "network_spreading"
       ],
+      "methods": [],
+      "method_evidence": {},
       "featured": null,
       "journal_short": "PRE",
       "evidence": [
@@ -10185,8 +9299,9 @@
       "metadata_url": "https://api.crossref.org/works/10.1103%2F1qmt-gx5f",
       "has_update": false,
       "retrieved_by": [
-        "journal: Physical Review E"
-      ]
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 7
     }
   ]
 }

@@ -31,6 +31,27 @@ def matches(pattern, text):
     return sorted({m.group(0).lower() for m in re.finditer(pattern, text, re.I)})
 
 
+def classify_methods(text, rules):
+    """Return conservative, orthogonal method labels and their evidence.
+
+    Method labels describe how a paper studies its network question; they do
+    not establish network-science relevance and never create a green lane.
+    """
+    definitions = [
+        ("theory", "method_theory"),
+        ("empirical", "method_empirical"),
+        ("simulation", "method_simulation"),
+        ("ai_ml", "method_ai_ml"),
+    ]
+    labels, evidence = [], {}
+    for label, key in definitions:
+        hits = matches(rules.get(key, r"(?!)"), text)
+        if hits:
+            labels.append(label)
+            evidence[label] = hits
+    return labels, evidence
+
+
 def author_metadata(item):
     """Do not present deposit placeholders as verified personal names."""
     names, placeholders = [], []
@@ -80,21 +101,51 @@ def relevance(title, abstract, rules):
         processes = matches(rules["implicit_processes"], text)
         specific = matches(rules["specific_network_mechanism"], text)
         graph = matches(rules["graph_evidence"], text)
+        structural_graph = [hit for hit in graph if not re.fullmatch(r"complex networks?|network science", hit)]
+        research = matches(rules.get("research_action", r"(?!)"), text)
+        background = matches(rules.get("background_context", r"(?!)"), text)
+        # A network mentioned as motivation, future applicability or a
+        # biological/material metaphor is not evidence of an analysis.
+        if source == "abstract" and background and not methods:
+            continue
         # ML/material terminology alone is not negative evidence about a paper.
         # Explicit methods and mechanism evidence can establish relevance there.
-        ambiguous_ml = matches(rules["ml_title"], title)
-        ambiguous_material = matches(rules["materials_title"], title)
+        ambiguous_ml = matches(rules["ml_title"], title) or matches(rules.get("ml_representation", r"(?!)"), text)
+        ambiguous_material = matches(rules["materials_title"], title + " " + text)
+        graph_application = matches(rules.get("graph_application_title", r"(?!)"), title)
+        incidental_domain = matches(rules.get("incidental_network_domain", r"(?!)"), title)
         core = matches(rules["ml_core_exception"], text)
-        if ambiguous_material and not matches(rules["graph_evidence"], text):
+        if ambiguous_material and not (structural_graph or methods):
             continue
         if ambiguous_ml and not (methods or core or (relations and processes)):
             continue
+        # A graph is often only a representation in molecular/biomedical
+        # design.  Do not treat cross-graph modelling as network science
+        # unless an explicit network method or network mechanism is present.
+        if graph_application and not (methods or specific or direct):
+            continue
+        # In quantum-device papers, "network" can name the communication
+        # setting without being a network-science object.  Require explicit
+        # topology/graph/network-analysis evidence before using generic
+        # network + device language as a route.
+        if incidental_domain and objects and not (methods or direct or graph):
+            continue
+        if matches(rules.get("food_web", r"(?!)"), text) and not (methods or graph or matches(rules.get("relational_analysis", r"(?!)"), text)):
+            continue
+        # Generic "complex network" and "higher-order interactions" can be
+        # metaphors or descriptions of prior tools. Stronger network concepts
+        # remain independent evidence; routine network methods always count.
+        if source == "abstract" and direct and all(re.fullmatch(r"complex networks?|higher.order interactions?", hit) for hit in direct):
+            if not (research or structural_graph or specific):
+                direct = []
+        if relations == ["interacting agents"] and not matches(rules.get("collective_process", r"(?!)"), text):
+            relations = []
         route, hits = None, []
         if methods:
             route, hits = "network_method", methods
         elif direct:
             route, hits = "explicit_network_concept", direct
-        elif objects and (mechanisms or processes) and (source == "title" or specific or graph):
+        elif objects and (mechanisms or processes) and (source == "title" or graph or (specific and research)):
             route, hits = "network_structure_or_dynamics", objects + mechanisms + processes
         elif relations and processes:
             route, hits = "implicit_interaction_dynamics", relations + processes
@@ -141,6 +192,7 @@ def screen(item, config, today):
     for c in config["network_categories"]:
         if matches(c["pattern"], text):
             categories.append(c["id"])
+    methods, method_evidence = classify_methods(text, rules)
     return {
         "doi": doi, "url": "https://doi.org/" + quote(doi, safe="/"),
         "title": title,
@@ -148,6 +200,8 @@ def screen(item, config, today):
         "journal": journal["name"],
         "issns": sorted(issns), "date": published.isoformat(), "date_source": date_source,
         "categories": categories or ["other"],
+        "methods": methods,
+        "method_evidence": method_evidence,
         "featured": journal["short"] if journal["short"] in config["featured_journals"] else None, "journal_short": journal["short"], "evidence": evidence,
         "screening_basis": "network", "screening_routes": routes, "source": "Crossref", "abstract_available": bool(abstract),
         "metadata_url": "https://api.crossref.org/works/" + quote(doi, safe=""),

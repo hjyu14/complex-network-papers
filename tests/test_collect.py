@@ -36,6 +36,65 @@ class ScreeningTests(unittest.TestCase):
         self.assertEqual(paper["categories"], ["network_collective"])
         self.assertNotIn("topics", paper)
 
+    def test_context_not_domain_or_word_alone(self):
+        negatives = [
+            ('Topology of macromolecular networks', ''),
+            ('A biological observation', 'The organ contains a complex network of sensory neurons.'),
+            ('A chemical observation', 'We find a complex network of electrostatic interactions.'),
+            ('Generative modeling', 'We use a diffusion model to generate molecular structures from graphs.'),
+            ('Sampling from interacting agents by diffusion', ''),
+            ('Dietary changes in food webs', 'Food webs have cascading consequences for biodiversity.'),
+            ('A device study', 'Cascading effects on networks remain poorly understood.'),
+        ]
+        for title, abstract in negatives:
+            with self.subTest(title=title):
+                self.assertIsNone(self.result(title=[title], abstract=abstract)[0])
+        positives = [
+            ('A chemical observation', 'We apply degree centrality to a hydrogen-bond network.'),
+            ('A marine study', 'We calculate modularity in trophic networks.'),
+            ('Interaction topology theory for materials', ''),
+            ('Inferring higher-order interactions in collective migration', ''),
+            ('Coupled pendula and synchrony', ''),
+        ]
+        for title, abstract in positives:
+            with self.subTest(title=title):
+                self.assertIsNotNone(self.result(title=[title], abstract=abstract)[0])
+
+    def test_methods_are_orthogonal_and_evidence_based(self):
+        paper, reason = self.result(title=["Synchronization in temporal networks"],
+                                    abstract="We use a graph neural network and numerical simulation to study synchronization.")
+        self.assertEqual(reason, "included")
+        self.assertEqual(paper["methods"], ["simulation", "ai_ml"])
+        self.assertIn("graph neural", paper["method_evidence"]["ai_ml"])
+
+    def test_biological_neurons_and_research_phenomena_are_not_method_evidence(self):
+        paper, _ = self.result(title=["Synchronization in a Hindmarsh-Rose neural network"],
+                               abstract="We investigate a phase transition using a synthetic dataset.")
+        self.assertEqual(paper['methods'], [])
+
+    def test_graph_input_method_does_not_create_network_relevance(self):
+        paper, reason = self.result(title=["Graph neural network for enzyme discovery"],
+                                    abstract="We use machine learning to predict enzyme activity from molecular graphs.")
+        self.assertIsNone(paper)
+        self.assertEqual(reason, "review_context")
+
+    def test_quantum_device_network_name_does_not_create_network_relevance(self):
+        paper, reason = self.result(title=["Autonomous Stabilization of Remote Entanglement in a Cascaded Quantum Network"],
+                                    abstract="We stabilize entanglement between two superconducting qubits using nonreciprocal waveguide coupling.")
+        self.assertIsNone(paper)
+        self.assertEqual(reason, "review_context")
+
+    def test_implicit_synchronization_and_lattice_percolation_get_methods(self):
+        paper, reason = self.result(title=["Conservative dissipation shapes symmetry breaking in nonequilibrium currents"],
+                                    abstract="We analyze coupled oscillators undergoing a synchronization phase transition using a Langevin model.")
+        self.assertEqual(reason, "included")
+        self.assertIn("theory", paper["methods"])
+        paper, reason = self.result(title=["Percolation and criticality on Bethe lattices"],
+                                    abstract="We use a cavity-field method and Monte Carlo simulations to study percolation.")
+        self.assertEqual(reason, "included")
+        self.assertIn("theory", paper["methods"])
+        self.assertIn("simulation", paper["methods"])
+
     def test_biomedical_applications_are_eligible(self):
         for title in ["A structure–function neuronal network model of the rat nervous system",
                       "A network atlas of the mouse brain", "A network model for cancer patients"]:
