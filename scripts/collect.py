@@ -219,7 +219,7 @@ def screen(item, config, today):
     else:
         annotations = {'scope_class': scope_review['v8_category'],
                        'scope_evidence_level': scope_review['evidence_level'],
-                       'scope_review_sha256': hashlib.sha256(scope_path.read_bytes()).hexdigest()}
+                       'scope_review_sha256': hashlib.sha256(scope_path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()}
     return {
         "doi": doi, "url": "https://doi.org/" + quote(doi, safe="/"),
         "title": title,

@@ -77,7 +77,7 @@ def write_result(baseline, raw_hash, items, out):
                   'added_dois': [], 'new_candidates_queried': False}
     if config['version'] >= 8:
         provenance['assessment_method'] = 'approved_title_and_abstract_review'
-        provenance['scope_review_sha256'] = hashlib.sha256((ROOT / config['scope_policy']['review_file']).read_bytes()).hexdigest()
+        provenance['scope_review_sha256'] = hashlib.sha256((ROOT / config['scope_policy']['review_file']).read_bytes().replace(b'\r\n', b'\n')).hexdigest()
     coverage = [{'label': 'Existing-paper DOI lookups', 'retrieved': len(items),
                  'total_results': len(items), 'truncated': False, 'failed': False}]
     report = {'attempted_at': now, 'screening_version': config['version'],
@@ -129,7 +129,7 @@ def promote_trial(source, trial, out):
     if not valid:
         raise ValueError('Trial is incomplete, stale or outside the fixed cohort')
     if config['version'] >= 8:
-        review_hash = hashlib.sha256((ROOT / config['scope_policy']['review_file']).read_bytes()).hexdigest()
+        review_hash = hashlib.sha256((ROOT / config['scope_policy']['review_file']).read_bytes().replace(b'\r\n', b'\n')).hexdigest()
         if payload['rescreening'].get('scope_review_sha256') != review_hash:
             raise ValueError('Trial scope review is stale')
     archive = out / 'baseline-v6.json'

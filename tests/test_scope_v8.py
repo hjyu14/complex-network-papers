@@ -47,7 +47,7 @@ class ScopeV8Tests(unittest.TestCase):
         import hashlib
         from collections import Counter
         data = json.loads((ROOT / 'site/data/papers.json').read_text(encoding='utf-8'))
-        registry_raw = (ROOT / self.config['scope_policy']['review_file']).read_bytes()
+        registry_raw = (ROOT / self.config['scope_policy']['review_file']).read_bytes().replace(b'\r\n', b'\n')
         registry = json.loads(registry_raw)
         self.assertEqual(data['rescreening']['scope_review_sha256'], hashlib.sha256(registry_raw).hexdigest())
         self.assertEqual({p['doi'] for p in data['papers']}, {doi for doi, row in registry['decisions'].items() if row['v8_category'] in ['core','transferable_application']})
