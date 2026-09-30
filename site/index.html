@@ -54,10 +54,6 @@
           <label><span data-en="Journal" data-zh="期刊">Journal</span><select id="journal"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option></select></label>
           <label><span data-en="Journal scope" data-zh="期刊范围">Journal scope</span><select id="scope"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option><option value="featured" data-en="Spotlight journals" data-zh="重点期刊">Spotlight journals</option><option value="other" data-en="Other journals" data-zh="其他期刊">Other journals</option></select></label>
         </div>
-        <details class="method-filter"><summary id="method-filter-label">Research method (optional)</summary>
-          <label><span class="sr-only" data-en="Research method" data-zh="研究方法">Research method</span><select id="method"><option value="all">All methods</option></select></label>
-          <p data-en="Labels reflect available evidence; an unlabelled paper may still use these methods." data-zh="只标注现有证据可识别的方法；没有标签不代表未使用该方法。">Labels reflect available evidence; an unlabelled paper may still use these methods.</p>
-        </details>
         <button id="back-all" type="button" class="back-all" hidden data-en="← Back to all papers" data-zh="← 返回全部文献">← Back to all papers</button>
         <div class="result-meta"><p id="result-count" aria-live="polite">Waiting for data</p><button id="clear" type="button" class="text-button" hidden data-en="Clear filters ×" data-zh="清除筛选 ×">Clear filters ×</button></div>
         <div id="paper-list"><p class="empty">Loading papers…</p></div>
@@ -67,7 +63,7 @@
     <section class="methodology" aria-labelledby="method-title">
       <details><summary id="method-title" data-en="How are papers selected?" data-zh="这些文献如何被收录？">How are papers selected?</summary>
         <div class="method-body">
-          <p data-en="Crossref metadata from 27 whitelisted journals, screened by explicit network-science rules. Automated screening can miss or misclassify papers. Abstracts are not republished." data-zh="从 27 本白名单期刊采集 Crossref 元数据，按明确的网络科学规则筛选。自动筛选可能误收或漏收，摘要不转载。">Crossref metadata from 27 whitelisted journals, screened by explicit network-science rules. Automated screening can miss or misclassify papers. Abstracts are not republished.</p>
+          <p data-en="The fixed cohort is assessed for core network science or transferable network contributions. AI title/abstract assessments are not full-text expert review. Abstracts are not republished." data-zh="固定池按核心网络科学或可迁移网络贡献审读。AI 标题／摘要判断不等于全文专家审定，摘要不转载。">The fixed cohort is assessed for core network science or transferable network contributions. AI title/abstract assessments are not full-text expert review. Abstracts are not republished.</p>
           <p id="coverage-summary"></p>
           <div class="method-links"><a href="rules.html" data-en="Read the full inclusion policy ↗" data-zh="阅读完整收录规则 ↗">Read the full inclusion policy ↗</a><a href="data/papers.json" data-en="Snapshot and query report ↗" data-zh="论文快照与查询报告 ↗">Snapshot and query report ↗</a><a href="data/status.json" data-en="Collection status ↗" data-zh="最近采集状态 ↗">Collection status ↗</a></div>
         </div>

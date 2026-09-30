@@ -19,6 +19,7 @@ class ScreeningTests(unittest.TestCase):
 
     def setUp(self):
         self.config = json.loads(CONFIG.read_text(encoding="utf-8"))
+        self.config["version"] = 7  # Legacy evidence-route mechanics, not v8 editorial decisions.
         self.today = date(2026, 9, 29)
         self.item = {"DOI": "10.1234/TEST", "type": "journal-article",
                      "title": ["Synchronization in temporal networks"],

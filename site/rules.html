@@ -18,71 +18,41 @@
       <p class="eyebrow">EDITORIAL POLICY</p>
       <div data-language="en">
         <h1>Recent research for the network science community</h1>
-        <p class="rules-meta">Screening v7 · Updated 30 September 2026</p>
-        <p class="rules-meta">Current release: the original 181 papers re-screened with v7; 162 retained, no new papers added.</p>
-        <p>NetSci Observatory brings recent network science research from our journal sources into one reading feed. We cover network structure, network methods and dynamics of interacting systems. Within this scope, theoretical, methodological and empirical work is eligible; we do not impose an innovation or contribution-size threshold.</p>
-        <h2>1. What we look for</h2>
-        <p>We include research that studies relational structure, uses network-science methods to address a research question, or investigates how interactions shape collective dynamics. Applications of centrality, community detection, network inference or other network methods are eligible, including studies of a particular biological, social or technological system.</p>
-        <p>The research content matters more than the terminology. “Network” or “graph” need not occur in the title or abstract. Conversely, a technical use of those words alone does not establish relevance: a generic neural-network predictor, material network or communication device needs evidence of network-science content.</p>
-        <h2>2. Finding explicit and implicit network research</h2>
-        <p>We retrieve records by journal and publication window, not by a global title keyword search. Titles and available abstracts are evaluated independently through complementary evidence paths:</p>
-        <ul>
-          <li><strong>Explicit concepts and methods:</strong> network topology and formation, centrality, community detection, rich-club organization, network inference and related methods.</li>
-          <li><strong>Network objects and mechanisms:</strong> a network or graph together with structural, spreading, synchronization, robustness or control evidence.</li>
-          <li><strong>Implicit interaction dynamics:</strong> relational descriptions such as coupled units or nonreciprocal interactions together with processes such as stability, synchronization or collective behavior. Neither “network” nor “graph” is required.</li>
-        </ul>
-        <p>Evidence must occur in the title or within an abstract sentence, rather than being assembled from unrelated passages. For example, <a href="https://doi.org/10.1126/science.aeg3946">Disorder-promoted stability</a> is found through abstract evidence about network dynamics and interactions despite its non-network title. The <a href="https://doi.org/10.1073/pnas.2620995123">rat nervous system network model</a> is eligible through its structure and network-method evidence; its application domain is not an exclusion.</p>
-        <p>Context distinguishes an analysis from its motivation. Generic “complex network” descriptions need supporting analytical or mechanism evidence; references to future applications and limitations of earlier methods do not alone qualify. Material connectivity, food-web terminology, device connections and graph inputs to generative models require evidence of relational analysis or network dynamics. These are not blanket exclusions by application domain: centrality and community analysis, interaction-topology methods, and the collective behavior of coupled oscillators remain eligible.</p>
-        <p>These are executable first-pass evidence rules, not full-text semantic review. Missing abstracts, incomplete dates and ambiguous or unmatched content enter a review queue, rather than being declared unrelated. Only automatically included records appear in the reading feed; the coverage summary separately reports pending candidates. General nonlinear dynamics without relational or network-method evidence is not automatically included.</p>
-        <h2>3. Topics and methods</h2>
-        <p>Topics describe what a paper studies; method labels describe how it studies the question. Topics may overlap. The current method labels are Theory, Empirical, Simulation and AI/ML. They are optional, evidence-based annotations from titles and abstracts, not additional inclusion requirements.</p>
-        <p>AI and graph machine learning are welcome when they address a network-science question such as spreading, synchronization, inference or control. A graph used only as a representation of a molecule, material or biological object does not by itself make a paper network science.</p>
-        <h2>4. Sources and browsing topics</h2>
-        <p>We query 27 whitelisted journals through Crossref and verify journal ISSNs. The home-page journal selector shows their full names. Nature, Science and Nature Physics remain sources but are not in the spotlight. The spotlight presents network-science research from five selected leading journals: Nature Communications, Physical Review X, Science Advances, Proceedings of the National Academy of Sciences and Physical Review Letters. The same relevance criteria apply throughout the feed.</p>
-        <p>Topics are overlapping browsing labels informed by <a href="https://journals.aps.org/authors/guidelines-section-selection-physical-review-e">Physical Review E's Networks and Complex Systems section</a> and the <a href="https://academic.oup.com/comnet/pages/About">Journal of Complex Networks scope</a>, mapped into five groups:</p>
-        <ul><li>Structure and formation</li><li>Community detection, inference and reconstruction</li><li>Spreading, diffusion and percolation</li><li>Synchronization, games and collective behavior</li><li>Robustness, cascades and control</li></ul>
-        <p>A paper can have several topics. “Other” is used exclusively when no topic rule matches; this is a classification gap, not a judgment of relevance. Journal ordering and source references are recorded in the <a href="https://github.com/hjyu14/complex-network-papers/blob/main/docs/classification.md">classification document</a>.</p>
-        <h2>5. A 90-day research feed</h2>
-        <p>The current baseline spans <strong>2 July–29 September 2026</strong>, inclusive. Publications dated 30 September or later are reserved for the daily-update trial. Retrieval may occur later than the publication cutoff. Seven- and thirty-day filters are relative to the snapshot end date.</p>
-        <p>We prefer online publication dates, then print, published and issued dates. If the preferred available date is incomplete, we retain the candidate for review instead of inventing a date. We consider journal articles, including reviews, and exclude preprints and identified correction or retraction notices. Each card records its date source.</p>
-        <h2>6. Traceable collection</h2>
-        <p>This release re-evaluates only the original 181 DOI records using freshly retrieved Crossref metadata. It retains 162 papers and leaves 19 out of the reading feed (5 lack abstracts and 14 lack sufficient contextual evidence under the rules). Earlier unreviewed candidates were not processed. Scheduled refreshes stay within this fixed cohort until expansion is authorized.</p>
-        <p>The journal collector remains available separately, with a safety budget of 10 pages of 1,000 records per journal. Failed or truncated retrieval preserves the last valid paper snapshot. Complete Crossref queries do not guarantee complete publisher coverage: deposits can be late or lack abstracts and dates.</p>
-        <p>We retain DOI links, matching evidence, evidence paths, query reports and the rule configuration hash. Abstracts are processed transiently, not published or stored. Missing or placeholder authors are marked as unavailable, not interpreted as evidence that a paper is unpublished; please follow the DOI for publisher details.</p>
+        <p class="rules-meta">Screening v8 · Updated 30 September 2026</p>
+        <p>Current release: 181 existing papers assessed; 117 retained (110 core network science, 7 transferable applications), 58 outside scope, 6 awaiting review. No new papers added.</p>
+        <h2>1. The main contribution determines inclusion</h2>
+        <p>Network structure, dynamics on networks, or a transferable network-science method must be a main scientific question or contribution. Network vocabulary, use of centrality or community analysis, and a prestigious journal do not by themselves qualify a paper.</p>
+        <h2>2. Two inclusion classes</h2>
+        <p><strong>Core network science:</strong> general network structure and formation, network methods, and spreading, diffusion, percolation, synchronization, games, cascades, robustness and control on networks. Biological inspiration, neuronal oscillator models or epidemic models are eligible when the main results concern network mechanisms or general methods.</p>
+        <p><strong>Transferable applications:</strong> a domain-specific study with an explicit network method or mechanism whose contribution extends beyond describing that particular system. We record what is transferable and its evidence limits. This class has no numerical quota.</p>
+        <h2>3. Outside the reading feed</h2>
+        <p>Routine network analysis supporting disease staging, drug discovery, cell differentiation, specific brain function or domain decisions is outside our editorial scope when no main transferable network contribution is established. Graph inputs, materials connectivity and device network names do not alone qualify. General nonlinear dynamics alone is outside scope. These are editorial choices, not judgments of paper quality or universal definitions of network science.</p>
+        <h2>4. Assessment and uncertainty</h2>
+        <p>The current cohort was assessed by AI using titles and selected abstracts, with user-confirmed editorial boundaries. Some decisions have title-only evidence. This is not full-text expert review or a validated general semantic classifier. Metadata refreshes apply the approved assessment registry, along with type, ISSN, DOI and date checks. Unassessed records, changed titles and unresolved cases await review; refreshes do not discover new papers or silently reassess their scientific contribution.</p>
+        <h2>5. Topics and sources</h2>
+        <p>Five overlapping browsing topics remain: structure and formation; community detection, inference and reconstruction; spreading, diffusion and percolation; synchronization, games and collective behavior; robustness, cascades and control. “Other” is exclusive when no topic matches. Topic keywords are browsing aids, separate from inclusion. Research-method labels and filters are not assigned.</p>
+        <p>The 27-journal ISSN whitelist and five spotlight journals remain unchanged. Crossref is the initial metadata source. We store metadata, DOI links, decision evidence and provenance hashes, never full abstracts or PDFs.</p>
+        <h2>6. Dates and reproducibility</h2>
+        <p>The frozen window is <strong>2 July–29 September 2026</strong>, inclusive. Online publication takes precedence, followed by print, published and issued dates. Incomplete preferred dates are not invented; future dates and identified notices are excluded. The baseline remains byte-identical. Failed or incomplete refreshes preserve the previous valid snapshot. Crossref coverage is not publisher-complete coverage.</p>
       </div>
       <div data-language="zh" hidden>
-        <h1>为网络科学研究者汇集最新研究</h1>
-        <p class="rules-meta">筛选规则 v7 · 更新于 2026 年 9 月 30 日</p>
-        <p class="rules-meta">本次发布：原有 181 篇已按 v7 重筛，保留 162 篇，未新增文献。</p>
-        <p>NetSci Observatory 将来源期刊中的网络科学新研究汇集为一个阅读入口，关注网络结构、网络方法与相互作用系统的动力学。范围内的理论、方法和实证应用研究均可收录，不以创新程度或贡献大小设置门槛。</p>
-        <h2>一、我们关注哪些文章</h2>
-        <p>研究关系结构、使用网络科学方法回答研究问题，或分析相互作用如何影响集体动力学的文章属于收录范围。中心性、社区发现、网络推断等方法的应用同样可以收录，包括针对特定生物、社会或技术系统的研究。</p>
-        <p>研究内容比术语更重要：标题和摘要不必出现 network 或 graph。反过来，仅在技术名称中出现这些词也不足以确认相关性；一般神经网络预测器、材料网络或通信设备研究，仍需网络科学内容的证据。</p>
-        <h2>二、如何发现显式与隐式的网络研究</h2>
-        <p>先按期刊与发表窗口获取记录，而非在全库中搜索标题关键词。对标题与可用摘要独立检查，通过互补的证据路径发现文章：</p>
-        <ul>
-          <li><strong>明确的网络概念与方法：</strong>网络拓扑与生成、中心性、社区发现、富人俱乐部结构、网络推断等。</li>
-          <li><strong>网络对象与机制：</strong>网络或图对象与结构、传播、同步、鲁棒性、控制等证据共同出现。</li>
-          <li><strong>隐式的相互作用动力学：</strong>耦合单元、非互易相互作用等关系描述，与稳定性、同步、集体行为等过程共同出现；不要求出现 network 或 graph。</li>
-        </ul>
-        <p>组合证据需位于标题或摘要同一句中，避免从不相干段落拼接关键词。例如，<a href="https://doi.org/10.1126/science.aeg3946">Disorder-promoted stability</a> 虽然标题未提及网络，仍可通过摘要中的网络动力学与相互作用证据发现。<a href="https://doi.org/10.1073/pnas.2620995123">鼠神经系统网络模型研究</a>因结构与网络方法证据进入范围，不因其应用领域而排除。</p>
-        <p>语境用于区分实际分析与研究背景。泛称“复杂网络”还需分析或机制证据，未来应用设想、对已有方法局限的介绍不能单独作为收录依据。材料连接、食物网术语、设备连接和生成模型的图输入，仍需关系分析或网络动力学证据。这不是按应用领域一刀切：中心性与社区分析、相互作用拓扑方法、耦合振子的集体行为均可收录。</p>
-        <p>目前实现的是可复核的证据规则初筛，而非全文语义审定。摘要缺失、日期不完整、语境不明或未命中的候选进入待核查清单，不直接判作无关。阅读列表只展示自动通过的文章，覆盖说明单独报告待核查数量。缺少关系结构或网络方法证据的一般非线性动力学不自动收录。</p>
-        <h2>三、主题与研究方法</h2>
-        <p>主题回答“文章研究什么”，方法标签回答“文章如何研究”。当前方法标签包括“理论模型”“实证数据”“数值模拟”和“人工智能与机器学习”。方法标签只依据标题和摘要中的可核对证据生成，不参与相关性放行，也不是每篇文章都必须有。</p>
-        <p>我们欢迎使用 AI 或图机器学习解决网络科学问题，例如传播、同步、网络推断和网络控制。若图只是分子、材料或生物对象的表示方式，文章本身没有研究网络结构或网络动力学，则不会因为使用图模型而自动收录。</p>
-        <h2>四、来源期刊与浏览主题</h2>
-        <p>通过 Crossref 查询 27 本白名单期刊，并核对 ISSN；首页期刊选择器展示完整名单与全称。Nature、Science、Nature Physics 仍是来源，但不属于重点区。重点区精选 Nature Communications、Physical Review X、Science Advances、Proceedings of the National Academy of Sciences 和 Physical Review Letters 中的网络科学研究，与全站文章采用相同的主题收录标准。</p>
-        <p>主题参考 <a href="https://journals.aps.org/authors/guidelines-section-selection-physical-review-e">PRE 的 Networks and Complex Systems 分区</a>与 <a href="https://academic.oup.com/comnet/pages/About">Journal of Complex Networks 范围</a>，映射为本站的五组浏览标签：</p>
-        <ul><li>网络结构与生成</li><li>社区发现与网络推断、重构</li><li>传播、扩散与渗流</li><li>同步、博弈与集体行为</li><li>鲁棒性、级联与控制</li></ul>
-        <p>一文可有多个主题；只有未命中任何主题规则时才归入“其他”。这是分类覆盖问题，不是相关性判定。期刊排序与参考来源见<a href="https://github.com/hjyu14/complex-network-papers/blob/main/docs/classification.md">分类文档</a>。</p>
-        <h2>五、只关注近九十天</h2>
-        <p>当前基线为 <strong>2026 年 7 月 2 日至 9 月 29 日</strong>，首尾均计入。9 月 30 日及之后发表的文章留待日推试验；采集时间可以晚于发表截止日。近七天、近三十天筛选以快照截止日为基准。</p>
-        <p>优先在线发表日，缺失时依次使用纸刊、published、issued 日期。优先可用日期不完整则保留待核查，不补造日期。收录期刊文章（含综述），排除预印本及已识别的更正、撤稿通知；卡片标明日期来源。</p>
-        <h2>六、采集可追溯</h2>
-        <p>本轮只对原有 181 个 DOI 重新读取 Crossref 元数据并筛选：保留 162 篇，19 篇不进入阅读列表，其中 5 篇摘要缺失、14 篇未满足规则要求的语境证据。此前其他待核查候选未在本轮处理。获得扩展授权前，定时刷新也仅处理这一固定名单。</p>
-        <p>期刊采集器作为独立工具保留，安全预算为每刊 10 页、每页 1,000 条。请求失败或预算截断时保留上次有效论文快照。Crossref 查询取尽不等于出版方覆盖完整：登记可能延迟，摘要和日期也可能缺失。</p>
-        <p>保留 DOI 链接、命中证据、证据路径、查询报告和规则配置哈希；摘要只临时参与筛选，不保存或发布。缺失或占位作者会标明元数据暂缺，不据此推断文章未出版；作者及原文详情请通过 DOI 查看出版方。</p>
+        <h1>面向复杂网络研究者的近期文献</h1>
+        <p class="rules-meta">筛选规则 v8 · 更新于 2026 年 9 月 30 日</p>
+        <p>本次审读原有 181 篇，保留 117 篇：核心网络科学 110 篇、可迁移应用研究 7 篇；范围外 58 篇，待核查 6 篇。未新增文章。</p>
+        <h2>一、根据主要贡献收录</h2>
+        <p>网络结构、网络上的动力学或可迁移的网络科学方法，须构成论文的主要科学问题或贡献。出现网络术语、使用中心性或社区分析，以及发表在重点期刊，均不足以单独放行。</p>
+        <h2>二、两类收录文章</h2>
+        <p><strong>核心网络科学：</strong>一般网络结构、生成和方法，以及网络上的传播、扩散、渗流、同步、博弈、级联、鲁棒性和控制。生物背景、神经振子或传播模型，只要主要结果是网络机制或一般方法，仍可收录。</p>
+        <p><strong>具有可迁移网络贡献的应用研究：</strong>研究从具体领域出发，但明确提出超出该系统描述的网络方法或机制。记录可迁移内容及证据限制，不设置数量配额。</p>
+        <h2>三、不进入阅读列表的研究</h2>
+        <p>网络分析服务于疾病分型、药物发现、细胞分化、具体脑功能或领域决策，且未确立主要可迁移网络贡献的文章不收录。图输入、材料连接与器件网络名称本身不足以收录；一般非线性动力学也不独立收录。这是本站选文范围，不是文章质量评价或网络科学的通用定义。</p>
+        <h2>四、判定与不确定性</h2>
+        <p>本轮由 AI 依据标题及选定摘要审读，并采用用户确认的选文边界。部分判定仅有标题证据；不是全文专家审定，也不是已经验证的通用语义分类器。刷新元数据时应用已确认审读登记表，并核对类型、ISSN、DOI 与日期。未审读、标题变化及未决记录进入待核查；刷新不发现新文章，也不自动重新裁决主要科学贡献。</p>
+        <h2>五、浏览主题和来源</h2>
+        <p>保留五组可重叠的浏览标签：网络结构与生成；社区发现与网络推断、重构；传播、扩散与渗流；同步、博弈与集体行为；鲁棒性、级联与控制。未命中时单独归入“其他”。关键词分类只是浏览辅助，与收录资格分开；暂不为文章分配研究方法标签或提供方法筛选。</p>
+        <p>27 刊 ISSN 白名单、五刊重点区不变。Crossref 为初始元数据源，只保存元数据、DOI、判定证据和来源哈希，不保存完整摘要或 PDF。</p>
+        <h2>六、日期与可复现性</h2>
+        <p>窗口暂固定为 <strong>2026 年 7 月 2 日至 9 月 29 日</strong>，首尾均含。日期依次采用在线、纸刊、published、issued；首选日期不完整不补造，排除未来日期及已识别通知。原基线保持字节不变。刷新失败或不完整保留上次有效快照；Crossref 覆盖不等于出版方完整覆盖。</p>
       </div>
       <div class="method-links"><a href="data/papers.json" data-en="Paper snapshot" data-zh="论文快照">Paper snapshot</a><a href="data/screening-report.json" data-en="Screening audit" data-zh="筛选审计报告">Screening audit</a><a href="data/status.json" data-en="Collection status" data-zh="采集状态">Collection status</a><a href="https://github.com/hjyu14/complex-network-papers/blob/main/config/sources.json" data-en="Rules & whitelist" data-zh="规则与白名单">Rules & whitelist</a><a href="https://github.com/hjyu14/complex-network-papers/issues" data-en="Report an inclusion issue" data-zh="反馈收录问题">Report an inclusion issue</a></div>
     </article>

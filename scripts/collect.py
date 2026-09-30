@@ -185,14 +185,41 @@ def screen(item, config, today):
         return None, "journal_not_whitelisted"
     abstract = clean(item.get("abstract", ""))
     text = title + " " + abstract
-    decision, routes, evidence = relevance(title, abstract, rules)
+    scope_review = None
+    if config['version'] >= 8:
+        scope_path = ROOT / config['scope_policy']['review_file']
+        registry = json.loads(scope_path.read_text(encoding='utf-8'))
+        scope_review = registry['decisions'].get(doi)
+        if scope_review is None:
+            return None, 'review_unassessed_scope'
+        if clean(scope_review['title']).casefold() != title.casefold():
+            return None, 'review_changed_title'
+        if scope_review['v8_category'] == 'review':
+            return None, 'review_scope'
+        if scope_review['v8_category'] == 'excluded':
+            return None, 'outside_editorial_scope'
+        if scope_review['v8_category'] not in config['scope_policy']['classes']:
+            raise ValueError('Invalid scope-review category')
+        decision = 'included'
+        routes = [{'route': 'approved_scope_review', 'source': scope_review['evidence_level'],
+                   'matches': [scope_review['reason']]}]
+        evidence = [scope_review['reason']]
+    else:
+        decision, routes, evidence = relevance(title, abstract, rules)
     if decision != "included":
         return None, decision
     categories = []
     for c in config["network_categories"]:
         if matches(c["pattern"], text):
             categories.append(c["id"])
-    methods, method_evidence = classify_methods(text, rules)
+    annotations = {}
+    if config['version'] < 8:
+        methods, method_evidence = classify_methods(text, rules)
+        annotations = {'methods': methods, 'method_evidence': method_evidence}
+    else:
+        annotations = {'scope_class': scope_review['v8_category'],
+                       'scope_evidence_level': scope_review['evidence_level'],
+                       'scope_review_sha256': hashlib.sha256(scope_path.read_bytes()).hexdigest()}
     return {
         "doi": doi, "url": "https://doi.org/" + quote(doi, safe="/"),
         "title": title,
@@ -200,8 +227,7 @@ def screen(item, config, today):
         "journal": journal["name"],
         "issns": sorted(issns), "date": published.isoformat(), "date_source": date_source,
         "categories": categories or ["other"],
-        "methods": methods,
-        "method_evidence": method_evidence,
+        **annotations,
         "featured": journal["short"] if journal["short"] in config["featured_journals"] else None, "journal_short": journal["short"], "evidence": evidence,
         "screening_basis": "network", "screening_routes": routes, "source": "Crossref", "abstract_available": bool(abstract),
         "metadata_url": "https://api.crossref.org/works/" + quote(doi, safe=""),

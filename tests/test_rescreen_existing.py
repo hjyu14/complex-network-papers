@@ -16,6 +16,7 @@ from scripts.rescreen_existing import digest, fetch_cohort, promote_trial, rescr
 class FixedCohortTests(unittest.TestCase):
     def setUp(self):
         self.config = json.loads(CONFIG.read_text(encoding='utf-8'))
+        self.config['version'] = 7
         self.baseline = {'window_end': '2026-09-29', 'papers': [{'doi': '10.1234/example'}]}
         self.item = {'DOI': '10.1234/example', 'type': 'journal-article',
                      'title': ['Synchronization on complex networks'], 'ISSN': ['2470-0053'],
@@ -61,9 +62,9 @@ class FixedCohortTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(baseline_raw).hexdigest(), expected['baseline_sha256'])
         original = {p['doi'] for p in baseline['papers']}
         included = {p['doi'] for p in data['papers']}
-        self.assertEqual(included, original - set(expected['do_not_display']))
-        self.assertTrue(set(expected['retain_boundary_cases']) <= included)
-        self.assertEqual(data['config_sha256'], digest(self.config))
+        self.assertEqual(included, {doi for doi, row in json.loads((ROOT / 'config/scope-review-v8.json').read_text(encoding='utf-8'))['decisions'].items() if row['v8_category'] in ['core', 'transferable_application']})
+        self.assertEqual(len(included), 117)
+        self.assertEqual(data['config_sha256'], digest(json.loads(CONFIG.read_text(encoding='utf-8'))))
         self.assertEqual(data['rescreening']['added_dois'], [])
         self.assertFalse(data['rescreening']['new_candidates_queried'])
         self.assertEqual({r['doi'] for r in audit['decisions']}, original)

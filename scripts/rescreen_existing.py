@@ -44,13 +44,20 @@ def rescreen(baseline, items, config):
                'metadata_sha256': digest(item),
                'metadata_url': 'https://api.crossref.org/works/' + quote(doi, safe=''),
                'retrieved_by': ['fixed-cohort DOI lookup']}
+        if config['version'] >= 8:
+            registry = json.loads((ROOT / config['scope_policy']['review_file']).read_text(encoding='utf-8'))
+            row['scope_assessment'] = registry['decisions'].get(doi)
         if paper:
             paper['retrieved_by'] = row['retrieved_by']
             paper['screening_version'] = config['version']
             papers.append(paper)
             row['screening_routes'] = paper['screening_routes']
             row['categories'] = paper['categories']
-            row['methods'] = paper['methods']
+            if 'scope_class' in paper:
+                row['scope_class'] = paper['scope_class']
+                row['scope_review_sha256'] = paper['scope_review_sha256']
+            elif 'methods' in paper:
+                row['methods'] = paper['methods']
         decisions.append(row)
     papers.sort(key=lambda p: (p['date'], p['doi']), reverse=True)
     return papers, decisions
@@ -68,6 +75,9 @@ def write_result(baseline, raw_hash, items, out):
                   'source_screening_version': baseline['screening_version'],
                   'source_generated_at': baseline['generated_at'], 'input_count': len(items),
                   'added_dois': [], 'new_candidates_queried': False}
+    if config['version'] >= 8:
+        provenance['assessment_method'] = 'approved_title_and_abstract_review'
+        provenance['scope_review_sha256'] = hashlib.sha256((ROOT / config['scope_policy']['review_file']).read_bytes()).hexdigest()
     coverage = [{'label': 'Existing-paper DOI lookups', 'retrieved': len(items),
                  'total_results': len(items), 'truncated': False, 'failed': False}]
     report = {'attempted_at': now, 'screening_version': config['version'],
@@ -118,6 +128,10 @@ def promote_trial(source, trial, out):
              and payload['window_end'] == baseline['window_end'])
     if not valid:
         raise ValueError('Trial is incomplete, stale or outside the fixed cohort')
+    if config['version'] >= 8:
+        review_hash = hashlib.sha256((ROOT / config['scope_policy']['review_file']).read_bytes()).hexdigest()
+        if payload['rescreening'].get('scope_review_sha256') != review_hash:
+            raise ValueError('Trial scope review is stale')
     archive = out / 'baseline-v6.json'
     if archive.exists() and archive.read_bytes() != raw:
         raise ValueError('Refusing to overwrite a different baseline')
@@ -150,6 +164,11 @@ def main():
         return
     raw = args.source.read_bytes()
     baseline = json.loads(raw)
+    config = json.loads(CONFIG.read_text(encoding='utf-8'))
+    if config['version'] >= 8:
+        registry = json.loads((ROOT / config['scope_policy']['review_file']).read_text(encoding='utf-8'))
+        if registry['source_snapshot_sha256'] != hashlib.sha256(raw).hexdigest():
+            raise ValueError('Scope registry is bound to a different baseline')
     if not baseline['papers']:
         raise ValueError('Empty cohort')
     raw_hash = hashlib.sha256(raw).hexdigest()
