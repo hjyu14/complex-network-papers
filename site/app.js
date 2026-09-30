@@ -161,6 +161,8 @@ function renderSnapshot() {
   if (truncated) $("#status").classList.add("warning");
   $("#status").textContent = tr(`Snapshot ${data.window_start} — ${data.window_end} · Crossref · Automated screening may miss or misclassify papers. ${truncated} queries reached the collection limit.`, `快照范围 ${data.window_start} — ${data.window_end} · Crossref 元数据 · 自动规则筛选，可能误收或漏收 · ${truncated} 个查询达到采集上限。`);
   $("#coverage-summary").textContent = tr(`${data.coverage.length} queries; ${data.candidate_count} unique candidates; ${data.papers.length} included; ${truncated} queries truncated. Rules v${data.screening_version}. Topic counts overlap. Date filters are relative to the snapshot end date.`, `本次共 ${data.coverage.length} 个查询，${data.candidate_count} 条去重候选，收录 ${data.papers.length} 篇；${truncated} 个查询未取尽结果。规则版本 v${data.screening_version}。分类数量可重叠，时间筛选以快照截止日为基准。`);
+  const pending = Object.entries(data.screening_counts || {}).filter(([reason]) => reason.startsWith("review_") || reason === "missing_or_partial_date").reduce((sum, [, count]) => sum + count, 0);
+  $("#coverage-summary").textContent += tr(` ${pending} candidates awaiting review, not displayed as papers.`, ` ${pending} 条候选待核查，未作为论文展示。`);
   if (Date.now() - new Date(data.generated_at).getTime() > 48 * 3600000) {
     $("#status").textContent += tr(" Warning: snapshot is over 48 hours old.", " 注意：快照已超过 48 小时未更新。");
     $("#status").classList.add("warning");
@@ -184,7 +186,7 @@ function renderUnavailable() {
 async function init() {
   try {
     const data = await getJSON("data/papers.json");
-    if (!Array.isArray(data.papers) || !data.window_end || !Array.isArray(data.coverage) || data.screening_version !== 5 || !data.featured_journals || !data.journals) throw new Error("Invalid or outdated snapshot");
+    if (!Array.isArray(data.papers) || !data.window_end || !Array.isArray(data.coverage) || data.screening_version !== 6 || !data.featured_journals || !data.journals) throw new Error("Invalid or outdated snapshot");
     state.data = data;
     state.papers = [...data.papers].sort((a, b) => b.date.localeCompare(a.date) || b.doi.localeCompare(a.doi));
     try { state.attempt = await getJSON("data/status.json"); } catch { state.attempt = null; }

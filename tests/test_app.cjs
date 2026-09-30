@@ -21,7 +21,7 @@ class Node {
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/sources.json'), 'utf8'));
 const localeSource = fs.readFileSync(path.join(__dirname, '../site/i18n.js'), 'utf8');
 const source = fs.readFileSync(path.join(__dirname, '../site/app.js'), 'utf8');
-function setup(version = 5) {
+function setup(version = 6) {
   const nodes = new Map();
   const node = (id) => {
     if (!nodes.has(id)) nodes.set(id, new Node());
@@ -143,5 +143,31 @@ test('public rules article is linked and bilingual', () => {
   assert.match(home, /<html lang="en">/);
   assert.match(rules, /data-language="en"/);
   assert.match(rules, /data-language="zh" hidden/);
-  assert.match(rules, /Screening v5/);
+  assert.match(rules, /Screening v6/);
+});
+
+test('pending candidates are disclosed separately in both languages', async () => {
+  const { node, data } = setup();
+  data.screening_counts = { included: 35, review_context: 4, review_missing_abstract: 3, missing_or_partial_date: 2, notice: 5 };
+  await ready();
+  assert.match(node('#coverage-summary').textContent, /9 candidates awaiting review/);
+  assert.match(node('#result-count').textContent, /^35 papers/);
+  node('#language-toggle').events.click();
+  assert.match(node('#coverage-summary').textContent, /9 条候选待核查/);
+});
+
+test('published artifact has consistent rules, date bounds, counts and unique DOIs', () => {
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/papers.json'), 'utf8'));
+  const audit = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/screening-report.json'), 'utf8'));
+  assert.equal(data.screening_version, config.version);
+  assert.equal(audit.config_sha256, data.config_sha256);
+  assert.equal(audit.window_end, data.window_end);
+  assert.equal(audit.window_start, data.window_start);
+  assert.equal(audit.collection_complete, true);
+  assert.equal(data.papers.length, data.screening_counts.included);
+  assert.equal(data.candidate_count, audit.decisions.length);
+  assert.equal(new Set(data.papers.map(p => p.doi)).size, data.papers.length);
+  assert.ok(data.papers.every(p => p.date >= data.window_start && p.date <= data.window_end && !('abstract' in p)));
+  assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 90);
+  assert.ok(data.coverage.every(q => !q.truncated && !q.failed));
 });

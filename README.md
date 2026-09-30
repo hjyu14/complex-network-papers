@@ -6,12 +6,16 @@
 
 ## 运行
 
+`site/data` 为 v6 发布基线：2026-07-02 至 2026-09-29，181 篇自动收录，10,428 条候选待核查。待核查候选不进入论文列表；当前不是人工逐篇审定的完整清单。线上状态以 GitHub Pages 部署结果为准。独立试运行可用 `python scripts/collect.py --out reports/new-trial --date 2026-09-29`。
+
+为保留 9 月 30 日文章用于日推试验，采集器默认截止日暂不超过 **2026-09-29**（见 `default_collection_date`），定时运行也遵守此限制。后续可显式传入 `--date 2026-09-30 --out reports/daily-trial` 独立试验；恢复自动滚动时须同时移除临时上限并更新页面说明。
+
 Python 3.11+，无第三方依赖。
 
 ```sh
 python -m unittest discover -s tests -v
 node --test tests/test_app.cjs
-python scripts/collect.py
+python scripts/collect.py --out reports/v6-trial
 python -m http.server 8000 --directory site
 ```
 
@@ -21,9 +25,10 @@ python -m http.server 8000 --directory site
 
 - 初始数据源为 [Crossref](https://www.crossref.org/documentation/retrieve-metadata/rest-api/)。它不是复杂网络专门索引，有收录延迟、摘要和日期缺失。
 - 收录类型为 `journal-article`（可能包括综述）；排除预印本、明确的更正/撤稿通知。类型依赖出版方元数据，不独立认证同行评审。
-- 以运行日（Asia/Shanghai）为终点，包含当天及之前 89 天。日期优先级：`published-online` → `published-print` → `published` → `issued`。优先可用日期只有年/月时排除，绝不补造日。日期回退会在界面显示。未来日期排除。
-- 规则 v5：27 本期刊 ISSN 白名单为硬过滤，不再全库搜索 network。仅访问期刊 works 接口，按出版日期倒序，每期刊最多 5 页 × 100 条；达到预算上限的查询明确显示截断，不声称全量覆盖。
-- 新增应用主导的生物医学模型标题筛选；有明确网络机制或方法任务的脑网络论文仍可收录。这是保守的编辑边界，不是对所有应用研究的科学质量判断，具体词表和误收／漏收风险见规则文档。
+- 以指定截止日为终点，包含该日及之前 89 天；当前暂固定不晚于 2026-09-29。日期优先级：`published-online` → `published-print` → `published` → `issued`。优先可用日期只有年/月时待核查，不进入论文列表，绝不补造日。日期回退会在界面显示。超过截止日的文章不收录。
+- 规则 v6：27 本期刊 ISSN 白名单不变。每刊按窗口取尽 Crossref 结果，安全预算为 10 页 × 1000 条；达到预算仍未取尽时，作为失败处理，不替换有效快照。没有声称已核对所有出版方目录。
+- 取消标题关键词和生物医学模型排除门槛。标题与摘要分别寻找网络概念、网络方法、网络对象及机制、隐式相互作用及动力学证据；不以创新程度过滤应用研究。不命中或证据不足时进入待核查清单，而不是判作无关。
+- `screening-report.json` 为每条候选保存 included/review/excluded、原因、DOI 和标题，不存摘要。关键词证据不等于语义审定，待核查不会自动进入公开论文列表；需继续核查出版方或正文。本轮仍是全窗口重采，尚未实现每日增量和迟到补录。
 - 作者 Anonymous 等占位值保留审计字段，但不作为人名显示。页面提示缺失或部分缺失，并提供出版方链接；每轮采集重新读取作者元数据，不据此推断出版状态。
 - 仅收录复杂网络，保留 5 个研究主题，未命中主题的放入末尾“其他”；允许多标签。页面支持主题、期刊、时间、期刊范围筛选，不再展示网络类型和应用领域。一般机器学习应用排除，材料网络需图意义证据。详见[分类依据与边界](docs/classification.md)。
 - 分类是多标签启发式，不是专家审定；仅用于辅助浏览。记录每篇命中依据。摘要只在内存中参与筛选，不写入发布数据。

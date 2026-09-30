@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Network Observatory selects and classifies recent network science research.">
+  <meta name="description" content="How Network Observatory discovers recent network science research.">
   <title>Inclusion rules · Network Observatory</title>
   <link rel="stylesheet" href="styles.css">
   <script src="i18n.js" defer></script>
@@ -17,60 +17,62 @@
     <article class="rules-article">
       <p class="eyebrow">EDITORIAL POLICY</p>
       <div data-language="en">
-        <h1>A focused reading list for network science</h1>
-        <p class="rules-meta">Screening v5 · Updated 29 September 2026</p>
-        <p>Network Observatory is a reading aid for researchers interested in complex network structure and dynamics on networks. It is not a comprehensive bibliographic index, a journal ranking service, or an assessment of individual paper quality. No registration is required; we publish metadata and links, not full articles or abstracts.</p>
-        <h2>1. Relevance comes before the word “network”</h2>
-        <p>We aim to surface research on network structures, methods and mechanisms. General nonlinear dynamics without a network research question is outside this scope. A paper can use genuine network analysis and still be outside this site's narrower editorial focus.</p>
-        <p>We screen titles and available abstracts for explicit network-science concepts, or a network object together with a mechanism. Generic machine-learning applications are excluded unless their titles identify a core network mechanism; material networks need graph-related evidence.</p>
-        <p>Version 5 adds a conservative biomedical application gate: titles describing a network model, atlas or map of/for a specific biomedical system, or a structure–function study in that context, need an explicit core research-task or mechanism signal in the title. Examples include community detection, network inference, percolation and synchronization. Generic structure or community vocabulary in the abstract is not sufficient to override this gate.</p>
-        <p>Thus <a href="https://doi.org/10.1073/pnas.2620995123">A structure–function neuronal network model of the rat nervous system</a> is excluded from this reading list. This is an editorial boundary, not a claim that its network analysis is invalid. Brain-network work on explicit network mechanisms remains eligible. This limited title-based rule cannot reliably prove whether a contribution generalizes; both false inclusions and false exclusions remain possible.</p>
-        <h2>2. Journal sources and the spotlight</h2>
-        <p>We query 27 whitelisted journals through Crossref's journal works endpoint and validate each record against journal ISSNs. Journals outside the whitelist, including Scientific Reports and unlisted MDPI journals, are not included. Full journal names appear in the journal selector on the home page. The whitelist is an editorial source choice, not a guarantee of scientific quality.</p>
-        <p>The spotlight contains Nature Communications, Physical Review X, Science Advances, Proceedings of the National Academy of Sciences, and Physical Review Letters. Nature, Science and Nature Physics remain eligible sources but are not in this spotlight. “Other journals” means the remaining whitelist, not lower-quality papers.</p>
-        <p>The spotlight caption follows the recorded 2025 impact-factor order; its cards show the six newest matching papers by publication date. The Science Advances metric still needs confirmation from its official metrics page; the current provenance and caveat are recorded in the <a href="https://github.com/hjyu14/complex-network-papers/blob/main/docs/classification.md">classification document</a>. Impact factors do not determine paper relevance.</p>
-        <h2>3. Topics are overlapping browsing labels</h2>
-        <p>Our five topic groups are a site-specific mapping informed by <a href="https://journals.aps.org/authors/guidelines-section-selection-physical-review-e">Physical Review E's Networks and Complex Systems section</a> and the <a href="https://academic.oup.com/comnet/pages/About">Journal of Complex Networks scope</a>, not five official or universally agreed categories:</p>
+        <h1>Recent research for the network science community</h1>
+        <p class="rules-meta">Screening v6 · Updated 30 September 2026</p>
+        <p>Network Observatory brings recent network science research from our journal sources into one reading feed. We cover network structure, network methods and dynamics of interacting systems. Within this scope, theoretical, methodological and empirical work is eligible; we do not impose an innovation or contribution-size threshold.</p>
+        <h2>1. What we look for</h2>
+        <p>We include research that studies relational structure, uses network-science methods to address a research question, or investigates how interactions shape collective dynamics. Applications of centrality, community detection, network inference or other network methods are eligible, including studies of a particular biological, social or technological system.</p>
+        <p>The research content matters more than the terminology. “Network” or “graph” need not occur in the title or abstract. Conversely, a technical use of those words alone does not establish relevance: a generic neural-network predictor, material network or communication device needs evidence of network-science content.</p>
+        <h2>2. Finding explicit and implicit network research</h2>
+        <p>We retrieve records by journal and publication window, not by a global title keyword search. Titles and available abstracts are evaluated independently through complementary evidence paths:</p>
+        <ul>
+          <li><strong>Explicit concepts and methods:</strong> network topology and formation, centrality, community detection, rich-club organization, network inference and related methods.</li>
+          <li><strong>Network objects and mechanisms:</strong> a network or graph together with structural, spreading, synchronization, robustness or control evidence.</li>
+          <li><strong>Implicit interaction dynamics:</strong> relational descriptions such as coupled units or nonreciprocal interactions together with processes such as stability, synchronization or collective behavior. Neither “network” nor “graph” is required.</li>
+        </ul>
+        <p>Evidence must occur in the title or within an abstract sentence, rather than being assembled from unrelated passages. For example, <a href="https://doi.org/10.1126/science.aeg3946">Disorder-promoted stability</a> is found through abstract evidence about network dynamics and interactions despite its non-network title. The <a href="https://doi.org/10.1073/pnas.2620995123">rat nervous system network model</a> is eligible through its structure and network-method evidence; its application domain is not an exclusion.</p>
+        <p>These are executable first-pass evidence rules, not full-text semantic review. Missing abstracts, incomplete dates and ambiguous or unmatched content enter a review queue, rather than being declared unrelated. Only automatically included records appear in the reading feed; the coverage summary separately reports pending candidates. General nonlinear dynamics without relational or network-method evidence is not automatically included.</p>
+        <h2>3. Sources and browsing topics</h2>
+        <p>We query 27 whitelisted journals through Crossref and verify journal ISSNs. The home-page journal selector shows their full names. Nature, Science and Nature Physics remain sources. The six-paper spotlight uses Nature Communications, Physical Review X, Science Advances, Proceedings of the National Academy of Sciences and Physical Review Letters. Journal selection and spotlight membership do not change the relevance test.</p>
+        <p>Topics are overlapping browsing labels informed by <a href="https://journals.aps.org/authors/guidelines-section-selection-physical-review-e">Physical Review E's Networks and Complex Systems section</a> and the <a href="https://academic.oup.com/comnet/pages/About">Journal of Complex Networks scope</a>, mapped into five groups:</p>
         <ul><li>Structure and formation</li><li>Community detection, inference and reconstruction</li><li>Spreading, diffusion and percolation</li><li>Synchronization, games and collective behavior</li><li>Robustness, cascades and control</li></ul>
-        <p>A paper may receive several labels. “Other” appears last and is used only when no topic rule matches. Missing abstracts and wording differences can cause this; we do not force a label merely to reduce the “Other” count.</p>
-        <h2>4. What “recent” means</h2>
-        <p>The collection window includes the run date in Beijing and the previous 89 calendar days. Online publication is preferred, followed by print publication, published, and issued dates. If the preferred available date lacks a month or day, the record is excluded rather than assigned a fabricated date. Future dates are excluded. Each card discloses its date source.</p>
-        <p>Only Crossref journal-article records are considered; these can include reviews. Preprints and identified correction/retraction notices are excluded. This metadata type is not an independent certification of peer review. Seven- and thirty-day filters are relative to the snapshot's end date, not a promise of live coverage.</p>
-        <h2>5. Missing authors are a metadata limitation</h2>
-        <p>Some Crossref deposits supply “Anonymous” or another placeholder instead of a usable author list. This alone does not establish whether a paper is unpublished, accepted or formally published. We do not display placeholders as verified personal names or guess authors from a similar title.</p>
-        <p>Missing lists are marked “Author metadata unavailable — see publisher”; partial lists are marked incomplete. Original placeholder values and the metadata status remain in the downloadable snapshot for audit. The collector rereads author metadata on each run, so corrected deposits can be reflected in a later snapshot. Until then, the DOI link leads readers to the publisher; the site does not claim the missing names have been recovered.</p>
-        <h2>6. Coverage, updates and reproducibility</h2>
-        <p>Queries are bounded to five pages of 100 records per journal, sorted by publication date. Reaching that limit is disclosed and is not treated as full coverage. Metadata deposits can be delayed or incomplete. A failed query preserves the previous valid snapshot; an incompatible old-rule snapshot is not presented as current-rule results.</p>
-        <p>Daily collection is scheduled for 06:20 Beijing time, but actual execution may be delayed. We retain DOI identifiers, match evidence, date provenance, query reports, rule version and configuration hash. Abstracts are processed transiently and are not stored. Check the publisher for current corrections, retractions, author details and access conditions.</p>
+        <p>A paper can have several topics. “Other” is used exclusively when no topic rule matches; this is a classification gap, not a judgment of relevance. Journal ordering and source references are recorded in the <a href="https://github.com/hjyu14/complex-network-papers/blob/main/docs/classification.md">classification document</a>.</p>
+        <h2>4. A 90-day research feed</h2>
+        <p>The current baseline spans <strong>2 July–29 September 2026</strong>, inclusive. Publications dated 30 September or later are reserved for the daily-update trial. Retrieval may occur later than the publication cutoff. Seven- and thirty-day filters are relative to the snapshot end date.</p>
+        <p>We prefer online publication dates, then print, published and issued dates. If the preferred available date is incomplete, we retain the candidate for review instead of inventing a date. We consider journal articles, including reviews, and exclude preprints and identified correction or retraction notices. Each card records its date source.</p>
+        <h2>5. Traceable collection</h2>
+        <p>Queries paginate through the window, with a safety budget of 10 pages of 1,000 records per journal. Failed or truncated collection preserves the last valid paper snapshot. Complete Crossref queries do not guarantee complete publisher coverage: deposits can be late or lack abstracts and dates.</p>
+        <p>We retain DOI links, matching evidence, evidence paths, query reports and the rule configuration hash. Abstracts are processed transiently, not published or stored. Missing or placeholder authors are marked as unavailable, not interpreted as evidence that a paper is unpublished; please follow the DOI for publisher details.</p>
       </div>
       <div data-language="zh" hidden>
-        <h1>为复杂网络研究者整理一份聚焦的文献清单</h1>
-        <p class="rules-meta">筛选规则 v5 · 更新于 2026 年 9 月 29 日</p>
-        <p>Network Observatory 面向关注复杂网络结构与网络上动力学的研究者。本站是辅助阅读工具，不是全量文献数据库、期刊排行榜或单篇论文质量鉴定。无需注册，只展示元数据与原文链接，不存储论文全文或摘要。</p>
-        <h2>一、关注研究问题，而不只是标题中的 network</h2>
-        <p>本站优先关注网络结构、方法和机制。没有网络研究问题的一般非线性动力学不在范围内。即使一篇论文确实使用了网络分析，也可能不符合本站较窄的编辑定位。</p>
-        <p>筛选使用标题和可用摘要：要求明确的网络科学概念，或网络对象与机制同时出现。一般机器学习应用排除，除非标题明确涉及网络核心机制；材料网络还需图意义证据。</p>
-        <p>v5 新增保守的生物医学应用筛选：标题若描述特定生物医学系统的网络模型、图谱，或相关结构—功能研究，必须在标题中同时出现明确的网络研究任务或机制，如社区发现、网络推断、渗流、同步等。摘要中泛泛提及结构或社区不足以通过这一关。</p>
-        <p>因此，<a href="https://doi.org/10.1073/pnas.2620995123">A structure–function neuronal network model of the rat nervous system</a> 不进入本清单。这是编辑范围的选择，不是否认文章使用了网络科学方法。明确研究网络机制的脑网络文章仍可收录。标题规则不能可靠判定贡献是否可推广，误收和漏收仍可能发生。</p>
-        <h2>二、期刊来源与重点区</h2>
-        <p>通过 Crossref 的期刊 works 接口采集 27 本白名单期刊，并逐条以 ISSN 确认来源。名单外期刊，包括 Scientific Reports 及未列入的 MDPI 期刊，不予收录。首页期刊选择器展示全称。白名单是来源选择，不构成单篇质量保证。</p>
-        <p>重点区为 Nature Communications、Physical Review X、Science Advances、Proceedings of the National Academy of Sciences、Physical Review Letters。Nature、Science、Nature Physics 仍可收录，但不在当前重点区。“其他期刊”仅指白名单中的其余期刊，不意味着文章质量较低。</p>
-        <p>重点期刊说明行按记录的 2025 年影响因子排序，卡片按发表日期显示最新六篇。Science Advances 的指标仍待官方页面复核，来源及限制保留在<a href="https://github.com/hjyu14/complex-network-papers/blob/main/docs/classification.md">分类文档</a>中。影响因子不决定文章是否与复杂网络相关。</p>
-        <h2>三、主题是可重叠的浏览标签</h2>
-        <p>五组主题参考 <a href="https://journals.aps.org/authors/guidelines-section-selection-physical-review-e">PRE 的 Networks and Complex Systems 分区</a>及 <a href="https://academic.oup.com/comnet/pages/About">Journal of Complex Networks 范围</a>，由本站映射组织，不声称是五个官方或统一公认的分类：</p>
+        <h1>为网络科学研究者汇集最新研究</h1>
+        <p class="rules-meta">筛选规则 v6 · 更新于 2026 年 9 月 30 日</p>
+        <p>Network Observatory 将来源期刊中的网络科学新研究汇集为一个阅读入口，关注网络结构、网络方法与相互作用系统的动力学。范围内的理论、方法和实证应用研究均可收录，不以创新程度或贡献大小设置门槛。</p>
+        <h2>一、我们关注哪些文章</h2>
+        <p>研究关系结构、使用网络科学方法回答研究问题，或分析相互作用如何影响集体动力学的文章属于收录范围。中心性、社区发现、网络推断等方法的应用同样可以收录，包括针对特定生物、社会或技术系统的研究。</p>
+        <p>研究内容比术语更重要：标题和摘要不必出现 network 或 graph。反过来，仅在技术名称中出现这些词也不足以确认相关性；一般神经网络预测器、材料网络或通信设备研究，仍需网络科学内容的证据。</p>
+        <h2>二、如何发现显式与隐式的网络研究</h2>
+        <p>先按期刊与发表窗口获取记录，而非在全库中搜索标题关键词。对标题与可用摘要独立检查，通过互补的证据路径发现文章：</p>
+        <ul>
+          <li><strong>明确的网络概念与方法：</strong>网络拓扑与生成、中心性、社区发现、富人俱乐部结构、网络推断等。</li>
+          <li><strong>网络对象与机制：</strong>网络或图对象与结构、传播、同步、鲁棒性、控制等证据共同出现。</li>
+          <li><strong>隐式的相互作用动力学：</strong>耦合单元、非互易相互作用等关系描述，与稳定性、同步、集体行为等过程共同出现；不要求出现 network 或 graph。</li>
+        </ul>
+        <p>组合证据需位于标题或摘要同一句中，避免从不相干段落拼接关键词。例如，<a href="https://doi.org/10.1126/science.aeg3946">Disorder-promoted stability</a> 虽然标题未提及网络，仍可通过摘要中的网络动力学与相互作用证据发现。<a href="https://doi.org/10.1073/pnas.2620995123">鼠神经系统网络模型研究</a>因结构与网络方法证据进入范围，不因其应用领域而排除。</p>
+        <p>目前实现的是可复核的证据规则初筛，而非全文语义审定。摘要缺失、日期不完整、语境不明或未命中的候选进入待核查清单，不直接判作无关。阅读列表只展示自动通过的文章，覆盖说明单独报告待核查数量。缺少关系结构或网络方法证据的一般非线性动力学不自动收录。</p>
+        <h2>三、来源期刊与浏览主题</h2>
+        <p>通过 Crossref 查询 27 本白名单期刊，并核对 ISSN；首页期刊选择器展示完整名单与全称。Nature、Science、Nature Physics 仍是来源。重点区显示 Nature Communications、Physical Review X、Science Advances、Proceedings of the National Academy of Sciences、Physical Review Letters 的最新六篇文章。来源分组不改变相关性筛选规则。</p>
+        <p>主题参考 <a href="https://journals.aps.org/authors/guidelines-section-selection-physical-review-e">PRE 的 Networks and Complex Systems 分区</a>与 <a href="https://academic.oup.com/comnet/pages/About">Journal of Complex Networks 范围</a>，映射为本站的五组浏览标签：</p>
         <ul><li>网络结构与生成</li><li>社区发现与网络推断、重构</li><li>传播、扩散与渗流</li><li>同步、博弈与集体行为</li><li>鲁棒性、级联与控制</li></ul>
-        <p>一文可有多个主题。未命中主题规则的放入最后的“其他”，且不与明确主题并列。摘要缺失和表述差异都可能造成无法分类；不能为了降低“其他”的数量而强行归类。</p>
-        <h2>四、“最新”的日期定义</h2>
-        <p>采集窗口为北京时间运行当天及之前 89 天，共 90 个日历日。优先在线发表日，缺失时依次回退到纸刊、published、issued 日期。优先可用日期不完整时排除，不补造日期；未来日期排除。每篇文章注明日期来源。</p>
-        <p>仅考虑 Crossref 的 journal-article 类型，可能包含综述；排除预印本和已识别的更正、撤稿通知。这一元数据类型不是独立的同行评审认证。近七天、近三十天筛选以快照截止日为基准，不表示实时覆盖。</p>
-        <h2>五、作者缺失是元数据问题</h2>
-        <p>部分 Crossref 登记记录用 Anonymous 等占位值代替作者名单，仅凭该字段不能判断文章未出版、已接收还是已正式发表。本站不把占位值当成已核实的人名，也不根据相似标题猜测作者。</p>
-        <p>作者名单缺失时显示“作者元数据暂缺，请查看出版方”；部分缺失时明确提示名单不完整。原始占位值和元数据状态保留在可下载快照中，方便追溯。每次采集重新读取作者信息，上游更正后可在后续快照恢复。此前请通过 DOI 查看出版方；本站不声称已找回缺失姓名。</p>
-        <h2>六、覆盖、更新与可复核性</h2>
-        <p>每期刊最多五页，每页 100 条，按出版日期倒序采集。达到上限会明确提示，不能视作取尽结果。元数据可能延迟或不完整。请求失败时保留旧的有效快照；不符合新规则的旧版快照不会冒充新规则结果展示。</p>
-        <p>计划每日北京时间 06:20 更新，实际执行可能延迟。保留 DOI、命中证据、日期来源、查询报告、规则版本与配置哈希。摘要仅在内存中处理，不落盘。作者、原文访问条件及最新更正、撤稿状态，请以出版方为准。</p>
+        <p>一文可有多个主题；只有未命中任何主题规则时才归入“其他”。这是分类覆盖问题，不是相关性判定。期刊排序与参考来源见<a href="https://github.com/hjyu14/complex-network-papers/blob/main/docs/classification.md">分类文档</a>。</p>
+        <h2>四、只关注近九十天</h2>
+        <p>当前基线为 <strong>2026 年 7 月 2 日至 9 月 29 日</strong>，首尾均计入。9 月 30 日及之后发表的文章留待日推试验；采集时间可以晚于发表截止日。近七天、近三十天筛选以快照截止日为基准。</p>
+        <p>优先在线发表日，缺失时依次使用纸刊、published、issued 日期。优先可用日期不完整则保留待核查，不补造日期。收录期刊文章（含综述），排除预印本及已识别的更正、撤稿通知；卡片标明日期来源。</p>
+        <h2>五、采集可追溯</h2>
+        <p>按窗口逐页获取记录，安全预算为每刊 10 页、每页 1,000 条。请求失败或预算截断时保留上次有效论文快照。Crossref 查询取尽不等于出版方覆盖完整：登记可能延迟，摘要和日期也可能缺失。</p>
+        <p>保留 DOI 链接、命中证据、证据路径、查询报告和规则配置哈希；摘要只临时参与筛选，不保存或发布。缺失或占位作者会标明元数据暂缺，不据此推断文章未出版；作者及原文详情请通过 DOI 查看出版方。</p>
       </div>
-      <div class="method-links"><a href="data/papers.json" data-en="Snapshot & query report" data-zh="快照与查询报告">Snapshot & query report</a><a href="data/status.json" data-en="Collection status" data-zh="采集状态">Collection status</a><a href="https://github.com/hjyu14/complex-network-papers/blob/main/config/sources.json" data-en="Executable rules & whitelist" data-zh="可执行规则与白名单">Executable rules & whitelist</a><a href="https://github.com/hjyu14/complex-network-papers/issues" data-en="Report an inclusion issue" data-zh="反馈收录问题">Report an inclusion issue</a></div>
+      <div class="method-links"><a href="data/papers.json" data-en="Paper snapshot" data-zh="论文快照">Paper snapshot</a><a href="data/screening-report.json" data-en="Screening audit" data-zh="筛选审计报告">Screening audit</a><a href="data/status.json" data-en="Collection status" data-zh="采集状态">Collection status</a><a href="https://github.com/hjyu14/complex-network-papers/blob/main/config/sources.json" data-en="Rules & whitelist" data-zh="规则与白名单">Rules & whitelist</a><a href="https://github.com/hjyu14/complex-network-papers/issues" data-en="Report an inclusion issue" data-zh="反馈收录问题">Report an inclusion issue</a></div>
     </article>
   </main>
   <footer class="wrap"><span>NETWORK OBSERVATORY</span><a href="./" data-en="← Browse papers" data-zh="← 返回文献列表">← Browse papers</a></footer>

@@ -1,0 +1,128 @@
+{
+  "evaluation_date": "2026-09-29",
+  "screening_version": 6,
+  "config_sha256": "25628df13210b0e822dfbdae836e6e64f63e1b2d862967be31c9a0996b1a3720",
+  "cases": [
+    {
+      "doi": "10.1126/science.aeg3946",
+      "title": [
+        "Disorder-promoted stability"
+      ],
+      "expected": "included",
+      "decision": "included",
+      "reason": "included",
+      "rationale": "Network heterogeneity and dynamical stability; title has no network term.",
+      "routes": [
+        {
+          "route": "network_structure_or_dynamics",
+          "source": "abstract",
+          "matches": [
+            "network",
+            "stability"
+          ]
+        },
+        {
+          "route": "implicit_interaction_dynamics",
+          "source": "abstract",
+          "matches": [
+            "nodal heterogeneity",
+            "stability"
+          ]
+        },
+        {
+          "route": "implicit_interaction_dynamics",
+          "source": "abstract",
+          "matches": [
+            "nonreciprocal interactions",
+            "stabilizing"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "doi": "10.1073/pnas.2620995123",
+      "title": [
+        "A structure–function neuronal network model of the rat nervous system"
+      ],
+      "expected": "included",
+      "decision": "included",
+      "reason": "included",
+      "rationale": "Empirical neuronal network structure and perturbation propagation.",
+      "routes": [
+        {
+          "route": "network_structure_or_dynamics",
+          "source": "title",
+          "matches": [
+            "network",
+            "structure"
+          ]
+        },
+        {
+          "route": "network_method",
+          "source": "abstract",
+          "matches": [
+            "rich club"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "doi": "10.1103/9y9m-q7qj",
+      "title": [
+        "Preferential attachment with local flexibility"
+      ],
+      "expected": "included",
+      "decision": "included",
+      "reason": "included",
+      "rationale": "Preferential attachment as a network formation mechanism.",
+      "routes": [
+        {
+          "route": "explicit_network_concept",
+          "source": "title",
+          "matches": [
+            "preferential attachment"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "doi": "10.1126/science.adz5300",
+      "title": [
+        "An in-body networking system for communication between wearable and implantable therapeutics"
+      ],
+      "expected": "review",
+      "decision": "review",
+      "reason": "review_context",
+      "rationale": "Communication networking needs content review; name alone is insufficient.",
+      "routes": [],
+      "pass": true
+    },
+    {
+      "doi": "10.1126/science.aef8268",
+      "title": [
+        "Hypervision: An on-chip hyperspectral microsystem for online video-rate computational imaging"
+      ],
+      "expected": "review",
+      "decision": "review",
+      "reason": "review_context",
+      "rationale": "Imaging reconstruction network: topology alone does not establish network science.",
+      "routes": [],
+      "pass": true
+    },
+    {
+      "doi": "10.1126/science.aei8090",
+      "title": [
+        "Computing in a memory with physics"
+      ],
+      "expected": "review",
+      "decision": "review",
+      "reason": "review_context",
+      "rationale": "Neural predictor: reconstruction alone is insufficient evidence.",
+      "routes": [],
+      "pass": true
+    }
+  ]
+}

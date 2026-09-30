@@ -17,6 +17,12 @@ CONFIG = ROOT / "config/sources.json"
 OUT = ROOT / "site/data"
 
 
+def default_collection_date(today=None):
+    """Temporary baseline freeze; explicit --date enables the later daily trial."""
+    today = today or datetime.now(timezone(timedelta(hours=8))).date()
+    return min(today, date(2026, 9, 29))
+
+
 def clean(value):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", value or ""))).strip()
 
@@ -53,6 +59,60 @@ def publication_date(item):
     return None, None
 
 
+def relevance(title, abstract, rules):
+    """Evidence routes, not semantic certainty. No signal remains reviewable.
+
+    Match within a title or sentence: unrelated words in distant abstract
+    sentences must not jointly manufacture a network argument.
+    """
+    units = [("title", title)] + [("abstract", s) for s in re.split(r"(?<=[.!?])\s+", abstract) if s]
+    routes, evidence = [], set()
+    for source, text in units:
+        direct = matches(rules["network_explicit"], text)
+        objects = matches(rules["network_object"], text)
+        mechanisms = matches(rules["network_mechanism"], text)
+        methods = matches(rules["network_methods"], text)
+        # Modularity also describes software/protein design. Require relational
+        # context before treating that lone word as network-method evidence.
+        if methods == ["modularity"] and not (objects or matches(rules["graph_evidence"], text)):
+            methods = []
+        relations = matches(rules["implicit_relations"], text)
+        processes = matches(rules["implicit_processes"], text)
+        specific = matches(rules["specific_network_mechanism"], text)
+        graph = matches(rules["graph_evidence"], text)
+        # ML/material terminology alone is not negative evidence about a paper.
+        # Explicit methods and mechanism evidence can establish relevance there.
+        ambiguous_ml = matches(rules["ml_title"], title)
+        ambiguous_material = matches(rules["materials_title"], title)
+        core = matches(rules["ml_core_exception"], text)
+        if ambiguous_material and not matches(rules["graph_evidence"], text):
+            continue
+        if ambiguous_ml and not (methods or core or (relations and processes)):
+            continue
+        route, hits = None, []
+        if methods:
+            route, hits = "network_method", methods
+        elif direct:
+            route, hits = "explicit_network_concept", direct
+        elif objects and (mechanisms or processes) and (source == "title" or specific or graph):
+            route, hits = "network_structure_or_dynamics", objects + mechanisms + processes
+        elif relations and processes:
+            route, hits = "implicit_interaction_dynamics", relations + processes
+        if route:
+            routes.append({"route": route, "source": source, "matches": hits})
+            evidence.update(hits)
+    if routes:
+        return "included", routes, sorted(evidence)
+    # Missing abstracts cannot support a definitive content exclusion.
+    if not abstract:
+        return "review_missing_abstract", [], []
+    if matches(rules["ml_title"], title) and matches(rules["ml_application"], title):
+        return "general_machine_learning", [], []
+    if matches(rules["network_object"], title + " " + abstract) or matches(rules["implicit_processes"], title + " " + abstract):
+        return "review_context", [], []
+    return "review_no_signal", [], []
+
+
 def screen(item, config, today):
     title = clean(" ".join(item.get("title", [])))
     rules = config["screening"]
@@ -73,30 +133,14 @@ def screen(item, config, today):
     if journal is None:
         return None, "journal_not_whitelisted"
     abstract = clean(item.get("abstract", ""))
-    # Editorial scope, not a judgment that biological network analysis is invalid.
-    # An organism-specific model needs a core research-task signal in its title;
-    # generic structure/community vocabulary in an abstract cannot rescue it.
-    if (matches(rules["application_model_title"], title)
-            and matches(rules["biomedical_context"], title)
-            and not matches(rules["core_contribution_title"], title)):
-        return None, "application_led_biomedical_model"
-    if matches(rules["materials_title"], title) and matches(rules["network_object"], title) and not matches(rules["graph_evidence"], title + " " + abstract):
-        return None, "material_network_without_graph_evidence"
-    if matches(rules["ml_title"], title) and not matches(rules["ml_core_exception"], title):
-        return None, "general_machine_learning"
-    network_direct = matches(rules["network_explicit"], title)
-    network_object = matches(rules["network_object"], title)
-    network_mechanism = matches(rules["network_mechanism"], title)
     text = title + " " + abstract
-    network_abstract = matches(rules["network_explicit"], abstract)
-    is_network = bool(network_direct or (network_object and network_mechanism) or (network_object and network_abstract and matches(rules["network_mechanism"], abstract)))
-    if not is_network:
-        return None, "not_core"
+    decision, routes, evidence = relevance(title, abstract, rules)
+    if decision != "included":
+        return None, decision
     categories = []
     for c in config["network_categories"]:
         if matches(c["pattern"], text):
             categories.append(c["id"])
-    evidence = sorted(set(network_direct + network_object + network_mechanism + network_abstract))
     return {
         "doi": doi, "url": "https://doi.org/" + quote(doi, safe="/"),
         "title": title,
@@ -105,7 +149,7 @@ def screen(item, config, today):
         "issns": sorted(issns), "date": published.isoformat(), "date_source": date_source,
         "categories": categories or ["other"],
         "featured": journal["short"] if journal["short"] in config["featured_journals"] else None, "journal_short": journal["short"], "evidence": evidence,
-        "screening_basis": "network", "source": "Crossref", "abstract_available": bool(abstract),
+        "screening_basis": "network", "screening_routes": routes, "source": "Crossref", "abstract_available": bool(abstract),
         "metadata_url": "https://api.crossref.org/works/" + quote(doi, safe=""),
         "has_update": bool(item.get("updated-by"))
     }, "included"
@@ -134,6 +178,8 @@ def write_json(path, value):
 
 
 def collect(config, today, out=OUT, fetch=request_json):
+    if config["rows_per_page"] < 1 or config["rows_per_page"] > 1000 or not 1 <= config["max_pages_per_journal"] <= 10000 // config["rows_per_page"]:
+        raise ValueError("Pagination must stay within the 10,000-record offset budget")
     start = today - timedelta(days=config["window_days"] - 1)
     timestamp = datetime.now(timezone.utc).isoformat()
     jobs = [("journal: " + j["name"], "https://api.crossref.org/journals/" + j["issns"][0] + "/works", j) for j in config["journals"]]
@@ -145,7 +191,8 @@ def collect(config, today, out=OUT, fetch=request_json):
             # This bounded collection stays below the 10,000 offset limit.
             for page in range(config["max_pages_per_journal"]):
                 params = {"filter": f"type:journal-article,from-pub-date:{start},until-pub-date:{today}",
-                          "rows": config["rows_per_page"], "offset": page * config["rows_per_page"], "sort": "published", "order": "desc"}
+                          "rows": config["rows_per_page"], "offset": page * config["rows_per_page"], "sort": "published", "order": "desc",
+                          "select": "DOI,title,type,ISSN,abstract,author,published-online,published-print,published,issued,update-to,updated-by"}
                 url = endpoint + "?" + urlencode(params)
                 message = fetch(url)
                 report["urls"].append(url)
@@ -162,6 +209,8 @@ def collect(config, today, out=OUT, fetch=request_json):
                     break
                 time.sleep(0.25)
             report["truncated"] = report["retrieved"] < report["total_results"]
+            if report["truncated"]:
+                errors.append({"query": label, "error": "Collection limit or early empty page: incomplete coverage"})
             print(f"{label}: {report['retrieved']}/{report['total_results']}", flush=True)
         except Exception as exc:
             errors.append({"query": label, "error": type(exc).__name__ + ": " + str(exc)[:300]})
@@ -169,15 +218,25 @@ def collect(config, today, out=OUT, fetch=request_json):
             print(f"FAILED {label}: {type(exc).__name__}", flush=True)
         coverage.append(report)
         time.sleep(0.25)
-    stats, papers = Counter(), []
+    stats, papers, decisions = Counter(), [], []
     for candidate in candidates.values():
         paper, reason = screen(candidate["item"], config, today)
         stats[reason] += 1
+        item = candidate["item"]
+        decisions.append({"doi": item.get("DOI", "").lower(), "title": clean(" ".join(item.get("title", []))),
+                          "decision": "included" if paper else "review" if reason.startswith("review_") or reason == "missing_or_partial_date" else "excluded",
+                          "reason": reason, "abstract_available": bool(clean(item.get("abstract", ""))),
+                          "retrieved_by": sorted(set(candidate["queries"]))})
         if paper:
             paper["retrieved_by"] = sorted(set(candidate["queries"]))
             papers.append(paper)
     papers.sort(key=lambda p: (p["date"], p["doi"]), reverse=True)
     status = {"attempted_at": timestamp, "ok": not errors, "errors": errors, "coverage": coverage}
+    # Separate audit artifact: never silently discard unmatched candidates.
+    write_json(out / "screening-report.json", {"attempted_at": timestamp, "screening_version": config["version"],
+               "config_sha256": hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest(),
+               "window_start": start.isoformat(), "window_end": today.isoformat(),
+               "collection_complete": not errors, "counts": dict(stats), "decisions": decisions})
     if not errors:
         payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "window_start": start.isoformat(), "window_end": today.isoformat(),
                    "window_days": config["window_days"], "source": "Crossref", "screening_version": config["version"],
@@ -193,7 +252,9 @@ def collect(config, today, out=OUT, fetch=request_json):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--date", type=date.fromisoformat, default=datetime.now(timezone(timedelta(hours=8))).date())
+    parser.add_argument("--date", type=date.fromisoformat, default=default_collection_date(),
+                        help="Window end; temporarily defaults to no later than 2026-09-29")
+    parser.add_argument("--out", type=Path, default=OUT, help="Separate trial output directory (does not replace the public snapshot)")
     args = parser.parse_args()
-    success = collect(json.loads(CONFIG.read_text(encoding="utf-8")), args.date)
+    success = collect(json.loads(CONFIG.read_text(encoding="utf-8")), args.date, args.out)
     raise SystemExit(0 if success else 1)

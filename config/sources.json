@@ -1,10 +1,10 @@
 {
-  "version": 5,
+  "version": 6,
   "featured_journals": ["NC", "PRX", "SA", "PNAS", "PRL"],
   "featured_order_year": 2025,
   "window_days": 90,
-  "rows_per_page": 100,
-  "max_pages_per_journal": 5,
+  "rows_per_page": 1000,
+  "max_pages_per_journal": 10,
   "journals": [
     {"name":"Nature","short":"Nature","tier":"flagship","issns":["1476-4687","0028-0836"]},
     {"name":"Science","short":"Science","tier":"flagship","issns":["1095-9203","0036-8075"]},
@@ -42,9 +42,11 @@
     {"id":"network_resilience","label":"鲁棒性、级联与控制","pattern":"resilien|robustness|controllability|network control|network dismantl|critical transition|tipping point"}
   ],
   "screening": {
-    "application_model_title":"(?:network|connectome)\\s+(?:model|atlas|map)\\s+(?:of|for)\\b|structure[–— -]function",
-    "biomedical_context":"\\b(?:rats?|mice|mouse|patients?|disease|cancer|neuronal|brain|nervous system|connectom\\w*)\\b",
-    "core_contribution_title":"percolation|synchroni[sz]|kuramoto|contagion|epidemic threshold|network controllability|community detection|network inference|network reconstruct|degree distribution|preferential attachment|network generat|network formation|cascading|critical transition|higher.order interactions?",
+    "network_methods":"\\b(?:betweenness|eigenvector centrality|degree centrality|community detection|link prediction|network (?:analysis|inference|reconstruction|control|dismantling)|graph partitioning|rich.club|modularity|adjacency matrix|degree distribution)\\b",
+    "implicit_relations":"\\b(?:coupled oscillators?|interacting (?:agents|nodes|units)|coupling (?:topology|structure|matrix)|interaction (?:topology|structure|matrix)|nodal heterogeneity|nonreciprocal interactions|contact patterns|connection patterns|relational ties)\\b",
+    "implicit_processes":"\\b(?:synchroni[sz]\\w*|stability|stabili[sz]\\w*|collective\\w*|consensus|cooperation|contagion|propagation|diffusion|percolation|cascad\\w*)\\b",
+    "ml_application":"image classification|object detection|sentiment analysis|recommendation|knowledge distillation|image segmentation|speech recognition|anomaly detection",
+    "specific_network_mechanism":"\\b(?:percolation|synchroni[sz]\\w*|kuramoto|contagion|epidemic threshold|spreading|diffusion|cascad\\w*|controllability|community detection|link prediction|evolutionary games?)\\b",
     "network_explicit":"complex networks?|network science|network topolog|network motifs?|degree distribution|preferential attachment|scale.free networks?|small.world networks?|multilayer networks?|multiplex networks?|temporal networks?|interdependent networks?|higher.order (?:networks?|interactions?)|hypergraphs?|simplicial complexes?|community detection|stochastic block models?",
     "network_object":"\\b(?:networks?|graphs?|hypergraphs?|connectomes?)\\b|food webs?|power grids?",
     "network_mechanism":"\\b(?:topolog\\w*|structur(?:e|es|al)|percolation|synchroni[sz]\\w*|kuramoto|cascad\\w*|epidemic\\w*|contagion|spreading|diffusion|collective|cooperation|evolutionary games?|controllability|dismantl\\w*|resilien\\w*|robustness|community|degree distribution|critical transition|tipping|link prediction|reconstruct\\w*|growth|oscillat\\w*)\\b",
