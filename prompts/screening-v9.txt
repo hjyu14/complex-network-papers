@@ -22,7 +22,10 @@ Return JSON only with:
   "evidence": [{"source": "title|abstract|metadata", "phrase": "short direct phrase"}],
   "reason_code": "short_fixed_code",
   "confidence": 0.0,
-  "needs_review": true
+  "needs_review": true,
+  "screening_summary": "one specific sentence for core or transferable_application"
 }
 
 If direct evidence is insufficient, set category to review and needs_review to true. Confidence never overrides missing evidence.
+
+For core or transferable_application, also return `screening_summary`. It must be exactly one concise sentence of 12–30 English words. Name the concrete research object, the network operation or method, and why that makes the paper eligible. Use specific nouns from the title or abstract. Do not write generic claims such as “this paper applies network science to an important problem”; do not add unsupported novelty, effect, or causal claims. If a specific evidence-bound sentence cannot be written, set category to review.

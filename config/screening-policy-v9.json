@@ -31,7 +31,16 @@
     "allowed_inputs": ["title", "abstract", "journal", "issn", "doi", "date", "article_type"],
     "require_direct_evidence": true,
     "no_evidence_action": "review",
-    "classes": ["core", "transferable_application", "excluded", "review"]
+    "classes": ["core", "transferable_application", "excluded", "review"],
+    "summary": {
+      "field": "screening_summary",
+      "required_for": ["core", "transferable_application"],
+      "exactly_one_sentence": true,
+      "word_count_range": [12, 30],
+      "must_name": ["research_object", "network_operation_or_method", "inclusion_reason"],
+      "forbid_generic_claims": true,
+      "evidence_bound": true
+    }
   },
   "publisher_access": {
     "allow_doi_resolution": true,

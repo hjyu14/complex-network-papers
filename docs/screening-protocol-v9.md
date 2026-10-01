@@ -32,3 +32,13 @@ AI 只能使用标题、摘要、期刊、日期、文章类型及其来源证�
 ## 6. 可复现性
 
 每次审读记录规程版本、配置哈希、模型版本、输入哈希、输出、证据短语和审读时间。规则或模型改变时，必须通过固定回归样本后才能用于生产。
+
+## 7. 收录说明句
+
+每篇收录文章生成一条面向读者的简短说明句，字段名为 `screening_summary`。说明句必须只有一句，并且具体指出研究对象、使用的网络科学操作或方法，以及因此符合收录范围的原因。优先使用标题和摘要中的具体名词，避免“研究网络科学”“具有重要意义”等宽泛表述；不得加入证据中没有的效果、创新性或因果结论。建议英文长度为 12–30 个词。说明句不足以支持判断时，文章进入 `review`。
+
+例如，土壤重金属文章应写成类似：`Uses complex-network analysis to model soil heavy-metal pollution and construct an early-warning risk framework.` 而不是只写“applies network science to an important application”。
+
+## 8. v8 边界案例校准
+
+此前 6 篇待核查文章的确认结果为：前 5 篇排除，第 6 篇归入 `transferable_application`。这些结果作为 v9 的固定回归样本。作者单位、关键词或标题中的 `network` 只能辅助发现风险，不能单独构成纳入依据。
