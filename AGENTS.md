@@ -1,23 +1,16 @@
-# Complex Network Papers
+# Complex Network Papers · New Workflow
 
-- Purpose: a public, registration-free literature board focused only on complex network structure and dynamics on networks. General nonlinear dynamics alone is out of scope.
-- Scope: journal articles in the last 90 calendar days (including today), not preprints. Never fabricate papers or dates.
-- Temporary baseline: through 2026-09-29 inclusive (starting 2026-07-02). The collector default date is capped at that date until the daily-update trial is authorized; explicit --date with a separate --out allows isolated trials. Keep UI baseline notices consistent when lifting the cap.
-- Scientific scope and journal whitelist are configured in `config/sources.json`. Change these explicitly, not to improve apparent results.
-- Whitelisted journal ISSNs are mandatory for every paper. Query journal works, not global network keyword search. Only `featured_journals` enter the spotlight; never infer membership from historical tier labels. Nature/Science/Nature Physics stay whitelisted but are outside the spotlight.
-- Topic taxonomy maps PRE Networks and Complex Systems and journal scopes; see `docs/classification.md`. Allow multiple research themes; use `other` exclusively when no theme matches, last in navigation. Do not force labels to hide uncertainty.
-- UI filters: theme, journal, date, and journal scope (all/featured/other). No separate nonlinear direction, network-type or application facets. Show six newest spotlight papers with full journal names; the journal caption alone may abbreviate PNAS.
-- Crossref is the initial metadata source. Public outputs store metadata and DOI links, never PDFs or full abstracts. User-authorized exception (2026-10-02): complete abstracts may be saved only in the local, Git-ignored `.private/abstract-cache/v9/` for screening and reproducibility. Keep DOI, source URL, retrieval time, abstract basis and content hash; preserve previous versions. Never copy this cache or complete abstracts into `site/`, ordinary reports, Git commits or deployment artifacts. Do not store full article text, HTML, PDFs or credentials under this exception. Read verified cached abstracts before fetching again; save each screening decision with its input hash. Availability flags alone are not completed material collection or semantic review.
-- Screening is heuristic, not an expert assessment. Preserve match evidence, date provenance, query coverage and limitations. Featured journals do not bypass screening.
-- V9 collection and screening must close within the same small batch: read, privately cache, assess, and save the decision plus input hash before starting the next batch. Resume cached-but-unreviewed records first. Keep not-yet-reviewed separate from assessed-but-unresolved; never collect the entire pool first and defer all classification.
-- For the remaining September v9 queue, use `scripts/review_workflow_v9.py` and `docs/v9-closed-loop-workflow.md`. Its active-paper gate requires a persisted assessment before advancing; use historical routes rather than restarting broad discovery. The old collection-only scripts are historical utilities, not the current workflow entry point.
-- Current release uses v8: network structure, dynamics on networks or transferable network-science methods must be a main contribution. Routine domain network analysis alone is insufficient. The confirmed fixed-cohort editorial assessments are explicit production inputs in `config/scope-review-v8.json`, distinct from validation fixtures. They comprise core and transferable-application classes; unassessed, changed-title and unresolved records await review. Do not claim a general automatic semantic classifier or full-text expert review.
-- Re-screen only the original 181-paper cohort in `site/data/baseline-v6.json` until expansion is explicitly authorized. Scheduled refreshes use `scripts/rescreen_existing.py`; keep its baseline byte-identical. No research-method labels or method filter are currently assigned. Preserve author placeholders separately, never infer publication status from them.
-- For screening experiments use a separate `reports/` output directory (current release trial: `reports/v8-release`); do not promote trial papers as expert-reviewed results. Truncated queries fail collection and preserve the last valid snapshot. A complete Crossref query is not verified publisher coverage or completed relevance review.
-- English is the initial interface language; allow Chinese switching without translating titles/authors or resetting filters. `site/rules.html` is the public bilingual policy article. Keep it consistent with executable screening rules.
-- Publication dates: online first, then print, then published/issued. If the preferred available date is incomplete, exclude rather than invent a day or silently use another date. Exclude future dates.
-- `site/` is the public deployment directory. No credentials, private notes or research datasets may be committed. No runtime dependencies are required.
-- Verify changes with `python -m unittest discover -s tests -v`, `node --check site/app.js`, `node --test tests/test_app.cjs`, and browser inspection for UI changes.
-- Collector: `python scripts/collect.py`. Preview: `python -m http.server 8000 --directory site`.
-- Failed or partial collection must not replace the last complete snapshot. Publish attempt status separately. All queries have explicit, reported limits.
-- GitHub Actions and Pages are authorized for this project. Keep scheduled runs bounded; do not enable paid services. Repository: hjyu14/complex-network-papers.
+- 默认中文沟通；优先科学有效性、可复现性和最小改动。开始工作先检查 Git 状态、README 和当前规则。
+- 当前开发分支为 `codex/new-workflow`，目录为 `E:\cursor_file\papers_of_complex_networks_newflow`。旧保存提交和目录见 README；按需取回文件，不恢复整套旧候选池或旧队列。
+- 当前只有最小文档和配置，无采集器、站点、测试入口或定时更新。不要声称这些功能已经实现或已经验证。
+- 当前九刊白名单以 `config/sources.json` 为准。Spotlight 展示名单独立于检索范围，保留原五刊；不要用期刊名气判断单篇相关性。
+- 科学、日期、类型和证据边界以 `docs/screening-protocol.md` 为准。规则或协议的实质变化先询问，不为提高收录数静默修改。
+- 初始试验窗口为 2026-09-01 至 2026-09-30；最近 90 天为最终目标。此阶段不自动追溯、扩刊、启用日更或发布结果。
+- 先登记整刊候选并核对官方目录与元数据渠道的差异；关键词不提前裁剪用于核对覆盖的集合。完整 API 查询不等于完整出版社覆盖。
+- 将目录覆盖、字段取得、硬检查、主题审读、未决状态和发布分别记录。未审读与已审读但未决不能混用。
+- 读取摘要后立即缓存、审读并持久化判断，再推进下一篇或小批；中断先恢复已缓存未审读项。
+- 完整摘要只允许保存于本地、Git 忽略的 `.private/abstract-cache/v9/`。保留 DOI、URL、获取时间、明确摘要依据、内容与输入哈希及旧版本；旧目录缓存不自动复制。
+- 完整摘要不得进入提交、普通报告或部署。不得保存正文、HTML、PDF、cookie 或凭据。description、搜索片段和生成式摘要不能冒充明确摘要。
+- 原始证据默认不可改写；输入或规则变化时保留旧判断并重新核查。失败和异常如实记录，重试应有预算和停止条件。
+- 验证采用成本最低且足够有效的检查；引入代码后再定义适用测试，不沿用不存在的旧入口。
+- 删除、覆盖、Git 推送、凭据修改、自动部署配置变更及高成本计算须有用户授权；本次最小起点初始化已获授权，后续按任务判断。
