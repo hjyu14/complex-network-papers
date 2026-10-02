@@ -11,7 +11,34 @@
   "date_policy": {
     "priority": ["published-online", "print", "published", "issued"],
     "reject_incomplete": true,
-    "reject_future": true
+    "reject_future": true,
+    "accepted_paper_without_published_date": "use_complete_publisher_accepted_date_for_window_and_display_as_acceptance",
+    "aps_crossref_online_equals_acceptance": {
+      "requires": ["same_doi_confirmed", "crossref_published_online_equals_publisher_accepted", "complete_publisher_published_date"],
+      "decision": "use_publisher_published_date",
+      "preserve_original_dates_and_sources": true,
+      "fresh_crossref_agrees_with_publisher": "record_conflict_as_resolved",
+      "other_conflicts": "review"
+    }
+  },
+  "article_type_policy": {
+    "confirmed_reply": "exclude",
+    "confirmation": "publisher_type_or_explicit_reply_to_named_comment_title_with_journal_format_definition",
+    "accepted_paper_is_article_type": false,
+    "research_letter_is_reply": false,
+    "missing_abstract_with_insufficient_evidence": "review"
+  },
+  "early_article_policy": {
+    "accepted_papers_eligible": true,
+    "require_publisher_status_evidence": true,
+    "require_normal_scope_review": true,
+    "display": "same_article_list_with_status_badge",
+    "aps_accepted_paper_badge": {"zh": "已接收", "en": "Accepted Paper"},
+    "other_early_versions": "reuse_explicit_saved_labels_without_mandatory_version_audit",
+    "first_online_publication_sufficient": true,
+    "require_final_version": false,
+    "missing_version_label_triggers_review": false,
+    "accepted_date_is_publication_date": false
   },
   "metadata": {
     "primary_source": "crossref",
@@ -25,7 +52,20 @@
       "metadata_conflict"
     ],
     "random_quality_check_rate": 0.05,
-    "store_full_abstract": false
+    "store_full_abstract": true,
+    "full_abstract_storage": {
+      "authorized_on": "2026-10-02",
+      "scope": "local_private_cache_only",
+      "directory": ".private/abstract-cache/v9",
+      "git_commit_allowed": false,
+      "public_display_allowed": false,
+      "ordinary_report_storage_allowed": false,
+      "cache_first": true,
+      "preserve_versions": true,
+      "require_doi_match": true,
+      "required_provenance": ["doi", "source_url", "retrieved_at", "abstract_basis", "abstract_sha256"],
+      "description_is_abstract": false
+    }
   },
   "ai_review": {
     "allowed_inputs": ["title", "abstract", "journal", "issn", "doi", "date", "article_type"],

@@ -1,0 +1,16 @@
+{
+  "schema": "v9-source-quality-supplement-v1",
+  "checked_at": "2026-10-02T14:53:00Z",
+  "method": "In-app browser; same-DOI publisher title and article-type header; no full-text topic evidence",
+  "finding": "For the records below, OpenAlex abstract_inverted_index reproduces publisher standfirst material, with an additional short summary sentence. It must not be counted as a verified independent research abstract. The publisher article type is sufficient for exclusion under v9. Preserve original cache and decisions as history; this supplement records the stronger type basis and invalidates the independent-abstract interpretation.",
+  "records": [
+    {"doi": "10.1038/d41586-026-02486-5", "publisher_type": "CLINICAL BRIEFINGS", "source_url": "https://www.nature.com/articles/d41586-026-02486-5", "class": "excluded", "reason": "Clinical briefing, not an eligible research paper; supersedes the initial topic-based rationale, without changing exclusion."},
+    {"doi": "10.1038/d41586-026-02541-1", "publisher_type": "RESEARCH BRIEFINGS", "source_url": "https://www.nature.com/articles/d41586-026-02541-1", "class": "excluded"},
+    {"doi": "10.1038/d41586-026-02689-w", "publisher_type": "RESEARCH BRIEFINGS", "source_url": "https://www.nature.com/articles/d41586-026-02689-w", "class": "excluded"},
+    {"doi": "10.1038/d41586-026-02694-z", "publisher_type": "RESEARCH BRIEFINGS", "source_url": "https://www.nature.com/articles/d41586-026-02694-z", "class": "excluded"},
+    {"doi": "10.1038/d41586-026-02695-y", "publisher_type": "RESEARCH BRIEFINGS", "source_url": "https://www.nature.com/articles/d41586-026-02695-y", "class": "excluded"},
+    {"doi": "10.1038/d41586-026-02700-4", "publisher_type": "POLICY BRIEF", "source_url": "https://www.nature.com/articles/d41586-026-02700-4", "class": "excluded"},
+    {"doi": "10.1038/d41586-026-02703-1", "publisher_type": "RESEARCH BRIEFINGS", "source_url": "https://www.nature.com/articles/d41586-026-02703-1", "class": "excluded"}
+  ],
+  "scope_limit": "These seven checked DOI records only; do not infer article type from DOI prefix or generalize to all OpenAlex abstract fields."
+}

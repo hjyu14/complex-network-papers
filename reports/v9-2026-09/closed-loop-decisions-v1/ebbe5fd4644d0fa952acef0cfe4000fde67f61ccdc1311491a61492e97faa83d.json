@@ -1,0 +1,52 @@
+{
+  "doi": "10.1016/j.physa.2026.132092",
+  "class": "excluded",
+  "reason": "研究一维长程XY自旋链在局部退相干下的量子Mpemba效应，以Liouvillian谱和初态模态投影解释弛豫；贡献为固定晶格量子多体机制，摘要未提出网络拓扑问题或可迁移网络科学方法。",
+  "evidence": "a one-dimensional long-range XY spin chain subject to local dephasing",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "cdaad97fe1912604dbbdc4c7364977f55d44d1f196c1b15ee73b83785a22f744",
+  "abstract_sha256": "98982ac3f3feb635c7acb0d0cba766c9249eb967e3f42784deb8c04a27d56d6c",
+  "source_url": "https://www.sciencedirect.com/science/article/pii/S0378437126008381",
+  "retrieved_at": "2026-10-02T14:26:14.424038+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:26:36.309826+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378437126008381",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "http_status": 403,
+      "at": "2026-10-02T14:25:01.113434+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.physa.2026.132092",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:25:02.857337+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.physa.2026.132092%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:25:05.323151+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016%2Fj.physa.2026.132092",
+      "kind": "openalex",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:25:06.639175+00:00"
+    }
+  ]
+}

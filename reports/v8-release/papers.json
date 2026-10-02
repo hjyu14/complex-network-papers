@@ -1,0 +1,5973 @@
+{
+  "generated_at": "2026-09-30T13:42:42.618717+00:00",
+  "window_start": "2026-07-02",
+  "window_end": "2026-09-29",
+  "window_days": 90,
+  "source": "Crossref",
+  "screening_version": 8,
+  "config_sha256": "c1236be096871b6d5a4481215a378b884b494c015f216f6be57d5fdd91dc2e03",
+  "rescreening": {
+    "scope": "existing_papers_only",
+    "source_snapshot_sha256": "deb4a2d9fb26c31a6e86f06948470bc49fe149113efb23a718a1818379afbfbe",
+    "source_screening_version": 6,
+    "source_generated_at": "2026-09-30T01:44:33.254955+00:00",
+    "input_count": 181,
+    "added_dois": [],
+    "new_candidates_queried": false,
+    "assessment_method": "approved_title_and_abstract_review",
+    "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8"
+  },
+  "categories": [
+    {
+      "id": "network_structure",
+      "label": "网络结构与生成"
+    },
+    {
+      "id": "network_inference",
+      "label": "社区发现与网络推断、重构"
+    },
+    {
+      "id": "network_spreading",
+      "label": "传播、扩散与渗流"
+    },
+    {
+      "id": "network_collective",
+      "label": "同步、博弈与集体行为"
+    },
+    {
+      "id": "network_resilience",
+      "label": "鲁棒性、级联与控制"
+    },
+    {
+      "id": "other",
+      "label": "其他"
+    }
+  ],
+  "featured_journals": [
+    "NC",
+    "PRX",
+    "SA",
+    "PNAS",
+    "PRL"
+  ],
+  "featured_order_year": 2025,
+  "journals": [
+    {
+      "name": "Nature",
+      "short": "Nature",
+      "tier": "flagship",
+      "issns": [
+        "1476-4687",
+        "0028-0836"
+      ]
+    },
+    {
+      "name": "Science",
+      "short": "Science",
+      "tier": "flagship",
+      "issns": [
+        "1095-9203",
+        "0036-8075"
+      ]
+    },
+    {
+      "name": "Physical Review X",
+      "short": "PRX",
+      "tier": "flagship",
+      "issns": [
+        "2160-3308"
+      ]
+    },
+    {
+      "name": "Nature Physics",
+      "short": "Nat. Phys.",
+      "tier": "flagship",
+      "issns": [
+        "1745-2481",
+        "1745-2473"
+      ]
+    },
+    {
+      "name": "Nature Communications",
+      "short": "NC",
+      "tier": "gatekeeper",
+      "issns": [
+        "2041-1723"
+      ]
+    },
+    {
+      "name": "Science Advances",
+      "short": "SA",
+      "tier": "gatekeeper",
+      "issns": [
+        "2375-2548"
+      ]
+    },
+    {
+      "name": "Physical Review Letters",
+      "short": "PRL",
+      "tier": "gatekeeper",
+      "issns": [
+        "1079-7114",
+        "0031-9007"
+      ]
+    },
+    {
+      "name": "Proceedings of the National Academy of Sciences",
+      "short": "PNAS",
+      "tier": "gatekeeper",
+      "issns": [
+        "1091-6490",
+        "0027-8424"
+      ]
+    },
+    {
+      "name": "Nature Machine Intelligence",
+      "short": "NMI",
+      "tier": "cross-disciplinary",
+      "issns": [
+        "2522-5839"
+      ]
+    },
+    {
+      "name": "Nature Computational Science",
+      "short": "NCS",
+      "tier": "cross-disciplinary",
+      "issns": [
+        "2662-8457"
+      ]
+    },
+    {
+      "name": "Nature Human Behaviour",
+      "short": "NHB",
+      "tier": "cross-disciplinary",
+      "issns": [
+        "2397-3374"
+      ]
+    },
+    {
+      "name": "Communications Physics",
+      "short": "Commun. Phys.",
+      "tier": "cross-disciplinary",
+      "issns": [
+        "2399-3650"
+      ]
+    },
+    {
+      "name": "Physical Review Research",
+      "short": "PRResearch",
+      "tier": "cross-disciplinary",
+      "issns": [
+        "2643-1564"
+      ]
+    },
+    {
+      "name": "Physical Review E",
+      "short": "PRE",
+      "tier": "field",
+      "issns": [
+        "2470-0053",
+        "2470-0045"
+      ]
+    },
+    {
+      "name": "Chaos",
+      "short": "Chaos",
+      "tier": "field",
+      "issns": [
+        "1089-7682",
+        "1054-1500"
+      ]
+    },
+    {
+      "name": "Chaos, Solitons & Fractals",
+      "short": "CSF",
+      "tier": "field",
+      "issns": [
+        "0960-0779"
+      ]
+    },
+    {
+      "name": "Physica A: Statistical Mechanics and its Applications",
+      "short": "Physica A",
+      "tier": "field",
+      "issns": [
+        "0378-4371"
+      ]
+    },
+    {
+      "name": "Physica D: Nonlinear Phenomena",
+      "short": "Physica D",
+      "tier": "field",
+      "issns": [
+        "0167-2789",
+        "1872-8022"
+      ]
+    },
+    {
+      "name": "Journal of Complex Networks",
+      "short": "J. Complex Networks",
+      "tier": "field",
+      "issns": [
+        "2051-1329"
+      ]
+    },
+    {
+      "name": "Network Science",
+      "short": "Network Science",
+      "tier": "field",
+      "issns": [
+        "2050-1242",
+        "2050-1250"
+      ]
+    },
+    {
+      "name": "Journal of Nonlinear Science",
+      "short": "J. Nonlinear Sci.",
+      "tier": "field",
+      "issns": [
+        "0938-8974",
+        "1432-1467"
+      ]
+    },
+    {
+      "name": "Nonlinear Dynamics",
+      "short": "Nonlinear Dynamics",
+      "tier": "field",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ]
+    },
+    {
+      "name": "SIAM Journal on Applied Dynamical Systems",
+      "short": "SIADS",
+      "tier": "field",
+      "issns": [
+        "1536-0040"
+      ]
+    },
+    {
+      "name": "Journal of Statistical Physics",
+      "short": "J. Stat. Phys.",
+      "tier": "field",
+      "issns": [
+        "1572-9613",
+        "0022-4715"
+      ]
+    },
+    {
+      "name": "Reviews of Modern Physics",
+      "short": "RMP",
+      "tier": "review",
+      "issns": [
+        "0034-6861",
+        "1539-0756"
+      ]
+    },
+    {
+      "name": "Physics Reports",
+      "short": "Physics Reports",
+      "tier": "review",
+      "issns": [
+        "0370-1573"
+      ]
+    },
+    {
+      "name": "Nature Reviews Physics",
+      "short": "Nat. Rev. Phys.",
+      "tier": "review",
+      "issns": [
+        "2522-5820"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "label": "Existing-paper DOI lookups",
+      "retrieved": 181,
+      "total_results": 181,
+      "truncated": false,
+      "failed": false
+    }
+  ],
+  "candidate_count": 181,
+  "screening_counts": {
+    "included": 117,
+    "outside_editorial_scope": 58,
+    "review_scope": 6
+  },
+  "papers": [
+    {
+      "doi": "10.1103/v1vq-skr1",
+      "url": "https://doi.org/10.1103/v1vq-skr1",
+      "title": "Timescale-induced synchronization of contrarians in adaptive dynamical networks",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-29",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fv1vq-skr1",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/33lg-7kmc",
+      "url": "https://doi.org/10.1103/33lg-7kmc",
+      "title": "Equivalence between nonlinear graph-based dynamics and linear dynamics on higher-order networks",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-29",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F33lg-7kmc",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s42005-026-02852-9",
+      "url": "https://doi.org/10.1038/s42005-026-02852-9",
+      "title": "Topological Dirac cluster synchronization on directed hypergraphs",
+      "authors": [
+        "Yupeng Guo",
+        "Ahmed A. A. Zaid",
+        "Xueming Liu",
+        "Ginestra Bianconi"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Communications Physics",
+      "issns": [
+        "2399-3650"
+      ],
+      "date": "2026-09-29",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Commun. Phys.",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02852-9",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/l51k-63y5",
+      "url": "https://doi.org/10.1103/l51k-63y5",
+      "title": "Machine learning prediction of explosive death in coupled oscillator networks",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-28",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fl51k-63y5",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0351619",
+      "url": "https://doi.org/10.1063/5.0351619",
+      "title": "Efficient driver-node selection for pinning control via second-order perturbations",
+      "authors": [
+        "Fatemeh Ghoreishian Amiri",
+        "Fahimeh Nazarimehr",
+        "Sajad Jafari",
+        "Matjaž Perc"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-28",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0351619",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-13025-2",
+      "url": "https://doi.org/10.1007/s11071-026-13025-2",
+      "title": "Higher-order interactions modulating energy-information transmission efficiency in networks",
+      "authors": [
+        "Ying Xu",
+        "Jiangxing Chen"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-09-28",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-13025-2",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/d6lk-4f62",
+      "url": "https://doi.org/10.1103/d6lk-4f62",
+      "title": "Articulation points in multiplex networks",
+      "authors": [
+        "Artem Vergazov",
+        "Saeed Osat",
+        "Vladimir V. Palyulin"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-25",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fd6lk-4f62",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/3v5l-pgzz",
+      "url": "https://doi.org/10.1103/3v5l-pgzz",
+      "title": "Traveling chimeras and collective coordination in β -cell networks",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-25",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题直接研究耦合 β 细胞网络中的行进奇美拉与集体协调；按网络模型动力学收录，未核实期刊版本摘要。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题直接研究耦合 β 细胞网络中的行进奇美拉与集体协调；按网络模型动力学收录，未核实期刊版本摘要。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F3v5l-pgzz",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/c44l-89p7",
+      "url": "https://doi.org/10.1103/c44l-89p7",
+      "title": "Curvature in infectious disease network: A metric for vaccination and control",
+      "authors": [
+        "Sara Najem"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-24",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "transferable_application",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "从感染网络提出热核节点曲率指标，比较其他曲率定义；可迁移内容是动态网络结构变化的度量，而非疾病分型。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "从感染网络提出热核节点曲率指标，比较其他曲率定义；可迁移内容是动态网络结构变化的度量，而非疾病分型。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fc44l-89p7",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0347364",
+      "url": "https://doi.org/10.1063/5.0347364",
+      "title": "Cooperative spreading between information and epidemics in metapopulation networks with quarantine interventions",
+      "authors": [
+        "Congying Liu",
+        "Xiaoqun Wu",
+        "Xiaoyang Liu",
+        "Su Zhong",
+        "Zhu Liu"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-23",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0347364",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/9y9m-q7qj",
+      "url": "https://doi.org/10.1103/9y9m-q7qj",
+      "title": "Preferential attachment with local flexibility",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review Letters",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-09-21",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "PRL",
+      "journal_short": "PRL",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F9y9m-q7qj",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0331194",
+      "url": "https://doi.org/10.1063/5.0331194",
+      "title": "Huygens’ synchrony: Emergent modes of planar symmetrically coupled pendula",
+      "authors": [
+        "M. M. Hoogesteger",
+        "A. Y. Pogromsky",
+        "H. Nijmeijer"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-21",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "空间排列与共同平台耦合的对称性决定同步模式；实验及模型研究耦合振子集体动力学。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "空间排列与共同平台耦合的对称性决定同步模式；实验及模型研究耦合振子集体动力学。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0331194",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s42005-026-02773-7",
+      "url": "https://doi.org/10.1038/s42005-026-02773-7",
+      "title": "Synchronization of topological signals in higher-order adaptive multilayer network",
+      "authors": [
+        "Palash Kumar Pal",
+        "Dibakar Ghosh",
+        "Jürgen Kurths"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Communications Physics",
+      "issns": [
+        "2399-3650"
+      ],
+      "date": "2026-09-21",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Commun. Phys.",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02773-7",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1126/science.aeg3946",
+      "url": "https://doi.org/10.1126/science.aeg3946",
+      "title": "Disorder-promoted stability",
+      "authors": [
+        "Arthur N. Montanari",
+        "Pietro Zanin",
+        "Adilson E. Motter"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Science",
+      "issns": [
+        "0036-8075",
+        "1095-9203"
+      ],
+      "date": "2026-09-17",
+      "date_source": "published-print",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Science",
+      "evidence": [
+        "主要结论是一般网络中节点异质性与非厄米结构如何提升稳定性；生物、材料和电网仅为适用例子。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "主要结论是一般网络中节点异质性与非厄米结构如何提升稳定性；生物、材料和电网仅为适用例子。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fscience.aeg3946",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12990-y",
+      "url": "https://doi.org/10.1007/s11071-026-12990-y",
+      "title": "Direct distributed adaptive fault-tolerant consensus control for SONMASs under directed graphs",
+      "authors": [
+        "Yapeng Yang",
+        "Zhanshan Wang",
+        "Wanli Jin"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-09-17",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12990-y",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0351862",
+      "url": "https://doi.org/10.1063/5.0351862",
+      "title": "Coevolutionary game dynamics with local and global environmental feedbacks on spatially embedded networks",
+      "authors": [
+        "Yi Zhong",
+        "Chuan Ding",
+        "Xiaojie Chen"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-15",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0351862",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0349918",
+      "url": "https://doi.org/10.1063/5.0349918",
+      "title": "Hypergraph-based clustering via nonlocal nonlinear evolution operators",
+      "authors": [
+        "Ana Isabel Muñoz",
+        "Regino Criado"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-15",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "提出一般超图聚类演化算子；医学数据只是示例，不构成生物医学应用排除。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "提出一般超图聚类演化算子；医学数据只是示例，不构成生物医学应用排除。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0349918",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/xsg5-cb6l",
+      "url": "https://doi.org/10.1103/xsg5-cb6l",
+      "title": "Inferring three-body interactions in cell migration dynamics",
+      "authors": [
+        "Agathe Jouneau",
+        "Tom Brandstätter",
+        "Bram Hoogland",
+        "Joachim O. Rädler",
+        "Chase P. Broedersz"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-09-14",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "transferable_application",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "从三细胞轨迹发展二体与三体作用推断方案；可迁移内容是从轨迹数据识别高阶相互作用。仅三个细胞的证据范围有限。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "从三细胞轨迹发展二体与三体作用推断方案；可迁移内容是从轨迹数据识别高阶相互作用。仅三个细胞的证据范围有限。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fxsg5-cb6l",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/tmkq-33c4",
+      "url": "https://doi.org/10.1103/tmkq-33c4",
+      "title": "Detecting remote synchronization from empirical data of brain networks",
+      "authors": [
+        "Dehua Chen",
+        "Zhiyin Yang",
+        "Zhaohua Lin",
+        "Guoshen Liang",
+        "Wenbin Mao",
+        "Zonghua Liu"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-09-14",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "从实测脑网络提出远程同步检测方法；摘要明确扩展到振子网络并给出理论解释，而非仅报告具体脑区功能。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "从实测脑网络提出远程同步检测方法；摘要明确扩展到振子网络并给出理论解释，而非仅报告具体脑区功能。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Ftmkq-33c4",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/k9b1-n8mb",
+      "url": "https://doi.org/10.1103/k9b1-n8mb",
+      "title": "From clustering to global synchrony: Higher-order interactions reshape ecological network dynamics",
+      "authors": [
+        "Arzoo Narang",
+        "Partha Sharathi Dutta"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-14",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fk9b1-n8mb",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0342298",
+      "url": "https://doi.org/10.1063/5.0342298",
+      "title": "Epidemic spreading on clustered networks with behavioral adaptation",
+      "authors": [
+        "Xiao-Long Peng",
+        "Shu-Yan Chang",
+        "Li Li",
+        "Yi-Cheng Zhang",
+        "Xin Chen",
+        "Gui-Quan Sun"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-14",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0342298",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/p6qp-2s9f",
+      "url": "https://doi.org/10.1103/p6qp-2s9f",
+      "title": "Assessing imbalance in signed brain networks",
+      "authors": [
+        "Marzio Di Vece",
+        "Emanuele Agrimi",
+        "Samuele Tatullo",
+        "Tommaso Gili",
+        "Miguel Ibáñez-Berganza",
+        "Tiziano Squartini"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-09-11",
+      "date_source": "published-online",
+      "categories": [
+        "network_inference"
+      ],
+      "scope_class": "transferable_application",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "提出最大熵基准及假设检验，将多元时间序列映射为带符号网络；脑网络只是演示对象，推断框架可用于其他系统。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "提出最大熵基准及假设检验，将多元时间序列映射为带符号网络；脑网络只是演示对象，推断框架可用于其他系统。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fp6qp-2s9f",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/81gf-mlhm",
+      "url": "https://doi.org/10.1103/81gf-mlhm",
+      "title": "Emergence of contagious cooperation in community-structured networks",
+      "authors": [
+        "Vicente Vargas-Panesso",
+        "Nicanor Quijano",
+        "Luis Felipe Giraldo"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-11",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F81gf-mlhm",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-13029-y",
+      "url": "https://doi.org/10.1007/s11071-026-13029-y",
+      "title": "Effects of different higher-order interactions on scroll-wave dynamics in three-dimensional FHN networks",
+      "authors": [
+        "Zhe Cao",
+        "Yipeng Hu",
+        "Qianming Ding",
+        "Ya Jia",
+        "Lijian Yang"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-09-11",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-13029-y",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1073/pnas.2614238123",
+      "url": "https://doi.org/10.1073/pnas.2614238123",
+      "title": "Starvation suppression in dense scale-free metabolic networks: Dynamical mean-field analysis of catalytic reaction networks",
+      "authors": [
+        "Kota Mitsumoto",
+        "Shuji Ishihara"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Proceedings of the National Academy of Sciences",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-09-10",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "PNAS",
+      "journal_short": "PNAS",
+      "evidence": [
+        "在任意度分布的稠密随机网络上推导催化动力学精确均场解；主要贡献是拓扑—动力学理论。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "在任意度分布的稠密随机网络上推导催化动力学精确均场解；主要贡献是拓扑—动力学理论。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2614238123",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/wysx-f9l3",
+      "url": "https://doi.org/10.1103/wysx-f9l3",
+      "title": "Coexistence of explosive and driven forms of remote synchronization in star networks",
+      "authors": [
+        "Siyu Huo"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-09",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fwysx-f9l3",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/ppm1-mxhz",
+      "url": "https://doi.org/10.1103/ppm1-mxhz",
+      "title": "Random walks across dimensions: Exploring simplicial complexes",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-09",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fppm1-mxhz",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/6jqp-bz2r",
+      "url": "https://doi.org/10.1103/6jqp-bz2r",
+      "title": "Susceptible-infectious-susceptible epidemics on temporal contact graphs with clique structure",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-09",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F6jqp-bz2r",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/43yn-sh6g",
+      "url": "https://doi.org/10.1103/43yn-sh6g",
+      "title": "Higher-order orientational effects on geometric percolation in two-dimensional stick networks",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-09",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F43yn-sh6g",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/n4ps-wmd7",
+      "url": "https://doi.org/10.1103/n4ps-wmd7",
+      "title": "Hidden higher-order vulnerabilities in simplicial complexes revealed by fixed-index spectral robustness",
+      "authors": [
+        "Kaiming Luo"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-08",
+      "date_source": "published-online",
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fn4ps-wmd7",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/gp7d-fsk5",
+      "url": "https://doi.org/10.1103/gp7d-fsk5",
+      "title": "Nonlinear model reduction of complex networks via spectral submanifolds",
+      "authors": [
+        "Kaviya Bhaskaran",
+        "Shobhit Jain",
+        "Mingwu Li"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-08",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fgp7d-fsk5",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0346196",
+      "url": "https://doi.org/10.1063/5.0346196",
+      "title": "Simplicial SEIQS epidemic dynamics: Bistability and backward bifurcation under a mean-field approximation",
+      "authors": [
+        "Bei Sun",
+        "Chi K. Tse"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-08",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0346196",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-13031-4",
+      "url": "https://doi.org/10.1007/s11071-026-13031-4",
+      "title": "Dynamics and threshold analysis of rumor propagation with dual media competition on heterogeneous networks",
+      "authors": [
+        "Xin Wang",
+        "Shidong Zhai",
+        "Zerun Ding"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-09-08",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-13031-4",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0349270",
+      "url": "https://doi.org/10.1063/5.0349270",
+      "title": "Spectral stability correspondence between networks and continuous media: Theory and applications to population dynamics",
+      "authors": [
+        "Idan Sorin",
+        "Alexander Nepomnyashchy"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-04",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "建立连续介质谱与离散耦合矩阵的主稳定函数对应；一般网络同步稳定性理论。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "建立连续介质谱与离散耦合矩阵的主稳定函数对应；一般网络同步稳定性理论。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0349270",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1137/26m1837459",
+      "url": "https://doi.org/10.1137/26m1837459",
+      "title": "Dynamics on Accelerated Growth Tree Networks: Random Walks and Consensus Problem",
+      "authors": [
+        "Fei Ma"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "SIAM Journal on Applied Dynamical Systems",
+      "issns": [
+        "1536-0040"
+      ],
+      "date": "2026-09-03",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "SIADS",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1137%2F26m1837459",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1137/25m1821569",
+      "url": "https://doi.org/10.1137/25m1821569",
+      "title": "Phase Transitions for Interacting Particle Systems on Random Graphs",
+      "authors": [
+        "Benedetta Bertoli",
+        "Grigorios A. Pavliotis",
+        "Niccolò Zagli"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "SIAM Journal on Applied Dynamical Systems",
+      "issns": [
+        "1536-0040"
+      ],
+      "date": "2026-09-03",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "SIADS",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1137%2F25m1821569",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12875-0",
+      "url": "https://doi.org/10.1007/s11071-026-12875-0",
+      "title": "Onset of synchronization in multiplex networks with higher order interactions",
+      "authors": [
+        "Qiming Niu",
+        "Nan Yao",
+        "Libo Qi",
+        "Can Xu"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-09-03",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12875-0",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/rt96-mb8q",
+      "url": "https://doi.org/10.1103/rt96-mb8q",
+      "title": "Community detection with the canonical ensemble",
+      "authors": [
+        "Rudy Arthur"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-02",
+      "date_source": "published-online",
+      "categories": [
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Frt96-mb8q",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0338836",
+      "url": "https://doi.org/10.1063/5.0338836",
+      "title": "Emergence of statistical financial factors by a diffusion process",
+      "authors": [
+        "Jose Negrete",
+        "Jaime J. Ramos"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-02",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "金融资产背景下提出耦合映射与拉普拉斯零空间模型，因子维数对应同步模态；可迁移内容是耦合矩阵与降维机制。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "金融资产背景下提出耦合映射与拉普拉斯零空间模型，因子维数对应同步模态；可迁移内容是耦合矩阵与降维机制。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0338836",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0337453",
+      "url": "https://doi.org/10.1063/5.0337453",
+      "title": "Amplified topic coupling and polarization by higher-order interactions in multidimensional opinion dynamics",
+      "authors": [
+        "Bingchen Dong",
+        "Qiang Zhang",
+        "Zhenglin Liang"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-02",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0337453",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0348359",
+      "url": "https://doi.org/10.1063/5.0348359",
+      "title": "Evolutionary games on higher-order networks",
+      "authors": [
+        "Zihao Zhou",
+        "Haosen Wang",
+        "Jun Tang"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-01",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0348359",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0336997",
+      "url": "https://doi.org/10.1063/5.0336997",
+      "title": "Chimera states, synchronization, and energy consumption in a chaotic electrically coupled Hindmarsh–Rose neural network under multiple memory effects",
+      "authors": [
+        "Armand Sylvin Etémé",
+        "Alain Mvogo",
+        "Saralees Nadarajah",
+        "Henri Paul Ekobena Fouda",
+        "Timoléon Crépin Kofané",
+        "Conrad Bertrand Tabi"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-09-01",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0336997",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12809-w",
+      "url": "https://doi.org/10.1007/s11071-026-12809-w",
+      "title": "Nonlinear hybrid dynamics of coupled malware-patch spreading processes on multiplex networks",
+      "authors": [
+        "Baihao Peng",
+        "Junfeng Liu",
+        "Jun Zeng",
+        "Guiyun Liu",
+        "Xiaojing Zhong",
+        "Tao Zou"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-09-01",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12809-w",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1093/comnet/cnag033",
+      "url": "https://doi.org/10.1093/comnet/cnag033",
+      "title": "Structural selection of phase regimes in locally timed networks",
+      "authors": [
+        "Ildefons Magrans de Abril"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Journal of Complex Networks",
+      "issns": [
+        "2051-1329"
+      ],
+      "date": "2026-08-31",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "J. Complex Networks",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1093%2Fcomnet%2Fcnag033",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12959-x",
+      "url": "https://doi.org/10.1007/s11071-026-12959-x",
+      "title": "Dynamic learning of synchronization with controllable parameter ranges in complex networks",
+      "authors": [
+        "Yong Wu",
+        "Guowei Wang",
+        "Fan Yang"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-08-31",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12959-x",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s42005-026-02819-w",
+      "url": "https://doi.org/10.1038/s42005-026-02819-w",
+      "title": "Contagion backbone of temporal higher-order networks",
+      "authors": [
+        "Shilun Zhang",
+        "Alberto Ceria",
+        "Huijuan Wang"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Communications Physics",
+      "issns": [
+        "2399-3650"
+      ],
+      "date": "2026-08-29",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Commun. Phys.",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02819-w",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/25qf-sfsw",
+      "url": "https://doi.org/10.1103/25qf-sfsw",
+      "title": "Scaling laws for the spread of defection in evolutionary games on networks",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-28",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F25qf-sfsw",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/xc5g-t9dj",
+      "url": "https://doi.org/10.1103/xc5g-t9dj",
+      "title": "Large deviation properties of minimum spanning trees for random graphs",
+      "authors": [
+        "Mahdi Sarikhani",
+        "Alexander K. Hartmann"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-27",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fxc5g-t9dj",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0337419",
+      "url": "https://doi.org/10.1063/5.0337419",
+      "title": "Topology as a language for emergent organization in complex systems: Multiscale structure, higher-order interactions, and structural diagnostics",
+      "authors": [
+        "Mark M. Bailey"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-27",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "综述单纯复形、超图和关系算子的结构诊断；跨领域例子不改变网络表示与方法主题。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "综述单纯复形、超图和关系算子的结构诊断；跨领域例子不改变网络表示与方法主题。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0337419",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/t86l-31d5",
+      "url": "https://doi.org/10.1103/t86l-31d5",
+      "title": "Identifying maximal sets of significantly interacting nodes in higher-order networks",
+      "authors": [
+        "Lorenzo Betti",
+        "Federico Musciotto",
+        "Federico Battiston",
+        "Rosario N. Mantegna"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-26",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Ft86l-31d5",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/sxl4-6mdm",
+      "url": "https://doi.org/10.1103/sxl4-6mdm",
+      "title": "Noise-shaped synchrony in neuronal oscillator networks",
+      "authors": [
+        "Max Contreras",
+        "Philipp Hövel"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-26",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fsxl4-6mdm",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1093/comnet/cnag030",
+      "url": "https://doi.org/10.1093/comnet/cnag030",
+      "title": "Functional percolation:criticality of form and function",
+      "authors": [
+        "Galen J Wilkerson"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Journal of Complex Networks",
+      "issns": [
+        "2051-1329"
+      ],
+      "date": "2026-08-26",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "J. Complex Networks",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1093%2Fcomnet%2Fcnag030",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0340300",
+      "url": "https://doi.org/10.1063/5.0340300",
+      "title": "Dual role of Poisson impulses in Hindmarsh–Rose networks: Disorder, pattern formation, and synchronization",
+      "authors": [
+        "Ibadulla R. Ramazanov",
+        "Andrei V. Bukh",
+        "Igor A. Shepelev"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-25",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0340300",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0343072",
+      "url": "https://doi.org/10.1063/5.0343072",
+      "title": "Switching between pairwise and higher-order synchronization on simplicial complexes",
+      "authors": [
+        "Prejaas K. B. Tewarie",
+        "Steven Laureys",
+        "Rikkert Hindriks"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-24",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0343072",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0336276",
+      "url": "https://doi.org/10.1063/5.0336276",
+      "title": "Dynamics of SIRS epidemic model in heterogeneous hypernetworks",
+      "authors": [
+        "Wenhui Wang",
+        "Juping Zhang",
+        "Zhen Jin"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-24",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0336276",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0338320",
+      "url": "https://doi.org/10.1063/5.0338320",
+      "title": "Vertex-level diffusion scaling from resistance distance",
+      "authors": [
+        "Chun-Xiao Nie"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-21",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "定义基于电阻距离的节点扩散指数，比较人工图族及实测网络；一般网络动态度量。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "定义基于电阻距离的节点扩散指数，比较人工图族及实测网络；一般网络动态度量。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0338320",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12958-y",
+      "url": "https://doi.org/10.1007/s11071-026-12958-y",
+      "title": "Resilient event-triggered control for bipartite synchronization of memristive coopetition neural networks with DoS attacks",
+      "authors": [
+        "Xindong Si",
+        "Wuquan Li"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-08-20",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12958-y",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0347760",
+      "url": "https://doi.org/10.1063/5.0347760",
+      "title": "Imperfect vaccination and coupled epidemic dynamics in age-structured multiplex networks",
+      "authors": [
+        "Yinuo Qian",
+        "Ningning Wang",
+        "Dawei Zhao",
+        "Chengyi Xia"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-19",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0347760",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/zdpg-dr6t",
+      "url": "https://doi.org/10.1103/zdpg-dr6t",
+      "title": "Asymptotic versus mesoscopic spectral dimensions in networks and inhomogeneous structures",
+      "authors": [
+        "Lorenzo Grimaldi",
+        "Pablo Villegas",
+        "Alessandro Vezzani",
+        "Raffaella Burioni",
+        "Davide Cassi",
+        "Andrea Gabrielli"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-18",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fzdpg-dr6t",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0349658",
+      "url": "https://doi.org/10.1063/5.0349658",
+      "title": "Coevolutionary vaccination dynamics driven by committed influencers on complex networks",
+      "authors": [
+        "Bing Xu",
+        "Yikang Lu",
+        "Jinxuan Yang",
+        "Junpyo Park"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-18",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0349658",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/qvlk-6df6",
+      "url": "https://doi.org/10.1103/qvlk-6df6",
+      "title": "Predicting oscillations in complex networks with delayed feedback",
+      "authors": [
+        "Shijie Liu",
+        "Jinliang Han",
+        "Jianming Liu",
+        "Tim Rogers",
+        "Yongzheng Sun"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-17",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "解析降维理论联系连接复杂度、延迟与振荡阈值；电子电路验证，领域例子不是主要对象。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "解析降维理论联系连接复杂度、延迟与振荡阈值；电子电路验证，领域例子不是主要对象。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fqvlk-6df6",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/f5n5-8mr3",
+      "url": "https://doi.org/10.1103/f5n5-8mr3",
+      "title": "From delay to inertia and triadic interactions: A predictive model for time-delayed oscillator networks",
+      "authors": [
+        "Lev A. Smirnov",
+        "Vyacheslav O. Munyayev",
+        "Maxim I. Bolotov",
+        "Igor Belykh"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-08-17",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Ff5n5-8mr3",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s42005-026-02820-3",
+      "url": "https://doi.org/10.1038/s42005-026-02820-3",
+      "title": "Directed Cycles as Higher-Order Units of Information Processing in Complex Networks",
+      "authors": [
+        "Hardik Rajpal",
+        "Paul Expert",
+        "Vaiva Vasiliauskaitė"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Communications Physics",
+      "issns": [
+        "2399-3650"
+      ],
+      "date": "2026-08-17",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Commun. Phys.",
+      "evidence": [
+        "研究方向性、稀疏性及嵌入结构如何影响有向环的信息处理；一般网络模体机制。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "研究方向性、稀疏性及嵌入结构如何影响有向环的信息处理；一般网络模体机制。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02820-3",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12942-6",
+      "url": "https://doi.org/10.1007/s11071-026-12942-6",
+      "title": "Explosive transitions and chimera states in nonidentical counter-rotating oscillator networks with higher-order interactions",
+      "authors": [
+        "Sathiyadevi Kanagaraj",
+        "Premraj Durairaj",
+        "Zhigang Zheng"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-08-17",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12942-6",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/vswp-h4hx",
+      "url": "https://doi.org/10.1103/vswp-h4hx",
+      "title": "Bayesian approach for the network reconstruction of interdependent critical infrastructure systems from cascading failures",
+      "authors": [
+        "MirSaleh Bahavarnia",
+        "Yu Wang",
+        "Jin-Zhu Yu",
+        "Hiba Baroud"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-14",
+      "date_source": "published-online",
+      "categories": [
+        "network_inference",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题直接提出从级联失效进行相依基础设施网络重构的 Bayesian 方法；按一般重构方法暂收第一类，未声称跨领域性能已验证。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题直接提出从级联失效进行相依基础设施网络重构的 Bayesian 方法；按一般重构方法暂收第一类，未声称跨领域性能已验证。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fvswp-h4hx",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/pngx-s5xx",
+      "url": "https://doi.org/10.1103/pngx-s5xx",
+      "title": "Cross-order induced behaviors in contagion dynamics on higher-order networks",
+      "authors": [],
+      "author_metadata_status": "placeholder",
+      "author_placeholders": [
+        "Anonymous"
+      ],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-08-14",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fpngx-s5xx",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0345566",
+      "url": "https://doi.org/10.1063/5.0345566",
+      "title": "Measuring the higher-order homophily in a general social hypergraph",
+      "authors": [
+        "Yunping Wang",
+        "Zhiheng Zhou",
+        "Mingwei Li",
+        "Dengyi Zhao",
+        "Xingqin Qi"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-14",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "定义非均匀超图上的同配指标并建立约束；一般高阶网络结构方法。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "定义非均匀超图上的同配指标并建立约束；一般高阶网络结构方法。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0345566",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0344013",
+      "url": "https://doi.org/10.1063/5.0344013",
+      "title": "Paradoxical epidemic dynamics induced by dual-awareness competition under asymmetric media intervention",
+      "authors": [
+        "Jie Chen",
+        "Xin Chen",
+        "Xingli Jing",
+        "Xin Hong"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-14",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0344013",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/xq8k-864y",
+      "url": "https://doi.org/10.1103/xq8k-864y",
+      "title": "Robustness of small networks",
+      "authors": [
+        "Jessica Jiang",
+        "Allison C. Zhuang",
+        "Petter Holme",
+        "Peter J. Mucha",
+        "Alice C. Schwarze"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-13",
+      "date_source": "published-online",
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fxq8k-864y",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/sc46-82hl",
+      "url": "https://doi.org/10.1103/sc46-82hl",
+      "title": "Asymmetric coherent clusters with microscopic nonstationarity in network of Stuart-Landau oscillators",
+      "authors": [
+        "Naveen Kumar Mendola",
+        "Awadhesh Prasad",
+        "Thounaojam Umeshkanta Singh"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-13",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fsc46-82hl",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0339676",
+      "url": "https://doi.org/10.1063/5.0339676",
+      "title": "The coupling process of information–disease considering individual information volume in higher-order network",
+      "authors": [
+        "Liang'an Huo",
+        "Sen Guo"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-13",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0339676",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s41467-026-76342-5",
+      "url": "https://doi.org/10.1038/s41467-026-76342-5",
+      "title": "Extreme vulnerability to intruder attacks destabilizes network dynamics",
+      "authors": [
+        "Amirhossein Nazerian",
+        "Sahand Tangerami",
+        "Malbor Asllani",
+        "David Phillips",
+        "Hernán Makse",
+        "Francesco Sorrentino"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nature Communications",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-08-13",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "NC",
+      "journal_short": "NC",
+      "evidence": [
+        "推导一般线性及 Kuramoto 网络的入侵节点失稳机制；不是某一行业安全案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "推导一般线性及 Kuramoto 网络的入侵节点失稳机制；不是某一行业安全案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-76342-5",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0335154",
+      "url": "https://doi.org/10.1063/5.0335154",
+      "title": "A complex network approach to characterize clustering of events in irregular time series",
+      "authors": [
+        "Sanket Sukdeo Ambedkar",
+        "K. Shri Vignesh",
+        "Sachin S. Gunthe",
+        "T. Narayan Rao",
+        "Amit Kumar Patra",
+        "R. I. Sujith"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-12",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "提出从不规则到达时序构造网络并识别社区的通用框架；标准随机过程与不同数据作演示。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "提出从不规则到达时序构造网络并识别社区的通用框架；标准随机过程与不同数据作演示。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0335154",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12885-y",
+      "url": "https://doi.org/10.1007/s11071-026-12885-y",
+      "title": "Sample entropy for graph signals: an approach to nonlinear dynamic analysis of data on networks",
+      "authors": [
+        "Mei-San Maggie Lei",
+        "John Stewart Fabila-Carrasco",
+        "Javier Escudero"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-08-12",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "将样本熵拓展为拓扑感知图信号指标；交通流只是验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "将样本熵拓展为拓扑感知图信号指标；交通流只是验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12885-y",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/48z3-6cmb",
+      "url": "https://doi.org/10.1103/48z3-6cmb",
+      "title": "Epidemic dynamics on temporal complex networks",
+      "authors": [
+        "Ziting Luo",
+        "Chengzuo Zhuge",
+        "Wei Chen"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-11",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F48z3-6cmb",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0337926",
+      "url": "https://doi.org/10.1063/5.0337926",
+      "title": "Traffic-driven sequential spread of two interacting epidemics on complex networks",
+      "authors": [
+        "Xing-Li Jing",
+        "Mao-Bin Hu",
+        "Ming Tang",
+        "Yan-Qiang Li"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-11",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0337926",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0332921",
+      "url": "https://doi.org/10.1063/5.0332921",
+      "title": "Remote propagation of external signals",
+      "authors": [
+        "Wenbin Mao",
+        "Guoshen Liang",
+        "Dehua Chen",
+        "Yucan Yan",
+        "Yong Zou",
+        "Jie Zhou",
+        "Zonghua Liu"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-11",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "研究星形及更复杂振子网络中的远程信号传播并解释机制；脑功能仅为动机。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "研究星形及更复杂振子网络中的远程信号传播并解释机制；脑功能仅为动机。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0332921",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/wzv4-5p67",
+      "url": "https://doi.org/10.1103/wzv4-5p67",
+      "title": "Unveiling the birth of explosive entrainment: A novel phenomenon triggered by higher-order interactions",
+      "authors": [
+        "Wenxin Zheng",
+        "Yuxuan Song",
+        "Changgui Gu"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-10",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fwzv4-5p67",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/kqkn-mymm",
+      "url": "https://doi.org/10.1103/kqkn-mymm",
+      "title": "Effect of local topological changes on resistance in spatially embedded disordered networks",
+      "authors": [
+        "Chenxi Wang",
+        "Charles Emmett Maher",
+        "Katherine A. Newhall"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-10",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fkqkn-mymm",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/cnmt-5cxk",
+      "url": "https://doi.org/10.1103/cnmt-5cxk",
+      "title": "Activity feedback and hyperedge overlap shape bistability in higher-order networks",
+      "authors": [
+        "Tianyu Li",
+        "Yipeng Hu",
+        "Xuening Li",
+        "Xueqin Wang",
+        "Lijian Yang",
+        "Ya Jia"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-10",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fcnmt-5cxk",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1137/25m1725486",
+      "url": "https://doi.org/10.1137/25m1725486",
+      "title": "On Structural Contraction of Biological Interaction Networks",
+      "authors": [
+        "M. Ali Al-Radhawi",
+        "David Angeli",
+        "Eduardo D. Sontag"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "SIAM Journal on Applied Dynamical Systems",
+      "issns": [
+        "1536-0040"
+      ],
+      "date": "2026-08-07",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "SIADS",
+      "evidence": [
+        "证明一类相互作用网络的结构收缩、非扩张与周期输入响应；细胞通路是例子。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "证明一类相互作用网络的结构收缩、非扩张与周期输入响应；细胞通路是例子。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1137%2F25m1725486",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1126/sciadv.aef2184",
+      "url": "https://doi.org/10.1126/sciadv.aef2184",
+      "title": "Higher-order trade-offs in hypergraph community detection",
+      "authors": [
+        "Jiaze Li",
+        "Michael T. Schaub",
+        "Leto Peel"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Science Advances",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-08-07",
+      "date_source": "published-print",
+      "categories": [
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "SA",
+      "journal_short": "SA",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aef2184",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/xyx5-3tz3",
+      "url": "https://doi.org/10.1103/xyx5-3tz3",
+      "title": "Janus Percolation in Anisotropic Limited-Degree Networks",
+      "authors": [
+        "Jacopo A. Garofalo",
+        "Nuno A. M. Araújo",
+        "Lucilla de Arcangelis",
+        "Alessandro Sarracino",
+        "Eugenio Lippiello"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Letters",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-08-07",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "PRL",
+      "journal_short": "PRL",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fxyx5-3tz3",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0346436",
+      "url": "https://doi.org/10.1063/5.0346436",
+      "title": "Emergent synchrony, metastability, and chaos in a mixed neuronal populations with higher-order interactions",
+      "authors": [
+        "Soorya Pootharpoyil",
+        "Amit Sharma",
+        "Biswambhar Rakshit",
+        "Kazuyuki Aihara"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-07",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0346436",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0313720",
+      "url": "https://doi.org/10.1063/5.0313720",
+      "title": "Redundant and synergistic interactions in a complex network of single-transistor electronic chaotic oscillators and in neurophysiological recordings",
+      "authors": [
+        "Chiara Barà",
+        "Yuri Antonacci",
+        "Laura Sparacino",
+        "Ariosky Areces Gonzalez",
+        "Manyu Zhao",
+        "Longxiang Fu",
+        "Pedro A. Valdes-Sosa",
+        "Hiroyuki Ito",
+        "Mattia Frasca",
+        "Luca Faes",
+        "Ludovico Minati"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-06",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "研究成对连接如何产生冗余与协同信息，含数值和电子振子网络；神经记录是补充验证。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "研究成对连接如何产生冗余与协同信息，含数值和电子振子网络；神经记录是补充验证。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0313720",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/vvrf-qd6f",
+      "url": "https://doi.org/10.1103/vvrf-qd6f",
+      "title": "Experimental evidence of double explosive synchronization in multilayer oscillator networks",
+      "authors": [
+        "Taniya Khatun",
+        "Md Sayeed Anwar",
+        "P. Parmananda"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-08-05",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fvvrf-qd6f",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1073/pnas.2619078123",
+      "url": "https://doi.org/10.1073/pnas.2619078123",
+      "title": "Hyperedge approximation for stochastic processes on higher-order networks",
+      "authors": [
+        "Anzhi Sheng",
+        "Alex McAvoy",
+        "Ye Tian",
+        "Silun Zhang",
+        "Angela Fontan",
+        "Joshua B. Plotkin"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Proceedings of the National Academy of Sciences",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-08-05",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "PNAS",
+      "journal_short": "PNAS",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2619078123",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0335719",
+      "url": "https://doi.org/10.1063/5.0335719",
+      "title": "Subpattern matching persistent homology for coupling complexity analysis of multivariate time series",
+      "authors": [
+        "Taichi Haruna"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-04",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "提出从多元时序关系构造滤波单纯复形的持续同调方法，并研究布尔网络临界性。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "提出从多元时序关系构造滤波单纯复形的持续同调方法，并研究布尔网络临界性。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0335719",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0336490",
+      "url": "https://doi.org/10.1063/5.0336490",
+      "title": "Turing instability and bistable epidemic spread on complex networks: Effects of topology and initial seeding",
+      "authors": [
+        "Sourav Ghorai",
+        "Sounov Marick",
+        "Nandadulal Bairagi"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-03",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0336490",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1063/5.0320572",
+      "url": "https://doi.org/10.1063/5.0320572",
+      "title": "Core–periphery dynamics in market-conditioned financial networks: A conditional p-threshold mutual information approach",
+      "authors": [
+        "Kundan Mukhia",
+        "Imran Ansari",
+        "Salam Rabindrajit Luwang",
+        "Md. Nurujjaman"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-08-03",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "transferable_application",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Chaos",
+      "evidence": [
+        "条件互信息、共同市场效应剔除与置换显著性检验构建依赖网络；四市场比较。暂收第二类，但一般推断性能仍需独立核验。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "条件互信息、共同市场效应剔除与置换显著性检验构建依赖网络；四市场比较。暂收第二类，但一般推断性能仍需独立核验。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0320572",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12926-6",
+      "url": "https://doi.org/10.1007/s11071-026-12926-6",
+      "title": "Distributed adaptive tracking synchronization control for higher-order networks",
+      "authors": [
+        "Binrui Wang",
+        "SaSa Chen",
+        "Dan Liu",
+        "Xiaohang Li",
+        "Kaibo Shi"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-08-03",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12926-6",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12918-6",
+      "url": "https://doi.org/10.1007/s11071-026-12918-6",
+      "title": "Fear-driven higher-order epidemic dynamics on heterogeneous hypergraphs",
+      "authors": [
+        "Huilin Pu",
+        "Shidong Zhai",
+        "Junli Tao"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-08-03",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12918-6",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s41467-026-75293-1",
+      "url": "https://doi.org/10.1038/s41467-026-75293-1",
+      "title": "A game-theoretic attack-defense framework for the study of network resilience",
+      "authors": [
+        "Kaiwen Zhao",
+        "Jianxi Gao",
+        "Qi Su"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nature Communications",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-07-31",
+      "date_source": "published-online",
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "NC",
+      "journal_short": "NC",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75293-1",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1007/s11071-026-12855-4",
+      "url": "https://doi.org/10.1007/s11071-026-12855-4",
+      "title": "Avalanche-like rumor resurgence in scale-free networks under threshold adoption",
+      "authors": [
+        "Ke Xie",
+        "Sha Lu",
+        "Rui Wang",
+        "Zhixuan Yuan"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nonlinear Dynamics",
+      "issns": [
+        "0924-090X",
+        "1573-269X"
+      ],
+      "date": "2026-07-31",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Nonlinear Dynamics",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11071-026-12855-4",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/gppc-1j4z",
+      "url": "https://doi.org/10.1103/gppc-1j4z",
+      "title": "Synchronization modes in bipartite oscillator networks",
+      "authors": [
+        "Pau Pomés",
+        "Bastian Pietras",
+        "Ernest Montbrió"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-07-30",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fgppc-1j4z",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1073/pnas.2613187123",
+      "url": "https://doi.org/10.1073/pnas.2613187123",
+      "title": "A generative model for bipartite gene-sharing networks",
+      "authors": [
+        "Jaime Iranzo",
+        "Pedro Jódar",
+        "Eugene V. Koonin",
+        "Susanna Manrubia",
+        "José A. Cuesta"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Proceedings of the National Academy of Sciences",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-07-29",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "transferable_application",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "PNAS",
+      "journal_short": "PNAS",
+      "evidence": [
+        "基因共享二部网络背景下构建生成模型，解析推导两侧度分布并用模拟验证；可迁移内容是二部网络生成机制。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "基因共享二部网络背景下构建生成模型，解析推导两侧度分布并用模拟验证；可迁移内容是二部网络生成机制。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2613187123",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/rn1f-zsgb",
+      "url": "https://doi.org/10.1103/rn1f-zsgb",
+      "title": "Unbiased randomization of weighted bipartite networks with exact degree and strength sequences",
+      "authors": [
+        "G. Glaviano",
+        "S. Miccichè"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-27",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Frn1f-zsgb",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/bvsj-7pmq",
+      "url": "https://doi.org/10.1103/bvsj-7pmq",
+      "title": "Nonmonotonic percolation threshold in correlated networks and hypergraphs",
+      "authors": [
+        "L. D. Valdez",
+        "C. E. La Rocca"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-27",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fbvsj-7pmq",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s41467-026-75565-w",
+      "url": "https://doi.org/10.1038/s41467-026-75565-w",
+      "title": "Phase locking and multistability in the topological Kuramoto model on cell complexes",
+      "authors": [
+        "Iva Bačić",
+        "Michael T. Schaub",
+        "Jürgen Kurths",
+        "Dirk Witthaut"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nature Communications",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-07-25",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "NC",
+      "journal_short": "NC",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75565-w",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/t6rh-7mnl",
+      "url": "https://doi.org/10.1103/t6rh-7mnl",
+      "title": "Spin glass dynamics on complex hardware topologies: A bond-correlated percolation approach",
+      "authors": [
+        "Viviana Gómez",
+        "Gabriel Téllez",
+        "Fernando J. Gómez-Ruiz"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-07-24",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Ft6rh-7mnl",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1137/24m1706700",
+      "url": "https://doi.org/10.1137/24m1706700",
+      "title": "Global Analysis of Regulatory Network Dynamics: Equilibria and Saddle-Node Bifurcations",
+      "authors": [
+        "Shane Kepley",
+        "Konstantin Mischaikow",
+        "Elena Queirolo"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "SIAM Journal on Applied Dynamical Systems",
+      "issns": [
+        "1536-0040"
+      ],
+      "date": "2026-07-22",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "SIADS",
+      "evidence": [
+        "提出给定调控拓扑的组合—数值全局平衡与分岔分析算法；一般网络动力学方法。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "提出给定调控拓扑的组合—数值全局平衡与分岔分析算法；一般网络动力学方法。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1137%2F24m1706700",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s41467-026-75714-1",
+      "url": "https://doi.org/10.1038/s41467-026-75714-1",
+      "title": "Non-local synchronization of continuous time crystals in a semiconductor",
+      "authors": [
+        "Alex Greilich",
+        "Nataliia E. Kopteva",
+        "Vladimir L. Korenev",
+        "Philipp A. Haude",
+        "Linus Kunze",
+        "Ben W. Grobecker",
+        "Sergiu Anghel",
+        "Markus Betz",
+        "Manfred Bayer"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nature Communications",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-07-22",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "NC",
+      "journal_short": "NC",
+      "evidence": [
+        "实验研究空间分离自振单元的频率锁定、耦合距离与群体同步；属于耦合动力学。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "实验研究空间分离自振单元的频率锁定、耦合距离与群体同步；属于耦合动力学。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75714-1",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/zj7x-6hpk",
+      "url": "https://doi.org/10.1103/zj7x-6hpk",
+      "title": "Dynamics-induced activity patterns of active-inactive clusters in complex networks",
+      "authors": [
+        "Anil Kumar",
+        "V. K. Chandrasekar",
+        "D. V. Senthilkumar"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-20",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fzj7x-6hpk",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s42005-026-02742-0",
+      "url": "https://doi.org/10.1038/s42005-026-02742-0",
+      "title": "Asymmetric dual-threshold bootstrap percolation on random hypergraphs",
+      "authors": [
+        "Yalin Wang",
+        "Jianlin Zhang",
+        "Zhigang Zheng",
+        "Yanni Liu",
+        "Fanyuan Meng"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Communications Physics",
+      "issns": [
+        "2399-3650"
+      ],
+      "date": "2026-07-20",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading",
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Commun. Phys.",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02742-0",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/s2n5-4ps2",
+      "url": "https://doi.org/10.1103/s2n5-4ps2",
+      "title": "Emergence of higher-order interactions in systems of coupled Kuramoto oscillators with time delay",
+      "authors": [
+        "Narumi Fujii",
+        "Keisuke Taga",
+        "Riccardo Muolo",
+        "Bob Rink",
+        "Hiroya Nakao"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-15",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fs2n5-4ps2",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s41467-026-75402-0",
+      "url": "https://doi.org/10.1038/s41467-026-75402-0",
+      "title": "Efficient Gillespie algorithms for spreading phenomena in large and heterogeneous higher-order networks",
+      "authors": [
+        "Hugo P. Maia",
+        "Wesley Cota",
+        "Yamir Moreno",
+        "Silvio C. Ferreira"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nature Communications",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-07-15",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "NC",
+      "journal_short": "NC",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75402-0",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/yknm-1qpr",
+      "url": "https://doi.org/10.1103/yknm-1qpr",
+      "title": "Energy-dynamics interplay in temporal networks triggers explosive synchronization",
+      "authors": [
+        "Romuald Mbonwouo",
+        "Steve J. Kongni",
+        "Sishu Shankar Muni",
+        "Carmel T. Lambu",
+        "Venceslas Nguefoue",
+        "Patrick Louodop",
+        "Thierry Njougouo"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-13",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fyknm-1qpr",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s41467-026-75436-4",
+      "url": "https://doi.org/10.1038/s41467-026-75436-4",
+      "title": "Temporal self-similarity reveals percolation universality classes in complex networks",
+      "authors": [
+        "Sheng Fang",
+        "Jun Meng",
+        "Qing Lin",
+        "Bingsheng Chen",
+        "Gaogao Dong",
+        "Chenglin Bai",
+        "Jan Nagler",
+        "Youjin Deng",
+        "Renaud Lambiotte",
+        "Jingfang Fan"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Nature Communications",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-07-13",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "NC",
+      "journal_short": "NC",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75436-4",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/hkrb-wpdr",
+      "url": "https://doi.org/10.1103/hkrb-wpdr",
+      "title": "Topology and geometry of clusters in the Vicsek model across scales",
+      "authors": [
+        "Ashiqur Rahman",
+        "Michael Napoli",
+        "Ofek Lauber Bonomo",
+        "Maurizio Porfiri",
+        "Nicole Abaid"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review Research",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-07-10",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRResearch",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhkrb-wpdr",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1073/pnas.2534923123",
+      "url": "https://doi.org/10.1073/pnas.2534923123",
+      "title": "Multiplexing in networks and diffusion",
+      "authors": [
+        "Arun G. Chandrasekhar",
+        "Vasu Chaudhary",
+        "Benjamin Golub",
+        "Matthew O. Jackson"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Proceedings of the National Academy of Sciences",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-07-10",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "PNAS",
+      "journal_short": "PNAS",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2534923123",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1137/24m1704956",
+      "url": "https://doi.org/10.1137/24m1704956",
+      "title": "Feedback Control of Twisted States in the Kuramoto Model on Nearest Neighbor and Complete Simple Graphs",
+      "authors": [
+        "Kazuyuki Yagasaki"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "SIAM Journal on Applied Dynamical Systems",
+      "issns": [
+        "1536-0040"
+      ],
+      "date": "2026-07-09",
+      "date_source": "published-online",
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "SIADS",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1137%2F24m1704956",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/9qxp-zv57",
+      "url": "https://doi.org/10.1103/9qxp-zv57",
+      "title": "Effect of higher-order interactions on noisy majority-rule dynamics with random group sizes",
+      "authors": [
+        "Roni Muslim",
+        "Jong-Min Park",
+        "Jihye Kim",
+        "Rinto Anugraha NQZ"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-08",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F9qxp-zv57",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/6h5q-tv19",
+      "url": "https://doi.org/10.1103/6h5q-tv19",
+      "title": "Eigenvector localization and universal regime transitions in multiplex networks: A perturbative approach",
+      "authors": [
+        "Joan Hernàndez Tey",
+        "Emanuele Cozzo"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-08",
+      "date_source": "published-online",
+      "categories": [
+        "other"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F6h5q-tv19",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1073/pnas.2530131123",
+      "url": "https://doi.org/10.1073/pnas.2530131123",
+      "title": "Diffusion-induced instabilities promote cooperation in eco-evolutionary networks",
+      "authors": [
+        "Sourav Roy",
+        "Md Sayeed Anwar",
+        "Timoteo Carletti",
+        "Matjaž Perc",
+        "Dibakar Ghosh"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Proceedings of the National Academy of Sciences",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-07-08",
+      "date_source": "published-online",
+      "categories": [
+        "network_structure",
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": "PNAS",
+      "journal_short": "PNAS",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2530131123",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1038/s42005-026-02727-z",
+      "url": "https://doi.org/10.1038/s42005-026-02727-z",
+      "title": "Local stabilizability implies global controllability in catalytically-controlled reaction networks",
+      "authors": [
+        "Yusuke Himeoka",
+        "Shuhei A. Horiguchi",
+        "Naoto Shiraishi",
+        "Fangzhou Xiao",
+        "Tetsuya J. Kobayashi"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Communications Physics",
+      "issns": [
+        "2399-3650"
+      ],
+      "date": "2026-07-08",
+      "date_source": "published-online",
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "publisher_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "Commun. Phys.",
+      "evidence": [
+        "出版方摘要证明一类催化反应网络局部可稳定性蕴含化学计量相容类内全局可控性；一般定理，非具体生物机制案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "publisher_abstract",
+          "matches": [
+            "出版方摘要证明一类催化反应网络局部可稳定性蕴含化学计量相容类内全局可控性；一般定理，非具体生物机制案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02727-z",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/9wrc-j8m9",
+      "url": "https://doi.org/10.1103/9wrc-j8m9",
+      "title": "Spatiotemporal activity-driven networks",
+      "authors": [
+        "Zsófia Simon",
+        "Jari Saramäki"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-07",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "crossref_abstract",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "提出可解析空间活动驱动时间网络模型，分析结构与传播；社交距离是演示。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "crossref_abstract",
+          "matches": [
+            "提出可解析空间活动驱动时间网络模型，分析结构与传播；社交距离是演示。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": true,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F9wrc-j8m9",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    },
+    {
+      "doi": "10.1103/1qmt-gx5f",
+      "url": "https://doi.org/10.1103/1qmt-gx5f",
+      "title": "Unveiling the impact of cross-order hyperdegree correlations in contagion processes on hypergraphs",
+      "authors": [
+        "Andrés Guzmán",
+        "Federico Malizia",
+        "István Z. Kiss"
+      ],
+      "author_metadata_status": "available",
+      "author_placeholders": [],
+      "journal": "Physical Review E",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-07-06",
+      "date_source": "published-online",
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "scope_evidence_level": "title",
+      "scope_review_sha256": "9366e8a4760e6c9d18443167a9617398d49921933d0a957b400ea55dd66e58f8",
+      "featured": null,
+      "journal_short": "PRE",
+      "evidence": [
+        "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+      ],
+      "screening_basis": "network",
+      "screening_routes": [
+        {
+          "route": "approved_scope_review",
+          "source": "title",
+          "matches": [
+            "标题明确研究网络结构、网络生成、网络方法或网络上动力学；具体领域仅为模型背景或验证案例。"
+          ]
+        }
+      ],
+      "source": "Crossref",
+      "abstract_available": false,
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F1qmt-gx5f",
+      "has_update": false,
+      "retrieved_by": [
+        "fixed-cohort DOI lookup"
+      ],
+      "screening_version": 8
+    }
+  ]
+}

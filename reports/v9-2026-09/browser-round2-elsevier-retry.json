@@ -1,0 +1,32 @@
+{
+  "version": "v9",
+  "retry_date": "2026-10-01",
+  "trigger": "User reports that both publisher pages open in their own browser and requests retry.",
+  "browser": "Codex In-app Browser",
+  "results": [
+    {
+      "doi": "10.1016/j.chaos.2026.118533",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0960077926006740",
+      "actions": ["Fresh DOI navigation", "Reload"],
+      "observed_status": "captcha_required",
+      "observed_heading": "Are you a robot?",
+      "abstract_obtained": false,
+      "exact_online_date_obtained": false
+    },
+    {
+      "doi": "10.1016/j.chaos.2026.118552",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0960077926006934",
+      "actions": ["Fresh DOI navigation", "Reload"],
+      "observed_status": "captcha_required",
+      "observed_heading": "Are you a robot?",
+      "abstract_obtained": false,
+      "exact_online_date_obtained": false
+    }
+  ],
+  "local_chrome_connection": "Browser inventory detects Chrome but the connection is unavailable; its tabs cannot currently be read. No credentials or settings modified.",
+  "interpretation": "Only establishes access failure in the agent's current browser session. Does not contradict user's successful access or prove article unavailability.",
+  "captcha_interacted_with": false,
+  "material_counts_unchanged": true,
+  "remaining_material_collection_records": 1266,
+  "no_page_content_stored": true
+}

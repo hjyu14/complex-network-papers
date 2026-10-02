@@ -1,0 +1,52 @@
+{
+  "doi": "10.1016/j.physa.2026.132093",
+  "class": "excluded",
+  "reason": "证明Pareto变量经分位函数秩依赖衰减可精确生成Beta Rank Function，并用于收入和城市人口分布；优先连接仅作为背景举例，主要贡献为一般概率分布变换而非网络结构生成或网络科学方法。",
+  "evidence": "applications to income and urban-area population distributions",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "cbada4eb804acf9157eadb308a25775174fdca47e7468b7d64d0cc532a6d2819",
+  "abstract_sha256": "4e4cb11554e7e865bdc3b91bcd16912dc2e652af07f14d956bcaa4a86319a05f",
+  "source_url": "https://www.sciencedirect.com/science/article/pii/S0378437126008393",
+  "retrieved_at": "2026-10-02T14:27:47.206333+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:28:09.410124+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378437126008393",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "http_status": 403,
+      "at": "2026-10-02T14:26:38.497937+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.physa.2026.132093",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:26:40.313701+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.physa.2026.132093%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:26:42.382663+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016%2Fj.physa.2026.132093",
+      "kind": "openalex",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:26:43.541763+00:00"
+    }
+  ]
+}

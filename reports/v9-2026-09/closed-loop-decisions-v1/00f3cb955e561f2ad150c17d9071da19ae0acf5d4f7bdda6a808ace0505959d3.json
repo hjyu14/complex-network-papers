@@ -1,0 +1,50 @@
+{
+  "doi": "10.1038/d41586-026-02689-w",
+  "class": "excluded",
+  "reason": "同DOI出版社页面 https://www.nature.com/articles/d41586-026-02689-w 明确标为 RESEARCH BRIEFINGS，说明为另一篇研究的summary；非目标研究论文。OpenAlex摘要字段对应页面导语，不能冒充独立摘要，此次依据出版社类型排除。",
+  "evidence": "The Norwegian Mother, Father and Child Cohort Study, called MoBa",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "ffc13063ae5f7f6776b505764e183177156084d83580299a5ae3bdda0701bd9d",
+  "abstract_sha256": "c51e7a02d8d6ab0f33eeea279c05445b1d3b706241d401cb354e491ac0c0b6c1",
+  "source_url": "https://api.openalex.org/works/https://doi.org/10.1038%2Fd41586-026-02689-w",
+  "retrieved_at": "2026-10-02T14:48:15.008076+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:48:52.755924+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.nature.com/articles/d41586-026-02689-w",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:48:09.690025+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1038%2Fd41586-026-02689-w",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:48:11.186983+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038/d41586-026-02689-w%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:48:13.717614+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1038%2Fd41586-026-02689-w",
+      "kind": "openalex",
+      "status": "cached",
+      "at": "2026-10-02T14:48:15.010281+00:00"
+    }
+  ]
+}

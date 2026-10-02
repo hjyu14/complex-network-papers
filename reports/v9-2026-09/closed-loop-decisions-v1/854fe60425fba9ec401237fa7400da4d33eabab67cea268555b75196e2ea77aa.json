@@ -1,0 +1,69 @@
+{
+  "doi": "10.1016/j.physa.2026.132095",
+  "class": "core",
+  "reason": "构建网络RD–SIR模型，将节点内2单纯形感染与节点间网络扩散区分，推导离散Turing条件和振幅方程，揭示高阶结构驱动的超临界与亚临界斑图选择，并在BA、WS拓扑验证；网络结构与集体传播动力学是主要贡献。",
+  "evidence": "an intra-node higher-order interaction-driven network pattern selection mechanism",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "hard_checks": {
+    "doi_identity": true,
+    "whitelisted_issn": true,
+    "eligible_type": true,
+    "date_in_window": true,
+    "title_matches": true,
+    "date_conflicts_resolved": true
+  },
+  "hard_check_evidence": {
+    "doi_identity": "Browser DOI link and citation_doi match 10.1016/j.physa.2026.132095",
+    "whitelisted_issn": "Browser citation_issn 0378-4371 matches Physica A in config/sources.json",
+    "eligible_type": "Publisher browser page explicitly Research article",
+    "date_in_window": "Browser citation_online_date 2026/09/29 in September window",
+    "title_matches": "Browser h1 and citation_title exactly match historical title",
+    "date_conflicts_resolved": "Publisher online date agrees with master preferred_date 2026-09-29; Crossref preferred date absent; November issue date is later archive date"
+  },
+  "screening_summary": "Derives Turing instability and amplitude equations for networked epidemic dynamics with intra-node simplex transmission, explaining higher-order interaction-driven pattern selection across distinct network topologies.",
+  "review_input_sha256": "aeaa0c47059305cd1643b072e4b4c0df4d7540821bcf39b970e45768c05cedda",
+  "abstract_sha256": "eccdc10b32bb78950bd51664669b61f81ec94a97d5882923d68a708212eb87e4",
+  "source_url": "https://www.sciencedirect.com/science/article/pii/S0378437126008411",
+  "retrieved_at": "2026-10-02T14:30:28.672414+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:31:18.468474+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378437126008411",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "http_status": 403,
+      "at": "2026-10-02T14:28:49.274878+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.physa.2026.132095",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:28:50.893612+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.physa.2026.132095%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:29:11.351897+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016%2Fj.physa.2026.132095",
+      "kind": "openalex",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:29:14.424118+00:00"
+    }
+  ]
+}

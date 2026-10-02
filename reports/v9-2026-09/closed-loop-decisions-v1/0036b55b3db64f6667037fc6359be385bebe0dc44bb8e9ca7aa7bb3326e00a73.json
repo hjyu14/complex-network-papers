@@ -1,0 +1,50 @@
+{
+  "doi": "10.1038/d41586-026-02705-z",
+  "class": "excluded",
+  "reason": "出版社同DOI页面 https://www.nature.com/articles/d41586-026-02705-z 明确标为 RESEARCH BRIEFINGS，属于非目标研究简报。OpenAlex摘要字段对应出版社导语，不能当独立研究摘要；按出版社类型排除。",
+  "evidence": "water droplets can become slightly charged as they slide across solid surfaces",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "dc35ba3b03c474b51cbebf98a8ec6c7f7bc58e3053e8efa446bbf0a887d9e722",
+  "abstract_sha256": "89b3fdfbc2424ffbb5d92e7e8b585148cdc48226e1da9ce08ad93cdaee49c19f",
+  "source_url": "https://api.openalex.org/works/https://doi.org/10.1038%2Fd41586-026-02705-z",
+  "retrieved_at": "2026-10-02T14:54:02.991932+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:54:40.321810+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.nature.com/articles/d41586-026-02705-z",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:53:57.858800+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1038%2Fd41586-026-02705-z",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:53:59.284831+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038/d41586-026-02705-z%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:54:01.652402+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1038%2Fd41586-026-02705-z",
+      "kind": "openalex",
+      "status": "cached",
+      "at": "2026-10-02T14:54:02.993942+00:00"
+    }
+  ]
+}

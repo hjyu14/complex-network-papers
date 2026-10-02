@@ -1,0 +1,52 @@
+{
+  "doi": "10.1016/j.physd.2026.135414",
+  "class": "excluded",
+  "reason": "摘要主要贡献是含可变基底势与三次、四次相互作用的非线性Klein-Gordon非谐晶格的怪波新解、调制不稳定性与色散性质。虽称network，未给出网络结构效应或可迁移网络科学理论/方法；该具体贡献属于一般非线性波动力学。",
+  "evidence": "we derived new solutions for rogue waves in anharmonic networks",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "fc92fdbcf28424e841b0d55916c1a6900c605a5517d9254b58d17a2838c719cf",
+  "abstract_sha256": "d1773e6ae60896d7788d2c1276e11371500f6ca73431afe0c301915ab8bcd54c",
+  "source_url": "https://www.sciencedirect.com/science/article/pii/S0167278926003106",
+  "retrieved_at": "2026-10-02T14:40:14.482Z",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:40:42.694417+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167278926003106",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "http_status": 403,
+      "at": "2026-10-02T14:39:30.698648+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.physd.2026.135414",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:39:32.353596+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.physd.2026.135414%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:39:34.528750+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016%2Fj.physd.2026.135414",
+      "kind": "openalex",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:39:36.411833+00:00"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "doi": "10.1038/d41586-026-02703-1",
+  "class": "excluded",
+  "reason": "同DOI出版社页面 https://www.nature.com/articles/d41586-026-02703-1 明确标为 RESEARCH BRIEFINGS，且说明是另一研究的summary，非目标研究论文。OpenAlex摘要字段对应网页导语，不能当独立研究摘要；按出版社文章类型排除。",
+  "evidence": "A subset of pancreatic cancer cells express the genes SERPINE1 or SERPINB2",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "cc54f137ef6e714700d9ddf4a595470c9a7bac7b76eb29894098d9ef2284c4f0",
+  "abstract_sha256": "6808a5ff4e3f237f0ce001acd23c2ffbfd3aa1f34d140b7beb1eff38018aa8c3",
+  "source_url": "https://api.openalex.org/works/https://doi.org/10.1038%2Fd41586-026-02703-1",
+  "retrieved_at": "2026-10-02T14:51:49.985177+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:52:32.988281+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.nature.com/articles/d41586-026-02703-1",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:51:43.566044+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1038%2Fd41586-026-02703-1",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:51:45.177059+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038/d41586-026-02703-1%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:51:47.619871+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1038%2Fd41586-026-02703-1",
+      "kind": "openalex",
+      "status": "cached",
+      "at": "2026-10-02T14:51:49.986207+00:00"
+    }
+  ]
+}

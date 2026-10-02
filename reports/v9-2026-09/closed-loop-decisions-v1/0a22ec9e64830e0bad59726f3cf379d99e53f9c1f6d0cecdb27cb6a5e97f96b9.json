@@ -1,0 +1,66 @@
+{
+  "doi": "10.1103/136n-hykb",
+  "class": "excluded",
+  "reason": "摘要研究铁电向列液晶中的反铁电极化与质量密度调制，使用衍射实验和Landau相变理论；没有复杂网络结构、网络动力学或可迁移网络科学方法的主要贡献。",
+  "evidence": "antiferroelectric ordering in two ferroelectric nematic liquid crystals",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "a7bfb115ce7c539b2469aa22fbbf20ad07bb282dae3a0503045217e6847b3947",
+  "abstract_sha256": "b90741ed4e5fa001b8cb958fee63ac07906c87b78f813ca40744bc9427c56363",
+  "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/136n-hykb",
+  "retrieved_at": "2026-10-02T12:30:22.683045+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T12:31:34.329837+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/136n-hykb",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T12:27:51.362831+00:00"
+    },
+    {
+      "url": "https://journals.aps.org/prresearch/abstract/10.1103/136n-hykb",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "http_status": 404,
+      "at": "2026-10-02T12:27:52.357914+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1103%2F136n-hykb",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T12:27:53.893827+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1103/136n-hykb%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T12:27:56.024582+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1103%2F136n-hykb",
+      "kind": "openalex",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T12:27:57.454617+00:00"
+    },
+    {
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/136n-hykb",
+      "kind": "publisher",
+      "status": "cached",
+      "at": "2026-10-02T12:30:22.685046+00:00"
+    }
+  ]
+}

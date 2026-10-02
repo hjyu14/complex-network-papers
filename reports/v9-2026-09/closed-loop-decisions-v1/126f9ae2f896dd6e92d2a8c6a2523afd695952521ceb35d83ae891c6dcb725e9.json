@@ -1,0 +1,43 @@
+{
+  "doi": "10.1007/s11071-026-13020-7",
+  "class": "transferable_application",
+  "reason": "主要贡献是电网同步机非线性摆动动力学的二次流形降阶方法，结合POD和学习得到的非线性修正，并在不同规模电网及故障情景检验；网络动力学简化本身是研究对象，属于可迁移的网络动力学计算方法。",
+  "evidence": "quadratic manifold-based model order reduction (MOR) framework",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "hard_checks": {
+    "doi_identity": true,
+    "whitelisted_issn": true,
+    "eligible_type": true,
+    "date_in_window": true,
+    "title_matches": true,
+    "date_conflicts_resolved": true
+  },
+  "hard_check_evidence": {
+    "doi_identity": "Publisher citation DOI matches 10.1007/s11071-026-13020-7",
+    "whitelisted_issn": "Publisher ISSN 1573-269X matches Nonlinear Dynamics in config/sources.json",
+    "eligible_type": "Publisher Research / OriginalPaper in material-master-v4.json",
+    "date_in_window": "Publisher online date 2026-09-07 within September window",
+    "title_matches": "Publisher citation title exactly matches historical master title",
+    "date_conflicts_resolved": "material-master-v4.json Crossref preferred date 2026-09-07 agrees with publisher online date"
+  },
+  "screening_summary": "Introduces quadratic-manifold reduction for power-grid swing dynamics, combining linear modes with learned nonlinear corrections to approximate transient network responses across fault scenarios.",
+  "review_input_sha256": "9a54e1b6256e93d14a3704fcb85ebd610ce43e6529c63887583ea0a154e33324",
+  "abstract_sha256": "b29de775ea1a0dfa4c06f7c1475dd976660860e0b8062621b2cf04b8a78e8a37",
+  "source_url": "https://link.springer.com/article/10.1007/s11071-026-13020-7?error=cookies_not_supported&code=8dbab215-8240-45c9-8418-33efc34b5d6d",
+  "retrieved_at": "2026-10-02T13:31:19.119749+00:00",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T13:32:10.558420+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s11071-026-13020-7",
+      "kind": "publisher",
+      "status": "cached",
+      "at": "2026-10-02T13:31:19.124190+00:00"
+    }
+  ]
+}

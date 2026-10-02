@@ -1,0 +1,49 @@
+{
+  "version": "v9-api-probe-aps-elsevier-1",
+  "tested_at": "2026-10-01T13:39:38.031863+00:00",
+  "credentials_used": false,
+  "results": [
+    {
+      "provider": "APS",
+      "operation": "Harvest article list",
+      "endpoint": "https://harvest.aps.org/v2/journals/articles?from=2026-09-01&until=2026-09-02&journals=prresearch&per_page=1",
+      "http_status": 200,
+      "response_content_type": "application/json",
+      "metadata_fields_verified": [
+        "identifiers.doi",
+        "date",
+        "articleType",
+        "title",
+        "abstract",
+        "journal.name"
+      ],
+      "note": "List endpoint is reachable without a credential for this probe range; this does not establish entitlement to every article."
+    },
+    {
+      "provider": "APS",
+      "operation": "Harvest single article",
+      "endpoint": "https://harvest.aps.org/v2/journals/articles/10.1103/27c4-dzj8",
+      "http_status": 401,
+      "response_content_type": "application/json",
+      "note": "The target article is not authorized without an APS token/API entitlement."
+    },
+    {
+      "provider": "Elsevier",
+      "operation": "Article Retrieval META_ABS",
+      "endpoint": "https://api.elsevier.com/content/article/doi/10.1016/j.chaos.2026.118557?view=META_ABS&httpAccept=application/json",
+      "http_status": 401,
+      "response_content_type": "application/json;charset=UTF-8",
+      "note": "API is reachable; API key is required."
+    },
+    {
+      "provider": "Elsevier",
+      "operation": "Article Metadata",
+      "endpoint": "https://api.elsevier.com/content/metadata/article?query=doi%2810.1016%2Fj.chaos.2026.118557%29&httpAccept=application/json",
+      "http_status": 401,
+      "response_content_type": "application/json;charset=UTF-8",
+      "note": "API is reachable; API key is required."
+    }
+  ],
+  "response_bodies_saved": false,
+  "next_step": "Run authenticated probes only after a key is supplied through an environment variable; never write the key to this report or project files."
+}

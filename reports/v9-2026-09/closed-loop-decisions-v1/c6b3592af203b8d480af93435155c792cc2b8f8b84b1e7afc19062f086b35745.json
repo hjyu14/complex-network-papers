@@ -1,0 +1,69 @@
+{
+  "doi": "10.1016/j.physa.2026.132099",
+  "class": "core",
+  "reason": "主贡献是具有定向迁移的多层网络反应扩散传播模型，以网络谱与线性稳定性解释静态和振荡Turing不稳定性，以及易感者和感染者迁移对斑图选择的相反作用，直接研究网络上的动力学机制。",
+  "evidence": "Linear stability and network spectral analyses characterize stationary and oscillatory Turing instabilities",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "hard_checks": {
+    "doi_identity": true,
+    "whitelisted_issn": true,
+    "eligible_type": true,
+    "date_in_window": true,
+    "title_matches": true,
+    "date_conflicts_resolved": true
+  },
+  "hard_check_evidence": {
+    "doi_identity": "Publisher DOI link and citation_doi: 10.1016/j.physa.2026.132099.",
+    "whitelisted_issn": "Publisher citation_issn 0378-4371; whitelisted Physica A.",
+    "eligible_type": "Publisher article header: Research article.",
+    "date_in_window": "Publisher citation_online_date 2026/09/29.",
+    "title_matches": "Publisher heading and citation_title match candidate title.",
+    "date_conflicts_resolved": "Publisher online 2026-09-29 agrees with saved publisher-online date; displayed 2026-11-15 is volume 702 archive date, not first online date."
+  },
+  "screening_summary": "Analyzes directed migration in multiplex epidemic networks using spectral stability to explain stationary and oscillatory Turing patterns and hotspot reorganization.",
+  "review_input_sha256": "98b1affe49d507b2910606795c57a182d18ee95616e58003fa4bca80bb0cc64d",
+  "abstract_sha256": "4b9911c29dc4eb1d53ef757e78bf3f8d5d09933fbd4783fc606439b7abad2161",
+  "source_url": "https://www.sciencedirect.com/science/article/pii/S0378437126008459",
+  "retrieved_at": "2026-10-02T14:38:58.569Z",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:39:28.582878+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378437126008459",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "http_status": 403,
+      "at": "2026-10-02T14:38:10.284502+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.physa.2026.132099",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:38:11.846638+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.physa.2026.132099%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:38:15.599005+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016%2Fj.physa.2026.132099",
+      "kind": "openalex",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:38:16.778151+00:00"
+    }
+  ]
+}

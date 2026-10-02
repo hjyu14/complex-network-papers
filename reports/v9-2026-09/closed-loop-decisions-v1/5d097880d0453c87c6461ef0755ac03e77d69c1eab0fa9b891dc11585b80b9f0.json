@@ -1,0 +1,52 @@
+{
+  "doi": "10.1016/j.physd.2026.135445",
+  "class": "excluded",
+  "reason": "贡献是分数阶Burgers偏微分方程在weak-Herz空间中的温和解存在性、有界性、初值依赖及渐近行为；没有网络结构、网络动力学或网络科学方法贡献。",
+  "evidence": "The global existence and the boundedness of mild solutions are investigated.",
+  "reviewer": "Codex assistant; exact deployed model revision not exposed",
+  "review_input_sha256": "ba49b99d23c7b5f9bf8fa706c1590dd1c3f382f7dc9b69debee30598500b70b0",
+  "abstract_sha256": "2950b2c62b1ffb99896070ecc98c04e0e3a3a7f5e8d3f801386417e23f322d32",
+  "source_url": "https://www.sciencedirect.com/science/article/pii/S0167278926003416",
+  "retrieved_at": "2026-10-02T14:46:11.420Z",
+  "policy_hashes": {
+    "config/screening-policy-v9.json": "803db928a199cd64bd6af933042ff0b047f0ca8cfc01d0addf28c5a3f4a7a7da",
+    "config/sources.json": "0847df26875d4d14eb5df25972f750d0a96c615ea453f03a4de6819b43cbb0bc",
+    "docs/screening-protocol-v9.md": "e9c78b759e903a97cf2633b5ff343871c5074dd61bc006f88515073bcfe1d4c2"
+  },
+  "reviewed_at": "2026-10-02T14:46:16.124812+00:00",
+  "subject_scope_assessed": true,
+  "attempts": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167278926003416",
+      "kind": "publisher",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "http_status": 403,
+      "at": "2026-10-02T14:45:23.720453+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.physd.2026.135445",
+      "kind": "crossref",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:45:25.333950+00:00"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016/j.physd.2026.135445%22&format=json&resultType=core&pageSize=100",
+      "kind": "europepmc",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:45:29.711533+00:00"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016%2Fj.physd.2026.135445",
+      "kind": "openalex",
+      "status": "failed",
+      "error_type": "ValueError",
+      "http_status": null,
+      "at": "2026-10-02T14:45:31.018158+00:00"
+    }
+  ]
+}
