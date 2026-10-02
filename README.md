@@ -1,6 +1,6 @@
 # Complex Network Papers · New Workflow
 
-九刊文献工作流的最小起点。当前只有规则和配置，尚无采集器、文献数据、网站或自动部署。
+九刊文献工作流的起点。当前已有 NMI 有界书目采集试验，尚无主题筛选器、网站或自动部署。
 
 ## 当前方向
 
@@ -38,4 +38,13 @@ git restore --source=8e0932a2523eeadbee50b4650c4c5ccff6128c8b -- scripts/private
 
 旧保存提交通过 79 项 Python 测试、14 项前端测试及 `node --check site/app.js`。三个历史状态 JSON 文件末尾含字面量 `\n`，按原样保存，不作为新流程输入。本起点仅完成配置和目录检查，没有可运行的采集或网站测试。
 
-下一步：验证九刊的目录发现渠道，建立候选清单和覆盖差异记录。
+## NMI 书目试验
+
+入口为 `scripts/collect_nmi.py`，仅登记书目、核对日期与目录覆盖，不读取摘要或进行主题筛选。执行记录见 `docs/nmi-collection-pilot.md`；运行输出使用新目录，不覆盖旧轮次。
+
+```powershell
+python -m unittest discover -s tests -v
+python -X utf8 scripts/collect_nmi.py --as-of 2026-10-03 --out reports/nmi-2026-09/new-run
+```
+
+下一步：根据 NMI 试验结果核验其他期刊的目录渠道，分别适配来源结构。
