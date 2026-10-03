@@ -74,19 +74,18 @@ test('search, dates, theme intersection and other', async () => {
   node('#period').events.change({ target: { value: '7' } });
   assert.match(node('#result-count').textContent, /^10 papers/);
   node('#categories').children.at(-1).events.click();
-  assert.match(node('#result-count').textContent, /^1 papers/);
+  assert.match(node('#result-count').textContent, /^1 paper/);
   node('#journal').events.change({target:{value:'PNAS'}});
   assert.match(node('#result-count').textContent, /^0 papers/);
   assert.equal(node('#paper-list').children[0].className,'empty');
 });
 
-test('six newest cards, full journal names, ordered caption and other last', async () => {
+test('six newest cards, full journal names and other last', async () => {
   const {node} = setup(); await ready();
   const cards = node('#featured-list').children;
   assert.equal(cards.length,6);
   assert.equal(cards[0].children[0].children[0].textContent,'Proceedings of the National Academy of Sciences');
   assert.equal(cards[0].children[1].children[0].textContent,'Synthetic test 7');
-  assert.equal(node('#featured-journals').textContent,config.featured_journals.map(short => short === 'PNAS' ? short : config.journals.find(j => j.short === short).name).join(' · '));
   assert.equal(node('#categories').children[0].children[0].textContent,'All topics');
   assert.equal(node('#categories').children.at(-1).children[0].textContent,'Other');
 });
@@ -145,7 +144,17 @@ test('public rules article is linked and bilingual', () => {
   assert.match(home, /<html lang="en">/);
   assert.match(rules, /data-language="en"/);
   assert.match(rules, /data-language="zh" hidden/);
-  assert.match(rules, /Workflow newflow-1/);
+  assert.equal((rules.match(/<h2>/g) || []).length,8);
+  assert.match(rules, /Preprints are excluded/);
+  assert.match(rules, /预印本不收录/);
+  assert.match(rules, /AI assistance/);
+  assert.match(rules, /AI 辅助/);
+  for (const journal of config.journals) assert.ok(rules.includes(journal.name));
+  assert.match(rules, /docs\/screening-protocol\.md/);
+  assert.match(rules, /href="data\/papers\.json">文献数据/);
+  assert.match(rules, /href="data\/screening-report\.json">审核汇总/);
+  assert.match(rules, /reports\/2026-09\/screening-log\.jsonl">逐篇审核日志/);
+  assert.match(rules, /Paper-by-paper review log/);
 });
 
 test('pending candidates are disclosed separately in both languages', async () => {
@@ -208,13 +217,17 @@ test('research method controls and annotations are absent', () => {
   assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, 2);
 });
 
-test('fixed September snapshot discloses coverage gaps without claiming a current 90-day feed', async () => {
+test('fixed September snapshot keeps date bounds without a journal-specific coverage notice', async () => {
   const {node} = setup(); await ready();
-  assert.match(node('#status').textContent,/September 2026/);
-  assert.match(node('#coverage-summary').textContent,/complete publisher coverage is not established/);
-  assert.doesNotMatch(node('#status').textContent,/90-day feed/);
+  assert.match(node('#edition').textContent,/September 2026/);
+  assert.equal(node('#status').hidden,true);
+  assert.match(node('#coverage-summary').textContent,/1–30 September 2026:/);
+  assert.doesNotMatch(node('#coverage-summary').textContent,/Nature Communications|coverage remains uncertain/);
+  assert.doesNotMatch(node('#edition').textContent,/90-day feed/);
   node('#language-toggle').events.click();
-  assert.match(node('#coverage-summary').textContent,/尚不能宣称出版社覆盖完整/);
+  assert.match(node('#coverage-summary').textContent,/2026 年 9 月 1–30 日/);
+  assert.doesNotMatch(node('#coverage-summary').textContent,/Nature Communications|目录覆盖仍存在不确定性/);
+  assert.match(node('#edition').textContent,/2026年9月/);
 });
 
 test('accepted date and reading notes are visible and bilingual without changing paper identity', async () => {
@@ -268,24 +281,33 @@ test('all nine journals and all 20 inclusions are in spotlight with traced autho
   }
 });
 
-test('short byline preserves the full ordered author list and source in expanded evidence', async () => {
+test('details preserve all authors and use the paper link instead of evidence APIs', async () => {
   const {context}=setup(); await ready();
   const card=vm.runInContext('paperCard({...state.papers[0], authors:["One", "Two", "Three", "Four", "Five"], author_metadata_status:"available", author_source_url:"https://example.org/authors"})',context);
   assert.equal(card.children[2].textContent,'One · Two · Three · Four · et al.');
   const details=card.children.at(-1);
   assert.ok(details.children.some(n=>n.textContent==='All authors: One · Two · Three · Four · Five'));
-  assert.ok(details.children.some(n=>n.href==='https://example.org/authors'));
+  const links=details.children.filter(n=>n.tagName==='a');
+  assert.deepEqual(links.map(n=>n.href), ['https://doi.org/10.1234/test']);
+  assert.equal(links[0].textContent,'Publisher page ↗');
+  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  for (const paper of data.papers) {
+    const rendered=vm.runInContext(`paperCard(${JSON.stringify(paper)})`,context);
+    const detailLinks=rendered.children.at(-1).children.filter(n=>n.tagName==='a');
+    assert.deepEqual(detailLinks.map(n=>n.href),[paper.url]);
+    assert.ok(paper.metadata_url && paper.evidence_url && paper.author_source_url);
+  }
 });
 
 test('commentary review and abstract excerpt are distinguished in both languages', async () => {
   const {context,node}=setup(); await ready();
-  for (const [kind,pattern] of [['online_short_comment',/no-abstract scientific commentary/],['abstract_excerpt',/explicit Abstract excerpt/]]) {
+  for (const [kind,pattern] of [['online_short_comment',/no-abstract scientific commentary/],['abstract_excerpt',/Abstract excerpt; the full article was not reviewed/]]) {
     const card=vm.runInContext(`paperCard({...state.papers[0],review_evidence_kind:${JSON.stringify(kind)},article_type:"Commentary"})`,context);
     assert.ok(card.children.at(-1).children.some(n=>pattern.test(n.textContent)));
   }
   node('#language-toggle').events.click();
   const card=vm.runInContext('paperCard({...state.papers[0],review_evidence_kind:"online_short_comment",article_type:"Commentary"})',context);
-  assert.ok(card.children.at(-1).children.some(n=>/在线实际审读无摘要/.test(n.textContent)));
+  assert.ok(card.children.at(-1).children.some(n=>/在线审读的无摘要科学评论正文/.test(n.textContent)));
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   const comment=data.papers.find(p=>p.doi==='10.1073/pnas.2622915123');
   assert.equal(comment.material_sha256,null);
@@ -293,4 +315,29 @@ test('commentary review and abstract excerpt are distinguished in both languages
   assert.ok(comment.review_evidence_sha256 && comment.evidence_url);
   assert.equal(data.screening_counts.review,0);
   assert.equal(data.screening_counts.deferred_unassessed,0);
+});
+
+
+test('identical spotlight scope is hidden and all-papers action does not create a redundant filter', async () => {
+  const {node,data,context}=setup();
+  data.papers.forEach(p=>p.featured=p.journal_short);
+  await ready();
+  assert.equal(node('#scope-control').hidden,true);
+  node('#featured-all').events.click();
+  assert.equal(vm.runInContext('state.scope',context),'all');
+  assert.equal(node('#back-all').hidden,true);
+  assert.match(node('#result-count').textContent,/^35 papers$/);
+  node('#language-toggle').events.click();
+  assert.equal(node('#scope-control').hidden,true);
+  assert.match(node('#result-count').textContent,/^35 篇文献$/);
+  const mixed=setup(); await ready();
+  assert.equal(mixed.node('#scope-control').hidden,false);
+});
+
+test('zero pending notice is hidden but failures and real pending records remain visible', async () => {
+  const valid=setup(); await ready(); assert.equal(valid.node('#status').hidden,true);
+  const pending=setup(); pending.data.screening_counts.review=2; await ready();
+  assert.equal(pending.node('#status').hidden,false);
+  assert.match(pending.node('#status').textContent,/2 candidates/);
+  const failed=setup(2); await ready(); assert.equal(failed.node('#status').hidden,false);
 });

@@ -2,7 +2,7 @@
 const $ = (selector) => document.querySelector(selector);
 const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", query: "", days: 30, page: 1, pageSize: 10 };
 const scopeLabel = (id) => ({ all: tr("All journals", "全部期刊"), featured: tr("Spotlight journals", "重点期刊"), other: tr("Other journals", "其他期刊") })[id];
-const dateLabel = (id) => ({ "publisher.accepted": tr("Accepted date — not publication", "接收日期，非发表日期"), "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print date (fallback)", "纸刊日期（回退）"), published: tr("Publication date (fallback)", "出版日期（回退）"), issued: tr("Issued date (fallback)", "issued 日期（回退）") })[id] || id;
+const dateLabel = (id) => ({ "publisher.accepted": tr("Accepted date — not publication", "接收日期，非发表日期"), "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print publication", "纸刊发表"), published: tr("Publication date", "发表日期"), issued: tr("Issue date", "出版日期") })[id] || id;
 const englishCategories = { network_structure: "Structure & formation", network_inference: "Community detection, inference & reconstruction", network_spreading: "Spreading, diffusion & percolation", network_collective: "Synchronization, games & collective behavior", network_resilience: "Robustness, cascades & control", other: "Other" };
 
 function element(tag, className, text) {
@@ -36,11 +36,20 @@ function readingNote(paper) {
 function statusBadge(paper) {
   return element("span", "badge accepted-badge", tr("Accepted · publication pending", "已接收 · 待正式发表"));
 }
+function articleBadge(paper) {
+  const types = { Commentary: tr("Commentary", "评论"), Perspective: tr("Perspective", "观点"), Comment: tr("Comment", "评论") };
+  return types[paper.article_type] ? element("span", "badge type-badge", types[paper.article_type]) : null;
+}
+function hasOtherJournals() {
+  return state.papers.some((paper) => !paper.featured) || state.data.journals.some((journal) => !state.data.featured_journals.includes(journal.short));
+}
 function featureCard(paper) {
   const card = element("article", "feature-card");
   const top = element("div", "feature-top");
   top.append(element("span", "journal-badge", paper.journal), timeNode(paper));
   if (paper.publication_status === "accepted") top.append(statusBadge(paper));
+  const type = articleBadge(paper);
+  if (type) top.append(type);
   const title = element("h3");
   title.append(link(paper.title, paper.url));
   const bottom = element("div", "feature-bottom");
@@ -54,9 +63,10 @@ function paperCard(paper) {
   const journal = element("span", "journal-name", paper.journal || tr("Journal unavailable", "期刊名称缺失"));
   journal.title = paper.journal;
   top.append(journal);
-  if (paper.featured) top.append(element("span", "badge", scopeLabel("featured")));
   top.append(timeNode(paper));
   if (paper.publication_status === "accepted") top.append(statusBadge(paper));
+  const type = articleBadge(paper);
+  if (type) top.append(type);
   const title = element("h3");
   title.append(link(paper.title, paper.url));
   const authors = paper.authors.filter(Boolean);
@@ -65,25 +75,19 @@ function paperCard(paper) {
   const bottom = element("div", "paper-bottom");
   const tags = element("div", "tags");
   paper.categories.forEach((id) => tags.append(element("span", "tag", categoryLabel(id))));
-  if (paper.scope_class) tags.append(element("span", "tag", paper.scope_class === "core" ? tr("Core network science", "核心网络科学") : tr("Transferable application", "可迁移应用研究")));
   bottom.append(tags, link(tr("Read paper ↗", "原文 ↗"), paper.url, "paper-link"));
   const details = element("details", "evidence");
-  details.append(element("summary", "", tr("Inclusion evidence & date source", "收录依据与日期来源")));
-  details.append(element("p", "", tr("Reading basis: ", "审读依据：") + tr(paper.note_en, paper.note_zh)));
-  const reviewDescription = paper.scope_authority === "human user in current conversation" ? tr("Scope inclusion explicitly confirmed by the editor.", "科学范围纳入由用户明确裁决。")
-    : paper.review_evidence_kind === "online_short_comment" ? tr("Scope inclusion based on assistant reading of the accessible no-abstract scientific commentary. No full text is stored.", "科学范围纳入基于代理在线实际审读无摘要科学评论的可见正文；未保存全文。")
-    : paper.review_evidence_kind === "abstract_excerpt" ? tr("Scope inclusion based on the publisher's explicit Abstract excerpt. The full article body was not reviewed.", "科学范围纳入基于出版方明确的Abstract摘段；未审读全文。")
-    : tr("Scope inclusion based on assistant reading of the explicit abstract.", "科学范围纳入基于代理实际摘要审读。");
-  details.append(element("p", "", reviewDescription));
-  if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
-  if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date remains unconfirmed. Recheck publication date and specific article type after publication.", "接收稿：首次发表日期尚未确认；正式发表后按同一 DOI 补核发表日期和具体文章类型。")));
-  details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));
-  details.append(element("p", "", tr("Query: ", "检索路径：") + paper.retrieved_by.join("; ") + tr(". Evidence screening with recorded editorial decisions; not full-text expert review.", "。证据辅助筛选与留痕编辑裁决，非全文专家审定。")));
+  details.append(element("summary", "", tr("Details", "详细信息")));
   if (authors.length) details.append(element("p", "full-authors", tr("All authors: ", "全部作者：") + authors.join(" · ")));
-  if (paper.author_source_url) details.append(link(tr("Author metadata source ↗", "作者信息来源 ↗"), paper.author_source_url));
-  if (paper.author_metadata_status !== "available") details.append(element("p", "", tr("Author metadata could not yet be verified. Consult the publisher; publication status is verified separately.", "作者元数据尚未核实，请以出版方名单为准；出版状态另行核验。")));
-  if (paper.has_update) details.append(element("p", "", tr("An update is linked in the metadata. Check the publisher for corrections or retractions.", "元数据存在更新关联，请查看出版方最新更正或撤稿说明。")));
-  details.append(link(tr("Check Crossref metadata ↗", "核对 Crossref 元数据 ↗"), paper.metadata_url));
+  if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
+  if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date and specific article type will be checked after publication.", "已接收，待正式发表；发表日期和具体研究类型届时补核。")));
+  if (paper.review_evidence_kind === "online_short_comment") details.append(element("p", "", tr("Reading note based on the accessible text of a no-abstract scientific commentary.", "阅读说明依据在线审读的无摘要科学评论正文。")));
+  if (paper.review_evidence_kind === "abstract_excerpt") details.append(element("p", "", tr("Reading note based on the publisher's Abstract excerpt; the full article was not reviewed.", "阅读说明依据出版方的摘要摘段，未审读全文。")));
+  details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));
+  if (paper.scope_class === "transferable_application") details.append(element("p", "", tr("Included for its transferable network-science method or theory.", "收录理由：具有可迁移的网络科学方法或理论。")));
+  if (paper.author_metadata_status !== "available") details.append(element("p", "", tr("Author information is incomplete; consult the publisher.", "作者信息尚不完整，请查看出版方。")));
+  if (paper.has_update) details.append(element("p", "", tr("Check the publisher for corrections or retractions.", "请查看出版方的更正或撤稿信息。")));
+  details.append(link(tr("Publisher page ↗", "出版方页面 ↗"), paper.url));
   card.append(top, title, byline, readingNote(paper), bottom, details);
   return card;
 }
@@ -121,9 +125,9 @@ function renderResults() {
     (state.scope === "all" || (state.scope === "featured" ? Boolean(paper.featured) : !paper.featured)) &&
     (!query || [paper.title, paper.journal, paper.journal_short, paper.doi, ...paper.authors].join(" ").toLowerCase().includes(query))
   );
-  $("#latest-title").textContent = state.scope === "featured" ? tr("Spotlight papers", "重点期刊文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("Latest papers", "最新文献");
+  $("#latest-title").textContent = state.scope === "featured" ? tr("Spotlight papers", "重点期刊文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("All papers", "全部文献");
   const journalName = state.data.journals.find((j) => j.short === state.journal)?.name;
-  $("#result-count").textContent = `${results.length} ${tr("papers", "篇文献")} · ${journalName || scopeLabel(state.scope)} · ${state.category === "all" ? tr("All topics", "全部主题") : categoryLabel(state.category)} · ${tr("through", "截至")} ${state.data.window_end}`;
+  $("#result-count").textContent = `${results.length} ${tr(results.length === 1 ? "paper" : "papers", "篇文献")}${journalName ? " · " + journalName : ""}${state.category === "all" ? "" : " · " + categoryLabel(state.category)}`;
   const pages = Math.max(1, Math.ceil(results.length / state.pageSize));
   if (state.page > pages) state.page = pages;
   const start = (state.page - 1) * state.pageSize;
@@ -176,7 +180,7 @@ function bindControls() {
   $("#search").addEventListener("input", (event) => { state.query = event.target.value; state.page = 1; renderResults(); });
   $("#period").addEventListener("change", (event) => { state.days = Number(event.target.value); state.page = 1; renderResults(); });
   $("#featured-all").addEventListener("click", () => {
-    resetFilters("featured"); $("#latest").scrollIntoView({ behavior: "auto" });
+    resetFilters(hasOtherJournals() ? "featured" : "all"); $("#latest").scrollIntoView({ behavior: "auto" });
   });
   $("#clear").addEventListener("click", () => {
     resetFilters();
@@ -191,27 +195,32 @@ async function getJSON(path) {
 function renderSnapshot() {
   if (!state.data) return;
   const data = state.data;
+  $("#journal").setAttribute("aria-label", tr("Journal", "期刊"));
+  $("#period").setAttribute("aria-label", tr("Dates", "日期"));
+  $("#scope").setAttribute("aria-label", tr("Journal scope", "期刊范围"));
   const featured = state.papers.filter((p) => p.featured);
-  $("#featured-journals").textContent = data.featured_journals.map((short) => short === "PNAS" ? short : data.journals.find((j) => j.short === short)?.name || short).join(" · ");
-  $("#featured-order").textContent = tr("The six newest included papers from the spotlight journals, using the same inclusion criteria. Accepted manuscripts are explicitly marked.", "按日期展示重点期刊中最新的六篇纳入文献，采用全站相同筛选标准；接收稿明确标记。");
-  $("#total-stat").textContent = String(state.papers.length);
-  $("#featured-stat").textContent = String(featured.length);
-  const updated = new Date(data.generated_at).toLocaleString(language === "zh" ? "zh-CN" : "en-GB", { timeZone: "Asia/Shanghai", hour12: false });
-  $("#updated").textContent = tr(`Snapshot exported: ${updated} (Beijing). ${data.published_count} published · ${data.accepted_count} accepted.`, `快照生成：${updated}（北京时间）。已发表 ${data.published_count} 篇 · 已接收 ${data.accepted_count} 篇。`);
+  const month = new Date(data.window_end + "T12:00:00Z").toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { year: "numeric", month: "long", timeZone: "Asia/Shanghai" });
+  $("#edition").textContent = `${month} · ${state.papers.length} ${tr("papers", "篇文献")}`;
+  $("#scope-control").hidden = !hasOtherJournals();
+  const updated = new Date(data.generated_at).toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric" });
+  $("#updated").textContent = tr(`Updated ${updated}`, `更新于 ${updated}`);
   $("#featured-list").replaceChildren(...featured.slice(0, 6).map(featureCard));
   if (!featured.length) $("#featured-list").append(element("p", "empty", tr("No spotlight papers passed this snapshot's screening. This does not mean no relevant papers were published.", "本次快照没有通过筛选的重点期刊文章；这不代表近期没有相关论文。")));
   const counts = data.screening_counts;
   const pending = counts.review + counts.deferred_unassessed;
-  $("#status").textContent = tr(`September 2026 reviewed snapshot · ${data.published_count} published + ${data.accepted_count} accepted · ${pending} candidates awaiting evidence.`, `2026 年 9 月审核快照 · 已发表 ${data.published_count} 篇 + 已接收 ${data.accepted_count} 篇 · ${pending} 篇候选待补证。`);
-  $("#coverage-summary").textContent = tr(`Nine whitelisted journals, 1–30 September 2026: ${data.candidate_count} candidates; ${data.papers.length} included, ${counts.excluded} excluded, ${counts.review} assessed but evidence-insufficient, and ${counts.deferred_unassessed} unassessed awaiting a usable abstract. Nature Communications directory pagination remains unstable; complete publisher coverage is not established. Topics may overlap. Date filters use the snapshot end date, with accepted dates explicitly marked.`, `九刊白名单，2026 年 9 月 1–30 日：候选 ${data.candidate_count} 篇；纳入 ${data.papers.length} 篇，排除 ${counts.excluded} 篇，已读但材料不足 ${counts.review} 篇，未取得可用摘要、尚未审读 ${counts.deferred_unassessed} 篇。Nature Communications 目录分页仍不稳定，尚不能宣称出版社覆盖完整。主题可重叠；时间筛选以快照截止日为准，接收日期单独标记。`);
+  $("#status").hidden = pending === 0;
+  $("#status").textContent = tr(`${pending} candidates awaiting evidence.`, `${pending} 篇候选待补证。`);
+  $("#coverage-summary").textContent = tr(`1–30 September 2026: ${data.published_count} published papers and ${data.accepted_count} accepted manuscripts.`, `2026 年 9 月 1–30 日：已发表 ${data.published_count} 篇，已接收 ${data.accepted_count} 篇。`);
   if (!state.attempt?.ok) {
+    $("#status").hidden = false;
     $("#status").textContent += state.attempt ? tr(" The latest collection failed; the previous valid snapshot is retained.", " 最近一次采集未完整成功，当前保留上次有效快照。") : tr(" Latest collection status unavailable.", " 最近采集状态不可用。");
     $("#status").classList.add("warning");
   }
   renderCategories(); renderResults();
 }
 function renderUnavailable() {
-  $("#status").textContent = tr("Paper snapshot unavailable or incompatible with current rules. No sample papers are substituted. Please retry later.", "文献快照暂不可用或为旧版快照，不符合当前规则。未使用示例论文，请稍后重试。");
+  $("#status").hidden = false;
+  $("#status").textContent = tr("Paper list unavailable or incompatible. Please try again later.", "文献列表暂不可用或为旧版快照，请稍后重试。");
   $("#status").classList.add("warning");
   $("#paper-list").replaceChildren(element("p", "empty", tr("Papers currently unavailable.", "暂时无法展示文献。")));
   $("#featured-list").replaceChildren(element("p", "empty", tr("No valid snapshot available.", "暂无可用文献快照。")));
