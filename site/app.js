@@ -60,7 +60,7 @@ function paperCard(paper) {
   const title = element("h3");
   title.append(link(paper.title, paper.url));
   const authors = paper.authors.filter(Boolean);
-  const byline = element("p", "authors", authors.slice(0, 4).join(" · ") + (authors.length > 4 ? " · et al." : "") || tr("Authors not collected — see publisher", "本次未采集作者信息，请查看出版方"));
+  const byline = element("p", "authors", authors.slice(0, 4).join(" · ") + (authors.length > 4 ? " · et al." : "") || tr("Author information awaiting verification — see publisher", "作者信息待核验，请查看出版方"));
   if (paper.author_metadata_status === "partial") byline.append(element("span", "", tr(" · Author list incomplete — see publisher", " · 作者名单不完整，请查看出版方")));
   const bottom = element("div", "paper-bottom");
   const tags = element("div", "tags");
@@ -74,7 +74,9 @@ function paperCard(paper) {
   if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date remains unconfirmed. Recheck publication date and specific article type after publication.", "接收稿：首次发表日期尚未确认；正式发表后按同一 DOI 补核发表日期和具体文章类型。")));
   details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));
   details.append(element("p", "", tr("Query: ", "检索路径：") + paper.retrieved_by.join("; ") + tr(". Abstract screening with recorded editorial decisions; not full-text expert review.", "。摘要辅助筛选与留痕编辑裁决，非全文专家审定。")));
-  if (paper.author_metadata_status !== "available") details.append(element("p", "", tr("The minimal bibliographic collection did not request author fields. Consult the publisher for authors; publication status is verified separately.", "本次最小书目采集未请求作者字段，请以出版方作者名单为准；出版状态另行核验。")));
+  if (authors.length) details.append(element("p", "full-authors", tr("All authors: ", "全部作者：") + authors.join(" · ")));
+  if (paper.author_source_url) details.append(link(tr("Author metadata source ↗", "作者信息来源 ↗"), paper.author_source_url));
+  if (paper.author_metadata_status !== "available") details.append(element("p", "", tr("Author metadata could not yet be verified. Consult the publisher; publication status is verified separately.", "作者元数据尚未核实，请以出版方名单为准；出版状态另行核验。")));
   if (paper.has_update) details.append(element("p", "", tr("An update is linked in the metadata. Check the publisher for corrections or retractions.", "元数据存在更新关联，请查看出版方最新更正或撤稿说明。")));
   details.append(link(tr("Check Crossref metadata ↗", "核对 Crossref 元数据 ↗"), paper.metadata_url));
   card.append(top, title, byline, readingNote(paper), bottom, details);

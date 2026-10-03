@@ -86,7 +86,7 @@ test('six newest cards, full journal names, ordered caption and other last', asy
   assert.equal(cards.length,6);
   assert.equal(cards[0].children[0].children[0].textContent,'Proceedings of the National Academy of Sciences');
   assert.equal(cards[0].children[1].children[0].textContent,'Synthetic test 7');
-  assert.equal(node('#featured-journals').textContent,'Nature Communications · Physical Review X · Science Advances · PNAS · Physical Review Letters');
+  assert.equal(node('#featured-journals').textContent,config.featured_journals.map(short => short === 'PNAS' ? short : config.journals.find(j => j.short === short).name).join(' · '));
   assert.equal(node('#categories').children[0].children[0].textContent,'All topics');
   assert.equal(node('#categories').children.at(-1).children[0].textContent,'Other');
 });
@@ -117,10 +117,10 @@ test('language switch preserves filters, paper titles and authors', async () => 
   assert.equal(node('#paper-list').children[0].children[1].children[0].textContent,title);
   assert.equal(vm.runInContext('state.journal', context),'NMI');
   assert.equal(vm.runInContext('state.days', context),7);
-  assert.match(node('#paper-list').children[0].children[2].textContent,/未采集作者/);
+  assert.match(node('#paper-list').children[0].children[2].textContent,/作者信息待核验/);
   node('#language-toggle').events.click();
   assert.match(node('#result-count').textContent,/^2 papers/);
-  assert.match(node('#paper-list').children[0].children[2].textContent,/Authors not collected/);
+  assert.match(node('#paper-list').children[0].children[2].textContent,/Author information awaiting verification/);
   const card = vm.runInContext('paperCard({...state.papers[0], authors:["Ada Example"], author_metadata_status:"partial"})', context);
   assert.equal(card.children[2].textContent,'Ada Example');
   assert.match(card.children[2].children[0].textContent,/incomplete/);
@@ -247,4 +247,32 @@ test('public export has notes for exactly the current included DOIs and preserve
   assert.equal(accepted.length,2);
   for (const p of accepted) { assert.equal(p.published_date,null); assert.equal(p.accepted_date,p.date); assert.match(p.url,/journals.aps.org.*accepted/); }
   for (const doi of ['10.1126/sciadv.aeg4913','10.1103/21c5-cvnn','10.1038/s41467-026-77405-3']) assert.ok(!data.papers.some(p => p.doi===doi));
+});
+
+
+test('all nine journals and all 17 inclusions are in spotlight with traced authors', () => {
+  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  const metadata=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09/author-metadata.json'),'utf8'));
+  assert.equal(data.featured_journals.length,9);
+  assert.deepEqual([...data.featured_journals].sort(),config.journals.map(j=>j.short).sort());
+  assert.equal(data.papers.filter(p=>p.featured).length,17);
+  assert.equal(data.author_available_count,17);
+  for(const p of data.papers) {
+    const row=metadata.records[p.doi];
+    assert.deepEqual(p.authors,row.authors);
+    assert.ok(p.authors.length);
+    assert.equal(p.author_metadata_status,'available');
+    assert.equal(p.author_metadata_sha256,row.metadata_sha256);
+    assert.equal(p.author_source_url,row.source_url);
+    assert.ok(!p.authors.some(a=>/^(anonymous|unknown|et al\.?)$/i.test(a)));
+  }
+});
+
+test('short byline preserves the full ordered author list and source in expanded evidence', async () => {
+  const {context}=setup(); await ready();
+  const card=vm.runInContext('paperCard({...state.papers[0], authors:["One", "Two", "Three", "Four", "Five"], author_metadata_status:"available", author_source_url:"https://example.org/authors"})',context);
+  assert.equal(card.children[2].textContent,'One · Two · Three · Four · et al.');
+  const details=card.children.at(-1);
+  assert.ok(details.children.some(n=>n.textContent==='All authors: One · Two · Three · Four · Five'));
+  assert.ok(details.children.some(n=>n.href==='https://example.org/authors'));
 });

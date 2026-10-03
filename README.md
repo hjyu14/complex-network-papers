@@ -15,7 +15,7 @@
 | 文件 | 用途 |
 |---|---|
 | `AGENTS.md` | 当前工作约束 |
-| `config/sources.json` | 九刊 ISSN 白名单及原 Spotlight 名单 |
+| `config/sources.json` | 九刊 ISSN 白名单及当前九刊 Spotlight 名单 |
 | `docs/screening-protocol.md` | 已确认的科学、日期、类型及证据边界 |
 | `.gitignore` | 私有缓存和凭据隔离 |
 | `.gitattributes` | 文档与配置换行约定 |
@@ -201,3 +201,7 @@ python -m http.server 8001 --directory site
 ```
 
 Pages从`codex/new-workflow`的`site/`发布，入口为`.github/workflows/publish-reviewed.yml`；仅提交已审核的快照并执行校验，不运行采集或补证。旧main定时重筛工作流停用，避免用旧181篇池覆盖新快照。运行和追溯约定见[发布说明](docs/publication.md)。
+
+## 九刊 Spotlight 与作者补充（2026-10-03）
+
+用户确认九刊全部列入Spotlight，因此全站纳入数和重点期刊总数均为17；首页仍只展示最新六篇。17篇作者已补齐：15篇来自DOI、标题和ISSN匹配的Crossref元数据，两篇接收稿来自明确显示同一DOI的APS官方署名。完整原序名单和来源可在卡片收录依据中展开；本轮未重采书目、未重审科学范围，380篇补证仍待后续处理。作者元数据及旧版本保存在`reports/2026-09/author-metadata.json`，导出器与正式日志校验其哈希。

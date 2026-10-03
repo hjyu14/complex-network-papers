@@ -5,11 +5,30 @@ from datetime import date
 import hashlib
 import json
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from screen_candidates import Workflow, digest, now
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'newflow-1'
+
+
+def author_record(row, record):
+    if row['doi'] != record['doi'] or row['record_sha256'] != digest(record):
+        raise ValueError('Author metadata record mismatch')
+    if row['metadata_sha256'] != digest({k: v for k, v in row.items()
+            if k not in {'attempts', 'metadata_sha256'}}):
+        raise ValueError('Author metadata hash mismatch')
+    authors = row['authors']
+    if not isinstance(authors, list) or any(not isinstance(a, str) or not a.strip()
+            or a.casefold().strip() in {'anonymous', 'unknown', 'author', 'authors', 'et al.', 'et al'} for a in authors):
+        raise ValueError('Invalid or placeholder author')
+    if row['status'] == 'available':
+        if not authors or not row.get('basis') or not row.get('retrieved_at') or urlparse(row.get('source_url', '')).scheme != 'https':
+            raise ValueError('Author list lacks source evidence')
+    elif row['status'] not in {'unresolved', 'not_started_rate_limit'} or authors:
+        raise ValueError('Invalid author metadata status')
+    return row
+
 
 
 def build_snapshot(out):
@@ -25,6 +44,12 @@ def build_snapshot(out):
     included = [d for d in latest if d['category'] in {'core', 'transferable_application'}]
     if set(notes['papers']) != {d['doi'] for d in included}:
         raise ValueError('Notes must match exactly the current included DOI set')
+    author_data = json.loads((w.out/'author-metadata.json').read_text(encoding='utf-8'))
+    if author_data['candidate_sha256'] != w.input_sha or set(author_data['records']) != {d['doi'] for d in included}:
+        raise ValueError('Author metadata must match the fixed inventory and included DOI set')
+    author_hash = digest(author_data)
+    if not any(e['kind'] == 'author_metadata_completed' and e['data']['metadata_sha256'] == author_hash for e in w.log.events):
+        raise ValueError('Author metadata lacks matching audit event')
     history = {digest(e['data']): e['data'] for e in w.log.events
                if e['kind'] in {'assessment', 'assessment_corrected'}}
     theme_ids = {c['id'] for c in notes['categories']}
@@ -33,6 +58,7 @@ def build_snapshot(out):
     for d in included:
         r = w.records[d['doi']]
         n = notes['papers'][d['doi']]
+        a = author_record(author_data['records'][d['doi']], r)
         if n['assessment_sha256'] != digest(d):
             raise ValueError('Reading note refers to a superseded assessment: '+d['doi'])
         if d['input_sha256'] != digest({'record': r, 'material_sha256': d['material_sha256'],
@@ -70,8 +96,10 @@ def build_snapshot(out):
             lineage = previous
         official_url = check.get('source_url') or d['material_source']
         url = official_url if accepted else 'https://doi.org/'+d['doi']
-        papers.append({'doi': d['doi'], 'url': url, 'title': r['title'], 'authors': [],
-            'author_metadata_status': 'not_collected', 'journal': journal['name'],
+        papers.append({'doi': d['doi'], 'url': url, 'title': r['title'], 'authors': a['authors'],
+            'author_metadata_status': a['status'], 'author_metadata_sha256': a['metadata_sha256'],
+            'author_source_url': a.get('source_url'), 'author_retrieved_at': a.get('retrieved_at'),
+            'author_basis': a.get('basis'), 'journal': journal['name'],
             'journal_short': journal['short'], 'issns': r['issns'],
             'date': value, 'date_source': 'publisher.accepted' if accepted else 'published-online',
             'date_provenance': check, 'publication_status': 'accepted' if accepted else 'published',
@@ -106,6 +134,8 @@ def build_snapshot(out):
         'window_end': w.pool['window_end'], 'window_days': 30, 'release_kind': 'reviewed_september_snapshot',
         'screening_version': VERSION, 'config_sha256': digest(w.config), 'current_rule_sha256': w.rule_sha,
         'screening_log_sha256': w.log.head, 'reading_notes_sha256': digest(notes),
+        'author_metadata_sha256': author_hash,
+        'author_available_count': sum(p['author_metadata_status'] == 'available' for p in papers),
         'source': 'Fixed nine-journal September inventory and traced abstract/editorial assessments',
         'categories': notes['categories'], 'featured_journals': w.config['featured_journals'],
         'journals': [{'name': j['name'], 'short': j['short'], 'issns': j['issns']} for j in w.config['journals']],
@@ -118,13 +148,14 @@ def build_snapshot(out):
             'Nature Communications directory pagination remains unstable; complete publisher coverage is not established.',
             '55 material-insufficient and 325 unassessed records remain undisplayed.',
             'Abstract-based assistant screening and explicit user scope decisions; not full-text expert review.',
-            'Authors were not collected by the minimal bibliographic query; no authors inferred.'], 'papers': papers}
+            'Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred.'], 'papers': papers}
     audit = {k: snapshot[k] for k in ['generated_at', 'window_start', 'window_end', 'screening_version',
         'config_sha256', 'current_rule_sha256', 'screening_log_sha256', 'reading_notes_sha256',
+        'author_metadata_sha256', 'author_available_count',
         'screening_counts', 'candidate_count', 'published_count', 'accepted_count',
         'candidate_inventory_complete', 'metadata_reconciliation_complete', 'limitations']}
     audit['included_assessments'] = [{k: p[k] for k in ['doi', 'scope_class', 'publication_status',
-        'assessment_sha256', 'input_sha256', 'material_sha256', 'rule_sha256', 'scope_authority']} for p in papers]
+        'assessment_sha256', 'input_sha256', 'material_sha256', 'rule_sha256', 'scope_authority', 'author_metadata_status', 'author_metadata_sha256']} for p in papers]
     status = {'attempted_at': generated_at, 'ok': True, 'operation': 'publish_existing_reviewed_snapshot',
         'new_collection_performed': False, 'candidate_inventory_complete': snapshot['candidate_inventory_complete'],
         'metadata_reconciliation_complete': snapshot['metadata_reconciliation_complete'],

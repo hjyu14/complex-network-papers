@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-10-03T11:16:26.794737+00:00",
+  "generated_at": "2026-10-03T11:47:01.343053+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-09-30",
   "screening_version": "newflow-1",
-  "config_sha256": "f5f5939633b2344e3b948b1d4514189eb699b4e322763471d0e19120c068ca20",
-  "current_rule_sha256": "58f135aa1c99d8119e7d41126ba2b2d54d9766ec374c3a7e13d7405929e8cf3e",
-  "screening_log_sha256": "93d8c8806897073e8a799ed2cc3f47b191e655bfc3152e0048d0b10ed40d7bae",
+  "config_sha256": "2ac0eda44eadb1631d2b4d799753dbc843dcd4835b4689be6cf20ab47205cd63",
+  "current_rule_sha256": "9b372191da6ecb2351a636b02c4922860db93594815da3d8c7a23751c068047e",
+  "screening_log_sha256": "3107a5158b6e98bfadd459b09e31e3752d1f9fda1100447be53b89e5afedbfcd",
   "reading_notes_sha256": "1833621873330760e767a815bffc90b0226124eace5d77db893319273ad0d5ff",
+  "author_metadata_sha256": "d4909c4874439705656c2415d7d7bed1e081c4df9cf592361b56b1ea066b2085",
+  "author_available_count": 17,
   "screening_counts": {
     "excluded": 2425,
     "core": 15,
@@ -25,7 +27,7 @@
     "Nature Communications directory pagination remains unstable; complete publisher coverage is not established.",
     "55 material-insufficient and 325 unassessed records remain undisplayed.",
     "Abstract-based assistant screening and explicit user scope decisions; not full-text expert review.",
-    "Authors were not collected by the minimal bibliographic query; no authors inferred."
+    "Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred."
   ],
   "included_assessments": [
     {
@@ -36,7 +38,9 @@
       "input_sha256": "8520c178b8a3f34ce1ee9a50742239ca8d02e8baa9721863f78ae1dc25c606ff",
       "material_sha256": "60e11c8648442c032ba2f36457a6bb49cad4f39d7f6ee9573cf8e2d7407594a8",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "effd9191a38bb507961fbbda71b984566c839d797e574bce549fac279f052d81"
     },
     {
       "doi": "10.1073/pnas.2526156123",
@@ -46,7 +50,9 @@
       "input_sha256": "b78abfe34f22c597e7930da26fda40e616b09caa7b2ee22216f02390ef121440",
       "material_sha256": "a607c86fa7d342ba9d1d5e5e57de5e9a028e279adf8bea4d7f5fbfa48db1b358",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4e708f5b388c61030cfc922c2ca1239ffa4d2cf5bd66e40b6a4a47441b878c2a"
     },
     {
       "doi": "10.1038/s42256-026-01306-9",
@@ -56,7 +62,9 @@
       "input_sha256": "568410bda534bc47e962f6106b56aa87e7865c8dee36b0549fc9fb21f4dc98fe",
       "material_sha256": "5aa264776f91ef48f38b94e0d9aee5c7fc4d077cc84ecbe1432c2ad6b57b5b30",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "75b4ed88e6c56401a27d1d2382811482cb535fecaa038618bfadb8e5838311ae"
     },
     {
       "doi": "10.1073/pnas.2537815123",
@@ -66,7 +74,9 @@
       "input_sha256": "57e078d5d4ab8f8665728034431f03900ce0c71cae35cd4c496c1e73765c78cf",
       "material_sha256": "33bd65c183bb4d978de3b805b27748673aa64d68fed6f940f9204f7a22ec2e79",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0bdf24d4caa408d1b7c35c7cbcebd00e88f99ebd393787acd355aa7f229305dc"
     },
     {
       "doi": "10.1073/pnas.2613908123",
@@ -76,7 +86,9 @@
       "input_sha256": "9511038a44b72ecbf36d664b7bde73cb3a4e8a2454cc91182125e0d96800535f",
       "material_sha256": "751aa29653055f49701207f66dc9c69dba0f2d356fc32f61efd8aa4ec8792a4b",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "59a9108b2692aab2ce918bf437bd6428aa9b4f62563386ba24b5f4eb7bec5348"
     },
     {
       "doi": "10.1038/s41467-026-77340-3",
@@ -86,7 +98,9 @@
       "input_sha256": "e910a7539cb366eabaa32ce22e57dc716944c5022a7d571b45f674612f09dc9a",
       "material_sha256": "b584c7843dd6a49ff0727e76eac7470085714db7e4c75e6f2829a699d65a4d31",
       "rule_sha256": "58f135aa1c99d8119e7d41126ba2b2d54d9766ec374c3a7e13d7405929e8cf3e",
-      "scope_authority": "human user in current conversation"
+      "scope_authority": "human user in current conversation",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "bb384d327fa670df15ab2353904d99d727ac5fb9028cdda49e03010985bb516e"
     },
     {
       "doi": "10.1103/9y9m-q7qj",
@@ -96,7 +110,9 @@
       "input_sha256": "2b976bb34aa85679e7f55bf969a53f40c7276d865214c43694e392c08ca8a524",
       "material_sha256": "c303c6845be74378af97b6b0aaf1741491a76e80b9bc58256b2d9cc86df3ee69",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "2ebd4489cebab80a9febf4c350d6c8f0efaaf5549e13f3b8f88947c47eed0f6a"
     },
     {
       "doi": "10.1103/g875-ldn5",
@@ -106,7 +122,9 @@
       "input_sha256": "ca15e570d9f851b6842527ff4dd71e9fa76997c130e293c9d8409fb0604ec55d",
       "material_sha256": "1384cc78896ac9d2fbb0a021840bf1b98c66babe42969d1cdc8b2b5526befd5a",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "53a69035420219ae7782d0117065cf50f250d5d6bfe3d98dd4010de500cbac15"
     },
     {
       "doi": "10.1126/science.aeg3946",
@@ -116,7 +134,9 @@
       "input_sha256": "3d6212ab8a2a8a971a9d4514126874a41d3406c3359794615d1619f29af737c2",
       "material_sha256": "a534addad2aba8420e067079a38cef81dc0d1c68c5c1f6103b33a172ab51911b",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e22391bdc9efae873c49d6d07a73140247b955efdf711f016803e0e71861e80e"
     },
     {
       "doi": "10.1038/s41467-026-76416-4",
@@ -126,7 +146,9 @@
       "input_sha256": "632d7c49d72a07836e77b84ce4f24fb1c6ed327ad57afcc71dd2bb35d11b59fd",
       "material_sha256": "234c2f034ac5e0bea0d41b07ebe58fe45b853f511ccfa8affeccad9305499234",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "26ac83aef35399126cb1dc0b45fdba92386ce1b5e91f1d0ff88f5a0c43fea371"
     },
     {
       "doi": "10.1038/s41467-026-75453-3",
@@ -136,7 +158,9 @@
       "input_sha256": "fe662448066b51de38d0fe21e2866fef6dfac6723f0221220082748e2b7163be",
       "material_sha256": "dc6596c9f30f1d6055108779cc86bc6696754d5aa693975a18c45d2d11420665",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "human user in current conversation"
+      "scope_authority": "human user in current conversation",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b214a46c1589754562851a74a70a34e96de011b8326f206454d3590ae308dd11"
     },
     {
       "doi": "10.1073/pnas.2604777123",
@@ -146,7 +170,9 @@
       "input_sha256": "7d0e0b1dc780804fad9fad4b3b45402d781573f5232c86cee7b873b4a029a36e",
       "material_sha256": "8c8aedfdaf46ae7e3a8d30eb84125c62f839d20867795d7d965368a779de7d16",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "9c206c5613d9b5ff45fa32ad3958fefda59514d9d53ac86f37acd290c4dcb9db"
     },
     {
       "doi": "10.1073/pnas.2614238123",
@@ -156,7 +182,9 @@
       "input_sha256": "14576f83075217b2cdf8ff6d085a2d6038f527029b7073f35bfd16e1d7605a76",
       "material_sha256": "d6a56eae8ced5d104bfc80c334f1eac0fb9de7ab79993155a0ba059f9d56c265",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "df7f26f5859508c257538167b9f09e36a1647287b2410f66e0008a11aad82db6"
     },
     {
       "doi": "10.1038/s41467-026-77357-8",
@@ -166,7 +194,9 @@
       "input_sha256": "69d813cda4ac1cc6371092f27d690cc9ee2ad821f8f796a3a3d8eab2f51435ae",
       "material_sha256": "904538076d40db11918cb53689c2656640fdf6cef25977a3b3ca6d495c0bfcc3",
       "rule_sha256": "58f135aa1c99d8119e7d41126ba2b2d54d9766ec374c3a7e13d7405929e8cf3e",
-      "scope_authority": "human user in current conversation"
+      "scope_authority": "human user in current conversation",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3c2f28f1160a12d36ebdc3f0ad01f2233b2b4bd92725918815489e6876a2a69c"
     },
     {
       "doi": "10.1126/science.aec3917",
@@ -176,7 +206,9 @@
       "input_sha256": "fa78aeeac37e0277773704330c24bebbe83fb27a712724edeac0eeb6d0b7e7c8",
       "material_sha256": "ee3562fec98d169127b1fc246c85f20989654374d59d339532e72135024fe953",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "fa23acfe8dac6a4c65cc83ce16b10d9757510aa6a830f8b8cef70448ff2eca01"
     },
     {
       "doi": "10.1126/sciadv.aef2894",
@@ -186,7 +218,9 @@
       "input_sha256": "0f60f5f32210f3dc5c6b0ebf4e060f4bcf55d20ed9f87eabc942b883bff2e7b8",
       "material_sha256": "d163ad0a60c7084b832f94b6d0489482c86886c5ef63621f186e7742db684c72",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "581792a2b1f756a838b2502079b4f75c766ca74f04fa32e83ad48e5497926675"
     },
     {
       "doi": "10.1103/6m2z-wlmb",
@@ -196,7 +230,9 @@
       "input_sha256": "11d08cfe33a7122761aed44bc9991c6872eebc5e03952b097dd7e51c12ea4a8c",
       "material_sha256": "6bc850e25c28a827e5fda121a6c812d9aabf5372f96345f9c7ea06c15441015e",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "scope_authority": "assistant_abstract_screening"
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "50fda5ed1fc565f006eeb4fac735fc8476514a2924781c601ab1b33d78feac7d"
     }
   ]
 }

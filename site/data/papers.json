@@ -1,14 +1,16 @@
 {
-  "generated_at": "2026-10-03T11:16:26.794737+00:00",
+  "generated_at": "2026-10-03T11:47:01.343053+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-09-30",
   "window_days": 30,
   "release_kind": "reviewed_september_snapshot",
   "screening_version": "newflow-1",
-  "config_sha256": "f5f5939633b2344e3b948b1d4514189eb699b4e322763471d0e19120c068ca20",
-  "current_rule_sha256": "58f135aa1c99d8119e7d41126ba2b2d54d9766ec374c3a7e13d7405929e8cf3e",
-  "screening_log_sha256": "93d8c8806897073e8a799ed2cc3f47b191e655bfc3152e0048d0b10ed40d7bae",
+  "config_sha256": "2ac0eda44eadb1631d2b4d799753dbc843dcd4835b4689be6cf20ab47205cd63",
+  "current_rule_sha256": "9b372191da6ecb2351a636b02c4922860db93594815da3d8c7a23751c068047e",
+  "screening_log_sha256": "3107a5158b6e98bfadd459b09e31e3752d1f9fda1100447be53b89e5afedbfcd",
   "reading_notes_sha256": "1833621873330760e767a815bffc90b0226124eace5d77db893319273ad0d5ff",
+  "author_metadata_sha256": "d4909c4874439705656c2415d7d7bed1e081c4df9cf592361b56b1ea066b2085",
+  "author_available_count": 17,
   "source": "Fixed nine-journal September inventory and traced abstract/editorial assessments",
   "categories": [
     {
@@ -37,11 +39,15 @@
     }
   ],
   "featured_journals": [
+    "Nature",
+    "Science",
     "NC",
+    "NMI",
+    "NCS",
     "PRX",
+    "PRL",
     "SA",
-    "PNAS",
-    "PRL"
+    "PNAS"
   ],
   "journals": [
     {
@@ -195,15 +201,24 @@
     "Nature Communications directory pagination remains unstable; complete publisher coverage is not established.",
     "55 material-insufficient and 325 unassessed records remain undisplayed.",
     "Abstract-based assistant screening and explicit user scope decisions; not full-text expert review.",
-    "Authors were not collected by the minimal bibliographic query; no authors inferred."
+    "Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred."
   ],
   "papers": [
     {
       "doi": "10.1126/sciadv.aeh8819",
       "url": "https://doi.org/10.1126/sciadv.aeh8819",
       "title": "GenAI-Net: A generative AI framework for automated biomolecular network design",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Maurice Filo",
+        "Nicolò Rossi",
+        "Zhou Fang",
+        "Mustafa Khammash"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "effd9191a38bb507961fbbda71b984566c839d797e574bce549fac279f052d81",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh8819",
+      "author_retrieved_at": "2026-10-03T11:34:59.803698+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Science Advances",
       "journal_short": "SA",
       "issns": [
@@ -267,8 +282,16 @@
       "doi": "10.1073/pnas.2526156123",
       "url": "https://doi.org/10.1073/pnas.2526156123",
       "title": "Associative synaptic plasticity creates dynamic persistent activity",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Albert J. Wakhloo",
+        "David G. Clark",
+        "L. F. Abbott"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4e708f5b388c61030cfc922c2ca1239ffa4d2cf5bd66e40b6a4a47441b878c2a",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2526156123",
+      "author_retrieved_at": "2026-10-03T11:35:11.617173+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Proceedings of the National Academy of Sciences",
       "journal_short": "PNAS",
       "issns": [
@@ -321,8 +344,22 @@
       "doi": "10.1038/s42256-026-01306-9",
       "url": "https://doi.org/10.1038/s42256-026-01306-9",
       "title": "Task-structured modularity emerges in artificial networks and aligns with brain architecture",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Yuhang Wu",
+        "Shikuang Deng",
+        "Kangrui Du",
+        "Marcelo G. Mattar",
+        "Yifan Wu",
+        "Dani S. Bassett",
+        "Huajin Tang",
+        "Gang Pan",
+        "Shi Gu"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "75b4ed88e6c56401a27d1d2382811482cb535fecaa038618bfadb8e5838311ae",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs42256-026-01306-9",
+      "author_retrieved_at": "2026-10-03T11:34:46.050306+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Nature Machine Intelligence",
       "journal_short": "NMI",
       "issns": [
@@ -356,7 +393,7 @@
       "input_sha256": "568410bda534bc47e962f6106b56aa87e7865c8dee36b0549fc9fb21f4dc98fe",
       "material_sha256": "5aa264776f91ef48f38b94e0d9aee5c7fc4d077cc84ecbe1432c2ad6b57b5b30",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "featured": null,
+      "featured": "NMI",
       "evidence": [
         "Links task demands and capacity constraints to the emergence of modular recurrent-network topology."
       ],
@@ -372,8 +409,18 @@
       "doi": "10.1073/pnas.2537815123",
       "url": "https://doi.org/10.1073/pnas.2537815123",
       "title": "Network topology creates independent control of multiple checkpoints in the cell cycle system",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Yuhei Yamauchi",
+        "Hironori Sugiyama",
+        "Yuhei Goto",
+        "Kazuhiro Aoki",
+        "Atsushi Mochizuki"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0bdf24d4caa408d1b7c35c7cbcebd00e88f99ebd393787acd355aa7f229305dc",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2537815123",
+      "author_retrieved_at": "2026-10-03T11:34:57.862928+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Proceedings of the National Academy of Sciences",
       "journal_short": "PNAS",
       "issns": [
@@ -426,8 +473,16 @@
       "doi": "10.1073/pnas.2613908123",
       "url": "https://doi.org/10.1073/pnas.2613908123",
       "title": "Messaging strategies and the emergence of echo chambers in collective decision-making",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Ling-Wei Kong",
+        "Naomi Ehrich Leonard",
+        "Andrew M. Hein"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "59a9108b2692aab2ce918bf437bd6428aa9b4f62563386ba24b5f4eb7bec5348",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2613908123",
+      "author_retrieved_at": "2026-10-03T11:35:09.951610+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Proceedings of the National Academy of Sciences",
       "journal_short": "PNAS",
       "issns": [
@@ -480,8 +535,16 @@
       "doi": "10.1038/s41467-026-77340-3",
       "url": "https://doi.org/10.1038/s41467-026-77340-3",
       "title": "Disentangling interaction and bias effects in opinion dynamics of large language models",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Vincent C. Brockers",
+        "David A. Ehrlich",
+        "Viola Priesemann"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "bb384d327fa670df15ab2353904d99d727ac5fb9028cdda49e03010985bb516e",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77340-3",
+      "author_retrieved_at": "2026-10-03T11:35:15.337567+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Nature Communications",
       "journal_short": "NC",
       "issns": [
@@ -531,8 +594,22 @@
       "doi": "10.1103/9y9m-q7qj",
       "url": "https://journals.aps.org/prl/accepted/10.1103/9y9m-q7qj",
       "title": "Preferential attachment with local flexibility",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Tingyu Zhao",
+        "Balázs Maga",
+        "Pierfrancesco Dionigi",
+        "Gergely Ódor",
+        "Kyle Soni",
+        "Anastasiya Salova",
+        "Bingjie Hao",
+        "Miklós Abért",
+        "István A. Kovács"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "2ebd4489cebab80a9febf4c350d6c8f0efaaf5549e13f3b8f88947c47eed0f6a",
+      "author_source_url": "https://journals.aps.org/prl/accepted/10.1103/9y9m-q7qj",
+      "author_retrieved_at": "2026-10-03T11:41:40.241532+00:00",
+      "author_basis": "APS official accepted paper byline; explicit DOI/title/journal matched; list cross-checked with linked official accepted directory",
       "journal": "Physical Review Letters",
       "journal_short": "PRL",
       "issns": [
@@ -602,8 +679,16 @@
       "doi": "10.1103/g875-ldn5",
       "url": "https://journals.aps.org/prx/accepted/10.1103/g875-ldn5",
       "title": "Thermodynamic space of chemical reaction networks",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Shiling Liang",
+        "Paolo De Los Rios",
+        "Daniel Maria Busiello"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "53a69035420219ae7782d0117065cf50f250d5d6bfe3d98dd4010de500cbac15",
+      "author_source_url": "https://journals.aps.org/prx/accepted/10.1103/g875-ldn5",
+      "author_retrieved_at": "2026-10-03T11:41:40.241532+00:00",
+      "author_basis": "APS official accepted paper byline; explicit DOI/title/journal matched; list cross-checked with linked official accepted directory",
       "journal": "Physical Review X",
       "journal_short": "PRX",
       "issns": [
@@ -657,8 +742,16 @@
       "doi": "10.1126/science.aeg3946",
       "url": "https://doi.org/10.1126/science.aeg3946",
       "title": "Disorder-promoted stability",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Arthur N. Montanari",
+        "Pietro Zanin",
+        "Adilson E. Motter"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e22391bdc9efae873c49d6d07a73140247b955efdf711f016803e0e71861e80e",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fscience.aeg3946",
+      "author_retrieved_at": "2026-10-03T11:35:01.615862+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Science",
       "journal_short": "Science",
       "issns": [
@@ -707,7 +800,7 @@
       "input_sha256": "3d6212ab8a2a8a971a9d4514126874a41d3406c3359794615d1619f29af737c2",
       "material_sha256": "a534addad2aba8420e067079a38cef81dc0d1c68c5c1f6103b33a172ab51911b",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "featured": null,
+      "featured": "Science",
       "evidence": [
         "Establishes conditions under which nodal and interaction heterogeneity enhance network stability through non-Hermitian dynamics."
       ],
@@ -723,8 +816,17 @@
       "doi": "10.1038/s41467-026-76416-4",
       "url": "https://doi.org/10.1038/s41467-026-76416-4",
       "title": "Predicting unknown mammalian viral hosts with Dynamic Positive–Unlabeled learning",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Gabriele Pignalberi",
+        "Andrea Tonelli",
+        "Stefano Giagu",
+        "Moreno Di Marco"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "26ac83aef35399126cb1dc0b45fdba92386ce1b5e91f1d0ff88f5a0c43fea371",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-76416-4",
+      "author_retrieved_at": "2026-10-03T11:35:13.434163+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Nature Communications",
       "journal_short": "NC",
       "issns": [
@@ -774,8 +876,23 @@
       "doi": "10.1038/s41467-026-75453-3",
       "url": "https://doi.org/10.1038/s41467-026-75453-3",
       "title": "Network science reveals the structure and lasting impact of the Roman road system",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Adam Pažout",
+        "Tom Brughmans",
+        "Pau de Soto",
+        "Matteo Mazzamurro",
+        "María Coto-Sarmiento",
+        "Clara Filet",
+        "Eduardo Herrera Malatesta",
+        "Magnus L. Nielsen",
+        "Gustav Emil Ølgaard",
+        "Peter B. Vahlstrup"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b214a46c1589754562851a74a70a34e96de011b8326f206454d3590ae308dd11",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-75453-3",
+      "author_retrieved_at": "2026-10-03T11:34:43.991535+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Nature Communications",
       "journal_short": "NC",
       "issns": [
@@ -825,8 +942,17 @@
       "doi": "10.1073/pnas.2604777123",
       "url": "https://doi.org/10.1073/pnas.2604777123",
       "title": "Uncovering minimal control of cell fate by natural dynamics",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Ferio Brahmana",
+        "Corbin Hopper",
+        "Woojeong Lee",
+        "Kwang-Hyun Cho"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "9c206c5613d9b5ff45fa32ad3958fefda59514d9d53ac86f37acd290c4dcb9db",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2604777123",
+      "author_retrieved_at": "2026-10-03T11:35:03.836039+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Proceedings of the National Academy of Sciences",
       "journal_short": "PNAS",
       "issns": [
@@ -879,8 +1005,15 @@
       "doi": "10.1073/pnas.2614238123",
       "url": "https://doi.org/10.1073/pnas.2614238123",
       "title": "Starvation suppression in dense scale-free metabolic networks: Dynamical mean-field analysis of catalytic reaction networks",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Kota Mitsumoto",
+        "Shuji Ishihara"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "df7f26f5859508c257538167b9f09e36a1647287b2410f66e0008a11aad82db6",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2614238123",
+      "author_retrieved_at": "2026-10-03T11:34:56.014806+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Proceedings of the National Academy of Sciences",
       "journal_short": "PNAS",
       "issns": [
@@ -934,8 +1067,33 @@
       "doi": "10.1038/s41467-026-77357-8",
       "url": "https://doi.org/10.1038/s41467-026-77357-8",
       "title": "Contact percolation governs collective motility via mechano-chemical feedback in heterogeneous breast cancer",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Leonardo Barzaghi",
+        "Camillo Mazzella",
+        "Chiara Guidolin",
+        "Joseph Ackermann",
+        "Edoardo Bellini",
+        "Andrew E. Massey",
+        "Stefano Villa",
+        "Emanuela Frittoli",
+        "Brenda J. Green",
+        "Andrea Palamidessi",
+        "Angela Cattaneo",
+        "Angela Bachi",
+        "Valeria Cancila",
+        "Claudio Tripodo",
+        "Simona Polo",
+        "Roberto Cerbino",
+        "Alexander X. Cartagena-Rivera",
+        "Raphaël Voituriez",
+        "Fabio Giavazzi",
+        "Giorgio Scita"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3c2f28f1160a12d36ebdc3f0ad01f2233b2b4bd92725918815489e6876a2a69c",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77357-8",
+      "author_retrieved_at": "2026-10-03T11:35:05.509088+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Nature Communications",
       "journal_short": "NC",
       "issns": [
@@ -986,8 +1144,21 @@
       "doi": "10.1126/science.aec3917",
       "url": "https://doi.org/10.1126/science.aec3917",
       "title": "High-capacity associative memory in a quantum-optical spin glass",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Brendan P. Marsh",
+        "David Atri Schuller",
+        "Yunpeng Ji",
+        "Henry S. Hunt",
+        "Surya Ganguli",
+        "Sarang Gopalakrishnan",
+        "Jonathan Keeling",
+        "Benjamin L. Lev"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "fa23acfe8dac6a4c65cc83ce16b10d9757510aa6a830f8b8cef70448ff2eca01",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fscience.aec3917",
+      "author_retrieved_at": "2026-10-03T11:34:52.647078+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Science",
       "journal_short": "Science",
       "issns": [
@@ -1036,7 +1207,7 @@
       "input_sha256": "fa78aeeac37e0277773704330c24bebbe83fb27a712724edeac0eeb6d0b7e7c8",
       "material_sha256": "ee3562fec98d169127b1fc246c85f20989654374d59d339532e72135024fe953",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "featured": null,
+      "featured": "Science",
       "evidence": [
         "Studies associative-memory capacity and recall under nonequilibrium dynamics and changing spin-network connectivity."
       ],
@@ -1052,8 +1223,22 @@
       "doi": "10.1126/sciadv.aef2894",
       "url": "https://doi.org/10.1126/sciadv.aef2894",
       "title": "Human cortical networks trade communication efficiency for computational reliability",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Kayson Fakhar",
+        "Danyal Akarca",
+        "Andrea I. Luppi",
+        "Stuart Oldham",
+        "Fatemeh Hadaeghi",
+        "Petra E. Vértes",
+        "Ed Bullmore",
+        "Claus Hilgetag",
+        "Duncan Astle"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "581792a2b1f756a838b2502079b4f75c766ca74f04fa32e83ad48e5497926675",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aef2894",
+      "author_retrieved_at": "2026-10-03T11:34:54.382701+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Science Advances",
       "journal_short": "SA",
       "issns": [
@@ -1128,8 +1313,14 @@
       "doi": "10.1103/6m2z-wlmb",
       "url": "https://doi.org/10.1103/6m2z-wlmb",
       "title": "Topological Arrest of Ballooning Modes in Nonaxisymmetric Toroidal Plasmas",
-      "authors": [],
-      "author_metadata_status": "not_collected",
+      "authors": [
+        "Amitava Bhattacharjee"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "50fda5ed1fc565f006eeb4fac735fc8476514a2924781c601ab1b33d78feac7d",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F6m2z-wlmb",
+      "author_retrieved_at": "2026-10-03T11:34:51.020066+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Physical Review Letters",
       "journal_short": "PRL",
       "issns": [
