@@ -13,6 +13,7 @@ from urllib.parse import unquote
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 import screen_candidates as s
+from run_inputs import freeze_inputs
 
 
 class EvidenceTests(unittest.TestCase):
@@ -102,13 +103,14 @@ class EvidenceTests(unittest.TestCase):
             (root/'docs').mkdir()
             (root/'config').mkdir()
             (root/'docs/screening-protocol.md').write_text('rules')
-            (root/'config/sources.json').write_text('{}')
+            (root/'config/sources.json').write_text(json.dumps({'journals':[{'short':'J'}], 'screening_protocol':'docs/screening-protocol.md', 'initial_trial':{'start':'2026-09-01','end':'2026-09-30'}}))
             rs = [{**self.r, 'date': '2026-09-01', 'date_basis': 'published-online',
                    'issues': [], 'journal': 'J', 'window_membership': 'in_window'},
                   {**self.r, 'doi': '10.1/second', 'date': '2026-09-02',
                    'date_basis': 'published-online', 'issues': [], 'journal': 'J',
                    'window_membership': 'in_window'}]
-            (out/'candidates.json').write_text(json.dumps({'records': rs}))
+            (out/'candidates.json').write_text(json.dumps({'window_start':'2026-09-01','window_end':'2026-09-30','records': rs}))
+            freeze_inputs(out,root)
             with patch.object(s, 'ROOT', root), patch.object(s, 'PRIVATE', root/'.private/abstract-cache/v9'):
                 w = s.Workflow(out)
                 w.log.add('run_started', {'candidate_sha256': w.input_sha, 'rule_sha256': w.rule_sha,
@@ -148,12 +150,13 @@ class EvidenceTests(unittest.TestCase):
             (root/'docs').mkdir()
             (root/'config').mkdir()
             (root/'docs/screening-protocol.md').write_text('rules')
-            (root/'config/sources.json').write_text(json.dumps({'journals': [{'short': 'J'}]}))
+            (root/'config/sources.json').write_text(json.dumps({'journals': [{'short': 'J'}], 'screening_protocol':'docs/screening-protocol.md', 'initial_trial':{'start':'2026-09-01','end':'2026-09-30'}}))
             base = {**self.r, 'date': '2026-09-01', 'date_basis': 'published-online',
                     'issues': [], 'journal': 'J', 'window_membership': 'in_window'}
             rs = [base, {**base, 'doi': '10.1/failure'},
                   {**base, 'doi': '10.1/news', 'publisher_records': [{'article_type': 'News'}]}]
-            (out/'candidates.json').write_text(json.dumps({'records': rs}))
+            (out/'candidates.json').write_text(json.dumps({'window_start':'2026-09-01','window_end':'2026-09-30','records': rs}))
+            freeze_inputs(out,root)
 
             def collect(w):
                 if w.active() == '10.1/failure':

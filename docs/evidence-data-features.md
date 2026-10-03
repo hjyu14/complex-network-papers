@@ -1,4 +1,4 @@
-# 元数据特征与官方类型：380篇补证的观察
+# 元数据特征、补证线索与反例
 
 这些特征用于决定下一步核查渠道。它们不是自动科学分类器，不改变既有科学范围、日期或类型规则。
 
@@ -15,20 +15,6 @@
 | 摘要混入Close/Next/PHYSH | APS外层Abstract容器还包含图片控件和主题标签 | 用abstract-section-content中的摘要段落；拒收污染版本，保存新版本和旧哈希 | 容器存在、文本非空、字数足够不表示材料正确 |
 | HTTP403或安全验证页 | 部分Science官方页在普通浏览器可读，但HTTP仍被拦截 | 通过正常浏览器读取明确摘要和必要元数据；不保存HTML、正文或cookie | 403不说明文章无摘要或不属于目标类型 |
 | Accepted Paper且Abstract空白 | PRL lvpn-gblk的普通浏览器页面明确显示接收稿和空Abstract标题 | 保留材料不足；后续同DOI补核正式发表材料 | 接收状态或摘要空白不证明非研究类型 |
-
-## 固定55篇材料不足组的官方类型核验
-
-54篇Science按四个官方期号目录逐DOI核对，均未列在RESEARCH ARTICLES子栏目。具体为：NEWS 25、RESEARCH HIGHLIGHTS 8、BOOKS ET AL. 4、PERSPECTIVES 13、POLICY ARTICLES/POLICY FORUM 4。另1篇PNAS属于INNER WORKINGS。
-
-这仅描述固定缺证组，不能推断Science全体文章的比例或将这些标签一律排除。38篇有明确非目标类型依据；另15篇依据实际官方摘要排除。2篇保留未决：Noise and diversity can boost stability已有明确摘要，科学范围需核查；Observation and exploration widen the menu确认Perspective，但未取得明确摘要。
-
-官方目录：
-
-- [Science 393/6815](https://www.science.org/toc/science/393/6815)
-- [Science 393/6816](https://www.science.org/toc/science/393/6816)
-- [Science 393/6817](https://www.science.org/toc/science/393/6817)
-- [Science 393/6818](https://www.science.org/toc/science/393/6818)
-- [PNAS目标报道](https://www.pnas.org/doi/10.1073/pnas.2628766123)、[Front Matter](https://www.pnas.org/front-matter)
 
 ## 必须保留的反例与信息边界
 
@@ -52,7 +38,7 @@
 5. 主代理实际审读；保存来源、获取时间精度、字段特征、冲突、材料哈希、判断及输入哈希。材料与判断均保留旧版本。
 6. 每批最多100篇；全部已保存判断或明确延期后再进下批。已读未决与未取得可用材料分别统计。
 
-正式执行记录在reports/2026-09/screening-log.jsonl，完整摘要只在Git忽略的新目录.private/abstract-cache/v9。观察事件supplement_type_verified、supplement_identity_observed等并不表示语义审读已完成；最终以assessment/assessment_corrected为准。
+正式执行记录在各轮reports/<run-id>/screening-log.jsonl，完整摘要只在Git忽略的新目录.private/abstract-cache/v9。观察事件supplement_type_verified、supplement_identity_observed等并不表示语义审读已完成；最终以assessment/assessment_corrected为准。
 
 ## 后续浏览器补证：具体类型与反例
 
@@ -63,10 +49,7 @@
 - APS MathML题名可能导致合法摘要被身份门控拒收。b728-gh5v属于数学排版差异；bgv1-lpq7和gny7-xz9s则是同一明确官方DOI下的实质题名差异。保留数据库与官方题名，不将后者伪装成空格规范化；本轮确认材料属于该DOI，未证明历史题名修订的时间序列。Crossref Anonymous是作者占位符，不证明未发表或非研究类型。
 - [lvpn-gblk接收稿](https://journals.aps.org/prl/accepted/10.1103/lvpn-gblk)的实时官方Abstract确实空白，搜索索引却出现摘要。实时页与索引不同，不能把搜索片段当作当前官方摘要。本篇经用户单独授权，采用[arXiv明确摘要](https://arxiv.org/abs/2609.09615)和全部13位作者/题名匹配作范围排除。页面列出唯一v1；直接v1链接抓取失败，读取来自官方未版本化页面，版本链接仅作稳定引用。未把arXiv日期当期刊日期，未声称两个版本相同。
 
-## 本轮闭合与记录修复
 
-固定380篇结果为377 excluded、3 core，未决与未审读均为0；详见[本轮报告](../reports/2026-09/supplement-380.md)。新增两篇评论明确标明证据性质，未声称是原始研究或专家全文审定。
+## 记录与故障恢复
 
-此前共享临时日志视图导致15处链指针断接，根因已修复。全部原事件内容和备份保留，修复只重建尾部36条链字段，正式追加log_chain_repaired。此后正式写入由主线程串行完成；已核验全链及最新判断输入/使用材料哈希，39项离线测试通过。历史supplement_batch_closed中的decisions_saved可能包含既有延期事件，历史字段不改写；最终统计以最新独立判断为准，新闭合事件把判断与延期分开记录。
-
-41份本轮私有工作目录摘要中转副本迁入.private/abstract-cache/v9/legacy-work，原始字节和旧路径哈希保留，工作目录仅留指针；正式判断使用的规范缓存版本不变。没有完整摘要、正文、HTML或PDF进入公开报告、网站或Git输出。
+工作线程使用独立只读日志视图，正式事件仅由协调线程串行追加；检查完整链与判断输入哈希。不得通过改写旧事件掩盖失败。批次闭合分别统计实际判断与明确延期，最终结果以最新独立assessment/assessment_corrected为准。历史叙述和性能试验本地归档，不充当新的分类规则。

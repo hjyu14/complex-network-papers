@@ -1,5 +1,6 @@
-"""Nine-journal bibliography collection and publisher reconciliation; metadata only."""
+"""Whitelisted journal bibliography collection and publisher reconciliation; metadata only."""
 import argparse
+from run_inputs import freeze_inputs, load_inputs
 from collections import Counter
 from datetime import date, datetime, timezone
 import hashlib
@@ -733,20 +734,28 @@ def main():
     parser.add_argument('--out',required=True,type=Path)
     parser.add_argument('--as-of',required=True,type=date.fromisoformat)
     parser.add_argument('--resume',action='store_true',help='Verify log and reuse completed queries/pages in this output')
-    parser.add_argument('--journals',nargs='+',help='Optional bounded subset; others stay pending')
+    parser.add_argument('--journals',nargs='+',help='Journals belonging to this run (frozen on creation)')
     args = parser.parse_args()
-    config = json.loads((ROOT/'config/sources.json').read_text(encoding='utf-8'))
-    start,end = config['initial_trial']['start'],config['initial_trial']['end']
-    if start[:4] != end[:4] or date.fromisoformat(end) > args.as_of:
-        raise ValueError('Requires a past single-year window')
-    names = {j['short'] for j in config['journals']}
-    if args.journals and not set(args.journals) <= names:
-        raise ValueError('Unknown journal requested')
     if args.resume:
         if not (args.out/'collection-log.jsonl').exists():
             raise ValueError('Resume requires existing collection log')
+        config, _, inputs = load_inputs(args.out)
     else:
+        # Validate selection and window before creating output.
+        current = json.loads((ROOT/'config/sources.json').read_text(encoding='utf-8'))
+        names = {j['short'] for j in current['journals']}
+        if args.journals and (len(args.journals) != len(set(args.journals)) or not set(args.journals) <= names):
+            raise ValueError('Unknown or duplicate journal requested')
+        if current['initial_trial']['start'][:4] != current['initial_trial']['end'][:4] or date.fromisoformat(current['initial_trial']['end']) > args.as_of:
+            raise ValueError('Requires a past single-year window')
         args.out.mkdir(parents=True,exist_ok=False)
+        config, _, inputs = freeze_inputs(args.out, ROOT, args.journals)
+    start,end = config['initial_trial']['start'],config['initial_trial']['end']
+    if start[:4] != end[:4] or date.fromisoformat(end) > args.as_of:
+        raise ValueError('Requires a past single-year window')
+    names = set(inputs['journals'])
+    if args.journals and not set(args.journals) <= names:
+        raise ValueError('Resume journals outside frozen run selection')
     log = EventLog(args.out/'collection-log.jsonl')
     settings = {'key':'settings','config_sha256':digest(config),'start':start,'end':end,'as_of':args.as_of.isoformat()}
     previous = log.latest('settings','settings')
@@ -764,7 +773,7 @@ def main():
     coverage = json.loads((args.out/'coverage.json').read_text(encoding='utf-8')) if (args.out/'coverage.json').exists() else {'window_start':start,'window_end':end,'journals':{},'subject_scope_screening_performed':False,
         'full_abstracts_requested_or_stored':False,'limitations':['Coverage is relative to enumerated sources at retrieval time; missing or later deposits remain possible.',
         'Descending directories are traversed from their first page to an earlier-than-window guard page; full annual directories are not claimed.',
-        'Publisher access failures, unverified dates/identities, and pending journals prevent a nine-journal completeness claim.',
+        'Publisher access failures, unverified dates/identities, and pending journals prevent a selected-run completeness claim.',
         'No later recheck for delayed deposits; no content relevance or type screening.']}
     if args.resume:
         for name,value in [('candidates.json',packet),('coverage.json',coverage)]:
@@ -816,9 +825,12 @@ def main():
             log.add('journal_result',result)
         packet['records'] = [r for r in packet['records'] if r['journal']!=short]+rows
         coverage['journals'][short] = summary
+        coverage['requested_journals'] = sorted(names)
         coverage['pending_journals'] = sorted(names-set(coverage['journals']))
         coverage['nine_journal_reconciliation_complete'] = not coverage['pending_journals'] and all(s['window_reconciliation_complete'] for s in coverage['journals'].values())
         coverage['nine_journal_inventory_complete'] = not coverage['pending_journals'] and all(s.get('candidate_inventory_complete',False) for s in coverage['journals'].values())
+        coverage['selected_journal_inventory_complete'] = coverage['nine_journal_inventory_complete']
+        coverage['selected_journal_reconciliation_complete'] = coverage['nine_journal_reconciliation_complete']
         coverage['updated_at'] = now()
         write_state(args.out,'candidates.json',packet,log)
         write_state(args.out,'coverage.json',coverage,log)

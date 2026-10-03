@@ -47,19 +47,24 @@ class CollectorTests(unittest.TestCase):
                 self.attempts.append({'retrieved_at':'synthetic time'})
                 return response if 'api.crossref.org' in url else directory
         with TemporaryDirectory() as tmp:
-            root=Path(tmp); (root/'config').mkdir()
-            config={'initial_trial':{'start':'2026-09-01','end':'2026-09-30'},'journals':[
+            root=Path(tmp); (root/'config').mkdir(); (root/'docs').mkdir()
+            (root/'docs/screening-protocol.md').write_text('Synthetic rules')
+            config={'screening_protocol':'docs/screening-protocol.md','initial_trial':{'start':'2026-09-01','end':'2026-09-30'},'journals':[
                 {'short':'NMI','name':'Nature Machine Intelligence','issns':['2522-5839'],
-                 'collection':{'family':'nature','url':'https://www.nature.com/natmachintell/articles','max_pages':12}}]}
+                 'collection':{'family':'nature','url':'https://www.nature.com/natmachintell/articles','max_pages':12}}, {'short':'Other','name':'Other Journal','issns':['0000-0002']}]}
             (root/'config/sources.json').write_text(json.dumps(config),encoding='utf8')
             out=root/'output'
             with patch.object(collector,'ROOT',root),patch.object(collector,'Client',OfflineClient),patch.object(sys,'argv',[
-                    'collect_candidates.py','--out',str(out),'--as-of','2026-10-03']):
+                    'collect_candidates.py','--out',str(out),'--as-of','2026-10-03','--journals','NMI']):
                 self.assertEqual(collector.main(),0)
             result=json.loads((out/'candidates.json').read_text(encoding='utf8'))
             self.assertEqual(len(result['records']),1)
             self.assertEqual(result['records'][0]['doi'],record['DOI'])
-            self.assertTrue(json.loads((out/'coverage.json').read_text(encoding='utf8'))['nine_journal_inventory_complete'])
+            coverage=json.loads((out/'coverage.json').read_text(encoding='utf8'))
+            self.assertTrue(coverage['selected_journal_inventory_complete'])
+            self.assertEqual(coverage['pending_journals'],[])
+            self.assertEqual(coverage['requested_journals'],['NMI'])
+            self.assertEqual([j['short'] for j in json.loads((out/'inputs/sources.json').read_text())['journals']],['NMI'])
             self.assertIsNone(collector.cached_nmi_pilot(EventLog(out/'collection-log.jsonl'),config))
 
     def test_changed_year_counter_requires_identical_second_prefix(self):

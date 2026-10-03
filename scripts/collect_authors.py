@@ -1,4 +1,5 @@
 """Collect author-only metadata for the current included DOI set; never rescreen papers."""
+import argparse
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -43,9 +44,12 @@ def request(url):
 
 
 def main():
-    w = Workflow(ROOT/'reports/2026-09')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--run', required=True, type=Path)
+    args = parser.parse_args()
+    w = Workflow(args.run)
     selected = [d for d in w.assessments() if d['category'] in {'core','transferable_application'}]
-    path = ROOT/'reports/2026-09/author-metadata.json'
+    path = w.out/'author-metadata.json'
     if path.exists():
         raise ValueError('Author metadata already exists; preserve it before a new version')
     rows = {}
@@ -103,7 +107,7 @@ def main():
         row['metadata_sha256']=digest({k:v for k,v in row.items() if k not in {'attempts','metadata_sha256'}})
     result={'version':'author-metadata-1','candidate_sha256':w.input_sha,'created_at':now(),'selection':'Current included DOI set only; scientific decisions and raw inventory unchanged','records':rows}
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    w.log.add('author_metadata_completed',{'file':'reports/2026-09/author-metadata.json','metadata_sha256':digest(result),'included_count':len(selected),'available_count':sum(bool(v['authors']) for v in rows.values()),'unresolved_count':sum(not v['authors'] for v in rows.values()),'scientific_assessments_changed':False})
+    w.log.add('author_metadata_completed',{'file':path.relative_to(ROOT).as_posix(),'metadata_sha256':digest(result),'included_count':len(selected),'available_count':sum(bool(v['authors']) for v in rows.values()),'unresolved_count':sum(not v['authors'] for v in rows.values()),'scientific_assessments_changed':False})
     print(json.dumps({'collected':sum(bool(v['authors']) for v in rows.values()),'pending':sum(not v['authors'] for v in rows.values())},ensure_ascii=False))
 
 if __name__=='__main__':

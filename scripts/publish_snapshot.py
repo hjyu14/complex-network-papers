@@ -31,15 +31,23 @@ def author_record(row, record):
 
 
 
-def build_snapshot(out):
+def build_snapshot(out, notes=None):
     w = Workflow(out)
+    legacy = w.out == (ROOT/'reports/2026-09').resolve()
     if w.active():
         raise ValueError('Finish the active assessment before publishing')
+    status = w.status()
+    if status['not_assessed'] or any(d['category'] == 'review' for d in w.assessments()):
+        raise ValueError('Selected run must finish classification before publishing')
+    closed = {e['data']['batch_id'] for e in w.log.events if e['kind'] == 'supplement_batch_closed'}
+    if any(e['data']['batch_id'] not in closed for e in w.log.events if e['kind'] == 'supplement_batch_started'):
+        raise ValueError('Close supplement batch before publishing')
     original = w.log.events[0]['data']['original_sha256']
     for name, expected in original.items():
         if hashlib.sha256((w.out/name).read_bytes()).hexdigest() != expected:
             raise ValueError('Original collection file changed: '+name)
-    notes = json.loads((ROOT/'config/publication-notes.json').read_text(encoding='utf-8'))
+    if notes is None:
+        notes = json.loads((ROOT/'config/publication-notes.json').read_text(encoding='utf-8'))
     latest = w.assessments()
     included = [d for d in latest if d['category'] in {'core', 'transferable_application'}]
     if set(notes['papers']) != {d['doi'] for d in included}:
@@ -128,7 +136,7 @@ def build_snapshot(out):
             'featured': journal['short'] if journal['short'] in w.config['featured_journals'] else None,
             'evidence': [d['evidence_summary']], 'metadata_url': 'https://api.crossref.org/works/'+quote(d['doi'], safe=''),
             'evidence_url': evidence_url, 'source': 'Crossref and verified publisher/user evidence',
-            'retrieved_by': ['Fixed September journal inventory; DOI-bound '+('authorized online short-comment review' if short_review else 'explicit abstract excerpt review' if evidence_kind=='abstract_excerpt' else 'abstract review')],
+            'retrieved_by': [('Fixed September journal inventory; DOI-bound ' if legacy else 'Explicit journal inventory run; DOI-bound ')+('authorized online short-comment review' if short_review else 'explicit abstract excerpt review' if evidence_kind=='abstract_excerpt' else 'abstract review')],
             'screening_version': VERSION})
     papers.sort(key=lambda p: (p['date'], p['doi']), reverse=True)
     coverage = json.loads((w.out/'coverage.json').read_text(encoding='utf-8'))
@@ -146,21 +154,26 @@ def build_snapshot(out):
     counts.update({'deferred_unassessed': deferred, 'review': counts['review'], 'included': len(papers)})
     generated_at = now()
     snapshot = {'generated_at': generated_at, 'window_start': w.pool['window_start'],
-        'window_end': w.pool['window_end'], 'window_days': 30, 'release_kind': 'reviewed_september_snapshot',
+        'window_end': w.pool['window_end'],
+        'window_days': (date.fromisoformat(w.pool['window_end'])-date.fromisoformat(w.pool['window_start'])).days+1,
+        'release_kind': 'reviewed_september_snapshot' if legacy else 'reviewed_journal_snapshot',
         'screening_version': VERSION, 'config_sha256': digest(w.config), 'current_rule_sha256': w.rule_sha,
         'screening_log_sha256': w.log.head, 'reading_notes_sha256': digest(notes),
         'author_metadata_sha256': author_hash,
         'author_available_count': sum(p['author_metadata_status'] == 'available' for p in papers),
-        'source': 'Fixed nine-journal September inventory and traced abstract, short-comment and editorial assessments',
+        'source': ('Fixed nine-journal September inventory and traced abstract, short-comment and editorial assessments'
+                   if legacy else 'Explicit journal inventory and traced screening assessments'),
         'categories': notes['categories'], 'featured_journals': w.config['featured_journals'],
         'journals': [{'name': j['name'], 'short': j['short'], 'issns': j['issns']} for j in w.config['journals']],
         'coverage': compact_coverage, 'candidate_count': candidate_count,
         'screening_counts': dict(counts), 'published_count': sum(p['publication_status']=='published' for p in papers),
         'accepted_count': sum(p['publication_status']=='accepted' for p in papers),
-        'candidate_inventory_complete': coverage['nine_journal_inventory_complete'],
-        'metadata_reconciliation_complete': coverage['nine_journal_reconciliation_complete'],
-        'limitations': ['September 2026 trial, not a current 90-day feed.',
-            'Nature Communications directory pagination remains unstable; complete publisher coverage is not established.',
+        'candidate_inventory_complete': coverage.get('selected_journal_inventory_complete', coverage.get('nine_journal_inventory_complete', False)),
+        'metadata_reconciliation_complete': coverage.get('selected_journal_reconciliation_complete', coverage.get('nine_journal_reconciliation_complete', False)),
+        'limitations': (['September 2026 trial, not a current 90-day feed.',
+            'Nature Communications directory pagination remains unstable; complete publisher coverage is not established.']
+            if legacy else ['Fixed date-window trial, not a current 90-day feed.',
+                            'Coverage flags preserve source-relative enumeration limits.'])+ [
             f'{candidate_count} fixed candidates assessed; {counts["review"]} unresolved and {deferred} unassessed.',
             'Assistant screening from explicit abstracts/excerpts or authorized online short comments, plus explicit user scope decisions; not full-text expert review.',
             'Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred.'], 'papers': papers}
@@ -178,12 +191,118 @@ def build_snapshot(out):
     return {'papers.json': snapshot, 'screening-report.json': audit, 'status.json': status}
 
 
+def selected_runs(selection):
+    paths = json.loads(Path(selection).read_text(encoding='utf-8'))['runs']
+    if not paths or len(paths) != len(set(paths)):
+        raise ValueError('Release requires distinct, explicitly selected runs')
+    runs = [(ROOT/p).resolve() for p in paths]
+    for path in runs:
+        if not path.is_relative_to((ROOT/'reports').resolve()) or path == (ROOT/'reports').resolve():
+            raise ValueError('Release run must be a directory under reports')
+    if len(runs) != len(set(runs)):
+        raise ValueError('Duplicate resolved run path')
+    return runs
+
+
+def build_release(runs):
+    if not runs or len(runs) != len({Path(p).resolve() for p in runs}):
+        raise ValueError('Select distinct runs')
+    if len(runs) == 1:
+        return build_snapshot(runs[0])
+    notes = json.loads((ROOT/'config/publication-notes.json').read_text(encoding='utf-8'))
+    display = json.loads((ROOT/'config/sources.json').read_text(encoding='utf-8'))
+    papers, candidates, coverage, inputs = {}, {}, {}, []
+    coverage_dois = {}
+    window = None
+    for run in runs:
+        w = Workflow(run)
+        current_window = (w.pool['window_start'], w.pool['window_end'])
+        if window is not None and window != current_window:
+            raise ValueError('Release runs must share the same date window')
+        window = current_window
+        latest = {d['doi']: d for d in w.assessments()}
+        own = {doi for doi, d in latest.items() if d['category'] in {'core', 'transferable_application'}}
+        if not own <= set(notes['papers']):
+            raise ValueError('Missing reading note for selected inclusion')
+        scoped = {**notes, 'papers': {doi: notes['papers'][doi] for doi in sorted(own)}}
+        part = build_snapshot(run, scoped)['papers.json']
+        for doi, record in w.records.items():
+            if record['window_membership'] != 'in_window':
+                continue
+            value = {'record': record, 'decision': latest[doi]}
+            if doi in candidates and candidates[doi] != value:
+                raise ValueError('Conflicting candidate/assessment across runs: '+doi)
+            candidates[doi] = value
+        for paper in part['papers']:
+            doi = paper['doi']
+            if doi in papers and papers[doi] != paper:
+                raise ValueError('Conflicting inclusion across runs: '+doi)
+            papers[doi] = paper
+        for c in part['coverage']:
+            dois = {doi for doi, r in w.records.items() if r['journal'] == c['journal'] and r['window_membership'] == 'in_window'}
+            if c['journal'] in coverage and (coverage[c['journal']] != c or coverage_dois[c['journal']] != dois):
+                raise ValueError('Conflicting journal coverage across runs: '+c['journal'])
+            coverage[c['journal']] = c
+            coverage_dois[c['journal']] = dois
+        inputs.append({'run': w.out.relative_to(ROOT).as_posix(), 'config_sha256': part['config_sha256'],
+                       'rule_sha256': w.rule_sha, 'screening_log_sha256': w.log.head,
+                       'candidate_sha256': w.input_sha, 'author_metadata_sha256': part['author_metadata_sha256'],
+                       'run_manifest_sha256': hashlib.sha256((w.out/'inputs/manifest.json').read_bytes()).hexdigest(),
+                       'candidate_inventory_complete': part['candidate_inventory_complete'],
+                       'metadata_reconciliation_complete': part['metadata_reconciliation_complete']})
+    if set(notes['papers']) != set(papers):
+        raise ValueError('Notes must match exactly the selected release inclusion union')
+    journals = {j['short']: j for j in display['journals']}
+    used = {v['record']['journal'] for v in candidates.values()} | set(coverage)
+    if not used <= set(journals):
+        raise ValueError('Selected release journal missing from display whitelist')
+    for p in papers.values():
+        j = journals[p['journal_short']]
+        if not set(p['issns']) & set(j['issns']) or p['journal'] != j['name']:
+            raise ValueError('Display journal conflicts with frozen identity')
+        p['featured'] = j['short'] if j['short'] in display['featured_journals'] else None
+        p['retrieved_by'] = ['Explicitly selected journal inventories; DOI-bound reviewed evidence']
+    rows = sorted(papers.values(), key=lambda p: (p['date'], p['doi']), reverse=True)
+    counts = Counter(v['decision']['category'] for v in candidates.values())
+    counts.update({'review': 0, 'deferred_unassessed': 0, 'included': len(rows)})
+    generated = now()
+    complete = all(i['candidate_inventory_complete'] for i in inputs)
+    reconciled = all(i['metadata_reconciliation_complete'] for i in inputs)
+    snapshot = {'generated_at': generated, 'window_start': window[0], 'window_end': window[1],
+        'window_days': (date.fromisoformat(window[1])-date.fromisoformat(window[0])).days+1,
+        'release_kind': 'reviewed_multi_run_snapshot', 'screening_version': VERSION,
+        'config_sha256': digest(display), 'current_rule_sha256': None,
+        'screening_log_sha256': None, 'reading_notes_sha256': digest(notes),
+        'author_metadata_sha256': digest([i['author_metadata_sha256'] for i in inputs]),
+        'run_inputs': inputs, 'author_available_count': sum(p['author_metadata_status']=='available' for p in rows),
+        'source': 'Explicit journal inventory runs and traced screening decisions',
+        'categories': notes['categories'], 'featured_journals': display['featured_journals'],
+        'journals': [{k: j[k] for k in ['name','short','issns']} for j in display['journals'] if j['short'] in used],
+        'coverage': list(coverage.values()), 'candidate_count': len(candidates), 'screening_counts': dict(counts),
+        'published_count': sum(p['publication_status']=='published' for p in rows),
+        'accepted_count': sum(p['publication_status']=='accepted' for p in rows),
+        'candidate_inventory_complete': complete, 'metadata_reconciliation_complete': reconciled,
+        'limitations': ['Fixed date-window trial, not a current 90-day feed.',
+            'Coverage flags preserve source-relative enumeration limits.',
+            'Assistant screening of authorized evidence and explicit user decisions; not full-text expert review.'],
+        'papers': rows}
+    audit = {k:v for k,v in snapshot.items() if k not in {'papers','categories','journals','coverage','featured_journals','source'}}
+    audit['included_assessments'] = [{k:p[k] for k in ['doi','scope_class','publication_status',
+        'assessment_sha256','input_sha256','material_sha256','review_evidence_kind','review_evidence_sha256',
+        'rule_sha256','scope_authority','author_metadata_status','author_metadata_sha256']} for p in rows]
+    status = {'attempted_at': generated, 'ok': True, 'operation': 'publish_existing_reviewed_snapshot',
+        'new_collection_performed': False, 'candidate_inventory_complete': complete,
+        'metadata_reconciliation_complete': reconciled, 'pending_material': 0, 'deferred_unassessed': 0}
+    return {'papers.json': snapshot, 'screening-report.json': audit, 'status.json': status}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', default='site/data')
+    parser.add_argument('--release', default='config/release.json', help='Explicit list of completed run directories')
     parser.add_argument('--check', action='store_true', help='Verify public snapshot matches the audited inputs without rewriting it')
     args = parser.parse_args()
-    artifacts = build_snapshot(ROOT/'reports/2026-09')
+    artifacts = build_release(selected_runs(ROOT/args.release))
     target = ROOT/args.out
     if args.check:
         for name, value in artifacts.items():

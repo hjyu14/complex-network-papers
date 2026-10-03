@@ -16,6 +16,7 @@ from urllib.parse import quote, urlsplit
 from urllib.request import Request, urlopen
 
 from collect_candidates import EventLog, digest, normalized_title, now, plain
+from run_inputs import load_inputs
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'screening-workflow-1'
@@ -214,14 +215,21 @@ class AbstractParser(HTMLParser):
 
 
 class Workflow:
-    def __init__(self, out, allow_rule_change=False):
+    def __init__(self, out):
         self.out = Path(out).resolve()
         self.pool = json.loads((self.out/'candidates.json').read_text(encoding='utf-8'))
         self.records = {r['doi']: r for r in self.pool['records']}
-        self.config = json.loads((ROOT/'config/sources.json').read_text(encoding='utf-8'))
+        if len(self.records) != len(self.pool['records']):
+            raise ValueError('Duplicate DOI in candidate inventory')
+        if not (self.out/'inputs/manifest.json').exists():
+            raise ValueError('Run needs frozen inputs from collection before review or publication')
+        self.config, protocol, self.run_inputs = load_inputs(self.out)
+        if [self.pool['window_start'], self.pool['window_end']] != [self.run_inputs['window_start'], self.run_inputs['window_end']]:
+            raise ValueError('Candidate window differs from frozen run inputs')
+        if any(r['journal'] not in self.run_inputs['journals'] for r in self.records.values()):
+            raise ValueError('Candidate journal outside frozen run selection')
         self.input_sha = hashlib.sha256((self.out/'candidates.json').read_bytes()).hexdigest()
-        self.rule_sha = digest({'protocol': (ROOT/'docs/screening-protocol.md').read_text(encoding='utf-8'),
-                                'config': self.config, 'version': VERSION})
+        self.rule_sha = digest({'protocol': protocol, 'config': self.config, 'version': VERSION})
         self.log = EventLog(self.out/'screening-log.jsonl')
         # Public Crossref permits one simultaneous request. Four paper workers
         # may still overlap requests to different sources.
@@ -231,18 +239,8 @@ class Workflow:
             start = self.log.events[0]['data']
             expected_rule = next((e['data']['rule_sha256'] for e in reversed(self.log.events)
                                   if e['kind'] == 'rules_revised'), start['rule_sha256'])
-            if start['candidate_sha256'] != self.input_sha or (expected_rule != self.rule_sha and not allow_rule_change):
+            if start['candidate_sha256'] != self.input_sha or expected_rule != self.rule_sha:
                 raise ValueError('Fixed input/rules changed; preserve log and create a separate review run')
-
-    def adopt_rules(self):
-        if self.active():
-            raise ValueError('Finish active paper before adopting a workflow revision')
-        old = next((e['data']['rule_sha256'] for e in reversed(self.log.events)
-                    if e['kind'] == 'rules_revised'), self.log.events[0]['data']['rule_sha256'])
-        self.log.add('rules_revised', {'previous_rule_sha256': old, 'rule_sha256': self.rule_sha,
-                     'authorization': 'User requested larger batches and automatic acquisition detection with difficult sources deferred',
-                     'change': 'Acquisition scheduling only; scientific scope, date/type criteria and privacy constraints unchanged; preserve previous assessments and their rule hashes'})
-        return self.status()
 
     def init(self):
         if self.log.events:
@@ -250,17 +248,13 @@ class Workflow:
         inside = [r for r in self.records.values() if r['window_membership'] == 'in_window']
         sample = []
         for j in self.config['journals']:
-            sample.append(min((r for r in inside if r['journal'] == j['short']),
-                              key=lambda r: (r['date'], r['doi']))['doi'])
-        # A declared targeted example checks the semantic boundary; no automatic label.
-        extra = '10.1038/s41467-026-75453-3'
-        if extra not in {r['doi'] for r in inside}:
-            raise ValueError('Expected targeted example is not in fixed window')
-        sample.append(extra)
+            rows = [r for r in inside if r['journal'] == j['short']]
+            if rows:
+                sample.append(min(rows, key=lambda r: (r['date'], r['doi']))['doi'])
         self.log.add('run_started', {'version': VERSION, 'candidate_sha256': self.input_sha,
                      'rule_sha256': self.rule_sha, 'window': [self.pool['window_start'], self.pool['window_end']],
                      'eligible_inventory': len(inside), 'batch_dois': sample,
-                     'selection': 'Earliest (date, doi) per configured journal; plus declared NC network-science example. Not a prevalence sample.',
+                     'selection': 'Earliest (date, doi) per selected nonempty journal. Not a prevalence sample.',
                      'original_sha256': {name: hashlib.sha256((self.out/name).read_bytes()).hexdigest()
                         for name in ['candidates.json', 'coverage.json', 'collection-log.jsonl']}})
 
@@ -729,9 +723,9 @@ class Workflow:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--out', type=Path, default=ROOT/'reports/2026-09')
+    ap.add_argument('--out', type=Path, required=True, help='Explicit review run directory')
     sub = ap.add_subparsers(dest='command', required=True)
-    for cmd in ['init', 'next', 'status', 'export', 'fetch-active', 'adopt-rules']:
+    for cmd in ['init', 'next', 'status', 'export', 'fetch-active']:
         sub.add_parser(cmd)
     p = sub.add_parser('batch')
     p.add_argument('--size', type=int, default=10)
@@ -749,14 +743,12 @@ def main():
     p = sub.add_parser('decide')
     p.add_argument('path', type=Path, help='Reviewer-written JSON; no abstracts')
     args = ap.parse_args()
-    w = Workflow(args.out, allow_rule_change=args.command == 'adopt-rules')
+    w = Workflow(args.out)
     if args.command == 'init':
         w.init()
         result = w.status()
     elif args.command == 'next':
         result = w.next()
-    elif args.command == 'adopt-rules':
-        result = w.adopt_rules()
     elif args.command == 'batch':
         result = w.batch(args.size, args.doi)
     elif args.command == 'collect-batch':

@@ -1,0 +1,138 @@
+{
+  "version": "collection-workflow-1",
+  "status": "bibliographic_collection",
+  "window_days": 90,
+  "initial_trial": {
+    "start": "2026-09-01",
+    "end": "2026-09-30",
+    "backfill_before_start": false
+  },
+  "screening_protocol": "docs/screening-protocol.md",
+  "featured_journals": [
+    "Nature",
+    "Science",
+    "NC",
+    "NMI",
+    "NCS",
+    "PRX",
+    "PRL",
+    "SA",
+    "PNAS"
+  ],
+  "journals": [
+    {
+      "name": "Nature",
+      "short": "Nature",
+      "issns": [
+        "1476-4687",
+        "0028-0836"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/nature/articles",
+        "max_pages": 48
+      }
+    },
+    {
+      "name": "Science",
+      "short": "Science",
+      "issns": [
+        "1095-9203",
+        "0036-8075"
+      ],
+      "collection": {
+        "family": "science",
+        "url": "https://www.science.org/toc/science/current",
+        "max_pages": 1
+      }
+    },
+    {
+      "name": "Nature Communications",
+      "short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/ncomms/articles",
+        "max_pages": 100
+      }
+    },
+    {
+      "name": "Nature Machine Intelligence",
+      "short": "NMI",
+      "issns": [
+        "2522-5839"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/natmachintell/articles",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Nature Computational Science",
+      "short": "NCS",
+      "issns": [
+        "2662-8457"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/natcomputsci/articles",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Physical Review X",
+      "short": "PRX",
+      "issns": [
+        "2160-3308"
+      ],
+      "collection": {
+        "family": "aps",
+        "slug": "prx",
+        "url": "https://journals.aps.org/prx/recent",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Physical Review Letters",
+      "short": "PRL",
+      "issns": [
+        "1079-7114",
+        "0031-9007"
+      ],
+      "collection": {
+        "family": "aps",
+        "slug": "prl",
+        "url": "https://journals.aps.org/prl/recent",
+        "max_pages": 40
+      }
+    },
+    {
+      "name": "Science Advances",
+      "short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "collection": {
+        "family": "science",
+        "url": "https://www.science.org/toc/sciadv/current",
+        "max_pages": 1
+      }
+    },
+    {
+      "name": "Proceedings of the National Academy of Sciences",
+      "short": "PNAS",
+      "issns": [
+        "1091-6490",
+        "0027-8424"
+      ],
+      "collection": {
+        "family": "pnas",
+        "url": "https://www.pnas.org/toc/pnas/current",
+        "max_pages": 1
+      }
+    }
+  ]
+}

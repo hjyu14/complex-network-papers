@@ -1,11 +1,12 @@
-"""Bounded supplementation of the fixed 380-record queue; no semantic classifier."""
+"""Bounded supplementation of a frozen unresolved queue; no semantic classifier."""
 import argparse, copy, json, sys, threading, time
 from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
 from pathlib import Path
 from screen_candidates import Workflow, BufferedLog, digest, now, ROOT
 
-OUT=ROOT/'reports/2026-09'
-WORK=ROOT/'.private/work/supplement-380'
+OUT=None
+WORK=None
+AUTHORIZATION=None
 
 class Supplement(Workflow):
     def fetch(self, channel):
@@ -27,7 +28,12 @@ def batch(w):
     return event['data'],0 if event['data']['phase']=='followup' else event['sequence']
 
 def init(w):
-    if any(e['kind']=='supplement_round_started' for e in w.log.events):return
+    previous = next((e['data'] for e in w.log.events if e['kind']=='supplement_round_started'), None)
+    if previous:
+        manifest = json.loads((WORK/'manifest.json').read_text(encoding='utf-8'))
+        if digest(manifest) != previous['manifest_sha256'] or manifest['candidate_sha256'] != w.input_sha:
+            raise ValueError('Supplement manifest changed or belongs to another run')
+        return
     latest={d['doi']:d for d in w.assessments()}
     deferred=list(dict.fromkeys(e['data']['doi'] for e in w.log.events if e['kind']=='material_deferred' and e['data']['doi'] not in latest))
     reviews=[d['doi'] for d in latest.values() if d['category']=='review']
@@ -36,14 +42,20 @@ def init(w):
         if e['kind']=='source_attempt' and e['data']['doi'] in attempts:attempts[e['data']['doi']].append(e['data'])
     incomplete=[d for d in deferred if not any(a['channel']=='publisher' for a in attempts[d])]
     groups={'incomplete':incomplete,'insufficient':reviews,'aps':[d for d in deferred if d not in incomplete and w.records[d]['journal'] in {'PRL','PRX'}],'other':[d for d in deferred if d not in incomplete and w.records[d]['journal'] not in {'PRL','PRX'}]}
-    assert sum(map(len,groups.values()))==380
+    if not sum(map(len,groups.values())):
+        raise ValueError('No unresolved records to supplement')
+    if not AUTHORIZATION:
+        raise ValueError('Record the actual user authorization before starting supplementation')
     WORK.mkdir(parents=True,exist_ok=True)
     manifest={'groups':groups,'assessment_sha256':{d:digest(latest[d]) for d in reviews},'created_at':now(),'candidate_sha256':w.input_sha}
     (WORK/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    w.log.add('supplement_round_started',{'target_dois':[d for g in groups.values() for d in g],'manifest_sha256':digest(manifest),'groups':{k:len(v) for k,v in groups.items()},'authorization':'User approved fixed 380-record supplementation, ordinary browser access and learning metadata features; scientific scope unchanged'})
+    w.log.add('supplement_round_started',{'target_dois':[d for g in groups.values() for d in g],'manifest_sha256':digest(manifest),'groups':{k:len(v) for k,v in groups.items()},'authorization':AUTHORIZATION})
 
 def begin(w,phase,size):
     manifest=json.loads((WORK/'manifest.json').read_text(encoding='utf-8'))
+    started=next((e['data'] for e in w.log.events if e['kind']=='supplement_round_started'),None)
+    if started and (digest(manifest)!=started['manifest_sha256'] or manifest['candidate_sha256']!=w.input_sha):
+        raise ValueError('Supplement manifest changed or belongs to another run')
     completed={d for e in w.log.events if e['kind']=='supplement_batch_closed' for d in e['data']['dois']}
     starts=[e for e in w.log.events if e['kind']=='supplement_batch_started'];closed={e['data']['batch_id'] for e in w.log.events if e['kind']=='supplement_batch_closed'}
     if any(e['data']['batch_id'] not in closed for e in starts):raise ValueError('Close current supplement batch before advancing')
@@ -129,11 +141,30 @@ def close(w):
     saved={e['data']['doi'] for e in w.log.events if e['kind'] in {'assessment','assessment_corrected'} and e['data'].get('supplement_batch_id')==b['batch_id']}
     w.log.add('supplement_batch_closed',{'batch_id':b['batch_id'],'dois':b['dois'],'decisions_saved':len(saved),'deferred':len(b['dois'])-len(saved)})
 
-if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('command',choices=['init','begin','collect','pack','save','close']);ap.add_argument('--phase',choices=['incomplete','insufficient','aps','other','followup']);ap.add_argument('--size',type=int,default=30);ap.add_argument('--path');a=ap.parse_args();w=workflow()
-    if a.command=='init':init(w)
-    elif a.command=='begin':assert 1<=a.size<=100;begin(w,a.phase,a.size)
-    elif a.command=='collect':collect(w)
-    elif a.command=='pack':pack(w)
-    elif a.command=='save':save(w,a.path)
-    elif a.command=='close':close(w)
+def main():
+    global OUT, WORK, AUTHORIZATION
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('command', choices=['init','begin','collect','pack','save','close'])
+    ap.add_argument('--phase', choices=['incomplete','insufficient','aps','other','followup'])
+    ap.add_argument('--size', type=int, default=30)
+    ap.add_argument('--path')
+    ap.add_argument('--run', required=True, type=Path)
+    ap.add_argument('--authorization', help='Actual task authorization; required for init')
+    args = ap.parse_args()
+    if args.command == 'begin' and (not args.phase or not 1 <= args.size <= 100):
+        ap.error('begin requires a phase and size from 1 to 100')
+    if args.command == 'save' and not args.path:
+        ap.error('save requires --path')
+    OUT = args.run.resolve()
+    WORK = ROOT/'.private/work/supplement'/OUT.relative_to((ROOT/'reports').resolve())
+    AUTHORIZATION = args.authorization
+    w = workflow()
+    if args.command == 'init':init(w)
+    elif args.command == 'begin':begin(w,args.phase,args.size)
+    elif args.command == 'collect':collect(w)
+    elif args.command == 'pack':pack(w)
+    elif args.command == 'save':save(w,args.path)
+    elif args.command == 'close':close(w)
+
+if __name__ == '__main__':
+    main()

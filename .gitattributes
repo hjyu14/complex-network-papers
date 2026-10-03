@@ -3,5 +3,5 @@
 *.json text eol=lf
 *.jsonl text eol=lf
 
-# Preserve the exact bytes referenced by recorded report hashes.
-/reports/2026-09/inclusion-review-55.md -text -eol whitespace=cr-at-eol
+# Frozen rule inputs use exact bytes for audit hashes.
+/reports/**/inputs/* -text -eol whitespace=cr-at-eol
