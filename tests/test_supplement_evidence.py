@@ -43,9 +43,11 @@ class SupplementTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             work = Path(tmp)
             (work/'manifest.json').write_text(json.dumps({'groups': {'aps': ['done', 'review', 'missing']}}))
-            with patch('supplement_evidence.WORK', work): begin(w, 'followup', 100)
-        self.assertEqual(w.log.events[-1]['data']['dois'], ['review', 'missing'])
-        with self.assertRaises(ValueError): begin(w, 'followup', 100)
+            with patch('supplement_evidence.WORK', work):
+                begin(w, 'followup', 100)
+                self.assertEqual(w.log.events[-1]['data']['dois'], ['review', 'missing'])
+                with self.assertRaisesRegex(ValueError, 'Close current supplement batch'):
+                    begin(w, 'followup', 100)
 
     def test_close_separates_saved_decisions_and_explicit_deferrals(self):
         w = object.__new__(Workflow)
