@@ -1,6 +1,6 @@
 # Complex Network Papers · New Workflow
 
-九刊文献工作流的起点。当前已有 NMI 有界书目采集试验，尚无主题筛选器、网站或自动部署。
+九刊文献工作流的起点。当前已执行九刊九月书目采集和来源对照；NC 已知候选的最后一条由用户提供出版截图确认，910 条已有来源或用户核实依据，目录分页稳定性仍未通过。尚无主题筛选器、网站或自动部署。
 
 ## 当前方向
 
@@ -38,13 +38,17 @@ git restore --source=8e0932a2523eeadbee50b4650c4c5ccff6128c8b -- scripts/private
 
 旧保存提交通过 79 项 Python 测试、14 项前端测试及 `node --check site/app.js`。三个历史状态 JSON 文件末尾含字面量 `\n`，按原样保存，不作为新流程输入。本起点仅完成配置和目录检查，没有可运行的采集或网站测试。
 
-## NMI 书目试验
+## 九刊书目采集
 
-入口为 `scripts/collect_nmi.py`，仅登记书目、核对日期与目录覆盖，不读取摘要或进行主题筛选。执行记录见 `docs/nmi-collection-pilot.md`；运行输出使用新目录，不覆盖旧轮次。
+入口复用 NMI 试验程序并更名为 `scripts/collect_candidates.py`，仅登记书目、核对日期与目录覆盖。执行办法、实际数量、未决 DOI 和限制见 `docs/collection-workflow.md`。
+
+本轮只保留三个正式结果文件：`reports/2026-09/candidates.json`（候选）、`coverage.json`（覆盖与差异）、`collection-log.jsonl`（追加证据与执行记录）。`window_membership` 独立于严格字段核对状态；数量核对完成不等于标题／日期字段全部一致，也不等于相关性筛选完成。
 
 ```powershell
 python -m unittest discover -s tests -v
-python -X utf8 scripts/collect_nmi.py --as-of 2026-10-03 --out reports/nmi-2026-09/new-run
+python -X utf8 scripts/collect_candidates.py --as-of 2026-10-03 --out reports/2026-09 --resume
 ```
 
-下一步：根据 NMI 试验结果核验其他期刊的目录渠道，分别适配来源结构。
+恢复会验证完整日志链和当前结果哈希，复用完成的请求；非零退出表示严格核对仍有未决项，应阅读 coverage，不表示结果为空。浏览器转录的官方目录证据已进入日志；当前 Science／SA／PNAS 不支持从空输出目录自动复现浏览器步骤，需要按执行文档补证。NMI 当前恢复复用正式日志中的完整试验证据，新输出按统一流程采集；独立的四个试验 JSON 已按用户授权删除。旧试验文件及入口可从本地提交 `bdfa863` 取回，未推送。
+
+下一步进入材料取得与筛选。全部候选目前为 `not_assessed`；本轮未请求或保存摘要，也未发布。文章发表日期确认、链接失效、目录覆盖执行状态分别保留，不能互相替代。
