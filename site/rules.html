@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Journal coverage, evidence collection, inclusion rules and limitations for the September 2026 network science snapshot.">
+  <title>Inclusion rules · NetSci Observatory</title>
+  <link rel="stylesheet" href="styles.css?v=newflow-1"><script src="i18n.js?v=newflow-1" defer></script>
+</head>
+<body>
+  <header class="masthead wrap"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">N<span>·</span></span><span>NETSCI<br>OBSERVATORY</span></a><div class="header-actions"><a class="quiet-link" href="./" data-en="Back to papers ↗" data-zh="返回文献列表 ↗">Back to papers ↗</a><button id="language-toggle" class="language-toggle" type="button">中文</button></div></header>
+  <main class="wrap rules-article">
+    <article data-language="en">
+      <p class="eyebrow">SCOPE · EVIDENCE · TRACEABILITY</p><h1>How we select papers</h1>
+      <p class="rules-meta">Reviewed September snapshot · Workflow newflow-1 · Updated 3 October 2026</p>
+      <h2>What this snapshot covers</h2>
+      <p>This release covers 1–30 September 2026 from nine whitelisted journals: Nature, Science, Nature Communications, Nature Machine Intelligence, Nature Computational Science, Physical Review X, Physical Review Letters, Science Advances and Proceedings of the National Academy of Sciences. The rolling 90-day feed and daily updates remain future work.</p>
+      <p>The fixed inventory contains 2,822 candidates: 17 included (15 published and 2 accepted), 2,425 excluded, 55 assessed but lacking sufficient material, and 325 without a usable matched abstract and therefore unassessed. The 380 pending candidates are not displayed as included papers. These numbers describe the current reviewed inventory, not proven exhaustive publisher coverage.</p>
+      <h2>Which scientific problems qualify</h2>
+      <ul><li><strong>Core:</strong> network structure and formation, network inference, dynamics on networks, collective behavior, resilience and control, with a concrete network-science question or contribution.</li><li><strong>Transferable application:</strong> a study of a specific system with an explicit transferable network-science method or theoretical contribution. Reusing a domain workflow or testing across species alone does not establish this contribution.</li><li><strong>Excluded:</strong> domain-specific connections, mechanisms or predictive performance without the required network-science relevance. The words network, graph, circuit, synchronization or feedback alone do not justify inclusion. General nonlinear dynamics alone is outside scope.</li><li><strong>Pending:</strong> missing or mismatched material, unresolved metadata or an unsettled scope judgment. An unassessed record is distinguished from a read-but-unresolved record.</li></ul>
+      <p>Boundary cases are explicitly adjudicated. Confirmed examples include Roman road-network organization, contact-network percolation linked to tumor collective motion, and interaction/bias effects in LLM opinion dynamics. These are individual editorial decisions; they do not automatically include every tumor or LLM paper or exclude entire biological, geographic or quantum fields. Materially similar uncertain cases remain pending until resolved.</p>
+      <h2>Evidence collection and actual review</h2>
+      <ol><li><strong>Enumerate the journals:</strong> use whitelisted ISSNs and a fixed date window, without a network-keyword prefilter. Crossref queries are compared with official directories and recorded differences.</li><li><strong>Reuse verified evidence:</strong> check DOI, title, journal identity, source and cached version before requesting material again.</li><li><strong>Try bounded automatic acquisition:</strong> exact-DOI Crossref abstract, then an explicit publisher Abstract section, then exact-DOI OpenAlex abstract reconstruction. Database descriptions and search snippets are not accepted as abstracts.</li><li><strong>Read a closed batch:</strong> use at most four paper acquisition tasks in parallel, respecting tighter source limits (one Crossref request at a time). The primary assistant actually reads the matched abstract and records each decision before the next batch. Rate limits stop new requests; failed or unstarted requests are recorded separately.</li><li><strong>Defer difficult evidence:</strong> records without a usable matched abstract remain unassessed for later ordinary-browser or user-assisted verification. Read-but-insufficient and scope-disputed records retain their distinct reasons.</li><li><strong>Resolve and publish:</strong> scope disputes receive recorded user/editor decisions. Publish only resolved inclusions after identity, type and date checks; independently supported exclusions do not require further irrelevant date/type searches.</li></ol>
+      <h2>Dates, article types and accepted manuscripts</h2>
+      <p>Prefer an explicit first-online publication date, then print date, then published/issued date. Incomplete, future or unresolved conflicting dates cannot qualify an inclusion. Use specific publisher type evidence; a generic journal-article label or accepted status does not establish a research subtype. Preprints, confirmed replies, editorial/news items, corrections and other confirmed non-target types are excluded.</p>
+      <p>Under the confirmed accepted-paper policy, an official accepted identity and complete, matched abstract can support inclusion using a full accepted date. Both accepted manuscripts are visibly marked; their publication date remains unconfirmed and they are counted separately from the 15 published papers. The PRL original-research inference is explicitly based on the official abstract, with the specific subtype still pending. After formal publication, recheck the same DOI, type, publication date and any abstract changes without duplicate inclusion.</p>
+      <h2>Reading notes, topics and spotlight</h2>
+      <p>Each included paper has one short English and Chinese reading note describing its object, method or result and why it is relevant. It is an evidence-based reading guide, not a quality score or a claim of full-text expert review. Titles and author names are not translated. Authors were not requested by the minimal bibliographic query; consult the publisher for the author list.</p>
+      <p>Topics are assigned individually from reviewed evidence and may overlap. “Other” is reserved for papers matching no listed topic. Topic labels do not decide inclusion. The spotlight shows the six newest included papers from Nature Communications, Physical Review X, Science Advances, PNAS and Physical Review Letters; the remaining four journals use the same scientific rules. Accepted dates are marked wherever displayed. Date filters use the snapshot end date, not today.</p>
+      <h2>Traceability, privacy and coverage limits</h2>
+      <p>Each decision retains its DOI, source, reviewer or user authority, rule version, input/material hashes and previous versions. Complete abstracts are stored only in the local, Git-ignored private cache for screening. The public website contains metadata, brief reading notes and source links; it republishes no abstracts, full text or PDFs.</p>
+      <p>Nature Communications directory pagination remains unstable. Its known inventory has targeted verification, but complete publisher coverage is not established. A complete API traversal, a processed fixed pool and successful publication are separate claims. This snapshot preserves these limitations and the 380 pending records; publication does not trigger a new collection or evidence-recovery run.</p>
+    </article>
+    <article data-language="zh" hidden>
+      <p class="eyebrow">科学范围 · 证据取得 · 可追溯性</p><h1>文献如何被收录</h1>
+      <p class="rules-meta">九月审核快照 · 流程 newflow-1 · 更新于 2026 年 10 月 3 日</p>
+      <h2>本次快照的范围</h2>
+      <p>本次发布覆盖 2026 年 9 月 1–30 日的九刊：Nature、Science、Nature Communications、Nature Machine Intelligence、Nature Computational Science、Physical Review X、Physical Review Letters、Science Advances、Proceedings of the National Academy of Sciences。最近 90 天滚动窗口和日更尚未启用。</p>
+      <p>固定候选池共 2822 篇：纳入 17 篇（已发表 15 篇、已接收 2 篇），排除 2425 篇；55 篇已审读但材料不足，325 篇未取得可用的匹配摘要、尚未审读。380 篇待补证记录不作为纳入文献展示。这些数字描述当前候选池的处理状态，不能证明出版社文献已经全部采齐。</p>
+      <h2>科学范围与判断边界</h2>
+      <ul><li><strong>核心网络科学：</strong>网络结构与生成、网络推断、网络上的动力学、集体行为、鲁棒性和控制，须有具体网络科学问题或贡献。</li><li><strong>可迁移应用：</strong>具体系统研究具有明确、可迁移的网络科学方法或理论贡献；领域流程可复用、跨物种验证本身不足以证明这一贡献。</li><li><strong>排除：</strong>未达到所需网络科学相关性的领域连接描述、特定机制或预测表现。network、graph、神经回路、同步、反馈等用语本身不足以支持纳入；一般非线性动力学不单独收录。</li><li><strong>待核查：</strong>材料缺失或错配、元数据冲突、科学范围未决等。尚未审读与已经审读但未决分开记录。</li></ul>
+      <p>边界项留痕裁决。已确认的具体正例包括罗马道路网络组织、接触网络渗流与肿瘤群体运动、大语言模型相互作用和偏置对意见动力学的影响。这些是逐篇编辑裁决，不能推广为肿瘤或LLM文章一律纳入，也不能形成生物、地理或量子领域的永久黑名单。相似但尚有实质疑问的文章继续待裁决。</p>
+      <h2>取证顺序与实际审读</h2>
+      <ol><li><strong>先登记整刊候选：</strong>按白名单ISSN和固定时间窗口查询，不用网络关键词提前裁剪；将Crossref清单与出版社官方目录对照，记录差异。</li><li><strong>优先复用核验缓存：</strong>检查DOI、题名、期刊身份、来源与材料版本，再决定是否需要新请求。</li><li><strong>有界自动取证：</strong>依次尝试Crossref精确DOI的明确abstract、官方页明确Abstract栏目、OpenAlex精确DOI摘要重建。网页description和搜索片段不能冒充摘要。</li><li><strong>批内审读闭合：</strong>最多4个文献取证任务并行，遵守来源更低限额，Crossref同时最多1请求。主代理逐篇实际阅读匹配摘要、保存判断后才进入下一批。限流停止新请求，失败和限流未启动分别留痕。</li><li><strong>难取材料延期：</strong>无可用匹配摘要者保留未审读，后续通过普通浏览器或用户材料补证；已读但材料不足、科学范围争议分别保留具体原因。</li><li><strong>裁决后发布：</strong>科学范围争议由用户／编辑明确裁决并留痕。只有纳入记录通过必要身份、类型、日期检查后才展示；有独立充分依据的排除不再补查无关日期、类型。</li></ol>
+      <h2>日期、文章类型与接收稿</h2>
+      <p>日期优先采用明确首次在线发表日，再采用纸刊日、published/issued日；缺少完整年月日、未来日期或未解决冲突不能支持纳入。类型优先依据官方具体栏目；通用journal-article或接收状态不能证明具体研究子类型。预印本、已确认Reply、新闻／编辑部文章、更正等明确非目标类型排除。</p>
+      <p>沿用已确认接收稿政策：官方接收身份及完整匹配摘要支持收录时，可按完整接收日确定窗口。两篇接收稿均明确显示“已接收，待正式发表”，发表日期保持未确认，与15篇已发表文章分开计数。PRL原创研究性质按官方摘要推断并注明具体子类型待确认。正式发表后按同一DOI补核类型、首次发表日和摘要变化，保留旧记录，避免重复收录。</p>
+      <h2>一句话说明、主题与重点区</h2>
+      <p>每篇提供中英文一句话阅读说明，概括研究对象、方法或结果及网络科学相关性。说明依现有证据撰写，作为阅读指南，不是质量评分，也不称为全文专家审定。标题和作者姓名不翻译；本次最小书目查询未采集作者字段，作者名单以出版方为准。</p>
+      <p>研究主题依据已审读材料逐篇分配，可一文多类；“其他”仅用于未匹配任何主题的文章。主题标签不能决定纳入。重点区展示Nature Communications、Physical Review X、Science Advances、PNAS、Physical Review Letters中最新的六篇纳入记录，另外四刊采用相同科学标准。接收日期在所有展示位置单独标记；日期筛选相对于快照截止日。</p>
+      <h2>留痕、私有材料与覆盖限制</h2>
+      <p>逐篇保留DOI、来源、审读者或用户裁决来源、规则版本、输入／材料哈希及旧判断。完整摘要仅存本地Git忽略的私有缓存，用于审读与复现；网站只展示元数据、简短说明和来源链接，不转载完整摘要、正文或PDF。</p>
+      <p>Nature Communications目录分页仍不稳定，已知候选做过定向核验，尚不能宣称出版社覆盖完整。API遍历完整、固定候选池处理闭合与发布成功是不同层次的结论。本次快照保留这些限制及380篇待补证状态；发布不启动新采集或补证。</p>
+    </article>
+    <div class="method-links"><a href="data/screening-report.json" data-en="Review and coverage audit ↗" data-zh="审核与覆盖记录 ↗">Review and coverage audit ↗</a><a href="data/papers.json" data-en="Public paper snapshot ↗" data-zh="公开文献快照 ↗">Public paper snapshot ↗</a></div>
+  </main><footer class="wrap"><span>NETSCI OBSERVATORY</span><p data-en="Metadata and brief reading notes only; original works belong to their publishers or authors." data-zh="仅展示元数据与简短阅读说明；原文版权归出版方或作者所有。">Metadata and brief reading notes only; original works belong to their publishers or authors.</p></footer>
+</body></html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recent research on complex network structure and dynamics, from a curated journal whitelist.">
+  <meta name="color-scheme" content="light">
+  <title>NetSci Observatory</title>
+  <link rel="stylesheet" href="styles.css?v=newflow-1">
+  <script src="i18n.js?v=newflow-1" defer></script>
+  <script src="app.js?v=newflow-1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#latest" data-en="Skip to papers" data-zh="跳转至文献列表">Skip to papers</a>
+  <header class="masthead wrap">
+    <a class="brand" href="./" aria-label="NetSci Observatory home"><span class="brand-mark" aria-hidden="true">N<span>·</span></span><span>NETSCI<br>OBSERVATORY</span></a>
+    <div class="header-note" data-en="A network science reading list" data-zh="复杂网络文献观察">A network science reading list</div>
+    <div class="header-actions"><a class="quiet-link source-link" href="rules.html" data-en="Inclusion rules ↗" data-zh="项目与收录规则 ↗">Inclusion rules ↗</a><button id="language-toggle" class="language-toggle" type="button">中文</button></div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow" data-en="NETWORK STRUCTURE · DYNAMICS ON NETWORKS" data-zh="网络结构 · 网络上的动力学">NETWORK STRUCTURE · DYNAMICS ON NETWORKS</p>
+        <h1 id="page-title"><span data-en="Complex networks." data-zh="聚焦复杂网络">Complex networks.</span><br><em data-en="Recent research, in focus." data-zh="最新文献观察。">Recent research, in focus.</em></h1>
+        <p class="intro" data-en="Reviewed September 2026 papers from nine journals. Explore network science by topic, journal and publication or accepted date." data-zh="九刊 2026 年 9 月审核快照。按研究主题、期刊及发表或接收日期浏览网络科学文献。">Reviewed September 2026 papers from nine journals. Explore network science by topic, journal and publication or accepted date.</p>
+      </div>
+      <div class="hero-aside">
+        <p class="issue-label" data-en="SEPTEMBER 2026 / REVIEWED" data-zh="2026 年 9 月 / 已审核">SEPTEMBER 2026 / REVIEWED</p>
+        <div class="stat-line"><span data-en="Papers included" data-zh="收录文献">Papers included</span><strong id="total-stat">—</strong></div>
+        <div class="stat-line"><span data-en="Spotlight papers" data-zh="重点期刊文献">Spotlight papers</span><strong id="featured-stat">—</strong></div>
+        <p id="updated" class="update-note">Reading snapshot…</p>
+      </div>
+    </section>
+    <div id="status" class="notice" role="status" aria-live="polite">Loading data…</div>
+    <section class="featured-section" aria-labelledby="featured-title">
+      <div class="section-heading"><div><p class="eyebrow">JOURNAL SPOTLIGHT</p><h2 id="featured-title" data-en="Spotlight · Latest papers" data-zh="重点期刊 · 最新文章">Spotlight · Latest papers</h2></div><button id="featured-all" class="text-button" type="button" data-en="All spotlight papers ↗" data-zh="查看全部重点文献 ↗">All spotlight papers ↗</button></div>
+      <p class="section-caption"><span id="featured-journals"></span><br><span id="featured-order"></span></p>
+      <div id="featured-list" class="featured-grid"><p class="empty">Loading papers…</p></div>
+    </section>
+    <section id="latest" class="browse-section" aria-labelledby="latest-title">
+      <aside class="sidebar">
+        <p class="eyebrow" data-en="EXPLORE BY TOPIC" data-zh="按研究主题浏览">EXPLORE BY TOPIC</p><h2 data-en="Research topics" data-zh="研究主题">Research topics</h2>
+        <p class="filter-heading"><small data-en="Snapshot totals; topics may overlap" data-zh="数量为快照总数，可一文多类">Snapshot totals; topics may overlap</small></p>
+        <nav id="categories" aria-label="Research topics"></nav>
+        <div class="sidebar-note" data-en="This snapshot covers 1–30 September 2026. A rolling 90-day feed and daily updates are not yet enabled." data-zh="本次快照窗口为 2026 年 9 月 1–30 日。最近 90 天滚动窗口与日更尚未启用。">This snapshot covers 1–30 September 2026. A rolling 90-day feed and daily updates are not yet enabled.</div>
+      </aside>
+      <div class="results-column">
+        <div class="section-heading results-heading"><h2 id="latest-title">Latest papers</h2><span class="sort-label" data-en="Publication / accepted date ↓" data-zh="发表／接收日期 ↓">Publication / accepted date ↓</span></div>
+        <div class="toolbar">
+          <label class="search-field"><span class="sr-only" data-en="Search title, author, journal or DOI" data-zh="搜索标题、作者、期刊或 DOI">Search title, author, journal or DOI</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search title, author, journal or DOI" autocomplete="off"></label>
+          <label><span class="sr-only" data-en="Publication window" data-zh="发表时间范围">Publication window</span><select id="period"><option value="30" data-en="Full September snapshot" data-zh="完整九月快照">Full September snapshot</option><option value="7" data-en="Last 7 days of snapshot" data-zh="快照末 7 天">Last 7 days of snapshot</option></select></label>
+        </div>
+        <div class="facet-controls">
+          <label><span data-en="Journal" data-zh="期刊">Journal</span><select id="journal"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option></select></label>
+          <label><span data-en="Journal scope" data-zh="期刊范围">Journal scope</span><select id="scope"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option><option value="featured" data-en="Spotlight journals" data-zh="重点期刊">Spotlight journals</option><option value="other" data-en="Other journals" data-zh="其他期刊">Other journals</option></select></label>
+        </div>
+        <button id="back-all" type="button" class="back-all" hidden data-en="← Back to all papers" data-zh="← 返回全部文献">← Back to all papers</button>
+        <div class="result-meta"><p id="result-count" aria-live="polite">Waiting for data</p><button id="clear" type="button" class="text-button" hidden data-en="Clear filters ×" data-zh="清除筛选 ×">Clear filters ×</button></div>
+        <div id="paper-list"><p class="empty">Loading papers…</p></div>
+        <nav id="pagination" class="pagination" aria-label="Paper pages"></nav>
+      </div>
+    </section>
+    <section class="methodology" aria-labelledby="method-title">
+      <details><summary id="method-title" data-en="How are papers selected?" data-zh="这些文献如何被收录？">How are papers selected?</summary>
+        <div class="method-body">
+          <p data-en="We enumerate the nine journals first, compare publisher and database records, then acquire explicit abstracts and assess each paper. Difficult evidence is deferred; scope disputes receive recorded editorial decisions. Each included paper has a one-sentence reading note; this is abstract screening, not full-text expert review." data-zh="先登记九刊全量候选并对照出版社与数据库，再取得明确摘要、逐篇实际审读。难取材料延期，范围争议留痕裁决；每篇纳入文献附一句话阅读说明。此为摘要辅助筛选，非全文专家审定，摘要不转载。">We enumerate the nine journals first, compare publisher and database records, then acquire explicit abstracts and assess each paper. Difficult evidence is deferred; scope disputes receive recorded editorial decisions. Each included paper has a one-sentence reading note; this is abstract screening, not full-text expert review.</p>
+          <p id="coverage-summary"></p>
+          <div class="method-links"><a href="rules.html" data-en="Read the full inclusion policy ↗" data-zh="阅读完整收录规则 ↗">Read the full inclusion policy ↗</a><a href="data/papers.json" data-en="Snapshot and query report ↗" data-zh="论文快照与查询报告 ↗">Snapshot and query report ↗</a><a href="data/status.json" data-en="Collection status ↗" data-zh="最近采集状态 ↗">Collection status ↗</a></div>
+        </div>
+      </details>
+    </section>
+  </main>
+  <footer class="wrap"><span>NETSCI OBSERVATORY</span><p data-en="Metadata: Crossref and verified publisher evidence · Original works belong to their publishers or authors." data-zh="元数据来自 Crossref 及经核验的出版方证据 · 原文版权归出版方或作者所有">Metadata: Crossref and verified publisher evidence · Original works belong to their publishers or authors.</p></footer>
+  <noscript><p class="wrap">JavaScript is required for filtering. / 文献筛选需要 JavaScript。 <a href="data/papers.json">Raw data / 原始数据</a></p></noscript>
+</body>
+</html>

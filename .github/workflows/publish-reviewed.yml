@@ -1,0 +1,53 @@
+name: Publish reviewed snapshot
+
+on:
+  push:
+    branches: [codex/new-workflow]
+    paths:
+      - 'site/**'
+      - 'config/**'
+      - 'docs/screening-protocol.md'
+      - 'reports/2026-09/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/publish-reviewed.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: literature-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify reviewed data and interface
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/publish_snapshot.py --check
+          node --check site/app.js
+          node --test tests/test_app.cjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
