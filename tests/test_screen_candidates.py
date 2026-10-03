@@ -64,6 +64,36 @@ class EvidenceTests(unittest.TestCase):
         bad.feed(html.replace('DOI: https://doi.org/10.1103/example', 'No labelled DOI'))
         self.assertEqual(bad.material(url)['doi'], '')
 
+    def test_aps_footer_identity_and_clean_abstract(self):
+        html = ('<meta name="citation_doi" content="10.1103/example">'
+                '<meta name="citation_title" content="A study">'
+                '<meta name="citation_journal_title" content="Physical Review Letters">'
+                '<h1>A study</h1><p>DOI: 10.1103/example</p>'
+                '<section id="abstract-section"><h2>Abstract</h2>'
+                '<div id="abstract-section-content"><p>Actual abstract.</p><ul><li>PHYSH inner label</li></ul></div>'
+                '<div class="figure-band">View figure</div><dialog>Close Next</dialog>'
+                '<ul><li>PHYSH label</li></ul></section><footer>ISSN 1079-7114</footer>')
+        parser = s.AbstractParser(); parser.feed(html)
+        m = parser.material('https://journals.aps.org/prl/abstract/10.1103/example')
+        self.assertEqual(m['abstract'], 'Actual abstract.')
+        self.assertEqual(m['issns'], ['1079-7114'])
+        for bad in [html.replace('Physical Review Letters', 'Wrong journal'),
+                    html.replace('DOI: 10.1103/example', 'DOI: 10.1103/wrong'),
+                    html.replace('<h1>A study</h1>', '<h1>Wrong title</h1>')]:
+            parser = s.AbstractParser(); parser.feed(bad)
+            self.assertEqual(parser.material('https://journals.aps.org/prl/abstract/10.1103/example')['issns'], [])
+
+    def test_aps_accepted_math_uses_primary_h1_without_loosening_candidate_match(self):
+        parser=s.AbstractParser()
+        parser.feed('<head><title>Physical Review Letters - Accepted Paper: Material BiFeO</title></head>'
+                    '<h1>Physical Review Letters</h1><h1>Material BiFeO3</h1>'
+                    '<p>DOI: 10.1103/math</p><section id="abstract-section"><p>Actual abstract.</p></section>'
+                    '<footer>ISSN 1079-7114</footer>')
+        m=parser.material('https://journals.aps.org/prl/accepted/10.1103/math')
+        self.assertEqual(m['title'],'Material BiFeO3')
+        with self.assertRaises(ValueError):
+            s.validate_identity(m,{'doi':'10.1103/math','title':'Different material','issns':['1079-7114']})
+
     def test_gate_resume_and_public_abstract_guard(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -236,6 +266,50 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(state['peak'], 1)
         self.assertTrue(all(w.log.events[-1]['data']['request_limits']['x-concurrency-limit'] == '1'
                             for w in workers))
+
+
+    def test_short_comment_requires_bound_identity_source_and_type(self):
+        r = {**self.r, 'journal': 'Test journal'}
+        obs = {**r, 'source_url': 'https://example.org/comment', 'article_type': 'Commentary',
+               'explicit_abstract_absent': True, 'identity_verified': True,
+               'full_visible_comment_read': True}
+        def check(change=None, bound=True):
+            o = {**obs, **(change or {})}; o['evidence_sha256'] = s.digest(o)
+            w = object.__new__(s.Workflow); w.records = {r['doi']: r}
+            w.collection_doi = r['doi']; w.log = s.BufferedLog([])
+            w.log.add('short_comment_reviewed', o)
+            w.current_material = lambda: None; w.status = lambda: {}
+            w.rule_sha = 'rule'; w.input_sha = 'input'
+            d = {'doi': r['doi'], 'category': 'excluded', 'reason': 'Domain argument.',
+                 'evidence_summary': 'Domain argument.', 'reviewer': 'actual reviewer',
+                 'sources': [obs['source_url']], 'hard_checks': {
+                     'identity': {'status': 'verified', 'evidence_sha256': o['evidence_sha256'] if bound else 'wrong'},
+                     'type': {'status': 'verified', 'value': 'Commentary'},
+                     'date': {'status': 'not_required_for_scope_exclusion'}}}
+            w.decide(d); return w.log.events[-1]['data']
+        result = check()
+        self.assertIsNone(result['material_sha256'])
+        self.assertIn('short comment', result['review_basis'])
+        for change in [{'title': 'Other paper'}, {'journal': 'Other journal'}, {'issns': []},
+                       {'source_url': 'https://other.org/comment'}, {'article_type': 'Article'},
+                       {'full_visible_comment_read': False}]:
+            with self.subTest(change=change), self.assertRaises(ValueError): check(change)
+        with self.assertRaises(ValueError): check(bound=False)
+
+    def test_author_abstract_exception_cannot_expand_to_other_records(self):
+        r = {**self.r, 'doi': '10.1103/lvpn-gblk'}
+        authors = [f'Author {i}' for i in range(13)]
+        link = {'official_source_url': 'https://journals.aps.org/prl/accepted/10.1103/lvpn-gblk',
+                'source_title': r['title'], 'official_authors': authors,
+                'source_authors': authors, 'authorized_use': 'scope_exclusion_only'}
+        m = {**self.m, 'doi': r['doi'], 'source_url': 'https://arxiv.org/abs/2609.09615v1',
+             'abstract_basis': 'arxiv.Abstract/user_authorized_single_record', 'identity_link': link}
+        s.validate_material(m, r)
+        for changed in [{**m, 'source_url': 'https://arxiv.org/abs/other'},
+                        {**m, 'identity_link': {**link, 'source_authors': authors[:-1]}}]:
+            with self.assertRaises(ValueError): s.validate_material(changed, r)
+        with self.assertRaises(ValueError):
+            s.validate_material({**m, 'doi': self.r['doi']}, self.r)
 
 
 if __name__ == '__main__':

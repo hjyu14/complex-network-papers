@@ -1,6 +1,6 @@
 {
   "version": "newflow-publication-1",
-  "basis": "Themes and bilingual one-sentence reading notes assigned individually from the fixed, reviewed abstracts; not an automated classifier or quality rating.",
+  "basis": "Themes and bilingual one-sentence notes assigned individually from reviewed abstracts, explicit excerpts or authorized online short-comment review; not an automated classifier or quality rating.",
   "categories": [
     {
       "id": "network_structure",
@@ -167,6 +167,35 @@
       "note_en": "Quantifies interaction and systematic-bias contributions to opinion shifts and shared attractors in LLM-agent discussions.",
       "note_zh": "量化大语言模型讨论中相互作用与系统偏置对意见变化及共同吸引子的影响。",
       "assessment_sha256": "6a3f0cfeec5af133f479560dade353bf8c1c0a63faeabbe37c5e58c365e32d76"
+    },
+    "10.1103/61hq-rs8x": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_en": "Compares synchronization criticality on complete graphs and locally coupled lattices, linking dimension and symmetry to universality classes.",
+      "note_zh": "比较完全图与局部耦合晶格上的同步临界性，研究维度和对称性如何影响普适类。",
+      "review_evidence_kind": "abstract",
+      "assessment_sha256": "770b573869592e53a9051878f356b0edd28f1f18744e386ddcf1295a9ea8757f"
+    },
+    "10.1126/science.aek9090": {
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "note_en": "Discusses when noise and parameter heterogeneity can stabilize interacting groups, connecting oscillator synchronization and power grids.",
+      "note_zh": "评论噪声与参数异质性何时有助于集体稳定，连接振子同步、电网与相互作用系统。",
+      "review_evidence_kind": "abstract_excerpt",
+      "date_source": "published",
+      "assessment_sha256": "8fd169d7fbb256ceb88d708707dc6f6f21f7760df3a67e0441d83a0838bd3e5c"
+    },
+    "10.1073/pnas.2622915123": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_en": "Connects biological transport and bus networks through resource-constrained optimization, adaptive conductance, and tree or loop organization.",
+      "note_zh": "以资源约束优化连接生物输运与公交网络，评论导流自适应以及树、环结构的形成。",
+      "review_evidence_kind": "online_short_comment",
+      "assessment_sha256": "9ca60d42987a03f26b11bc44eea9d0ab04ed5caaea0335c5dff74879abb3c5c7"
     }
   }
 }

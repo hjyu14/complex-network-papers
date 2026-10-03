@@ -171,14 +171,14 @@ test('published artifact has consistent rules, date bounds, counts and unique DO
   assert.equal(audit.metadata_reconciliation_complete, false);
   assert.equal(data.papers.length, data.screening_counts.included);
   assert.equal(data.candidate_count, 2822);
-  assert.equal(audit.included_assessments.length, 17);
+  assert.equal(audit.included_assessments.length, 20);
   assert.equal(new Set(data.papers.map(p => p.doi)).size, data.papers.length);
   assert.ok(data.papers.every(p => p.date >= data.window_start && p.date <= data.window_end && !('abstract' in p)));
   assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 30);
   assert.equal(data.coverage.length,9);
   assert.equal(data.coverage.find(q => q.journal === 'NC').candidate_inventory_complete,false);
   assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed, 2822);
-  assert.equal(data.published_count,15);
+  assert.equal(data.published_count,18);
   assert.equal(data.accepted_count,2);
 });
 
@@ -204,7 +204,7 @@ test('research method controls and annotations are absent', () => {
   assert.doesNotMatch(source, /state\.method|renderMethods|methodLabel/);
   assert.equal(data.screening_version, 'newflow-1');
   assert.ok(data.papers.every(p => !('methods' in p) && !('method_evidence' in p)));
-  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, 15);
+  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, 18);
   assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, 2);
 });
 
@@ -250,13 +250,13 @@ test('public export has notes for exactly the current included DOIs and preserve
 });
 
 
-test('all nine journals and all 17 inclusions are in spotlight with traced authors', () => {
+test('all nine journals and all 20 inclusions are in spotlight with traced authors', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   const metadata=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09/author-metadata.json'),'utf8'));
   assert.equal(data.featured_journals.length,9);
   assert.deepEqual([...data.featured_journals].sort(),config.journals.map(j=>j.short).sort());
-  assert.equal(data.papers.filter(p=>p.featured).length,17);
-  assert.equal(data.author_available_count,17);
+  assert.equal(data.papers.filter(p=>p.featured).length,20);
+  assert.equal(data.author_available_count,20);
   for(const p of data.papers) {
     const row=metadata.records[p.doi];
     assert.deepEqual(p.authors,row.authors);
@@ -275,4 +275,22 @@ test('short byline preserves the full ordered author list and source in expanded
   const details=card.children.at(-1);
   assert.ok(details.children.some(n=>n.textContent==='All authors: One · Two · Three · Four · Five'));
   assert.ok(details.children.some(n=>n.href==='https://example.org/authors'));
+});
+
+test('commentary review and abstract excerpt are distinguished in both languages', async () => {
+  const {context,node}=setup(); await ready();
+  for (const [kind,pattern] of [['online_short_comment',/no-abstract scientific commentary/],['abstract_excerpt',/explicit Abstract excerpt/]]) {
+    const card=vm.runInContext(`paperCard({...state.papers[0],review_evidence_kind:${JSON.stringify(kind)},article_type:"Commentary"})`,context);
+    assert.ok(card.children.at(-1).children.some(n=>pattern.test(n.textContent)));
+  }
+  node('#language-toggle').events.click();
+  const card=vm.runInContext('paperCard({...state.papers[0],review_evidence_kind:"online_short_comment",article_type:"Commentary"})',context);
+  assert.ok(card.children.at(-1).children.some(n=>/在线实际审读无摘要/.test(n.textContent)));
+  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  const comment=data.papers.find(p=>p.doi==='10.1073/pnas.2622915123');
+  assert.equal(comment.material_sha256,null);
+  assert.equal(comment.review_evidence_kind,'online_short_comment');
+  assert.ok(comment.review_evidence_sha256 && comment.evidence_url);
+  assert.equal(data.screening_counts.review,0);
+  assert.equal(data.screening_counts.deferred_unassessed,0);
 });

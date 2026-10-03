@@ -61,12 +61,41 @@ def validate_identity(m, r):
         raise ValueError('Whitelist ISSN mismatch')
 
 
+def validate_short_comment_review(short_review, r, decision):
+    doi = r['doi']
+    payload = {k:v for k,v in short_review.items() if k != 'evidence_sha256'}
+    if digest(payload) != short_review.get('evidence_sha256'):
+        raise ValueError('Short comment observation hash mismatch')
+    if (short_review.get('doi') != doi or short_review.get('title') != r['title']
+            or short_review.get('journal') != r['journal']
+            or not set(short_review.get('issns', [])) & set(r['issns'])
+            or short_review.get('source_url') not in decision.get('sources', [])
+            or decision['hard_checks']['identity'].get('evidence_sha256') != short_review['evidence_sha256']
+            or decision['hard_checks']['type'].get('value') != short_review.get('article_type')):
+        raise ValueError('Short comment identity, source, type and decision evidence hash must match')
+    if not (short_review.get('full_visible_comment_read') and short_review.get('identity_verified')
+            and short_review.get('explicit_abstract_absent')
+            and short_review.get('article_type') in {'Commentary','Perspective','Comment','Introduction','Letter','Correspondence','World View','Essay','Opinion','Expert Voices','Policy Forum','Matters Arising'}):
+        raise ValueError('Short comment exception requires actual complete accessible review and verified identity/type')
+    safe_url(short_review['source_url'])
+
+
 def validate_material(m, r):
     validate_identity(m, r)
     if m.get('abstract_basis') not in {
             'crossref.abstract', 'publisher.Abstract', 'publisher.Abstract/browser',
-            'openalex.abstract_inverted_index'}:
+            'openalex.abstract_inverted_index', 'arxiv.Abstract/user_authorized_single_record'}:
         raise ValueError('Not an explicit abstract field/section')
+    if m.get('abstract_basis') == 'arxiv.Abstract/user_authorized_single_record':
+        link = m.get('identity_link', {})
+        if (r['doi'] != '10.1103/lvpn-gblk'
+                or m.get('source_url') != 'https://arxiv.org/abs/2609.09615v1'
+                or link.get('official_source_url') != 'https://journals.aps.org/prl/accepted/10.1103/lvpn-gblk'
+                or normalized_title(link.get('source_title')) != normalized_title(r['title'])
+                or len(link.get('official_authors', [])) != 13
+                or link.get('official_authors') != link.get('source_authors')
+                or link.get('authorized_use') != 'scope_exclusion_only'):
+            raise ValueError('Author abstract exception is limited to the single authorized DOI and matched author/title record')
     safe_url(m['source_url'])
     if not m.get('retrieved_at'):
         raise ValueError('Missing retrieval time')
@@ -102,6 +131,7 @@ class AbstractParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.stack, self.text, self.meta = [], [], {}
+        self.aps_content, self.in_aps_content = [], False
         self.page_title, self.headings, self.visible_dois, self.visible_issns = [], [], set(), set()
 
     def handle_starttag(self, tag, attrs):
@@ -116,8 +146,10 @@ class AbstractParser(HTMLParser):
         explicit = (a.get('data-title', '').lower() == 'abstract'
                     or a.get('id', '').lower() in {'abs1', 'abstract', 'abstract-section'}
                     or 'abstract' in a.get('class', '').split())
-        blocked = tag in {'script', 'style', 'h2', 'h3'}
-        self.stack.append((tag, explicit, blocked))
+        if a.get('id') == 'abstract-section-content':
+            self.in_aps_content = True
+        blocked = tag in {'script', 'style', 'h2', 'h3', 'dialog'}
+        self.stack.append((tag, explicit, blocked, a.get('id') == 'abstract-section-content'))
         if tag == 'h1':
             self.headings.append('')
 
@@ -125,6 +157,7 @@ class AbstractParser(HTMLParser):
         for i in range(len(self.stack)-1, -1, -1):
             if self.stack[i][0] == tag:
                 del self.stack[i:]
+                self.in_aps_content = any(s[3] for s in self.stack)
                 break
 
     def handle_data(self, text):
@@ -138,6 +171,8 @@ class AbstractParser(HTMLParser):
             self.visible_issns.update(re.findall(r'ISSN\s+(\d{4}-[\dXx]{4})', text))
         if any(s[1] for s in self.stack) and not any(s[2] for s in self.stack):
             self.text.append(text)
+            if self.in_aps_content and any(s[0] == 'p' for s in self.stack):
+                self.aps_content.append(text)
 
     def material(self, url):
         def first(key):
@@ -147,7 +182,7 @@ class AbstractParser(HTMLParser):
                 'article_type': first('citation_article_type') or first('dc.type'),
                 'published_date': first('citation_online_date') or first('citation_publication_date'),
                 'source_url': url, 'abstract_basis': 'publisher.Abstract',
-                'abstract': plain(' '.join(self.text)), 'retrieved_at': now()}
+                'abstract': plain(' '.join(self.aps_content if self.aps_content else self.text)), 'retrieved_at': now()}
         # APS accepted pages have no citation meta. Require visible DOI, journal/page
         # title, article heading and footer ISSN together; URL alone is insufficient.
         p = urlsplit(url)
@@ -159,10 +194,22 @@ class AbstractParser(HTMLParser):
             journal, doi = journals[match[1]], match[2].lower()
             prefix = journal+' - Accepted Paper: '
             if page_title.startswith(prefix) and journal in headings and doi in {d.lower() for d in self.visible_dois}:
-                title = page_title.removeprefix(prefix)
-                if title in headings and self.visible_issns:
+                # The HTML title may omit math (isotopes/subscripts). Use the
+                # actual primary article h1; downstream candidate matching remains mandatory.
+                title = headings[1] if len(headings)>1 and headings[0]==journal else ''
+                if title and self.visible_issns:
                     material.update(doi=doi, title=title, issns=sorted(self.visible_issns),
-                                    identity_basis='APS accepted-page title, visible DOI, article heading and footer ISSN')
+                                    identity_basis='APS accepted-page journal/title prefix, visible DOI, primary article h1 and footer ISSN')
+        # Regular APS pages omit citation_issn but expose the journal ISSN in
+        # their footer. Require the explicit journal metadata and matching DOI/title.
+        if not material['issns'] and p.hostname == 'journals.aps.org':
+            expected = {'prl': 'Physical Review Letters', 'prx': 'Physical Review X'}
+            part = p.path.split('/')[1] if len(p.path.split('/')) > 1 else ''
+            if (first('citation_journal_title') == expected.get(part)
+                    and material['doi'] in self.visible_dois
+                    and plain(material['title']) in headings and self.visible_issns):
+                material.update(issns=sorted(self.visible_issns),
+                                identity_basis='Explicit APS citation DOI/title/journal plus visible footer ISSN')
         return material
 
 
@@ -441,7 +488,7 @@ class Workflow:
         previous = [e['data']['channel'] for e in self.log.events
                     if e['kind'] == 'source_attempt' and e['data']['doi'] == r['doi']]
         order = ['cache', 'crossref', 'publisher', 'openalex']
-        if channel in previous or previous != order[:order.index(channel)]:
+        if not getattr(self, 'authorized_supplement_route', False) and (channel in previous or previous != order[:order.index(channel)]):
             raise ValueError('Use each channel once in cache, crossref, publisher, openalex order')
         if channel == 'cache':
             if getattr(self, 'fresh_network', False):
@@ -526,6 +573,7 @@ class Workflow:
             if not m.get('abstract'):
                 self.attempt(channel, url, 'no_explicit_abstract', http_status=code, final_host=final_host,
                              request_limits=response_limits,
+                             verified_metadata={k:m.get(k) for k in ['doi','title','issns','article_type','published_date']},
                              next_reason='Try next authorized channel; absence is not scope exclusion')
                 return {'result': 'no_explicit_abstract'}
             m['abstract_sha256'] = sha(m['abstract'])
@@ -595,9 +643,17 @@ class Workflow:
         for key in ['identity', 'type', 'date']:
             if not decision.get('hard_checks', {}).get(key):
                 raise ValueError('Record identity, type and date checks separately')
-        if not m and not (category == 'review' or
+        short_review = next((e['data'] for e in reversed(self.log.events)
+                             if e['kind'] == 'short_comment_reviewed' and e['data']['doi'] == doi), None)
+        if m or category == 'review' or decision.get('exclusion_basis') == 'publisher_non_target_type':
+            short_review = None
+        if short_review:
+            validate_short_comment_review(short_review, r, decision)
+        if not m and not (short_review or category == 'review' or
                          (category == 'excluded' and decision.get('exclusion_basis') == 'publisher_non_target_type')):
             raise ValueError('Topic exclusion/inclusion requires an explicit abstract')
+        if m and m.get('abstract_basis') == 'arxiv.Abstract/user_authorized_single_record' and category not in {'excluded', 'review'}:
+            raise ValueError('Single author-abstract exception does not authorize inclusion or publication checks')
         if category in {'core', 'transferable_application'}:
             if not decision.get('screening_summary'):
                 raise ValueError('Included papers require a screening summary')
@@ -625,7 +681,9 @@ class Workflow:
                      'material_sha256': digest(m) if m else None,
                      'abstract_sha256': m['abstract_sha256'] if m else None,
                      'material_source': m['source_url'] if m else None,
-                     'review_basis': ('title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review'
+                     'review_basis': ('official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening'
+                                      if short_review and not m else 'title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review'
+                                      if m and m.get('abstract_basis') != 'arxiv.Abstract/user_authorized_single_record' else 'user-authorized single-record author abstract; matched title/all authors, accepted-version equivalence unverified; scope exclusion only'
                                       if m else 'title and bibliographic/type evidence only; no abstract reviewed')})
         return self.status()
 
@@ -633,7 +691,7 @@ class Workflow:
         results = self.assessments()
         return {'active_doi': self.active(), 'assessed': len(results),
                 'not_assessed': sum(r['window_membership'] == 'in_window' for r in self.records.values())-len(results),
-                'deferred_unassessed': len({e['data']['doi'] for e in self.log.events if e['kind'] == 'material_deferred'}),
+                'deferred_unassessed': len({e['data']['doi'] for e in self.log.events if e['kind'] == 'material_deferred'} - {d['doi'] for d in results}),
                 'categories': dict(Counter(r['category'] for r in results)), 'log_sha256': self.log.head}
 
     def assessments(self):

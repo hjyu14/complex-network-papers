@@ -6,7 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 from urllib.parse import quote, urlparse
-from screen_candidates import Workflow, digest, now
+from screen_candidates import Workflow, digest, now, validate_short_comment_review
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'newflow-1'
@@ -64,7 +64,19 @@ def build_snapshot(out):
         if d['input_sha256'] != digest({'record': r, 'material_sha256': d['material_sha256'],
                 'hard_checks': d['hard_checks'], 'rule_sha256': d['rule_sha256']}):
             raise ValueError('Assessment input hash mismatch')
-        if not d['material_sha256'] or any(d['hard_checks'][k]['status'] != 'verified'
+        evidence_kind = n.get('review_evidence_kind', 'abstract')
+        if evidence_kind not in {'abstract', 'abstract_excerpt', 'online_short_comment'}:
+            raise ValueError('Unknown reviewed evidence kind')
+        short_review = None
+        if not d['material_sha256']:
+            short_review = next((e['data'] for e in reversed(w.log.events)
+                if e['kind'] == 'short_comment_reviewed' and e['data']['doi'] == d['doi']), None)
+            if not short_review or evidence_kind != 'online_short_comment':
+                raise ValueError('Inclusion without an abstract requires a verified online short-comment review')
+            validate_short_comment_review(short_review, r, d)
+        elif evidence_kind == 'online_short_comment':
+            raise ValueError('Do not relabel an abstract assessment as a no-abstract comment review')
+        if any(d['hard_checks'][k]['status'] != 'verified'
                 for k in ['identity', 'type', 'date']):
             raise ValueError('Inclusion lacks resolved evidence/checks')
         cats = n['categories']
@@ -80,7 +92,7 @@ def build_snapshot(out):
         journal = journals[r['journal']]
         if not set(r['issns']) & set(journal['issns']):
             raise ValueError('Whitelist ISSN mismatch')
-        authority = d.get('scope_authority', 'assistant_abstract_screening')
+        authority = d.get('scope_authority', 'assistant_online_short_comment_screening' if short_review else 'assistant_abstract_screening')
         authority_hash = None
         lineage = d
         visited = set()
@@ -94,14 +106,15 @@ def build_snapshot(out):
             if not previous or previous['category'] != d['category'] or previous['material_sha256'] != d['material_sha256']:
                 break
             lineage = previous
-        official_url = check.get('source_url') or d['material_source']
+        evidence_url = short_review['source_url'] if short_review else d['material_source']
+        official_url = check.get('source_url') or evidence_url
         url = official_url if accepted else 'https://doi.org/'+d['doi']
         papers.append({'doi': d['doi'], 'url': url, 'title': r['title'], 'authors': a['authors'],
             'author_metadata_status': a['status'], 'author_metadata_sha256': a['metadata_sha256'],
             'author_source_url': a.get('source_url'), 'author_retrieved_at': a.get('retrieved_at'),
             'author_basis': a.get('basis'), 'journal': journal['name'],
             'journal_short': journal['short'], 'issns': r['issns'],
-            'date': value, 'date_source': 'publisher.accepted' if accepted else 'published-online',
+            'date': value, 'date_source': 'publisher.accepted' if accepted else n.get('date_source', 'published-online'),
             'date_provenance': check, 'publication_status': 'accepted' if accepted else 'published',
             'accepted_date': value if accepted else None, 'published_date': None if accepted else value,
             'article_type': d['hard_checks']['type'].get('value'),
@@ -109,11 +122,13 @@ def build_snapshot(out):
             'scope_class': d['category'], 'note_en': n['note_en'], 'note_zh': n['note_zh'],
             'scope_authority': authority, 'editorial_support_sha256': authority_hash,
             'assessment_sha256': digest(d), 'input_sha256': d['input_sha256'],
-            'material_sha256': d['material_sha256'], 'rule_sha256': d['rule_sha256'],
+            'material_sha256': d['material_sha256'],
+            'review_evidence_kind': evidence_kind, 'review_basis': d['review_basis'],
+            'review_evidence_sha256': short_review['evidence_sha256'] if short_review else d['material_sha256'], 'rule_sha256': d['rule_sha256'],
             'featured': journal['short'] if journal['short'] in w.config['featured_journals'] else None,
             'evidence': [d['evidence_summary']], 'metadata_url': 'https://api.crossref.org/works/'+quote(d['doi'], safe=''),
-            'evidence_url': d['material_source'], 'source': 'Crossref and verified publisher/user evidence',
-            'retrieved_by': ['Fixed September journal inventory; DOI-bound abstract review'],
+            'evidence_url': evidence_url, 'source': 'Crossref and verified publisher/user evidence',
+            'retrieved_by': ['Fixed September journal inventory; DOI-bound '+('authorized online short-comment review' if short_review else 'explicit abstract excerpt review' if evidence_kind=='abstract_excerpt' else 'abstract review')],
             'screening_version': VERSION})
     papers.sort(key=lambda p: (p['date'], p['doi']), reverse=True)
     coverage = json.loads((w.out/'coverage.json').read_text(encoding='utf-8'))
@@ -128,7 +143,7 @@ def build_snapshot(out):
     candidate_count = sum(r['window_membership'] == 'in_window' for r in w.records.values())
     if sum(counts.values())+deferred != candidate_count:
         raise ValueError('Candidate accounting incomplete')
-    counts.update({'deferred_unassessed': deferred, 'included': len(papers)})
+    counts.update({'deferred_unassessed': deferred, 'review': counts['review'], 'included': len(papers)})
     generated_at = now()
     snapshot = {'generated_at': generated_at, 'window_start': w.pool['window_start'],
         'window_end': w.pool['window_end'], 'window_days': 30, 'release_kind': 'reviewed_september_snapshot',
@@ -136,7 +151,7 @@ def build_snapshot(out):
         'screening_log_sha256': w.log.head, 'reading_notes_sha256': digest(notes),
         'author_metadata_sha256': author_hash,
         'author_available_count': sum(p['author_metadata_status'] == 'available' for p in papers),
-        'source': 'Fixed nine-journal September inventory and traced abstract/editorial assessments',
+        'source': 'Fixed nine-journal September inventory and traced abstract, short-comment and editorial assessments',
         'categories': notes['categories'], 'featured_journals': w.config['featured_journals'],
         'journals': [{'name': j['name'], 'short': j['short'], 'issns': j['issns']} for j in w.config['journals']],
         'coverage': compact_coverage, 'candidate_count': candidate_count,
@@ -146,8 +161,8 @@ def build_snapshot(out):
         'metadata_reconciliation_complete': coverage['nine_journal_reconciliation_complete'],
         'limitations': ['September 2026 trial, not a current 90-day feed.',
             'Nature Communications directory pagination remains unstable; complete publisher coverage is not established.',
-            '55 material-insufficient and 325 unassessed records remain undisplayed.',
-            'Abstract-based assistant screening and explicit user scope decisions; not full-text expert review.',
+            f'{candidate_count} fixed candidates assessed; {counts["review"]} unresolved and {deferred} unassessed.',
+            'Assistant screening from explicit abstracts/excerpts or authorized online short comments, plus explicit user scope decisions; not full-text expert review.',
             'Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred.'], 'papers': papers}
     audit = {k: snapshot[k] for k in ['generated_at', 'window_start', 'window_end', 'screening_version',
         'config_sha256', 'current_rule_sha256', 'screening_log_sha256', 'reading_notes_sha256',
@@ -155,7 +170,7 @@ def build_snapshot(out):
         'screening_counts', 'candidate_count', 'published_count', 'accepted_count',
         'candidate_inventory_complete', 'metadata_reconciliation_complete', 'limitations']}
     audit['included_assessments'] = [{k: p[k] for k in ['doi', 'scope_class', 'publication_status',
-        'assessment_sha256', 'input_sha256', 'material_sha256', 'rule_sha256', 'scope_authority', 'author_metadata_status', 'author_metadata_sha256']} for p in papers]
+        'assessment_sha256', 'input_sha256', 'material_sha256', 'review_evidence_kind', 'review_evidence_sha256', 'rule_sha256', 'scope_authority', 'author_metadata_status', 'author_metadata_sha256']} for p in papers]
     status = {'attempted_at': generated_at, 'ok': True, 'operation': 'publish_existing_reviewed_snapshot',
         'new_collection_performed': False, 'candidate_inventory_complete': snapshot['candidate_inventory_complete'],
         'metadata_reconciliation_complete': snapshot['metadata_reconciliation_complete'],

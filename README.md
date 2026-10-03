@@ -205,3 +205,21 @@ Pages从`codex/new-workflow`的`site/`发布，入口为`.github/workflows/publi
 ## 九刊 Spotlight 与作者补充（2026-10-03）
 
 用户确认九刊全部列入Spotlight，因此全站纳入数和重点期刊总数均为17；首页仍只展示最新六篇。17篇作者已补齐：15篇来自DOI、标题和ISSN匹配的Crossref元数据，两篇接收稿来自明确显示同一DOI的APS官方署名。完整原序名单和来源可在卡片收录依据中展开；本轮未重采书目、未重审科学范围，380篇补证仍待后续处理。作者元数据及旧版本保存在`reports/2026-09/author-metadata.json`，导出器与正式日志校验其哈希。
+
+
+## 380篇补证已完成（2026-10-03）
+
+固定380篇已全部保存最终判断：377 excluded、3 core，review与未审读延期均为0。新增纳入为广义Kuramoto临界性研究、Noise and diversity can boost stability（Perspective）及From leaf veins to bus lanes（Commentary）。新增三篇均已发表；此前17篇判断保持不变。全池2822篇：core18、transferable_application2、excluded2802，纳入20篇中18篇已发表、2篇已接收。
+
+[本轮结果与核验](reports/2026-09/supplement-380.md)记录新增三篇的证据性质、全部闭合统计和限制；[数据特征文档](docs/evidence-data-features.md)保存具体栏目、单句提示、图形摘要、身份解析失败与反例。两项用户授权例外已写入[筛选规程](docs/screening-protocol.md)：无摘要短科学评论可在线实际审读；仅lvpn-gblk可用题名及全部13位作者匹配的arXiv摘要作范围排除。均不保存全文或扩展预印本候选。
+
+此前并发临时日志视图造成的15处链断接已经修复，原事件内容与备份保留，正式日志追加修复记录。现已核验全日志链、2822条最新判断输入及2364份使用材料版本；380篇互斥覆盖、原17篇纳入判断不变、原始三文件与HEAD字节一致。39项离线测试通过。41份本轮工作目录摘要中转副本已迁入允许的忽略缓存，原始字节、路径哈希和指针保留。
+
+网站仍是此前发布的17篇快照，本轮未更新网站、推送或部署。正式判断在screening-log.jsonl，公开报告只保留短说明；完整摘要仅存.private/abstract-cache/v9。
+
+
+## 20篇完整审核快照发布（2026-10-03）
+
+本轮将完成补证后的20篇纳入记录同步至网站（core18、transfer2；已发表18、已接收2），替代此前17篇快照。2822篇固定候选已全部分类，2802篇排除，无未决或未审读延期；保留Nature Communications目录覆盖限制，尚未启动最近90天滚动或日更。全部20篇作者及中英文一句话说明已补齐。
+
+公开卡片与双语规则区分完整摘要、官方Abstract摘段及授权在线审读的无摘要短科学评论；PNAS评论仅公开观察哈希与短判断，不将其伪装为摘要缓存。39项Python、19项前端测试、JS语法及快照一致性检查通过，实际浏览器验收后由现有Pages流程发布。部署运行和线上核验记录保存在Git忽略的.private/work/publication-20/deployment.json。

@@ -70,10 +70,15 @@ function paperCard(paper) {
   const details = element("details", "evidence");
   details.append(element("summary", "", tr("Inclusion evidence & date source", "收录依据与日期来源")));
   details.append(element("p", "", tr("Reading basis: ", "审读依据：") + tr(paper.note_en, paper.note_zh)));
-  details.append(element("p", "", paper.scope_authority === "human user in current conversation" ? tr("Scope inclusion explicitly confirmed by the editor.", "科学范围纳入由用户明确裁决。") : tr("Scope inclusion based on assistant reading of the explicit abstract.", "科学范围纳入基于代理实际摘要审读。")));
+  const reviewDescription = paper.scope_authority === "human user in current conversation" ? tr("Scope inclusion explicitly confirmed by the editor.", "科学范围纳入由用户明确裁决。")
+    : paper.review_evidence_kind === "online_short_comment" ? tr("Scope inclusion based on assistant reading of the accessible no-abstract scientific commentary. No full text is stored.", "科学范围纳入基于代理在线实际审读无摘要科学评论的可见正文；未保存全文。")
+    : paper.review_evidence_kind === "abstract_excerpt" ? tr("Scope inclusion based on the publisher's explicit Abstract excerpt. The full article body was not reviewed.", "科学范围纳入基于出版方明确的Abstract摘段；未审读全文。")
+    : tr("Scope inclusion based on assistant reading of the explicit abstract.", "科学范围纳入基于代理实际摘要审读。");
+  details.append(element("p", "", reviewDescription));
+  if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
   if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date remains unconfirmed. Recheck publication date and specific article type after publication.", "接收稿：首次发表日期尚未确认；正式发表后按同一 DOI 补核发表日期和具体文章类型。")));
   details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));
-  details.append(element("p", "", tr("Query: ", "检索路径：") + paper.retrieved_by.join("; ") + tr(". Abstract screening with recorded editorial decisions; not full-text expert review.", "。摘要辅助筛选与留痕编辑裁决，非全文专家审定。")));
+  details.append(element("p", "", tr("Query: ", "检索路径：") + paper.retrieved_by.join("; ") + tr(". Evidence screening with recorded editorial decisions; not full-text expert review.", "。证据辅助筛选与留痕编辑裁决，非全文专家审定。")));
   if (authors.length) details.append(element("p", "full-authors", tr("All authors: ", "全部作者：") + authors.join(" · ")));
   if (paper.author_source_url) details.append(link(tr("Author metadata source ↗", "作者信息来源 ↗"), paper.author_source_url));
   if (paper.author_metadata_status !== "available") details.append(element("p", "", tr("Author metadata could not yet be verified. Consult the publisher; publication status is verified separately.", "作者元数据尚未核实，请以出版方名单为准；出版状态另行核验。")));

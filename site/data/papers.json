@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-03T11:47:01.343053+00:00",
+  "generated_at": "2026-10-03T14:38:52.006202+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-09-30",
   "window_days": 30,
   "release_kind": "reviewed_september_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "2ac0eda44eadb1631d2b4d799753dbc843dcd4835b4689be6cf20ab47205cd63",
-  "current_rule_sha256": "9b372191da6ecb2351a636b02c4922860db93594815da3d8c7a23751c068047e",
-  "screening_log_sha256": "3107a5158b6e98bfadd459b09e31e3752d1f9fda1100447be53b89e5afedbfcd",
-  "reading_notes_sha256": "1833621873330760e767a815bffc90b0226124eace5d77db893319273ad0d5ff",
-  "author_metadata_sha256": "d4909c4874439705656c2415d7d7bed1e081c4df9cf592361b56b1ea066b2085",
-  "author_available_count": 17,
-  "source": "Fixed nine-journal September inventory and traced abstract/editorial assessments",
+  "current_rule_sha256": "154b354d06c7ec61c6403d1cdabf583b2fd044ea5e2bafc5fcee9ac0c464f0ad",
+  "screening_log_sha256": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd",
+  "reading_notes_sha256": "34ab208c44d3ffeb5fe3d721948f569d414cfc7706b3227c9574b8fb31f2daa1",
+  "author_metadata_sha256": "ace404dbd56f86731f12b37fbbdbe7170dec4057aea7eab733ef91fec14f7ccd",
+  "author_available_count": 20,
+  "source": "Fixed nine-journal September inventory and traced abstract, short-comment and editorial assessments",
   "categories": [
     {
       "id": "network_structure",
@@ -185,22 +185,22 @@
   ],
   "candidate_count": 2822,
   "screening_counts": {
-    "excluded": 2425,
-    "core": 15,
+    "excluded": 2802,
+    "core": 18,
     "transferable_application": 2,
-    "review": 55,
-    "deferred_unassessed": 325,
-    "included": 17
+    "deferred_unassessed": 0,
+    "review": 0,
+    "included": 20
   },
-  "published_count": 15,
+  "published_count": 18,
   "accepted_count": 2,
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
   "limitations": [
     "September 2026 trial, not a current 90-day feed.",
     "Nature Communications directory pagination remains unstable; complete publisher coverage is not established.",
-    "55 material-insufficient and 325 unassessed records remain undisplayed.",
-    "Abstract-based assistant screening and explicit user scope decisions; not full-text expert review.",
+    "2822 fixed candidates assessed; 0 unresolved and 0 unassessed.",
+    "Assistant screening from explicit abstracts/excerpts or authorized online short comments, plus explicit user scope decisions; not full-text expert review.",
     "Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred."
   ],
   "papers": [
@@ -265,6 +265,9 @@
       "assessment_sha256": "9897a60fa987dd0649856948616a53499cbb841789af16ee5f70e37370eee131",
       "input_sha256": "8520c178b8a3f34ce1ee9a50742239ca8d02e8baa9721863f78ae1dc25c606ff",
       "material_sha256": "60e11c8648442c032ba2f36457a6bb49cad4f39d7f6ee9573cf8e2d7407594a8",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "60e11c8648442c032ba2f36457a6bb49cad4f39d7f6ee9573cf8e2d7407594a8",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "SA",
       "evidence": [
@@ -272,6 +275,76 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh8819",
       "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh8819",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Fixed September journal inventory; DOI-bound abstract review"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/61hq-rs8x",
+      "url": "https://doi.org/10.1103/61hq-rs8x",
+      "title": "Criticality and Universality of the Generalized Kuramoto Model",
+      "authors": [
+        "Zhongpu Qiu",
+        "Tianyi Wu",
+        "Sheng Fang",
+        "Jun Meng",
+        "Jingfang Fan"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "8ed2804e46e9cb557537906add7e60d2fe2ab5c046fe357536de818c73fb8bb8",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F61hq-rs8x",
+      "author_retrieved_at": "2026-10-03T14:34:29.245358+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-09-29",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-29",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "source_url": "https://journals.aps.org/prl/issues/137/14",
+        "issue_date": "2026-10-02",
+        "basis_note": "Visible Published 29 September; issue date retained separately"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-29",
+      "article_type": "Research Letter",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Research Letter",
+        "source_url": "https://journals.aps.org/prl/issues/137/14",
+        "basis": "Matching DOI entry under official LETTERS section"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Compares synchronization criticality on complete graphs and locally coupled lattices, linking dimension and symmetry to universality classes.",
+      "note_zh": "比较完全图与局部耦合晶格上的同步临界性，研究维度和对称性如何影响普适类。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "770b573869592e53a9051878f356b0edd28f1f18744e386ddcf1295a9ea8757f",
+      "input_sha256": "cabaf73dfcf7c1aab2fc6ca59f38f9770f408fdcdf565727ade4964725668f72",
+      "material_sha256": "79b6074f46feafee2b213f149c77ca0d47b9cecbacf8ac3a916e34108de81675",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "79b6074f46feafee2b213f149c77ca0d47b9cecbacf8ac3a916e34108de81675",
+      "rule_sha256": "9b372191da6ecb2351a636b02c4922860db93594815da3d8c7a23751c068047e",
+      "featured": "PRL",
+      "evidence": [
+        "完全图与晶格上的同步转变、频率牵引连接矩阵及临界指数构成网络上动力学贡献。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F61hq-rs8x",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/61hq-rs8x",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Fixed September journal inventory; DOI-bound abstract review"
@@ -327,6 +400,9 @@
       "assessment_sha256": "960d556048ec137617e6113f7348cf5d7cc50ad4959eb167791d4f671b84b4eb",
       "input_sha256": "b78abfe34f22c597e7930da26fda40e616b09caa7b2ee22216f02390ef121440",
       "material_sha256": "a607c86fa7d342ba9d1d5e5e57de5e9a028e279adf8bea4d7f5fbfa48db1b358",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "a607c86fa7d342ba9d1d5e5e57de5e9a028e279adf8bea4d7f5fbfa48db1b358",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PNAS",
       "evidence": [
@@ -392,6 +468,9 @@
       "assessment_sha256": "bdb917f6d04decf94d375fead9c43220a9da1f3616b80d4223e9dbea0b52c561",
       "input_sha256": "568410bda534bc47e962f6106b56aa87e7865c8dee36b0549fc9fb21f4dc98fe",
       "material_sha256": "5aa264776f91ef48f38b94e0d9aee5c7fc4d077cc84ecbe1432c2ad6b57b5b30",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "5aa264776f91ef48f38b94e0d9aee5c7fc4d077cc84ecbe1432c2ad6b57b5b30",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "NMI",
       "evidence": [
@@ -456,6 +535,9 @@
       "assessment_sha256": "ed256872e066b877acf81335c7eb4b96458fb90082754a446f4617607188ee8b",
       "input_sha256": "57e078d5d4ab8f8665728034431f03900ce0c71cae35cd4c496c1e73765c78cf",
       "material_sha256": "33bd65c183bb4d978de3b805b27748673aa64d68fed6f940f9204f7a22ec2e79",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "33bd65c183bb4d978de3b805b27748673aa64d68fed6f940f9204f7a22ec2e79",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PNAS",
       "evidence": [
@@ -518,6 +600,9 @@
       "assessment_sha256": "050198a53ad67b95b9dab7b1fe83f616fe5ef3e8aa687ab2c0f26937484dcafc",
       "input_sha256": "9511038a44b72ecbf36d664b7bde73cb3a4e8a2454cc91182125e0d96800535f",
       "material_sha256": "751aa29653055f49701207f66dc9c69dba0f2d356fc32f61efd8aa4ec8792a4b",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "751aa29653055f49701207f66dc9c69dba0f2d356fc32f61efd8aa4ec8792a4b",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PNAS",
       "evidence": [
@@ -577,6 +662,9 @@
       "assessment_sha256": "6a3f0cfeec5af133f479560dade353bf8c1c0a63faeabbe37c5e58c365e32d76",
       "input_sha256": "e910a7539cb366eabaa32ce22e57dc716944c5022a7d571b45f674612f09dc9a",
       "material_sha256": "b584c7843dd6a49ff0727e76eac7470085714db7e4c75e6f2829a699d65a4d31",
+      "review_evidence_kind": "abstract",
+      "review_basis": "Human scope arbitration using prior fixed abstract review; assistant rechecked evidence binding and reread the two inclusion abstracts, not full-text expert review.",
+      "review_evidence_sha256": "b584c7843dd6a49ff0727e76eac7470085714db7e4c75e6f2829a699d65a4d31",
       "rule_sha256": "58f135aa1c99d8119e7d41126ba2b2d54d9766ec374c3a7e13d7405929e8cf3e",
       "featured": "NC",
       "evidence": [
@@ -662,6 +750,9 @@
       "assessment_sha256": "e728e4a7e511435d4e91e42eafd3a2248a88df497a17b512aa7b9c68b66dff3b",
       "input_sha256": "2b976bb34aa85679e7f55bf969a53f40c7276d865214c43694e392c08ca8a524",
       "material_sha256": "c303c6845be74378af97b6b0aaf1741491a76e80b9bc58256b2d9cc86df3ee69",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c303c6845be74378af97b6b0aaf1741491a76e80b9bc58256b2d9cc86df3ee69",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PRL",
       "evidence": [
@@ -725,6 +816,9 @@
       "assessment_sha256": "014049cbb58e8a24dfe218ca7f021968f68f8f7733789df66e45ec61bf30465f",
       "input_sha256": "ca15e570d9f851b6842527ff4dd71e9fa76997c130e293c9d8409fb0604ec55d",
       "material_sha256": "1384cc78896ac9d2fbb0a021840bf1b98c66babe42969d1cdc8b2b5526befd5a",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "1384cc78896ac9d2fbb0a021840bf1b98c66babe42969d1cdc8b2b5526befd5a",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PRX",
       "evidence": [
@@ -735,6 +829,72 @@
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Fixed September journal inventory; DOI-bound abstract review"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1126/science.aek9090",
+      "url": "https://doi.org/10.1126/science.aek9090",
+      "title": "Noise and diversity can boost stability",
+      "authors": [
+        "Raissa M. D’Souza"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "8650290413be22470d3872f197a7a9e361cf082cc46eaeb51e1ab2b4b9134633",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fscience.aek9090",
+      "author_retrieved_at": "2026-10-03T14:34:27.383661+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science",
+      "journal_short": "Science",
+      "issns": [
+        "0036-8075",
+        "1095-9203"
+      ],
+      "date": "2026-09-17",
+      "date_source": "published",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-17",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "source_url": "https://www.science.org/doi/10.1126/science.aek9090",
+        "basis_note": "Official dc.Date matches fixed directory date; excerpt screening only"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-17",
+      "article_type": "Perspective",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Perspective",
+        "source_url": "https://www.science.org/toc/science/393/6817",
+        "basis": "Official target primary PERSPECTIVES DOI/type observation; dc.Type article-commentary"
+      },
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Discusses when noise and parameter heterogeneity can stabilize interacting groups, connecting oscillator synchronization and power grids.",
+      "note_zh": "评论噪声与参数异质性何时有助于集体稳定，连接振子同步、电网与相互作用系统。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8fd169d7fbb256ceb88d708707dc6f6f21f7760df3a67e0441d83a0838bd3e5c",
+      "input_sha256": "1487610d1b7b008b155882a06257a47ef1a05035818686188794f3fe397b3171",
+      "material_sha256": "723fa21def2ddcfac4532644b416a05f8ee92f449c8d432106075bf8915b10bf",
+      "review_evidence_kind": "abstract_excerpt",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "723fa21def2ddcfac4532644b416a05f8ee92f449c8d432106075bf8915b10bf",
+      "rule_sha256": "c197ce1841c249a3c4eaa05a85a23d4573003d32404075c42a459f4171a2b7b0",
+      "featured": "Science",
+      "evidence": [
+        "评论异质性与噪声促进相互作用群体稳定的理论，结合振子同步与电网说明适用问题。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fscience.aek9090",
+      "evidence_url": "https://www.science.org/doi/10.1126/science.aek9090",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Fixed September journal inventory; DOI-bound explicit abstract excerpt review"
       ],
       "screening_version": "newflow-1"
     },
@@ -799,6 +959,9 @@
       "assessment_sha256": "6dd0b43fcf2e2ee22a601c71c26a88c8a6314510b93af47299ec109308cce380",
       "input_sha256": "3d6212ab8a2a8a971a9d4514126874a41d3406c3359794615d1619f29af737c2",
       "material_sha256": "a534addad2aba8420e067079a38cef81dc0d1c68c5c1f6103b33a172ab51911b",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "a534addad2aba8420e067079a38cef81dc0d1c68c5c1f6103b33a172ab51911b",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "Science",
       "evidence": [
@@ -859,6 +1022,9 @@
       "assessment_sha256": "60a639bcd7bbc4198980b6f3d9454ae479a880b27ab8cff8a7a93ac3de536c07",
       "input_sha256": "632d7c49d72a07836e77b84ce4f24fb1c6ed327ad57afcc71dd2bb35d11b59fd",
       "material_sha256": "234c2f034ac5e0bea0d41b07ebe58fe45b853f511ccfa8affeccad9305499234",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "234c2f034ac5e0bea0d41b07ebe58fe45b853f511ccfa8affeccad9305499234",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "NC",
       "evidence": [
@@ -925,6 +1091,9 @@
       "assessment_sha256": "0e754c331729f6177e313ce8e217ea00694ecb7bf176ad21776f974e888aac71",
       "input_sha256": "fe662448066b51de38d0fe21e2866fef6dfac6723f0221220082748e2b7163be",
       "material_sha256": "dc6596c9f30f1d6055108779cc86bc6696754d5aa693975a18c45d2d11420665",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "dc6596c9f30f1d6055108779cc86bc6696754d5aa693975a18c45d2d11420665",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "NC",
       "evidence": [
@@ -988,6 +1157,9 @@
       "assessment_sha256": "98270cb8ae8faea6e2327279c4ae191e5a499ef42754db43fb393ca65ae623e0",
       "input_sha256": "7d0e0b1dc780804fad9fad4b3b45402d781573f5232c86cee7b873b4a029a36e",
       "material_sha256": "8c8aedfdaf46ae7e3a8d30eb84125c62f839d20867795d7d965368a779de7d16",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "8c8aedfdaf46ae7e3a8d30eb84125c62f839d20867795d7d965368a779de7d16",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PNAS",
       "evidence": [
@@ -1050,6 +1222,9 @@
       "assessment_sha256": "7bab56285eaf0fbfc56a12d32da12ed9e3ad4fa3efaa3283994375c2fdbf21d8",
       "input_sha256": "14576f83075217b2cdf8ff6d085a2d6038f527029b7073f35bfd16e1d7605a76",
       "material_sha256": "d6a56eae8ced5d104bfc80c334f1eac0fb9de7ab79993155a0ba059f9d56c265",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d6a56eae8ced5d104bfc80c334f1eac0fb9de7ab79993155a0ba059f9d56c265",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PNAS",
       "evidence": [
@@ -1127,6 +1302,9 @@
       "assessment_sha256": "f32db78eafaa57a0d31b9959d5178589b0ff413cfcc7fe196ff9bb5a9c036d6d",
       "input_sha256": "69d813cda4ac1cc6371092f27d690cc9ee2ad821f8f796a3a3d8eab2f51435ae",
       "material_sha256": "904538076d40db11918cb53689c2656640fdf6cef25977a3b3ca6d495c0bfcc3",
+      "review_evidence_kind": "abstract",
+      "review_basis": "Human scope arbitration using prior fixed abstract review; assistant rechecked evidence binding and reread the two inclusion abstracts, not full-text expert review.",
+      "review_evidence_sha256": "904538076d40db11918cb53689c2656640fdf6cef25977a3b3ca6d495c0bfcc3",
       "rule_sha256": "58f135aa1c99d8119e7d41126ba2b2d54d9766ec374c3a7e13d7405929e8cf3e",
       "featured": "NC",
       "evidence": [
@@ -1206,6 +1384,9 @@
       "assessment_sha256": "47a197d119e1a9d53dd95a09b08679d0e7cd9432d273d67eb58722dd44b4e6c3",
       "input_sha256": "fa78aeeac37e0277773704330c24bebbe83fb27a712724edeac0eeb6d0b7e7c8",
       "material_sha256": "ee3562fec98d169127b1fc246c85f20989654374d59d339532e72135024fe953",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "ee3562fec98d169127b1fc246c85f20989654374d59d339532e72135024fe953",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "Science",
       "evidence": [
@@ -1296,6 +1477,9 @@
       "assessment_sha256": "01077b027f33a393cce6e95ec183574b55e3e66cabf86a50c12a2574b96ee334",
       "input_sha256": "0f60f5f32210f3dc5c6b0ebf4e060f4bcf55d20ed9f87eabc942b883bff2e7b8",
       "material_sha256": "d163ad0a60c7084b832f94b6d0489482c86886c5ef63621f186e7742db684c72",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d163ad0a60c7084b832f94b6d0489482c86886c5ef63621f186e7742db684c72",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "SA",
       "evidence": [
@@ -1306,6 +1490,71 @@
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Fixed September journal inventory; DOI-bound abstract review"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2622915123",
+      "url": "https://doi.org/10.1073/pnas.2622915123",
+      "title": "From leaf veins to bus lanes: Emerging simplicity in complex spatial systems",
+      "authors": [
+        "Gabriele Manoli"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "07556144f2baf10c390d095a80f84a19fec04957f38d335a93e36cfcfc88f6e6",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2622915123",
+      "author_retrieved_at": "2026-10-03T14:34:30.922440+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-09-02",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-02",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2622915123",
+        "basis_note": "Visible September 2, 2026 and dc.Date 2026-9-2 agree"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-02",
+      "article_type": "Commentary",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Commentary",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2622915123",
+        "basis": "Official Commentary label and dc.Type article-commentary; actual scientific review under authorized exception"
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Connects biological transport and bus networks through resource-constrained optimization, adaptive conductance, and tree or loop organization.",
+      "note_zh": "以资源约束优化连接生物输运与公交网络，评论导流自适应以及树、环结构的形成。",
+      "scope_authority": "assistant_online_short_comment_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "9ca60d42987a03f26b11bc44eea9d0ab04ed5caaea0335c5dff74879abb3c5c7",
+      "input_sha256": "4302662cbf83900d537b22a27eb9424e6f586ec17f375008c4d30fdf8a34fcdf",
+      "material_sha256": null,
+      "review_evidence_kind": "online_short_comment",
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "review_evidence_sha256": "8ec835dc6f80b4ecdbe17b114690fdc15412b8fc600fb16b8364f573f01f167b",
+      "rule_sha256": "c197ce1841c249a3c4eaa05a85a23d4573003d32404075c42a459f4171a2b7b0",
+      "featured": "PNAS",
+      "evidence": [
+        "以资源约束优化连接生物输运网络与城市公交，讨论拓扑、导流自适应及树/环结构；评论综述而非新原始研究。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2622915123",
+      "evidence_url": "https://www.pnas.org/doi/10.1073/pnas.2622915123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Fixed September journal inventory; DOI-bound authorized online short-comment review"
       ],
       "screening_version": "newflow-1"
     },
@@ -1357,6 +1606,9 @@
       "assessment_sha256": "82d9655f38e1e7134c22b6b0e6f8e12f9448d82497226e8c77ce2266b42707ea",
       "input_sha256": "11d08cfe33a7122761aed44bc9991c6872eebc5e03952b097dd7e51c12ea4a8c",
       "material_sha256": "6bc850e25c28a827e5fda121a6c812d9aabf5372f96345f9c7ea06c15441015e",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "6bc850e25c28a827e5fda121a6c812d9aabf5372f96345f9c7ea06c15441015e",
       "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
       "featured": "PRL",
       "evidence": [
