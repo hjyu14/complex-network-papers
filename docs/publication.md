@@ -47,3 +47,9 @@ Spotlight 由 `featured_journals` 单独控制，扩刊不会自动改变名单�
 `site/` 是唯一部署目录，GitHub Pages 工作流只校验并上传已有网站文件，不采集、不补证、不启用日更。Git 推送与生产部署须有当前任务授权。CI 对全部报告轮次的变更触发校验；只有明确选入 release 的已完成轮次影响发布。
 
 部署记录（提交、运行 ID、产物哈希、浏览器验收）保存在本地忽略目录。完整摘要、私有中转材料与开发历史不进入 Git 或部署。技术覆盖状态保留在审核数据；首页和 About 不重复内部历史问题。
+
+## 访问统计
+
+首页与 About 页各在 `</body>` 前引用一段官方 Cloudflare Web Analytics module 脚本；`data-cf-beacon` 中是公开站点标识，不是账号管理密钥。统计独立于文献加载，不添加搜索、筛选或论文点击事件；About 中英文说明须与实际配置一致。
+
+DNS 与 GitHub Pages 托管不变。上线后检查两页只有一段 beacon、脚本正常加载及网站功能，再由账号持有者核对 Cloudflare Web Analytics 后台是否收到数据。Visits 不作为去重 DAU；脚本拦截与网络故障可能漏计。无需为验证伪造访问或直接 POST 统计接口。

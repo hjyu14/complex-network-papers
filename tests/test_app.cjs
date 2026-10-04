@@ -88,6 +88,25 @@ test('home and rules pages share a local scalable favicon', () => {
   assert.doesNotMatch(icon, /<(?:script|foreignObject|image)\b|\bhref=/i);
 });
 
+test('both public pages load one module analytics beacon and disclose it bilingually', () => {
+  for (const page of ['index.html', 'rules.html']) {
+    const html = fs.readFileSync(path.join(__dirname, '../site', page), 'utf8');
+    const beacons = [...html.matchAll(/<script\b[^>]*data-cf-beacon='([^']+)'[^>]*><\/script>/g)];
+    assert.equal(beacons.length, 1);
+    assert.deepEqual(JSON.parse(beacons[0][1]), { token: '4948fb6be20f4793b65fcc1278d98a40' });
+    assert.match(beacons[0][0], /type="module"/);
+    assert.match(beacons[0][0], /src="https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js"/);
+    assert.ok(html.indexOf(beacons[0][0]) < html.indexOf('</body>'));
+    assert.equal((html.match(/static\.cloudflareinsights\.com/g) || []).length, 1);
+  }
+  const rules = fs.readFileSync(path.join(__dirname, '../site/rules.html'), 'utf8');
+  const english = rules.match(/<article data-language="en">([\s\S]*?)<\/article>/)[1];
+  const chinese = rules.match(/<article data-language="zh" hidden>([\s\S]*?)<\/article>/)[1];
+  assert.match(english, /<h2>Visit statistics<\/h2>/);
+  assert.match(chinese, /<h2>访问统计<\/h2>/);
+  for (const text of [english, chinese]) assert.ok(text.includes('https://developers.cloudflare.com/web-analytics/about/'));
+});
+
 test('spotlight action counts its whole cohort, not visible cards or filtered results', async () => {
   const { node, context } = setup(); await ready();
   assert.equal(node('#featured-all').textContent, 'View all 8 Spotlight papers →');
@@ -262,7 +281,7 @@ test('public rules article is linked and bilingual', () => {
   assert.match(home, /<html lang="en">/);
   assert.match(rules, /data-language="en"/);
   assert.match(rules, /data-language="zh" hidden/);
-  assert.equal((rules.match(/<h2>/g) || []).length,8);
+  assert.equal((rules.match(/<h2>/g) || []).length,10);
   assert.match(rules, /Preprints are excluded/);
   assert.match(rules, /预印本不收录/);
   assert.match(rules, /AI assistance/);
