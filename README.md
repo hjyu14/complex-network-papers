@@ -1,39 +1,74 @@
-# Complex Network Papers
+# NetSci Observatory
 
-面向网络科学读者的文献网站，收录网络结构、网络上的动力学和可迁移网络科学方法。按期刊白名单采集整刊候选，核对来源后实际审读，并保留逐篇证据与判断。
+English | [中文](README.zh-CN.md)
 
-网站：[Complex Network Papers](https://hjyu14.github.io/complex-network-papers/)。当前发布的是 2026 年 9 月审核快照，共 122 篇（93 篇已发表、29 篇已接收）。最近 90 天与自动日更尚未启用。
+A public, registration-free reading list for network science. Discover research on network structure, dynamics on networks, and transferable network-science theory and methods, without searching each journal separately.
 
-## 从哪里开始
+**[Explore the papers →](https://netsciobs.com/)**
 
-| 文件 | 用途 |
-|---|---|
-| `AGENTS.md` | 稳定工作约束 |
-| `config/sources.json` | 白名单、采集窗口、Spotlight |
-| `docs/collection-workflow.md` | 整刊采集与覆盖核对 |
-| `docs/screening-protocol.md` | 科学范围、证据与审核规则 |
-| `docs/evidence-data-features.md` | 数据特征、补证线索与反例 |
-| `docs/publication.md` | 作者、阅读说明、多轮发布与验证 |
-| `config/release.json` | 明确选择发布轮次 |
-| `reports/<run-id>/` | 每轮候选、来源、正式日志与冻结输入 |
-| `site/` | 网站部署文件 |
+## What you can do
 
-## 九月扩刊与正式发布
+- Browse relevant papers from thirteen journals in one place.
+- Filter by research topic, journal, date, or Spotlight journal scope; search titles, authors, journals, and DOIs.
+- Read short English or Chinese notes explaining each paper's connection to network science.
+- Follow links to the original papers, with accepted manuscripts and special article types identified.
+- Switch the website between English and Chinese without changing paper titles, author names, or active filters.
 
-窗口为 **2026-09-01 至 2026-09-30**，13 个白名单期刊的固定清单共 3,467 篇，全部完成分类；122 篇纳入，3,345 篇排除，无未审读或未决项。固定清单完成不等于出版方目录绝无遗漏；Nature Communications 分页覆盖限制仍保留。
+The website starts in English and remembers your language choice.
 
-新增四刊原始轮次为 `reports/2026-09-expansion-01/`，131 篇疑难项的正式裁决为 `reports/2026-09-expansion-adjudication-01/`。发布使用 `reports/2026-09-expansion-publication-01/` 的显式引用视图，验证原轮及裁决哈希，不改写任何原始记录，也不伪造一次新的科学审查。现有 `reports/2026-09/` 保持不变；新增四刊不加入 Spotlight。
+## Research scope
 
-采集、审读与作者补充均显式指定轮次，详细命令见相应文档。旧轮使用自己的 `inputs/`，不会随全局白名单或工作规程变化而被重新解释。
+We focus on how networks form and evolve, how their structure can be inferred, and how interactions shape spreading, synchronization, collective behavior, robustness, and control.
 
-## 本地核验
+Studies of specific systems are included when network organization is a central research question or the work contributes theory or methods transferable to other systems. Routine use of network measures for domain analysis, or nonlinear dynamics without a clear network-science contribution, is outside the scope. Relevant reviews, perspectives, and scientific commentaries may also be included.
 
-```powershell
-python -m unittest discover -s tests -v
-python scripts/publish_snapshot.py --check
-node --check site/app.js
-node --test tests/test_app.cjs
+## Journals and Spotlight
+
+Spotlight displays included papers from the following nine journals. The homepage shows the latest six; the Spotlight link opens the full Spotlight list. This is a display grouping, not a quality ranking, and all papers follow the same inclusion criteria.
+
+- Nature
+- Science
+- Nature Communications
+- Nature Machine Intelligence
+- Nature Computational Science
+- Physical Review X
+- Physical Review Letters
+- Science Advances
+- Proceedings of the National Academy of Sciences
+
+The complete list also includes papers from:
+
+- Communications Physics
+- Physical Review Research
+- Physical Review E
+- Chaos: An Interdisciplinary Journal of Nonlinear Science
+
+## Current coverage and limitations
+
+The current list covers **1–30 September 2026**, with **122 papers: 93 published papers and 29 accepted manuscripts**. Of these, 20 belong to the Spotlight group.
+
+Date filters are relative to the displayed data cutoff, not today's date. This is a fixed September collection, not a daily-updated feed. Publication dates prioritize first online publication; accepted manuscripts awaiting publication are marked separately and shown by acceptance date. Preprints are excluded.
+
+Selection is based mainly on abstracts and bibliographic evidence, with AI assistance and editorial decisions on scope questions. Reading notes support discovery; they are not quality ratings or full-text expert reviews. Coverage is not guaranteed to be exhaustive. The site provides metadata, short notes, and original-paper links, not full abstracts or article text.
+
+Read the [selection policy and limitations](https://netsciobs.com/rules.html) for details.
+
+## Feedback
+
+Found a missing paper, an incorrect record, or a reading note that needs correction? [Open an issue](https://github.com/hjyu14/complex-network-papers/issues), preferably with the DOI or publisher link and a brief explanation. Suggestions for improving the website are welcome too.
+
+## For contributors
+
+The site is a static website hosted on GitHub Pages, with no registration or runtime dependencies. To preview it locally from the repository root:
+
+```sh
 python -m http.server 8003 --directory site
 ```
 
-无第三方运行依赖。完整摘要与开发历史位于 Git 忽略的 `.private/`，不得上传或部署。开发历史不是科学判断的依据；正式来源、证据哈希、判断和冻结规则保留在仓库，见各轮记录。
+Open `http://localhost:8003/`. Collection, selection, and publication procedures are documented separately:
+
+- [Collection and coverage checks](docs/collection-workflow.md)
+- [Selection protocol](docs/screening-protocol.md)
+- [Evidence requirements and known pitfalls](docs/evidence-data-features.md)
+- [Publication and verification](docs/publication.md)
+- [Review records](reports/) and [contributor constraints](AGENTS.md)

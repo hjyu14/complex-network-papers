@@ -42,6 +42,40 @@ function setup(version = 'newflow-1', fixtureConfig = config) {
 }
 const ready = () => new Promise(setImmediate);
 
+test('English is the first-visit default while explicit language choices persist', () => {
+  for (const stored of [null, 'en', 'zh', 'invalid', 'storage-unavailable']) {
+    const toggle = new Node('button');
+    const root = {};
+    const writes = [];
+    const context = vm.createContext({
+      localStorage: {
+        getItem(key) { assert.equal(key, 'language'); if (stored === 'storage-unavailable') throw new Error('Storage denied'); return stored; },
+        setItem(key, value) { writes.push([key, value]); }
+      },
+      document: { documentElement: root, querySelector: selector => selector === '#language-toggle' ? toggle : null, querySelectorAll: () => [] }
+    });
+    vm.runInContext(localeSource, context);
+    const expected = stored === 'zh' ? 'zh' : 'en';
+    assert.equal(vm.runInContext('language', context), expected);
+    assert.equal(root.lang, expected === 'zh' ? 'zh-CN' : 'en');
+    assert.equal(toggle.textContent, expected === 'zh' ? 'English' : '中文');
+    toggle.events.click();
+    assert.deepEqual(writes, [['language', expected === 'zh' ? 'en' : 'zh']]);
+  }
+});
+
+test('public README defaults to English and offers a reciprocal Chinese version', () => {
+  const english = fs.readFileSync(path.join(__dirname, '../README.md'), 'utf8');
+  const chinese = fs.readFileSync(path.join(__dirname, '../README.zh-CN.md'), 'utf8');
+  assert.match(english, /^# NetSci Observatory\s+English \| \[中文\]\(README\.zh-CN\.md\)/);
+  assert.match(chinese, /^# NetSci Observatory\s+\[English\]\(README\.md\) \| 中文/);
+  for (const text of [english, chinese]) {
+    assert.ok(text.includes('https://netsciobs.com/'));
+    assert.ok(text.includes('(docs/screening-protocol.md)'));
+    assert.ok(text.includes('(docs/publication.md)'));
+  }
+});
+
 test('spotlight action counts its whole cohort, not visible cards or filtered results', async () => {
   const { node, context } = setup(); await ready();
   assert.equal(node('#featured-all').textContent, 'View all 8 Spotlight papers →');
