@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light">
   <title>NetSci Observatory</title>
   <link rel="stylesheet" href="styles.css?v=reading-list-7">
-  <script src="i18n.js?v=reading-list-7" defer></script><script src="app.js?v=reading-list-7" defer></script>
+  <script src="i18n.js?v=reading-list-7" defer></script><script src="app.js?v=reading-list-8" defer></script>
 </head>
 <body>
   <a class="skip" href="#latest" data-en="Skip to papers" data-zh="跳转至文献列表">Skip to papers</a>
@@ -25,7 +25,7 @@
   <main class="wrap">
     <div id="status" class="notice" role="status" aria-live="polite">Loading papers…</div>
     <section class="featured-section" aria-labelledby="featured-title">
-      <div class="section-heading"><div><p class="eyebrow">SPOTLIGHT</p><h2 id="featured-title" data-en="Latest papers" data-zh="最新文献">Latest papers</h2></div><button id="featured-all" class="text-button" type="button" data-en="All papers →" data-zh="全部文献 →">All papers →</button></div>
+      <div class="section-heading"><div><p class="eyebrow">SPOTLIGHT</p><h2 id="featured-title" data-en="Latest papers" data-zh="最新文献">Latest papers</h2></div><button id="featured-all" class="text-button" type="button">View all Spotlight papers →</button></div>
       <div id="featured-list" class="featured-grid"><p class="empty">Loading papers…</p></div>
     </section>
     <section id="latest" class="browse-section" aria-labelledby="latest-title">
@@ -40,8 +40,8 @@
         </div>
         <div class="facet-controls">
           <label><span data-en="Journal" data-zh="期刊">Journal</span><select id="journal"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option></select></label>
-          <label><span data-en="Dates" data-zh="日期">Dates</span><select id="period"><option value="30" data-en="1–30 September" data-zh="9 月 1–30 日">1–30 September</option><option value="7" data-en="24–30 September" data-zh="9 月 24–30 日">24–30 September</option></select></label>
-          <label id="scope-control" hidden><span data-en="Journal scope" data-zh="期刊范围">Journal scope</span><select id="scope"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option><option value="featured" data-en="Spotlight journals" data-zh="重点期刊">Spotlight journals</option><option value="other" data-en="Other journals" data-zh="其他期刊">Other journals</option></select></label>
+          <label><span data-en="Dates" data-zh="日期">Dates</span><select id="period" aria-describedby="date-cutoff"><option value="30" data-en="Last 30 days" data-zh="最近 30 天">Last 30 days</option><option value="7" data-en="Last 7 days" data-zh="最近 7 天">Last 7 days</option></select><small id="date-cutoff"></small></label>
+          <label id="scope-control" hidden><span data-en="Journal scope" data-zh="期刊范围">Journal scope</span><select id="scope"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option><option value="featured" data-en="Spotlight journals" data-zh="Spotlight 期刊">Spotlight journals</option><option value="other" data-en="Other journals" data-zh="其他期刊">Other journals</option></select></label>
         </div>
         <button id="back-all" type="button" class="back-all" hidden data-en="← Back to all papers" data-zh="← 返回全部文献">← Back to all papers</button>
         <div class="result-meta"><p id="result-count" aria-live="polite">Loading papers…</p><button id="clear" type="button" class="text-button" hidden data-en="Clear filters ×" data-zh="清除筛选 ×">Clear filters ×</button></div>

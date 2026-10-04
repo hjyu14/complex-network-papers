@@ -1,7 +1,7 @@
 "use strict";
 const $ = (selector) => document.querySelector(selector);
 const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", query: "", days: 30, page: 1, pageSize: 10 };
-const scopeLabel = (id) => ({ all: tr("All journals", "全部期刊"), featured: tr("Spotlight journals", "重点期刊"), other: tr("Other journals", "其他期刊") })[id];
+const scopeLabel = (id) => ({ all: tr("All journals", "全部期刊"), featured: tr("Spotlight journals", "Spotlight 期刊"), other: tr("Other journals", "其他期刊") })[id];
 const dateLabel = (id) => ({ "publisher.accepted": tr("Accepted date — not publication", "接收日期，非发表日期"), "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print publication", "纸刊发表"), published: tr("Publication date", "发表日期"), issued: tr("Issue date", "出版日期") })[id] || id;
 const englishCategories = { network_structure: "Structure & formation", network_inference: "Community detection, inference & reconstruction", network_spreading: "Spreading, diffusion & percolation", network_collective: "Synchronization, games & collective behavior", network_resilience: "Robustness, cascades & control", other: "Other" };
 
@@ -126,7 +126,7 @@ function renderResults() {
     (state.scope === "all" || (state.scope === "featured" ? Boolean(paper.featured) : !paper.featured)) &&
     (!query || [paper.title, paper.journal, paper.journal_short, paper.doi, ...paper.authors].join(" ").toLowerCase().includes(query))
   );
-  $("#latest-title").textContent = state.scope === "featured" ? tr("Spotlight papers", "重点期刊文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("All papers", "全部文献");
+  $("#latest-title").textContent = state.scope === "featured" ? tr("Spotlight papers", "Spotlight 文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("All papers", "全部文献");
   const journalName = state.data.journals.find((j) => j.short === state.journal)?.name;
   $("#result-count").textContent = `${results.length} ${tr(results.length === 1 ? "paper" : "papers", "篇文献")}${journalName ? " · " + journalName : ""}${state.category === "all" ? "" : " · " + categoryLabel(state.category)}`;
   const pages = Math.max(1, Math.ceil(results.length / state.pageSize));
@@ -200,13 +200,15 @@ function renderSnapshot() {
   $("#period").setAttribute("aria-label", tr("Dates", "日期"));
   $("#scope").setAttribute("aria-label", tr("Journal scope", "期刊范围"));
   const featured = state.papers.filter((p) => p.featured);
+  $("#featured-all").textContent = tr(`View all ${featured.length} Spotlight ${featured.length === 1 ? "paper" : "papers"} →`, `查看全部 ${featured.length} 篇 Spotlight 文献 →`);
+  $("#date-cutoff").textContent = tr(`Data through ${data.window_end}`, `数据截至 ${data.window_end}`);
   const month = new Date(data.window_end + "T12:00:00Z").toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { year: "numeric", month: "long", timeZone: "Asia/Shanghai" });
   $("#edition").textContent = `${month} · ${state.papers.length} ${tr("papers", "篇文献")}`;
   $("#scope-control").hidden = !hasOtherJournals();
   const updated = new Date(data.generated_at).toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric" });
   $("#updated").textContent = tr(`Updated ${updated}`, `更新于 ${updated}`);
   $("#featured-list").replaceChildren(...featured.slice(0, 6).map(featureCard));
-  if (!featured.length) $("#featured-list").append(element("p", "empty", tr("No spotlight papers passed this snapshot's screening. This does not mean no relevant papers were published.", "本次快照没有通过筛选的重点期刊文章；这不代表近期没有相关论文。")));
+  if (!featured.length) $("#featured-list").append(element("p", "empty", tr("No spotlight papers passed this snapshot's screening. This does not mean no relevant papers were published.", "本次快照没有通过筛选的 Spotlight 文献；这不代表近期没有相关论文。")));
   const counts = data.screening_counts;
   const pending = counts.review + counts.deferred_unassessed;
   $("#status").hidden = pending === 0;

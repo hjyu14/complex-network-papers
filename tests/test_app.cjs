@@ -42,6 +42,61 @@ function setup(version = 'newflow-1', fixtureConfig = config) {
 }
 const ready = () => new Promise(setImmediate);
 
+test('spotlight action counts its whole cohort, not visible cards or filtered results', async () => {
+  const { node, context } = setup(); await ready();
+  assert.equal(node('#featured-all').textContent, 'View all 8 Spotlight papers →');
+  assert.equal(node('#featured-list').children.length, 6);
+  assert.match(node('#edition').textContent, /35 papers$/);
+  node('#search').events.input({ target: { value: 'no matching title' } });
+  node('#language-toggle').events.click();
+  assert.equal(node('#featured-all').textContent, '查看全部 8 篇 Spotlight 文献 →');
+  assert.match(node('#result-count').textContent, /^0 篇文献/);
+  node('#featured-all').events.click();
+  assert.equal(node('#latest-title').textContent, 'Spotlight 文献');
+  assert.match(node('#result-count').textContent, /^8 篇文献/);
+  vm.runInContext('state.papers.forEach((p, i) => p.featured = i === 0 ? "PNAS" : null); renderSnapshot()', context);
+  node('#language-toggle').events.click();
+  assert.equal(node('#featured-all').textContent, 'View all 1 Spotlight paper →');
+});
+
+test('relative date labels disclose the snapshot cutoff and retain inclusive seven-day bounds', async () => {
+  const home = fs.readFileSync(path.join(__dirname, '../site/index.html'), 'utf8');
+  assert.match(home, /aria-describedby="date-cutoff"/);
+  assert.match(home, /data-en="Last 30 days" data-zh="最近 30 天"/);
+  assert.match(home, /data-en="Last 7 days" data-zh="最近 7 天"/);
+  const { node, data, context } = setup();
+  ['2026-09-23', '2026-09-24', '2026-09-30'].forEach((date, i) => data.papers[i].date = date);
+  await ready();
+  assert.equal(node('#date-cutoff').textContent, 'Data through 2026-09-30');
+  node('#period').events.change({ target: { value: '7' } });
+  assert.match(node('#result-count').textContent, /^9 papers/);
+  node('#language-toggle').events.click();
+  assert.equal(node('#date-cutoff').textContent, '数据截至 2026-09-30');
+  assert.equal(vm.runInContext('state.days', context), 7);
+  assert.match(node('#result-count').textContent, /^9 篇文献/);
+  data.window_end = '2026-10-01';
+  vm.runInContext('renderSnapshot()', context);
+  assert.equal(node('#date-cutoff').textContent, '数据截至 2026-10-01');
+  assert.match(node('#result-count').textContent, /^8 篇文献/);
+});
+
+test('reader-facing journal groups match the configured spotlight scope', () => {
+  const rules = fs.readFileSync(path.join(__dirname, '../site/rules.html'), 'utf8');
+  const groups = [...rules.matchAll(/<h3>(.*?)<\/h3>\s*<ul class="rules-journals">(.*?)<\/ul>/g)];
+  assert.deepEqual(groups.map(g => g[1]), ['Spotlight journals', 'Other included journals', 'Spotlight 期刊', '其他收录期刊']);
+  const names = group => [...group[2].matchAll(/<li>(.*?)<\/li>/g)].map(m => m[1]);
+  const featured = collectionConfig.journals.filter(j => collectionConfig.featured_journals.includes(j.short)).map(j => j.name).sort();
+  const other = collectionConfig.journals.filter(j => !collectionConfig.featured_journals.includes(j.short)).map(j => j.name).sort();
+  assert.deepEqual(names(groups[0]).sort(), featured);
+  assert.deepEqual(names(groups[1]).sort(), other);
+  assert.deepEqual(names(groups[2]).sort(), featured);
+  assert.deepEqual(names(groups[3]).sort(), other);
+  assert.doesNotMatch(rules, /original nine|additional four|原九刊|新增四刊|尚未开始|have not yet begun/);
+  assert.match(rules, /not a quality ranking/);
+  assert.match(rules, /不代表质量排名/);
+  assert.match(rules, /Date filters are relative to the data cutoff/);
+});
+
 test('spotlight can exit through scope, journal, return and reset', async () => {
   const { node, context } = setup(); await ready();
   assert.equal(node('#paper-list').children.length, 10);
