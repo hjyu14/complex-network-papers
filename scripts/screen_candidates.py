@@ -187,8 +187,9 @@ class AbstractParser(HTMLParser):
         # APS accepted pages have no citation meta. Require visible DOI, journal/page
         # title, article heading and footer ISSN together; URL alone is insufficient.
         p = urlsplit(url)
-        match = re.fullmatch(r'/(prx|prl)/accepted/(10\.1103/[^/]+)', p.path)
-        journals = {'prx': 'Physical Review X', 'prl': 'Physical Review Letters'}
+        match = re.fullmatch(r'/(prx|prl|pre|prresearch)/accepted/(10\.1103/[^/]+)', p.path)
+        journals = {'prx': 'Physical Review X', 'prl': 'Physical Review Letters',
+                    'pre': 'Physical Review E', 'prresearch': 'Physical Review Research'}
         page_title = plain(' '.join(self.page_title))
         headings = [plain(h) for h in self.headings]
         if not material['doi'] and p.hostname == 'journals.aps.org' and match:
@@ -204,7 +205,7 @@ class AbstractParser(HTMLParser):
         # Regular APS pages omit citation_issn but expose the journal ISSN in
         # their footer. Require the explicit journal metadata and matching DOI/title.
         if not material['issns'] and p.hostname == 'journals.aps.org':
-            expected = {'prl': 'Physical Review Letters', 'prx': 'Physical Review X'}
+            expected = journals
             part = p.path.split('/')[1] if len(p.path.split('/')) > 1 else ''
             if (first('citation_journal_title') == expected.get(part)
                     and material['doi'] in self.visible_dois
@@ -224,6 +225,7 @@ class Workflow:
         if not (self.out/'inputs/manifest.json').exists():
             raise ValueError('Run needs frozen inputs from collection before review or publication')
         self.config, protocol, self.run_inputs = load_inputs(self.out)
+        self.protocol = protocol
         if [self.pool['window_start'], self.pool['window_end']] != [self.run_inputs['window_start'], self.run_inputs['window_end']]:
             raise ValueError('Candidate window differs from frozen run inputs')
         if any(r['journal'] not in self.run_inputs['journals'] for r in self.records.values()):
@@ -637,6 +639,45 @@ class Workflow:
         for key in ['identity', 'type', 'date']:
             if not decision.get('hard_checks', {}).get(key):
                 raise ValueError('Record identity, type and date checks separately')
+        editorial = decision.get('editorial_basis')
+        verdict = None
+        if editorial:
+            verdict = next((e['data'] for e in self.log.events
+                            if e['kind'] == 'user_editorial_verdict'
+                            and digest(e['data']) == editorial.get('verdict_sha256')), None)
+            expected = 'include' if category in {'core', 'transferable_application'} else 'exclude' if category == 'excluded' else None
+            if (not verdict or verdict.get('doi') != doi or verdict.get('verdict') != expected
+                    or verdict.get('authority') != 'human user in current conversation'
+                    or not verdict.get('user_statement')
+                    or 'user_editorial_verdict' not in self.protocol):
+                raise ValueError('Editorial decision needs a matching authorized user verdict event')
+        user_exclusion = (category == 'excluded'
+                          and decision.get('exclusion_basis') == 'user_editorial_decision')
+        if user_exclusion and (not verdict or not verdict.get('personally_reviewed')
+                               or verdict.get('statement_kind') != 'explicit_individual_verdict'):
+            raise ValueError('No-abstract editorial exclusion requires explicit personally reviewed user verdict')
+        typ = decision['hard_checks']['type']
+        if typ.get('basis_kind') == 'explicit_abstract_research_inference':
+            declared_types = [p.get('article_type') for p in r.get('publisher_records', [])]
+            declared_types.append(m.get('article_type') if m else None)
+            declared_types.extend(e['data'].get('article_type') for e in self.log.events
+                                  if e['kind'] in {'browser_bibliography_observed', 'publisher_type_observed'}
+                                  and e['data'].get('doi') == doi)
+            ordinary_or_generic = {'article', 'regular article', 'research article',
+                                   'research-article', 'letter', 'journal-article', 'accepted paper'}
+            conflicting_type = any(t and t.strip().casefold() not in ordinary_or_generic
+                                   for t in declared_types)
+            if (not m or 'explicit_abstract_research_inference' not in self.protocol
+                    or typ.get('status') != 'verified'
+                    or decision['hard_checks']['identity'].get('status') != 'verified'
+                    or typ.get('research_nature') != 'original_research'
+                    or typ.get('material_sha256') != digest(m)
+                    or typ.get('special_type_check') != 'clear'
+                    or typ.get('specific_subtype') is not None or typ.get('value') is not None
+                    or typ.get('subtype_status') != 'not_required_for_inclusion'
+                    or conflicting_type or not typ.get('basis')
+                    or m['source_url'] not in typ.get('sources', [])):
+                raise ValueError('Research-nature inference needs reviewed matching abstract and explicit provenance, not a fabricated subtype')
         short_review = next((e['data'] for e in reversed(self.log.events)
                              if e['kind'] == 'short_comment_reviewed' and e['data']['doi'] == doi), None)
         if m or category == 'review' or decision.get('exclusion_basis') == 'publisher_non_target_type':
@@ -644,7 +685,7 @@ class Workflow:
         if short_review:
             validate_short_comment_review(short_review, r, decision)
         if not m and not (short_review or category == 'review' or
-                         (category == 'excluded' and decision.get('exclusion_basis') == 'publisher_non_target_type')):
+                         user_exclusion or (category == 'excluded' and decision.get('exclusion_basis') == 'publisher_non_target_type')):
             raise ValueError('Topic exclusion/inclusion requires an explicit abstract')
         if m and m.get('abstract_basis') == 'arxiv.Abstract/user_authorized_single_record' and category not in {'excluded', 'review'}:
             raise ValueError('Single author-abstract exception does not authorize inclusion or publication checks')
@@ -654,7 +695,7 @@ class Workflow:
             if any(decision['hard_checks'][k]['status'] != 'verified' for k in ['identity', 'type', 'date']):
                 raise ValueError('Inclusion requires resolved hard checks')
         allowed = {'doi', 'category', 'reason', 'evidence_summary', 'reviewer', 'hard_checks',
-                   'exclusion_basis', 'screening_summary', 'sources', 'needs'}
+                   'exclusion_basis', 'screening_summary', 'sources', 'needs', 'editorial_basis'}
         if set(decision)-allowed:
             raise ValueError('Unexpected public decision fields')
         if m and m['abstract'] in json.dumps(decision, ensure_ascii=False):
@@ -675,7 +716,8 @@ class Workflow:
                      'material_sha256': digest(m) if m else None,
                      'abstract_sha256': m['abstract_sha256'] if m else None,
                      'material_source': m['source_url'] if m else None,
-                     'review_basis': ('official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening'
+                     'review_basis': ('explicit user editorial exclusion after personal review; no abstract obtained or reviewed by assistant'
+                                      if user_exclusion and not m else 'official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening'
                                       if short_review and not m else 'title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review'
                                       if m and m.get('abstract_basis') != 'arxiv.Abstract/user_authorized_single_record' else 'user-authorized single-record author abstract; matched title/all authors, accepted-version equivalence unverified; scope exclusion only'
                                       if m else 'title and bibliographic/type evidence only; no abstract reviewed')})

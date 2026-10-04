@@ -31,6 +31,30 @@ class Client:
 
 
 class CollectorTests(unittest.TestCase):
+    def test_http_429_stops_other_queries_and_channels(self):
+        from urllib.error import HTTPError
+        with TemporaryDirectory() as tmp:
+            log = EventLog(Path(tmp)/'log.jsonl')
+            client = collector.Client(log=log)
+            with patch.object(collector, 'urlopen', side_effect=HTTPError('https://api.crossref.org',429,'Limited',{},None)) as request:
+                _, queries = collect_crossref(client,'2026-09-01','2026-09-30',log=log)
+                self.assertEqual(request.call_count,1)
+                self.assertTrue(client.stopped)
+                self.assertEqual(queries[1]['error'],'not_started_rate_limit')
+                journal={'short':'NMI','collection':{'family':'nature','url':collector.DIRECTORY,'max_pages':2}}
+                self.assertFalse(collect_official(client,journal,'2026-09-01','2026-09-30',log)['complete'])
+                with self.assertRaises(collector.CollectionStopped):
+                    client.get('https://www.nature.com')
+                self.assertEqual(request.call_count,1)
+
+    def test_new_aps_slugs_and_titles(self):
+        for name,slug in [('Physical Review E','pre'),('Physical Review Research','prresearch')]:
+            journal={'name':name,'collection':{'slug':slug}}
+            text=(f'<head><title>{name} - Recent Articles</title></head>'
+                  f'<p>1 - 1 of 1 Results</p><h2 class="title"><a href="/{slug}/abstract/10.1103/synthetic">Synthetic</a></h2>'
+                  '<span>Published 1 September 2026</span></main>')
+            self.assertEqual(parse_aps(text,journal,'recent')['records'][0]['date'],'2026-09-01')
+
     def test_fresh_nmi_run_does_not_require_pilot_files(self):
         record=item()
         response=json.dumps({'status':'ok','message':{'items':[record],'total-results':1}})

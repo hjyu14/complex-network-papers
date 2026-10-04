@@ -6,7 +6,8 @@ import hashlib
 import json
 from pathlib import Path
 from urllib.parse import quote, urlparse
-from screen_candidates import Workflow, digest, now, validate_short_comment_review
+from screen_candidates import digest, now, validate_short_comment_review
+from publication_view import PublicationView, publication_workflow, publisher_url, verify_original
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'newflow-1'
@@ -32,7 +33,7 @@ def author_record(row, record):
 
 
 def build_snapshot(out, notes=None):
-    w = Workflow(out)
+    w = publication_workflow(out)
     legacy = w.out == (ROOT/'reports/2026-09').resolve()
     if w.active():
         raise ValueError('Finish the active assessment before publishing')
@@ -42,10 +43,8 @@ def build_snapshot(out, notes=None):
     closed = {e['data']['batch_id'] for e in w.log.events if e['kind'] == 'supplement_batch_closed'}
     if any(e['data']['batch_id'] not in closed for e in w.log.events if e['kind'] == 'supplement_batch_started'):
         raise ValueError('Close supplement batch before publishing')
-    original = w.log.events[0]['data']['original_sha256']
-    for name, expected in original.items():
-        if hashlib.sha256((w.out/name).read_bytes()).hexdigest() != expected:
-            raise ValueError('Original collection file changed: '+name)
+    if not isinstance(w, PublicationView):
+        verify_original(w)
     if notes is None:
         notes = json.loads((ROOT/'config/publication-notes.json').read_text(encoding='utf-8'))
     latest = w.assessments()
@@ -58,7 +57,8 @@ def build_snapshot(out, notes=None):
     author_hash = digest(author_data)
     if not any(e['kind'] == 'author_metadata_completed' and e['data']['metadata_sha256'] == author_hash for e in w.log.events):
         raise ValueError('Author metadata lacks matching audit event')
-    history = {digest(e['data']): e['data'] for e in w.log.events
+    evidence_events = w.evidence_events if isinstance(w, PublicationView) else w.log.events
+    history = {digest(e['data']): e['data'] for e in evidence_events
                if e['kind'] in {'assessment', 'assessment_corrected'}}
     theme_ids = {c['id'] for c in notes['categories']}
     journals = {j['short']: j for j in w.config['journals']}
@@ -77,7 +77,7 @@ def build_snapshot(out, notes=None):
             raise ValueError('Unknown reviewed evidence kind')
         short_review = None
         if not d['material_sha256']:
-            short_review = next((e['data'] for e in reversed(w.log.events)
+            short_review = next((e['data'] for e in reversed(evidence_events)
                 if e['kind'] == 'short_comment_reviewed' and e['data']['doi'] == d['doi']), None)
             if not short_review or evidence_kind != 'online_short_comment':
                 raise ValueError('Inclusion without an abstract requires a verified online short-comment review')
@@ -115,8 +115,7 @@ def build_snapshot(out, notes=None):
                 break
             lineage = previous
         evidence_url = short_review['source_url'] if short_review else d['material_source']
-        official_url = check.get('source_url') or evidence_url
-        url = official_url if accepted else 'https://doi.org/'+d['doi']
+        url = publisher_url(r, d)
         papers.append({'doi': d['doi'], 'url': url, 'title': r['title'], 'authors': a['authors'],
             'author_metadata_status': a['status'], 'author_metadata_sha256': a['metadata_sha256'],
             'author_source_url': a.get('source_url'), 'author_retrieved_at': a.get('retrieved_at'),
@@ -139,7 +138,8 @@ def build_snapshot(out, notes=None):
             'retrieved_by': [('Fixed September journal inventory; DOI-bound ' if legacy else 'Explicit journal inventory run; DOI-bound ')+('authorized online short-comment review' if short_review else 'explicit abstract excerpt review' if evidence_kind=='abstract_excerpt' else 'abstract review')],
             'screening_version': VERSION})
     papers.sort(key=lambda p: (p['date'], p['doi']), reverse=True)
-    coverage = json.loads((w.out/'coverage.json').read_text(encoding='utf-8'))
+    inventory_out = w.sources[0].out if isinstance(w, PublicationView) else w.out
+    coverage = json.loads((inventory_out/'coverage.json').read_text(encoding='utf-8'))
     compact_coverage = [{ 'journal': short,
         'candidate_count': c['window_inventory_count'],
         'publisher_verified_inventory_count': c['publisher_verified_inventory_count'],
@@ -177,11 +177,15 @@ def build_snapshot(out, notes=None):
             f'{candidate_count} fixed candidates assessed; {counts["review"]} unresolved and {deferred} unassessed.',
             'Assistant screening from explicit abstracts/excerpts or authorized online short comments, plus explicit user scope decisions; not full-text expert review.',
             'Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred.'], 'papers': papers}
+    if isinstance(w, PublicationView):
+        snapshot['assessment_sources'] = w.manifest
     audit = {k: snapshot[k] for k in ['generated_at', 'window_start', 'window_end', 'screening_version',
         'config_sha256', 'current_rule_sha256', 'screening_log_sha256', 'reading_notes_sha256',
         'author_metadata_sha256', 'author_available_count',
         'screening_counts', 'candidate_count', 'published_count', 'accepted_count',
         'candidate_inventory_complete', 'metadata_reconciliation_complete', 'limitations']}
+    if isinstance(w, PublicationView):
+        audit['assessment_sources'] = w.manifest
     audit['included_assessments'] = [{k: p[k] for k in ['doi', 'scope_class', 'publication_status',
         'assessment_sha256', 'input_sha256', 'material_sha256', 'review_evidence_kind', 'review_evidence_sha256', 'rule_sha256', 'scope_authority', 'author_metadata_status', 'author_metadata_sha256']} for p in papers]
     status = {'attempted_at': generated_at, 'ok': True, 'operation': 'publish_existing_reviewed_snapshot',
@@ -215,7 +219,7 @@ def build_release(runs):
     coverage_dois = {}
     window = None
     for run in runs:
-        w = Workflow(run)
+        w = publication_workflow(run)
         current_window = (w.pool['window_start'], w.pool['window_end'])
         if window is not None and window != current_window:
             raise ValueError('Release runs must share the same date window')
@@ -244,10 +248,12 @@ def build_release(runs):
                 raise ValueError('Conflicting journal coverage across runs: '+c['journal'])
             coverage[c['journal']] = c
             coverage_dois[c['journal']] = dois
+        input_manifest = w.manifest_path if isinstance(w, PublicationView) else w.out/'inputs/manifest.json'
         inputs.append({'run': w.out.relative_to(ROOT).as_posix(), 'config_sha256': part['config_sha256'],
                        'rule_sha256': w.rule_sha, 'screening_log_sha256': w.log.head,
                        'candidate_sha256': w.input_sha, 'author_metadata_sha256': part['author_metadata_sha256'],
-                       'run_manifest_sha256': hashlib.sha256((w.out/'inputs/manifest.json').read_bytes()).hexdigest(),
+                       'run_manifest_sha256': hashlib.sha256(input_manifest.read_bytes()).hexdigest(),
+                       **({'assessment_sources': w.manifest} if isinstance(w, PublicationView) else {}),
                        'candidate_inventory_complete': part['candidate_inventory_complete'],
                        'metadata_reconciliation_complete': part['metadata_reconciliation_complete']})
     if set(notes['papers']) != set(papers):
@@ -316,7 +322,7 @@ def main():
         target.mkdir(parents=True, exist_ok=True)
         # Validation finishes before any public file is replaced.
         for name, value in artifacts.items():
-            (target/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+            (target/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')
         print('Exported '+str(len(artifacts['papers.json']['papers']))+' reviewed papers.')
 
 if __name__ == '__main__':

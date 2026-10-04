@@ -1,0 +1,2449 @@
+# 需要人工复核的文献
+
+窗口：2026-09-01—2026-09-30；as-of：2026-10-04。
+
+这是逐篇标题、明确摘要与书目证据的 AI 辅助筛选，不是全文专家审查。摘要全文仅保存在 Git 忽略的私有缓存。
+
+## 1. Mean-field path-integral diffusion from samples to interacting agents
+
+CP · `review` · published · 2026-09-10 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1038/s42005-026-02750-0) · `10.1038/s42005-026-02750-0`
+
+Population-dependent stochastic transport coordinates interacting trajectories; its relevance as a transferable network-science method rather than generative-control theory is uncertain.
+
+待补证／裁决：
+
+- Resolve indicated scientific or official-type evidence gap
+
+硬检查：identity=verified；type=verified；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1038%2Fs42005-026-02750-0)
+
+判断输入哈希：`5b39b3f9f049a971d666df52339c0401f547aa0f697b53190ab1bd3b93568348`
+
+## 2. Critical brain dynamics may be more prevalent than previously thought
+
+CP · `review` · published · 2026-09-11 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1038/s42005-026-02833-y) · `10.1038/s42005-026-02833-y`
+
+Neural-population subspaces may hide critical modes and avalanches; explicit network object and main network-science contribution need clarification.
+
+待补证／裁决：
+
+- Clarify explicit interaction-network object and central contribution
+
+硬检查：identity=verified；type=verified；date=verified
+
+资料来源：[来源 1](https://www.nature.com/articles/s42005-026-02833-y)
+
+判断输入哈希：`cfb3cf7b92e4fc573e38d2c8b9e120b21fa222205134b5ea7f5cf7dd3087fec2`
+
+## 3. Using a resistor network to simulate charge transport in organic semiconductors through injection layers and transport layers
+
+CP · `review` · published · 2026-09-24 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1038/s42005-026-02850-x) · `10.1038/s42005-026-02850-x`
+
+Resistor-network approximation accelerates semiconductor transport simulation; transferability as a network-science method rather than a device-specific approximation remains unclear.
+
+待补证／裁决：
+
+- scientific boundary: transferable network method
+
+硬检查：identity=verified；type=verified；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1038%2Fs42005-026-02850-x)
+
+判断输入哈希：`a81e769d4675846a818eacaca814c4e0c9bc19fefadefa8b79eab62a490d4bdf`
+
+## 4. Reducing hyperparameter sensitivity in measurement-feedback based Ising machines
+
+CP · `review` · published · 2026-09-30 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1038/s42005-026-02891-2) · `10.1038/s42005-026-02891-2`
+
+Measurement-feedback Ising machines improve dynamical optimization robustness; the abstract leaves network-dynamics versus hardware-solver contribution uncertain.
+
+待补证／裁决：
+
+- scientific boundary: coupled network dynamics versus optimization hardware
+
+硬检查：identity=verified；type=verified；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1038%2Fs42005-026-02891-2)
+
+判断输入哈希：`7de5eb9dae6ef6b3deee0968e4e841d7ceb0f1d62fe012557990b07393cdd003`
+
+## 5. Dual-value reinforcement learning with delayed local welfare feedback in spatial public goods games
+
+Chaos · `review` · published · 2026-09-02 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1063/5.0351153) · `10.1063/5.0351153`
+
+Delayed local-welfare learning governs cooperation in spatial public-goods interactions; official research type remains to be established.
+
+待补证／裁决：
+
+- Official target type; scientific boundary if required
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1063%2F5.0351153)
+
+判断输入哈希：`f1edec6c57b3682c3a1e9ba14f21e7b5975864c7861754c4c04c1d4c1410de03`
+
+## 6. Spectral stability correspondence between networks and continuous media: Theory and applications to population dynamics
+
+Chaos · `review` · published · 2026-09-04 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1063/5.0349270) · `10.1063/5.0349270`
+
+Master-stability spectra link network synchronization to continuous media and directed-network quasiperiodicity; official article type still needs verification.
+
+待补证／裁决：
+
+- Resolve indicated scientific or official-type evidence gap
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1063%2F5.0349270)
+
+判断输入哈希：`d0172679cf8774a1da80191939db787c905276d644d6392c0bdb48955642fa39`
+
+## 7. Simplicial SEIQS epidemic dynamics: Bistability and backward bifurcation under a mean-field approximation
+
+Chaos · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1063/5.0346196) · `10.1063/5.0346196`
+
+Simplicial epidemic interactions create subthreshold bistability and reshape extinction basins on networks; official target article type needs verification.
+
+待补证／裁决：
+
+- Resolve indicated scientific or official-type evidence gap
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1063%2F5.0346196)
+
+判断输入哈希：`0b2e71690cb44a829ab9bb1b607d37ceba0bdfebc86e7dac16e565494e3d40a2`
+
+## 8. Permutation entropy reveals coherent structures and ecological boundaries in North Atlantic phytoplankton blooms
+
+Chaos · `review` · published · 2026-09-22 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1063/5.0336325) · `10.1063/5.0336325`
+
+Functional connectivity identifies ecological subregions, but the abstract does not resolve whether network organization is a main contribution beyond ordinal-pattern diagnostics.
+
+待补证／裁决：
+
+- scientific boundary: empirical network organization versus routine diagnostic application
+- official type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1063%2F5.0336325)
+
+判断输入哈希：`a4724f50fbc849b077367282d3e45337474ed535be4f8328da58478200f8b1e9`
+
+## 9. Deciphering interventional dynamical causality via Kolmogorov–Arnold networks
+
+Chaos · `review` · published · 2026-09-25 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1063/5.0350835) · `10.1063/5.0350835`
+
+Surrogate interventions infer dynamical causal relationships; whether this is a transferable network-reconstruction method is unclear from the abstract.
+
+待补证／裁决：
+
+- scientific boundary: causal network reconstruction
+- official article type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1063%2F5.0350835)
+
+判断输入哈希：`0b38b9a2860694e9a873f3272ec814d1b8782f27135db5e7426357438b71b7dd`
+
+## 10. Collective turns in spinless flocks
+
+PRE · `review` · published · 2026-09-01 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/6976-lcw7) · `10.1103/6976-lcw7`
+
+Nonreciprocal local interactions explain turning-signal propagation in flocks, a relevant collective interaction problem; specific article-type evidence remains unresolved.
+
+待补证／裁决：
+
+- Verify official target research type; assess network-science boundary for continuum flock model
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/6976-lcw7)
+
+判断输入哈希：`f5b7641fd1a8a2491fb0ecdc2e18748668487f4cfbafb0d609195f5d96e47c0c`
+
+## 11. Quantum system reliability: A phase-encoded interference framework for interdependent and interconnected systems
+
+PRE · `review` · published · 2026-09-01 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/s6mj-4f1s) · `10.1103/s6mj-4f1s`
+
+Phase-encoded reliability targets interdependent graphs and cascading systems, but its claimed network-method contribution and physical meaning need expert boundary review; official type remains unresolved.
+
+待补证／裁决：
+
+- Scientific review of transferable network-reliability contribution
+- Official target type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/s6mj-4f1s)
+
+判断输入哈希：`217bdf0d4a6ee9a506e8896345430dac27ed2060da1544eb0093802eba6fd9ce`
+
+## 12. Perspective on physical systems with a purpose: Using tunable degrees of freedom to enable function
+
+PRE · `review` · accepted · 2026-09-01 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/z1fd-78ty) · `10.1103/z1fd-78ty`
+
+Tunable matter is discussed through learning analogies and functional physical systems; whether network organization is a main contribution is unclear, and accepted-paper type needs verification.
+
+待补证／裁决：
+
+- Clarify central network-science content
+- Verify official accepted-paper type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/z1fd-78ty)
+
+判断输入哈希：`0eda38261b55f30b5b9f8878b4183fdb86cd379ad0f8934bec492f380e75b892`
+
+## 13. Solvable model of noisy coupled oscillators with fully random interactions
+
+PRE · `review` · published · 2026-09-02 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/72hc-zmsb) · `10.1103/72hc-zmsb`
+
+Randomly coupled oscillators yield solvable response and correlation equations and frequency-dependent glass suppression; official target type needs verification.
+
+待补证／裁决：
+
+- Official target type; scientific boundary if required
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/72hc-zmsb)
+
+判断输入哈希：`a66b7b2c1457f6a9cd1f88fd707f1ac4102dfc71c64ace88cf6f2cf2231ef1c3`
+
+## 14. Evolutionary chemical learning in dimerization networks
+
+PRE · `review` · published · 2026-09-02 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/bszq-gftl) · `10.1103/bszq-gftl`
+
+Chemical binding-affinity networks are trained for molecular classification; whether transferable network dynamics is a main contribution needs scientific review, alongside type verification.
+
+待补证／裁决：
+
+- Resolve indicated scientific or official-type evidence gap
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/bszq-gftl)
+
+判断输入哈希：`77c9ec9354c97a39a15bbc4f36a733e677258be72e0674becd9944b471ffc82d`
+
+## 15. Community detection with the canonical ensemble
+
+PRE · `review` · published · 2026-09-02 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/rt96-mb8q) · `10.1103/rt96-mb8q`
+
+Canonical maximum-entropy null models support network-community hypothesis testing and interpretable significance statistics; official article type remains unresolved.
+
+待补证／裁决：
+
+- Resolve indicated scientific or official-type evidence gap
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Frt96-mb8q)
+
+判断输入哈希：`9cba17b465cfaeb845d74ded9c650487342e37e0f5e5f2c6e3b7ae135724529e`
+
+## 16. Equivalent-neighbor k -core percolation in two dimensions
+
+PRE · `review` · published · 2026-09-02 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/sbf3-yfl5) · `10.1103/sbf3-yfl5`
+
+Finite-range k-core percolation exhibits geometric constraints, discontinuous collapse and unusual finite-size drift; official article type remains unresolved.
+
+待补证／裁决：
+
+- Resolve indicated scientific or official-type evidence gap
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+官方观察题名（保留差异）：Equivalent-neighbor 𝑘-core percolation in two dimensions
+
+原始差异：publisher_crossref_title_conflict
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/sbf3-yfl5)
+
+判断输入哈希：`a1b23569ee62e8836223ba53afcc96f1f60e6926274057dac999dda8593f39e6`
+
+## 17. Area-law entanglement in quantum chaotic systems
+
+PRE · `review` · published · 2026-09-03 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/m9sq-j42t) · `10.1103/m9sq-j42t`
+
+Median-graph quantum-walk duality constructs bounded-entanglement systems; whether this yields transferable network-science theory needs boundary review and type verification.
+
+待补证／裁决：
+
+- Resolve stated scientific boundary and/or official research type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/m9sq-j42t)
+
+判断输入哈希：`2f7f14f35811e00a1895839b3bf3b541494ca80198443a9f29b163881b213711`
+
+## 18. Mechanisms for extreme events in position-dependent mass systems
+
+PRE · `review` · accepted · 2026-09-08 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/19cl-x33l) · `10.1103/19cl-x33l`
+
+Mass-coupled Higgs oscillators exhibit collective extreme events and energy synchronization; network versus geometry-specific contribution and official type remain unresolved.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/19cl-x33l)
+
+判断输入哈希：`384e3400623b99bde38eedf5e7a3397b99ca12e38c369bee2f76384d4bde3002`
+
+## 19. Diffusion disorder in the contact process
+
+PRE · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/73g3-b38r) · `10.1103/73g3-b38r`
+
+Diffusion disorder changes contact-process universality through induced healing-rate disorder; scope fits network spreading, but specific official type is unverified.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/73g3-b38r)
+
+判断输入哈希：`2b9179703a63a3ac2aa30316a695b3beaed01dda7de48e49ccd388bd62bb45f3`
+
+## 20. Thermodynamic characterization of mesoscale organization via network density matrices
+
+PRE · `review` · accepted · 2026-09-08 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/9mgt-48mf) · `10.1103/9mgt-48mf`
+
+Network density matrices link internal energy, correlation leakage and community detection; scope fits, but accepted-article official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf)
+
+判断输入哈希：`7ad9fc84909b716a7e4d8047765af74cbdd97c018fbe05379b6bd09141f769ad`
+
+## 21. Nonlinear model reduction of complex networks via spectral submanifolds
+
+PRE · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/gp7d-fsk5) · `10.1103/gp7d-fsk5`
+
+Spectral-submanifold reduction predicts nonlinear network tipping points and node dynamics; scope fits, but official specific article type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/gp7d-fsk5)
+
+判断输入哈希：`b4f034f27c1a02e43ea9b87c25e49f5d1f3b30cbb3d189424e5eacddbdc9efc3`
+
+## 22. Spatial coevolutionary dynamics in population games with environmental feedbacks
+
+PRE · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/k326-3y4g) · `10.1103/k326-3y4g`
+
+Spatial strategy-environment coevolution stabilizes populations through patterns and diffusion; scope is plausible, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/k326-3y4g)
+
+判断输入哈希：`4b60c58afc8d30dcbf65de861f08f8c901ec2b31f0bc9c94179f322c8d8b43c9`
+
+## 23. Time-dependent pore-network modeling of Ostwald ripening in porous media
+
+PRE · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/kbb7-wbln) · `10.1103/kbb7-wbln`
+
+A transient pore-network model captures ripening and occupancy changes; a transferable network-science contribution beyond pore-physics modeling remains unclear.
+
+待补证／裁决：
+
+- scientific boundary: transferable network method
+- official article type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fkbb7-wbln)
+
+判断输入哈希：`fe7a970491c10e471bbeee1968e82a8fffa19233a0304d9cdf711f9f84654131`
+
+## 24. Hidden higher-order vulnerabilities in simplicial complexes revealed by fixed-index spectral robustness
+
+PRE · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/n4ps-wmd7) · `10.1103/n4ps-wmd7`
+
+Fixed-index Hodge spectra reveal triangle-deletion vulnerabilities invisible to graph robustness; scientific scope fits, but specific official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/n4ps-wmd7)
+
+判断输入哈希：`6ea28ec93f7aa5fe62c07cf0c446f71c31488aa7d158e0cea69a6a8acfb4c106`
+
+## 25. Stability and breakdown of chiral motion in nonreciprocal flocking
+
+PRE · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/yz2d-wk6g) · `10.1103/yz2d-wk6g`
+
+Nonreciprocal alignment and interaction range determine collective chiral-state stability; scope is plausible, but official specific type is unresolved.
+
+待补证／裁决：
+
+- official article type
+- network-science boundary
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/yz2d-wk6g)
+
+判断输入哈希：`57cf41d3b37e258c0904fae2751cb785c9aafb1dda0350569c71691ae5ea82ec`
+
+## 26. Efficiency-fragility discontinuity: Dual thresholds and the deceptive safety zone in critical infrastructure networks
+
+PRE · `review` · published · 2026-09-09 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/3cmf-cbj3) · `10.1103/3cmf-cbj3`
+
+Spatial stress and topology generate dual cascading-failure thresholds in infrastructure networks; scope fits, but specific official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/3cmf-cbj3)
+
+判断输入哈希：`a8e9aeef6fb9e4c8f85b865b47da6ee4d57a791ed3a86e6fbad7c7772ed3a358`
+
+## 27. Planned behavior, perceptual biases, and the dynamics of collective action
+
+PRE · `review` · accepted · 2026-09-09 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/l3vx-x5yf) · `10.1103/l3vx-x5yf`
+
+Psychological biases and interpersonal influences generate behavioral cascades; interaction-network relevance and official type remain unresolved.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/l3vx-x5yf)
+
+判断输入哈希：`5d9d4b4e4ffd942dfc75cc93621f976592812cdf008ac186dd2dcd3cbbc5fca1`
+
+## 28. Information retention by synaptic learning rules in stochastic spiking neural networks
+
+PRE · `review` · published · 2026-09-09 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/m8bw-9fzg) · `10.1103/m8bw-9fzg`
+
+Plasticity rules store spike-train information in synaptic weights of stochastic neural networks; scientific scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/m8bw-9fzg)
+
+判断输入哈希：`804288eb8c3d47802ea49bce976dcca56749e995118339806232f4cd9d49716c`
+
+## 29. Random walks across dimensions: Exploring simplicial complexes
+
+PRE · `review` · accepted · 2026-09-09 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/ppm1-mxhz) · `10.1103/ppm1-mxhz`
+
+Cross-dimensional simplicial random walks define higher-order rankings and search strategies; scope fits, but accepted-article official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/ppm1-mxhz)
+
+判断输入哈希：`9c1b4ae762ec17ed20a367fc2a90ca587e51d7d8cb076af8bc213fc7a0231cbe`
+
+## 30. Kinetic theory of pattern formation in a generalized multispecies Vicsek model
+
+PRE · `review` · published · 2026-09-09 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/qjl4-wqvx) · `10.1103/qjl4-wqvx`
+
+Cyclic multispecies alignment interactions determine collective order through kinetic theory; scope is plausible, but official specific type is unresolved.
+
+待补证／裁决：
+
+- official article type
+- network-science boundary
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fqjl4-wqvx)
+
+判断输入哈希：`5b42c0fc934dc5a3818f3fca016c6d3ac718709bbe1f185e73c81dc666a5b6cb`
+
+## 31. Reviving networked multidimensional dynamical systems
+
+PRE · `review` · accepted · 2026-09-09 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/qqwq-7j7j) · `10.1103/qqwq-7j7j`
+
+Shortest-path stratification reduces multidimensional network dynamics and predicts single-node revival control; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/qqwq-7j7j)
+
+判断输入哈希：`57fbb1767ec9077478d4481f591175c586f67190128760c72a9fb9b89ed7711f`
+
+## 32. Introduction to random rule-based chemical networks
+
+PRE · `review` · published · 2026-09-09 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/wfn7-h898) · `10.1103/wfn7-h898`
+
+Rule-based chemical-network models connect small-world organization, growth phases and autocatalysis; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/wfn7-h898)
+
+判断输入哈希：`96f26142b875c3ccb7393352a06fc423f781eef0ae9d0997f1848d486e48c7f1`
+
+## 33. Coexistence of explosive and driven forms of remote synchronization in star networks
+
+PRE · `review` · published · 2026-09-09 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/wysx-f9l3) · `10.1103/wysx-f9l3`
+
+Forced star oscillator networks support explosive and driven remote synchronization through distinct mechanisms; scope fits, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/wysx-f9l3)
+
+判断输入哈希：`3110e96a3c98cc5bb97128c046fde69b39a0e4cae73b1224f47af8f12a43ba41`
+
+## 34. Kinetic energy in random recurrent neural networks
+
+PRE · `review` · published · 2026-09-09 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/x15s-84n9) · `10.1103/x15s-84n9`
+
+Random recurrent neural-network mean-field theory characterizes kinetic-energy scaling at chaos onset; scientific scope fits, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/x15s-84n9)
+
+判断输入哈希：`a553caffa55e09fbdd8f5807e3b31d0117157ef190e547453133bb55affd5c45`
+
+## 35. Inertial synchronization of networked oscillators in arbitrary dimensions
+
+PRE · `review` · published · 2026-09-10 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/fsdp-667s) · `10.1103/fsdp-667s`
+
+Inertial multidimensional Kuramoto theory predicts discontinuous synchronization and hysteresis; scope fits, but browser inspection found no specific official type label.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Ffsdp-667s)
+
+判断输入哈希：`11cfe0a2fd3ac45dd34566ef8b85276805c8fc82a27d067b054b71130e4fe7f2`
+
+## 36. Minimal representations of topology-preserving quantumlike states
+
+PRE · `review` · accepted · 2026-09-11 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/4kcg-z9v2) · `10.1103/4kcg-z9v2`
+
+Equitable partitions give topology-preserving minimal graph-product representations; transferable graph-theoretic scope fits, but accepted-article official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/4kcg-z9v2)
+
+判断输入哈希：`e25b65fb2d7719aeab9ace93e473ee5792ab7d7f460509223a237d733bbf9835`
+
+## 37. Multivariate stochastic coupling in unknown complex systems: Informative randomness in deterministic brain-body communication
+
+PRE · `review` · published · 2026-09-11 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/5n8x-155p) · `10.1103/5n8x-155p`
+
+Multivariate entropy estimates stochastic coupling independently of unknown deterministic dynamics; transferability to network inference and official type require review.
+
+待补证／裁决：
+
+- network-method boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2F5n8x-155p)
+
+判断输入哈希：`0cdfc96eb818b1f2c34d685efc827bb146c3cfaa83bdf21fd73ff778fff8f3c5`
+
+## 38. Emergence of contagious cooperation in community-structured networks
+
+PRE · `review` · published · 2026-09-11 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/81gf-mlhm) · `10.1103/81gf-mlhm`
+
+Community overlap and group size set contagious-cooperation thresholds across network architectures; scientific scope fits, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/81gf-mlhm)
+
+判断输入哈希：`02d19827875fc3edfcdf0b78bfdbed8ff9a0aa0fd7495e6c1ba3d6c1b6997031`
+
+## 39. Towards critical branching mechanism in recurrent neural networks
+
+PRE · `review` · accepted · 2026-09-11 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/bg2r-m6g5) · `10.1103/bg2r-m6g5`
+
+Trained LSTM recurrent dynamics exhibit capacity-dependent avalanches and heterogeneous branching; network dynamics is the object, but accepted-article type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/bg2r-m6g5)
+
+判断输入哈希：`7164b6f5dab2720e51d3d84f6fe77526328a154114135effe2d68a6d310b4305`
+
+## 40. Emergence of generic first-passage-time distributions for large Markovian networks
+
+PRE · `review` · published · 2026-09-11 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/ftyk-48y2) · `10.1103/ftyk-48y2`
+
+Generator eigenvalues and graph conductance explain generic first-passage limits on Markovian networks; scope fits, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/ftyk-48y2)
+
+判断输入哈希：`1a3a324d3aac1728186ca2518c0cc63ec036e6c078113d6151db64d5e2ee9636`
+
+## 41. Heuristic and exact modularity optimization with size-constrained communities
+
+PRE · `review` · accepted · 2026-09-11 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/y6ss-j5qv) · `10.1103/y6ss-j5qv`
+
+Heuristic and exact modularity optimization enforce individual community-size bounds on networks; scope fits, but accepted-article official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv)
+
+判断输入哈希：`bc86c5fca62a4b54652e9b6c1ce3537ae94ee4d560856b396882cab607081bde`
+
+## 42. Synchronization enhancement by dissipative coupling
+
+PRE · `review` · published · 2026-09-14 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/48xl-kkq1) · `10.1103/48xl-kkq1`
+
+Coherent-dissipative coupling angles expand oscillator locking windows and alter amplitude symmetry; scope fits network synchronization, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/48xl-kkq1)
+
+判断输入哈希：`3a5785fd30adbc48a84141fc5168d70ee8a9a70f5b00647a5a1d0074e3e916ff`
+
+## 43. From clustering to global synchrony: Higher-order interactions reshape ecological network dynamics
+
+PRE · `review` · published · 2026-09-14 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/k9b1-n8mb) · `10.1103/k9b1-n8mb`
+
+Dyadic and triadic dispersal yields topology-dependent ecological clustering and synchrony with master-stability analysis; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/k9b1-n8mb)
+
+判断输入哈希：`7d14182624218adf222317fff65d5710c0c0bdc69f3584e6d6b5c02140a5f407`
+
+## 44. Glass and jamming transitions in a random organization model
+
+PRE · `review` · accepted · 2026-09-14 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/qz1m-4942) · `10.1103/qz1m-4942`
+
+Official accepted-page identity was verified, but its Abstract is empty after browser loading; insufficient material to judge scientific scope.
+
+待补证／裁决：
+
+- identity-matched explicit abstract
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/qz1m-4942)
+
+判断输入哈希：`9231567ab6d92c75d1bb40650beb2866931ce340d10e15c4a0f9eb6bb97808cf`
+
+## 45. Robust method to identify chimera states
+
+PRE · `review` · published · 2026-09-14 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/tt2n-wll8) · `10.1103/tt2n-wll8`
+
+Fourier-statistical classification identifies chimeras in Dirac-coupled topological signals across network topologies; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/tt2n-wll8)
+
+判断输入哈希：`2ce14c8a5b655dc3323a84d9d20bbeb8c605d5f40651364552fc65affb2bc0a6`
+
+## 46. Polar chiral active matter as a motile, disordered Josephson array: Information supercurrents and Goldstone spin waves
+
+PRE · `review` · published · 2026-09-15 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/7y6z-4bwy) · `10.1103/7y6z-4bwy`
+
+Localized Kuramoto-Sakaguchi coupling maps moving polar agents to Josephson-array synchronization and information transport; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/7y6z-4bwy)
+
+判断输入哈希：`2afa7f4926776d51638342755f4928ba44ea9af4238b933db334155f5923db8b`
+
+## 47. Largest connected component in duplication-divergence growing graphs with symmetric coupled divergence
+
+PRE · `review` · accepted · 2026-09-16 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/3zrx-56mx) · `10.1103/3zrx-56mx`
+
+Duplication-divergence graph growth produces largest-component percolation transitions and degree-scaling relations; scope fits, but accepted-article type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/3zrx-56mx)
+
+判断输入哈希：`92bbdcc67b2b1d23ecc226bb47cd8276a67a3fa1b73906891e3b802b45da2f55`
+
+## 48. Renormalized entropy production for optimal transport in jump processes: Make conservative forces optimal again
+
+PRE · `review` · accepted · 2026-09-17 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/2c55-lsxh) · `10.1103/2c55-lsxh`
+
+Renormalized entropy production characterizes conservative control of discrete jump dynamics; transferable network-transport relevance is plausible but not explicit.
+
+待补证／裁决：
+
+- network-method boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/2c55-lsxh)
+
+判断输入哈希：`830b73c97fd1b2b6d93434446f8ec66b833f71bd7ef9c4410502d198d360f034`
+
+## 49. Clustering in atom probe tomography data: Coordination number metric, percolation-based parameter scaling, and size effects
+
+PRE · `review` · accepted · 2026-09-18 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/17ms-c7hr) · `10.1103/17ms-c7hr`
+
+Percolation-based scaling transfers clustering parameters in tomography; whether this is transferable network methodology beyond spatial-material clustering remains unclear.
+
+待补证／裁决：
+
+- network-method boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/17ms-c7hr)
+
+判断输入哈希：`eac304f3b9003844532e1258e752c142311b2a903cf9379da7d6bfdc882ad935`
+
+## 50. Collective dynamics of trail-interacting particles
+
+PRE · `review` · accepted · 2026-09-18 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/1rfx-w3rw) · `10.1103/1rfx-w3rw`
+
+Shared persistent trails couple particle motion across time and space; network interaction-memory relevance versus continuum active matter requires review.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/1rfx-w3rw)
+
+判断输入哈希：`d6ed343ff90b427caa53a8a9d2eb754bbd370e4640747882e02ccdccfbe2e9a4`
+
+## 51. Emergent correlations in the selected link times along optimal paths
+
+PRE · `review` · published · 2026-09-18 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/nxwl-5wvf) · `10.1103/nxwl-5wvf`
+
+Optimal lattice paths develop correlated link-time statistics linked to first-passage percolation; network-path scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/nxwl-5wvf)
+
+判断输入哈希：`94af5055611139240f98cdafdba84a9cf676179a89ac4d9d608ab2ed3c4a6579`
+
+## 52. Localization of active particles on random arrays of parallel filaments
+
+PRE · `review` · accepted · 2026-09-18 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/ys6r-4mbf) · `10.1103/ys6r-4mbf`
+
+Random filament polarity and transport kinetics localize particles on filament networks; scope fits, but accepted-article official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf)
+
+判断输入哈希：`beed5636e461e8ca2d3b3e13eea00d770d226e44cb08db74fbd79d2f086268ec`
+
+## 53. Permeability of deforming soft particle packs
+
+PRE · `review` · published · 2026-09-18 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/zpm1-lp4n) · `10.1103/zpm1-lp4n`
+
+Percolation-based geometry predicts permeability of deforming particle packs; transferable network transport versus constitutive material modeling remains unresolved.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fzpm1-lp4n)
+
+判断输入哈希：`cc4eca035974e4bc7affe21d0df3aa6efe54a66e30b3982d187756dd95150878`
+
+## 54. Emergence and co-existence of periodic and unstructured motion in future-avoiding random walks
+
+PRE · `review` · accepted · 2026-09-21 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/9q1j-dlw8) · `10.1103/9q1j-dlw8`
+
+Future-avoiding walkers on graphs develop coexisting periodic and stochastic paths through collective coupling; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/9q1j-dlw8)
+
+判断输入哈希：`7137ac5b6434eb15ab85ed8e3913f04076a497317e825829016770784252296e`
+
+## 55. Asymmetry-induced chiral dynamics in coupled self-propelled robots: Spinning and circular motion
+
+PRE · `review` · published · 2026-09-21 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/l96b-w6bn) · `10.1103/l96b-w6bn`
+
+Spring-coupled active robots develop asymmetry-driven collective chiral regimes; whether this is transferable interaction-network dynamics requires review.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/l96b-w6bn)
+
+判断输入哈希：`3139206a7bb0dc75c707f665f2171b9ee481a914a337212308a9c3301c6c8935`
+
+## 56. Limits of optimal decoding under synaptic coarse-tuning
+
+PRE · `review` · published · 2026-09-21 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/v3jy-fh5p) · `10.1103/v3jy-fh5p`
+
+Synaptic imprecision bounds population decoding across feedforward and recurrent architectures; network computation is the scientific object, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/v3jy-fh5p)
+
+判断输入哈希：`ffb3a991cfaf42f88fb0ae3611d2c601380d9f2e5e06faa0d9f3dddc78db7567`
+
+## 57. Nonuniform asymmetric exclusion process: Stationary densities and domain walls
+
+PRE · `review` · accepted · 2026-09-22 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/pzp6-rshs) · `10.1103/pzp6-rshs`
+
+Spatially nonuniform TASEP hopping controls stationary densities and domain-wall envelopes; whether this one-channel transport result qualifies as network dynamics needs editorial resolution, with specific official type missing.
+
+待补证／裁决：
+
+- Editorial scope decision on site-dependent one-channel TASEP versus network transport
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/pzp6-rshs)
+
+判断输入哈希：`37d4598dae20d05d12c9f5bddce0bec63fc1e3e745cdb8ad1ee5a70b11ac89c3`
+
+## 58. Finite-size effects in nonlinear mean-field coupled Kuramoto oscillators
+
+PRE · `review` · published · 2026-09-22 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/v94v-3p18) · `10.1103/v94v-3p18`
+
+Global-coherence feedback changes Kuramoto synchronization, bistability and finite-size scaling; dynamics on a fully coupled oscillator population are relevant, but official specific article type is unverified.
+
+待补证／裁决：
+
+- Specific official article type; no extension of the PRL accepted-abstract inference exception
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/v94v-3p18)
+
+判断输入哈希：`407d4c83020be335663d532cabd620497511daf9f0cb1c9ec1d6eeda9707034d`
+
+## 59. Universal classical and quantum fluctuations in the large deviations of current of noisy quantum systems: Quantum symmetric simple exclusion and inclusion processes
+
+PRE · `review` · published · 2026-09-23 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/dt4c-tz98) · `10.1103/dt4c-tz98`
+
+Quantum exclusion/inclusion chains yield current large deviations and quantum corrections to macroscopic fluctuation theory; transferable network-transport relevance is a boundary requiring editorial judgment, and specific official type is missing.
+
+待补证／裁决：
+
+- Editorial scope determination for quantum one-dimensional transport and fluctuation theory
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/dt4c-tz98)
+
+判断输入哈希：`11c9d22ebf4954e6d1a986e43f2cc1610345c0fd9c603aebfd02c5681a79a0c3`
+
+## 60. Cell-cell adhesion as a double-edged sword in tissue fluidity
+
+PRE · `review` · published · 2026-09-23 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/f6mt-tkgl) · `10.1103/f6mt-tkgl`
+
+Junctional viscosity and energetic adhesion govern vertex-model neighbor exchange, jamming and rheology; whether tissue interaction structure supplies transferable network science needs editorial review, with official specific type unresolved.
+
+待补证／裁决：
+
+- Editorial scope decision on evolving cellular junctions versus tissue rheology
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/f6mt-tkgl)
+
+判断输入哈希：`ee5af923390b8188a35a77249470e55962f4423bd06d24ddb64f983e6c2b8ebd`
+
+## 61. Phase transitions in three-dimensional Kuramoto model under nonlinear mean-field coupling
+
+PRE · `review` · published · 2026-09-23 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/wwyd-bz8n) · `10.1103/wwyd-bz8n`
+
+Nonlinear mean-field feedback produces two-step synchronization, bistability and hysteresis in three-dimensional Kuramoto populations; collective oscillator dynamics are relevant, but specific official type remains unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/wwyd-bz8n)
+
+判断输入哈希：`1ba1bdc069275958176d19031b4c1946a8d09ffd70a32d659a7d9990dad1184e`
+
+## 62. Extended-range percolation for neighborhoods of rectangular shape on square lattice
+
+PRE · `review` · published · 2026-09-23 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/xsyr-d79f) · `10.1103/xsyr-d79f`
+
+Rectangular-neighborhood orientation changes bond/site percolation thresholds and coordination-number scaling; this is network connectivity theory, but specific official article type remains unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/xsyr-d79f)
+
+判断输入哈希：`50c54d9b5460242e0cc9a77210011fb3fbc895f9259a18b1e366703f1d8b9086`
+
+## 63. Self-learning mechanical circuits
+
+PRE · `review` · accepted · 2026-09-24 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/23wf-kb12) · `10.1103/23wf-kb12`
+
+Adaptive directed-spring networks self-learn input patterns, with stability depending on network architecture; transferable network learning is explicit, but official specific article type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/23wf-kb12)
+
+判断输入哈希：`ea38d1186048d32eceb360e1435597ff059ae4833a0162ec1a9c4fd3bd8b4222`
+
+## 64. Asymmetric cyclic interactions lead to stable mean-field equilibria while demographic noise induces sustained oscillations
+
+PRE · `review` · accepted · 2026-09-24 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/9tjx-cw7q) · `10.1103/9tjx-cw7q`
+
+Asymmetric binary policy interactions yield mean-field equilibria and noise-sustained oscillations in transmitter populations; transferable interaction-network dynamics versus well-mixed policy modeling needs editorial review, and official type is unresolved.
+
+待补证／裁决：
+
+- Editorial scope decision on communications-agent interaction model
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/9tjx-cw7q)
+
+判断输入哈希：`0e24631c7fdd93e3791c4dfb7fc99e888800b2027a2245f5b94c92b7eb6b332b`
+
+## 65. Optimizing quantum transport via the quantum Doob transform
+
+PRE · `review` · published · 2026-09-24 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/bgx2-wmpr) · `10.1103/bgx2-wmpr`
+
+The quantum Doob transform tailors Hamiltonian and dissipative dynamics to optimize complex quantum-network currents and activities; a transferable network-transport method is explicit, but official specific type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/bgx2-wmpr)
+
+判断输入哈希：`d1f5020dfd848312a95621429e01a4a8d3a04f66ddb89fb21c1098a19c377bb8`
+
+## 66. Curvature in infectious disease network: A metric for vaccination and control
+
+PRE · `review` · published · 2026-09-24 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/c44l-89p7) · `10.1103/c44l-89p7`
+
+Heat-kernel node/edge curvature characterizes structural transitions in inferred infection networks; this is a network geometry method, but specific official type is unverified. Vaccination effectiveness remains a proposed interpretation, not established intervention evidence.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fc44l-89p7)
+
+判断输入哈希：`5afffc0403f4d06874f715f00381dcf7724301e8da9498144ea9076ce1006fce`
+
+## 67. Analytical framework for the approximate master equation
+
+PRE · `review` · published · 2026-09-24 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/d26r-r4gp) · `10.1103/d26r-r4gp`
+
+Controlled moment closure analytically solves approximate-master-equation steady states for SIS, voter and evolutionary-game network processes; transferable network dynamics methodology is explicit, but specific official type remains unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/d26r-r4gp)
+
+判断输入哈希：`9ac1136930ad37bc1d4047b186056107b3bd3fbe067cc2c3950700e9795a6459`
+
+## 68. Predictability of solitary decoherence events in a symmetrically equidistant chain of coupled Kuramoto oscillators
+
+PRE · `review` · accepted · 2026-09-24 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/fltc-hfvt) · `10.1103/fltc-hfvt`
+
+Predicts solitary desynchronization in a forced Kuramoto chain using order-parameter precursors and error rates; oscillator-network dynamics are explicit, but specific official article type is unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/fltc-hfvt)
+
+判断输入哈希：`894cb881c2dc251cd1ba29bf96b1c7c56c8d4c47f6a8d9e07c6c01e8173a07a5`
+
+## 69. Collective enhancement of low-order eigenmicrostates underlying heat-current reversal in periodically driven Frenkel-Kontorova lattices
+
+PRE · `review` · accepted · 2026-09-24 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/k7yc-t6l6) · `10.1103/k7yc-t6l6`
+
+Eigenmicrostate decomposition links collective fluctuation modes to heat-current reversal in nonlinear lattices; transferability as network transport analysis versus lattice thermal physics requires editorial judgment, with specific official type unresolved.
+
+待补证／裁决：
+
+- Editorial scope decision on eigenmicrostate-based lattice transport framework
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/k7yc-t6l6)
+
+判断输入哈希：`7d5bc54a6bd2208d17f68a2b6ec2ca155c3463c18090a34a8f377554906bbc08`
+
+## 70. Low-frequency oscillations as internal state integrators of a biosystem model with voltage-gated ion channels
+
+PRE · `review` · accepted · 2026-09-24 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/x78y-924k) · `10.1103/x78y-924k`
+
+Official DOI, title and journal identity match, but the accepted page's Abstract section is empty after normal browser access; scientific scope and specific article type cannot be determined from title alone.
+
+待补证／裁决：
+
+- Identity-matched explicit abstract or other permitted sufficient scientific material
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/x78y-924k)
+
+判断输入哈希：`dae5c7820084c80ca4a3182db3cfb126d4fd2a2425c1bce86242d71e2386e8c8`
+
+## 71. Finite-time observability of oscillatory instabilities in synchronous p-bit dynamics
+
+PRE · `review` · published · 2026-09-25 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/16r5-nddc) · `10.1103/16r5-nddc`
+
+Graph-dependent finite-time criteria predict and suppress synchronous p-bit oscillations on MaxCut instances; transferable graph-aware dynamical analysis is explicit, but specific official type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/16r5-nddc)
+
+判断输入哈希：`51c3b2315477aa224945bee923df9da8c2d7d9a1e650592dd06bebf17f8f08aa`
+
+## 72. Traveling chimeras and collective coordination in β -cell networks
+
+PRE · `review` · accepted · 2026-09-25 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/3v5l-pgzz) · `10.1103/3v5l-pgzz`
+
+Nonlocal electrical/metabolic coupling in beta-cell rings produces synchronization, traveling waves and traveling chimeras; network collective dynamics are explicit, but specific official article type is unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+官方观察题名（保留差异）：Traveling chimeras and collective coordination in 𝛽-cell networks
+
+原始差异：publisher_crossref_title_conflict
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz)
+
+判断输入哈希：`6da347e697c92fe5b2f43c0b546574a6716ebcd8056c72f6612740ac4194fa8b`
+
+## 73. Percolation in the three-dimensional Ising model
+
+PRE · `review` · accepted · 2026-09-25 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/92jk-cj5x) · `10.1103/92jk-cj5x`
+
+Percolation of Ising spin clusters and complete-graph comparisons establish dimension-dependent connectivity transitions and fractal exponents; network connectivity content is explicit, but official specific type is missing.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/92jk-cj5x)
+
+判断输入哈希：`aab1ac72643ef32b6df30c8ba56494764f39416178207bbe2302a58f3f58f1ab`
+
+## 74. Anomalous scaling in redirection networks
+
+PRE · `review` · published · 2026-09-25 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/9lmp-pydp) · `10.1103/9lmp-pydp`
+
+Local leaf-redirection growth models analytically explain nonleaf scaling and degree-distribution exponents; network structure is the main contribution, but specific official type is unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/9lmp-pydp)
+
+判断输入哈希：`b6bd9794b3f899d8dcfb41084827b61843c61d4cd029e098c17b40af91c1348d`
+
+## 75. Self-propulsion in the one-dimensional swarmalator model
+
+PRE · `review` · published · 2026-09-25 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/c742-lgnc) · `10.1103/c742-lgnc`
+
+Self-propelled swarmalators exhibit traveling clusters, split waves and transient chaos, with analytic stability reductions; collective active-oscillator dynamics are relevant, but specific official article type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/c742-lgnc)
+
+判断输入哈希：`f2b405f91dc111feaf5d47d37833248a34c177221cfc78bdb895e7599ab6800a`
+
+## 76. Articulation points in multiplex networks
+
+PRE · `review` · published · 2026-09-25 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/d6lk-4f62) · `10.1103/d6lk-4f62`
+
+Defines articulation points consistently in multiplex networks and evaluates removal-induced cascading fragmentation and resilience; network robustness is the primary contribution, but official specific type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/d6lk-4f62)
+
+判断输入哈希：`9a36d17a179c5c60bff2dbdb6b61d90cdd47c810d9b73ff42056d4d60e320037`
+
+## 77. Local network evolution rules drive shortest path multiplicity
+
+PRE · `review` · accepted · 2026-09-25 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/t1sg-qhhf) · `10.1103/t1sg-qhhf`
+
+Exact and simulated local network-growth rules explain shortest-path multiplicity and community scaling; network structural theory is explicit, but official specific type remains unverified and title wording difference is preserved.
+
+待补证／裁决：
+
+- Specific official article type
+- Resolve source/candidate drive versus driving wording for any public bibliographic display
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+官方观察题名（保留差异）：Local network evolution rules driving shortest path multiplicity
+
+原始差异：publisher_crossref_title_conflict
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/t1sg-qhhf)
+
+判断输入哈希：`35746b6a8500c4b2afe22a1fa4ea07f6a7d7cb5b6fde4e24d69c09a1d9d65933`
+
+## 78. Mass media interventions and social reinforcements drive rumor propagation
+
+PRE · `review` · accepted · 2026-09-25 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/vxkg-41kp) · `10.1103/vxkg-41kp`
+
+A multilayer rumor model combines media, social reinforcement and channel competition, deriving thresholds and propagation effects; network spreading relevance is plausible, but official specific type and structural transferability remain unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+- Editorial assessment of multilayer-network contribution versus channel-compartment modeling
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/vxkg-41kp)
+
+判断输入哈希：`6739ce97dee2eb23880a337240e3884d782e2a109bb092722eb7eecab107c7d2`
+
+## 79. Exploring the role of connectivity in disordered system
+
+PRE · `review` · published · 2026-09-28 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/6w6f-y2d9) · `10.1103/6w6f-y2d9`
+
+Random-field Ising dynamics on generalized Petersen graphs tests fixed-degree connectivity and directedness effects on critical response; network structure-dynamics comparison is explicit, but official specific type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/6w6f-y2d9)
+
+判断输入哈希：`99fcf3e657501b7d59285f3cbc713827a5e68493c88d582512904210ae2f6225`
+
+## 80. Collective behavior in the nonreciprocal multispecies Vicsek model
+
+PRE · `review` · published · 2026-09-28 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/b7cw-pkzn) · `10.1103/b7cw-pkzn`
+
+Nonreciprocal multispecies alignment produces chirality and segregation in Vicsek swarms; whether emergent interaction-network dynamics is central rather than continuum active-matter phases needs editorial review, with official type missing.
+
+待补证／裁决：
+
+- Editorial scope decision on nonreciprocal swarm interactions
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/b7cw-pkzn)
+
+判断输入哈希：`3ceb76409133cb1065d56f14d31963ffdf362aa56392ffdf9a60d465289d25f7`
+
+## 81. Machine learning prediction of explosive death in coupled oscillator networks
+
+PRE · `review` · accepted · 2026-09-28 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/l51k-63y5) · `10.1103/l51k-63y5`
+
+Parameter-aware nodewise reservoirs predict explosive death, hysteresis and patterns across oscillator-network topologies, including inferred connectivity; transferable network-dynamics prediction is explicit, but official specific type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/l51k-63y5)
+
+判断输入哈希：`bed3c08717f87dfe177729905a1f1e6d919bb87b423dbdb0b027fd322d7edab9`
+
+## 82. Connectivity, rigidity, and gelation in linker-mediated colloidal networks
+
+PRE · `review` · accepted · 2026-09-28 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/m8jf-fjfp) · `10.1103/m8jf-fjfp`
+
+Linker-mediated colloidal networks separate connectivity percolation, rigidity and rheological gelation through coordination and bond persistence; network structure-dynamics relations are central, but specific official type remains unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/m8jf-fjfp)
+
+判断输入哈希：`d2a1f22138a512afb057aff1b0fbd2f1c188fdeb0daa5f6179272b5829028a44`
+
+## 83. Role of asymmetric time delay and its structure in one-dimensional swarmalators
+
+PRE · `review` · published · 2026-09-28 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/nvd6-pj1f) · `10.1103/nvd6-pj1f`
+
+Asymmetric delay placement reshapes swarmalator collective states and analytical stability boundaries; active oscillator-population dynamics are relevant, but official specific type remains unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/nvd6-pj1f)
+
+判断输入哈希：`f4381026421a572df2cd6575842913fb2535f5a9d3c06a980abbdd073dfcf314`
+
+## 84. Liquid and solid layers in a thermal deep-learning machine
+
+PRE · `review` · published · 2026-09-28 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/twww-yj1y) · `10.1103/twww-yj1y`
+
+Thermal neural-network learning generates layer-dependent aging, timescales and solid-liquid organization; the network's own dynamics are studied, but network-science scope versus learning-landscape physics and official type need resolution.
+
+待补证／裁决：
+
+- Editorial scope decision on dynamical layer organization as network science
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/twww-yj1y)
+
+判断输入哈希：`c67ebd05cd54a1d2e2cf9c0867ff3125a5c365574cae39edfab24062eaca5ba9`
+
+## 85. Mesoscopic theory of flocking with alignment and antialignment copying
+
+PRE · `review` · accepted · 2026-09-28 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/xp24-5rj6) · `10.1103/xp24-5rj6`
+
+Competing pairwise copying rules yield mesoscopic alignment dynamics and finite-population fluctuations; transferable interaction-network dynamics versus well-mixed flocking theory requires editorial judgment, with official specific type missing.
+
+待补证／裁决：
+
+- Editorial scope decision on alignment/antialignment copying framework
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/xp24-5rj6)
+
+判断输入哈希：`d8ea4fe557c585d9f085f1e8a5ea0f29d0d2f2568b5c4d957ac6ca2667155c8f`
+
+## 86. Dynamic joint-moment closure for age-structured adaptive escape-rate neuron populations
+
+PRE · `review` · accepted · 2026-09-28 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/xvf8-2z8x) · `10.1103/xvf8-2z8x`
+
+Joint moment closure predicts age-conditioned adaptive neuron firing and feedback regimes; applicability as transferable neural-network dynamics versus unstructured population approximation needs editorial resolution, with official specific type unverified.
+
+待补证／裁决：
+
+- Editorial scope decision on age-structured neuron population closure
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/xvf8-2z8x)
+
+判断输入哈希：`66b4ae737f9b8cfd429da4117177443a81c719fa0ecb359cfef303e32b3f52b0`
+
+## 87. Equivalence between nonlinear graph-based dynamics and linear dynamics on higher-order networks
+
+PRE · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/33lg-7kmc) · `10.1103/33lg-7kmc`
+
+Carleman linearization connects nonlinear graph dynamics to linear dynamics on higher-order multiset structures, with exact and truncated representations; network theory is explicit, but official specific type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc)
+
+判断输入哈希：`5d2bc6d994fbd7ae2c627feb7c2e44b88d75a3d67ea94906dce96b05e5825e60`
+
+## 88. Emergence of cooperation in nonlinear higher-order public goods games
+
+PRE · `review` · published · 2026-09-29 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/54zg-75zk) · `10.1103/54zg-75zk`
+
+Nonlinear public-goods games on hypergraphs link cooperation and bistability to group size, scale-free structure and hyperdegree correlations; higher-order network dynamics are explicit, but official specific type is missing.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/54zg-75zk)
+
+判断输入哈希：`326d48f56d69844169ce6032920eacb3b073fcd60316393c8248e3541b36db02`
+
+## 89. Shadowing and laminar times in strongly nonhyperbolic chaotic systems with invariant subspaces
+
+PRE · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/7lvh-8mqy) · `10.1103/7lvh-8mqy`
+
+Shadowing-time scaling is tested in coupled logistic lattices and related to synchronized invariant subspaces; transferable reliability of network dynamics versus general chaotic numerics needs editorial review, with official type missing.
+
+待补证／裁决：
+
+- Editorial scope decision on coupled-map synchronization/shadowing contribution
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/7lvh-8mqy)
+
+判断输入哈希：`5d8a382556f08bed7ce30aa6d44bd9e70bc199d30901610c562c24b78142ca31`
+
+## 90. Learning and encoding temporally structured sensory inputs via superburst dynamics
+
+PRE · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/996v-4djr) · `10.1103/996v-4djr`
+
+Plasticity reorganizes recurrent spiking networks into feedforward/recurrent architectures producing stimulus-specific superbursts; network structure, learning and collective dynamics are central, but specific official type is unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/996v-4djr)
+
+判断输入哈希：`111ec816d7ad71ba62f9981f61551c948dcab7f59bfd5ba5ee4d25e4ee129442`
+
+## 91. Modularity, asymmetry, and polarization shape consensus speed in the voter model
+
+PRE · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/br97-fw3p) · `10.1103/br97-fw3p`
+
+Two-clique voter dynamics link modularity, population asymmetry and polarization to consensus times and noise-driven optima; network consensus is explicit, but official specific type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/br97-fw3p)
+
+判断输入哈希：`98b75795a3153c5a433229d55ab5e7a0f8fe8ad47e20df6c929657c31cdb366a`
+
+## 92. Constrained surrogates for arbitrary families of continuous probability distributions
+
+PRE · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/fs71-p5y8) · `10.1103/fs71-p5y8`
+
+Distribution-constrained surrogates support parameter-free statistical tests, including brain connectomes; whether general distribution testing contributes transferable network methodology needs editorial determination, with official specific type unresolved.
+
+待补证／裁决：
+
+- Editorial assessment of network-specific methodological contribution beyond general distribution inference
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/fs71-p5y8)
+
+判断输入哈希：`0229e35896b4bbc8fc2a8bee243e097911e8b94489b87c6902a6fb486f929921`
+
+## 93. Avalanche assemblies in arbitrary connection topologies
+
+PRE · `review` · published · 2026-09-29 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/nl7d-16n8) · `10.1103/nl7d-16n8`
+
+Closed-form avalanche assembly probabilities connect arbitrary nonnegative coupling topologies to recurrent pulse-network cascades; transferable network theory is explicit, but specific official type remains unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/abstract/10.1103/nl7d-16n8)
+
+判断输入哈希：`a96bb961b4e6b37b44d74625edb1fd01c03e80f87f0691fe434da74c6e4db2a3`
+
+## 94. Timescale-induced synchronization of contrarians in adaptive dynamical networks
+
+PRE · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/v1vq-skr1) · `10.1103/v1vq-skr1`
+
+Adaptive-network feedback timescales synchronize contrarians into conformist-supported clusters, with analytical coupling and adaptation thresholds; network dynamics are explicit, but specific official article type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1)
+
+判断输入哈希：`91ccc20d42ae27dd2545da229fa51a7cc18c31f4d0c889ef89a52f9eef698294`
+
+## 95. Exact generalized Langevin dynamics of pair coordinates in elastic networks
+
+PRE · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/v5zx-93k9) · `10.1103/v5zx-93k9`
+
+Exact generalized Langevin reductions express tagged-pair memory and restoring forces through arbitrary connected elastic-network matrices; transferable network dynamics methodology is explicit, but official specific type remains unverified.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/v5zx-93k9)
+
+判断输入哈希：`a088aeb53cc64d28251c5e185f14311afc6c91a1a42f1e415b628fe077c45648`
+
+## 96. Gate control improves routing efficiency for periodic traffic
+
+PRE · `review` · accepted · 2026-09-30 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/m6s5-r1cq) · `10.1103/m6s5-r1cq`
+
+Local two-queue gate control improves periodic traffic routing and changes jamming transitions, with transport-network and packet-routing extensions; transferable network-flow control is plausible, but specific official type is unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+- Editorial confirmation of transferable network-routing contribution
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq)
+
+判断输入哈希：`fafb3c20fb8313f4a2c552727af73e6b5383bc4e1c58f54a61237c3fd269a60b`
+
+## 97. Disorder-to-order transitions and hysteresis in directed ring networks of nonisochronous complex Ginzburg-Landau oscillators
+
+PRE · `review` · accepted · 2026-09-30 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/txbw-g9cd) · `10.1103/txbw-g9cd`
+
+Directed-ring coupling in heterogeneous Ginzburg-Landau ensembles produces ordering transitions and size-dependent hysteresis; oscillator-network dynamics are explicit, but official specific type remains unresolved.
+
+待补证／裁决：
+
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/pre/accepted/10.1103/txbw-g9cd)
+
+判断输入哈希：`cfc101d8e119148777df7381a0792ee242ee32c64ce4890f52fb70d4ac309cfc`
+
+## 98. Hierarchy of collective ordering in swarmalator systems
+
+PRResearch · `review` · accepted · 2026-09-02 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/8p2h-fzt8) · `10.1103/8p2h-fzt8`
+
+Multi-species coupling analytically organizes swarmalator collective phases and transition boundaries; accepted-paper research type remains unresolved.
+
+待补证／裁决：
+
+- Resolve indicated scientific or official-type evidence gap
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/8p2h-fzt8)
+
+判断输入哈希：`767e8318c14535b772e74586a2b4089ff09e8c405e007f67b4e850f6cfee0177`
+
+## 99. Climate network characterization of the Atlantic Meridional Overturning Circulation edge state
+
+PRResearch · `review` · published · 2026-09-03 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/q9bd-4h4j) · `10.1103/q9bd-4h4j`
+
+Climate correlation-network teleconnections characterize an AMOC edge state; routine domain diagnostics versus a main network-organization contribution needs review.
+
+待补证／裁决：
+
+- Resolve stated scientific boundary and/or official research type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fq9bd-4h4j)
+
+判断输入哈希：`f1d295ff09775f596617d7a745a1a1e26fc14daa4b1da03a3d750911234e5628`
+
+## 100. Entanglement thresholds for sequential nonlocality sharing in star networks
+
+PRResearch · `review` · published · 2026-09-04 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/26rt-yvpn) · `10.1103/26rt-yvpn`
+
+Star-network branches constrain sequential quantum-nonlocality sharing and entanglement thresholds; the network-science boundary and official target type need review.
+
+待补证／裁决：
+
+- Resolve indicated official-type or scientific boundary gap
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2F26rt-yvpn)
+
+判断输入哈希：`d2277628b7bfb44e1e9060f91bab9d55ebba3f47fab8eed952abc402ba8689c4`
+
+## 101. Disordered yet directed: The emergence of polar flocks with disordered interactions
+
+PRResearch · `review` · published · 2026-09-04 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/tpxk-cltw) · `10.1103/tpxk-cltw`
+
+Disordered pairwise alignment and adaptive neighborhoods drive flocking; network-dynamics relevance is plausible, but specific official article type remains unverified.
+
+待补证／裁决：
+
+- official article type
+- network-science boundary
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Ftpxk-cltw)
+
+判断输入哈希：`1b4d8d1051dfb69f25bb052fc9b29a5a7a138575e9b0d42e4275a8f96066a480`
+
+## 102. Unraveling network dynamics via Riemannian filtering of network interactions
+
+PRResearch · `review` · published · 2026-09-04 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/xzdr-sh34) · `10.1103/xzdr-sh34`
+
+RONI introduces manifold filtering of time-varying connectivity and identifies dynamic subnetworks; scientific scope fits, but specific official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fxzdr-sh34)
+
+判断输入哈希：`3558a2809245cd1aec6d1dac7410fce07b1dd0f5c0f72f20aa44a80544da1e1a`
+
+## 103. Evolution of mutating pathogens in networked populations
+
+PRResearch · `review` · accepted · 2026-09-05 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/c9vq-tclt) · `10.1103/c9vq-tclt`
+
+Mutating-pathogen dynamics and spreading conditions across network structures fit scope, but the accepted article lacks verified specific official type.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/c9vq-tclt)
+
+判断输入哈希：`96c03b9ebf108be1efdbca4d61718261dfbd779cd95a67fcf7273e4e091a3b56`
+
+## 104. Nanoparticle arrays levitated in a cavity for quantum sensing
+
+PRResearch · `review` · published · 2026-09-08 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/wrd3-t5cf) · `10.1103/wrd3-t5cf`
+
+Cavity-coupled nanoparticle arrays exhibit collective spectral modes and particle-loss robustness; network-science versus quantum-sensing specificity needs clarification.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fwrd3-t5cf)
+
+判断输入哈希：`ee40a0f4dd10f43f314c87b07be8381c8d0b50892f112942c86ff2531c0bcf58`
+
+## 105. Place-cell heterogeneity underlies power-laws in coarse-grained hippocampal activity
+
+PRResearch · `review` · accepted · 2026-09-09 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/hvk8-9hl2) · `10.1103/hvk8-9hl2`
+
+Heterogeneous noninteracting place cells explain apparent critical scaling; whether this is a transferable neural-network assessment method remains scientifically borderline.
+
+待补证／裁决：
+
+- scientific boundary: noninteracting activity statistics versus network method
+- official type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+官方观察题名（保留差异）：Place-cell heterogeneity underlies power laws in coarse-grained hippocampal activity
+
+原始差异：publisher_crossref_title_conflict
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/hvk8-9hl2)
+
+判断输入哈希：`cdc0b627c77a8cae6db798da8261c84f43d9dcafdd0dafc8aafc8581fbb84042`
+
+## 106. Quantum-informed reduction algorithm for the maximum independent set problem
+
+PRResearch · `review` · published · 2026-09-10 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/nh3b-1wv5) · `10.1103/nh3b-1wv5`
+
+Quantum-informed kernelization reduces maximum independent-set graph problems; network-method scope is plausible, but official specific type is unresolved.
+
+待补证／裁决：
+
+- official article type
+- graph optimization versus network-science method boundary
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fnh3b-1wv5)
+
+判断输入哈希：`b4602f0b255cd585c82b1468439b705fc8022626ffcf2b5721d54b2fc27e55dc`
+
+## 107. Assessing imbalance in signed brain networks
+
+PRResearch · `review` · published · 2026-09-11 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/p6qp-2s9f) · `10.1103/p6qp-2s9f`
+
+Maximum-entropy benchmarks infer signed graphs and quantify brain-network imbalance and modules; scientific scope fits, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fp6qp-2s9f)
+
+判断输入哈希：`fe76f2d605c91e76c660bb711aeb8922809e49b79678f63c960602a44840eda1`
+
+## 108. Detecting remote synchronization from empirical data of brain networks
+
+PRResearch · `review` · published · 2026-09-14 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/tmkq-33c4) · `10.1103/tmkq-33c4`
+
+Structural-functional path criteria detect remote synchronization in empirical and simulated brain networks; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Ftmkq-33c4)
+
+判断输入哈希：`a9fd64fb842992093e8d9a260fbd532aba0073aaf90e778cc0d226532ba9722d`
+
+## 109. Inferring three-body interactions in cell migration dynamics
+
+PRResearch · `review` · published · 2026-09-14 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/xsg5-cb6l) · `10.1103/xsg5-cb6l`
+
+Trajectory inference tests pairwise versus three-body cell interactions; a transferable higher-order interaction-inference contribution is plausible, but official type remains unresolved.
+
+待补证／裁决：
+
+- official article type
+- higher-order network-method boundary
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fxsg5-cb6l)
+
+判断输入哈希：`3032b99660caba20f648eff7e375184ef16e7ef991833fd208bd162d43262576`
+
+## 110. Physical principles of building protein megacomplexes in a crowded milieu
+
+PRResearch · `review` · published · 2026-09-15 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/b8cy-vfy5) · `10.1103/b8cy-vfy5`
+
+Protein interaction architectures and module assembly are modeled statistically; a network-organization contribution beyond biochemical assembly physics remains unclear.
+
+待补证／裁决：
+
+- network-science boundary
+- official type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fb8cy-vfy5)
+
+判断输入哈希：`76f07184d3579e73bc73249955ca5eb5cf88a1831cd3c5007b9f84bc36bbc9ff`
+
+## 111. Fock-space fragmentation in quenches of disordered interacting fermions
+
+PRResearch · `review` · accepted · 2026-09-15 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/hvqr-6n3b) · `10.1103/hvqr-6n3b`
+
+Fock-space fragmentation describes localization through energetically accessible configuration geometry; whether network connectivity is a primary method needs clarification.
+
+待补证／裁决：
+
+- configuration-space network boundary
+- official article type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/hvqr-6n3b)
+
+判断输入哈希：`d9d2bb28974a626e749474a6e8e8cdf40d333868cd325e92d9c262e7a1d37f64`
+
+## 112. Irreversible behavior and neural activity in the hippocampus
+
+PRResearch · `review` · published · 2026-09-15 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/s4dl-xg31) · `10.1103/s4dl-xg31`
+
+Cross-neuron correlations reveal hippocampal irreversibility driven by sensory representation; network-flow interpretation versus noninteracting encoding remains borderline.
+
+待补证／裁决：
+
+- network-science boundary
+- official type if included
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fs4dl-xg31)
+
+判断输入哈希：`a438c84fb5914af5041e0f4ebc3f46cf8c629eef8db10579c4623c10b646551e`
+
+## 113. Hidden nonreciprocity as a stabilizing effective potential in active matter
+
+PRResearch · `review` · published · 2026-09-17 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/23zn-lzx2) · `10.1103/23zn-lzx2`
+
+Nonreciprocal interactions stabilize active systems including associative memory; a transferable network-dynamics contribution is plausible but not sufficiently resolved by the abstract.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2F23zn-lzx2)
+
+判断输入哈希：`74f0a96d01db0de6f7b5acd567f7dc12bad670a6a727e486651f8b091da1f527`
+
+## 114. Noise fingerprints of magnon scattering channels
+
+PRResearch · `review` · accepted · 2026-09-17 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/tjjp-m4yx) · `10.1103/tjjp-m4yx`
+
+Noise fingerprints distinguish nonlinear magnon scattering pathways; whether scattering-network organization rather than device-specific spectroscopy is a main contribution remains unclear.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/tjjp-m4yx)
+
+判断输入哈希：`9a7122892d6c02254e8cf986103ed416263341fb19c1f8f36f9067100fafad6c`
+
+## 115. Learning from almost nothing: How neural networks survive heavy input corruption
+
+PRResearch · `review` · accepted · 2026-09-18 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/qkrg-wbbj) · `10.1103/qkrg-wbbj`
+
+Infinite-width neural-network analysis explains noise-robust classification by a prototype rule; statistical network theory versus machine-learning performance remains borderline.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/qkrg-wbbj)
+
+判断输入哈希：`bd1b968d5a1f83190f6f25642b89f4edd146e228cbccf63de06c521d473e8789`
+
+## 116. Combined framework for synchronization with distributed delays and noise in Kuramoto-Daido oscillators
+
+PRResearch · `review` · accepted · 2026-09-18 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/v5cl-krph) · `10.1103/v5cl-krph`
+
+Delay kernels, noise and general periodic coupling determine oscillator-ensemble stability and Josephson-array phase dynamics; scope fits, but official type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph)
+
+判断输入哈希：`e0a7ba2ad089402e85a931998daf02a783f4f5bd4f8182f1ea096c1ab6f74125`
+
+## 117. Understanding quorum sensing self-organization: Clustering and defect-induced ordering of diffusing particles
+
+PRResearch · `review` · accepted · 2026-09-19 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/jqgq-3qq6) · `10.1103/jqgq-3qq6`
+
+Quorum-sensing interactions and heterogeneous defects induce colony ordering; communication-network organization versus active-particle aggregation remains unclear.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/jqgq-3qq6)
+
+判断输入哈希：`d8aa017f672f850347cedd2482ad407b4c3a0cd3796f6bab99f04e49de3dcae7`
+
+## 118. Phase transitions in time complexity of Brownian circuits
+
+PRResearch · `review` · accepted · 2026-09-19 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/zhgy-wgv4) · `10.1103/zhgy-wgv4`
+
+Brownian-circuit size and bias generate computation-time transitions; whether graph architecture provides transferable network dynamics needs clarification.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/zhgy-wgv4)
+
+判断输入哈希：`0fecb81323593a2118a5c188b13c032777e9f38e9652536be181a5736f7ad553`
+
+## 119. Quantum transport in disordered spin networks: Emergent timescales and competing pathways
+
+PRResearch · `review` · accepted · 2026-09-19 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/znwb-71hy) · `10.1103/znwb-71hy`
+
+Geometric disorder and hierarchical connectivity separate local and global relaxation times in spin networks; scope fits, but accepted-article type is unresolved.
+
+待补证／裁决：
+
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/znwb-71hy)
+
+判断输入哈希：`75bbdab2536ee25e5e46dbb4e445b7776b6fdd083a33a34a7af6aab5bb34ae49`
+
+## 120. Generalized finite-time optimal control framework in stochastic thermodynamics
+
+PRResearch · `review` · published · 2026-09-21 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/bc7b-tfl6) · `10.1103/bc7b-tfl6`
+
+Finite-time control of discrete stochastic processes optimizes dissipation; transferable network-state dynamics is plausible but not established in the abstract.
+
+待补证／裁决：
+
+- network-method boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fbc7b-tfl6)
+
+判断输入哈希：`f6b755e9c83df6155eed993f71b500a6ccc2349dc7495836a8875017150f31fa`
+
+## 121. Active transport as a mechanism of microphase selection in biomolecular condensates
+
+PRResearch · `review` · published · 2026-09-21 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/wk2j-3bz9) · `10.1103/wk2j-3bz9`
+
+Active redistribution along filament networks selects condensate sizes; topology-driven network contribution versus effective continuum transport remains unclear.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fwk2j-3bz9)
+
+判断输入哈希：`81045863406d8df79606c7255f5853466a133655dd0732bd352f6cc22d54aa4c`
+
+## 122. How focused are LLMs? a quantitative study via repetitive deterministic prediction tasks
+
+PRResearch · `review` · accepted · 2026-09-22 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/fn1m-wn2b) · `10.1103/fn1m-wn2b`
+
+LLM accuracy cliffs are interpreted through dense random couplings between correctness variables; whether this effective interaction model contributes transferable network science remains unclear, and official specific type is missing.
+
+待补证／裁决：
+
+- Editorial scope decision on the dense random step-correctness model versus task-performance phenomenology
+- Specific official article type
+- Preserve and resolve substantive official/candidate title difference if considered for inclusion
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+官方观察题名（保留差异）：Quantitative study of sustained focus in large language models via repetitive deterministic prediction tasks
+
+原始差异：publisher_crossref_title_conflict
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/fn1m-wn2b)
+
+判断输入哈希：`e6e017b60dfe65e43c0d1c00ae91a654e64a2af3144dc11bffe2f26467e68c3a`
+
+## 123. Branch-and-bound tensor networks for exact characterization of classical ground states
+
+PRResearch · `review` · accepted · 2026-09-22 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/g76v-wxz7) · `10.1103/g76v-wxz7`
+
+Branch-and-bound tensor contraction solves spin-glass and independent-set instances; transferable graph-algorithm scope versus generic optimization remains borderline.
+
+待补证／裁决：
+
+- network-method boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/g76v-wxz7)
+
+判断输入哈希：`1f49032241717b08f750b501fd14e9d160a91d22b802312ba9ca8bd441e4631b`
+
+## 124. Remotely-tuned metamaterials with emergent elastic properties
+
+PRResearch · `review` · accepted · 2026-09-23 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/72g7-gqdm) · `10.1103/72g7-gqdm`
+
+Interacting microbubble nodes and elastic lattices produce switching, memory and tunable stiffness; transferable network-science content versus metamaterial mechanics is a scope boundary, with official specific type unresolved.
+
+待补证／裁决：
+
+- Editorial determination whether the interacting-node lattice framework is transferable network science rather than material-specific elasticity
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+官方观察题名（保留差异）：Remotely tuned metamaterials with emergent elastic properties
+
+原始差异：publisher_crossref_title_conflict
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/72g7-gqdm)
+
+判断输入哈希：`feaef8cce0470152ba11fcf20dbf38d61b029d12498a697c76516679f8665411`
+
+## 125. Periodic and quasiperiodic traveling waves in nonlinear lattices with odd elasticity
+
+PRResearch · `review` · published · 2026-09-23 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/ktnz-14ft) · `10.1103/ktnz-14ft`
+
+Nonreciprocal nonlinear lattice coupling determines wave stability and size bounds via master stability; transferable oscillator-network relevance is plausible, but type is unresolved.
+
+待补证／裁决：
+
+- network-science boundary
+- official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fktnz-14ft)
+
+判断输入哈希：`0b66bd17e417269fe4769f94bb396d0cefd53c842a662cbdaa9305ff0c4e29e5`
+
+## 126. Inherent altermagnetism in minimal tight-binding models of regular hyperbolic lattices
+
+PRResearch · `review` · published · 2026-09-24 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/h2ys-c3rz) · `10.1103/h2ys-c3rz`
+
+Hyperbolic bipartite lattice families determine altermagnetic spin splitting; whether the geometric classification contributes network science beyond material band theory is a scope boundary, and specific official type remains unresolved.
+
+待补证／裁决：
+
+- Editorial scope decision on hyperbolic lattice geometry versus electronic-band physics
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fh2ys-c3rz)
+
+判断输入哈希：`0ffddf35930b70d6d87c7f04b1ed14d397f80a85aeddde8ead54026c491b9edc`
+
+## 127. Greedy nearest-neighbor approach to quantify site revisitation: Comparing two sympatric raven species
+
+PRResearch · `review` · accepted · 2026-09-24 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/z84g-799z) · `10.1103/z84g-799z`
+
+GPS-site clustering and preferential-return mobility modeling distinguish raven movement strategies; transferability to network mobility versus routine ecological inference is unclear, and official specific type is missing.
+
+待补证／裁决：
+
+- Editorial decision on transferable network-mobility contribution of the clustering and IMM framework
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/z84g-799z)
+
+判断输入哈希：`89ba90f6c49f058e2724fe00b54a278fda48aa6e40e7874577e5cc6c91590e0a`
+
+## 128. Global warming drives connectivity loss among climate tipping elements
+
+PRResearch · `review` · published · 2026-09-28 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/mnvf-tq6g) · `10.1103/mnvf-tq6g`
+
+Bayesian lagged-correlation connectivity and adaptive tipping-element dynamics quantify climate-system decoherence; a network organization contribution is plausible, but official specific type remains unverified. Correlations do not establish causal influence.
+
+待补证／裁决：
+
+- Specific official article type
+- Confirm editorial applicability of the inferred connectivity framework without causal overstatement
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fmnvf-tq6g)
+
+判断输入哈希：`c6f9522309bf8769f3ef8f01fe9d4dcd9f71f09cf93c14c340e9213a52fe26cd`
+
+## 129. Efficient mapping of multi-constraint satisfaction problems to Rydberg platforms
+
+PRResearch · `review` · accepted · 2026-09-29 (publisher.accepted)
+
+DOI：[文章链接](https://doi.org/10.1103/6l5j-wkww) · `10.1103/6l5j-wkww`
+
+Rydberg gadgets encode exactly-one constraints through geometric connectivity with reduced coupling overhead; transferable graph-embedding contribution versus hardware optimization requires editorial judgment, with specific official type unresolved.
+
+待补证／裁决：
+
+- Editorial scope decision on constraint-graph embedding method
+- Specific official article type
+- Retain official/candidate title wording difference
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+官方观察题名（保留差异）：Mapping of multiconstraint satisfaction problems to Rydberg platforms
+
+原始差异：publisher_crossref_title_conflict
+
+资料来源：[来源 1](https://journals.aps.org/prresearch/accepted/10.1103/6l5j-wkww)
+
+判断输入哈希：`10517c978437f0f3c6cfe7e3c7792b503f95a5f0d5fb5f164eb568d72dfd252b`
+
+## 130. Learning parameter curves in feedback-based quantum algorithms
+
+PRResearch · `review` · published · 2026-09-29 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/pgbz-zm8h) · `10.1103/pgbz-zm8h`
+
+Teacher-student learning predicts feedback quantum-algorithm parameters for MaxCut and graph Ising instances; transferable graph-optimization method versus quantum-resource reduction needs editorial determination, with official specific type missing.
+
+待补证／裁决：
+
+- Editorial scope decision on graph optimization contribution versus quantum control overhead
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fpgbz-zm8h)
+
+判断输入哈希：`244f67101fbd87004786a41602d8a9f686346d6c0162d816915ad18e07409d71`
+
+## 131. Leveraging interactions for energy-efficient swarm-based Brownian computing
+
+PRResearch · `review` · published · 2026-09-30 (published-online)
+
+DOI：[文章链接](https://doi.org/10.1103/k8wj-xsl7) · `10.1103/k8wj-xsl7`
+
+Short-range attractive interactions enable decentralized Brownian-swarm optimization and adaptation; whether this supplies transferable interaction-network science rather than physical computing performance needs editorial review, with official specific type missing.
+
+待补证／裁决：
+
+- Editorial scope decision on cooperative swarm optimization
+- Specific official article type
+
+硬检查：identity=verified；type=unresolved；date=verified
+
+资料来源：[来源 1](https://api.crossref.org/works/10.1103%2Fk8wj-xsl7)
+
+判断输入哈希：`8292891feb272440a81be35358738987708c341b9cf779e05ae45c57b9257c50`

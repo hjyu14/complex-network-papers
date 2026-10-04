@@ -18,11 +18,13 @@ class Node {
   addEventListener(event, listener) { this.events[event] = listener; }
   scrollIntoView() {}
 }
-const config = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/sources.json'), 'utf8'));
+const collectionConfig = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/sources.json'), 'utf8'));
+// The published September fixture remains bound to its frozen nine-journal inputs.
+const config = JSON.parse(fs.readFileSync(path.join(__dirname, '../reports/2026-09/inputs/sources.json'), 'utf8'));
 const topics = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/publication-notes.json'), 'utf8'));
 const localeSource = fs.readFileSync(path.join(__dirname, '../site/i18n.js'), 'utf8');
 const source = fs.readFileSync(path.join(__dirname, '../site/app.js'), 'utf8');
-function setup(version = 'newflow-1') {
+function setup(version = 'newflow-1', fixtureConfig = config) {
   const nodes = new Map();
   const node = (id) => {
     if (!nodes.has(id)) nodes.set(id, new Node());
@@ -32,7 +34,7 @@ function setup(version = 'newflow-1') {
   const papers = Array.from({ length: 35 }, (_, i) => ({ ...base, doi: `10.1234/${i}`, title: `Synthetic test ${i}`, date: i < 10 ? '2026-09-30' : '2026-09-01' }));
   for (let i = 0; i < 8; i++) papers[i] = { ...papers[i], categories: ['network_collective'], journal_short: 'PNAS', journal: 'Proceedings of the National Academy of Sciences', featured: 'PNAS' };
   papers[8].categories = ['other'];
-  const data = { papers, generated_at: new Date().toISOString(), window_start: '2026-09-01', window_end: '2026-09-30', screening_version: version, coverage: [], candidate_count: 35, published_count:35, accepted_count:0, screening_counts:{included:35, excluded:0, review:0, deferred_unassessed:0}, categories: topics.categories, featured_journals: config.featured_journals, featured_order_year: config.featured_order_year, journals: config.journals };
+  const data = { papers, generated_at: new Date().toISOString(), window_start: '2026-09-01', window_end: '2026-09-30', screening_version: version, coverage: [], candidate_count: 35, published_count:35, accepted_count:0, screening_counts:{included:35, excluded:0, review:0, deferred_unassessed:0}, categories: topics.categories, featured_journals: fixtureConfig.featured_journals, featured_order_year: fixtureConfig.featured_order_year, journals: fixtureConfig.journals };
   const context = vm.createContext({ URL, Date, console, document: { documentElement: {}, querySelector: node, createElement: (tag) => new Node(tag), querySelectorAll: (selector) => selector === 'select' ? ['#period', '#scope', '#journal'].map(node) : [] }, fetch: async (url) => ({ ok: true, json: async () => url.includes('status') ? { ok: true } : data }) });
   vm.runInContext(localeSource, context);
   vm.runInContext(source, context);
@@ -130,6 +132,21 @@ test('journal options use only full names', async () => {
   assert.deepEqual(node('#journal').children.map((n)=>n.textContent),config.journals.map((j)=>j.name));
 });
 
+test('published expansion adds four filter journals without changing spotlight membership', async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  assert.deepEqual(data.journals.map(j=>j.short).sort(),collectionConfig.journals.map(j=>j.short).sort());
+  for (const short of ['CP','PRResearch','PRE','Chaos']) {
+    assert.ok(collectionConfig.journals.some(j=>j.short===short));
+    assert.ok(!collectionConfig.featured_journals.includes(short));
+    assert.ok(data.journals.some(j=>j.short===short));
+    assert.ok(data.papers.some(p=>p.journal_short===short));
+    assert.ok(data.papers.filter(p=>p.journal_short===short).every(p=>p.featured===null));
+  }
+  const expanded = setup('newflow-1',collectionConfig); await ready();
+  assert.deepEqual(expanded.node('#journal').children.map(n=>n.textContent),collectionConfig.journals.map(j=>j.name));
+  assert.equal(expanded.node('#scope-control').hidden,false);
+});
+
 test('failure UI also switches language', async () => {
   const {node} = setup(4); await ready();
   node('#language-toggle').events.click();
@@ -179,16 +196,16 @@ test('published artifact has consistent rules, date bounds, counts and unique DO
   assert.equal(audit.candidate_inventory_complete, false);
   assert.equal(audit.metadata_reconciliation_complete, false);
   assert.equal(data.papers.length, data.screening_counts.included);
-  assert.equal(data.candidate_count, 2822);
-  assert.equal(audit.included_assessments.length, 20);
+  assert.equal(data.candidate_count, 3467);
+  assert.equal(audit.included_assessments.length, 122);
   assert.equal(new Set(data.papers.map(p => p.doi)).size, data.papers.length);
   assert.ok(data.papers.every(p => p.date >= data.window_start && p.date <= data.window_end && !('abstract' in p)));
   assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 30);
-  assert.equal(data.coverage.length,9);
+  assert.equal(data.coverage.length,13);
   assert.equal(data.coverage.find(q => q.journal === 'NC').candidate_inventory_complete,false);
-  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed, 2822);
-  assert.equal(data.published_count,18);
-  assert.equal(data.accepted_count,2);
+  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed, 3467);
+  assert.equal(data.published_count,93);
+  assert.equal(data.accepted_count,29);
 });
 
 test('pagination has ten papers, last page, language persistence and filter reset', async () => {
@@ -213,8 +230,8 @@ test('research method controls and annotations are absent', () => {
   assert.doesNotMatch(source, /state\.method|renderMethods|methodLabel/);
   assert.equal(data.screening_version, 'newflow-1');
   assert.ok(data.papers.every(p => !('methods' in p) && !('method_evidence' in p)));
-  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, 18);
-  assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, 2);
+  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, 116);
+  assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, 6);
 });
 
 test('fixed September snapshot keeps date bounds without a journal-specific coverage notice', async () => {
@@ -249,6 +266,10 @@ test('public export has notes for exactly the current included DOIs and preserve
   const rows=fs.readFileSync(path.join(__dirname,'../reports/2026-09/screening-log.jsonl'),'utf8').trim().split('\n').map(JSON.parse);
   const latest=new Map();
   for (const row of rows) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
+  for (const run of ['2026-09-expansion-01','2026-09-expansion-adjudication-01']) {
+    const events=fs.readFileSync(path.join(__dirname,`../reports/${run}/screening-log.jsonl`),'utf8').trim().split('\n').map(JSON.parse);
+    for (const row of events) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
+  }
   const included=[...latest.values()].filter(d => ['core','transferable_application'].includes(d.category));
   assert.deepEqual(data.papers.map(p => p.doi).sort(),included.map(d => d.doi).sort());
   for (const paper of data.papers) {
@@ -257,21 +278,25 @@ test('public export has notes for exactly the current included DOIs and preserve
     assert.ok(!JSON.stringify(paper).includes('.private/'));
   }
   const accepted=data.papers.filter(p => p.publication_status === 'accepted');
-  assert.equal(accepted.length,2);
+  assert.equal(accepted.length,29);
   for (const p of accepted) { assert.equal(p.published_date,null); assert.equal(p.accepted_date,p.date); assert.match(p.url,/journals.aps.org.*accepted/); }
   for (const doi of ['10.1126/sciadv.aeg4913','10.1103/21c5-cvnn','10.1038/s41467-026-77405-3']) assert.ok(!data.papers.some(p => p.doi===doi));
 });
 
 
-test('all nine journals and all 20 inclusions are in spotlight with traced authors', () => {
+test('thirteen journals have 122 traced inclusions while only the original nine enter spotlight', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   const metadata=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09/author-metadata.json'),'utf8'));
+  const extra=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09-expansion-publication-01/author-metadata.json'),'utf8'));
   assert.equal(data.featured_journals.length,9);
   assert.deepEqual([...data.featured_journals].sort(),config.journals.map(j=>j.short).sort());
   assert.equal(data.papers.filter(p=>p.featured).length,20);
-  assert.equal(data.author_available_count,20);
+  assert.equal(data.author_available_count,122);
+  assert.equal(data.journals.length,13);
+  assert.deepEqual(data.journals.map(j=>j.short).sort(),collectionConfig.journals.map(j=>j.short).sort());
+  assert.equal(data.papers.filter(p=>!p.featured).length,102);
   for(const p of data.papers) {
-    const row=metadata.records[p.doi];
+    const row=metadata.records[p.doi] || extra.records[p.doi];
     assert.deepEqual(p.authors,row.authors);
     assert.ok(p.authors.length);
     assert.equal(p.author_metadata_status,'available');
@@ -340,4 +365,17 @@ test('zero pending notice is hidden but failures and real pending records remain
   assert.equal(pending.node('#status').hidden,false);
   assert.match(pending.node('#status').textContent,/2 candidates/);
   const failed=setup(2); await ready(); assert.equal(failed.node('#status').hidden,false);
+});
+
+test('ordinary inferred research has no subtype badge while verified reviews are marked', async () => {
+  const {context,node}=setup(); await ready();
+  assert.equal(vm.runInContext('articleBadge({article_type:null})',context),null);
+  assert.equal(vm.runInContext('articleBadge({article_type:"Article"})',context),null);
+  assert.equal(vm.runInContext('articleBadge({article_type:"Review Article"}).textContent',context),'Review');
+  node('#language-toggle').events.click();
+  assert.equal(vm.runInContext('articleBadge({article_type:"Review Article"}).textContent',context),'综述');
+  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  const review=data.papers.find(p=>p.doi==='10.1063/5.0348359');
+  assert.equal(review.article_type,'Review Article');
+  assert.match(review.note_en,/scoping review/);
 });

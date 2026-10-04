@@ -172,14 +172,21 @@ class CitationParser(HTMLParser):
             self.fields[key] = attrs.get('content', '')
 
 
+class CollectionStopped(RuntimeError):
+    """A process-wide stop, never interpreted as an empty publisher result."""
+
+
 class Client:
     def __init__(self, interval=1.0, log=None):
         self.log = log
         self.interval = interval
         self.last = 0
         self.attempts = []
+        self.stopped = False
 
     def get(self, url):
+        if self.stopped:
+            raise CollectionStopped('HTTP 429: subsequent requests and channels stopped')
         time.sleep(max(0, self.interval - (time.monotonic() - self.last)))
         self.last = time.monotonic()
         attempt = {'url': url, 'retrieved_at': now()}
@@ -202,6 +209,8 @@ class Client:
             attempt['error'] = type(exc).__name__
             if isinstance(exc, HTTPError):
                 attempt['http_status'] = exc.code
+                if exc.code == 429:
+                    self.stopped = True
             if self.log:
                 self.log.add('request', attempt)
             raise
@@ -222,6 +231,15 @@ def collect_crossref(client, start, end, rows=100, max_pages=5, journal=None, lo
             continue
         local = {}
         queries.append(query)
+        if getattr(client, 'stopped', False):
+            query.update(error='not_started_rate_limit', reported_totals=[], unique_dois=0)
+            if cached:
+                local = cached['records']
+                for doi, observations in local.items():
+                    records.setdefault(doi, []).extend(observations)
+            if log:
+                log.add('crossref_query', {'key':key, 'complete':False, 'query':query, 'records':local})
+            continue
         cursor = '*'
         seen_cursors = set()
         seen_dois = set()
@@ -269,6 +287,14 @@ def collect_crossref(client, start, end, rows=100, max_pages=5, journal=None, lo
                 query['error'] = 'page_budget_exhausted'
         except (HTTPError, URLError, TimeoutError, OSError, ValueError, KeyError) as exc:
             query['error'] = type(exc).__name__ + ': ' + str(exc)[:160]
+        if cached and not query['complete']:
+            # A failed resume may be shorter; retain prior allowed metadata.
+            for doi, observations in cached['records'].items():
+                for observation in observations:
+                    if observation not in local.setdefault(doi, []):
+                        local[doi].append(observation)
+                        records.setdefault(doi, []).append(observation)
+            query['retained_previous_evidence'] = True
         query['reported_totals'] = sorted(totals)
         query['unique_dois'] = len(seen_dois)
         if log:
@@ -354,8 +380,15 @@ def parse_aps(text, journal, channel):
 def collect_official(client, journal, start, end, log, channel=None):
     family = journal['collection']['family']
     browser = log.latest('browser_directory', journal['short'])
-    if family in {'science','pnas'} and browser:
+    if family in {'science','pnas','aip'} and browser:
         return browser['result']
+    if family == 'aip':
+        result = {'channel':'directory', 'complete':False,
+                  'completion_basis':None, 'error':'browser_directory_not_imported',
+                  'pages':[], 'reported_totals':[], 'records':[],
+                  'max_pages':journal['collection']['max_pages']}
+        log.add('official_result', {'key':f"official:{journal['short']}:directory:0", 'result':result})
+        return result
     revision = log.latest('directory_revision', journal['short'])
     key = f"official:{journal['short']}:{channel or 'directory'}:{revision['revision'] if revision else 0}"
     records, pages = [], []
@@ -365,6 +398,8 @@ def collect_official(client, journal, start, end, log, channel=None):
     seen = set()
     budget = journal['collection']['max_pages']
     try:
+        if getattr(client, 'stopped', False):
+            raise ValueError('not_started_rate_limit')
         for page in range(1, budget+1):
             page_key = key+':'+str(page)
             cached = log.latest('official_page', page_key)
@@ -467,7 +502,7 @@ def supplement_crossref(client,journal,records,official,start,end,log):
     known = set()
     for src in official:
         for row in src['records']:
-            if not start <= row['date'] <= end:
+            if row.get('date') and not start <= row['date'] <= end:
                 continue
             identity = log.latest('publisher_identity', 'identity:'+row.get('article_url',''))
             doi = row.get('doi') or (identity or {}).get('metadata', {}).get('citation_doi')
@@ -475,8 +510,11 @@ def supplement_crossref(client,journal,records,official,start,end,log):
                 known.add(doi.lower())
     missing = sorted(known-set(records))
     if len(missing)>100:
-        raise ValueError('Crossref DOI supplement budget exhausted')
-    for doi in missing:
+        log.add('failure', {'key':'supplement:'+journal.get('short','unknown'),
+                           'error':'Crossref DOI supplement budget exhausted', 'missing_count':len(missing)})
+    for doi in missing[:100]:
+        if getattr(client, 'stopped', False):
+            break
         key = 'supplement:'+doi
         evidence = log.latest('crossref_supplement',key)
         if not evidence:
@@ -554,6 +592,8 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
                 identity = log.latest('publisher_identity', key)
                 try:
                     if not identity:
+                        if getattr(client, 'stopped', False):
+                            raise ValueError('not_started_rate_limit')
                         if identity_count >= 40:
                             raise ValueError('Identity lookup budget exhausted')
                         identity_count += 1
@@ -608,6 +648,10 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
             issues.append('crossref_metadata_changed_between_queries')
         published = [r for r in c['publisher_records'] if r.get('publication_status') != 'accepted']
         accepted = [r for r in c['publisher_records'] if r.get('publication_status') == 'accepted']
+        if published:
+            c['publication_status'] = 'published'
+        if any(r.get('title_identity_conflict') for r in c['publisher_records']):
+            issues.append('publisher_directory_article_title_conflict')
         if not chosen and not item and published and len({r['date'] for r in published}) == 1:
             chosen, basis = published[0]['date'], 'publisher.directory_item_date'
         article_check = log.latest('publisher_article_check',c['doi'])
@@ -626,7 +670,9 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
                 issues = c['issues'] = [x for x in issues if x not in {'crossref_date_unavailable'}]
         if journal['collection']['family'] == 'aps' and item and ((not published and not accepted) or any(r['date'] != chosen for r in published)):
             try:
-                if histories >= 700:
+                if getattr(client, 'stopped', False):
+                    raise ValueError('not_started_rate_limit')
+                if histories >= journal['collection'].get('history_lookups', 700):
                     raise ValueError('APS publication history budget exhausted')
                 histories += 1
                 history = aps_history(client,journal,c['doi'],log)
@@ -692,6 +738,8 @@ def inventory_summary(rows, enumeration_complete):
     unexplained = [c['doi'] for c in rows if c['window_membership'] == 'in_window'
                    and not c['publisher_records'] and not c.get('publisher_article_check') and c['doi'] not in human_confirmed]
     return {'window_membership_counts': counts, 'window_inventory_count': counts.get('in_window', 0),
+            'publication_status_counts':dict(Counter(c.get('publication_status','unconfirmed')
+                                                    for c in rows if c['window_membership']=='in_window')),
             'publisher_verified_inventory_count':len(publisher_confirmed),
             'user_confirmed_inventory_count':len(human_confirmed),
             'confirmed_inventory_count':len(publisher_confirmed | human_confirmed),
@@ -767,7 +815,8 @@ def main():
                          'requested_journals':args.journals or sorted(names),
                          'budgets':{'crossref_rows':500,'crossref_pages_per_date_and_issn':8,
                                     'timeout_seconds':25,'min_request_interval_seconds':1,
-                                    'automatic_retries':0,'APS_history_lookups_per_journal':700,'identity_lookups_per_journal':40}})
+                                    'automatic_retries':0,'APS_history_lookups_per_journal':700,'identity_lookups_per_journal':40,
+                                    'journal_overrides':{j['short']:j['collection'] for j in config['journals']}}})
     client = Client(log=log)
     packet = json.loads((args.out/'candidates.json').read_text(encoding='utf-8')) if (args.out/'candidates.json').exists() else {'window_start':start,'window_end':end,'as_of_date':args.as_of.isoformat(),'records':[]}
     coverage = json.loads((args.out/'coverage.json').read_text(encoding='utf-8')) if (args.out/'coverage.json').exists() else {'window_start':start,'window_end':end,'journals':{},'subject_scope_screening_performed':False,
@@ -804,7 +853,7 @@ def main():
             query_union_count = len(cr)
             supplement_count = supplement_crossref(client,journal,cr,official,start,end,log)
             rows = reconcile(cr,official,journal,start,end,args.as_of.isoformat(),client,log)
-            pub = [r for src in official for r in src['records'] if start <= r['date'] <= end]
+            pub = [r for src in official for r in src['records'] if r.get('date') and start <= r['date'] <= end]
             matched = [r for c in rows if c['crossref'] for r in c['publisher_records']]
             complete = all(q['complete'] for q in queries) and all(src['complete'] for src in official)
             counts = dict(Counter(c['window_status'] for c in rows))
@@ -835,6 +884,9 @@ def main():
         write_state(args.out,'candidates.json',packet,log)
         write_state(args.out,'coverage.json',coverage,log)
         print('DONE',short,json.dumps(summary['window_status_counts']),summary['window_reconciliation_complete'],flush=True)
+        if getattr(client, 'stopped', False):
+            log.add('run_stopped', {'reason':'HTTP 429', 'pending_journals':coverage['pending_journals']})
+            break
     log.add('run_finish',{'key':'latest','candidate_count':len(packet['records']),'nine_journal_reconciliation_complete':coverage['nine_journal_reconciliation_complete']})
     return 0 if coverage['nine_journal_reconciliation_complete'] else 2
 

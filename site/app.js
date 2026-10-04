@@ -37,7 +37,7 @@ function statusBadge(paper) {
   return element("span", "badge accepted-badge", tr("Accepted · publication pending", "已接收 · 待正式发表"));
 }
 function articleBadge(paper) {
-  const types = { Commentary: tr("Commentary", "评论"), Perspective: tr("Perspective", "观点"), Comment: tr("Comment", "评论") };
+  const types = { Commentary: tr("Commentary", "评论"), Perspective: tr("Perspective", "观点"), Comment: tr("Comment", "评论"), Review: tr("Review", "综述"), "Review Article": tr("Review", "综述") };
   return types[paper.article_type] ? element("span", "badge type-badge", types[paper.article_type]) : null;
 }
 function hasOtherJournals() {
@@ -80,7 +80,8 @@ function paperCard(paper) {
   details.append(element("summary", "", tr("Details", "详细信息")));
   if (authors.length) details.append(element("p", "full-authors", tr("All authors: ", "全部作者：") + authors.join(" · ")));
   if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
-  if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date and specific article type will be checked after publication.", "已接收，待正式发表；发表日期和具体研究类型届时补核。")));
+  if (paper.type_provenance?.basis_kind === "explicit_abstract_research_inference") details.append(element("p", "", tr("Original research supported by the abstract; exact publisher subtype not specified.", "摘要支持其研究性质；未指定出版方的精确文章子类型。")));
+  if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date and available publisher subtype will be rechecked after publication.", "已接收，待正式发表；届时补核发表日期及可获得的出版方文章子类型。")));
   if (paper.review_evidence_kind === "online_short_comment") details.append(element("p", "", tr("Reading note based on the accessible text of a no-abstract scientific commentary.", "阅读说明依据在线审读的无摘要科学评论正文。")));
   if (paper.review_evidence_kind === "abstract_excerpt") details.append(element("p", "", tr("Reading note based on the publisher's Abstract excerpt; the full article was not reviewed.", "阅读说明依据出版方的摘要摘段，未审读全文。")));
   details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));

@@ -23,15 +23,9 @@
 - 已授权接收稿例外：出版社确认 Accepted Paper，首次发表日尚未确认时可用完整、非未来、窗口内接收日定窗，显示已接收，`published_date=null`。不计入已发表数。
 - APS 特例：同 DOI 的 Crossref online 等于官方 Accepted 且官方另有完整 Published 时采用该 Published，保留原值及理由；其他冲突不能自动套用。
 
-### 常规研究文章的类型证据
+### PRL 接收稿的类型证据例外
 
-用户已确认：所有白名单期刊，已发表及已接收的常规研究文章均可采用身份匹配的明确摘要，实际确认其提出研究问题、方法、分析或结果；同时检查目标标题和已有官方类型证据，无特殊类型线索或冲突。缺少精确 Article／Regular Article／Letter 子类型不单独阻断纳入。不能仅凭刊名、无特殊标题字样、摘要长度或通用 journal-article 标志自动认定。已知官方具体类型仍优先；特殊类型按具体证据及科学内容处理，明确非目标类型排除，类型冲突或研究性质不清保留 review。
-
-`hard_checks.type` 使用 `basis_kind=explicit_abstract_research_inference`、`research_nature=original_research`，保存摘要材料哈希、来源、逐篇支持理由、`special_type_check=clear`、`specific_subtype=null`、`subtype_status=not_required_for_inclusion`；`status=verified` 仅表示当前政策下目标研究性质已确认，不表示官方确认了具体子类型，`value=null` 不强填 Article。网站只为有据的特殊类型显示卡片徽标。此规则只用于新冻结审核轮，不重写旧轮依据。
-
-### PRL 接收稿的历史类型证据例外
-
-旧轮采用的 PRL 单刊例外保留用于解释历史记录：官方接收页、DOI、标题、期刊身份须匹配，并核查可获得作者信息；须有完整明确、身份匹配的官方摘要。缺标签时可依据摘要明确的新问题、方法、分析或结果有据判断原创研究，不能自动写为 Letter。新轮使用上面的常规研究文章规则；旧轮的单刊限制不追溯修改。
+官方接收页、DOI、标题、期刊身份须匹配，并核查可获得作者信息；须有完整明确、身份匹配的官方摘要。优先官方具体类型。缺标签时可依据摘要明确的新问题、方法、分析或结果有据判断原创研究；不能只因刊名、Accepted 或没有 Comment/Reply 字样推断，更不能自动写为 Letter。类型冲突或研究性质不清仍未决，此例外不扩展至其他期刊。
 
 `hard_checks.type` 保存 `basis_kind=official_accepted_abstract_inference`、官方来源、支持理由、材料哈希、`specific_subtype=null`、`subtype_status=unresolved`，明确这是摘要推断。日期保存 `basis=publisher.accepted`、`publication_status=accepted`、接收日与空发表日。正式发表后按同一 DOI 核对类型、首次在线日期和摘要变化，追加新证据与判断，再定窗口；旧记录保留，不重复收录。
 
@@ -62,8 +56,6 @@ description、导读句、选文说明、搜索片段和生成式摘要不能冒
 每篇保存规则、记录、材料与输入哈希，来源、获取时间、审读者、类别、具体理由及短证据，身份／类型／日期硬检查分别记录。官方身份与正确材料足够独立证明范围排除时，未决日期或具体类型不再阻断；保留原冲突，注明停止补核，不把未核字段标为通过。可能纳入者仍须通过全部必要硬检查。
 
 常规研究只依标题、明确摘要及必要元数据判断，不以作者声誉、刊物名气或开放搜索填补科学事实。短证据最多 40 个英文词；纳入者另写有证据的一句话阅读说明，不夸大创新、效果或因果。输入或规则实质改变须重新核查，保留旧判断；用户裁决明确署名。取证日志由协调线程串行追加。
-
-用户逐篇或明确组内选文裁决可作为编辑依据，须先记录 `user_editorial_verdict` 事件，包含 DOI、include/exclude、实际用户意见、意见性质和身份/材料依据；判断通过 `editorial_basis.verdict_sha256` 绑定事件。缺摘要时，仅用户明确逐篇排除且声明已亲自复核可使用 `user_editorial_decision` 排除；不得称为 AI 摘要审查或伪造摘要/类型通过。用户纳入意见不豁免身份、日期、目标研究性质检查。“倾向”单独保留为编辑方向，须由实际摘要复核或本次明确授权定案支持，不推广为领域黑名单。
 
 ## 数据边界与规则版本
 

@@ -7,7 +7,8 @@ import time
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
-from screen_candidates import Workflow, AbstractParser, digest, normalized_title, now, ROOT
+from screen_candidates import AbstractParser, digest, normalized_title, now, ROOT
+from publication_view import publication_workflow, publisher_url
 
 PLACEHOLDERS = {'anonymous', 'unknown', 'author', 'authors', 'et al.', 'et al'}
 
@@ -47,7 +48,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--run', required=True, type=Path)
     args = parser.parse_args()
-    w = Workflow(args.run)
+    w = publication_workflow(args.run)
     selected = [d for d in w.assessments() if d['category'] in {'core','transferable_application'}]
     path = w.out/'author-metadata.json'
     if path.exists():
@@ -78,7 +79,7 @@ def main():
         if not row['authors']:
             publisher = r.get('crossref',{}).get('resource',{}).get('primary',{}).get('URL')
             if d['hard_checks']['date'].get('publication_status')=='accepted' or d['hard_checks']['date'].get('basis','').startswith('publisher.accepted'):
-                publisher=d['hard_checks']['date'].get('source_url') or d['material_source']
+                publisher=publisher_url(r, d)
             if publisher:
                 try:
                     raw, seconds = request(publisher)
@@ -106,7 +107,7 @@ def main():
     for row in rows.values():
         row['metadata_sha256']=digest({k:v for k,v in row.items() if k not in {'attempts','metadata_sha256'}})
     result={'version':'author-metadata-1','candidate_sha256':w.input_sha,'created_at':now(),'selection':'Current included DOI set only; scientific decisions and raw inventory unchanged','records':rows}
-    path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     w.log.add('author_metadata_completed',{'file':path.relative_to(ROOT).as_posix(),'metadata_sha256':digest(result),'included_count':len(selected),'available_count':sum(bool(v['authors']) for v in rows.values()),'unresolved_count':sum(not v['authors'] for v in rows.values()),'scientific_assessments_changed':False})
     print(json.dumps({'collected':sum(bool(v['authors']) for v in rows.values()),'pending':sum(not v['authors'] for v in rows.values())},ensure_ascii=False))
 

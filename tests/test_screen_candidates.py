@@ -95,6 +95,24 @@ class EvidenceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             s.validate_identity(m,{'doi':'10.1103/math','title':'Different material','issns':['1079-7114']})
 
+    def test_expansion_aps_journals_use_same_strict_identity_gate(self):
+        for slug, journal, issn in [('pre', 'Physical Review E', '2470-0053'),
+                                    ('prresearch', 'Physical Review Research', '2643-1564')]:
+            html = (f'<head><title>{journal} - Accepted Paper: A study</title></head>'
+                    f'<h1>{journal}</h1><h1>A study</h1><p>DOI: 10.1103/example</p>'
+                    f'<section id="abstract-section"><p>Explicit abstract.</p></section><footer>ISSN {issn}</footer>')
+            parser = s.AbstractParser(); parser.feed(html)
+            m = parser.material(f'https://journals.aps.org/{slug}/accepted/10.1103/example')
+            self.assertEqual((m['doi'], m['title'], m['issns']), ('10.1103/example', 'A study', [issn]))
+            bad = s.AbstractParser(); bad.feed(html.replace('DOI: 10.1103/example', 'DOI: 10.1103/wrong'))
+            self.assertEqual(bad.material(f'https://journals.aps.org/{slug}/accepted/10.1103/example')['doi'], '')
+            regular = s.AbstractParser()
+            regular.feed(f'<meta name="citation_doi" content="10.1103/example">'
+                         f'<meta name="citation_title" content="A study">'
+                         f'<meta name="citation_journal_title" content="{journal}">'
+                         f'<h1>A study</h1><p>DOI: 10.1103/example</p><footer>ISSN {issn}</footer>')
+            self.assertEqual(regular.material(f'https://journals.aps.org/{slug}/abstract/10.1103/example')['issns'], [issn])
+
     def test_gate_resume_and_public_abstract_guard(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -1,5 +1,5 @@
 {
-  "version": "collection-workflow-1",
+  "version": "collection-workflow-2",
   "status": "bibliographic_collection",
   "window_days": 90,
   "initial_trial": {
@@ -119,6 +119,52 @@
         "family": "science",
         "url": "https://www.science.org/toc/sciadv/current",
         "max_pages": 1
+      }
+    },
+    {
+      "name": "Communications Physics",
+      "short": "CP",
+      "issns": ["2399-3650"],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/commsphys/articles",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Physical Review Research",
+      "short": "PRResearch",
+      "issns": ["2643-1564"],
+      "collection": {
+        "family": "aps",
+        "slug": "prresearch",
+        "url": "https://journals.aps.org/prresearch/recent",
+        "max_pages": 30,
+        "history_lookups": 250
+      }
+    },
+    {
+      "name": "Physical Review E",
+      "short": "PRE",
+      "issns": ["2470-0053", "2470-0045"],
+      "collection": {
+        "family": "aps",
+        "slug": "pre",
+        "url": "https://journals.aps.org/pre/recent",
+        "max_pages": 40,
+        "history_lookups": 350
+      }
+    },
+    {
+      "name": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "short": "Chaos",
+      "issns": ["1089-7682", "1054-1500"],
+      "collection": {
+        "family": "aip",
+        "url": "https://pubs.aip.org/aip/cha/issue/browse-by-year/2026",
+        "max_pages": 12,
+        "article_lookups": 120,
+        "access": "browser_directory"
       }
     },
     {
