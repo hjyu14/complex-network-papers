@@ -227,6 +227,17 @@ test('public rules article is linked and bilingual', () => {
   assert.match(rules, /href="data\/screening-report\.json">审核汇总/);
   assert.match(rules, /reports\/2026-09\/screening-log\.jsonl">逐篇审核日志/);
   assert.match(rules, /Paper-by-paper review log/);
+  assert.equal((rules.match(/blob\/main\//g) || []).length, 4);
+  assert.doesNotMatch(rules, /codex\/new-workflow/);
+});
+
+test('main publishes reviewed snapshots without scheduled collection', () => {
+  const workflow = fs.readFileSync(path.join(__dirname, '../.github/workflows/publish-reviewed.yml'), 'utf8');
+  assert.match(workflow, /branches: \[main\]/);
+  assert.doesNotMatch(workflow, /codex\/new-workflow|schedule:|rescreen_existing\.py|collect\.py/);
+  assert.match(workflow, /publish_snapshot\.py --check/);
+  assert.match(workflow, /path: site/);
+  assert.equal(fs.existsSync(path.join(__dirname, '../.github/workflows/update-site.yml')), false);
 });
 
 test('pending candidates are disclosed separately in both languages', async () => {

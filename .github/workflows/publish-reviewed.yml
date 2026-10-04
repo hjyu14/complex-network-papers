@@ -2,7 +2,7 @@ name: Publish reviewed snapshot
 
 on:
   push:
-    branches: [codex/new-workflow]
+    branches: [main]
     paths:
       - 'site/**'
       - 'config/**'
