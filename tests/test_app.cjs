@@ -76,6 +76,18 @@ test('public README defaults to English and offers a reciprocal Chinese version'
   }
 });
 
+test('home and rules pages share a local scalable favicon', () => {
+  for (const page of ['index.html', 'rules.html']) {
+    const html = fs.readFileSync(path.join(__dirname, '../site', page), 'utf8');
+    assert.match(html.split('</head>')[0], /<link rel="icon" type="image\/svg\+xml" sizes="any" href="favicon\.svg\?v=1">/);
+  }
+  const icon = fs.readFileSync(path.join(__dirname, '../site/favicon.svg'), 'utf8');
+  assert.match(icon, /<svg xmlns="http:\/\/www\.w3\.org\/2000\/svg" viewBox="0 0 64 64">/);
+  assert.match(icon, /fill="#1c243c"/);
+  assert.match(icon, /fill="#88d8df"/);
+  assert.doesNotMatch(icon, /<(?:script|foreignObject|image)\b|\bhref=/i);
+});
+
 test('spotlight action counts its whole cohort, not visible cards or filtered results', async () => {
   const { node, context } = setup(); await ready();
   assert.equal(node('#featured-all').textContent, 'View all 8 Spotlight papers →');
