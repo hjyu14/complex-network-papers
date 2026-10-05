@@ -27,7 +27,8 @@
 - Python：`python -m unittest discover -s tests -v`；发布一致性：`python scripts/publish_snapshot.py --check`。
 - 前端：`node --check site/app.js`、`node --test tests/test_app.cjs`；界面变更还需浏览器检查。
 - `config/release.json` 明确选择完成的原始轮并钉住 `publication.json`；直接声明修订，不嵌套发布视图。重复 DOI 冲突必须解决，不以最新记录静默覆盖。执行 `manage_runs.py check-layout` 和归档核验；不保留多套 `final` 派生结果。
-- `site/` 是唯一部署目录，只含允许的元数据与短说明。Git 推送、正式部署及部署配置修改须有当前任务授权；没有定时采集或自动日更授权。
+- `site/` 是唯一部署目录，只含允许的元数据与短说明。用户主动请求的常规文献更新按 `docs/publication.md` 的条件授权收尾；其他 Git 推送、正式部署及部署配置修改须有当前任务授权。没有定时采集或自动日更授权。
+- 常规文献更新可用项目技能 `.agents/skills/netsci-literature-update/SKILL.md`；它引用现行规程，不是另一套科学规则。
 
 ## 文档维护
 

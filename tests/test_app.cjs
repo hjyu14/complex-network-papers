@@ -129,6 +129,24 @@ test('spotlight action counts its whole cohort, not visible cards or filtered re
   assert.equal(node('#featured-all').textContent, 'View all 1 Spotlight paper →');
 });
 
+test('view all Spotlight includes older papers and ordinary reset keeps 30 days', async () => {
+  const { node, context } = setup(); await ready();
+  vm.runInContext('state.data.window_end = "2026-10-05"; state.papers[0].date = "2026-09-01"; renderSnapshot()', context);
+  node('#period').events.change({ target: { value: '7' } });
+  node('#search').events.input({ target: { value: 'no match' } });
+  node('#featured-all').events.click();
+  assert.equal(node('#period').value, '0');
+  assert.equal(vm.runInContext('state.days', context), 0);
+  assert.equal(node('#search').value, '');
+  assert.match(node('#result-count').textContent, /^8 papers/);
+  node('#language-toggle').events.click();
+  assert.match(node('#result-count').textContent, /^8 篇文献/);
+  assert.equal(node('#period').value, '0');
+  node('#clear').events.click();
+  assert.equal(node('#period').value, '30');
+  assert.equal(vm.runInContext('state.days', context), 30);
+});
+
 test('relative date labels disclose the snapshot cutoff and retain inclusive seven-day bounds', async () => {
   const home = fs.readFileSync(path.join(__dirname, '../site/index.html'), 'utf8');
   assert.match(home, /aria-describedby="date-cutoff"/);

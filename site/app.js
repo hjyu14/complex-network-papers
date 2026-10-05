@@ -111,9 +111,9 @@ function renderCategories() {
     nav.append(button);
   });
 }
-function resetFilters(scope = "all") {
-  Object.assign(state, { category: "all", journal: "all", scope, query: "", days: 30, page: 1 });
-  $("#search").value = ""; $("#period").value = "30";
+function resetFilters(scope = "all", days = 30) {
+  Object.assign(state, { category: "all", journal: "all", scope, query: "", days, page: 1 });
+  $("#search").value = ""; $("#period").value = String(days);
   $("#journal").value = "all"; $("#scope").value = scope;
   renderCategories(); renderResults();
 }
@@ -182,7 +182,7 @@ function bindControls() {
   $("#search").addEventListener("input", (event) => { state.query = event.target.value; state.page = 1; renderResults(); });
   $("#period").addEventListener("change", (event) => { state.days = Number(event.target.value); state.page = 1; renderResults(); });
   $("#featured-all").addEventListener("click", () => {
-    resetFilters(hasOtherJournals() ? "featured" : "all"); $("#latest").scrollIntoView({ behavior: "auto" });
+    resetFilters(hasOtherJournals() ? "featured" : "all", 0); $("#latest").scrollIntoView({ behavior: "auto" });
   });
   $("#clear").addEventListener("click", () => {
     resetFilters();

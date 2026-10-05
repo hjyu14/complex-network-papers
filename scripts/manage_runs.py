@@ -66,11 +66,36 @@ def export_view(run, root):
     target=work_directory(run,root)/'exports';target.mkdir(parents=True,exist_ok=True)
     # This is explicitly disposable derived output, not another source of judgments.
     rows=[{'doi':d['doi'],'title':w.records[d['doi']]['title'],'category':d['category'],
-           'reason':d.get('reason'),'assessment_sha256':digest(d)} for d in w.assessments()]
+           'reason':d.get('reason'),'assessment_sha256':digest(d),
+           'material_sha256':d.get('material_sha256')} for d in w.assessments()]
+    from abstract_cache import resolve_reference
+    events=w.evidence_events if hasattr(w,'evidence_events') else w.log.events
+    cached={}
+    for event in events:
+        if event['kind']=='material_cached':
+            data=event['data']
+            cached[(data['doi'],data['material_sha256'])]=data['cache_path']
+    for row in rows:
+        original=cached.get((row['doi'],row['material_sha256']))
+        row['cache_reference']=original
+        row['cache_file']=None
+        row['cache_status']='not_referenced'
+        if original:
+            path=resolve_reference(root/'.private/abstract-cache/v9',root/original)
+            row['cache_file']=path.relative_to(root).as_posix()
+            row['cache_status']='missing'
+            if path.exists():
+                if digest(json.loads(path.read_text(encoding='utf8'))) != row['material_sha256']:
+                    raise ValueError('Export cache reference hash mismatch: '+row['doi'])
+                row['cache_status']='verified'
     result={'derived_from':run.relative_to(root).as_posix(),'status':w.status(),'records':rows}
     (target/'review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     lines=['# 派生审核视图','', '本文件可重新生成；正式依据是审核日志。','']
     lines.extend(f"- {r['doi']} — {r['category']} — {r['title']}" for r in rows)
+    lines.extend(['', '## 本轮判断所用材料（不含摘要）', ''])
+    lines.extend(f"- {r['doi']} — {r['cache_status']} — "+
+                 (f"[材料版本]({(root/r['cache_file']).as_posix()})" if r['cache_file'] else '无缓存事件引用')
+                 for r in rows)
     (target/'review.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
     return {'derived_output':target.relative_to(root).as_posix(),'records':len(rows)}
 

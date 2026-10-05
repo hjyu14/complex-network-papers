@@ -17,6 +17,7 @@ from urllib.request import Request, urlopen
 
 from collect_candidates import EventLog, digest, normalized_title, now, plain
 from run_inputs import load_inputs
+from abstract_cache import doi_directory, material_paths, resolve_reference
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'screening-workflow-1'
@@ -445,7 +446,7 @@ class Workflow:
             if e['kind'] == 'material_cached' and e['data']['doi'] == active:
                 if e['data']['material_sha256'] in rejected:
                     continue
-                path = ROOT/e['data']['cache_path']
+                path = resolve_reference(PRIVATE, ROOT/e['data']['cache_path'])
                 if not path.resolve().is_relative_to(PRIVATE.resolve()):
                     raise ValueError('Cache path escaped private directory')
                 m = json.loads(path.read_text(encoding='utf-8'))
@@ -455,20 +456,22 @@ class Workflow:
                 return m
         return None
 
-    def cache(self, m):
+    def cache(self, m, *, reused_from=None):
         r = self.records[self.active()]
         validate_material(m, r)
-        folder = PRIVATE/sha(r['doi'])
+        folder = doi_directory(PRIVATE, r['doi'])
         folder.mkdir(parents=True, exist_ok=True)
         path = folder/(digest(m)+'.json')
         if not path.exists():
             with path.open('x', encoding='utf-8', newline='\n') as f:
                 json.dump(m, f, ensure_ascii=False, indent=2)
                 f.write('\n')
+        elif digest(json.loads(path.read_text(encoding='utf-8'))) != digest(m):
+            raise ValueError('Existing cache version changed')
         self.log.add('material_cached', {'doi': r['doi'], 'cache_path': path.relative_to(ROOT).as_posix(),
                       'material_sha256': digest(m), 'abstract_sha256': m['abstract_sha256'],
                       'source_url': m['source_url'], 'abstract_basis': m['abstract_basis'],
-                      'retrieved_at': m['retrieved_at'], 'imported_from': m.get('imported_from')})
+                      'retrieved_at': m['retrieved_at'], 'imported_from': reused_from or m.get('imported_from')})
 
     def attempt(self, channel, url, result, **extra):
         previous = [e for e in self.log.events if e['kind'] == 'source_attempt' and e['data']['doi'] == self.active()]
@@ -490,7 +493,7 @@ class Workflow:
             if getattr(self, 'fresh_network', False):
                 self.attempt(channel, None, 'benchmark_bypass', next_reason='Fresh-network benchmark: local cache deliberately excluded')
                 return {'result': 'benchmark_bypass'}
-            paths = list((PRIVATE/sha(r['doi'])).glob('*.json')) + list((OLD_PRIVATE/sha(r['doi'])).glob('*.json'))
+            paths = material_paths(PRIVATE, r['doi']) + material_paths(OLD_PRIVATE, r['doi'])
             for path in sorted(paths, key=lambda p: p.stat().st_mtime, reverse=True):
                 try:
                     m = json.loads(path.read_text(encoding='utf-8'))
@@ -498,8 +501,8 @@ class Workflow:
                 except (ValueError, KeyError) as e:
                     self.log.add('cache_rejected', {'doi': r['doi'], 'reason': str(e), 'path': str(path)})
                     continue
-                m = {**m, 'imported_from': str(path), 'imported_at': now()}
-                self.cache(m)
+                # Reuse is a log event, not a new material version. Keep its hash stable.
+                self.cache(m, reused_from=str(path))
                 self.attempt(channel, None, 'usable', stop_reason='Verified DOI, title, ISSN and content hash; assess now')
                 return self.next()
             self.attempt(channel, None, 'missing', next_reason='No verified per-DOI cache; try Crossref')
