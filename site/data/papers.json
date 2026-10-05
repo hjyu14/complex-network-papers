@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T07:10:18.928250+00:00",
+  "generated_at": "2026-10-05T10:10:18.885492+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-10-05",
   "window_days": 35,
@@ -8,68 +8,150 @@
   "config_sha256": "9301f9a098a284e161a3d37e7f43afceb4e870efa2a75c6d90931a209dedf604",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "b4027fada81e70ec9a3167a69d5c5fcce7db86915960a61c835c034d2548d58a",
-  "author_metadata_sha256": "3e39eb20bc86b9e2a82722a2939606b10844450093d968a84b4df387ee358146",
+  "reading_notes_sha256": "6f0f95092ea02c922a618ad27898a76c2d9f7be5b69d7883fa53259f56b868ae",
+  "author_metadata_sha256": "c3050b6d59ca653b19ac75490cce38a0cf853ac435e13d0a42609d3e81cb49e4",
   "run_inputs": [
     {
-      "run": "reports/2026-09",
+      "run": "reports/2026-09-editorial-publication-01",
       "config_sha256": "2ac0eda44eadb1631d2b4d799753dbc843dcd4835b4689be6cf20ab47205cd63",
       "window_start": "2026-09-01",
       "window_end": "2026-09-30",
       "rule_sha256": "154b354d06c7ec61c6403d1cdabf583b2fd044ea5e2bafc5fcee9ac0c464f0ad",
-      "screening_log_sha256": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd",
+      "screening_log_sha256": "ba1365e66ae4a15ed3541c775cad41a7bce168917e4e673f52deb3db70ea22fb",
       "candidate_sha256": "cb1ff89cf6e70ffba41723ba2521d1eb07730d36da37c34e00a662b818559b0b",
-      "author_metadata_sha256": "ace404dbd56f86731f12b37fbbdbe7170dec4057aea7eab733ef91fec14f7ccd",
-      "run_manifest_sha256": "29be6434b17d8f0e794be2eee5834d8766419d90f306e68471eefdca446bffb6",
+      "author_metadata_sha256": "00fbd3a9e75908f4b61f6a909b30fafe53c614fc979f4683306c6376d98c2e8f",
+      "run_manifest_sha256": "47b6ca7b28401b5a0519583402b7095de1c3982da71ab8950947acbc0a94cec5",
+      "assessment_sources": {
+        "version": "editorial-revision-publication-view-1",
+        "parent": {
+          "run": "reports/2026-09",
+          "files": {
+            "candidates.json": "cb1ff89cf6e70ffba41723ba2521d1eb07730d36da37c34e00a662b818559b0b",
+            "coverage.json": "cfa0c439083a1624ac8663d8bbdf003420d4f5186319e998b1df2cf8e5879bd5",
+            "collection-log.jsonl": "29a7bd239b2c8b23ff10c07c1a75fd77fdfde8d222e9b17033ef4c871ef519cf",
+            "screening-log.jsonl": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+            "inputs/manifest.json": "29be6434b17d8f0e794be2eee5834d8766419d90f306e68471eefdca446bffb6",
+            "inputs/sources.json": "9a8aca79fb71a8e1c57729dc70e1042e32c272a6053780340ebb277ec9728b33",
+            "inputs/screening-protocol.md": "db795371175b7f2fdb52277c59afa6c1054089b677a94f112548b201720f0942"
+          },
+          "candidate_sha256": "cb1ff89cf6e70ffba41723ba2521d1eb07730d36da37c34e00a662b818559b0b",
+          "rule_sha256": "154b354d06c7ec61c6403d1cdabf583b2fd044ea5e2bafc5fcee9ac0c464f0ad",
+          "screening_log_sha256": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+        },
+        "adjudication": {
+          "run": "reports/2026-10-05-editorial-revision-01",
+          "files": {
+            "candidates.json": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+            "coverage.json": "1db9fa851cb8c9bb42bfde89a49a9737d03dc436a01b76eaa0ee3c1752244c31",
+            "collection-log.jsonl": "e5788a9bc821842b9359f863c43506730929555706583eff444ad78675555e7f",
+            "screening-log.jsonl": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
+            "inputs/manifest.json": "569967c3366d6925aae54d9a1bd4bae094f96c3236c27472cc8615b22d2ecd5d",
+            "inputs/sources.json": "57e5da824686d586f5d9b85868900404b94f53d69b2b9f9da032069b05830cb9",
+            "inputs/screening-protocol.md": "6895762a419cef428a6b529bac618ca973ba815dc21ade5e7bd7c812c1e8f552"
+          },
+          "candidate_sha256": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+          "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+          "screening_log_sha256": "11953e4eb841ae7c3f589af8ab07b1a1c85edd8f0afa60ea8b3062a168d38b1f"
+        },
+        "targets": [
+          {
+            "doi": "10.1073/pnas.2620995123",
+            "previous_assessment_sha256": "79978ac07bec72c983d83b6994c61bcf41b241ec60e26cef4f74b4dea552f615",
+            "previous_input_sha256": "b876de2a83c6b290edc671bb3123ddfa965b32456e4bd51f34e91d5bcb322ad5"
+          },
+          {
+            "doi": "10.1073/pnas.2601203123",
+            "previous_assessment_sha256": "0c2e5d53707640941093381f92dbe088571ab70019eb66621cf95824b5cf0da7",
+            "previous_input_sha256": "9b8fb9d7b39a74806e0e241e028d839e582d9b4bde479ec56310c7119684306e"
+          },
+          {
+            "doi": "10.1038/s41467-026-77850-0",
+            "previous_assessment_sha256": "44098572ffa9ab34e8686704513d1bb17d60583a720493e2d7ff9f98f9911175",
+            "previous_input_sha256": "f2eb55576d33577183e9f5118704020d0057a6ecd8003759d574cf03c6cd6a04"
+          }
+        ],
+        "parent_publication_files": {
+          "author-metadata.json": "ace404dbd56f86731f12b37fbbdbe7170dec4057aea7eab733ef91fec14f7ccd"
+        },
+        "parent_publication_hash_basis": "canonical_json"
+      },
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false
     },
     {
-      "run": "reports/2026-09-expansion-publication-01",
+      "run": "reports/2026-09-expansion-editorial-publication-01",
       "config_sha256": "3b7017f56b11e653e95184e46beead38d15924c255c06ec147494231c337ed5d",
       "window_start": "2026-09-01",
       "window_end": "2026-09-30",
       "rule_sha256": "2af1f5c8afac74d24eda7a8020d9f957d906e8eb817c60644cd271c0be309641",
-      "screening_log_sha256": "3f33e9379d1aa3e8663e562ce9fe2c0381b9c32670edca9856c81c963f18d121",
+      "screening_log_sha256": "42b76876e3d1e28cdc7b6ed654960edb570851f4836ffd6ce80698d7a980e161",
       "candidate_sha256": "fc13c456d35450618c23ad96a3d66260ceb607ca8bed35c26892a81d4120f97d",
-      "author_metadata_sha256": "5f974182ba952ff16dcfa646f503be31976aaa51b6597863bb3d583ad535dfb9",
-      "run_manifest_sha256": "f47bcdda86b84a4220a184459e070fa6b79e3ca2241d38bad52eb04dad5154f9",
+      "author_metadata_sha256": "bfbcad5a824e3dd9990b87c4954389e780c8fe8b514d01a12260e0852632dbea",
+      "run_manifest_sha256": "0222c4d2b5d1c8aabaa5c31a03f4cc02e33eafb36b12550b316cdfb40a29d6af",
       "assessment_sources": {
-        "version": "adjudicated-publication-view-1",
-        "created_at": "2026-10-04T05:28:44.017271+00:00",
+        "version": "editorial-revision-publication-view-1",
         "parent": {
-          "run": "reports/2026-09-expansion-01",
+          "run": "reports/2026-09-expansion-publication-01",
           "files": {
-            "candidates.json": "fc13c456d35450618c23ad96a3d66260ceb607ca8bed35c26892a81d4120f97d",
-            "coverage.json": "1d07c58efd9023d6eb97e765e136a2ecb8a6de6a253cde6dbcb5955e506ec960",
-            "collection-log.jsonl": "b7bbb73ce1ac6f136d69d9831021cc89ec9d13264f892566bdabda83d4c40f93",
-            "screening-log.jsonl": "6662748b881da93fbbea0f37436a5c7775e4b02d7fccfb33de6b05d06ce9d84e",
-            "inputs/manifest.json": "69aec1f76e2a9a0a89d23b012441e9cc4bc5f199de86e9204376cb675cb8951d",
-            "inputs/sources.json": "65b059a10182f414bb1cf9b913b09bc86599d1236fc72ff0f14bc06bfc3d2322",
-            "inputs/screening-protocol.md": "66548d32f3dfdf12aaacf2924b9426445e9261d2b13ecd1b55ad60686becc944"
+            "release-view.json": "f47bcdda86b84a4220a184459e070fa6b79e3ca2241d38bad52eb04dad5154f9",
+            "publication-log.jsonl": "02857b53c0b10e3534d199f9e2bbb4deff28c24caf23a9990921d2a93b3a1062",
+            "author-metadata.json": "7211cd068e36fccc9ed7b98c7ed99ee535203d9c8eb3ecfda53f5dde3733207d"
           },
           "candidate_sha256": "fc13c456d35450618c23ad96a3d66260ceb607ca8bed35c26892a81d4120f97d",
           "rule_sha256": "2af1f5c8afac74d24eda7a8020d9f957d906e8eb817c60644cd271c0be309641",
-          "screening_log_sha256": "49448d9071384b1d8c6e5dadc2e374b0ae75eed43d97b8320ea5237c1b7b7a0c"
+          "screening_log_sha256": "3f33e9379d1aa3e8663e562ce9fe2c0381b9c32670edca9856c81c963f18d121"
         },
         "adjudication": {
-          "run": "reports/2026-09-expansion-adjudication-01",
+          "run": "reports/2026-10-05-editorial-revision-01",
           "files": {
-            "candidates.json": "90fb109170f745f254fa77fbfe3e5e441d26fcd4e91818465a7cb23ebe6f3c92",
-            "coverage.json": "46e07c997614336475937128c8cc49972289dafd85b9b7adb36e901446865e69",
-            "collection-log.jsonl": "f72632a9c5486aab2d9faa27a4fcb6704e1e5ad1d7349f4848018225fb979d61",
-            "screening-log.jsonl": "480cc003d9e67b6889c9056c63b7bc8c4b159a05386160609201765f6eece906",
-            "inputs/manifest.json": "525cf18cd5fcfebcb6b32e0ecbc1a9fdd74e0739346ca3995e7d105beff07dab",
-            "inputs/sources.json": "65b059a10182f414bb1cf9b913b09bc86599d1236fc72ff0f14bc06bfc3d2322",
-            "inputs/screening-protocol.md": "5531013ee907e21e5c5d959c7019794ca61b6dfbccbc1f9f6cf6a3f1b5b744ef",
-            "parent-manifest.json": "4b45194f02b39e7a8852a9227683df79525222cc0d30f0ab63e3a4fc85cb0779"
+            "candidates.json": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+            "coverage.json": "1db9fa851cb8c9bb42bfde89a49a9737d03dc436a01b76eaa0ee3c1752244c31",
+            "collection-log.jsonl": "e5788a9bc821842b9359f863c43506730929555706583eff444ad78675555e7f",
+            "screening-log.jsonl": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
+            "inputs/manifest.json": "569967c3366d6925aae54d9a1bd4bae094f96c3236c27472cc8615b22d2ecd5d",
+            "inputs/sources.json": "57e5da824686d586f5d9b85868900404b94f53d69b2b9f9da032069b05830cb9",
+            "inputs/screening-protocol.md": "6895762a419cef428a6b529bac618ca973ba815dc21ade5e7bd7c812c1e8f552"
           },
-          "candidate_sha256": "90fb109170f745f254fa77fbfe3e5e441d26fcd4e91818465a7cb23ebe6f3c92",
-          "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-          "screening_log_sha256": "7e8c0341b679b070f88ce4833741b22ce665caab81496eae89a191c7f122728b"
+          "candidate_sha256": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+          "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+          "screening_log_sha256": "11953e4eb841ae7c3f589af8ab07b1a1c85edd8f0afa60ea8b3062a168d38b1f"
         },
-        "selection": "Original full four-journal inventory, with exactly its 131 unresolved assessments explicitly superseded by the formal adjudication. No new scientific verdicts or discovery.",
-        "publication_authorization": "下面我们把这些文章推送到网页。"
+        "targets": [
+          {
+            "doi": "10.1103/mnvf-tq6g",
+            "previous_assessment_sha256": "09178bd1979d6676d17e0eb0f8fd96fd4ef5b44ab5207af4cfadc9885e4bc494",
+            "previous_input_sha256": "008f27840a46d9533919d348580648dc31f4025ee0b110827128088f2a3e4a45"
+          },
+          {
+            "doi": "10.1103/m6s5-r1cq",
+            "previous_assessment_sha256": "c8acfed2a78d922af682a56784191fbc635fbd858d7e3fc910b19447d2b4d91a",
+            "previous_input_sha256": "153973211f699c30826d6de85effb99f8ebf532084846f45dcd741e916eaea78"
+          },
+          {
+            "doi": "10.1103/vxkg-41kp",
+            "previous_assessment_sha256": "e7022812e4b3a3518de0bc0439ea6d5629008de71dc1d66c10fa6f56c768bfa9",
+            "previous_input_sha256": "cdafb81dc165511d136bc206ad05eb9949feb004b59fcc8ca2a93fc8fa837ddc"
+          },
+          {
+            "doi": "10.1103/xsg5-cb6l",
+            "previous_assessment_sha256": "7579c037f7eee007c472b35eb9b9143ee294fb90b5467394d9b8f8c1b724f1ea",
+            "previous_input_sha256": "84b09f8349260c55dd38973f4d4c885a88b9dbd0f224fa5aa00f7247de388827"
+          },
+          {
+            "doi": "10.1103/g76v-wxz7",
+            "previous_assessment_sha256": "8179ef80bf5a2b83c06293a8e96d5d451ea9d4ec8ffe8d011181587defafc312",
+            "previous_input_sha256": "587b27303d452bc5766fbff9cccea0a2be6dfa67385e2102ceb402ff8694cbd0"
+          },
+          {
+            "doi": "10.1103/twww-yj1y",
+            "previous_assessment_sha256": "417194256debb78110de5eb9dc59aa7e482e32a71d45e60ddd1e6ddc4c418b1a",
+            "previous_input_sha256": "eb503ff9fb4e390b2a14b6fc6b4bff291256efb8e19a6b52bcb1e525a5c6096a"
+          }
+        ],
+        "parent_publication_files": {
+          "author-metadata.json": "5f974182ba952ff16dcfa646f503be31976aaa51b6597863bb3d583ad535dfb9"
+        },
+        "parent_publication_hash_basis": "canonical_json"
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
@@ -124,7 +206,7 @@
       "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 146,
+  "author_available_count": 152,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -617,15 +699,15 @@
   ],
   "candidate_count": 3768,
   "screening_counts": {
-    "excluded": 3622,
-    "core": 134,
-    "transferable_application": 12,
+    "excluded": 3616,
+    "core": 138,
+    "transferable_application": 14,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 146
+    "included": 152
   },
-  "published_count": 108,
-  "accepted_count": 38,
+  "published_count": 112,
+  "accepted_count": 40,
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
   "limitations": [
@@ -2735,6 +2817,87 @@
       "screening_version": "newflow-1"
     },
     {
+      "doi": "10.1103/m6s5-r1cq",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq",
+      "title": "Gate control improves routing efficiency for periodic traffic",
+      "authors": [
+        "Hyunwook Song",
+        "Hoyun Choi",
+        "B. Kahng"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "994568cad57dd85c2943de67176f16af184291a61fd8d9d77ee149d509f1d4e9",
+      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq",
+      "author_retrieved_at": "2026-10-05T09:53:52.448062+00:00",
+      "author_basis": "Official visible accepted-page full byline; title, DOI, journal and footer ISSNs matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-30",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-30",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-09-30",
+        "source_url": "https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq"
+        ],
+        "basis_detail": "Current official Accepted Paper date; Crossref online equals accepted date and is not treated as publication."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-09-30",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "提出具体门控方案并分析周期流入及拥堵跃迁的新结果，官方接收摘要体现原创研究性质。",
+        "material_sha256": "c9d1a7afa27169f62ccde9d1a7ed721cee2cda3238677a14f607b83e87faf313",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_resilience"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Local two-queue gate control smooths jamming transitions under periodic inflow, with proposed applications to transport networks and packet routing.",
+      "note_zh": "周期性流入下，局域双队列门控使拥堵跃迁趋于连续；作者提出向交通网络和数据包路由迁移。",
+      "scope_authority": "human user in current conversation",
+      "editorial_support_sha256": "774aefc86ca4ec52c91516e6235eef68c45f0e3c7e99ae4fc53c51cab71df1b2",
+      "assessment_sha256": "bde9557416c23499e2ec34461981f2e368c348e4471a544d20321dc3e4b5a388",
+      "input_sha256": "11bb9d9c0d7ae8e5eb8394dacb1782eeddf7448591c452ac574d29d95c1038c9",
+      "material_sha256": "c9d1a7afa27169f62ccde9d1a7ed721cee2cda3238677a14f607b83e87faf313",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c9d1a7afa27169f62ccde9d1a7ed721cee2cda3238677a14f607b83e87faf313",
+      "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+      "featured": null,
+      "evidence": [
+        "Local two-queue gate control smooths jamming transitions under periodic inflow, with proposed applications to transport networks and packet routing."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fm6s5-r1cq",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
       "doi": "10.1103/v5zx-93k9",
       "url": "https://journals.aps.org/pre/accepted/10.1103/v5zx-93k9",
       "title": "Exact generalized Langevin dynamics of pair coordinates in elastic networks",
@@ -3418,6 +3581,90 @@
       "screening_version": "newflow-1"
     },
     {
+      "doi": "10.1073/pnas.2601203123",
+      "url": "https://doi.org/10.1073/pnas.2601203123",
+      "title": "Functional brain networks underlying approach–avoidance conflict processing in humans and rats",
+      "authors": [
+        "Norman R. Stewart",
+        "Sabrina L. Valenzano",
+        "Jingmin Zhang",
+        "Sonja Chu",
+        "Zhemeng Wu",
+        "Jina Khiabani Javid",
+        "Andy C. H. Lee",
+        "Rutsuko Ito"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "7d4a24108ae9a6b8f02fb1fa16c699f2c4452fcf91d8b0a910e570570871ccf2",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2601203123",
+      "author_retrieved_at": "2026-10-05T09:45:29.149525+00:00",
+      "author_basis": "crossref.author; exact DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-09-29",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-29",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-09-29",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2601203123",
+          "https://www.pnas.org/doi/10.1073/pnas.2601203123"
+        ],
+        "basis_detail": "Current exact Crossref online date agrees with preserved publisher directory; print date does not replace online date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-29",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "进行跨物种功能网络分析并报告枢纽、社区整合和拓扑差异，明确体现原创研究性质。",
+        "material_sha256": "fa2e96cd4bbe4610d8c81a897098fbb421bf1fadb03bc9971113223dc43b02fd",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2601203123"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Human and rat functional networks show shared hippocampal hub organization during approach–avoidance conflict, alongside topology differences associated with behavior and sex.",
+      "note_zh": "人鼠趋避冲突任务的功能网络呈现共同的海马枢纽组织，并报告与行为及性别相关的拓扑差异。",
+      "scope_authority": "human user in current conversation",
+      "editorial_support_sha256": "002d9f7e7e2440e39cbb76897742cfef69a106c98d88ce7497dc8ac087cf59c9",
+      "assessment_sha256": "1b52478cbf114996da5c178f1857acfc7e06377a665b7613005343a07aa01b9d",
+      "input_sha256": "56f221597cf88e0a5ac41adb30d6b29dcb887b9ef160de99945bdc5f7e0acd39",
+      "material_sha256": "fa2e96cd4bbe4610d8c81a897098fbb421bf1fadb03bc9971113223dc43b02fd",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "fa2e96cd4bbe4610d8c81a897098fbb421bf1fadb03bc9971113223dc43b02fd",
+      "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+      "featured": "PNAS",
+      "evidence": [
+        "Human and rat functional networks show shared hippocampal hub organization during approach–avoidance conflict, alongside topology differences associated with behavior and sex."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2601203123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2601203123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
       "doi": "10.1073/pnas.2526156123",
       "url": "https://doi.org/10.1073/pnas.2526156123",
       "title": "Associative synaptic plasticity creates dynamic persistent activity",
@@ -3721,6 +3968,87 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fnvd6-pj1f",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/nvd6-pj1f",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/mnvf-tq6g",
+      "url": "https://doi.org/10.1103/mnvf-tq6g",
+      "title": "Global warming drives connectivity loss among climate tipping elements",
+      "authors": [
+        "Tomas Scagliarini",
+        "Lorenzo Gamba",
+        "Antonello Provenzale",
+        "Timothy M. Lenton",
+        "Manlio De Domenico"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "1e0b25d05952bc19f0a7346e10ef72b6b9cf02fe1c9165e6d035dc6bc715f073",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fmnvf-tq6g",
+      "author_retrieved_at": "2026-10-05T09:45:25.643390+00:00",
+      "author_basis": "crossref.author; exact DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-09-28",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-28",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-09-28",
+        "sources": [
+          "https://api.crossref.org/works/10.1103%2Fmnvf-tq6g",
+          "https://journals.aps.org/prresearch/abstract/10.1103/mnvf-tq6g"
+        ],
+        "basis_detail": "Current exact Crossref online date agrees with preserved publisher directory; print date does not replace online date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-28",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "提出贝叶斯连接分析及适应性动力模型，并报告跨强迫情景的具体连接结果，体现原创研究。",
+        "material_sha256": "d0a7421c1c8a89d52753a6f610cbcd9933977393114fe9de54587816bd4099ea",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1103%2Fmnvf-tq6g"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A Bayesian analysis tracks weakening lagged-correlation connectivity among climate tipping elements under stronger forcing; the inferred links do not establish causation.",
+      "note_zh": "贝叶斯分析刻画较强外部强迫下气候临界要素的滞后相关连接减弱；相关边不代表因果作用。",
+      "scope_authority": "human user in current conversation",
+      "editorial_support_sha256": "f5339dce731c3838a6ed4d50010c025776d4a6f4cf843b0bd8f29133165c9d69",
+      "assessment_sha256": "3e0729ce4baeefe32cdb33e8b9ae1759573f1abdf1801553885dfd7510f3fc88",
+      "input_sha256": "4b3c74df0ab7a2f5f185060c4d84330edf72d428cb6fc10c907e05a7d8a03dcf",
+      "material_sha256": "d0a7421c1c8a89d52753a6f610cbcd9933977393114fe9de54587816bd4099ea",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d0a7421c1c8a89d52753a6f610cbcd9933977393114fe9de54587816bd4099ea",
+      "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+      "featured": null,
+      "evidence": [
+        "A Bayesian analysis tracks weakening lagged-correlation connectivity among climate tipping elements under stronger forcing; the inferred links do not establish causation."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fmnvf-tq6g",
+      "evidence_url": "https://api.crossref.org/works/10.1103%2Fmnvf-tq6g",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -4226,6 +4554,90 @@
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
       ],
       "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/vxkg-41kp",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/vxkg-41kp",
+      "title": "Mass media interventions and social reinforcements drive rumor propagation",
+      "authors": [
+        "Yafang Dong",
+        "Liang’an Huo",
+        "Matjaž Perc",
+        "Stefano Boccaletti"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5385d0ff0fd5c62e5071002d1c4f9e4f467d1f6838c962d59fddd7f35581e365",
+      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/vxkg-41kp",
+      "author_retrieved_at": "2026-10-05T09:53:52.448062+00:00",
+      "author_basis": "Official visible accepted-page full byline; title, DOI, journal and footer ISSNs matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-09-25",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-25",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-09-25",
+        "source_url": "https://journals.aps.org/pre/accepted/10.1103/vxkg-41kp",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/vxkg-41kp"
+        ],
+        "basis_detail": "Current official Accepted Paper date; Crossref online equals accepted date and is not treated as publication."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-09-25",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "提出多层传播模型，以平均场和阈值推导分析干预、强化和模拟结果，官方接收摘要明确体现原创研究性质。",
+        "material_sha256": "c2a3b09bbf2e10b1c2ee62acddfbe878380121340681b99c20b9ecc139bb175b",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/vxkg-41kp"
+        ]
+      },
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Editor-selected reading: a multilayer rumor model examines media interventions and social reinforcement; its abstract does not specify contact topology or establish intervention causality.",
+      "note_zh": "编辑选定相关阅读：多层谣言模型分析媒体干预与社会强化；摘要未明确接触拓扑，也未证明干预因果效果。",
+      "scope_authority": "human user in current conversation",
+      "editorial_support_sha256": "9fc6fcb0d1f34a2337ea352921a244f0c82de4496ff146711c819a881447fd94",
+      "assessment_sha256": "26a54b3c44bee4fa0b5d8797eeaca97395d1b48aa5ef12d8d03a176f585bbb86",
+      "input_sha256": "d423cda3c1c292b2e972f43c400df1556450ac318736b25264f4a3748a937d19",
+      "material_sha256": "c2a3b09bbf2e10b1c2ee62acddfbe878380121340681b99c20b9ecc139bb175b",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c2a3b09bbf2e10b1c2ee62acddfbe878380121340681b99c20b9ecc139bb175b",
+      "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+      "featured": null,
+      "evidence": [
+        "Editor-selected reading: a multilayer rumor model examines media interventions and social reinforcement; its abstract does not specify contact topology or establish intervention causality."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fvxkg-41kp",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/vxkg-41kp",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "scope_exception": true,
+      "entry_kind": "editorial_related_reading",
+      "scope_class_semantics": "Single editor-selected related reading, not a confirmed transferable network-science contribution; contact topology unspecified in abstract."
     },
     {
       "doi": "10.1103/t1sg-qhhf",
@@ -7470,6 +7882,83 @@
       "screening_version": "newflow-1"
     },
     {
+      "doi": "10.1038/s41467-026-77850-0",
+      "url": "https://doi.org/10.1038/s41467-026-77850-0",
+      "title": "Metabolite correlation networks reveal complex phenotypes of adaptation-driving mutations",
+      "authors": [
+        "Sharon Samuel",
+        "Weronika Jasinska",
+        "Ezra Sternlicht",
+        "Matvey Nikelshparg",
+        "Daniel Kleiner",
+        "Shai Pilosof",
+        "Shimon Bershtein"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e85591f50b02f664c7f51b2abe7d9faf6d687192db215537f74a733584e36f77",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77850-0",
+      "author_retrieved_at": "2026-10-05T09:45:30.784592+00:00",
+      "author_basis": "crossref.author; exact DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-09-16",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-16",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-09-16",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-77850-0",
+          "https://www.nature.com/articles/s41467-026-77850-0"
+        ],
+        "basis_detail": "Current exact Crossref online date agrees with preserved publisher directory; print date does not replace online date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-16",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Official directory Article label, matching research abstract and no conflicting type evidence.",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-77850-0",
+          "https://www.nature.com/ncomms/articles?year=2026&page=23&sort=PubDate&searchType=journalSearch"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "During bacterial adaptation, a metabolite shifts from the periphery to a connector between correlation-network clusters, revealing system-level metabolic reorganization.",
+      "note_zh": "细菌适应过程中，代谢物从相关网络外围转为簇间连接者，揭示系统层面的代谢网络重组。",
+      "scope_authority": "human user in current conversation",
+      "editorial_support_sha256": "3072dd23fd68a98ab86057c5ab925fd8538c6d31384b1f5aadfe5c4e837caf6c",
+      "assessment_sha256": "79ec19b7ebab14483cd92e71b085b046399144efcf7d59e82b8eb871e600c87d",
+      "input_sha256": "64f24d66b5ac08160801e390dd0b38f5100c1d2a735929ed1e361814460bac72",
+      "material_sha256": "274783eb584baeb30c5a2ae9093aec50afed9173c0776155defcaf19a12f5126",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "274783eb584baeb30c5a2ae9093aec50afed9173c0776155defcaf19a12f5126",
+      "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+      "featured": "NC",
+      "evidence": [
+        "During bacterial adaptation, a metabolite shifts from the periphery to a connector between correlation-network clusters, revealing system-level metabolic reorganization."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77850-0",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-77850-0",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
       "doi": "10.1103/7y6z-4bwy",
       "url": "https://doi.org/10.1103/7y6z-4bwy",
       "title": "Polar chiral active matter as a motile, disordered Josephson array: Information supercurrents and Goldstone spin waves",
@@ -10389,6 +10878,86 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2F73g3-b38r",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/73g3-b38r",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2620995123",
+      "url": "https://doi.org/10.1073/pnas.2620995123",
+      "title": "A structure–function neuronal network model of the rat nervous system",
+      "authors": [
+        "Larry W. Swanson",
+        "Joel D. Hahn",
+        "Olaf Sporns"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "fc0f4075e5900e0c8f207105b1c00467988b32cdcff285f25b3d9658c2c0f11c",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2620995123",
+      "author_retrieved_at": "2026-10-05T09:45:23.950719+00:00",
+      "author_basis": "crossref.author; exact DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-09-08",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-08",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-09-08",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2620995123",
+          "https://www.pnas.org/doi/10.1073/pnas.2620995123"
+        ],
+        "basis_detail": "Current exact Crossref online date agrees with preserved publisher directory; print date does not replace online date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-08",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "构建连接模型并分析层级社区、整合及扰动结果，明确体现原创研究性质。",
+        "material_sha256": "7e75cdba276de91be7a96f4097519a1894c8f665a0e5a19305c80b457a4e88d8",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2620995123"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "A rat nervous-system model relates hierarchical modules and rich-club integration to the spread of local connectivity perturbations.",
+      "note_zh": "大鼠神经系统的加权有向模型连接层级模块、富俱乐部整合与局部连接扰动的传播。",
+      "scope_authority": "human user in current conversation",
+      "editorial_support_sha256": "4dfee7dc2e9284dcc230b91562837d7d48991f677a14d7666e5b2e9e0311ef4d",
+      "assessment_sha256": "107283813ef778c747368821c41c978e48315258cb395f64e555bbc8e5666b97",
+      "input_sha256": "493ef3586cd960bfcae4e4bb030b52548ad848427e99901239001d46dc4380c8",
+      "material_sha256": "7e75cdba276de91be7a96f4097519a1894c8f665a0e5a19305c80b457a4e88d8",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "7e75cdba276de91be7a96f4097519a1894c8f665a0e5a19305c80b457a4e88d8",
+      "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+      "featured": "PNAS",
+      "evidence": [
+        "A rat nervous-system model relates hierarchical modules and rich-club integration to the spread of local connectivity perturbations."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2620995123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2620995123",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"

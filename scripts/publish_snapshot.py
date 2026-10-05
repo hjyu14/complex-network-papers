@@ -40,6 +40,11 @@ def publication_evidence(w):
     """Read explicitly audited supplemental references; never rewrite frozen coverage flags."""
     path = w.out/'publication-evidence.json'
     if not path.exists():
+        if isinstance(w, PublicationView) and w.manifest['version'] == 'editorial-revision-publication-view-1':
+            parent = w.sources[0]
+            inherited = publication_evidence(parent)
+            if inherited:
+                return {**inherited, 'source_run': parent.out.relative_to(ROOT).as_posix()}
         return None
     evidence = json.loads(path.read_text(encoding='utf8'))
     if (evidence.get('candidate_sha256') != w.input_sha
@@ -167,7 +172,8 @@ def build_snapshot(out, notes=None):
         visited = set()
         while lineage and digest(lineage) not in visited:
             visited.add(digest(lineage))
-            verdict = editorial_reference(lineage, r, w.input_sha, evidence_events)
+            binding = w.candidate_binding(lineage) if isinstance(w, PublicationView) else w.input_sha
+            verdict = editorial_reference(lineage, r, binding, evidence_events)
             if lineage.get('user_verdict') == 'include' or lineage.get('scope_authority') == 'human user in current conversation':
                 authority = 'human user in current conversation'
                 authority_hash = digest(lineage)
@@ -207,7 +213,10 @@ def build_snapshot(out, notes=None):
             papers[-1].update(scope_exception=True, entry_kind='editorial_related_reading',
                 scope_class_semantics=d['editorial_basis']['category_semantics'])
     papers.sort(key=lambda p: (p['date'], p['doi']), reverse=True)
-    inventory_out = w.sources[0].out if isinstance(w, PublicationView) else w.out
+    inventory = w
+    while isinstance(inventory, PublicationView):
+        inventory = inventory.sources[0]
+    inventory_out = inventory.out
     coverage = json.loads((inventory_out/'coverage.json').read_text(encoding='utf-8'))
     compact_coverage = [{ 'journal': short,
         'candidate_count': c['window_inventory_count'],
