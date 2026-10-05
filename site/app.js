@@ -85,7 +85,8 @@ function paperCard(paper) {
   if (paper.review_evidence_kind === "online_short_comment") details.append(element("p", "", tr("Reading note based on the accessible text of a no-abstract scientific commentary.", "阅读说明依据在线审读的无摘要科学评论正文。")));
   if (paper.review_evidence_kind === "abstract_excerpt") details.append(element("p", "", tr("Reading note based on the publisher's Abstract excerpt; the full article was not reviewed.", "阅读说明依据出版方的摘要摘段，未审读全文。")));
   details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));
-  if (paper.scope_class === "transferable_application") details.append(element("p", "", tr("Included for its transferable network-science method or theory.", "收录理由：具有可迁移的网络科学方法或理论。")));
+  if (paper.entry_kind === "editorial_related_reading") details.append(element("p", "", tr("Related reading selected by the editor for its relevance to network-science readers; network science is not its main subject.", "编辑选入的延伸阅读，供网络科学读者参考；网络科学并非其主要主题。")));
+  else if (paper.scope_class === "transferable_application") details.append(element("p", "", tr("Included for its transferable network-science method or theory.", "收录理由：具有可迁移的网络科学方法或理论。")));
   if (paper.author_metadata_status !== "available") details.append(element("p", "", tr("Author information is incomplete; consult the publisher.", "作者信息尚不完整，请查看出版方。")));
   if (paper.has_update) details.append(element("p", "", tr("Check the publisher for corrections or retractions.", "请查看出版方的更正或撤稿信息。")));
   details.append(link(tr("Publisher page ↗", "出版方页面 ↗"), paper.url));
@@ -118,7 +119,7 @@ function resetFilters(scope = "all") {
 }
 function renderResults() {
   const end = new Date(state.data.window_end + "T00:00:00Z");
-  const cutoff = new Date(end.getTime() - (state.days - 1) * 86400000).toISOString().slice(0, 10);
+  const cutoff = state.days === 0 ? state.data.window_start : new Date(end.getTime() - (state.days - 1) * 86400000).toISOString().slice(0, 10);
   const query = state.query.trim().toLowerCase();
   const results = state.papers.filter((paper) =>
     paper.date >= cutoff && (state.category === "all" || paper.categories.includes(state.category)) &&
@@ -203,7 +204,8 @@ function renderSnapshot() {
   $("#featured-all").textContent = tr(`View all ${featured.length} Spotlight ${featured.length === 1 ? "paper" : "papers"} →`, `查看全部 ${featured.length} 篇 Spotlight 文献 →`);
   $("#date-cutoff").textContent = tr(`Data through ${data.window_end}`, `数据截至 ${data.window_end}`);
   const month = new Date(data.window_end + "T12:00:00Z").toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { year: "numeric", month: "long", timeZone: "Asia/Shanghai" });
-  $("#edition").textContent = `${month} · ${state.papers.length} ${tr("papers", "篇文献")}`;
+  const firstMonth = new Date(data.window_start + "T12:00:00Z").toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { year: "numeric", month: "long", timeZone: "Asia/Shanghai" });
+  $("#edition").textContent = `${firstMonth === month ? month : firstMonth + " – " + month} · ${state.papers.length} ${tr("papers", "篇文献")}`;
   $("#scope-control").hidden = !hasOtherJournals();
   const updated = new Date(data.generated_at).toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric" });
   $("#updated").textContent = tr(`Updated ${updated}`, `更新于 ${updated}`);
@@ -213,7 +215,7 @@ function renderSnapshot() {
   const pending = counts.review + counts.deferred_unassessed;
   $("#status").hidden = pending === 0;
   $("#status").textContent = tr(`${pending} candidates awaiting evidence.`, `${pending} 篇候选待补证。`);
-  $("#coverage-summary").textContent = tr(`1–30 September 2026: ${data.published_count} published papers and ${data.accepted_count} accepted manuscripts.`, `2026 年 9 月 1–30 日：已发表 ${data.published_count} 篇，已接收 ${data.accepted_count} 篇。`);
+  $("#coverage-summary").textContent = tr(`${data.window_start} – ${data.window_end}: ${data.published_count} published papers and ${data.accepted_count} accepted manuscripts.`, `${data.window_start} 至 ${data.window_end}：已发表 ${data.published_count} 篇，已接收 ${data.accepted_count} 篇。`);
   if (!state.attempt?.ok) {
     $("#status").hidden = false;
     $("#status").textContent += state.attempt ? tr(" The latest collection failed; the previous valid snapshot is retained.", " 最近一次采集未完整成功，当前保留上次有效快照。") : tr(" Latest collection status unavailable.", " 最近采集状态不可用。");

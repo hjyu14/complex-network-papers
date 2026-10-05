@@ -45,9 +45,9 @@ The complete list also includes papers from:
 
 ## Current coverage and limitations
 
-The current list covers **1–30 September 2026**, with **122 papers: 93 published papers and 29 accepted manuscripts**. Of these, 20 belong to the Spotlight group.
+The current list covers **1 September–5 October 2026**, with **146 papers: 108 published papers and 38 accepted manuscripts**. Of these, 22 belong to the Spotlight group.
 
-Date filters are relative to the displayed data cutoff, not today's date. This is a fixed September collection, not a daily-updated feed. Publication dates prioritize first online publication; accepted manuscripts awaiting publication are marked separately and shown by acceptance date. Preprints are excluded.
+Date filters are relative to the displayed data cutoff, not today's date. Choose “All collected dates” to browse the entire collection. Updates are currently published in reviewed batches, not automatically every day. Publication dates prioritize first online publication; accepted manuscripts awaiting publication are marked separately and shown by acceptance date. Preprints are excluded.
 
 Selection is based mainly on abstracts and bibliographic evidence, with AI assistance and editorial decisions on scope questions. Reading notes support discovery; they are not quality ratings or full-text expert reviews. Coverage is not guaranteed to be exhaustive. The site provides metadata, short notes, and original-paper links, not full abstracts or article text.
 

@@ -37,16 +37,17 @@ class RunTests(unittest.TestCase):
     def write(self, rel, value):
         (self.root/rel).write_text(json.dumps(value, ensure_ascii=False)+'\n',encoding='utf8')
 
-    def make_run(self, name, doi, journal='J', category='core', window_end='2026-09-30'):
+    def make_run(self, name, doi, journal='J', category='core', window_end='2026-09-30', window_start='2026-09-01'):
         out=self.root/'reports'/name;out.mkdir()
-        cfg=deepcopy(self.config);cfg['initial_trial']['end']=window_end
+        cfg=deepcopy(self.config);cfg['initial_trial']={'start':window_start,'end':window_end}
         self.write('config/sources.json',cfg)
         freeze_inputs(out,self.root,[journal])
         j=next(j for j in cfg['journals'] if j['short']==journal)
+        paper_date=max(window_start,'2026-09-03')
         record={'doi':doi,'title':'Synthetic network study '+doi,'issns':j['issns'],
-                'journal':journal,'window_membership':'in_window','date':'2026-09-03',
+                'journal':journal,'window_membership':'in_window','date':paper_date,
                 'date_basis':'published-online','issues':[]}
-        self.write(f'reports/{name}/candidates.json',{'window_start':'2026-09-01','window_end':window_end,'records':[record]})
+        self.write(f'reports/{name}/candidates.json',{'window_start':window_start,'window_end':window_end,'records':[record]})
         self.write(f'reports/{name}/coverage.json',{'journals':{journal:{
             'window_inventory_count':1,'publisher_verified_inventory_count':1,
             'candidate_inventory_complete':True,'metadata_reconciliation_complete':True}},
@@ -54,7 +55,7 @@ class RunTests(unittest.TestCase):
         (out/'collection-log.jsonl').write_text('',encoding='utf8')
         w=screen.Workflow(out);w.init()
         hard={'identity':{'status':'verified'},'type':{'status':'verified','value':'Article'},
-              'date':{'status':'verified','value':'2026-09-03','source_url':'https://example.org/paper'}}
+              'date':{'status':'verified','value':paper_date,'source_url':'https://example.org/paper'}}
         material=hashlib.sha256(('synthetic material '+doi).encode()).hexdigest()
         d={'doi':doi,'category':category,'hard_checks':hard,'rule_sha256':w.rule_sha,
            'material_sha256':material,'material_source':'https://example.org/paper',
@@ -88,6 +89,21 @@ class RunTests(unittest.TestCase):
         self.assertEqual(resumed.config,old.config)
         self.assertEqual(len(publish.build_snapshot(run)['papers.json']['papers']),1)
 
+    def test_explicit_window_is_frozen_without_changing_global_config(self):
+        out=self.root/'reports/october';out.mkdir()
+        before=(self.root/'config/sources.json').read_bytes()
+        config, _, manifest=freeze_inputs(out,self.root,window=('2026-10-01','2026-10-05'))
+        self.assertEqual(config['initial_trial']['start'],'2026-10-01')
+        self.assertEqual(manifest['window_end'],'2026-10-05')
+        self.assertEqual((self.root/'config/sources.json').read_bytes(),before)
+        self.assertEqual(load_inputs(out)[0],config)
+
+    def test_invalid_window_does_not_create_frozen_inputs(self):
+        for window in [('2026-10-05','2026-10-01'),('2026-12-31','2027-01-01')]:
+            out=self.root/'reports/invalid';out.mkdir(exist_ok=True)
+            with self.assertRaises(ValueError):freeze_inputs(out,self.root,window=window)
+            self.assertFalse((out/'inputs').exists())
+
     def test_frozen_input_tampering_fails(self):
         run=self.make_run('a','10.1/a')
         (run/'inputs/screening-protocol.md').write_text('Changed')
@@ -116,11 +132,52 @@ class RunTests(unittest.TestCase):
         a=self.make_run('a','10.1/a');b=self.make_run('b','10.1/b')
         with self.assertRaisesRegex(ValueError,'Conflicting journal coverage'):publish.build_release([a,b])
 
-    def test_conflicting_duplicate_and_different_windows_fail(self):
+    def test_conflicting_duplicate_and_incomplete_journal_window_fail(self):
         a=self.make_run('a','10.1/a');b=self.make_run('b','10.1/a',category='excluded')
         with self.assertRaisesRegex(ValueError,'Conflicting candidate'):publish.build_release([a,b])
         c=self.make_run('c','10.1/c','K',window_end='2026-09-29')
-        with self.assertRaisesRegex(ValueError,'same date window'):publish.build_release([a,c])
+        with self.assertRaisesRegex(ValueError,'does not span'):publish.build_release([a,c])
+
+    def test_adjacent_windows_merge_without_rewriting_inputs(self):
+        a=self.make_run('a','10.1/a')
+        b=self.make_run('b','10.1/b',window_start='2026-10-01',window_end='2026-10-05')
+        before={p:p.read_bytes() for run in [a,b] for p in run.rglob('*') if p.is_file()}
+        result=publish.build_release([a,b])['papers.json']
+        self.assertEqual((result['window_start'],result['window_end'],result['window_days']),('2026-09-01','2026-10-05',35))
+        self.assertEqual(result['candidate_count'],2)
+        self.assertEqual(result['coverage'][0]['candidate_count'],2)
+        self.assertEqual(result['coverage'][0]['publisher_verified_inventory_count'],2)
+        self.assertEqual(len(result['coverage'][0]['windows']),2)
+        self.assertEqual([i['window_end'] for i in result['run_inputs']],['2026-09-30','2026-10-05'])
+        self.assertTrue(result['candidate_inventory_complete'])
+        self.assertEqual(before,{p:p.read_bytes() for p in before})
+
+    def test_gaps_and_partial_overlaps_fail(self):
+        a=self.make_run('a','10.1/a')
+        for name,start,end in [('gap','2026-10-02','2026-10-05'),('overlap','2026-09-30','2026-10-05')]:
+            b=self.make_run(name,'10.1/'+name,window_start=start,window_end=end)
+            with self.assertRaisesRegex(ValueError,'disjoint and contiguous'):publish.build_release([a,b])
+            self.notes['papers'].pop('10.1/'+name)
+
+    def test_adjacent_window_keeps_incomplete_source_flags(self):
+        a=self.make_run('a','10.1/a')
+        b=self.make_run('b','10.1/b',window_start='2026-10-01',window_end='2026-10-05')
+        # Controlled synthetic fixture adjustment, not a real source run.
+        w=screen.Workflow(b)
+        coverage=json.loads((b/'coverage.json').read_text())
+        coverage['journals']['J']['candidate_inventory_complete']=False
+        coverage['nine_journal_inventory_complete']=False
+        self.write('reports/b/coverage.json',coverage)
+        from collect_candidates import EventLog
+        events=deepcopy(w.log.events)
+        events[0]['data']['original_sha256']['coverage.json']=hashlib.sha256((b/'coverage.json').read_bytes()).hexdigest()
+        (b/'screening-log.jsonl').unlink()
+        log=EventLog(b/'screening-log.jsonl')
+        for e in events:log.add(e['kind'],e['data'])
+        result=publish.build_release([a,b])['papers.json']
+        self.assertFalse(result['candidate_inventory_complete'])
+        self.assertFalse(result['coverage'][0]['candidate_inventory_complete'])
+        self.assertTrue(result['coverage'][0]['windows'][0]['candidate_inventory_complete'])
 
     def test_unresolved_or_unassessed_run_cannot_publish(self):
         a=self.make_run('a','10.1/a',category='review')

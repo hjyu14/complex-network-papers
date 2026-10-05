@@ -5,3 +5,7 @@
 
 # Frozen rule inputs use exact bytes for audit hashes.
 /reports/**/inputs/* -text -eol whitespace=cr-at-eol
+
+# This completed run includes byte-pinned browser evidence and historical exports.
+# Preserve its original line endings rather than invalidating audit hashes.
+/reports/2026-10-01-to-05-01/** -text -eol whitespace=cr-at-eol,-blank-at-eof

@@ -31,6 +31,39 @@ class Client:
 
 
 class CollectorTests(unittest.TestCase):
+    def test_cli_window_override_is_frozen_without_global_change(self):
+        record=item(**{'published-online':{'date-parts':[[2026,10,1]]}})
+        response=json.dumps({'status':'ok','message':{'items':[record],'total-results':1}})
+        directory=('<title>Articles in 2026 | Nature Machine Intelligence</title><span>2026 (2)</span>'
+                   '<li class="app-article-list-row__item"><a class="c-card__link" href="/articles/synthetic">Synthetic title</a>'
+                   '<span class="c-meta__type">Article</span><time datetime="2026-10-01"></time></li>'
+                   '<li class="app-article-list-row__item"><a class="c-card__link" href="/articles/guard">Guard</a>'
+                   '<span class="c-meta__type">Article</span><time datetime="2026-09-30"></time></li><footer>2522-5839</footer>')
+        class OfflineClient:
+            def __init__(self,**kwargs): self.attempts=[]
+            def get(self,url):
+                self.attempts.append({'retrieved_at':'synthetic time'})
+                return response if 'api.crossref.org' in url else directory
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'config').mkdir();(root/'docs').mkdir()
+            (root/'docs/screening-protocol.md').write_text('Synthetic rules')
+            config={'screening_protocol':'docs/screening-protocol.md','initial_trial':{'start':'2026-09-01','end':'2026-09-30'},
+                    'journals':[{'short':'NMI','name':'Nature Machine Intelligence','issns':['2522-5839'],
+                                 'collection':{'family':'nature','url':collector.DIRECTORY,'max_pages':12}}]}
+            source=root/'config/sources.json';source.write_text(json.dumps(config),encoding='utf8')
+            original=source.read_bytes();out=root/'trial'
+            argv=['collect_candidates.py','--out',str(out),'--as-of','2026-10-05']
+            with patch.object(collector,'ROOT',root),patch.object(collector,'Client',OfflineClient),patch.object(sys,'argv',argv+[
+                    '--window-start','2026-10-01','--window-end','2026-10-05']):
+                self.assertEqual(collector.main(),0)
+            frozen=json.loads((out/'inputs/sources.json').read_text(encoding='utf8'))
+            self.assertEqual(frozen['initial_trial']['start'],'2026-10-01')
+            self.assertEqual(frozen['initial_trial']['end'],'2026-10-05')
+            self.assertEqual(source.read_bytes(),original)
+            with patch.object(sys,'argv',argv+['--resume','--window-start','2026-10-01','--window-end','2026-10-05']):
+                with self.assertRaises(SystemExit):collector.main()
+            self.assertEqual(source.read_bytes(),original)
+
     def test_http_429_stops_other_queries_and_channels(self):
         from urllib.error import HTTPError
         with TemporaryDirectory() as tmp:

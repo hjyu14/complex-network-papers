@@ -292,7 +292,10 @@ test('public rules article is linked and bilingual', () => {
   assert.match(rules, /href="data\/screening-report\.json">审核汇总/);
   assert.match(rules, /reports\/2026-09\/screening-log\.jsonl">逐篇审核日志/);
   assert.match(rules, /Paper-by-paper review log/);
-  assert.equal((rules.match(/blob\/main\//g) || []).length, 4);
+  assert.equal((rules.match(/blob\/main\//g) || []).length, 10);
+  for (const run of ['2026-09-expansion-01','2026-09-expansion-adjudication-01','2026-10-01-to-05-01']) {
+    assert.equal((rules.match(new RegExp(`reports/${run}/screening-log\\.jsonl`, 'g')) || []).length,2);
+  }
   assert.doesNotMatch(rules, /codex\/new-workflow/);
 });
 
@@ -327,16 +330,16 @@ test('published artifact has consistent rules, date bounds, counts and unique DO
   assert.equal(audit.candidate_inventory_complete, false);
   assert.equal(audit.metadata_reconciliation_complete, false);
   assert.equal(data.papers.length, data.screening_counts.included);
-  assert.equal(data.candidate_count, 3467);
-  assert.equal(audit.included_assessments.length, 122);
+  assert.equal(data.candidate_count, 3768);
+  assert.equal(audit.included_assessments.length, 146);
   assert.equal(new Set(data.papers.map(p => p.doi)).size, data.papers.length);
   assert.ok(data.papers.every(p => p.date >= data.window_start && p.date <= data.window_end && !('abstract' in p)));
-  assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 30);
+  assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 35);
   assert.equal(data.coverage.length,13);
   assert.equal(data.coverage.find(q => q.journal === 'NC').candidate_inventory_complete,false);
-  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed, 3467);
-  assert.equal(data.published_count,93);
-  assert.equal(data.accepted_count,29);
+  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed, 3768);
+  assert.equal(data.published_count,108);
+  assert.equal(data.accepted_count,38);
 });
 
 test('pagination has ten papers, last page, language persistence and filter reset', async () => {
@@ -361,19 +364,19 @@ test('research method controls and annotations are absent', () => {
   assert.doesNotMatch(source, /state\.method|renderMethods|methodLabel/);
   assert.equal(data.screening_version, 'newflow-1');
   assert.ok(data.papers.every(p => !('methods' in p) && !('method_evidence' in p)));
-  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, 116);
-  assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, 6);
+  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, 134);
+  assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, 12);
 });
 
 test('fixed September snapshot keeps date bounds without a journal-specific coverage notice', async () => {
   const {node} = setup(); await ready();
   assert.match(node('#edition').textContent,/September 2026/);
   assert.equal(node('#status').hidden,true);
-  assert.match(node('#coverage-summary').textContent,/1–30 September 2026:/);
+  assert.match(node('#coverage-summary').textContent,/2026-09-01 – 2026-09-30:/);
   assert.doesNotMatch(node('#coverage-summary').textContent,/Nature Communications|coverage remains uncertain/);
   assert.doesNotMatch(node('#edition').textContent,/90-day feed/);
   node('#language-toggle').events.click();
-  assert.match(node('#coverage-summary').textContent,/2026 年 9 月 1–30 日/);
+  assert.match(node('#coverage-summary').textContent,/2026-09-01 至 2026-09-30/);
   assert.doesNotMatch(node('#coverage-summary').textContent,/Nature Communications|目录覆盖仍存在不确定性/);
   assert.match(node('#edition').textContent,/2026年9月/);
 });
@@ -392,12 +395,58 @@ test('accepted date and reading notes are visible and bilingual without changing
   assert.equal(node('#paper-list').children[0].children[1].children[0].textContent,title);
 });
 
+test('cross-month summary and all-collected-dates filter retain the older papers', async () => {
+  const {node,context,data}=setup(); await ready();
+  data.window_end='2026-10-05';
+  vm.runInContext('renderSnapshot()',context);
+  assert.match(node('#edition').textContent,/September 2026 – October 2026/);
+  assert.match(node('#coverage-summary').textContent,/2026-09-01 – 2026-10-05/);
+  assert.match(node('#result-count').textContent,/^10 papers/);
+  node('#period').events.change({target:{value:'0'}});
+  assert.match(node('#result-count').textContent,/^35 papers/);
+  node('#language-toggle').events.click();
+  assert.match(node('#coverage-summary').textContent,/2026-09-01 至 2026-10-05/);
+  assert.equal(vm.runInContext('state.days',context),0);
+  assert.match(node('#result-count').textContent,/^35 篇文献/);
+  node('#period').events.change({target:{value:'7'}});
+  assert.match(node('#result-count').textContent,/^10 篇文献/);
+});
+
+test('editor-selected related readings are not advertised as core transferable methods', async () => {
+  const {node,context}=setup(); await ready();
+  const details=vm.runInContext('paperCard({...state.papers[0],scope_class:"transferable_application",entry_kind:"editorial_related_reading"})',context).children.at(-1);
+  assert.ok(details.children.some(n=>/Related reading selected by the editor/.test(n.textContent)));
+  assert.ok(!details.children.some(n=>/Included for its transferable network-science/.test(n.textContent)));
+  node('#language-toggle').events.click();
+  const translated=vm.runInContext('paperCard({...state.papers[0],scope_class:"transferable_application",entry_kind:"editorial_related_reading"})',context).children.at(-1);
+  assert.ok(translated.children.some(n=>/编辑选入的延伸阅读/.test(n.textContent)));
+  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  const related=data.papers.filter(p=>p.scope_exception);
+  assert.deepEqual(related.map(p=>p.doi).sort(),['10.1073/pnas.2611888123','10.1103/kwr4-pzn2','10.1103/qnhv-yp69'].sort());
+  assert.ok(related.every(p=>p.scope_authority==='human user in current conversation' && p.editorial_support_sha256 && p.entry_kind==='editorial_related_reading'));
+});
+
+test('release audit retains all windows and separately pinned October coverage evidence', () => {
+  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  assert.equal(data.run_inputs.length,3);
+  const october=data.run_inputs.find(i=>i.run==='reports/2026-10-01-to-05-01');
+  assert.equal(october.window_start,'2026-10-01');
+  assert.equal(october.window_end,'2026-10-05');
+  assert.equal(october.publication_evidence.summary.supplemental_candidate_inventory_complete,true);
+  assert.equal(october.publication_evidence.summary.supplemental_metadata_reconciliation_complete,false);
+  assert.equal(october.publication_evidence.summary.original_coverage_flags_unchanged,true);
+  assert.equal(october.publication_evidence.unidentified_candidate_dispositions[0].category,'excluded');
+  for (const coverage of data.coverage) {
+    assert.deepEqual(coverage.windows.map(w=>[w.window_start,w.window_end]),[['2026-09-01','2026-09-30'],['2026-10-01','2026-10-05']]);
+  }
+});
+
 test('public export has notes for exactly the current included DOIs and preserves accepted provenance', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   const rows=fs.readFileSync(path.join(__dirname,'../reports/2026-09/screening-log.jsonl'),'utf8').trim().split('\n').map(JSON.parse);
   const latest=new Map();
   for (const row of rows) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
-  for (const run of ['2026-09-expansion-01','2026-09-expansion-adjudication-01']) {
+  for (const run of ['2026-09-expansion-01','2026-09-expansion-adjudication-01','2026-10-01-to-05-01']) {
     const events=fs.readFileSync(path.join(__dirname,`../reports/${run}/screening-log.jsonl`),'utf8').trim().split('\n').map(JSON.parse);
     for (const row of events) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
   }
@@ -409,25 +458,26 @@ test('public export has notes for exactly the current included DOIs and preserve
     assert.ok(!JSON.stringify(paper).includes('.private/'));
   }
   const accepted=data.papers.filter(p => p.publication_status === 'accepted');
-  assert.equal(accepted.length,29);
+  assert.equal(accepted.length,38);
   for (const p of accepted) { assert.equal(p.published_date,null); assert.equal(p.accepted_date,p.date); assert.match(p.url,/journals.aps.org.*accepted/); }
   for (const doi of ['10.1126/sciadv.aeg4913','10.1103/21c5-cvnn','10.1038/s41467-026-77405-3']) assert.ok(!data.papers.some(p => p.doi===doi));
 });
 
 
-test('thirteen journals have 122 traced inclusions while only the original nine enter spotlight', () => {
+test('thirteen journals have 146 traced inclusions while only the original nine enter spotlight', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   const metadata=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09/author-metadata.json'),'utf8'));
   const extra=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09-expansion-publication-01/author-metadata.json'),'utf8'));
+  const october=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-10-01-to-05-01/author-metadata.json'),'utf8'));
   assert.equal(data.featured_journals.length,9);
   assert.deepEqual([...data.featured_journals].sort(),config.journals.map(j=>j.short).sort());
-  assert.equal(data.papers.filter(p=>p.featured).length,20);
-  assert.equal(data.author_available_count,122);
+  assert.equal(data.papers.filter(p=>p.featured).length,22);
+  assert.equal(data.author_available_count,146);
   assert.equal(data.journals.length,13);
   assert.deepEqual(data.journals.map(j=>j.short).sort(),collectionConfig.journals.map(j=>j.short).sort());
-  assert.equal(data.papers.filter(p=>!p.featured).length,102);
+  assert.equal(data.papers.filter(p=>!p.featured).length,124);
   for(const p of data.papers) {
-    const row=metadata.records[p.doi] || extra.records[p.doi];
+    const row=metadata.records[p.doi] || extra.records[p.doi] || october.records[p.doi];
     assert.deepEqual(p.authors,row.authors);
     assert.ok(p.authors.length);
     assert.equal(p.author_metadata_status,'available');

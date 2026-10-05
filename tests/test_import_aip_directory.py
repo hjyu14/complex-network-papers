@@ -59,5 +59,30 @@ class AIPTests(unittest.TestCase):
         j,b=self.fixture(); b['articles'][0]['title']='Changed title'
         self.assertTrue(self.parse(j,b)['records'][0]['title_identity_conflict'])
 
+    def test_live_snapshot_without_end_day_article(self):
+        j,b=self.fixture()
+        for key in ['pages','articles','issues']:
+            for row in b[key]: row['retrieved_at']='2026-09-30T01:00:00Z'
+        for a in b['articles'][:19]: a['date_text']='September 29 2026'
+        with self.assertRaises(ValueError): self.parse(j,b)
+        result=normalize(b,j,'2026-09-01','2026-09-30',live_as_of='2026-09-30')
+        self.assertTrue(result['complete'])
+        self.assertEqual(result['boundary_mode'],'live_as_of_snapshot')
+        self.assertIn('not complete-day coverage',result['limitations'][-1])
+
+    def test_live_snapshot_rejects_wrong_day_naive_timestamp_and_future(self):
+        for mode in ['as_of','old_observation','naive','future','guard']:
+            j,b=self.fixture()
+            for key in ['pages','articles','issues']:
+                for row in b[key]: row['retrieved_at']='2026-09-30T01:00:00Z'
+            as_of='2026-09-30'
+            if mode=='as_of': as_of='2026-10-04'
+            if mode=='old_observation': b['issues'][0]['retrieved_at']='2026-09-29T01:00:00Z'
+            if mode=='naive': b['articles'][0]['retrieved_at']='2026-09-30T01:00:00'
+            if mode=='future': b['articles'][0]['date_text']='October 01 2026'
+            if mode=='guard': b['articles'][-1]['date_text']='September 01 2026'
+            with self.subTest(mode=mode),self.assertRaises(ValueError):
+                normalize(b,j,'2026-09-01','2026-09-30',live_as_of=as_of)
+
 
 if __name__=='__main__': unittest.main()

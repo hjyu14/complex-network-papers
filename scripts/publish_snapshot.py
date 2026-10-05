@@ -1,7 +1,7 @@
 """Export only current, resolved inclusions to the public website; no network requests."""
 import argparse
 from collections import Counter
-from datetime import date
+from datetime import date, timedelta
 import hashlib
 import json
 from pathlib import Path
@@ -11,6 +11,67 @@ from publication_view import PublicationView, publication_workflow, publisher_ur
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'newflow-1'
+
+
+def editorial_reference(decision, record, candidate_sha, events):
+    basis = decision.get('editorial_basis')
+    if not basis:
+        return None
+    verdict = next((e['data'] for e in events if e['kind'] == 'user_editorial_verdict'
+                    and digest(e['data']) == basis.get('verdict_sha256')), None)
+    if (not verdict or verdict.get('doi') != record['doi'] or verdict.get('verdict') != 'include'
+            or verdict.get('authority') != 'human user in current conversation'
+            or not verdict.get('user_statement')):
+        raise ValueError('Inclusion lacks a bound user editorial verdict')
+    bindings = {'title': record['title'], 'record_sha256': digest(record), 'candidate_sha256': candidate_sha}
+    if any(key in verdict and verdict[key] != value for key, value in bindings.items()):
+        raise ValueError('Editorial verdict inventory identity mismatch')
+    if basis.get('scope_exception'):
+        if (decision['category'] != 'transferable_application' or not verdict.get('scope_exception')
+                or not set(bindings) <= set(verdict)
+                or basis.get('entry_kind') != 'editorial_related_reading'
+                or verdict.get('entry_kind') != basis['entry_kind']
+                or not basis.get('not_a_global_scope_rule') or not verdict.get('not_a_global_scope_rule')):
+            raise ValueError('Editorial scope exception must remain non-core related reading')
+    return verdict
+
+
+def publication_evidence(w):
+    """Read explicitly audited supplemental references; never rewrite frozen coverage flags."""
+    path = w.out/'publication-evidence.json'
+    if not path.exists():
+        return None
+    evidence = json.loads(path.read_text(encoding='utf8'))
+    if (evidence.get('candidate_sha256') != w.input_sha
+            or not any(e['kind'] == 'publication_evidence_selected'
+                       and e['data'].get('evidence_sha256') == digest(evidence) for e in w.log.events)):
+        raise ValueError('Publication evidence lacks inventory/audit binding')
+    for ref in evidence['files']:
+        source = (w.out/ref['path']).resolve()
+        if (not source.is_relative_to(w.out.resolve())
+                or hashlib.sha256(source.read_bytes()).hexdigest() != ref['sha256']):
+            raise ValueError('Pinned publication evidence changed')
+    return evidence
+
+
+def merge_coverage(parts):
+    """Deduplicate equal windows; sum only disjoint, contiguous journal inventories."""
+    merged = []
+    for journal, windows in parts.items():
+        ordered = sorted(windows.items())
+        previous_end = None
+        for (start, end), _ in ordered:
+            if previous_end is not None and date.fromisoformat(start) != date.fromisoformat(previous_end)+timedelta(days=1):
+                raise ValueError('Journal coverage windows must be disjoint and contiguous: '+journal)
+            previous_end = end
+        rows = [c for _, (c, _) in ordered]
+        dois = set().union(*(ds for _, (_, ds) in ordered))
+        merged.append({'journal': journal, 'candidate_count': len(dois),
+            'publisher_verified_inventory_count': sum(c['publisher_verified_inventory_count'] for c in rows),
+            'candidate_inventory_complete': all(c['candidate_inventory_complete'] for c in rows),
+            'metadata_reconciliation_complete': all(c['metadata_reconciliation_complete'] for c in rows),
+            'windows': [{'window_start': key[0], 'window_end': key[1], **c} for key, (c, _) in ordered]})
+    return merged
 
 
 def author_record(row, record):
@@ -106,9 +167,14 @@ def build_snapshot(out, notes=None):
         visited = set()
         while lineage and digest(lineage) not in visited:
             visited.add(digest(lineage))
+            verdict = editorial_reference(lineage, r, w.input_sha, evidence_events)
             if lineage.get('user_verdict') == 'include' or lineage.get('scope_authority') == 'human user in current conversation':
                 authority = 'human user in current conversation'
                 authority_hash = digest(lineage)
+                break
+            if verdict:
+                authority = verdict['authority']
+                authority_hash = digest(verdict)
                 break
             previous = history.get(lineage.get('previous_assessment_sha256'))
             if not previous or previous['category'] != d['category'] or previous['material_sha256'] != d['material_sha256']:
@@ -137,6 +203,9 @@ def build_snapshot(out, notes=None):
             'evidence_url': evidence_url, 'source': 'Crossref and verified publisher/user evidence',
             'retrieved_by': [('Fixed September journal inventory; DOI-bound ' if legacy else 'Explicit journal inventory run; DOI-bound ')+('authorized online short-comment review' if short_review else 'explicit abstract excerpt review' if evidence_kind=='abstract_excerpt' else 'abstract review')],
             'screening_version': VERSION})
+        if d.get('editorial_basis', {}).get('scope_exception'):
+            papers[-1].update(scope_exception=True, entry_kind='editorial_related_reading',
+                scope_class_semantics=d['editorial_basis']['category_semantics'])
     papers.sort(key=lambda p: (p['date'], p['doi']), reverse=True)
     inventory_out = w.sources[0].out if isinstance(w, PublicationView) else w.out
     coverage = json.loads((inventory_out/'coverage.json').read_text(encoding='utf-8'))
@@ -179,6 +248,9 @@ def build_snapshot(out, notes=None):
             'Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred.'], 'papers': papers}
     if isinstance(w, PublicationView):
         snapshot['assessment_sources'] = w.manifest
+    extra_evidence = publication_evidence(w)
+    if extra_evidence:
+        snapshot['publication_evidence'] = extra_evidence
     audit = {k: snapshot[k] for k in ['generated_at', 'window_start', 'window_end', 'screening_version',
         'config_sha256', 'current_rule_sha256', 'screening_log_sha256', 'reading_notes_sha256',
         'author_metadata_sha256', 'author_available_count',
@@ -186,6 +258,8 @@ def build_snapshot(out, notes=None):
         'candidate_inventory_complete', 'metadata_reconciliation_complete', 'limitations']}
     if isinstance(w, PublicationView):
         audit['assessment_sources'] = w.manifest
+    if extra_evidence:
+        audit['publication_evidence'] = extra_evidence
     audit['included_assessments'] = [{k: p[k] for k in ['doi', 'scope_class', 'publication_status',
         'assessment_sha256', 'input_sha256', 'material_sha256', 'review_evidence_kind', 'review_evidence_sha256', 'rule_sha256', 'scope_authority', 'author_metadata_status', 'author_metadata_sha256']} for p in papers]
     status = {'attempted_at': generated_at, 'ok': True, 'operation': 'publish_existing_reviewed_snapshot',
@@ -216,14 +290,12 @@ def build_release(runs):
     notes = json.loads((ROOT/'config/publication-notes.json').read_text(encoding='utf-8'))
     display = json.loads((ROOT/'config/sources.json').read_text(encoding='utf-8'))
     papers, candidates, coverage, inputs = {}, {}, {}, []
-    coverage_dois = {}
-    window = None
+    coverage_parts = {}
+    windows = []
     for run in runs:
         w = publication_workflow(run)
         current_window = (w.pool['window_start'], w.pool['window_end'])
-        if window is not None and window != current_window:
-            raise ValueError('Release runs must share the same date window')
-        window = current_window
+        windows.append(current_window)
         latest = {d['doi']: d for d in w.assessments()}
         own = {doi for doi, d in latest.items() if d['category'] in {'core', 'transferable_application'}}
         if not own <= set(notes['papers']):
@@ -244,18 +316,27 @@ def build_release(runs):
             papers[doi] = paper
         for c in part['coverage']:
             dois = {doi for doi, r in w.records.items() if r['journal'] == c['journal'] and r['window_membership'] == 'in_window'}
-            if c['journal'] in coverage and (coverage[c['journal']] != c or coverage_dois[c['journal']] != dois):
+            previous = coverage_parts.setdefault(c['journal'], {}).get(current_window)
+            if previous is not None and previous != (c, dois):
                 raise ValueError('Conflicting journal coverage across runs: '+c['journal'])
-            coverage[c['journal']] = c
-            coverage_dois[c['journal']] = dois
+            coverage_parts[c['journal']][current_window] = (c, dois)
         input_manifest = w.manifest_path if isinstance(w, PublicationView) else w.out/'inputs/manifest.json'
         inputs.append({'run': w.out.relative_to(ROOT).as_posix(), 'config_sha256': part['config_sha256'],
+                       'window_start': current_window[0], 'window_end': current_window[1],
                        'rule_sha256': w.rule_sha, 'screening_log_sha256': w.log.head,
                        'candidate_sha256': w.input_sha, 'author_metadata_sha256': part['author_metadata_sha256'],
                        'run_manifest_sha256': hashlib.sha256(input_manifest.read_bytes()).hexdigest(),
                        **({'assessment_sources': w.manifest} if isinstance(w, PublicationView) else {}),
+                       **({'publication_evidence': part['publication_evidence']} if 'publication_evidence' in part else {}),
                        'candidate_inventory_complete': part['candidate_inventory_complete'],
                        'metadata_reconciliation_complete': part['metadata_reconciliation_complete']})
+    window = (min(v[0] for v in windows), max(v[1] for v in windows))
+    merged_coverage = merge_coverage(coverage_parts)
+    # Every displayed journal must span the advertised range, without an uncollected gap.
+    for c in merged_coverage:
+        if (c['windows'][0]['window_start'], c['windows'][-1]['window_end']) != window:
+            raise ValueError('Journal coverage does not span the release window: '+c['journal'])
+    coverage = {c['journal']: c for c in merged_coverage}
     if set(notes['papers']) != set(papers):
         raise ValueError('Notes must match exactly the selected release inclusion union')
     journals = {j['short']: j for j in display['journals']}
@@ -289,7 +370,7 @@ def build_release(runs):
         'accepted_count': sum(p['publication_status']=='accepted' for p in rows),
         'candidate_inventory_complete': complete, 'metadata_reconciliation_complete': reconciled,
         'limitations': ['Fixed date-window trial, not a current 90-day feed.',
-            'Coverage flags preserve source-relative enumeration limits.',
+            'Coverage flags preserve original source-relative enumeration limits; separately pinned supplemental evidence is retained in run_inputs.',
             'Assistant screening of authorized evidence and explicit user decisions; not full-text expert review.'],
         'papers': rows}
     audit = {k:v for k,v in snapshot.items() if k not in {'papers','categories','journals','coverage','featured_journals','source'}}

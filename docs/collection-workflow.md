@@ -13,6 +13,12 @@ python scripts/collect_candidates.py --out reports/2026-09-expansion-01 --as-of 
 
 恢复的窗口、配置与 as-of 必须一致；可用 `--journals` 只恢复本轮部分期刊。旧轮不重新采集，追加元数据修正写入审核事件，不改原候选。
 
+经授权的新窗口使用成对的 `--window-start` / `--window-end`（含首尾）。它们只改变新轮冻结配置，不修改全局 `config/sources.json`；恢复时禁止传窗口覆盖，以已冻结输入为准。日期须有序、同年且不晚于 `--as-of`。日期上限不是全天覆盖保证，实际覆盖截至各来源获取时间。
+
+```powershell
+python scripts/collect_candidates.py --out reports/2026-10-01-to-05-01 --as-of 2026-10-05 --window-start 2026-10-01 --window-end 2026-10-05
+```
+
 ## 技术顺序
 
 1. 按每刊全部 ISSN 查询 Crossref journal works，分别查 online、print、pub 窗口并合并 DOI。禁止全库关键词搜索替代整刊采集。
@@ -45,6 +51,12 @@ python scripts/collect_candidates.py --out reports/2026-09-expansion-01 --as-of 
 导入器不联网，不把数量相同当作 DOI 集合相同；跨页重复、无完整日期、缺少守卫或刊物身份不符均拒绝完整性声明。恢复不重写追加日志中的旧证据；当前 `candidates.json`、`coverage.json` 是由保留的版本事件生成的本轮状态，旧 `reports/2026-09/` 不变。
 
 ## 正式输出与状态
+
+### Nature 系列浏览器目录导入
+
+普通 HTTP 目录读取失败时，可由正常浏览器读取全类型年度列表的连续页、刊名／ISSN、年份、年度计数和分页。允许书目转录使用 `scripts/import_nature_directory.py --out <run> --input <bibliography.json>`；它只追加经过结构核验的 `official_page` 事件，不自行宣称覆盖完成。恢复采集器后仍由原有排序、下界守卫、跨页唯一性和年度计数变化的二次前缀核验决定完成状态。文章页 DOI 身份补核另行留痕，不从 Nature 页面 URL 推造 DOI。
+
+当天截止窗口可显式使用 `import_aip_directory.py --live-as-of`，从本轮已保存的 collection settings 核对 `as_of=end`；全部目录、卷期与逐篇观察必须带时区且在该北京时间日获取。仍须从未筛选的全刊最新第一页连续枚举、核对逐篇具体日期、早于窗口的守卫与卷期 DOI 集合。此模式允许最新公开文章早于窗口末日，仅声明来源在读取时刻的快照，输出 `boundary_mode=live_as_of_snapshot` 和获取时间区间，不表示当天已结束或全天无遗漏。默认历史窗口的上界检查保持不变。
 
 | 文件／字段 | 含义 |
 |---|---|

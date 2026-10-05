@@ -1,6 +1,7 @@
 """Freeze per-run inputs so later config edits cannot reinterpret old decisions."""
 import hashlib
 import json
+from datetime import date
 from pathlib import Path
 
 VERSION = 'screening-workflow-1'
@@ -27,9 +28,14 @@ def load_inputs(out):
         raise ValueError('Frozen journal/window mismatch')
     return config, protocol, meta
 
-def freeze_inputs(out, root, journals=None):
+def freeze_inputs(out, root, journals=None, window=None):
     out, root = Path(out), Path(root)
     config = json.loads((root/'config/sources.json').read_text(encoding='utf-8'))
+    if window is not None:
+        start, end = (date.fromisoformat(value) for value in window)
+        if start > end or start.year != end.year:
+            raise ValueError('Requires an ordered single-year window')
+        config['initial_trial'] = {**config['initial_trial'], 'start': start.isoformat(), 'end': end.isoformat()}
     names = [j['short'] for j in config['journals']]
     if len(names) != len(set(names)) or (journals is not None and (not journals or len(journals) != len(set(journals)) or not set(journals) <= set(names))):
         raise ValueError('Unknown, empty or duplicate journals')

@@ -4,7 +4,7 @@ No network access. Input contains allowed bibliographic observations, not HTML.
 Dates must come from the visible article-date field, never issue-month metadata.
 """
 import argparse
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
 import json
 from pathlib import Path
 import re
@@ -27,7 +27,7 @@ def official_url(url, kind):
         raise ValueError('Wrong journal/source URL')
 
 
-def normalize(bundle, journal, start, end):
+def normalize(bundle, journal, start, end, live_as_of=None):
     check_keys(bundle, ['version','journal','window_start','window_end','pages','issues','articles'])
     if (bundle['version'] != 'aip-browser-bibliography-1' or bundle['journal'] != journal['short']
             or [bundle['window_start'],bundle['window_end']] != [start,end]):
@@ -86,7 +86,19 @@ def normalize(bundle, journal, start, end):
                       'newest_date':records[-20]['date'],'oldest_date':previous})
     if set(articles) != seen:
         raise ValueError('Article observations outside enumerated directory')
-    if not previous < start or not any(r['date'] >= end for r in records):
+    if live_as_of is not None:
+        if live_as_of != end:
+            raise ValueError('Live snapshot must end at the frozen run as-of date')
+        stamps = [p['retrieved_at'] for p in bundle['pages']]
+        stamps += [a['retrieved_at'] for a in bundle['articles']]
+        stamps += [i['retrieved_at'] for i in bundle['issues']]
+        for stamp in stamps:
+            observed = datetime.fromisoformat(stamp.replace('Z','+00:00'))
+            if observed.tzinfo is None or observed.astimezone(timezone(timedelta(hours=8))).date().isoformat() != live_as_of:
+                raise ValueError('Live observations must have explicit timezone and match the as-of calendar day (Asia/Shanghai)')
+        if any(r['date'] > live_as_of for r in records):
+            raise ValueError('Future article in live snapshot')
+    if not previous < start or (live_as_of is None and not any(r['date'] >= end for r in records)):
         raise ValueError('Directory lacks lower guard or upper boundary coverage')
     # Whole-issue DOI sets independently cross-check the in-window month and later issue(s).
     issue_months = set()
@@ -106,22 +118,33 @@ def normalize(bundle, journal, start, end):
     if not required_months <= issue_months:
         raise ValueError('In-window and subsequent issue cross-checks missing')
     return {'channel':'directory','complete':True,
+            'boundary_mode':'live_as_of_snapshot' if live_as_of else 'historical_upper_boundary',
+            'as_of_date':live_as_of,
+            'retrieval_interval':{'start':min(stamps),'end':max(stamps)} if live_as_of else None,
             'completion_basis':'all_type_search_prefix_with_explicit_article_dates_and_earlier_guard_plus_issue_DOI_set_checks',
             'error':None,'pages':pages,'reported_totals':[], 'records':records,
             'max_pages':journal['collection']['max_pages'],'issue_checks':issue_checks,
             'limitations':['Source-relative browser enumeration at retrieval time; no claim about later deposits or backdated unseen records.',
-                           'Issue-month citation_publication_date is preserved but never used as explicit online date.']}
+                           'Issue-month citation_publication_date is preserved but never used as explicit online date.'] +
+                          (['Live as-of snapshot is not complete-day coverage; latest available article may precede the window end.'] if live_as_of else [])}
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out', required=True, type=Path)
     p.add_argument('--input', required=True, type=Path)
+    p.add_argument('--live-as-of', action='store_true', help='Explicit same-day source snapshot; not complete-day coverage')
     args = p.parse_args()
     config, _, _ = load_inputs(args.out)
     journal = next(j for j in config['journals'] if j['short']=='Chaos' and j['collection']['family']=='aip')
     bundle = json.loads(args.input.read_text(encoding='utf-8'))
-    result = normalize(bundle,journal,config['initial_trial']['start'],config['initial_trial']['end'])
+    live_as_of = None
+    if args.live_as_of:
+        settings = EventLog(args.out/'collection-log.jsonl').latest('settings','settings')
+        if not settings:
+            raise ValueError('Missing frozen collection settings')
+        live_as_of = settings['as_of']
+    result = normalize(bundle,journal,config['initial_trial']['start'],config['initial_trial']['end'],live_as_of)
     log = EventLog(args.out/'collection-log.jsonl')
     log.add('browser_directory', {'key':journal['short'],'input_sha256':digest(bundle),
                                  'code_sha256':__import__('hashlib').sha256(Path(__file__).read_bytes()).hexdigest(),

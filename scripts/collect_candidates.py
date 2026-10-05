@@ -783,7 +783,14 @@ def main():
     parser.add_argument('--as-of',required=True,type=date.fromisoformat)
     parser.add_argument('--resume',action='store_true',help='Verify log and reuse completed queries/pages in this output')
     parser.add_argument('--journals',nargs='+',help='Journals belonging to this run (frozen on creation)')
+    parser.add_argument('--window-start',type=date.fromisoformat,help='New run only; requires --window-end')
+    parser.add_argument('--window-end',type=date.fromisoformat,help='New run only; requires --window-start')
     args = parser.parse_args()
+    if bool(args.window_start) != bool(args.window_end):
+        parser.error('--window-start and --window-end must be supplied together')
+    if args.resume and args.window_start:
+        parser.error('Resume uses the frozen window; do not supply window overrides')
+    window = (args.window_start.isoformat(), args.window_end.isoformat()) if args.window_start else None
     if args.resume:
         if not (args.out/'collection-log.jsonl').exists():
             raise ValueError('Resume requires existing collection log')
@@ -791,13 +798,17 @@ def main():
     else:
         # Validate selection and window before creating output.
         current = json.loads((ROOT/'config/sources.json').read_text(encoding='utf-8'))
+        if window:
+            current['initial_trial'] = {**current['initial_trial'], 'start':window[0], 'end':window[1]}
         names = {j['short'] for j in current['journals']}
         if args.journals and (len(args.journals) != len(set(args.journals)) or not set(args.journals) <= names):
             raise ValueError('Unknown or duplicate journal requested')
-        if current['initial_trial']['start'][:4] != current['initial_trial']['end'][:4] or date.fromisoformat(current['initial_trial']['end']) > args.as_of:
-            raise ValueError('Requires a past single-year window')
+        if (current['initial_trial']['start'] > current['initial_trial']['end']
+                or current['initial_trial']['start'][:4] != current['initial_trial']['end'][:4]
+                or date.fromisoformat(current['initial_trial']['end']) > args.as_of):
+            raise ValueError('Requires an ordered non-future single-year window')
         args.out.mkdir(parents=True,exist_ok=False)
-        config, _, inputs = freeze_inputs(args.out, ROOT, args.journals)
+        config, _, inputs = freeze_inputs(args.out, ROOT, args.journals, window=window)
     start,end = config['initial_trial']['start'],config['initial_trial']['end']
     if start[:4] != end[:4] or date.fromisoformat(end) > args.as_of:
         raise ValueError('Requires a past single-year window')
