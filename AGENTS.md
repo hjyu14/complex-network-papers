@@ -8,11 +8,11 @@
 
 ## 数据与目录
 
-- 所有路径以本项目根目录为准。每轮单独存于 `reports/<run-id>/`；不覆盖旧轮次。冻结的 `inputs/` 是该轮规则依据，不能以当前全局配置重新解释旧判断。
+- 所有路径以本项目根目录为准。采集轮存于 `reports/runs/<run-id>/`，封存后复议存于 `reports/reviews/<review-id>/`。目录职责、归档和恢复见 `docs/repository-layout.md`；先读该文档再创建新输出。冻结的 `inputs/` 是该轮规则依据，不能以当前全局配置重新解释旧判断。
 - 原始候选、覆盖、采集日志不可改写；正式审核日志串行追加，保存旧证据、判断与输入哈希。失败、截断或限流如实留痕。
 - 完整摘要仅存本项目 Git 忽略的 `.private/abstract-cache/v9/`，保存 DOI、来源、时间、明确摘要依据、哈希及旧版本。核验缓存后再请求。
 - 不保存正文、HTML、PDF、cookie 或凭据；授权的无摘要短评论可在线审读，只留简短观察。完整摘要不得进入 Git、普通报告或 `site/`。
-- `.private/work/` 放私有中间材料；`.private/history/` 放本地开发历史。正式来源、判断与规则快照留在仓库。
+- `.private/work/<run-id>/` 放中转及可重建报告；`.private/history/` 放本地开发历史。历史正式文件可经授权无损迁移／归档，保留哈希和新旧映射；不靠重写事件掩盖变化。正式来源、判断与规则快照留在仓库。
 
 ## 执行与审读
 
@@ -26,7 +26,7 @@
 
 - Python：`python -m unittest discover -s tests -v`；发布一致性：`python scripts/publish_snapshot.py --check`。
 - 前端：`node --check site/app.js`、`node --test tests/test_app.cjs`；界面变更还需浏览器检查。
-- `config/release.json` 明确选择完成的发布轮次；不自动扫描报告目录。重复 DOI 冲突必须解决，不以最新记录静默覆盖。
+- `config/release.json` 明确选择完成的原始轮并钉住 `publication.json`；直接声明修订，不嵌套发布视图。重复 DOI 冲突必须解决，不以最新记录静默覆盖。执行 `manage_runs.py check-layout` 和归档核验；不保留多套 `final` 派生结果。
 - `site/` 是唯一部署目录，只含允许的元数据与短说明。Git 推送、正式部署及部署配置修改须有当前任务授权；没有定时采集或自动日更授权。
 
 ## 文档维护

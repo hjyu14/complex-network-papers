@@ -1,0 +1,31 @@
+{
+  "version": "flat-publication-1",
+  "inventory": {
+    "run": "reports/runs/2026-10-01-to-05-01",
+    "files": {
+      "candidates.json": "dc75ce6ce454d24fc64d456eb026728896449d1777510b1576f5adb192a37204",
+      "coverage.json": "f05a77e479741e1233eb901b74552ae4ff614b6db9ecb7f2875825a0c1ced2bb",
+      "collection-log.jsonl": "a4af173c0b105487b2d8322dacd1eaa068c083020977c1c0e93cba65dfafe509",
+      "screening-log.jsonl": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+      "inputs/manifest.json": "21c7d4a5957d33245a0b3711c53609db33f5fc01e8f3ec7690b59e07fdf5142a",
+      "inputs/sources.json": "8ab88aa4903cb456aa0312364c755863b6ebb4d2fabe7925fab2838748f2c8ac",
+      "inputs/screening-protocol.md": "5531013ee907e21e5c5d959c7019794ca61b6dfbccbc1f9f6cf6a3f1b5b744ef"
+    },
+    "candidate_sha256": "dc75ce6ce454d24fc64d456eb026728896449d1777510b1576f5adb192a37204",
+    "rule_sha256": "e73b62366608c44854fc4d8a1abb2c55b762ef9baafaa6c3520b0ce1c6185c18",
+    "screening_log_sha256": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+  },
+  "revisions": [],
+  "authors": {
+    "file": "author-metadata.json",
+    "metadata_sha256": "bd94af1eee3d267618be092378528dba2f917c40c94b1e34192afed92bbe191e",
+    "audit": {
+      "path": "reports/runs/2026-10-01-to-05-01/screening-log.jsonl",
+      "sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d"
+    }
+  },
+  "evidence_paths": {
+    "prresearch-retest-02/coverage-verified.json": "evidence/prresearch-retest-02/coverage-verified.json",
+    "prresearch-retest-02/retest-log.jsonl": "evidence/prresearch-retest-02/retest-log.jsonl"
+  }
+}

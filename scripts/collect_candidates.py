@@ -1,6 +1,7 @@
 """Whitelisted journal bibliography collection and publisher reconciliation; metadata only."""
 import argparse
 from run_inputs import freeze_inputs, load_inputs
+from report_io import run_directory
 from collections import Counter
 from datetime import date, datetime, timezone
 import hashlib
@@ -308,23 +309,36 @@ class EventLog:
     def __init__(self, path):
         self.path = path
         self.events = []
-        if path.exists():
+        if path.exists() or path.with_name(path.name+'.gz').exists():
             # JSON strings can contain U+2028/U+2029; JSONL separators are literal LF only.
-            for line in path.read_text(encoding='utf-8').split('\n'):
-                if not line:
-                    continue
-                event = json.loads(line)
-                checksum = event.pop('sha256')
-                if event['previous_sha256'] != self.head or digest(event) != checksum:
-                    raise ValueError('Collection log hash chain mismatch')
-                event['sha256'] = checksum
-                self.events.append(event)
+            from report_io import read_bytes
+            self._read(read_bytes(path))
+
+    def _read(self, data):
+        for line in data.decode('utf-8').split('\n'):
+            if not line:
+                continue
+            event = json.loads(line)
+            checksum = event.pop('sha256')
+            if event['previous_sha256'] != self.head or digest(event) != checksum:
+                raise ValueError('Collection log hash chain mismatch')
+            event['sha256'] = checksum
+            self.events.append(event)
+
+    @classmethod
+    def from_bytes(cls, data):
+        log = cls.__new__(cls)
+        log.path, log.events = None, []
+        log._read(data)
+        return log
 
     @property
     def head(self):
         return self.events[-1]['sha256'] if self.events else None
 
     def add(self, kind, data):
+        if self.path is None or self.path.with_name(self.path.name+'.gz').exists():
+            raise ValueError('Sealed evidence is read-only; create an explicit review run')
         event = {'sequence': len(self.events)+1, 'at': now(), 'kind': kind,
                  'previous_sha256': self.head, 'data': data}
         event['sha256'] = digest(event)
@@ -790,6 +804,7 @@ def main():
         parser.error('--window-start and --window-end must be supplied together')
     if args.resume and args.window_start:
         parser.error('Resume uses the frozen window; do not supply window overrides')
+    args.out = run_directory(args.out, ROOT, writable=True)
     window = (args.window_start.isoformat(), args.window_end.isoformat()) if args.window_start else None
     if args.resume:
         if not (args.out/'collection-log.jsonl').exists():

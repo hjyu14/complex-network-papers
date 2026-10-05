@@ -38,7 +38,7 @@
 5. 主代理实际审读；保存来源、获取时间精度、字段特征、冲突、材料哈希、判断及输入哈希。材料与判断均保留旧版本。
 6. 每批最多100篇；全部已保存判断或明确延期后再进下批。已读未决与未取得可用材料分别统计。
 
-正式执行记录在各轮reports/<run-id>/screening-log.jsonl，完整摘要只在Git忽略的新目录.private/abstract-cache/v9。观察事件supplement_type_verified、supplement_identity_observed等并不表示语义审读已完成；最终以assessment/assessment_corrected为准。
+正式执行记录在各轮reports/runs/<run-id>/screening-log.jsonl，完整摘要只在Git忽略的新目录.private/abstract-cache/v9。观察事件supplement_type_verified、supplement_identity_observed等并不表示语义审读已完成；最终以assessment/assessment_corrected为准。
 
 ## 后续浏览器补证：具体类型与反例
 

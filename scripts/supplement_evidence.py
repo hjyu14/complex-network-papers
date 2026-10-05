@@ -155,8 +155,9 @@ def main():
         ap.error('begin requires a phase and size from 1 to 100')
     if args.command == 'save' and not args.path:
         ap.error('save requires --path')
-    OUT = args.run.resolve()
-    WORK = ROOT/'.private/work/supplement'/OUT.relative_to((ROOT/'reports').resolve())
+    from report_io import run_directory, work_directory
+    OUT = run_directory(args.run, ROOT, writable=args.command!='pack')
+    WORK = work_directory(OUT, ROOT)/'supplement'
     AUTHORIZATION = args.authorization
     w = workflow()
     if args.command == 'init':init(w)

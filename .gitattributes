@@ -9,3 +9,11 @@
 # This completed run includes byte-pinned browser evidence and historical exports.
 # Preserve its original line endings rather than invalidating audit hashes.
 /reports/2026-10-01-to-05-01/** -text -eol whitespace=cr-at-eol,-blank-at-eof
+
+# Migrated evidence keeps the exact original bytes; current manifests/docs use LF.
+/reports/runs/** -text -eol whitespace=cr-at-eol,-blank-at-eof
+/reports/reviews/** -text -eol whitespace=cr-at-eol,-blank-at-eof
+/reports/**/README.md text eol=lf
+/reports/**/publication.json text eol=lf
+*.gz binary
+*.zip binary

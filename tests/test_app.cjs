@@ -4,6 +4,11 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const path = require('node:path');
+const zlib = require('node:zlib');
+function reportText(relative) {
+  const file=path.join(__dirname,'..',relative);
+  return fs.existsSync(file) ? fs.readFileSync(file,'utf8') : zlib.gunzipSync(fs.readFileSync(file+'.gz')).toString('utf8');
+}
 
 class Node {
   constructor(tag = 'div') {
@@ -20,7 +25,7 @@ class Node {
 }
 const collectionConfig = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/sources.json'), 'utf8'));
 // The published September fixture remains bound to its frozen nine-journal inputs.
-const config = JSON.parse(fs.readFileSync(path.join(__dirname, '../reports/2026-09/inputs/sources.json'), 'utf8'));
+const config = JSON.parse(fs.readFileSync(path.join(__dirname, '../reports/runs/2026-09/inputs/sources.json'), 'utf8'));
 const topics = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/publication-notes.json'), 'utf8'));
 const localeSource = fs.readFileSync(path.join(__dirname, '../site/i18n.js'), 'utf8');
 const source = fs.readFileSync(path.join(__dirname, '../site/app.js'), 'utf8');
@@ -290,12 +295,12 @@ test('public rules article is linked and bilingual', () => {
   assert.match(rules, /docs\/screening-protocol\.md/);
   assert.match(rules, /href="data\/papers\.json">文献数据/);
   assert.match(rules, /href="data\/screening-report\.json">审核汇总/);
-  assert.match(rules, /reports\/2026-09\/screening-log\.jsonl">逐篇审核日志/);
+  assert.match(rules, /reports\/README\.md">逐篇审核日志/);
   assert.match(rules, /Paper-by-paper review log/);
   assert.equal((rules.match(/blob\/main\//g) || []).length, 12);
-  assert.equal((rules.match(/reports\/2026-10-05-editorial-revision-01\/README\.md/g) || []).length,2);
-  for (const run of ['2026-09-expansion-01','2026-09-expansion-adjudication-01','2026-10-01-to-05-01']) {
-    assert.equal((rules.match(new RegExp(`reports/${run}/screening-log\\.jsonl`, 'g')) || []).length,2);
+  assert.equal((rules.match(/reports\/reviews\/2026-10-05-editorial-revision-01\/README\.md/g) || []).length,2);
+  for (const run of ['runs/2026-09-expansion-01','reviews/2026-09-expansion-adjudication-01','runs/2026-10-01-to-05-01']) {
+    assert.equal((rules.match(new RegExp(`reports/${run}/README\\.md`, 'g')) || []).length,2);
   }
   assert.doesNotMatch(rules, /codex\/new-workflow/);
 });
@@ -430,7 +435,7 @@ test('editor-selected related readings are not advertised as core transferable m
 test('release audit retains all windows and separately pinned October coverage evidence', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   assert.equal(data.run_inputs.length,3);
-  const october=data.run_inputs.find(i=>i.run==='reports/2026-10-01-to-05-01');
+  const october=data.run_inputs.find(i=>i.run==='reports/runs/2026-10-01-to-05-01');
   assert.equal(october.window_start,'2026-10-01');
   assert.equal(october.window_end,'2026-10-05');
   assert.equal(october.publication_evidence.summary.supplemental_candidate_inventory_complete,true);
@@ -444,11 +449,11 @@ test('release audit retains all windows and separately pinned October coverage e
 
 test('public export has notes for exactly the current included DOIs and preserves accepted provenance', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
-  const rows=fs.readFileSync(path.join(__dirname,'../reports/2026-09/screening-log.jsonl'),'utf8').trim().split('\n').map(JSON.parse);
+  const rows=reportText('reports/runs/2026-09/screening-log.jsonl').trim().split('\n').map(JSON.parse);
   const latest=new Map();
   for (const row of rows) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
-  for (const run of ['2026-09-expansion-01','2026-09-expansion-adjudication-01','2026-10-01-to-05-01','2026-10-05-editorial-revision-01']) {
-    const events=fs.readFileSync(path.join(__dirname,`../reports/${run}/screening-log.jsonl`),'utf8').trim().split('\n').map(JSON.parse);
+  for (const run of ['runs/2026-09-expansion-01','reviews/2026-09-expansion-adjudication-01','runs/2026-10-01-to-05-01','reviews/2026-10-05-editorial-revision-01']) {
+    const events=reportText(`reports/${run}/screening-log.jsonl`).trim().split('\n').map(JSON.parse);
     for (const row of events) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
   }
   const included=[...latest.values()].filter(d => ['core','transferable_application'].includes(d.category));
@@ -467,9 +472,9 @@ test('public export has notes for exactly the current included DOIs and preserve
 
 test('thirteen journals have 152 traced inclusions while only the original nine enter spotlight', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
-  const metadata=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09-editorial-publication-01/author-metadata.json'),'utf8'));
-  const extra=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-09-expansion-editorial-publication-01/author-metadata.json'),'utf8'));
-  const october=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/2026-10-01-to-05-01/author-metadata.json'),'utf8'));
+  const metadata=JSON.parse(reportText('reports/runs/2026-09/author-metadata.json'));
+  const extra=JSON.parse(reportText('reports/runs/2026-09-expansion-01/author-metadata.json'));
+  const october=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/runs/2026-10-01-to-05-01/author-metadata.json'),'utf8'));
   assert.equal(data.featured_journals.length,9);
   assert.deepEqual([...data.featured_journals].sort(),config.journals.map(j=>j.short).sort());
   assert.equal(data.papers.filter(p=>p.featured).length,25);
@@ -497,10 +502,10 @@ test('explicit editorial revision adds six and preserves three exclusions with b
   }
   for(const doi of ['10.1103/xsg5-cb6l','10.1103/g76v-wxz7','10.1103/twww-yj1y']) assert.ok(!data.papers.some(p=>p.doi===doi));
   for(const doi of ['10.1103/m6s5-r1cq','10.1103/vxkg-41kp']) assert.equal(data.papers.find(p=>p.doi===doi).publication_status,'accepted');
-  const revisions=data.run_inputs.filter(i=>i.assessment_sources?.version==='editorial-revision-publication-view-1');
+  const revisions=data.run_inputs.flatMap(i=>i.assessment_sources?.revisions || []).filter(r=>r.mode==='explicit_revision');
   assert.equal(revisions.length,2);
-  assert.equal(revisions.flatMap(i=>i.assessment_sources.targets).length,9);
-  assert.ok(revisions.every(i=>i.assessment_sources.adjudication.run==='reports/2026-10-05-editorial-revision-01'));
+  assert.equal(revisions.flatMap(i=>i.targets).length,9);
+  assert.ok(revisions.every(i=>i.source.run==='reports/reviews/2026-10-05-editorial-revision-01'));
   assert.equal(data.papers.find(p=>p.doi==='10.1103/vxkg-41kp').entry_kind,'editorial_related_reading');
 });
 

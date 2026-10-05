@@ -51,7 +51,7 @@ class CollectorTests(unittest.TestCase):
                     'journals':[{'short':'NMI','name':'Nature Machine Intelligence','issns':['2522-5839'],
                                  'collection':{'family':'nature','url':collector.DIRECTORY,'max_pages':12}}]}
             source=root/'config/sources.json';source.write_text(json.dumps(config),encoding='utf8')
-            original=source.read_bytes();out=root/'trial'
+            original=source.read_bytes();out=root/'reports/runs/trial'
             argv=['collect_candidates.py','--out',str(out),'--as-of','2026-10-05']
             with patch.object(collector,'ROOT',root),patch.object(collector,'Client',OfflineClient),patch.object(sys,'argv',argv+[
                     '--window-start','2026-10-01','--window-end','2026-10-05']):
@@ -110,7 +110,7 @@ class CollectorTests(unittest.TestCase):
                 {'short':'NMI','name':'Nature Machine Intelligence','issns':['2522-5839'],
                  'collection':{'family':'nature','url':'https://www.nature.com/natmachintell/articles','max_pages':12}}, {'short':'Other','name':'Other Journal','issns':['0000-0002']}]}
             (root/'config/sources.json').write_text(json.dumps(config),encoding='utf8')
-            out=root/'output'
+            out=root/'reports/runs/output'
             with patch.object(collector,'ROOT',root),patch.object(collector,'Client',OfflineClient),patch.object(sys,'argv',[
                     'collect_candidates.py','--out',str(out),'--as-of','2026-10-03','--journals','NMI']):
                 self.assertEqual(collector.main(),0)

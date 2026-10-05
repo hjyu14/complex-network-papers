@@ -785,6 +785,8 @@ def main():
     p = sub.add_parser('decide')
     p.add_argument('path', type=Path, help='Reviewer-written JSON; no abstracts')
     args = ap.parse_args()
+    from report_io import run_directory
+    args.out = run_directory(args.out, ROOT, writable=args.command not in {'status','export','review-pack'})
     w = Workflow(args.out)
     if args.command == 'init':
         w.init()

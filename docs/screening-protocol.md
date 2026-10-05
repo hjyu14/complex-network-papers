@@ -79,18 +79,18 @@ description、导读句、选文说明、搜索片段和生成式摘要不能冒
 
 完整摘要仅存本项目 Git 忽略的 `.private/abstract-cache/v9/`，保留来源、时间、明确摘要依据、内容哈希和旧版本。不得存入普通报告、Git 或 `site/`；不保存正文、HTML、PDF、cookie 或凭据。
 
-每轮冻结规程与配置在 `reports/<run-id>/inputs/`；历史判断保持原规则哈希。此工作文档用于新轮，不静默修订旧轮依据。科学、日期、类型和证据边界的实质变化须经用户确认；整理文字和迁移历史不是新科学裁决。失败或未完成不得替换上次有效网站快照。
+每轮冻结规程与配置在 `reports/runs/<run-id>/inputs/`；历史判断保持原规则哈希。此工作文档用于新轮，不静默修订旧轮依据。科学、日期、类型和证据边界的实质变化须经用户确认；整理文字和迁移历史不是新科学裁决。失败或未完成不得替换上次有效网站快照。
 
 ## 执行入口
 
 以下目录是下一轮占位路径，须先完成对应采集；现有旧轮不重复初始化。
 
 ```powershell
-python scripts/screen_candidates.py --out reports/2026-09-expansion-01 init
-python scripts/screen_candidates.py --out reports/2026-09-expansion-01 collect-batch --workers 4
-python scripts/screen_candidates.py --out reports/2026-09-expansion-01 review-pack --limit 100
-python scripts/screen_candidates.py --out reports/2026-09-expansion-01 decide-pack .private/work/decisions.json
-python scripts/screen_candidates.py --out reports/2026-09-expansion-01 batch --size 100
+python scripts/screen_candidates.py --out reports/runs/example-run init
+python scripts/screen_candidates.py --out reports/runs/example-run collect-batch --workers 4
+python scripts/screen_candidates.py --out reports/runs/example-run review-pack --limit 100
+python scripts/screen_candidates.py --out reports/runs/example-run decide-pack .private/work/example-run/decisions.json
+python scripts/screen_candidates.py --out reports/runs/example-run batch --size 100
 ```
 
 `review-pack` 仅在当前审读会话显示私有材料，不能把输出写进普通文件。`decisions.json` 由实际审读者按篇填写，程序不能代写科学结论；`--help` 查看单篇与批次命令。原批次完成后才调用 `batch` 选下一批，循环取证、阅读和保存。

@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import quote, urlparse
 from screen_candidates import digest, now, validate_short_comment_review
 from publication_view import PublicationView, publication_workflow, publisher_url, verify_original
+from report_io import read_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'newflow-1'
@@ -52,10 +53,13 @@ def publication_evidence(w):
                        and e['data'].get('evidence_sha256') == digest(evidence) for e in w.log.events)):
         raise ValueError('Publication evidence lacks inventory/audit binding')
     for ref in evidence['files']:
-        source = (w.out/ref['path']).resolve()
+        source = w.evidence_path(ref['path']) if hasattr(w,'evidence_path') else (w.out/ref['path']).resolve()
         if (not source.is_relative_to(w.out.resolve())
-                or hashlib.sha256(source.read_bytes()).hexdigest() != ref['sha256']):
+                or hashlib.sha256(read_bytes(source)).hexdigest() != ref['sha256']):
             raise ValueError('Pinned publication evidence changed')
+    if hasattr(w,'evidence_path'):
+        return {**evidence, 'storage_files': [
+            {**ref, 'path': w.evidence_path(ref['path']).relative_to(w.out).as_posix()} for ref in evidence['files']]}
     return evidence
 
 
@@ -121,7 +125,7 @@ def build_snapshot(out, notes=None):
     if author_data['candidate_sha256'] != w.input_sha or set(author_data['records']) != {d['doi'] for d in included}:
         raise ValueError('Author metadata must match the fixed inventory and included DOI set')
     author_hash = digest(author_data)
-    if not any(e['kind'] == 'author_metadata_completed' and e['data']['metadata_sha256'] == author_hash for e in w.log.events):
+    if not any(e['kind'] == 'author_metadata_completed' and e['data']['metadata_sha256'] == author_hash for e in getattr(w,'author_events',w.log.events)):
         raise ValueError('Author metadata lacks matching audit event')
     evidence_events = w.evidence_events if isinstance(w, PublicationView) else w.log.events
     history = {digest(e['data']): e['data'] for e in evidence_events
@@ -279,7 +283,8 @@ def build_snapshot(out, notes=None):
 
 
 def selected_runs(selection):
-    paths = json.loads(Path(selection).read_text(encoding='utf-8'))['runs']
+    selected = json.loads(Path(selection).read_text(encoding='utf-8'))
+    paths = selected['runs']
     if not paths or len(paths) != len(set(paths)):
         raise ValueError('Release requires distinct, explicitly selected runs')
     runs = [(ROOT/p).resolve() for p in paths]
@@ -288,6 +293,12 @@ def selected_runs(selection):
             raise ValueError('Release run must be a directory under reports')
     if len(runs) != len(set(runs)):
         raise ValueError('Duplicate resolved run path')
+    if 'publication_manifests' in selected:
+        if set(selected['publication_manifests'])!=set(paths):
+            raise ValueError('Publication manifest selection mismatch')
+        for relative,path in zip(paths,runs):
+            if hashlib.sha256((path/'publication.json').read_bytes()).hexdigest()!=selected['publication_manifests'][relative]:
+                raise ValueError('Selected publication manifest changed')
     return runs
 
 

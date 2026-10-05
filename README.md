@@ -45,7 +45,7 @@ The complete list also includes papers from:
 
 ## Current coverage and limitations
 
-The current list covers **1 September–5 October 2026**, with **146 papers: 108 published papers and 38 accepted manuscripts**. Of these, 22 belong to the Spotlight group.
+The website displays the current collection window and paper counts. See the [live list](https://netsciobs.com/) for the latest reviewed snapshot.
 
 Date filters are relative to the displayed data cutoff, not today's date. Choose “All collected dates” to browse the entire collection. Updates are currently published in reviewed batches, not automatically every day. Publication dates prioritize first online publication; accepted manuscripts awaiting publication are marked separately and shown by acceptance date. Preprints are excluded.
 

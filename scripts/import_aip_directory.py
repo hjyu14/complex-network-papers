@@ -135,6 +135,8 @@ def main():
     p.add_argument('--input', required=True, type=Path)
     p.add_argument('--live-as-of', action='store_true', help='Explicit same-day source snapshot; not complete-day coverage')
     args = p.parse_args()
+    from report_io import run_directory
+    args.out = run_directory(args.out, Path(__file__).resolve().parents[1], writable=True)
     config, _, _ = load_inputs(args.out)
     journal = next(j for j in config['journals'] if j['short']=='Chaos' and j['collection']['family']=='aip')
     bundle = json.loads(args.input.read_text(encoding='utf-8'))

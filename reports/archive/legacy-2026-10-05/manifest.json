@@ -1,0 +1,917 @@
+{
+  "version": "repository-migration-1",
+  "source_commit": "e308f5966d6d6e4f6c1385b368b3e51264c4e01a",
+  "authorization": "User approved repository migration; preserve evidence and scientific/public results; no push authorized",
+  "archive_sha256": "504b1841c82d508071b6319ea476926a1698090a986662265931601269202132",
+  "original_files": 113,
+  "original_bytes": 135468336,
+  "files": [
+    {
+      "original_path": "reports/2026-09-editorial-publication-01/author-metadata.json",
+      "sha256": "937eec47ab1a25bcc2706343278fc441a9b4e8ba993e624caf2fd588e004f789",
+      "bytes": 30205,
+      "path": "reports/runs/2026-09/author-metadata.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-editorial-publication-01/publication-log.jsonl",
+      "sha256": "106e97d99fbbb477d21d6c2de31ee511bb0a3e4777984b0c16dc1ef25d7eb25a",
+      "bytes": 1423,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-editorial-publication-01/publication-log.jsonl",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-editorial-publication-01/release-view.json",
+      "sha256": "47b6ca7b28401b5a0519583402b7095de1c3982da71ab8950947acbc0a94cec5",
+      "bytes": 3108,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-editorial-publication-01/release-view.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/README.md",
+      "sha256": "20d6c722c24c26c66b2955db31e8c0dc2a96e7d54dc3c04f74c99a5babf497f6",
+      "bytes": 5344,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/candidates.json",
+      "sha256": "fc13c456d35450618c23ad96a3d66260ceb607ca8bed35c26892a81d4120f97d",
+      "bytes": 1580696,
+      "path": "reports/runs/2026-09-expansion-01/candidates.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/collection-log.jsonl",
+      "sha256": "b7bbb73ce1ac6f136d69d9831021cc89ec9d13264f892566bdabda83d4c40f93",
+      "bytes": 4637674,
+      "path": "reports/runs/2026-09-expansion-01/collection-log.jsonl.gz",
+      "compression": "gzip",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/coverage.json",
+      "sha256": "1d07c58efd9023d6eb97e765e136a2ecb8a6de6a253cde6dbcb5955e506ec960",
+      "bytes": 119245,
+      "path": "reports/runs/2026-09-expansion-01/coverage.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/editorial-directions-2026-10-04.md",
+      "sha256": "49dc6645094011f1cc6adba76219c9a4348921f8304bc3a3af3c8a27f59ee784",
+      "bytes": 3435,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/editorial-directions-2026-10-04.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/included-papers.md",
+      "sha256": "a7e2dc70790e0fcc1e2254287c381c53fba4c52bd7cf7b6e5258fb294bc976c3",
+      "bytes": 15010,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/included-papers.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/inputs/manifest.json",
+      "sha256": "69aec1f76e2a9a0a89d23b012441e9cc4bc5f199de86e9204376cb675cb8951d",
+      "bytes": 500,
+      "path": "reports/runs/2026-09-expansion-01/inputs/manifest.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/inputs/screening-protocol.md",
+      "sha256": "66548d32f3dfdf12aaacf2924b9426445e9261d2b13ecd1b55ad60686becc944",
+      "bytes": 9093,
+      "path": "reports/runs/2026-09-expansion-01/inputs/screening-protocol.md",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/inputs/sources.json",
+      "sha256": "65b059a10182f414bb1cf9b913b09bc86599d1236fc72ff0f14bc06bfc3d2322",
+      "bytes": 1743,
+      "path": "reports/runs/2026-09-expansion-01/inputs/sources.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/manual-review-groups.json",
+      "sha256": "ae60d0083a3afba76b1e0049a9537a73da61a44bbb0595b313f5fb37ecb2b742",
+      "bytes": 114087,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/manual-review-groups.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/manual-review-groups.md",
+      "sha256": "293c1226574948a6d6dcd4794801566f4fce004c448670908dee1c24f008c906",
+      "bytes": 34287,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/manual-review-groups.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/manual-review.md",
+      "sha256": "5f22023effc0596892f70fcf3b1b8b78d4bfc04491362309a05de429689c1019",
+      "bytes": 98938,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/manual-review.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/screening-log.jsonl",
+      "sha256": "6662748b881da93fbbea0f37436a5c7775e4b02d7fccfb33de6b05d06ce9d84e",
+      "bytes": 3778538,
+      "path": "reports/runs/2026-09-expansion-01/screening-log.jsonl.gz",
+      "compression": "gzip",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/screening-results.json",
+      "sha256": "45a1e5c768786f429fe029c98fee6fac8e85fe2243f729e433743f2a596fa917",
+      "bytes": 1793926,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/screening-results.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/screening-results.md",
+      "sha256": "3905334af052faa5518c5c15592a2743829c4c5dc960428eea05e85adb0f0ac7",
+      "bytes": 422991,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/screening-results.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/screening-summary.json",
+      "sha256": "f1bd674bbefe1de3de6e7b72eac796350ae5d6ea1e1084a95c9c74f53caee925",
+      "bytes": 2541,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/screening-summary.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-01/screening-summary.md",
+      "sha256": "98918841b2399ba835c7e5011b3e5f34fddc245321f67fa3eaffe31e7d20cb89",
+      "bytes": 4291,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-01/screening-summary.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/README.md",
+      "sha256": "75807bb95bf39df59cb24ec79a82f5c00cfff27dc363b0ae1c51992bcf78dacf",
+      "bytes": 2616,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-adjudication-01/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/adjudication-results.json",
+      "sha256": "fc7ef8abb69cedf2ff7be7b34fd8cf5994b3ad6556ab80e89d930ee2974fcfd4",
+      "bytes": 545325,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-adjudication-01/adjudication-results.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/adjudication-results.md",
+      "sha256": "eba35d837c99d56e9004e9db5e534c5cece384206267ca1cbde68b0d6f9e3a02",
+      "bytes": 94247,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-adjudication-01/adjudication-results.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/adjudication-summary.json",
+      "sha256": "7b18312b3cd56162814e260d4c9d695000a1cd459f3fc48e744b6962e10c3558",
+      "bytes": 2568,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-adjudication-01/adjudication-summary.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/candidates.json",
+      "sha256": "90fb109170f745f254fa77fbfe3e5e441d26fcd4e91818465a7cb23ebe6f3c92",
+      "bytes": 309315,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/candidates.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/collection-log.jsonl",
+      "sha256": "f72632a9c5486aab2d9faa27a4fcb6704e1e5ad1d7349f4848018225fb979d61",
+      "bytes": 382,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/collection-log.jsonl",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/combined-expansion-results.json",
+      "sha256": "73dccd7993a635f9b9aa8e5689390248fc68c6eec00711bca6f1fac7daa9832c",
+      "bytes": 1836708,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-adjudication-01/combined-expansion-results.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/coverage.json",
+      "sha256": "46e07c997614336475937128c8cc49972289dafd85b9b7adb36e901446865e69",
+      "bytes": 516,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/coverage.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/inputs/manifest.json",
+      "sha256": "525cf18cd5fcfebcb6b32e0ecbc1a9fdd74e0739346ca3995e7d105beff07dab",
+      "bytes": 500,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/inputs/manifest.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/inputs/screening-protocol.md",
+      "sha256": "5531013ee907e21e5c5d959c7019794ca61b6dfbccbc1f9f6cf6a3f1b5b744ef",
+      "bytes": 10915,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/inputs/screening-protocol.md",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/inputs/sources.json",
+      "sha256": "65b059a10182f414bb1cf9b913b09bc86599d1236fc72ff0f14bc06bfc3d2322",
+      "bytes": 1743,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/inputs/sources.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/parent-manifest.json",
+      "sha256": "4b45194f02b39e7a8852a9227683df79525222cc0d30f0ab63e3a4fc85cb0779",
+      "bytes": 44771,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/parent-manifest.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/screening-log.jsonl",
+      "sha256": "480cc003d9e67b6889c9056c63b7bc8c4b159a05386160609201765f6eece906",
+      "bytes": 728426,
+      "path": "reports/reviews/2026-09-expansion-adjudication-01/screening-log.jsonl",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-adjudication-01/validation.json",
+      "sha256": "dd7c8aad20d223c4794fba2aad6bab96561f820601fbf24a0c00554cb6022c71",
+      "bytes": 911,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-adjudication-01/validation.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-editorial-publication-01/author-metadata.json",
+      "sha256": "a6af52dfcac2ecbb54eb72f0c5c942b5adc90384051feafc42225653bee2909a",
+      "bytes": 140446,
+      "path": "reports/runs/2026-09-expansion-01/author-metadata.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-editorial-publication-01/publication-log.jsonl",
+      "sha256": "86e4973a618dba4292af3cd03f3914c6821e7d650e4cd809a2b269cd70809d87",
+      "bytes": 1449,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-editorial-publication-01/publication-log.jsonl",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-editorial-publication-01/release-view.json",
+      "sha256": "0222c4d2b5d1c8aabaa5c31a03f4cc02e33eafb36b12550b316cdfb40a29d6af",
+      "bytes": 3471,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-editorial-publication-01/release-view.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-publication-01/README.md",
+      "sha256": "651118fc6eef5cba2c076518f02bc4986a33d6452f6ff99ce287d905ab95e7b9",
+      "bytes": 1082,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-publication-01/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-publication-01/author-metadata.json",
+      "sha256": "7211cd068e36fccc9ed7b98c7ed99ee535203d9c8eb3ecfda53f5dde3733207d",
+      "bytes": 137184,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-publication-01/author-metadata.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-publication-01/publication-log.jsonl",
+      "sha256": "02857b53c0b10e3534d199f9e2bbb4deff28c24caf23a9990921d2a93b3a1062",
+      "bytes": 11852,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-publication-01/publication-log.jsonl",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09-expansion-publication-01/release-view.json",
+      "sha256": "f47bcdda86b84a4220a184459e070fa6b79e3ca2241d38bad52eb04dad5154f9",
+      "bytes": 2564,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09-expansion-publication-01/release-view.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09/README.md",
+      "sha256": "64a0cc194a5af5d503b40ca22e35763344f74fb9cc8d8c7a434e7ebff06c58f6",
+      "bytes": 1199,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09/author-metadata.json",
+      "sha256": "ca65a907bff85da625311bd20cc66dd6bf38c923a740d45e701b913d59550ccb",
+      "bytes": 27390,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-09/author-metadata.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-09/candidates.json",
+      "sha256": "cb1ff89cf6e70ffba41723ba2521d1eb07730d36da37c34e00a662b818559b0b",
+      "bytes": 6942972,
+      "path": "reports/runs/2026-09/candidates.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09/collection-log.jsonl",
+      "sha256": "29a7bd239b2c8b23ff10c07c1a75fd77fdfde8d222e9b17033ef4c871ef519cf",
+      "bytes": 83880615,
+      "path": "reports/runs/2026-09/collection-log.jsonl.gz",
+      "compression": "gzip",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09/coverage.json",
+      "sha256": "cfa0c439083a1624ac8663d8bbdf003420d4f5186319e998b1df2cf8e5879bd5",
+      "bytes": 507907,
+      "path": "reports/runs/2026-09/coverage.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09/inputs/manifest.json",
+      "sha256": "29be6434b17d8f0e794be2eee5834d8766419d90f306e68471eefdca446bffb6",
+      "bytes": 575,
+      "path": "reports/runs/2026-09/inputs/manifest.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09/inputs/screening-protocol.md",
+      "sha256": "db795371175b7f2fdb52277c59afa6c1054089b677a94f112548b201720f0942",
+      "bytes": 19911,
+      "path": "reports/runs/2026-09/inputs/screening-protocol.md",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09/inputs/sources.json",
+      "sha256": "9a8aca79fb71a8e1c57729dc70e1042e32c272a6053780340ebb277ec9728b33",
+      "bytes": 3038,
+      "path": "reports/runs/2026-09/inputs/sources.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-09/screening-log.jsonl",
+      "sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+      "bytes": 17962201,
+      "path": "reports/runs/2026-09/screening-log.jsonl.gz",
+      "compression": "gzip",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/README.md",
+      "sha256": "b8be3a9c803330b1d831f404d266da190930b1a540ef843c2d10420ef45c8fe7",
+      "bytes": 5800,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/accepted-status-check-log.jsonl",
+      "sha256": "c1e04d685026eddf6e0043e54c7ec31b7eabcbbd62c936a4ac9e8d11fe7c8d72",
+      "bytes": 105166,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/accepted-status-check-log.jsonl",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/author-metadata-v1.json",
+      "sha256": "a616472067d12426a39c9ac7742542895503c666b4a8d3c9a6f0c68d2fa45a86",
+      "bytes": 25859,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/author-metadata-v1.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/author-metadata.json",
+      "sha256": "5bc9a1e9b0ac0577211312859ef84e6e680c9eb8fc5f11af45d4314238d89e02",
+      "bytes": 36152,
+      "path": "reports/runs/2026-10-01-to-05-01/author-metadata.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/candidates.json",
+      "sha256": "dc75ce6ce454d24fc64d456eb026728896449d1777510b1576f5adb192a37204",
+      "bytes": 994583,
+      "path": "reports/runs/2026-10-01-to-05-01/candidates.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/chaos-browser-bibliography-01.json",
+      "sha256": "4dee02f6ef7c6b04ce446df271048f6305ad79e4881c6058487f08542a8c0c65",
+      "bytes": 18836,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/chaos-browser-bibliography-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/collection-log.jsonl",
+      "sha256": "a4af173c0b105487b2d8322dacd1eaa068c083020977c1c0e93cba65dfafe509",
+      "bytes": 3121097,
+      "path": "reports/runs/2026-10-01-to-05-01/collection-log.jsonl.gz",
+      "compression": "gzip",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/coverage.json",
+      "sha256": "f05a77e479741e1233eb901b74552ae4ff614b6db9ecb7f2875825a0c1ced2bb",
+      "bytes": 210627,
+      "path": "reports/runs/2026-10-01-to-05-01/coverage.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final-v2-editorial/included-papers.json",
+      "sha256": "6b5a49a63cfcda30fb1f276d8eddb20a073af94b7afd95642f14b9d7228392b0",
+      "bytes": 85542,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final-v2-editorial/included-papers.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final-v2-editorial/included-papers.md",
+      "sha256": "1ffa568694300b56fd9aa290c39938153b10c2086cf9937a6815cc0d14564fa3",
+      "bytes": 7060,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final-v2-editorial/included-papers.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final-v2-editorial/inventory-exceptions.json",
+      "sha256": "d0c611b4ac8718b80199c195339f3c01a1d2e81d2b64cff16259a21ffbaa7df3",
+      "bytes": 42041,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final-v2-editorial/inventory-exceptions.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final-v2-editorial/review-queue.md",
+      "sha256": "854f9556a6ee26cdcdcf64b00b7520a7b13455078236d39c5ecef53e758057e2",
+      "bytes": 2898,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final-v2-editorial/review-queue.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final-v2-editorial/screening-results.json",
+      "sha256": "950c84e8f1ab04d4c5935a0234cb6bf92d13d99013d3ae95bbff7a7ebf6fbbf1",
+      "bytes": 780380,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final-v2-editorial/screening-results.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final-v2-editorial/summary.json",
+      "sha256": "b16dd9a56123f66baaf316e822e2997e00db3e4c5007c5ad2e5fdf2131993111",
+      "bytes": 9959,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final-v2-editorial/summary.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final-v2-editorial/verification.json",
+      "sha256": "cc149c9d546d5281de2bdd9e7e13591b18301cbe3ede1f8f7d1dc37453b1f4ed",
+      "bytes": 1395,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final-v2-editorial/verification.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final/included-papers.json",
+      "sha256": "1ddf7db982554ab6b8a997aad2c1384983a604462b36e644af7ab0c73e01056c",
+      "bytes": 71274,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final/included-papers.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final/included-papers.md",
+      "sha256": "0924494a42d9eb0abcca0a264bb8c85159738d85851b177b05cc737722e7dd8c",
+      "bytes": 5889,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final/included-papers.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final/inventory-exceptions.json",
+      "sha256": "c4f8e745edd71796d7fa41754ce231d30dca36f210cd8a8ce5b21b99896ed0ab",
+      "bytes": 40926,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final/inventory-exceptions.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final/review-queue.md",
+      "sha256": "2cabdef6c79403e0f79c085dec9f36cf4c1ea883cd5cd7a106cba8d722a888a9",
+      "bytes": 2962,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final/review-queue.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final/screening-results.json",
+      "sha256": "e6049b32f7665741264285193c281a7444e426e90e74d8a0b6de26e37a56c24f",
+      "bytes": 773141,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final/screening-results.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final/summary.json",
+      "sha256": "b414c6ba2d73ab45b858bc52d841b767b1203dd3065ccb3c0dffeab9b3db3b59",
+      "bytes": 8490,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final/summary.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/final/verification.json",
+      "sha256": "c50c39d5bf3ae1835b1b76c8611d8b84cd484c354af0b71f5b3c641036d2f45b",
+      "bytes": 1297,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/final/verification.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/included-papers.json",
+      "sha256": "1ddf7db982554ab6b8a997aad2c1384983a604462b36e644af7ab0c73e01056c",
+      "bytes": 71274,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/included-papers.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/included-papers.md",
+      "sha256": "0924494a42d9eb0abcca0a264bb8c85159738d85851b177b05cc737722e7dd8c",
+      "bytes": 5889,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/included-papers.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/inputs/manifest.json",
+      "sha256": "21c7d4a5957d33245a0b3711c53609db33f5fc01e8f3ec7690b59e07fdf5142a",
+      "bytes": 605,
+      "path": "reports/runs/2026-10-01-to-05-01/inputs/manifest.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/inputs/screening-protocol.md",
+      "sha256": "5531013ee907e21e5c5d959c7019794ca61b6dfbccbc1f9f6cf6a3f1b5b744ef",
+      "bytes": 10915,
+      "path": "reports/runs/2026-10-01-to-05-01/inputs/screening-protocol.md",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/inputs/sources.json",
+      "sha256": "8ab88aa4903cb456aa0312364c755863b6ebb4d2fabe7925fab2838748f2c8ac",
+      "bytes": 4220,
+      "path": "reports/runs/2026-10-01-to-05-01/inputs/sources.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/inventory-exceptions.json",
+      "sha256": "c4f8e745edd71796d7fa41754ce231d30dca36f210cd8a8ce5b21b99896ed0ab",
+      "bytes": 40926,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/inventory-exceptions.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/nature-browser-CP-01.json",
+      "sha256": "5da14565864e31bada63600b3eb8fe94bca2fa29410aa36bade07b497f944bad",
+      "bytes": 5806,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/nature-browser-CP-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/nature-browser-NC-01.json",
+      "sha256": "dffc68eccddbedc35db797f88090e13675f4dfc9e07deae329dabdcb88083488",
+      "bytes": 25196,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/nature-browser-NC-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/nature-browser-NCS-01.json",
+      "sha256": "858f694bf082b65fd5772c0834da64bd1e9684bc1db5ce6cc3f93d77b5b08efc",
+      "bytes": 5625,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/nature-browser-NCS-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/nature-browser-NMI-01.json",
+      "sha256": "783adcdabd8320787537c9c291c9079be52f8d77db70f9b8be436b405e71e0ae",
+      "bytes": 5818,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/nature-browser-NMI-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/nature-browser-Nature-01.json",
+      "sha256": "180acb3d400a39692da8135c0d4eb564d5956ec162d880bf1e043ab3422d5df3",
+      "bytes": 5672,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/nature-browser-Nature-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/nature-browser-identity-01.json",
+      "sha256": "d86be51438bf07f8035e3f00b8dea9ebe59d37318d1af98df7c26c9d5a60ba61",
+      "bytes": 6662,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/nature-browser-identity-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/pnas-browser-bibliography-01.json",
+      "sha256": "d69fdd8406a956a5932d7f0a814214e7012f5e0480445da14cff0a7b208488e8",
+      "bytes": 38276,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/pnas-browser-bibliography-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-01/README.md",
+      "sha256": "648902b25099b78e00277d6d2b2d19fa4fce2bd8be9d9d1e8662465a3eb44af2",
+      "bytes": 2786,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/prresearch-retest-01/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-01/result.json",
+      "sha256": "4552efb082a25ab544780c93a1676559682b76ddebb603167e0b6ee7ac6af72e",
+      "bytes": 516,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/prresearch-retest-01/result.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-01/retest-log.jsonl",
+      "sha256": "a96b73d771cd874d523aa6ec25f14d46896a3097ca2a6e78e8eb31e38d7cdc0a",
+      "bytes": 2581,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/prresearch-retest-01/retest-log.jsonl",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-02/README.md",
+      "sha256": "ba8e60f686cb86568e95a0d74d372fc1343fce78900876978abc4189787ae5ba",
+      "bytes": 2256,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/prresearch-retest-02/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-02/coverage-supplement.json",
+      "sha256": "84e3d99d6203475a2ceb94721ad66b3833b54c5d543a28d171558cc6be79a0a6",
+      "bytes": 26696,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/prresearch-retest-02/coverage-supplement.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-02/coverage-verified.json",
+      "sha256": "67099b002ccb5ee4ff6cd8a1e08050b5179f21092017b70df11d40092861650d",
+      "bytes": 27975,
+      "path": "reports/runs/2026-10-01-to-05-01/evidence/prresearch-retest-02/coverage-verified.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-02/result.json",
+      "sha256": "3164b423a925bdd42bd9bfa81dde2b694f399445293edc7f936330cc29e07c48",
+      "bytes": 833,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/prresearch-retest-02/result.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/prresearch-retest-02/retest-log.jsonl",
+      "sha256": "d7a9d7ea1c612b75323c4fb5f9eb3ec14b57e3781076f7d3a1924588efde0e2e",
+      "bytes": 34555,
+      "path": "reports/runs/2026-10-01-to-05-01/evidence/prresearch-retest-02/retest-log.jsonl",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/publication-evidence.json",
+      "sha256": "1fec526e35d174c762b4fa2f459db6da00f880cbc96ef82af75c4293becdd805",
+      "bytes": 1510,
+      "path": "reports/runs/2026-10-01-to-05-01/publication-evidence.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/review-queue.md",
+      "sha256": "2cabdef6c79403e0f79c085dec9f36cf4c1ea883cd5cd7a106cba8d722a888a9",
+      "bytes": 2962,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/review-queue.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/science-advances-browser-article-dates-01.json",
+      "sha256": "05a2e5fd8de6ea2703959533fc0335853f154197bc18422a612b5cb49ce6165c",
+      "bytes": 30600,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/science-advances-browser-article-dates-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/science-advances-browser-bibliography-01.json",
+      "sha256": "3245fef787d23e0061559a42823fff220be36f8591715a19d426759d0380f316",
+      "bytes": 101798,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/science-advances-browser-bibliography-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/science-browser-bibliography-01.json",
+      "sha256": "57530078fa10b63a2413ea93ae7659cfc7b742f8297a952a425d7d3fb413078a",
+      "bytes": 48695,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/science-browser-bibliography-01.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/screening-log.jsonl",
+      "sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+      "bytes": 1673515,
+      "path": "reports/runs/2026-10-01-to-05-01/screening-log.jsonl.gz",
+      "compression": "gzip",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/screening-results.json",
+      "sha256": "e6049b32f7665741264285193c281a7444e426e90e74d8a0b6de26e37a56c24f",
+      "bytes": 773141,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/screening-results.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/summary.json",
+      "sha256": "05c090b2c67279799687e66285d14a7972d30c64b1b7c3e887f2a4587cd7c044",
+      "bytes": 8810,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/summary.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-01-to-05-01/verification.json",
+      "sha256": "2c541f5c2234496bb044a106fdd0c9e040142623d13770783ee0f29b6024029b",
+      "bytes": 1297,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-01-to-05-01/verification.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/README.md",
+      "sha256": "d30a3db79df731a5635516c369c31283184d2b6e58d7ea3c13c717bcea790a02",
+      "bytes": 4471,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-05-editorial-revision-01/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/candidates.json",
+      "sha256": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+      "bytes": 20836,
+      "path": "reports/reviews/2026-10-05-editorial-revision-01/candidates.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/collection-log.jsonl",
+      "sha256": "e5788a9bc821842b9359f863c43506730929555706583eff444ad78675555e7f",
+      "bytes": 2065,
+      "path": "reports/reviews/2026-10-05-editorial-revision-01/collection-log.jsonl",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/coverage.json",
+      "sha256": "1db9fa851cb8c9bb42bfde89a49a9737d03dc436a01b76eaa0ee3c1752244c31",
+      "bytes": 911,
+      "path": "reports/reviews/2026-10-05-editorial-revision-01/coverage.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/inputs/manifest.json",
+      "sha256": "569967c3366d6925aae54d9a1bd4bae094f96c3236c27472cc8615b22d2ecd5d",
+      "bytes": 605,
+      "path": "reports/reviews/2026-10-05-editorial-revision-01/inputs/manifest.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/inputs/screening-protocol.md",
+      "sha256": "6895762a419cef428a6b529bac618ca973ba815dc21ade5e7bd7c812c1e8f552",
+      "bytes": 12427,
+      "path": "reports/reviews/2026-10-05-editorial-revision-01/inputs/screening-protocol.md",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/inputs/sources.json",
+      "sha256": "57e5da824686d586f5d9b85868900404b94f53d69b2b9f9da032069b05830cb9",
+      "bytes": 4220,
+      "path": "reports/reviews/2026-10-05-editorial-revision-01/inputs/sources.json",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-05-editorial-revision-01/screening-log.jsonl",
+      "sha256": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
+      "bytes": 91436,
+      "path": "reports/reviews/2026-10-05-editorial-revision-01/screening-log.jsonl",
+      "compression": "none",
+      "reason": "Active formal evidence, byte-preserved"
+    },
+    {
+      "original_path": "reports/2026-10-05-screening-calibration-01/README.md",
+      "sha256": "9f0f2775c8bca83dd6d79be5ad5b90dd49392414d0c5c08115471547a587ccd2",
+      "bytes": 6969,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-05-screening-calibration-01/README.md",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-05-screening-calibration-01/manifest.json",
+      "sha256": "2539af013bcf9b98c44a9dc325e4e1b8769da50b3184b9b5fbf56b6f7da565d2",
+      "bytes": 24815,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-05-screening-calibration-01/manifest.json",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    },
+    {
+      "original_path": "reports/2026-10-05-screening-calibration-01/review-log.jsonl",
+      "sha256": "8134ed39b31cb70b9380bc6d31865ed662f4ea7e1ad1eb6415354734c42de1f8",
+      "bytes": 100923,
+      "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+      "member": "reports/2026-10-05-screening-calibration-01/review-log.jsonl",
+      "reason": "Historical artifact; preserved, not an independent current result"
+    }
+  ],
+  "baseline_decisions_sha256": "0355081918ef98f18e664850250d349953a46f9fde771ef2602128908e5eceee",
+  "baseline_records_sha256": "9c7ba5a373545d68c308fbb02e404eb2ab514cfd85ca4d6ba9581011fd8b5ed5",
+  "baseline_papers_sha256": "74899263063c169138794cb5c80a3a5122aedee535068dba286cb56d0b99c250"
+}

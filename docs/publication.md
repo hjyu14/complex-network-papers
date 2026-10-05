@@ -2,7 +2,7 @@
 
 ## 输入与轮次
 
-`config/release.json` 明确列出完成的 `reports/<run-id>/`，不自动扫描目录。支持同一窗口的不同期刊，以及相邻、互不重叠窗口的合并；每本展示期刊的窗口须连续覆盖发布范围。同一期刊同一窗口须有完全一致的覆盖及 DOI 集合，否则失败。各轮独立保留窗口、规则和输入哈希。
+`config/release.json` 明确列出完成的 `reports/runs/<run-id>/`，不自动扫描目录。支持同一窗口的不同期刊，以及相邻、互不重叠窗口的合并；每本展示期刊的窗口须连续覆盖发布范围。同一期刊同一窗口须有完全一致的覆盖及 DOI 集合，否则失败。各轮独立保留窗口、规则和输入哈希。
 
 每轮发布读取自己的冻结规则、原始候选、覆盖、采集日志和最新正式判断。必须无活跃任务、未审读或未决项；纳入者通过全部必要硬检查。完整性标志保留来源核对实际限制，不改写历史状态。
 
@@ -10,36 +10,32 @@
 
 重复 DOI 只有候选、判断与公开记录一致才去重；冲突直接失败，须明确核查后追加修正，不能“最新记录优先”。作者、说明、材料与判断绑定继续逐篇验证。每轮仍是独立输入，多轮发布另保存轮次及各输入哈希。
 
-### 裁决引用视图
+### 直接发布清单
 
-四刊父轮仍保留其历史 131 个 `review`，不能直接发布。`release-view.json` 显式钉住父轮和裁决轮的原始文件、冻结规则及日志哈希。`scripts/publication_view.py` 验证裁决目标恰等于父轮未决集合、候选逐字一致、旧判断及旧输入哈希匹配、全部源判断绑定各自规则和候选；仅这些未决项被明确替代。已解决父判断不能覆盖，缺项、未决、来源变化或冲突直接失败。
+`config/release.json` 选择 `reports/runs/` 下的原始轮并钉住 `publication.json` 的字节哈希。每个清单含原始输入引用、有序的复议来源、作者及补证来源，不引用另一个发布视图。
 
-视图沿用完整父目录的覆盖与计数，逐篇保留正式判断原哈希，不新增科学裁决。作者和发布审计单独存于视图目录的 `author-metadata.json`、`publication-log.jsonl`；历史源目录不写入。公开汇总保存完整引用 manifest，不能将子集覆盖计数当作整刊覆盖。
+`resolve_pending` 必须恰好解决父轮全部未决集合；`explicit_revision` 必须逐篇绑定旧判断、旧输入和明确的用户最终裁决。每步核对候选身份、窗口、冻结规则、判断输入及来源日志；不能以最新记录静默覆盖。修订按明确顺序应用，最终不得留未审或未决项。
 
-### 明确复议已解决项
+当前迁移保留原候选与所有判断的哈希不变。作者记录直接存于采集轮，历史作者完成事件从归档中的原日志核验；不为复议复制全部作者。补证原引用不改写，`evidence_paths` 只映射当前存放位置，仍按原内容哈希核验。公开输出另列 `storage_files`，避免读者误用旧路径。
 
-`editorial-revision-publication-view-1` 是独立的修订入口，不放宽旧未决裁决视图。新审核轮冻结当前规程，保留相同原始候选及独立正式判断；每篇须绑定旧判断／输入哈希和本次明确的 `user_editorial_verdict`。原轮不改写。
-
-修订视图显式钉住父来源、新审核轮及父作者／补证文件。父作者／补证 JSON 采用明确标为 `canonical_json` 的内容哈希，避免历史 Windows 换行符与 Git 标准化的差异；字段内容仍须一致。`targets` 必须恰等于新审核轮与该父来源的 DOI 交集，候选逐字一致，所有判断已解决，并核验用户裁决的 DOI、题名、候选哈希、记录哈希及纳入／排除方向。允许父来源是已核验的视图，拒绝循环引用；同一小型新审核轮可分别被不同父视图引用，但不得把其子集覆盖当整刊覆盖。
-
-发布视图 manifest 的修正须追加 `publication_view_manifest_revised`，绑定前后哈希及具体理由；不得无记录换引用。此机制不改科学裁决，也不解除来源、目标和用户意见绑定检查；原未决裁决视图保持原始首事件绑定方式。
-
-修订视图继承父目录和未修订判断，逐篇保留各自规则哈希；旧轮存在的明确 `rules_revised` 历史不会被当前规则重解释。新判断必须匹配新轮冻结规则。新增作者元数据与保留的父作者元数据共同写入新视图；现有补证仍引用并核验原来源。`config/release.json` 用新视图替换对应旧发布入口，不同时选择互相冲突的新旧视图。
+历史 `.jsonl.gz` 按解压后的原字节校验，不能继续追加。旧视图格式只为历史测试／恢复保留，当前发布不依赖嵌套目录。归档与恢复见 `docs/repository-layout.md`。
 
 ## 作者与阅读说明
 
 ```powershell
-python scripts/collect_authors.py --run reports/2026-09-expansion-publication-01
+python scripts/collect_authors.py --run reports/runs/<run-id>
 ```
 
-仅补本轮纳入者的作者，优先 Crossref，必要时官方署名。核对 DOI、标题和 ISSN，拒绝占位姓名；保留来源、时间、记录及作者哈希。已存在作者文件时停止，不覆盖旧版本；更新须先保留原件并留痕。
+仅补本轮纳入者的作者，优先 Crossref，必要时官方署名。核对 DOI、标题和 ISSN，拒绝占位姓名；保留来源、时间、记录及作者哈希。已有文件须使用 `--resume` 复用核验通过的作者，缺失项才补采；明确重核可用 `--refresh-doi`。旧的变动行及头信息留在日志中，不产生整套 v1/v2 副本。封存轮不可原地补采。
 
 `config/publication-notes.json` 按 DOI 保存短中英文说明、主题及正式判断哈希，DOI 集合须恰等于所选轮次纳入并集。输入或判断改变须实际回读，不仅换哈希。多主题允许，`other` 独占。区分明确摘要、官方摘要摘段与授权在线审读短评论，不夸大阅读范围。
 
 ## 导出与验证
 
 ```powershell
-python scripts/publish_snapshot.py --out .private/work/release-preview
+python scripts/manage_runs.py check-layout
+python scripts/manage_runs.py verify-archive --manifest reports/archive/legacy-2026-10-05/manifest.json
+python scripts/publish_snapshot.py --out .private/work/<run-id>/release-preview
 python scripts/publish_snapshot.py --check
 python -m unittest discover -s tests -v
 node --check site/app.js

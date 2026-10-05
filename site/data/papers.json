@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T10:10:18.885492+00:00",
+  "generated_at": "2026-10-05T11:31:33.830149+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-10-05",
   "window_days": 35,
@@ -12,19 +12,19 @@
   "author_metadata_sha256": "c3050b6d59ca653b19ac75490cce38a0cf853ac435e13d0a42609d3e81cb49e4",
   "run_inputs": [
     {
-      "run": "reports/2026-09-editorial-publication-01",
+      "run": "reports/runs/2026-09",
       "config_sha256": "2ac0eda44eadb1631d2b4d799753dbc843dcd4835b4689be6cf20ab47205cd63",
       "window_start": "2026-09-01",
       "window_end": "2026-09-30",
       "rule_sha256": "154b354d06c7ec61c6403d1cdabf583b2fd044ea5e2bafc5fcee9ac0c464f0ad",
-      "screening_log_sha256": "ba1365e66ae4a15ed3541c775cad41a7bce168917e4e673f52deb3db70ea22fb",
+      "screening_log_sha256": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd",
       "candidate_sha256": "cb1ff89cf6e70ffba41723ba2521d1eb07730d36da37c34e00a662b818559b0b",
       "author_metadata_sha256": "00fbd3a9e75908f4b61f6a909b30fafe53c614fc979f4683306c6376d98c2e8f",
-      "run_manifest_sha256": "47b6ca7b28401b5a0519583402b7095de1c3982da71ab8950947acbc0a94cec5",
+      "run_manifest_sha256": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
       "assessment_sources": {
-        "version": "editorial-revision-publication-view-1",
-        "parent": {
-          "run": "reports/2026-09",
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-09",
           "files": {
             "candidates.json": "cb1ff89cf6e70ffba41723ba2521d1eb07730d36da37c34e00a662b818559b0b",
             "coverage.json": "cfa0c439083a1624ac8663d8bbdf003420d4f5186319e998b1df2cf8e5879bd5",
@@ -38,126 +38,1090 @@
           "rule_sha256": "154b354d06c7ec61c6403d1cdabf583b2fd044ea5e2bafc5fcee9ac0c464f0ad",
           "screening_log_sha256": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
         },
-        "adjudication": {
-          "run": "reports/2026-10-05-editorial-revision-01",
-          "files": {
-            "candidates.json": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
-            "coverage.json": "1db9fa851cb8c9bb42bfde89a49a9737d03dc436a01b76eaa0ee3c1752244c31",
-            "collection-log.jsonl": "e5788a9bc821842b9359f863c43506730929555706583eff444ad78675555e7f",
-            "screening-log.jsonl": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
-            "inputs/manifest.json": "569967c3366d6925aae54d9a1bd4bae094f96c3236c27472cc8615b22d2ecd5d",
-            "inputs/sources.json": "57e5da824686d586f5d9b85868900404b94f53d69b2b9f9da032069b05830cb9",
-            "inputs/screening-protocol.md": "6895762a419cef428a6b529bac618ca973ba815dc21ade5e7bd7c812c1e8f552"
-          },
-          "candidate_sha256": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
-          "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
-          "screening_log_sha256": "11953e4eb841ae7c3f589af8ab07b1a1c85edd8f0afa60ea8b3062a168d38b1f"
-        },
-        "targets": [
+        "revisions": [
           {
-            "doi": "10.1073/pnas.2620995123",
-            "previous_assessment_sha256": "79978ac07bec72c983d83b6994c61bcf41b241ec60e26cef4f74b4dea552f615",
-            "previous_input_sha256": "b876de2a83c6b290edc671bb3123ddfa965b32456e4bd51f34e91d5bcb322ad5"
-          },
-          {
-            "doi": "10.1073/pnas.2601203123",
-            "previous_assessment_sha256": "0c2e5d53707640941093381f92dbe088571ab70019eb66621cf95824b5cf0da7",
-            "previous_input_sha256": "9b8fb9d7b39a74806e0e241e028d839e582d9b4bde479ec56310c7119684306e"
-          },
-          {
-            "doi": "10.1038/s41467-026-77850-0",
-            "previous_assessment_sha256": "44098572ffa9ab34e8686704513d1bb17d60583a720493e2d7ff9f98f9911175",
-            "previous_input_sha256": "f2eb55576d33577183e9f5118704020d0057a6ecd8003759d574cf03c6cd6a04"
+            "mode": "explicit_revision",
+            "source": {
+              "run": "reports/reviews/2026-10-05-editorial-revision-01",
+              "files": {
+                "candidates.json": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+                "coverage.json": "1db9fa851cb8c9bb42bfde89a49a9737d03dc436a01b76eaa0ee3c1752244c31",
+                "collection-log.jsonl": "e5788a9bc821842b9359f863c43506730929555706583eff444ad78675555e7f",
+                "screening-log.jsonl": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
+                "inputs/manifest.json": "569967c3366d6925aae54d9a1bd4bae094f96c3236c27472cc8615b22d2ecd5d",
+                "inputs/sources.json": "57e5da824686d586f5d9b85868900404b94f53d69b2b9f9da032069b05830cb9",
+                "inputs/screening-protocol.md": "6895762a419cef428a6b529bac618ca973ba815dc21ade5e7bd7c812c1e8f552"
+              },
+              "candidate_sha256": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+              "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+              "screening_log_sha256": "11953e4eb841ae7c3f589af8ab07b1a1c85edd8f0afa60ea8b3062a168d38b1f"
+            },
+            "targets": [
+              {
+                "doi": "10.1073/pnas.2620995123",
+                "previous_assessment_sha256": "79978ac07bec72c983d83b6994c61bcf41b241ec60e26cef4f74b4dea552f615",
+                "previous_input_sha256": "b876de2a83c6b290edc671bb3123ddfa965b32456e4bd51f34e91d5bcb322ad5"
+              },
+              {
+                "doi": "10.1073/pnas.2601203123",
+                "previous_assessment_sha256": "0c2e5d53707640941093381f92dbe088571ab70019eb66621cf95824b5cf0da7",
+                "previous_input_sha256": "9b8fb9d7b39a74806e0e241e028d839e582d9b4bde479ec56310c7119684306e"
+              },
+              {
+                "doi": "10.1038/s41467-026-77850-0",
+                "previous_assessment_sha256": "44098572ffa9ab34e8686704513d1bb17d60583a720493e2d7ff9f98f9911175",
+                "previous_input_sha256": "f2eb55576d33577183e9f5118704020d0057a6ecd8003759d574cf03c6cd6a04"
+              }
+            ]
           }
         ],
-        "parent_publication_files": {
-          "author-metadata.json": "ace404dbd56f86731f12b37fbbdbe7170dec4057aea7eab733ef91fec14f7ccd"
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "00fbd3a9e75908f4b61f6a909b30fafe53c614fc979f4683306c6376d98c2e8f",
+          "audit": {
+            "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+            "member": "reports/2026-09-editorial-publication-01/publication-log.jsonl",
+            "sha256": "106e97d99fbbb477d21d6c2de31ee511bb0a3e4777984b0c16dc1ef25d7eb25a"
+          }
         },
-        "parent_publication_hash_basis": "canonical_json"
+        "evidence_paths": {}
       },
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false
     },
     {
-      "run": "reports/2026-09-expansion-editorial-publication-01",
+      "run": "reports/runs/2026-09-expansion-01",
       "config_sha256": "3b7017f56b11e653e95184e46beead38d15924c255c06ec147494231c337ed5d",
       "window_start": "2026-09-01",
       "window_end": "2026-09-30",
       "rule_sha256": "2af1f5c8afac74d24eda7a8020d9f957d906e8eb817c60644cd271c0be309641",
-      "screening_log_sha256": "42b76876e3d1e28cdc7b6ed654960edb570851f4836ffd6ce80698d7a980e161",
+      "screening_log_sha256": "49448d9071384b1d8c6e5dadc2e374b0ae75eed43d97b8320ea5237c1b7b7a0c",
       "candidate_sha256": "fc13c456d35450618c23ad96a3d66260ceb607ca8bed35c26892a81d4120f97d",
       "author_metadata_sha256": "bfbcad5a824e3dd9990b87c4954389e780c8fe8b514d01a12260e0852632dbea",
-      "run_manifest_sha256": "0222c4d2b5d1c8aabaa5c31a03f4cc02e33eafb36b12550b316cdfb40a29d6af",
+      "run_manifest_sha256": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
       "assessment_sources": {
-        "version": "editorial-revision-publication-view-1",
-        "parent": {
-          "run": "reports/2026-09-expansion-publication-01",
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-09-expansion-01",
           "files": {
-            "release-view.json": "f47bcdda86b84a4220a184459e070fa6b79e3ca2241d38bad52eb04dad5154f9",
-            "publication-log.jsonl": "02857b53c0b10e3534d199f9e2bbb4deff28c24caf23a9990921d2a93b3a1062",
-            "author-metadata.json": "7211cd068e36fccc9ed7b98c7ed99ee535203d9c8eb3ecfda53f5dde3733207d"
+            "candidates.json": "fc13c456d35450618c23ad96a3d66260ceb607ca8bed35c26892a81d4120f97d",
+            "coverage.json": "1d07c58efd9023d6eb97e765e136a2ecb8a6de6a253cde6dbcb5955e506ec960",
+            "collection-log.jsonl": "b7bbb73ce1ac6f136d69d9831021cc89ec9d13264f892566bdabda83d4c40f93",
+            "screening-log.jsonl": "6662748b881da93fbbea0f37436a5c7775e4b02d7fccfb33de6b05d06ce9d84e",
+            "inputs/manifest.json": "69aec1f76e2a9a0a89d23b012441e9cc4bc5f199de86e9204376cb675cb8951d",
+            "inputs/sources.json": "65b059a10182f414bb1cf9b913b09bc86599d1236fc72ff0f14bc06bfc3d2322",
+            "inputs/screening-protocol.md": "66548d32f3dfdf12aaacf2924b9426445e9261d2b13ecd1b55ad60686becc944"
           },
           "candidate_sha256": "fc13c456d35450618c23ad96a3d66260ceb607ca8bed35c26892a81d4120f97d",
           "rule_sha256": "2af1f5c8afac74d24eda7a8020d9f957d906e8eb817c60644cd271c0be309641",
-          "screening_log_sha256": "3f33e9379d1aa3e8663e562ce9fe2c0381b9c32670edca9856c81c963f18d121"
+          "screening_log_sha256": "49448d9071384b1d8c6e5dadc2e374b0ae75eed43d97b8320ea5237c1b7b7a0c"
         },
-        "adjudication": {
-          "run": "reports/2026-10-05-editorial-revision-01",
-          "files": {
-            "candidates.json": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
-            "coverage.json": "1db9fa851cb8c9bb42bfde89a49a9737d03dc436a01b76eaa0ee3c1752244c31",
-            "collection-log.jsonl": "e5788a9bc821842b9359f863c43506730929555706583eff444ad78675555e7f",
-            "screening-log.jsonl": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
-            "inputs/manifest.json": "569967c3366d6925aae54d9a1bd4bae094f96c3236c27472cc8615b22d2ecd5d",
-            "inputs/sources.json": "57e5da824686d586f5d9b85868900404b94f53d69b2b9f9da032069b05830cb9",
-            "inputs/screening-protocol.md": "6895762a419cef428a6b529bac618ca973ba815dc21ade5e7bd7c812c1e8f552"
-          },
-          "candidate_sha256": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
-          "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
-          "screening_log_sha256": "11953e4eb841ae7c3f589af8ab07b1a1c85edd8f0afa60ea8b3062a168d38b1f"
-        },
-        "targets": [
+        "revisions": [
           {
-            "doi": "10.1103/mnvf-tq6g",
-            "previous_assessment_sha256": "09178bd1979d6676d17e0eb0f8fd96fd4ef5b44ab5207af4cfadc9885e4bc494",
-            "previous_input_sha256": "008f27840a46d9533919d348580648dc31f4025ee0b110827128088f2a3e4a45"
+            "mode": "resolve_pending",
+            "source": {
+              "run": "reports/reviews/2026-09-expansion-adjudication-01",
+              "files": {
+                "candidates.json": "90fb109170f745f254fa77fbfe3e5e441d26fcd4e91818465a7cb23ebe6f3c92",
+                "coverage.json": "46e07c997614336475937128c8cc49972289dafd85b9b7adb36e901446865e69",
+                "collection-log.jsonl": "f72632a9c5486aab2d9faa27a4fcb6704e1e5ad1d7349f4848018225fb979d61",
+                "screening-log.jsonl": "480cc003d9e67b6889c9056c63b7bc8c4b159a05386160609201765f6eece906",
+                "inputs/manifest.json": "525cf18cd5fcfebcb6b32e0ecbc1a9fdd74e0739346ca3995e7d105beff07dab",
+                "inputs/sources.json": "65b059a10182f414bb1cf9b913b09bc86599d1236fc72ff0f14bc06bfc3d2322",
+                "inputs/screening-protocol.md": "5531013ee907e21e5c5d959c7019794ca61b6dfbccbc1f9f6cf6a3f1b5b744ef",
+                "parent-manifest.json": "4b45194f02b39e7a8852a9227683df79525222cc0d30f0ab63e3a4fc85cb0779"
+              },
+              "candidate_sha256": "90fb109170f745f254fa77fbfe3e5e441d26fcd4e91818465a7cb23ebe6f3c92",
+              "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
+              "screening_log_sha256": "7e8c0341b679b070f88ce4833741b22ce665caab81496eae89a191c7f122728b"
+            },
+            "targets": [
+              {
+                "original_review_number": 1,
+                "group": "G",
+                "doi": "10.1038/s42005-026-02750-0",
+                "previous_assessment_sha256": "0f9ca8e77da4029baa4559b703978e650e2a6767491e31187a0916cd73f90721",
+                "previous_input_sha256": "5b39b3f9f049a971d666df52339c0401f547aa0f697b53190ab1bd3b93568348"
+              },
+              {
+                "original_review_number": 2,
+                "group": "D",
+                "doi": "10.1038/s42005-026-02833-y",
+                "previous_assessment_sha256": "3ca9d00e050e82cb15a2518bf9dedd2e34e9b3caa2d61879be411f708fe4e8e3",
+                "previous_input_sha256": "cfb3cf7b92e4fc573e38d2c8b9e120b21fa222205134b5ea7f5cf7dd3087fec2"
+              },
+              {
+                "original_review_number": 3,
+                "group": "C",
+                "doi": "10.1038/s42005-026-02850-x",
+                "previous_assessment_sha256": "bcd474fadeffe20af65f4c28bf06ea227351da7ab80d588d7f6bcfe92a5fe04e",
+                "previous_input_sha256": "a81e769d4675846a818eacaca814c4e0c9bc19fefadefa8b79eab62a490d4bdf"
+              },
+              {
+                "original_review_number": 4,
+                "group": "F",
+                "doi": "10.1038/s42005-026-02891-2",
+                "previous_assessment_sha256": "31770edbab4adceb7100f3f055628911344d4f2a9d3cd47dab95367336cfa261",
+                "previous_input_sha256": "7de5eb9dae6ef6b3deee0968e4e841d7ceb0f1d62fe012557990b07393cdd003"
+              },
+              {
+                "original_review_number": 5,
+                "group": "A",
+                "doi": "10.1063/5.0351153",
+                "previous_assessment_sha256": "834ca62b5609465ce9c59a668e8fb2c7b77d0a8a93c4ef1b2c2d1ec39e152a1b",
+                "previous_input_sha256": "f1edec6c57b3682c3a1e9ba14f21e7b5975864c7861754c4c04c1d4c1410de03"
+              },
+              {
+                "original_review_number": 6,
+                "group": "A",
+                "doi": "10.1063/5.0349270",
+                "previous_assessment_sha256": "ea22b96cde4fc35a22bd2c4b527ee87e10e567a353cd9e0f5c75174973a4e0a9",
+                "previous_input_sha256": "d0172679cf8774a1da80191939db787c905276d644d6392c0bdb48955642fa39"
+              },
+              {
+                "original_review_number": 7,
+                "group": "A",
+                "doi": "10.1063/5.0346196",
+                "previous_assessment_sha256": "5281eb320cf77fe7633ad406a560256bd7102be26a36d96751dc1c2bae3a9f6a",
+                "previous_input_sha256": "0b2e71690cb44a829ab9bb1b607d37ceba0bdfebc86e7dac16e565494e3d40a2"
+              },
+              {
+                "original_review_number": 8,
+                "group": "G",
+                "doi": "10.1063/5.0336325",
+                "previous_assessment_sha256": "9450a3542bda3ce10d05d547faaf71a2456017af0b59fc729341e274519db2f1",
+                "previous_input_sha256": "a4724f50fbc849b077367282d3e45337474ed535be4f8328da58478200f8b1e9"
+              },
+              {
+                "original_review_number": 9,
+                "group": "G",
+                "doi": "10.1063/5.0350835",
+                "previous_assessment_sha256": "76ec1330a67dd6db525ffc1ca6ce137eb8a45e405a8d1424641d0391fdfaa54d",
+                "previous_input_sha256": "0b38b9a2860694e9a873f3272ec814d1b8782f27135db5e7426357438b71b7dd"
+              },
+              {
+                "original_review_number": 10,
+                "group": "B",
+                "doi": "10.1103/6976-lcw7",
+                "previous_assessment_sha256": "7838bc75b81517e7d7606dc32b232afc71e2ad76415c9a9bc153cfcc3c2b008a",
+                "previous_input_sha256": "f5b7641fd1a8a2491fb0ecdc2e18748668487f4cfbafb0d609195f5d96e47c0c"
+              },
+              {
+                "original_review_number": 11,
+                "group": "E",
+                "doi": "10.1103/s6mj-4f1s",
+                "previous_assessment_sha256": "110781adfae310196e15c7b7b2e4d5101905aa1498e224a1421d3d0e0253712b",
+                "previous_input_sha256": "217bdf0d4a6ee9a506e8896345430dac27ed2060da1544eb0093802eba6fd9ce"
+              },
+              {
+                "original_review_number": 12,
+                "group": "C",
+                "doi": "10.1103/z1fd-78ty",
+                "previous_assessment_sha256": "b227fd749a5a17555a3aedfa4d30c333740f13abfa90c4468667c13ed8474776",
+                "previous_input_sha256": "0eda38261b55f30b5b9f8878b4183fdb86cd379ad0f8934bec492f380e75b892"
+              },
+              {
+                "original_review_number": 13,
+                "group": "A",
+                "doi": "10.1103/72hc-zmsb",
+                "previous_assessment_sha256": "45b59a3f0bcc4fd528d99fefed4f3fef523490fcc675756ee2a45f19c4c6b382",
+                "previous_input_sha256": "a66b7b2c1457f6a9cd1f88fd707f1ac4102dfc71c64ace88cf6f2cf2231ef1c3"
+              },
+              {
+                "original_review_number": 14,
+                "group": "C",
+                "doi": "10.1103/bszq-gftl",
+                "previous_assessment_sha256": "9775f737f8e5118e701cde1a80a89620746ae72a417fa693dc90beece239f73c",
+                "previous_input_sha256": "77c9ec9354c97a39a15bbc4f36a733e677258be72e0674becd9944b471ffc82d"
+              },
+              {
+                "original_review_number": 15,
+                "group": "A",
+                "doi": "10.1103/rt96-mb8q",
+                "previous_assessment_sha256": "4b13e1efc14b6cae19ea4ef553660deb826454ab9359d6afc22fbb011522d44d",
+                "previous_input_sha256": "9cba17b465cfaeb845d74ded9c650487342e37e0f5e5f2c6e3b7ae135724529e"
+              },
+              {
+                "original_review_number": 16,
+                "group": "A",
+                "doi": "10.1103/sbf3-yfl5",
+                "previous_assessment_sha256": "6bab22ed6761d2eac00b22ea070a10f96425cba6316d6196dac627908007d6ed",
+                "previous_input_sha256": "a1b23569ee62e8836223ba53afcc96f1f60e6926274057dac999dda8593f39e6"
+              },
+              {
+                "original_review_number": 17,
+                "group": "E",
+                "doi": "10.1103/m9sq-j42t",
+                "previous_assessment_sha256": "ad2cd75a4a15466ecb8578c82591a6ead42b30951093d95cb544211ad12a1b53",
+                "previous_input_sha256": "2f7f14f35811e00a1895839b3bf3b541494ca80198443a9f29b163881b213711"
+              },
+              {
+                "original_review_number": 18,
+                "group": "B",
+                "doi": "10.1103/19cl-x33l",
+                "previous_assessment_sha256": "36b3b1ca1cd56881b1fcf470ddc48f12907ea3d54ce50dacd250af608f4daa47",
+                "previous_input_sha256": "384e3400623b99bde38eedf5e7a3397b99ca12e38c369bee2f76384d4bde3002"
+              },
+              {
+                "original_review_number": 19,
+                "group": "A",
+                "doi": "10.1103/73g3-b38r",
+                "previous_assessment_sha256": "0a5cc9e6424a4b7094e5721a00d468552dfa6d410c0a126dde181169dde7a1bb",
+                "previous_input_sha256": "2b9179703a63a3ac2aa30316a695b3beaed01dda7de48e49ccd388bd62bb45f3"
+              },
+              {
+                "original_review_number": 20,
+                "group": "A",
+                "doi": "10.1103/9mgt-48mf",
+                "previous_assessment_sha256": "25d03d0e6b246e4a123b738e3d2fc15317f885de855fb42d12acd336525eb817",
+                "previous_input_sha256": "7ad9fc84909b716a7e4d8047765af74cbdd97c018fbe05379b6bd09141f769ad"
+              },
+              {
+                "original_review_number": 21,
+                "group": "A",
+                "doi": "10.1103/gp7d-fsk5",
+                "previous_assessment_sha256": "031d1b32d2d74c60bcc201cb243d3bd17c31ff160766cbcacbfa5f3ac40c9b4e",
+                "previous_input_sha256": "b4f034f27c1a02e43ea9b87c25e49f5d1f3b30cbb3d189424e5eacddbdc9efc3"
+              },
+              {
+                "original_review_number": 22,
+                "group": "A",
+                "doi": "10.1103/k326-3y4g",
+                "previous_assessment_sha256": "4c5b92bd59b49fad0124be398f214e3afa87a8333566ed5697d112e2df928ade",
+                "previous_input_sha256": "4b60c58afc8d30dcbf65de861f08f8c901ec2b31f0bc9c94179f322c8d8b43c9"
+              },
+              {
+                "original_review_number": 23,
+                "group": "C",
+                "doi": "10.1103/kbb7-wbln",
+                "previous_assessment_sha256": "6fdb9699ce37e14aabb19bdee366fbf64f32b389b147e93cdf2aa9e722dc295e",
+                "previous_input_sha256": "fe7a970491c10e471bbeee1968e82a8fffa19233a0304d9cdf711f9f84654131"
+              },
+              {
+                "original_review_number": 24,
+                "group": "A",
+                "doi": "10.1103/n4ps-wmd7",
+                "previous_assessment_sha256": "de1f1e6e49d04eee34788343ed76ffb4cace414837af0d1aee8407b587089703",
+                "previous_input_sha256": "6ea28ec93f7aa5fe62c07cf0c446f71c31488aa7d158e0cea69a6a8acfb4c106"
+              },
+              {
+                "original_review_number": 25,
+                "group": "B",
+                "doi": "10.1103/yz2d-wk6g",
+                "previous_assessment_sha256": "3184d1df5c3c188769496d5caad1af908c0b740ad2e6ad6bec3b1dcef11a3dad",
+                "previous_input_sha256": "57cf41d3b37e258c0904fae2751cb785c9aafb1dda0350569c71691ae5ea82ec"
+              },
+              {
+                "original_review_number": 26,
+                "group": "A",
+                "doi": "10.1103/3cmf-cbj3",
+                "previous_assessment_sha256": "9cd1c23629298a9cbb742dab04ea31f6b1d3316570ce910a0d241ac67a0eaaf4",
+                "previous_input_sha256": "a8e9aeef6fb9e4c8f85b865b47da6ee4d57a791ed3a86e6fbad7c7772ed3a358"
+              },
+              {
+                "original_review_number": 27,
+                "group": "G",
+                "doi": "10.1103/l3vx-x5yf",
+                "previous_assessment_sha256": "cabdcadf0715a5d9596685e18d3cf036aef98f42617a61c585f1ffd6b93c700f",
+                "previous_input_sha256": "5d9d4b4e4ffd942dfc75cc93621f976592812cdf008ac186dd2dcd3cbbc5fca1"
+              },
+              {
+                "original_review_number": 28,
+                "group": "A",
+                "doi": "10.1103/m8bw-9fzg",
+                "previous_assessment_sha256": "3eca5ab2f7ae702383fff7a3547aa8022ef1e9129b84d3109cd596962d457220",
+                "previous_input_sha256": "804288eb8c3d47802ea49bce976dcca56749e995118339806232f4cd9d49716c"
+              },
+              {
+                "original_review_number": 29,
+                "group": "A",
+                "doi": "10.1103/ppm1-mxhz",
+                "previous_assessment_sha256": "2b56e4bde487e6b1d659584ea15ea57a9ca575ed6cf654c40ae549240d24e79d",
+                "previous_input_sha256": "9c1b4ae762ec17ed20a367fc2a90ca587e51d7d8cb076af8bc213fc7a0231cbe"
+              },
+              {
+                "original_review_number": 30,
+                "group": "B",
+                "doi": "10.1103/qjl4-wqvx",
+                "previous_assessment_sha256": "9137be842defd502638e255ba4357daf2b81109be1dfc0d39dd73677c88d5c53",
+                "previous_input_sha256": "5b42c0fc934dc5a3818f3fca016c6d3ac718709bbe1f185e73c81dc666a5b6cb"
+              },
+              {
+                "original_review_number": 31,
+                "group": "A",
+                "doi": "10.1103/qqwq-7j7j",
+                "previous_assessment_sha256": "e8ddb66e5f3cbb70452268f269a94b09ebd6a33784f9453a5fc9eea6c72cb10c",
+                "previous_input_sha256": "57fbb1767ec9077478d4481f591175c586f67190128760c72a9fb9b89ed7711f"
+              },
+              {
+                "original_review_number": 32,
+                "group": "A",
+                "doi": "10.1103/wfn7-h898",
+                "previous_assessment_sha256": "616b1b7e7089d4099bf25baef4c32966aa91389625fdddb0d1687fe7d5a64c44",
+                "previous_input_sha256": "96f26142b875c3ccb7393352a06fc423f781eef0ae9d0997f1848d486e48c7f1"
+              },
+              {
+                "original_review_number": 33,
+                "group": "A",
+                "doi": "10.1103/wysx-f9l3",
+                "previous_assessment_sha256": "2d2e1303ada206689f32cc5ce0f021de45e0bcea5aa4eee7efae6c0879492b52",
+                "previous_input_sha256": "3110e96a3c98cc5bb97128c046fde69b39a0e4cae73b1224f47af8f12a43ba41"
+              },
+              {
+                "original_review_number": 34,
+                "group": "A",
+                "doi": "10.1103/x15s-84n9",
+                "previous_assessment_sha256": "30f66b0b605d1a9472a34eba6133ad166175e87023e2e46e37f2c0e3372495d7",
+                "previous_input_sha256": "a553caffa55e09fbdd8f5807e3b31d0117157ef190e547453133bb55affd5c45"
+              },
+              {
+                "original_review_number": 35,
+                "group": "A",
+                "doi": "10.1103/fsdp-667s",
+                "previous_assessment_sha256": "a744698bb4b894a81a9bad846f6917759f97d7fb09de7da9450b1a497afe5d0a",
+                "previous_input_sha256": "11cfe0a2fd3ac45dd34566ef8b85276805c8fc82a27d067b054b71130e4fe7f2"
+              },
+              {
+                "original_review_number": 36,
+                "group": "A",
+                "doi": "10.1103/4kcg-z9v2",
+                "previous_assessment_sha256": "5afcae265f5169bc53ee94943bb070ea050562cfd8abd32f8058146c6e0034aa",
+                "previous_input_sha256": "e25b65fb2d7719aeab9ace93e473ee5792ab7d7f460509223a237d733bbf9835"
+              },
+              {
+                "original_review_number": 37,
+                "group": "G",
+                "doi": "10.1103/5n8x-155p",
+                "previous_assessment_sha256": "124d99a0269d2354dc2b5e31918585f67f6344db56a17c0f3ceefcdb7a1fc158",
+                "previous_input_sha256": "0cdfc96eb818b1f2c34d685efc827bb146c3cfaa83bdf21fd73ff778fff8f3c5"
+              },
+              {
+                "original_review_number": 38,
+                "group": "A",
+                "doi": "10.1103/81gf-mlhm",
+                "previous_assessment_sha256": "84b3a5875c40192bd7d8db03e4c240f1cfd3a0b9755d8cfddf2ff6ba017a8e40",
+                "previous_input_sha256": "02d19827875fc3edfcdf0b78bfdbed8ff9a0aa0fd7495e6c1ba3d6c1b6997031"
+              },
+              {
+                "original_review_number": 39,
+                "group": "A",
+                "doi": "10.1103/bg2r-m6g5",
+                "previous_assessment_sha256": "253d30913bf90ecc8890960abe85d9fd4164a92fb84a228150527a6164f5aa5b",
+                "previous_input_sha256": "7164b6f5dab2720e51d3d84f6fe77526328a154114135effe2d68a6d310b4305"
+              },
+              {
+                "original_review_number": 40,
+                "group": "A",
+                "doi": "10.1103/ftyk-48y2",
+                "previous_assessment_sha256": "43d8578f43874f3846af505dcff0c5adae045cfd4182916eb6db1a61d0e4faa1",
+                "previous_input_sha256": "1a3a324d3aac1728186ca2518c0cc63ec036e6c078113d6151db64d5e2ee9636"
+              },
+              {
+                "original_review_number": 41,
+                "group": "A",
+                "doi": "10.1103/y6ss-j5qv",
+                "previous_assessment_sha256": "4075926ca0d9acdfd28f7754e166c70dabff16336536912fabb1149184d79b05",
+                "previous_input_sha256": "bc86c5fca62a4b54652e9b6c1ce3537ae94ee4d560856b396882cab607081bde"
+              },
+              {
+                "original_review_number": 42,
+                "group": "A",
+                "doi": "10.1103/48xl-kkq1",
+                "previous_assessment_sha256": "9c19045faffcd9cb91ea6bd033d7ef9b1a26094594bbb0db02f5d8319021da19",
+                "previous_input_sha256": "3a5785fd30adbc48a84141fc5168d70ee8a9a70f5b00647a5a1d0074e3e916ff"
+              },
+              {
+                "original_review_number": 43,
+                "group": "A",
+                "doi": "10.1103/k9b1-n8mb",
+                "previous_assessment_sha256": "b126965a61e508b6a2aa3c202e146cbf84373a5fbbdfa01f863695b167229fed",
+                "previous_input_sha256": "7d14182624218adf222317fff65d5710c0c0bdc69f3584e6d6b5c02140a5f407"
+              },
+              {
+                "original_review_number": 44,
+                "group": "H",
+                "doi": "10.1103/qz1m-4942",
+                "previous_assessment_sha256": "b8a87efd6fa3315a8bd02d2f3266df4711bdb87d71957d89d54f4908ab514809",
+                "previous_input_sha256": "9231567ab6d92c75d1bb40650beb2866931ce340d10e15c4a0f9eb6bb97808cf"
+              },
+              {
+                "original_review_number": 45,
+                "group": "A",
+                "doi": "10.1103/tt2n-wll8",
+                "previous_assessment_sha256": "dbef9817aedde23b4fe07548d4cc8ae27a42994d706d0f302b40c8700342e83b",
+                "previous_input_sha256": "2ce14c8a5b655dc3323a84d9d20bbeb8c605d5f40651364552fc65affb2bc0a6"
+              },
+              {
+                "original_review_number": 46,
+                "group": "A",
+                "doi": "10.1103/7y6z-4bwy",
+                "previous_assessment_sha256": "8c82fed5f25af70ab4794888fb1951f30809a449943d5fc894a141e3d310b88d",
+                "previous_input_sha256": "2afa7f4926776d51638342755f4928ba44ea9af4238b933db334155f5923db8b"
+              },
+              {
+                "original_review_number": 47,
+                "group": "A",
+                "doi": "10.1103/3zrx-56mx",
+                "previous_assessment_sha256": "819eaff3e3e9d026518bbb5b675bdb37f11b886517a3c731de2053f140b6d090",
+                "previous_input_sha256": "92bbdcc67b2b1d23ecc226bb47cd8276a67a3fa1b73906891e3b802b45da2f55"
+              },
+              {
+                "original_review_number": 48,
+                "group": "E",
+                "doi": "10.1103/2c55-lsxh",
+                "previous_assessment_sha256": "0d3753f014c929916d482e4791b77de3e2cd811985c7d22f5bb779b2f346bcaa",
+                "previous_input_sha256": "830b73c97fd1b2b6d93434446f8ec66b833f71bd7ef9c4410502d198d360f034"
+              },
+              {
+                "original_review_number": 49,
+                "group": "C",
+                "doi": "10.1103/17ms-c7hr",
+                "previous_assessment_sha256": "7ec587359137797d7996cd2234941f25bc3aa5364f49d920bebf12a56d32173b",
+                "previous_input_sha256": "eac304f3b9003844532e1258e752c142311b2a903cf9379da7d6bfdc882ad935"
+              },
+              {
+                "original_review_number": 50,
+                "group": "B",
+                "doi": "10.1103/1rfx-w3rw",
+                "previous_assessment_sha256": "0a7a50087e724ea04e6108cd7afe0b02249aca7e5732be6711d3a0fd17e4ecba",
+                "previous_input_sha256": "d6ed343ff90b427caa53a8a9d2eb754bbd370e4640747882e02ccdccfbe2e9a4"
+              },
+              {
+                "original_review_number": 51,
+                "group": "A",
+                "doi": "10.1103/nxwl-5wvf",
+                "previous_assessment_sha256": "d21a82f71d33dd5b2209028166e58ed6afd2f3f7f8e4b499c77fa7ef2e0dbd18",
+                "previous_input_sha256": "94af5055611139240f98cdafdba84a9cf676179a89ac4d9d608ab2ed3c4a6579"
+              },
+              {
+                "original_review_number": 52,
+                "group": "A",
+                "doi": "10.1103/ys6r-4mbf",
+                "previous_assessment_sha256": "277e51bfb79ca1fd5e3a7ae06cc5db0448dcda10fcf77b7dd4b3610fc6109267",
+                "previous_input_sha256": "beed5636e461e8ca2d3b3e13eea00d770d226e44cb08db74fbd79d2f086268ec"
+              },
+              {
+                "original_review_number": 53,
+                "group": "C",
+                "doi": "10.1103/zpm1-lp4n",
+                "previous_assessment_sha256": "0e6bcad030a8e009bbd9713c773f330b053bebffca57f36373daa9926ed5e0d5",
+                "previous_input_sha256": "cc4eca035974e4bc7affe21d0df3aa6efe54a66e30b3982d187756dd95150878"
+              },
+              {
+                "original_review_number": 54,
+                "group": "A",
+                "doi": "10.1103/9q1j-dlw8",
+                "previous_assessment_sha256": "2b307a0ed396338e6a31a5071a8735cf3f963ea8e8ccc8d516f5d7ca22c3f1db",
+                "previous_input_sha256": "7137ac5b6434eb15ab85ed8e3913f04076a497317e825829016770784252296e"
+              },
+              {
+                "original_review_number": 55,
+                "group": "B",
+                "doi": "10.1103/l96b-w6bn",
+                "previous_assessment_sha256": "ac65e649b01c26e8b0d17e94d4c8cc7b39d0f2ce6daeb54fec7b2299fbd0e21f",
+                "previous_input_sha256": "3139206a7bb0dc75c707f665f2171b9ee481a914a337212308a9c3301c6c8935"
+              },
+              {
+                "original_review_number": 56,
+                "group": "A",
+                "doi": "10.1103/v3jy-fh5p",
+                "previous_assessment_sha256": "b97bc42074abbc5d2287d17c4da8557fbf7fc6054b9c81b1abed5415f12b24fa",
+                "previous_input_sha256": "ffb3a991cfaf42f88fb0ae3611d2c601380d9f2e5e06faa0d9f3dddc78db7567"
+              },
+              {
+                "original_review_number": 57,
+                "group": "E",
+                "doi": "10.1103/pzp6-rshs",
+                "previous_assessment_sha256": "38686cd65263f1ec9119f65ea9f41f30741293e0d7b895faada6f5b09c597876",
+                "previous_input_sha256": "37d4598dae20d05d12c9f5bddce0bec63fc1e3e745cdb8ad1ee5a70b11ac89c3"
+              },
+              {
+                "original_review_number": 58,
+                "group": "A",
+                "doi": "10.1103/v94v-3p18",
+                "previous_assessment_sha256": "5ba0d030fe1f4259f6a563fca5ce73a0c8a49689660e1467498f97d8c3caa82b",
+                "previous_input_sha256": "407d4c83020be335663d532cabd620497511daf9f0cb1c9ec1d6eeda9707034d"
+              },
+              {
+                "original_review_number": 59,
+                "group": "E",
+                "doi": "10.1103/dt4c-tz98",
+                "previous_assessment_sha256": "621a28f1b0fbfc95415d2bad62f728cfafa020c712807c3dae4b520f1ce5a964",
+                "previous_input_sha256": "11c9d22ebf4954e6d1a986e43f2cc1610345c0fd9c603aebfd02c5681a79a0c3"
+              },
+              {
+                "original_review_number": 60,
+                "group": "C",
+                "doi": "10.1103/f6mt-tkgl",
+                "previous_assessment_sha256": "8033992c1f31760ef7dcb0cc9935c273c5aa08aa5427d38238491a268f2f6325",
+                "previous_input_sha256": "ee5af923390b8188a35a77249470e55962f4423bd06d24ddb64f983e6c2b8ebd"
+              },
+              {
+                "original_review_number": 61,
+                "group": "A",
+                "doi": "10.1103/wwyd-bz8n",
+                "previous_assessment_sha256": "b8b2d704ecf13e7610957dfdf2236a31e3d762f4492ced50fdfe00db6ab7ebde",
+                "previous_input_sha256": "1ba1bdc069275958176d19031b4c1946a8d09ffd70a32d659a7d9990dad1184e"
+              },
+              {
+                "original_review_number": 62,
+                "group": "A",
+                "doi": "10.1103/xsyr-d79f",
+                "previous_assessment_sha256": "aa96b9a52768b5306d97dc9d2093c33ecb4907e456d6baae7114c93c1db5cd5e",
+                "previous_input_sha256": "50c54d9b5460242e0cc9a77210011fb3fbc895f9259a18b1e366703f1d8b9086"
+              },
+              {
+                "original_review_number": 63,
+                "group": "A",
+                "doi": "10.1103/23wf-kb12",
+                "previous_assessment_sha256": "c6e39d18c0c20e6938f1d98ad0c4a3887c6b07941a11f2e9b2d57eba20fa485c",
+                "previous_input_sha256": "ea38d1186048d32eceb360e1435597ff059ae4833a0162ec1a9c4fd3bd8b4222"
+              },
+              {
+                "original_review_number": 64,
+                "group": "G",
+                "doi": "10.1103/9tjx-cw7q",
+                "previous_assessment_sha256": "301a7d5fb3dd3f572e17518eaa6c67c956ccf61945c4b00b50b9edd3d809db41",
+                "previous_input_sha256": "0e24631c7fdd93e3791c4dfb7fc99e888800b2027a2245f5b94c92b7eb6b332b"
+              },
+              {
+                "original_review_number": 65,
+                "group": "A",
+                "doi": "10.1103/bgx2-wmpr",
+                "previous_assessment_sha256": "252f52b5cbaa366e3b8fbfd49e6c506d2fa946bbd11576575144e8f3602e54e7",
+                "previous_input_sha256": "d1f5020dfd848312a95621429e01a4a8d3a04f66ddb89fb21c1098a19c377bb8"
+              },
+              {
+                "original_review_number": 66,
+                "group": "A",
+                "doi": "10.1103/c44l-89p7",
+                "previous_assessment_sha256": "32ae2b388a3458476d448760e92d120b515ca8c36c02763e40e24598371c88d7",
+                "previous_input_sha256": "5afffc0403f4d06874f715f00381dcf7724301e8da9498144ea9076ce1006fce"
+              },
+              {
+                "original_review_number": 67,
+                "group": "A",
+                "doi": "10.1103/d26r-r4gp",
+                "previous_assessment_sha256": "4f3cd6354fc13e9256478d0b362016ded0ae6ca926d0ee7f2737ed0daa8e3ff7",
+                "previous_input_sha256": "9ac1136930ad37bc1d4047b186056107b3bd3fbe067cc2c3950700e9795a6459"
+              },
+              {
+                "original_review_number": 68,
+                "group": "A",
+                "doi": "10.1103/fltc-hfvt",
+                "previous_assessment_sha256": "ae3151ae4a90f527fb571219c9f7fe882b18c6a95ea4353d6a9c05e34479f884",
+                "previous_input_sha256": "894cb881c2dc251cd1ba29bf96b1c7c56c8d4c47f6a8d9e07c6c01e8173a07a5"
+              },
+              {
+                "original_review_number": 69,
+                "group": "E",
+                "doi": "10.1103/k7yc-t6l6",
+                "previous_assessment_sha256": "790fb54678a6e9e07aa5d09627d1fa060a520578e0d8edf17560a3154be378c9",
+                "previous_input_sha256": "7d5bc54a6bd2208d17f68a2b6ec2ca155c3463c18090a34a8f377554906bbc08"
+              },
+              {
+                "original_review_number": 70,
+                "group": "H",
+                "doi": "10.1103/x78y-924k",
+                "previous_assessment_sha256": "9f7132b451d48008c09176c44bdaea87fa8ae2779094a19632b29734003eed5d",
+                "previous_input_sha256": "dae5c7820084c80ca4a3182db3cfb126d4fd2a2425c1bce86242d71e2386e8c8"
+              },
+              {
+                "original_review_number": 71,
+                "group": "A",
+                "doi": "10.1103/16r5-nddc",
+                "previous_assessment_sha256": "ed9ecbdc4554780b50e9580157d3d8c13c5a4f1fa4096f84eec96fac05b693ce",
+                "previous_input_sha256": "51c3b2315477aa224945bee923df9da8c2d7d9a1e650592dd06bebf17f8f08aa"
+              },
+              {
+                "original_review_number": 72,
+                "group": "A",
+                "doi": "10.1103/3v5l-pgzz",
+                "previous_assessment_sha256": "5acb50d36dbf7ddabb6fdafac52abfeda908fb27d8a8907096f4a993cf6216da",
+                "previous_input_sha256": "6da347e697c92fe5b2f43c0b546574a6716ebcd8056c72f6612740ac4194fa8b"
+              },
+              {
+                "original_review_number": 73,
+                "group": "A",
+                "doi": "10.1103/92jk-cj5x",
+                "previous_assessment_sha256": "98f99de4cf7d2ae6a0afb3440b363e80ce85d404b136a3ddbd59235cc0e9eeaf",
+                "previous_input_sha256": "aab1ac72643ef32b6df30c8ba56494764f39416178207bbe2302a58f3f58f1ab"
+              },
+              {
+                "original_review_number": 74,
+                "group": "A",
+                "doi": "10.1103/9lmp-pydp",
+                "previous_assessment_sha256": "bf76bab1a86b8fc06d1912c141ade3e55db10e2da5d30c06f142b314b864feff",
+                "previous_input_sha256": "b6bd9794b3f899d8dcfb41084827b61843c61d4cd029e098c17b40af91c1348d"
+              },
+              {
+                "original_review_number": 75,
+                "group": "A",
+                "doi": "10.1103/c742-lgnc",
+                "previous_assessment_sha256": "f001db621b6625b34d7ed9a9ba3072edea58805fc507c0b39bf187dd74cec6cd",
+                "previous_input_sha256": "f2b405f91dc111feaf5d47d37833248a34c177221cfc78bdb895e7599ab6800a"
+              },
+              {
+                "original_review_number": 76,
+                "group": "A",
+                "doi": "10.1103/d6lk-4f62",
+                "previous_assessment_sha256": "7dc33c745e7e1d2e5cd4085452f8bdd283a8ac4f3c51317789a1356cfb20c864",
+                "previous_input_sha256": "9a36d17a179c5c60bff2dbdb6b61d90cdd47c810d9b73ff42056d4d60e320037"
+              },
+              {
+                "original_review_number": 77,
+                "group": "A",
+                "doi": "10.1103/t1sg-qhhf",
+                "previous_assessment_sha256": "31b5bae02f15c8b2e93ff9cd5667c3c5776f0671bc3c62023439f6de0c4fb9ee",
+                "previous_input_sha256": "35746b6a8500c4b2afe22a1fa4ea07f6a7d7cb5b6fde4e24d69c09a1d9d65933"
+              },
+              {
+                "original_review_number": 78,
+                "group": "G",
+                "doi": "10.1103/vxkg-41kp",
+                "previous_assessment_sha256": "02e3b22d6d039dd6e8f454989e3dc4947068eca52be4d1010cf2b92737bc3009",
+                "previous_input_sha256": "6739ce97dee2eb23880a337240e3884d782e2a109bb092722eb7eecab107c7d2"
+              },
+              {
+                "original_review_number": 79,
+                "group": "A",
+                "doi": "10.1103/6w6f-y2d9",
+                "previous_assessment_sha256": "bd0e2b94804a0446a30fec2c70bd7528a272f6cea5d98e9f3890a5b4d5ad23f7",
+                "previous_input_sha256": "99fcf3e657501b7d59285f3cbc713827a5e68493c88d582512904210ae2f6225"
+              },
+              {
+                "original_review_number": 80,
+                "group": "B",
+                "doi": "10.1103/b7cw-pkzn",
+                "previous_assessment_sha256": "561747f427cb4b2019fe96f367a91b41cab5ba20cdacf4e194f3c2f3508d544a",
+                "previous_input_sha256": "3ceb76409133cb1065d56f14d31963ffdf362aa56392ffdf9a60d465289d25f7"
+              },
+              {
+                "original_review_number": 81,
+                "group": "A",
+                "doi": "10.1103/l51k-63y5",
+                "previous_assessment_sha256": "38978e2bc1fea945f8e50b6b032ebf3f1ec667e2ab1423a52d219785d42f73b7",
+                "previous_input_sha256": "bed3c08717f87dfe177729905a1f1e6d919bb87b423dbdb0b027fd322d7edab9"
+              },
+              {
+                "original_review_number": 82,
+                "group": "A",
+                "doi": "10.1103/m8jf-fjfp",
+                "previous_assessment_sha256": "6df3c8d781a28795020bead63eb8f1cd6b11a52d296cbfd0133982a20f4d718a",
+                "previous_input_sha256": "d2a1f22138a512afb057aff1b0fbd2f1c188fdeb0daa5f6179272b5829028a44"
+              },
+              {
+                "original_review_number": 83,
+                "group": "A",
+                "doi": "10.1103/nvd6-pj1f",
+                "previous_assessment_sha256": "fbe0c48843640673df8d4c3a50e864a8e06c5f6346ca2c4295249a4de7fc7ac6",
+                "previous_input_sha256": "f4381026421a572df2cd6575842913fb2535f5a9d3c06a980abbdd073dfcf314"
+              },
+              {
+                "original_review_number": 84,
+                "group": "D",
+                "doi": "10.1103/twww-yj1y",
+                "previous_assessment_sha256": "4e475927b8140681da1d75e217923b80670fbd98b06981c1a8e84b075cbbb8ed",
+                "previous_input_sha256": "c67ebd05cd54a1d2e2cf9c0867ff3125a5c365574cae39edfab24062eaca5ba9"
+              },
+              {
+                "original_review_number": 85,
+                "group": "B",
+                "doi": "10.1103/xp24-5rj6",
+                "previous_assessment_sha256": "06409269ceed15f2e992808ee11e741b3fc89c21c7d78c5c427f4faba004e6f7",
+                "previous_input_sha256": "d8ea4fe557c585d9f085f1e8a5ea0f29d0d2f2568b5c4d957ac6ca2667155c8f"
+              },
+              {
+                "original_review_number": 86,
+                "group": "D",
+                "doi": "10.1103/xvf8-2z8x",
+                "previous_assessment_sha256": "034715ec7d0b4975d8bf66f418dc48fcf584630316fed957b29a9b5707e714b7",
+                "previous_input_sha256": "66b4ae737f9b8cfd429da4117177443a81c719fa0ecb359cfef303e32b3f52b0"
+              },
+              {
+                "original_review_number": 87,
+                "group": "A",
+                "doi": "10.1103/33lg-7kmc",
+                "previous_assessment_sha256": "b37750d11dcdbec328e76928802b91c8d415dea6f5a1a8dfe805c41bbd7d4daf",
+                "previous_input_sha256": "5d2bc6d994fbd7ae2c627feb7c2e44b88d75a3d67ea94906dce96b05e5825e60"
+              },
+              {
+                "original_review_number": 88,
+                "group": "A",
+                "doi": "10.1103/54zg-75zk",
+                "previous_assessment_sha256": "a22ef5590e52d5237b0df881d8847337db89fc1b13178b78618f5671ad8795e0",
+                "previous_input_sha256": "326d48f56d69844169ce6032920eacb3b073fcd60316393c8248e3541b36db02"
+              },
+              {
+                "original_review_number": 89,
+                "group": "B",
+                "doi": "10.1103/7lvh-8mqy",
+                "previous_assessment_sha256": "de841f99735baca56dd4203975f70c035242ebf0ff72ac83181f3d7d797c0a48",
+                "previous_input_sha256": "5d8a382556f08bed7ce30aa6d44bd9e70bc199d30901610c562c24b78142ca31"
+              },
+              {
+                "original_review_number": 90,
+                "group": "A",
+                "doi": "10.1103/996v-4djr",
+                "previous_assessment_sha256": "013c3f7299afd6dd4db2823c1bdc1408f6274b774994cb4cc9bcf25b3deb2e94",
+                "previous_input_sha256": "111ec816d7ad71ba62f9981f61551c948dcab7f59bfd5ba5ee4d25e4ee129442"
+              },
+              {
+                "original_review_number": 91,
+                "group": "A",
+                "doi": "10.1103/br97-fw3p",
+                "previous_assessment_sha256": "6b6ccbba4e4b433a7af78615a7bbc518d595c395b7f6d901b5d850780ec6caf9",
+                "previous_input_sha256": "98b75795a3153c5a433229d55ab5e7a0f8fe8ad47e20df6c929657c31cdb366a"
+              },
+              {
+                "original_review_number": 92,
+                "group": "G",
+                "doi": "10.1103/fs71-p5y8",
+                "previous_assessment_sha256": "57656ee169104ec06d240576ae90ec22e3c19c83d84ebc1a8d23110f6d962c2b",
+                "previous_input_sha256": "0229e35896b4bbc8fc2a8bee243e097911e8b94489b87c6902a6fb486f929921"
+              },
+              {
+                "original_review_number": 93,
+                "group": "A",
+                "doi": "10.1103/nl7d-16n8",
+                "previous_assessment_sha256": "7e6949a8e0a9195fa8e8e658c9583ec4cee9ad1cfbe9a705068c5b5eb7ea68f0",
+                "previous_input_sha256": "a96bb961b4e6b37b44d74625edb1fd01c03e80f87f0691fe434da74c6e4db2a3"
+              },
+              {
+                "original_review_number": 94,
+                "group": "A",
+                "doi": "10.1103/v1vq-skr1",
+                "previous_assessment_sha256": "3450f41acb5a9e5506144d38e8790576e2f39ec579733c69e0aea37b77b9ad4d",
+                "previous_input_sha256": "91ccc20d42ae27dd2545da229fa51a7cc18c31f4d0c889ef89a52f9eef698294"
+              },
+              {
+                "original_review_number": 95,
+                "group": "A",
+                "doi": "10.1103/v5zx-93k9",
+                "previous_assessment_sha256": "9ad947dd831802f1250ffa64297434ecaf98f4d8f1e8c8aaafe91266cdf38b1b",
+                "previous_input_sha256": "a088aeb53cc64d28251c5e185f14311afc6c91a1a42f1e415b628fe077c45648"
+              },
+              {
+                "original_review_number": 96,
+                "group": "G",
+                "doi": "10.1103/m6s5-r1cq",
+                "previous_assessment_sha256": "b7c3846bec1fb9883fa067d4e342bc0ddb105070e77e87df13ce0d5d54e5ca6f",
+                "previous_input_sha256": "fafb3c20fb8313f4a2c552727af73e6b5383bc4e1c58f54a61237c3fd269a60b"
+              },
+              {
+                "original_review_number": 97,
+                "group": "A",
+                "doi": "10.1103/txbw-g9cd",
+                "previous_assessment_sha256": "8ca14193fc24e551bf019282ed6747596c9debb3d0fb2e5ac8b1507c883d02df",
+                "previous_input_sha256": "cfc101d8e119148777df7381a0792ee242ee32c64ce4890f52fb70d4ac309cfc"
+              },
+              {
+                "original_review_number": 98,
+                "group": "A",
+                "doi": "10.1103/8p2h-fzt8",
+                "previous_assessment_sha256": "741c1da100df09e10c7abddd3e0231e9dc30aec1e32196f2b7715f3aa6368743",
+                "previous_input_sha256": "767e8318c14535b772e74586a2b4089ff09e8c405e007f67b4e850f6cfee0177"
+              },
+              {
+                "original_review_number": 99,
+                "group": "G",
+                "doi": "10.1103/q9bd-4h4j",
+                "previous_assessment_sha256": "ed7d1c6717162d926bbfee58bab3e3478c642df5c8f018bff36d15ccee08faa6",
+                "previous_input_sha256": "f1d295ff09775f596617d7a745a1a1e26fc14daa4b1da03a3d750911234e5628"
+              },
+              {
+                "original_review_number": 100,
+                "group": "E",
+                "doi": "10.1103/26rt-yvpn",
+                "previous_assessment_sha256": "45f9a69df1f37245b2264e09670203846b40cd59eb2acbccdc2b30945dc3c944",
+                "previous_input_sha256": "d2277628b7bfb44e1e9060f91bab9d55ebba3f47fab8eed952abc402ba8689c4"
+              },
+              {
+                "original_review_number": 101,
+                "group": "B",
+                "doi": "10.1103/tpxk-cltw",
+                "previous_assessment_sha256": "714465099e786ba09842f08918e238a22e6d7a32efcd4b8e4a50f8997a8dfb4a",
+                "previous_input_sha256": "1b4d8d1051dfb69f25bb052fc9b29a5a7a138575e9b0d42e4275a8f96066a480"
+              },
+              {
+                "original_review_number": 102,
+                "group": "A",
+                "doi": "10.1103/xzdr-sh34",
+                "previous_assessment_sha256": "78d5ff0b82e0a9bf98b2ba46d54661458ce88d148770f9fc644bc452d9569d76",
+                "previous_input_sha256": "3558a2809245cd1aec6d1dac7410fce07b1dd0f5c0f72f20aa44a80544da1e1a"
+              },
+              {
+                "original_review_number": 103,
+                "group": "A",
+                "doi": "10.1103/c9vq-tclt",
+                "previous_assessment_sha256": "f14d98f27697d89087a6a9ce3332c104174f88bb179c05fba6e042246181f574",
+                "previous_input_sha256": "96c03b9ebf108be1efdbca4d61718261dfbd779cd95a67fcf7273e4e091a3b56"
+              },
+              {
+                "original_review_number": 104,
+                "group": "C",
+                "doi": "10.1103/wrd3-t5cf",
+                "previous_assessment_sha256": "ed2aa22be08112ef593b0b514bc40ea84f2f6908724950785fd18292b593eb7d",
+                "previous_input_sha256": "ee40a0f4dd10f43f314c87b07be8381c8d0b50892f112942c86ff2531c0bcf58"
+              },
+              {
+                "original_review_number": 105,
+                "group": "D",
+                "doi": "10.1103/hvk8-9hl2",
+                "previous_assessment_sha256": "9baed988d4405608f51e3f06e16fe041bb1e2c990156ba63f77ea077ef3a101b",
+                "previous_input_sha256": "cdc0b627c77a8cae6db798da8261c84f43d9dcafdd0dafc8aafc8581fbb84042"
+              },
+              {
+                "original_review_number": 106,
+                "group": "F",
+                "doi": "10.1103/nh3b-1wv5",
+                "previous_assessment_sha256": "97d87f42a6161c17210fdb368ec7cac200d42d8d97db9196808c8dd1bf11d500",
+                "previous_input_sha256": "b4602f0b255cd585c82b1468439b705fc8022626ffcf2b5721d54b2fc27e55dc"
+              },
+              {
+                "original_review_number": 107,
+                "group": "A",
+                "doi": "10.1103/p6qp-2s9f",
+                "previous_assessment_sha256": "4825fa41bd76617cc8513baebfaf8b33576d8a072fe4eb7886508cc3ba1e1077",
+                "previous_input_sha256": "fe76f2d605c91e76c660bb711aeb8922809e49b79678f63c960602a44840eda1"
+              },
+              {
+                "original_review_number": 108,
+                "group": "A",
+                "doi": "10.1103/tmkq-33c4",
+                "previous_assessment_sha256": "9146b9767fd88fd031664f8303241abb52d1730e9b0f4b0ad03bd679d0149c78",
+                "previous_input_sha256": "a9fd64fb842992093e8d9a260fbd532aba0073aaf90e778cc0d226532ba9722d"
+              },
+              {
+                "original_review_number": 109,
+                "group": "G",
+                "doi": "10.1103/xsg5-cb6l",
+                "previous_assessment_sha256": "2608d7780a2755fa810f3711cb561f4bcbc90f952a924288e4d62136c30ae1f3",
+                "previous_input_sha256": "3032b99660caba20f648eff7e375184ef16e7ef991833fd208bd162d43262576"
+              },
+              {
+                "original_review_number": 110,
+                "group": "C",
+                "doi": "10.1103/b8cy-vfy5",
+                "previous_assessment_sha256": "e2b75db2f2aa5134f666225159bdbd3e672dd49ff807341a1a5ec0ff51fb10d3",
+                "previous_input_sha256": "76f07184d3579e73bc73249955ca5eb5cf88a1831cd3c5007b9f84bc36bbc9ff"
+              },
+              {
+                "original_review_number": 111,
+                "group": "E",
+                "doi": "10.1103/hvqr-6n3b",
+                "previous_assessment_sha256": "86fabc69d8bbc825233f15b798c6a92ab89b3b2b1ae26db1c03d89acafeacec2",
+                "previous_input_sha256": "d9d2bb28974a626e749474a6e8e8cdf40d333868cd325e92d9c262e7a1d37f64"
+              },
+              {
+                "original_review_number": 112,
+                "group": "D",
+                "doi": "10.1103/s4dl-xg31",
+                "previous_assessment_sha256": "81ab8cb2aa6e1f1e46c877701534b9413c3bf944822f5df5d985942bc582f3a7",
+                "previous_input_sha256": "a438c84fb5914af5041e0f4ebc3f46cf8c629eef8db10579c4623c10b646551e"
+              },
+              {
+                "original_review_number": 113,
+                "group": "B",
+                "doi": "10.1103/23zn-lzx2",
+                "previous_assessment_sha256": "30c2a137e51f1f7ea8947fbe20612fabc311fc07d20330a03f446e6d04d6ee1b",
+                "previous_input_sha256": "74f0a96d01db0de6f7b5acd567f7dc12bad670a6a727e486651f8b091da1f527"
+              },
+              {
+                "original_review_number": 114,
+                "group": "E",
+                "doi": "10.1103/tjjp-m4yx",
+                "previous_assessment_sha256": "0962de44f1083f846cc7748fe81a21b69f01c3e8b53554174cc733b705102142",
+                "previous_input_sha256": "9a7122892d6c02254e8cf986103ed416263341fb19c1f8f36f9067100fafad6c"
+              },
+              {
+                "original_review_number": 115,
+                "group": "D",
+                "doi": "10.1103/qkrg-wbbj",
+                "previous_assessment_sha256": "63b0584f0a39f984c599a38434c9d671c10341961f26bbb308f6554067c6a36a",
+                "previous_input_sha256": "bd1b968d5a1f83190f6f25642b89f4edd146e228cbccf63de06c521d473e8789"
+              },
+              {
+                "original_review_number": 116,
+                "group": "A",
+                "doi": "10.1103/v5cl-krph",
+                "previous_assessment_sha256": "056c3152364c62e483391c43b062b00487f589b959460c1d4fdf85275fa22159",
+                "previous_input_sha256": "e0a7ba2ad089402e85a931998daf02a783f4f5bd4f8182f1ea096c1ab6f74125"
+              },
+              {
+                "original_review_number": 117,
+                "group": "B",
+                "doi": "10.1103/jqgq-3qq6",
+                "previous_assessment_sha256": "00d472e4311c890cd5f5f835dbf66037402db7de50747381a3634e5396d11989",
+                "previous_input_sha256": "d8aa017f672f850347cedd2482ad407b4c3a0cd3796f6bab99f04e49de3dcae7"
+              },
+              {
+                "original_review_number": 118,
+                "group": "E",
+                "doi": "10.1103/zhgy-wgv4",
+                "previous_assessment_sha256": "2dfae7cfcba7aa1da45a651e6cf7d9261a05f828222650d2c7b5e98035492af1",
+                "previous_input_sha256": "0fecb81323593a2118a5c188b13c032777e9f38e9652536be181a5736f7ad553"
+              },
+              {
+                "original_review_number": 119,
+                "group": "A",
+                "doi": "10.1103/znwb-71hy",
+                "previous_assessment_sha256": "f5c7edbbd412b889e7a11861dcd797c871094af19d779c2710ef09c6540201a1",
+                "previous_input_sha256": "75bbdab2536ee25e5e46dbb4e445b7776b6fdd083a33a34a7af6aab5bb34ae49"
+              },
+              {
+                "original_review_number": 120,
+                "group": "E",
+                "doi": "10.1103/bc7b-tfl6",
+                "previous_assessment_sha256": "25423da16abb463769d4cb0bc0753e051521e20a4b4908670fadf56c65a6cbc2",
+                "previous_input_sha256": "f6b755e9c83df6155eed993f71b500a6ccc2349dc7495836a8875017150f31fa"
+              },
+              {
+                "original_review_number": 121,
+                "group": "C",
+                "doi": "10.1103/wk2j-3bz9",
+                "previous_assessment_sha256": "9bbd53ebde89855f43985daad11e4a8c90cdc29ada4decf8a20a4bd7a889ef82",
+                "previous_input_sha256": "81045863406d8df79606c7255f5853466a133655dd0732bd352f6cc22d54aa4c"
+              },
+              {
+                "original_review_number": 122,
+                "group": "D",
+                "doi": "10.1103/fn1m-wn2b",
+                "previous_assessment_sha256": "40abc097e9cd8e247f289ff3b4aaf5c9798bdb03184da366a1af59213493b34f",
+                "previous_input_sha256": "e6e017b60dfe65e43c0d1c00ae91a654e64a2af3144dc11bffe2f26467e68c3a"
+              },
+              {
+                "original_review_number": 123,
+                "group": "F",
+                "doi": "10.1103/g76v-wxz7",
+                "previous_assessment_sha256": "b10378b4c8a46575641907ce7b4e1bb763942de466204f7835be8d2f8d7cf827",
+                "previous_input_sha256": "1f49032241717b08f750b501fd14e9d160a91d22b802312ba9ca8bd441e4631b"
+              },
+              {
+                "original_review_number": 124,
+                "group": "C",
+                "doi": "10.1103/72g7-gqdm",
+                "previous_assessment_sha256": "120a3a4e9a740e4113244c702f583e00d985fcef3c38ec19ef1c2b3cd86afc35",
+                "previous_input_sha256": "feaef8cce0470152ba11fcf20dbf38d61b029d12498a697c76516679f8665411"
+              },
+              {
+                "original_review_number": 125,
+                "group": "B",
+                "doi": "10.1103/ktnz-14ft",
+                "previous_assessment_sha256": "89c3226103d11ee4b580fd6e406dfaac93949395cc417b1aae5076c0b218cc5e",
+                "previous_input_sha256": "0b66bd17e417269fe4769f94bb396d0cefd53c842a662cbdaa9305ff0c4e29e5"
+              },
+              {
+                "original_review_number": 126,
+                "group": "E",
+                "doi": "10.1103/h2ys-c3rz",
+                "previous_assessment_sha256": "efe2e270d349ce878c0bbca312753f327d2cf7c541bcc0c127c6fc9e73bb181e",
+                "previous_input_sha256": "0ffddf35930b70d6d87c7f04b1ed14d397f80a85aeddde8ead54026c491b9edc"
+              },
+              {
+                "original_review_number": 127,
+                "group": "G",
+                "doi": "10.1103/z84g-799z",
+                "previous_assessment_sha256": "91dc68ac99a42f9d6cf1bc83ba2544b03c7fedcaa7d96f5a50d3d2e93c125ade",
+                "previous_input_sha256": "89ba90f6c49f058e2724fe00b54a278fda48aa6e40e7874577e5cc6c91590e0a"
+              },
+              {
+                "original_review_number": 128,
+                "group": "G",
+                "doi": "10.1103/mnvf-tq6g",
+                "previous_assessment_sha256": "46b9267d1a296cd79d383b0221fb060f4def2cdb5de7b0a898669195a29121f1",
+                "previous_input_sha256": "c6f9522309bf8769f3ef8f01fe9d4dcd9f71f09cf93c14c340e9213a52fe26cd"
+              },
+              {
+                "original_review_number": 129,
+                "group": "F",
+                "doi": "10.1103/6l5j-wkww",
+                "previous_assessment_sha256": "5563bda8200d80ec091e8ae49575075236cb336b5d6eff8310c16364a142a28a",
+                "previous_input_sha256": "10517c978437f0f3c6cfe7e3c7792b503f95a5f0d5fb5f164eb568d72dfd252b"
+              },
+              {
+                "original_review_number": 130,
+                "group": "F",
+                "doi": "10.1103/pgbz-zm8h",
+                "previous_assessment_sha256": "3f7e1892a027973145cb9584bbfe3edf7ad19129e793be323e1fcaf333f502a4",
+                "previous_input_sha256": "244f67101fbd87004786a41602d8a9f686346d6c0162d816915ad18e07409d71"
+              },
+              {
+                "original_review_number": 131,
+                "group": "B",
+                "doi": "10.1103/k8wj-xsl7",
+                "previous_assessment_sha256": "133df4fdbc8ac97a47915580a7514201a3bc3bdfb754fe902dc61e63ade9dcff",
+                "previous_input_sha256": "8292891feb272440a81be35358738987708c341b9cf779e05ae45c57b9257c50"
+              }
+            ]
           },
           {
-            "doi": "10.1103/m6s5-r1cq",
-            "previous_assessment_sha256": "c8acfed2a78d922af682a56784191fbc635fbd858d7e3fc910b19447d2b4d91a",
-            "previous_input_sha256": "153973211f699c30826d6de85effb99f8ebf532084846f45dcd741e916eaea78"
-          },
-          {
-            "doi": "10.1103/vxkg-41kp",
-            "previous_assessment_sha256": "e7022812e4b3a3518de0bc0439ea6d5629008de71dc1d66c10fa6f56c768bfa9",
-            "previous_input_sha256": "cdafb81dc165511d136bc206ad05eb9949feb004b59fcc8ca2a93fc8fa837ddc"
-          },
-          {
-            "doi": "10.1103/xsg5-cb6l",
-            "previous_assessment_sha256": "7579c037f7eee007c472b35eb9b9143ee294fb90b5467394d9b8f8c1b724f1ea",
-            "previous_input_sha256": "84b09f8349260c55dd38973f4d4c885a88b9dbd0f224fa5aa00f7247de388827"
-          },
-          {
-            "doi": "10.1103/g76v-wxz7",
-            "previous_assessment_sha256": "8179ef80bf5a2b83c06293a8e96d5d451ea9d4ec8ffe8d011181587defafc312",
-            "previous_input_sha256": "587b27303d452bc5766fbff9cccea0a2be6dfa67385e2102ceb402ff8694cbd0"
-          },
-          {
-            "doi": "10.1103/twww-yj1y",
-            "previous_assessment_sha256": "417194256debb78110de5eb9dc59aa7e482e32a71d45e60ddd1e6ddc4c418b1a",
-            "previous_input_sha256": "eb503ff9fb4e390b2a14b6fc6b4bff291256efb8e19a6b52bcb1e525a5c6096a"
+            "mode": "explicit_revision",
+            "source": {
+              "run": "reports/reviews/2026-10-05-editorial-revision-01",
+              "files": {
+                "candidates.json": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+                "coverage.json": "1db9fa851cb8c9bb42bfde89a49a9737d03dc436a01b76eaa0ee3c1752244c31",
+                "collection-log.jsonl": "e5788a9bc821842b9359f863c43506730929555706583eff444ad78675555e7f",
+                "screening-log.jsonl": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
+                "inputs/manifest.json": "569967c3366d6925aae54d9a1bd4bae094f96c3236c27472cc8615b22d2ecd5d",
+                "inputs/sources.json": "57e5da824686d586f5d9b85868900404b94f53d69b2b9f9da032069b05830cb9",
+                "inputs/screening-protocol.md": "6895762a419cef428a6b529bac618ca973ba815dc21ade5e7bd7c812c1e8f552"
+              },
+              "candidate_sha256": "ad692619bac549dbde87f32b5d9cfa4100e8c210a350ca6a2295428f7157b5b2",
+              "rule_sha256": "83170f4448c8365258a0254554804e6c2d10b985dd2c309909fddcd3a47a0442",
+              "screening_log_sha256": "11953e4eb841ae7c3f589af8ab07b1a1c85edd8f0afa60ea8b3062a168d38b1f"
+            },
+            "targets": [
+              {
+                "doi": "10.1103/mnvf-tq6g",
+                "previous_assessment_sha256": "09178bd1979d6676d17e0eb0f8fd96fd4ef5b44ab5207af4cfadc9885e4bc494",
+                "previous_input_sha256": "008f27840a46d9533919d348580648dc31f4025ee0b110827128088f2a3e4a45"
+              },
+              {
+                "doi": "10.1103/m6s5-r1cq",
+                "previous_assessment_sha256": "c8acfed2a78d922af682a56784191fbc635fbd858d7e3fc910b19447d2b4d91a",
+                "previous_input_sha256": "153973211f699c30826d6de85effb99f8ebf532084846f45dcd741e916eaea78"
+              },
+              {
+                "doi": "10.1103/vxkg-41kp",
+                "previous_assessment_sha256": "e7022812e4b3a3518de0bc0439ea6d5629008de71dc1d66c10fa6f56c768bfa9",
+                "previous_input_sha256": "cdafb81dc165511d136bc206ad05eb9949feb004b59fcc8ca2a93fc8fa837ddc"
+              },
+              {
+                "doi": "10.1103/xsg5-cb6l",
+                "previous_assessment_sha256": "7579c037f7eee007c472b35eb9b9143ee294fb90b5467394d9b8f8c1b724f1ea",
+                "previous_input_sha256": "84b09f8349260c55dd38973f4d4c885a88b9dbd0f224fa5aa00f7247de388827"
+              },
+              {
+                "doi": "10.1103/g76v-wxz7",
+                "previous_assessment_sha256": "8179ef80bf5a2b83c06293a8e96d5d451ea9d4ec8ffe8d011181587defafc312",
+                "previous_input_sha256": "587b27303d452bc5766fbff9cccea0a2be6dfa67385e2102ceb402ff8694cbd0"
+              },
+              {
+                "doi": "10.1103/twww-yj1y",
+                "previous_assessment_sha256": "417194256debb78110de5eb9dc59aa7e482e32a71d45e60ddd1e6ddc4c418b1a",
+                "previous_input_sha256": "eb503ff9fb4e390b2a14b6fc6b4bff291256efb8e19a6b52bcb1e525a5c6096a"
+              }
+            ]
           }
         ],
-        "parent_publication_files": {
-          "author-metadata.json": "5f974182ba952ff16dcfa646f503be31976aaa51b6597863bb3d583ad535dfb9"
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "bfbcad5a824e3dd9990b87c4954389e780c8fe8b514d01a12260e0852632dbea",
+          "audit": {
+            "archive": "reports/archive/legacy-2026-10-05/artifacts.zip",
+            "member": "reports/2026-09-expansion-editorial-publication-01/publication-log.jsonl",
+            "sha256": "86e4973a618dba4292af3cd03f3914c6821e7d650e4cd809a2b269cd70809d87"
+          }
         },
-        "parent_publication_hash_basis": "canonical_json"
+        "evidence_paths": {}
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
     },
     {
-      "run": "reports/2026-10-01-to-05-01",
+      "run": "reports/runs/2026-10-01-to-05-01",
       "config_sha256": "4f0d149157e88e8aef476090629438222ffcdc66f214c5493167750710497b70",
       "window_start": "2026-10-01",
       "window_end": "2026-10-05",
@@ -165,7 +1129,38 @@
       "screening_log_sha256": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd",
       "candidate_sha256": "dc75ce6ce454d24fc64d456eb026728896449d1777510b1576f5adb192a37204",
       "author_metadata_sha256": "bd94af1eee3d267618be092378528dba2f917c40c94b1e34192afed92bbe191e",
-      "run_manifest_sha256": "21c7d4a5957d33245a0b3711c53609db33f5fc01e8f3ec7690b59e07fdf5142a",
+      "run_manifest_sha256": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-01-to-05-01",
+          "files": {
+            "candidates.json": "dc75ce6ce454d24fc64d456eb026728896449d1777510b1576f5adb192a37204",
+            "coverage.json": "f05a77e479741e1233eb901b74552ae4ff614b6db9ecb7f2875825a0c1ced2bb",
+            "collection-log.jsonl": "a4af173c0b105487b2d8322dacd1eaa068c083020977c1c0e93cba65dfafe509",
+            "screening-log.jsonl": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+            "inputs/manifest.json": "21c7d4a5957d33245a0b3711c53609db33f5fc01e8f3ec7690b59e07fdf5142a",
+            "inputs/sources.json": "8ab88aa4903cb456aa0312364c755863b6ebb4d2fabe7925fab2838748f2c8ac",
+            "inputs/screening-protocol.md": "5531013ee907e21e5c5d959c7019794ca61b6dfbccbc1f9f6cf6a3f1b5b744ef"
+          },
+          "candidate_sha256": "dc75ce6ce454d24fc64d456eb026728896449d1777510b1576f5adb192a37204",
+          "rule_sha256": "e73b62366608c44854fc4d8a1abb2c55b762ef9baafaa6c3520b0ce1c6185c18",
+          "screening_log_sha256": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "bd94af1eee3d267618be092378528dba2f917c40c94b1e34192afed92bbe191e",
+          "audit": {
+            "path": "reports/runs/2026-10-01-to-05-01/screening-log.jsonl",
+            "sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d"
+          }
+        },
+        "evidence_paths": {
+          "prresearch-retest-02/coverage-verified.json": "evidence/prresearch-retest-02/coverage-verified.json",
+          "prresearch-retest-02/retest-log.jsonl": "evidence/prresearch-retest-02/retest-log.jsonl"
+        }
+      },
       "publication_evidence": {
         "version": "publication-evidence-1",
         "candidate_sha256": "dc75ce6ce454d24fc64d456eb026728896449d1777510b1576f5adb192a37204",
@@ -199,6 +1194,16 @@
             "decision_sha256": "11dd169e42ee98bce7b7c927bbf8ecc7fa516061a958f2defaa9b0a5cbbe0fb4",
             "editorial_verdict_sha256": "01575d550b7fde406e03b805784387386b4be1016c17cb5524186d50cfaff2aa",
             "identity_status": "url_identity_only_DOI_unconfirmed"
+          }
+        ],
+        "storage_files": [
+          {
+            "path": "evidence/prresearch-retest-02/coverage-verified.json",
+            "sha256": "67099b002ccb5ee4ff6cd8a1e08050b5179f21092017b70df11d40092861650d"
+          },
+          {
+            "path": "evidence/prresearch-retest-02/retest-log.jsonl",
+            "sha256": "d7a9d7ea1c612b75323c4fb5f9eb3ec14b57e3781076f7d3a1924588efde0e2e"
           }
         ]
       },

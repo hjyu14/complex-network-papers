@@ -1,15 +1,11 @@
 """Read-only, explicitly pinned adjudication references; never manufacture reviews."""
-import hashlib
 import json
 from pathlib import Path
 from collections import Counter
 import screen_candidates as screen
 from collect_candidates import EventLog
 from run_inputs import digest
-
-
-def file_sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+from report_io import file_sha, read_reference, checked_path
 
 
 def publication_metadata_reference(out):
@@ -213,9 +209,116 @@ class PublicationView:
 
 
 def publication_workflow(out, _seen=()):
+    if (Path(out)/'publication.json').exists():
+        return FlatPublicationView(out)
     if (Path(out)/'release-view.json').exists():
         return PublicationView(out, _seen)
     return screen.Workflow(out)
+
+
+def verify_assessments(w):
+    """Check historical rule/input bindings without reinterpreting old decisions."""
+    verify_original(w)
+    if w.status()['not_assessed'] or w.status()['deferred_unassessed']:
+        raise ValueError('Source has unassessed records')
+    rules = {w.rule_sha, w.log.events[0]['data']['rule_sha256']}
+    for e in w.log.events:
+        if e['kind'] == 'rules_revised':
+            rules.update([e['data']['rule_sha256'], e['data']['previous_rule_sha256']])
+    for d in w.assessments():
+        r = w.records[d['doi']]
+        if (d['rule_sha256'] not in rules or d['input_sha256'] != digest({
+                'record':r, 'material_sha256':d['material_sha256'],
+                'hard_checks':d['hard_checks'], 'rule_sha256':d['rule_sha256']})
+                or d.get('record_sha256', digest(r)) != digest(r)
+                or d.get('candidate_sha256', w.input_sha) != w.input_sha):
+            raise ValueError('Source assessment input mismatch')
+
+
+class FlatPublicationView(PublicationView):
+    """One inventory plus an explicit ordered list of bound amendments, never nested views."""
+    def __init__(self, out):
+        self.out = Path(out).resolve()
+        self.manifest_path = self.out/'publication.json'
+        self.manifest = json.loads(self.manifest_path.read_text(encoding='utf8'))
+        if self.manifest['version'] != 'flat-publication-1':
+            raise ValueError('Unknown flat publication version')
+        base = screen.Workflow(self.out)
+        verify_assessments(base)
+        if source_reference(base) != self.manifest['inventory']:
+            raise ValueError('Pinned inventory changed')
+        self.sources = [base]
+        self.config, self.pool, self.records = base.config, base.pool, base.records
+        self.input_sha, self.rule_sha, self.log = base.input_sha, base.rule_sha, base.log
+        self.latest = {d['doi']:d for d in base.assessments()}
+        self.bindings = {digest(e['data']):base.input_sha for e in base.log.events
+                         if e['kind'] in {'assessment','assessment_corrected'}}
+        seen = {self.out}
+        for stage in self.manifest['revisions']:
+            ref = stage['source']
+            path = checked_path(screen.ROOT/'reports', Path(ref['run']).relative_to('reports'))
+            if path in seen or (path/'publication.json').exists() or (path/'release-view.json').exists():
+                raise ValueError('Revisions must reference distinct direct review runs')
+            seen.add(path)
+            child = screen.Workflow(path)
+            verify_assessments(child)
+            if source_reference(child) != ref or child.rule_sha != child.log.events[0]['data']['rule_sha256']:
+                raise ValueError('Pinned review changed')
+            if (child.pool['window_start'],child.pool['window_end']) != (self.pool['window_start'],self.pool['window_end']):
+                raise ValueError('Revision window mismatch')
+            new = {d['doi']:d for d in child.assessments()}
+            relevant = set(child.records) & set(self.records)
+            targets = {t['doi']:t for t in stage['targets']}
+            if not relevant or len(targets)!=len(stage['targets']) or set(targets)!=relevant:
+                raise ValueError('Revision target set mismatch')
+            if stage['mode']=='resolve_pending':
+                pending = {doi for doi,d in self.latest.items() if d['category']=='review'}
+                if relevant != pending or set(child.records)!=pending:
+                    raise ValueError('Pending adjudication must resolve exactly the unresolved set')
+            elif stage['mode']!='explicit_revision':
+                raise ValueError('Unknown amendment mode')
+            for doi in relevant:
+                d, old, t = new[doi], self.latest[doi], targets[doi]
+                if child.records[doi]!=self.records[doi] or d['category'] not in {'core','transferable_application','excluded'}:
+                    raise ValueError('Changed candidate or unresolved revision')
+                for key,expected in [('previous_assessment_sha256',digest(old)),('previous_input_sha256',old['input_sha256'])]:
+                    if d.get(key)!=expected or t.get(key)!=expected:
+                        raise ValueError('Revision does not bind the previous assessment')
+                if stage['mode']=='explicit_revision':
+                    verdict=next((e['data'] for e in child.log.events if e['kind']=='user_editorial_verdict'
+                        and digest(e['data'])==d.get('editorial_basis',{}).get('verdict_sha256')),None)
+                    if (not verdict or verdict.get('authority')!='human user in current conversation'
+                            or verdict.get('statement_kind') not in {'explicit_individual_verdict','explicit_group_verdict'}
+                            or not verdict.get('user_statement') or verdict.get('doi')!=doi
+                            or verdict.get('title')!=self.records[doi]['title']
+                            or verdict.get('record_sha256')!=digest(self.records[doi])
+                            or verdict.get('candidate_sha256')!=child.input_sha
+                            or verdict.get('verdict')!=('exclude' if d['category']=='excluded' else 'include')):
+                        raise ValueError('Revision lacks an explicit bound user verdict')
+                self.latest[doi]=d
+            self.sources.append(child)
+            self.bindings.update({digest(e['data']):child.input_sha for e in child.log.events
+                                 if e['kind'] in {'assessment','assessment_corrected'}})
+        if any(d['category']=='review' for d in self.latest.values()):
+            raise ValueError('Publication still has unresolved records')
+        authors=self.manifest['authors']
+        if authors['file']!='author-metadata.json':
+            raise ValueError('Author metadata must use the canonical run filename')
+        self.author_events=EventLog.from_bytes(read_reference(authors['audit'],screen.ROOT)).events
+        metadata=json.loads((self.out/authors['file']).read_text(encoding='utf8'))
+        if (digest(metadata)!=authors['metadata_sha256'] or not any(
+                e['kind']=='author_metadata_completed' and e['data']['metadata_sha256']==digest(metadata)
+                for e in self.author_events)):
+            raise ValueError('Author metadata lacks matching audit evidence')
+
+    def candidate_binding(self, decision):
+        try:
+            return self.bindings[digest(decision)]
+        except KeyError:
+            raise ValueError('Assessment is absent from the explicit source history') from None
+
+    def evidence_path(self, relative):
+        return checked_path(self.out, self.manifest.get('evidence_paths',{}).get(relative,relative))
 
 
 def publisher_url(record, decision):

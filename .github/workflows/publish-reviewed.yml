@@ -31,6 +31,8 @@ jobs:
           python-version: '3.12'
       - name: Verify reviewed data and interface
         run: |
+          python scripts/manage_runs.py check-layout
+          python scripts/manage_runs.py verify-archive --manifest reports/archive/legacy-2026-10-05/manifest.json
           python -m unittest discover -s tests -v
           python scripts/publish_snapshot.py --check
           node --check site/app.js
