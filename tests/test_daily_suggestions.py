@@ -14,6 +14,7 @@ class SuggestionTests(unittest.TestCase):
         self.config = json.loads((root/'config/daily-suggestions.json').read_text(encoding='utf-8'))
         e = self.config['entries'][0]
         self.papers = {e['doi']: {'assessment_sha256': e['assessment_sha256'],
+            'title': 'Cross-order induced behaviors in contagion dynamics on higher-order networks',
             'input_sha256': e['input_sha256'], 'review_evidence_kind': e['review_evidence_kind'],
             'review_evidence_sha256': e['evidence_sha256']}}
         self.sources = {(e['source_run'], e['assessment_sha256']): {'publication_sha256': e['publication_sha256'],
@@ -25,8 +26,33 @@ class SuggestionTests(unittest.TestCase):
 
     def test_valid_and_duplicate_history(self):
         self.assertEqual(len(self.check()), 1)
+        self.assertEqual(self.check()[0]['review_evidence_kind'], 'fulltext')
         wrong = deepcopy(self.config); wrong['entries'].append(deepcopy(wrong['entries'][0]))
         with self.assertRaisesRegex(ValueError, 'once'): self.check(wrong)
+
+    def test_revision_must_bind_preserved_history(self):
+        wrong = deepcopy(self.config)
+        wrong['revisions'][0]['supersedes_sha256'] = '0'*64
+        with self.assertRaisesRegex(ValueError, 'predecessor'): self.check(wrong)
+        wrong = deepcopy(self.config)
+        wrong['entries'][0]['question']['zh'] = 'Rewritten history'
+        with self.assertRaisesRegex(ValueError, 'predecessor'): self.check(wrong)
+
+    def test_fulltext_identity_and_private_fields_rejected(self):
+        for change in [{'doi': '10.1234/wrong'}, {'title': 'Wrong paper'},
+                       {'sha256': 'wrong'}, {'pages': 0}, {'reviewed_at':'2026-10-07T00:00:00+08:00'},
+                       {'source_url': 'file:///private/paper.pdf'}, {'file': '.private/paper.pdf'}]:
+            wrong = deepcopy(self.config)
+            wrong['revisions'][0]['fulltext_review'].update(change)
+            with self.subTest(change=change), self.assertRaises(ValueError): self.check(wrong)
+
+    def test_rereading_and_screening_bindings_are_independent(self):
+        wrong = deepcopy(self.config)
+        wrong['revisions'][0]['evidence_sha256'] = wrong['revisions'][0]['fulltext_review']['sha256']
+        with self.assertRaisesRegex(ValueError, 'assessment/evidence'): self.check(wrong)
+        wrong = deepcopy(self.config)
+        wrong['revisions'][0]['reading_comment']['zh'] = []
+        with self.assertRaisesRegex(ValueError, 'paragraphs'): self.check(wrong)
 
     def test_current_evidence_change_requires_reread(self):
         self.papers[next(iter(self.papers))]['review_evidence_sha256'] = 'changed'

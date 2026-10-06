@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T06:23:13.014693+00:00",
+  "generated_at": "2026-10-06T10:31:07.008265+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-10-06",
   "window_days": 36,
@@ -14941,6 +14941,87 @@
       "assessment_sha256": "a66d6168e76d358497f0ee9af830e39dba2914bf089d3f0187a94789952b47a6",
       "input_sha256": "5e9974a1e4993adcc4443ebf5caa82a8c6638944eea10c34a1950f94a5e7957c",
       "evidence_sha256": "dd4438998f25b10450c7b12ce5f49a0df6048fc9a97e928a5b6a53730b24f7fc",
+      "review_evidence_kind": "fulltext",
+      "reviewed_at": "2026-10-06T15:43:21+08:00",
+      "question": {
+        "zh": "高阶行为的信号，能告诉我们真实作用发生在哪一阶吗？",
+        "en": "Can a higher-order behavioral signal tell us the order of the underlying mechanism?"
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "学会设计机制关闭对照",
+            "en": "Build a mechanism-off control"
+          },
+          "text": {
+            "zh": "关闭目标阶机制，保留其他阶作用，再检查信号是否消失。图 4 的对照能启发我们检验指标是否受到跨阶效应干扰。",
+            "en": "Disable the target-order mechanism while retaining other orders, then check whether the signal disappears. Figure 4 suggests a control for cross-order interference."
+          }
+        },
+        {
+          "heading": {
+            "zh": "按任务选指标",
+            "en": "Match the measure to the task"
+          },
+          "text": {
+            "zh": "将“检测到依赖”和“找对机制阶数”分开评估。图 5 中协同信息更能区分阶数，提醒我们按推断目标选择指标。",
+            "en": "Evaluate dependence detection separately from correct mechanism-order identification. Synergy is more selective for order in Figure 5: choose measures for the inference task."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把测量尺度纳入验证",
+            "en": "Test across measurement scales"
+          },
+          "text": {
+            "zh": "改变测量节点组的大小，比较相邻阶的响应。若更大的组仍有信号，就应检查指标能否定位具体阶数；迁移到自己的模型时也可沿用这一测试。",
+            "en": "Vary measured group size and compare neighboring orders. If larger groups retain a signal, test whether the measure can locate the specific order. Reuse this check in your own model."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "高阶网络、传播动力学、信息论与网络推断研究者。",
+        "en": "Researchers in higher-order networks, contagion dynamics, information theory and network inference."
+      },
+      "reading_caveat": {
+        "zh": "依据用户提供的正式出版版 PDF（18 页）阅读全文，涵盖正文、附录 A–E 与图 1–13。推荐与可复用经验为 AI 编辑意见；结果限于文中测试的 SIS 与随机高阶网络，未独立复现实验。",
+        "en": "Based on a full reading of the user-provided publisher PDF (18 pages), including the main text, Appendices A-E and Figures 1-13. Recommendations and reusable lessons are AI editorial judgments. Findings apply to the tested SIS and random higher-order networks; experiments were not independently reproduced."
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它用 SIS 模型给出一个值得警惕的反例：某阶机制已关闭，该阶行为信号仍可能存在。",
+          "值得带走的是它的验证思路：用机制开关与跨阶比较，检验指标究竟识别了什么。做高阶网络推断时，这套对照值得借鉴。"
+        ],
+        "en": [
+          "Today's pick offers a revealing SIS counterexample: a signal can persist at an order whose mechanism has been disabled.",
+          "Take away its validation strategy: use mechanism switches and cross-order comparisons to test what a measure actually identifies. These controls are worth borrowing for higher-order network inference."
+        ]
+      },
+      "supersedes_sha256": "d9ae7e4489e04da5a2a5eafbb2f3c51b88cd7a1fff31b42c45183761aaa07c52",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1103/pngx-s5xx",
+        "title": "Cross-order induced behaviors in contagion dynamics on higher-order networks",
+        "sha256": "dcbdfed35a7943bc918e345ee2a7311e505aac3209b380914feda5b58697487b",
+        "version": "Physical Review Research 8, 043010 (2026), published 2026-10-05",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/pngx-s5xx",
+        "source_kind": "user_provided_pdf",
+        "pages": 18,
+        "read_scope": "Complete main text, Appendices A-E, equations and Figures 1-13; rendered visual checks. Code and numerical experiments were not independently reproduced.",
+        "reviewed_at": "2026-10-06T15:43:21+08:00"
+      }
+    }
+  ],
+  "daily_suggestions_history": [
+    {
+      "doi": "10.1103/pngx-s5xx",
+      "recommended_on": "2026-10-06",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-05-to-06-carryover-01",
+      "publication_sha256": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+      "assessment_sha256": "a66d6168e76d358497f0ee9af830e39dba2914bf089d3f0187a94789952b47a6",
+      "input_sha256": "5e9974a1e4993adcc4443ebf5caa82a8c6638944eea10c34a1950f94a5e7957c",
+      "evidence_sha256": "dd4438998f25b10450c7b12ce5f49a0df6048fc9a97e928a5b6a53730b24f7fc",
       "review_evidence_kind": "abstract",
       "reviewed_at": "2026-10-06T14:22:47+08:00",
       "question": {
@@ -14987,7 +15068,86 @@
         "en": "Based on a rereading of the identity-matched explicit abstract and the saved assessment. The reported findings apply to the model and comparisons described there. The full text, algorithms and numerical results have not been independently reviewed or verified.",
         "zh": "依据回读的身份匹配明确摘要及已保存审核记录。研究结果限于摘要报告的模型与比较范围；未审读全文，也未独立验证算法或数值结果。推荐理由中的阅读价值判断属于 AI 的编辑意见。"
       }
+    },
+    {
+      "doi": "10.1103/pngx-s5xx",
+      "recommended_on": "2026-10-06",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-05-to-06-carryover-01",
+      "publication_sha256": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+      "assessment_sha256": "a66d6168e76d358497f0ee9af830e39dba2914bf089d3f0187a94789952b47a6",
+      "input_sha256": "5e9974a1e4993adcc4443ebf5caa82a8c6638944eea10c34a1950f94a5e7957c",
+      "evidence_sha256": "dd4438998f25b10450c7b12ce5f49a0df6048fc9a97e928a5b6a53730b24f7fc",
+      "review_evidence_kind": "fulltext",
+      "reviewed_at": "2026-10-06T15:43:21+08:00",
+      "question": {
+        "zh": "高阶行为的信号，能告诉我们真实作用发生在哪一阶吗？",
+        "en": "Can a higher-order behavioral signal tell us the order of the underlying mechanism?"
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "学会设计机制关闭对照",
+            "en": "Build a mechanism-off control"
+          },
+          "text": {
+            "zh": "关闭目标阶机制，保留其他阶作用，再检查信号是否消失。图 4 的对照能启发我们检验指标是否受到跨阶效应干扰。",
+            "en": "Disable the target-order mechanism while retaining other orders, then check whether the signal disappears. Figure 4 suggests a control for cross-order interference."
+          }
+        },
+        {
+          "heading": {
+            "zh": "按任务选指标",
+            "en": "Match the measure to the task"
+          },
+          "text": {
+            "zh": "将“检测到依赖”和“找对机制阶数”分开评估。图 5 中协同信息更能区分阶数，提醒我们按推断目标选择指标。",
+            "en": "Evaluate dependence detection separately from correct mechanism-order identification. Synergy is more selective for order in Figure 5: choose measures for the inference task."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把测量尺度纳入验证",
+            "en": "Test across measurement scales"
+          },
+          "text": {
+            "zh": "改变测量节点组的大小，比较相邻阶的响应。若更大的组仍有信号，就应检查指标能否定位具体阶数；迁移到自己的模型时也可沿用这一测试。",
+            "en": "Vary measured group size and compare neighboring orders. If larger groups retain a signal, test whether the measure can locate the specific order. Reuse this check in your own model."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "高阶网络、传播动力学、信息论与网络推断研究者。",
+        "en": "Researchers in higher-order networks, contagion dynamics, information theory and network inference."
+      },
+      "reading_caveat": {
+        "zh": "依据用户提供的正式出版版 PDF（18 页）阅读全文，涵盖正文、附录 A–E 与图 1–13。推荐与可复用经验为 AI 编辑意见；结果限于文中测试的 SIS 与随机高阶网络，未独立复现实验。",
+        "en": "Based on a full reading of the user-provided publisher PDF (18 pages), including the main text, Appendices A-E and Figures 1-13. Recommendations and reusable lessons are AI editorial judgments. Findings apply to the tested SIS and random higher-order networks; experiments were not independently reproduced."
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它用 SIS 模型给出一个值得警惕的反例：某阶机制已关闭，该阶行为信号仍可能存在。",
+          "值得带走的是它的验证思路：用机制开关与跨阶比较，检验指标究竟识别了什么。做高阶网络推断时，这套对照值得借鉴。"
+        ],
+        "en": [
+          "Today's pick offers a revealing SIS counterexample: a signal can persist at an order whose mechanism has been disabled.",
+          "Take away its validation strategy: use mechanism switches and cross-order comparisons to test what a measure actually identifies. These controls are worth borrowing for higher-order network inference."
+        ]
+      },
+      "supersedes_sha256": "d9ae7e4489e04da5a2a5eafbb2f3c51b88cd7a1fff31b42c45183761aaa07c52",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1103/pngx-s5xx",
+        "title": "Cross-order induced behaviors in contagion dynamics on higher-order networks",
+        "sha256": "dcbdfed35a7943bc918e345ee2a7311e505aac3209b380914feda5b58697487b",
+        "version": "Physical Review Research 8, 043010 (2026), published 2026-10-05",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/pngx-s5xx",
+        "source_kind": "user_provided_pdf",
+        "pages": 18,
+        "read_scope": "Complete main text, Appendices A-E, equations and Figures 1-13; rendered visual checks. Code and numerical experiments were not independently reproduced.",
+        "reviewed_at": "2026-10-06T15:43:21+08:00"
+      }
     }
   ],
-  "daily_suggestions_sha256": "1b4fb2b2bf4028c950bcd5d98d3b782af1a619622f16e94dd3f13a14313da764"
+  "daily_suggestions_sha256": "6e989a933eb8fe1ae59afb54861aab4378383f27396faffce1b503de676f7f94"
 }

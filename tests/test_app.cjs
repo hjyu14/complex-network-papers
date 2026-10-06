@@ -174,7 +174,7 @@ test('reader-facing journal groups match the configured spotlight scope', () => 
   assert.deepEqual(groups.map(g => g[1]), ['Spotlight journals', 'Other included journals', 'Spotlight 期刊', '其他收录期刊']);
   const names = group => [...group[2].matchAll(/<li>(.*?)<\/li>/g)].map(m => m[1]);
   const featured = collectionConfig.journals.filter(j => collectionConfig.featured_journals.includes(j.short)).map(j => j.name).sort();
-  const other = collectionConfig.journals.filter(j => !collectionConfig.featured_journals.includes(j.short)).map(j => j.name).sort();
+  const other = collectionConfig.journals.filter(j => !collectionConfig.featured_journals.includes(j.short)).map(j => j.short === 'Chaos' ? 'Chaos' : j.name).sort();
   assert.deepEqual(names(groups[0]).sort(), featured);
   assert.deepEqual(names(groups[1]).sort(), other);
   assert.deepEqual(names(groups[2]).sort(), featured);
@@ -290,9 +290,29 @@ test('language switch preserves filters, paper titles and authors', async () => 
   assert.match(card.children[2].children[0].textContent,/incomplete/);
 });
 
-test('journal options abbreviate only PNAS', async () => {
+test('journal display uses PNAS and Chaos and otherwise full names', async () => {
   const {node} = setup(); await ready();
-  assert.deepEqual(node('#journal').children.map((n)=>n.textContent),config.journals.map((j)=>j.short==='PNAS'?'PNAS':j.name));
+  assert.deepEqual(node('#journal').children.map((n)=>n.textContent),config.journals.map((j)=>['PNAS','Chaos'].includes(j.short)?j.short:j.name));
+  const {context,node:expandedNode} = setup('newflow-1', collectionConfig); await ready();
+  assert.equal(vm.runInContext('journalLabel({journal_short:"Chaos",journal:"Chaos: An Interdisciplinary Journal of Nonlinear Science"})',context),'Chaos');
+  expandedNode('#journal').events.change({target:{value:'Chaos'}});
+  assert.match(expandedNode('#result-count').textContent,/ · Chaos$/);
+});
+
+test('published full-text commentary renders bilingually with its actual reading basis', async () => {
+  const {node,context,data} = setup(); await ready();
+  const snapshot = JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  const entry = snapshot.daily_suggestions[0];
+  assert.equal(entry.review_evidence_kind,'fulltext');
+  assert.equal(entry.reasons.length,3);
+  data.daily_suggestions = [{...entry,doi:data.papers[0].doi}];
+  vm.runInContext('renderSnapshot()',context);
+  const texts = n => [n.textContent,...n.children.flatMap(texts)].join(' ');
+  assert.match(texts(node('#suggestion-content')),/mechanism switches/);
+  node('#language-toggle').events.click();
+  assert.match(texts(node('#suggestion-content')),/机制开关与跨阶比较/);
+  assert.match(texts(node('#suggestion-content')),/阅读全文/);
+  assert.doesNotMatch(texts(node('#suggestion-content')),/本地.*草稿/);
 });
 
 test('published expansion adds four filter journals without changing spotlight membership', async () => {

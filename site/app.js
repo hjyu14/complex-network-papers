@@ -34,6 +34,7 @@ function readingNote(paper) {
   return element("p", "reading-note", tr(paper.note_en, paper.note_zh));
 }
 function journalLabel(paper) {
+  if (paper.journal_short === "Chaos" || paper.short === "Chaos") return "Chaos";
   return paper.journal_short === "PNAS" || paper.short === "PNAS" ? "PNAS" : paper.journal || paper.name;
 }
 function renderSuggestion() {
@@ -48,13 +49,19 @@ function renderSuggestion() {
   const intro = element("div", "suggestion-intro");
   const meta = element("div", "feature-top");
   const journal = element("span", "journal-badge", journalLabel(paper));
-  journal.title = paper.journal;
+  journal.title = journalLabel(paper);
   meta.append(journal, timeNode(paper));
   if (paper.publication_status === "accepted") meta.append(statusBadge(paper));
   const title = element("h3"); title.append(link(paper.title, paper.url));
   intro.append(meta, title, element("p", "authors", paper.authors.join(" · ")),
-    element("p", "suggestion-question", tr(entry.question.en, entry.question.zh)),
-    link(tr("Read paper ↗", "阅读原文 ↗"), paper.url, "suggestion-link"));
+    element("p", "suggestion-question", tr(entry.question.en, entry.question.zh)));
+  if (entry.reading_comment) {
+    const comment = element("div", "suggestion-comment");
+    tr(entry.reading_comment.en, entry.reading_comment.zh).forEach(paragraph =>
+      comment.append(element("p", "", paragraph)));
+    intro.append(comment);
+  }
+  intro.append(link(tr("Read paper ↗", "阅读原文 ↗"), paper.url, "suggestion-link"));
   const reasons = element("div", "suggestion-reasons");
   reasons.append(element("h4", "", tr("Why read it", "为什么值得读")));
   entry.reasons.forEach((reason, index) => {
@@ -89,7 +96,7 @@ function featureCard(paper) {
   const card = element("article", "feature-card");
   const top = element("div", "feature-top");
   const journal = element("span", "journal-badge", journalLabel(paper));
-  journal.title = paper.journal;
+  journal.title = journalLabel(paper);
   top.append(journal, timeNode(paper));
   if (paper.publication_status === "accepted") top.append(statusBadge(paper));
   const type = articleBadge(paper);
@@ -105,7 +112,7 @@ function paperCard(paper) {
   const card = element("article", "paper-card");
   const top = element("div", "paper-top");
   const journal = element("span", "journal-name", journalLabel(paper) || tr("Journal unavailable", "期刊名称缺失"));
-  journal.title = paper.journal;
+  journal.title = journalLabel(paper);
   top.append(journal);
   top.append(timeNode(paper));
   if (paper.publication_status === "accepted") top.append(statusBadge(paper));
@@ -172,7 +179,8 @@ function renderResults() {
     (!query || [paper.title, paper.journal, paper.journal_short, paper.doi, ...paper.authors].join(" ").toLowerCase().includes(query))
   );
   $("#latest-title").textContent = state.scope === "featured" ? tr("Spotlight papers", "Spotlight 文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("All papers", "全部文献");
-  const journalName = state.data.journals.find((j) => j.short === state.journal)?.name;
+  const selectedJournal = state.data.journals.find((j) => j.short === state.journal);
+  const journalName = selectedJournal && journalLabel(selectedJournal);
   $("#result-count").textContent = `${results.length} ${tr(results.length === 1 ? "paper" : "papers", "篇文献")}${journalName ? " · " + journalName : ""}${state.category === "all" ? "" : " · " + categoryLabel(state.category)}`;
   const pages = Math.max(1, Math.ceil(results.length / state.pageSize));
   if (state.page > pages) state.page = pages;
