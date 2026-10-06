@@ -63,20 +63,28 @@ def publication_evidence(w):
     return evidence
 
 
-def merge_coverage(parts):
+def merge_coverage(parts, allowed_overlaps=(), verified_dois=None):
     """Deduplicate equal windows; sum only disjoint, contiguous journal inventories."""
     merged = []
     for journal, windows in parts.items():
         ordered = sorted(windows.items())
         previous_end = None
+        has_overlap = False
         for (start, end), _ in ordered:
-            if previous_end is not None and date.fromisoformat(start) != date.fromisoformat(previous_end)+timedelta(days=1):
+            for previous, _ in ordered:
+                if previous >= (start,end):
+                    continue
+                if start <= previous[1]:
+                    if (journal, previous, (start,end)) not in allowed_overlaps:
+                        raise ValueError('Journal coverage windows must be disjoint and contiguous: '+journal)
+                    has_overlap = True
+            if previous_end is not None and date.fromisoformat(start) > date.fromisoformat(previous_end)+timedelta(days=1):
                 raise ValueError('Journal coverage windows must be disjoint and contiguous: '+journal)
-            previous_end = end
+            previous_end = max(previous_end or end, end)
         rows = [c for _, (c, _) in ordered]
         dois = set().union(*(ds for _, (_, ds) in ordered))
         merged.append({'journal': journal, 'candidate_count': len(dois),
-            'publisher_verified_inventory_count': sum(c['publisher_verified_inventory_count'] for c in rows),
+            'publisher_verified_inventory_count': len(verified_dois.get(journal,set())) if has_overlap and verified_dois is not None else sum(c['publisher_verified_inventory_count'] for c in rows),
             'candidate_inventory_complete': all(c['candidate_inventory_complete'] for c in rows),
             'metadata_reconciliation_complete': all(c['metadata_reconciliation_complete'] for c in rows),
             'windows': [{'window_start': key[0], 'window_end': key[1], **c} for key, (c, _) in ordered]})
@@ -102,7 +110,7 @@ def author_record(row, record):
 
 
 
-def build_snapshot(out, notes=None):
+def build_snapshot(out, notes=None, *, _superseded_dois=()):
     w = publication_workflow(out)
     legacy = w.out == (ROOT/'reports/2026-09').resolve()
     if w.active():
@@ -119,7 +127,7 @@ def build_snapshot(out, notes=None):
         notes = json.loads((ROOT/'config/publication-notes.json').read_text(encoding='utf-8'))
     latest = w.assessments()
     included = [d for d in latest if d['category'] in {'core', 'transferable_application'}]
-    if set(notes['papers']) != {d['doi'] for d in included}:
+    if set(notes['papers']) != {d['doi'] for d in included} - set(_superseded_dois):
         raise ValueError('Notes must match exactly the current included DOI set')
     author_data = json.loads((w.out/'author-metadata.json').read_text(encoding='utf-8'))
     if author_data['candidate_sha256'] != w.input_sha or set(author_data['records']) != {d['doi'] for d in included}:
@@ -135,8 +143,11 @@ def build_snapshot(out, notes=None):
     papers = []
     for d in included:
         r = w.records[d['doi']]
-        n = notes['papers'][d['doi']]
         a = author_record(author_data['records'][d['doi']], r)
+        # Only build_release supplies this set after validating an explicit overlap audit.
+        if d['doi'] in _superseded_dois:
+            continue
+        n = notes['papers'][d['doi']]
         if n['assessment_sha256'] != digest(d):
             raise ValueError('Reading note refers to a superseded assessment: '+d['doi'])
         if d['input_sha256'] != digest({'record': r, 'material_sha256': d['material_sha256'],
@@ -312,23 +323,54 @@ def build_release(runs):
     papers, candidates, coverage, inputs = {}, {}, {}, []
     coverage_parts = {}
     windows = []
+    from audit_carryover import load_audit
+    overlap_audits, replacements, superseded, allowed_overlaps, verified_dois = [], {}, {}, set(), {}
+    audit_memo = {}
+    for index, run in enumerate(runs):
+        view = publication_workflow(run)
+        audit = load_audit(view, runs[:index], _memo=audit_memo) if isinstance(view, PublicationView) else None
+        if not audit:
+            continue
+        overlap_audits.append(audit)
+        current_run = view.out.relative_to(ROOT).as_posix()
+        for row in audit['records']:
+            if row.get('assessment_sha256') and row['history_status']=='assessed':
+                replacements[(current_run,row['doi'])] = row
+                superseded.setdefault(row['previous_run'],set()).add(row['doi'])
+        current_window = (audit['window_start'],audit['window_end'])
+        for journal, previous in audit['previous_windows'].items():
+            for start,end in previous:
+                prior = (start,end)
+                if start <= current_window[1] and current_window[0] <= end:
+                    a,b = sorted([prior,current_window])
+                    allowed_overlaps.add((journal,a,b))
     for run in runs:
         w = publication_workflow(run)
+        relative = w.out.relative_to(ROOT).as_posix()
         current_window = (w.pool['window_start'], w.pool['window_end'])
         windows.append(current_window)
         latest = {d['doi']: d for d in w.assessments()}
         own = {doi for doi, d in latest.items() if d['category'] in {'core', 'transferable_application'}}
         if not own <= set(notes['papers']):
             raise ValueError('Missing reading note for selected inclusion')
-        scoped = {**notes, 'papers': {doi: notes['papers'][doi] for doi in sorted(own)}}
-        part = build_snapshot(run, scoped)['papers.json']
+        hidden = superseded.get(relative,set())
+        scoped = {**notes, 'papers': {doi: notes['papers'][doi] for doi in sorted(own-hidden)}}
+        part = build_snapshot(run, scoped, _superseded_dois=hidden)['papers.json']
         for doi, record in w.records.items():
             if record['window_membership'] != 'in_window':
                 continue
             value = {'record': record, 'decision': latest[doi]}
             if doi in candidates and candidates[doi] != value:
-                raise ValueError('Conflicting candidate/assessment across runs: '+doi)
+                target = replacements.get((relative,doi))
+                previous = candidates[doi]
+                if (not target or target['previous_record_sha256'] != digest(previous['record'])
+                        or target['previous_assessment_sha256'] != digest(previous['decision'])
+                        or target['record_sha256'] != digest(record)
+                        or target['assessment_sha256'] != digest(latest[doi])):
+                    raise ValueError('Conflicting candidate/assessment across runs: '+doi)
             candidates[doi] = value
+            if record.get('publisher_records'):
+                verified_dois.setdefault(record['journal'],set()).add(doi)
         for paper in part['papers']:
             doi = paper['doi']
             if doi in papers and papers[doi] != paper:
@@ -338,7 +380,16 @@ def build_release(runs):
             dois = {doi for doi, r in w.records.items() if r['journal'] == c['journal'] and r['window_membership'] == 'in_window'}
             previous = coverage_parts.setdefault(c['journal'], {}).get(current_window)
             if previous is not None and previous != (c, dois):
-                raise ValueError('Conflicting journal coverage across runs: '+c['journal'])
+                if (c['journal'],current_window,current_window) not in allowed_overlaps:
+                    raise ValueError('Conflicting journal coverage across runs: '+c['journal'])
+                old_coverage, old_dois = previous
+                dois |= old_dois
+                observations = old_coverage.get('observations',[old_coverage]) + [c]
+                c = {'journal':c['journal'],'candidate_count':len(dois),
+                     'publisher_verified_inventory_count':len(verified_dois.get(c['journal'],set())),
+                     'candidate_inventory_complete':all(x['candidate_inventory_complete'] for x in observations),
+                     'metadata_reconciliation_complete':all(x['metadata_reconciliation_complete'] for x in observations),
+                     'observations':observations}
             coverage_parts[c['journal']][current_window] = (c, dois)
         input_manifest = w.manifest_path if isinstance(w, PublicationView) else w.out/'inputs/manifest.json'
         inputs.append({'run': w.out.relative_to(ROOT).as_posix(), 'config_sha256': part['config_sha256'],
@@ -351,7 +402,7 @@ def build_release(runs):
                        'candidate_inventory_complete': part['candidate_inventory_complete'],
                        'metadata_reconciliation_complete': part['metadata_reconciliation_complete']})
     window = (min(v[0] for v in windows), max(v[1] for v in windows))
-    merged_coverage = merge_coverage(coverage_parts)
+    merged_coverage = merge_coverage(coverage_parts,allowed_overlaps,verified_dois)
     # Every displayed journal must span the advertised range, without an uncollected gap.
     for c in merged_coverage:
         if (c['windows'][0]['window_start'], c['windows'][-1]['window_end']) != window:
@@ -393,6 +444,9 @@ def build_release(runs):
             'Coverage flags preserve original source-relative enumeration limits; separately pinned supplemental evidence is retained in run_inputs.',
             'Assistant screening of authorized evidence and explicit user decisions; not full-text expert review.'],
         'papers': rows}
+    if overlap_audits:
+        snapshot['carryover_audits'] = [{k:a[k] for k in ['current_run','candidate_sha256',
+            'previous_publications','counts','limitations']} | {'audit_sha256':digest(a)} for a in overlap_audits]
     audit = {k:v for k,v in snapshot.items() if k not in {'papers','categories','journals','coverage','featured_journals','source'}}
     audit['included_assessments'] = [{k:p[k] for k in ['doi','scope_class','publication_status',
         'assessment_sha256','input_sha256','material_sha256','review_evidence_kind','review_evidence_sha256',

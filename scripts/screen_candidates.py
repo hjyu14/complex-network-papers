@@ -28,7 +28,8 @@ NON_TARGET_TYPES = {'News', 'Career Column', 'Career Feature', 'News & Views',
                     'News Feature', 'Research Highlight', 'Nature Briefing',
                     'Author Correction', 'Publisher Correction', 'Editorial',
                     'News Q&A', 'Nature Podcast', 'Book Review', 'Obituary',
-                    'Career Q&A', 'Career News', 'Retraction', 'News Explainer'}
+                    'Career Q&A', 'Career News', 'Retraction', 'News Explainer',
+                    'Reply', 'Correction', 'Erratum'}
 
 
 class BufferedLog:
@@ -80,6 +81,18 @@ def validate_short_comment_review(short_review, r, decision):
             and short_review.get('article_type') in {'Commentary','Perspective','Comment','Introduction','Letter','Correspondence','World View','Essay','Opinion','Expert Voices','Policy Forum','Matters Arising'}):
         raise ValueError('Short comment exception requires actual complete accessible review and verified identity/type')
     safe_url(short_review['source_url'])
+
+
+def validate_non_target_type(record, events, decision):
+    """An absent abstract is never evidence of a non-target article type."""
+    types = {p['article_type'] for p in record.get('publisher_records', []) if p.get('article_type')}
+    types.update(e['data']['article_type'] for e in events
+                 if e['kind'] == 'publisher_type_observed'
+                 and e['data'].get('doi') == record['doi'] and e['data'].get('article_type'))
+    check = decision['hard_checks']['type']
+    if (decision['category'] != 'excluded' or len(types) != 1 or not types <= NON_TARGET_TYPES
+            or check.get('status') != 'verified' or check.get('value') not in types):
+        raise ValueError('Non-target exclusion requires an observed official non-target type and matching verified check')
 
 
 def validate_material(m, r):
@@ -660,6 +673,8 @@ class Workflow:
                                or verdict.get('statement_kind') != 'explicit_individual_verdict'):
             raise ValueError('No-abstract editorial exclusion requires explicit personally reviewed user verdict')
         typ = decision['hard_checks']['type']
+        if decision.get('exclusion_basis') == 'publisher_non_target_type':
+            validate_non_target_type(r, self.log.events, decision)
         if typ.get('basis_kind') == 'explicit_abstract_research_inference':
             declared_types = [p.get('article_type') for p in r.get('publisher_records', [])]
             declared_types.append(m.get('article_type') if m else None)

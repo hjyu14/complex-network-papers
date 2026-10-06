@@ -34,10 +34,11 @@
 - `authors.file` 为 `author-metadata.json`；`metadata_sha256` 为解析后 JSON 的 `run_inputs.digest`。
 - `authors.audit` 指向实际保存匹配 `author_metadata_completed` 事件的日志，使用仓库相对 `path` 和 `report_io.file_sha`；普通新轮通常是自己的 screening log，不照抄历史 ZIP 引用。
 - 有独立补证时按实际 `publication-evidence.json` 与内容哈希绑定；迁移映射 `evidence_paths` 只在确实迁移时需要。
+- 连续更新先执行采集规程的跨轮审计，按发布文档增加 `carryover_audit` 文件及字节哈希；审计有阻塞不得生成正式清单。
 
 先在私有工作目录准备草稿，确认所有应追加的正式事件已经保存，再最后写入本轮 `publication.json`。写入后 CLI 将该轮视为封存，不得提前创建空清单当占位符。随后使用 `publication_workflow` 验证。验证失败须修复新清单或补齐真实工作，不能篡改旧事件／解除既有封存。
 
-更新发布选择时保留已有有效轮，明确新增窗口；`config/release.json` 中各清单按最终文件字节 SHA-256 绑定。发布器要求各刊窗口连续；历史补采若产生空档、重叠冲突或接收稿转正式发表冲突，不偷偷删掉旧轮或放宽校验，报告需要解决的范围。更换原已发布依据须有明确修订链。
+更新发布选择时保留已有有效轮，明确新增窗口；`config/release.json` 中各清单按最终文件字节 SHA-256 绑定。发布器要求各刊窗口连续；完整重叠补采及同 DOI 状态更新须按发布文档显式绑定审计，未解决空档或冲突不得发布。更换科学分类仍须明确复议，不偷偷删掉旧轮或放宽校验。
 
 ## 发布门槛与执行
 

@@ -1,0 +1,1613 @@
+{
+  "version": "cross-run-history-audit-1",
+  "purpose": "Verify every PNAS out-of-window DOI from October 6 has a valid previous assessment; no new semantic judgments",
+  "target_run": "reports/runs/2026-10-06-01",
+  "target_candidates_sha256": "09fedec44ffcecbe8e8ab118d8f8b7a2ce4f3972c7aeb4be68bfa8fc1af0b3b1",
+  "publication_sources": {
+    "reports/runs/2026-09": {
+      "publication_sha256": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac"
+    },
+    "reports/runs/2026-09-expansion-01": {
+      "publication_sha256": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e"
+    },
+    "reports/runs/2026-10-01-to-05-01": {
+      "publication_sha256": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e"
+    },
+    "reports/runs/2026-10-06-01": {
+      "publication_sha256": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af"
+    }
+  },
+  "target_count": 93,
+  "previously_assessed": 93,
+  "missing_history": [],
+  "category_counts": {
+    "excluded": 89,
+    "core": 2,
+    "transferable_application": 2
+  },
+  "records": [
+    {
+      "doi": "10.1073/pnas.2605307123",
+      "title": "Meteoritic organic matter records primitive oxygen reservoirs of the solar system",
+      "first_online_date": "2026-09-21",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "eaf1e6012e0c52535296f48c9f73f729ed60154f76564bf01011a22b044189f1",
+      "assessment_input_sha256": "85944e51bb5e8182d8f1ca711f8b2a5d9c9444e1e0c835994977f4c86426fa8f",
+      "material_sha256": "4879557f40db8782f6497ee56b20b8e39adf3056896f83ee5089c7b59a318887",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2607273123",
+      "title": "Compound drought–heat wave hazards are concentrated in US regions with multiple social vulnerabilities and agricultural dependence",
+      "first_online_date": "2026-09-21",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "ada64ede2ed4711dbe1a1888f3785d9840b51f50f83e404fd289ea27cc6fa096",
+      "assessment_input_sha256": "b02597e8daf90153c394a35c49182f744345afafdb4dcb80f4db05780322c3b5",
+      "material_sha256": "c5530280f5f93352a6b5f6aba58482f74b223afad1c8384a18cea88332b9c225",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2625071123",
+      "title": "Cassiterite U–Pb geochronology: A framework for tin provenance in the Bronze Age world",
+      "first_online_date": "2026-09-21",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "e3e447625b77f966347cbf3adc9619cb512fe7c5e97fdb8f7f370a16e8fd288e",
+      "assessment_input_sha256": "06fd9855c9ab2eb347af314220d8f9008c5801db1615becc4507afba6e198806",
+      "material_sha256": "4ebaccce75a6a90e280755466c8f33d0118bf349f110de3328df11f455aee25b",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2536061123",
+      "title": "Cellular remodeling during reversible life-stage transition in sessile ciliates: Genomic and transcriptomic insights",
+      "first_online_date": "2026-09-25",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "80d3c1472b62fc5067d494a7af0c03b8c6c56a3ca015a93c44cb2e2b77d759bc",
+      "assessment_input_sha256": "78fc324b00849891e62af7969fc1989e5dfc3f2d6452d6159d37e8820fb0a79c",
+      "material_sha256": "dbf6e4738d19d40d35499c9bc5415e123a3b25186638aa852c81c77cf84021f5",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2618845123",
+      "title": "An RNA thermogenic therapy to preserve lean mass and enhance metabolic health during GLP-1 weight loss",
+      "first_online_date": "2026-09-25",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "536c1530858e686f00938aad9847dfd02138ec345efaa4e6a00eec96dea296a5",
+      "assessment_input_sha256": "10153eade1d6f805ae6ce558afbe2bea3da0d961b25b2e4c7eb44451021480c1",
+      "material_sha256": "1df629e0d90527a13ae0f719b4681863e5784e8b0cf9e9a9ac0dcb2b0f358abd",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2516128123",
+      "title": "Large-scale semidefinite programming with graphics processing units",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "93450d6a681cc39e23e7b93ed7606911abcc7f73f5d0e864f8e0af52115bec7a",
+      "assessment_input_sha256": "c745bcac1aede66989d482792b9525dcaacebdcdf11fd4f1225b4eb442ee50b3",
+      "material_sha256": "1be57968581cd2b4bd9b6922236463b28d4b5144997ce692c508b7ff7cfed416",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2525555123",
+      "title": "The Mader model of muscle energy metabolism simulates key metabolic exercise phenomena",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "20d12183311005ccb73947519c309314d1b6e0628b0857ddc2206a1f6a8ff691",
+      "assessment_input_sha256": "806f61e2ac0ad621ded8ed1ddb321fbfc15ca40d4d00fdfd4114a3caae067aa0",
+      "material_sha256": "98aee8f88c8dd01c9ea8fae34f1f3f69ab10c46d1d813b465f73a6025d9c407f",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2528514123",
+      "title": "BAG3 coordinates astrocytic proteostasis of Alzheimer’s disease–linked proteins via proteasome, autophagy, and retromer interactions",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "2e0009a37183af1ff5e272e506c659a0b25467c9d7713004614991be991c6b3e",
+      "assessment_input_sha256": "d3e62246f8457e16c392c204d8d2b8f3bd34137b584c66786728cfb2ab9d4a92",
+      "material_sha256": "27ee0f223efe4f34e5b9ab27e266c33e8f9d6123a92011be59402c533eeeaa64",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2601665123",
+      "title": "Nuclear cGAS inhibits stimulation-induced inflammatory gene transcription via HDAC1",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "1e7008203a22b040915bc222daa117c2a9ec0aa2b0044f47fcfa0d70292629ca",
+      "assessment_input_sha256": "b331b46adc4553b3e5b5a6196ed2c9cf71f55782523420100898e9d022a0a26a",
+      "material_sha256": "5c3ffcc9e593afc82294125c5e1d0112dba291968f1caa8998ab85c2a6b67c00",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2602542123",
+      "title": "Mantis: A foundation model for mechanistic disease forecasting",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "22e2b812bcaa804dc8c60fd408c7d5144aad51a64cc70206fec6444af804236d",
+      "assessment_input_sha256": "76332157c29db17bde29297d016845913220f02dd844d17421aa14e083e72ebd",
+      "material_sha256": "64cd321c7ca17f792047549446813ed1ae211739142feb5a5524a09d2d298141",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2607106123",
+      "title": "Cnidarian mechanosensory cells as ancestors of vertebrate hair cells: Molecular targeting of an ancient mechanotransduction complex",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "81341a6b9a19aa1b6e14308744dc838fd7c977530ffaea2c9ddcf53f75ef50ec",
+      "assessment_input_sha256": "f1f61eef4d2069f16d7d793d158a12a4dfafea5f286d974a46acb4181f5f251e",
+      "material_sha256": "78b518b9a964c9c9652c6553b26119c75e2d1c3075f5ca0c72e76959d94b6a61",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2608087123",
+      "title": "Zinc mediates the allosteric activation of Shiftless to suppress programmed −1 ribosomal frameshifting",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "725e878bacb59d3a2725efa92dd7ba61bd53f1768df5f0e74cba7896a051c9bf",
+      "assessment_input_sha256": "f88991d8dcda31ae4547a629cdf40b15f79e1355c6554e237ce63e56078437e6",
+      "material_sha256": "4564b0e86b9972c6e6ed7636e643d3f834c3d0a1783bb2a65a34ee0d4c161f78",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2610455123",
+      "title": "Projected effects of removing school-entry vaccination requirements on measles transmission in Florida",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "3e1e42283ed151cc42348b6a324e2eaac4be68126580f0bbaa5cd017f1db92e9",
+      "assessment_input_sha256": "8e3a005286fc4be8ac1b04b02c8275098d005cb8d18e27288d80b87fa71613c5",
+      "material_sha256": "dcf037f2d195682d81fbc4830e2a75e32a11b4218c521c74797d57944a7cc137",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2611716123",
+      "title": "A role for heavy chain-modification in protecting hyaluronan from free radical fragmentation during inflammation",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "0f51a2e14d68850c3065ab80fe977e729cc1d7443bb02b02303b8b4eb90c8421",
+      "assessment_input_sha256": "3dcc0eb9aa2631d33a59c2b9ad7507aee1e8c13bb6dd000ed149dc7cd9d21437",
+      "material_sha256": "49c8b4ace5546ded9348fa97db2368e8832f65dc41c6416a3f3a3077dbaff747",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2611986123",
+      "title": "Phototropic and skototropic growth in inorganic films",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "33a5de230a846bcb487b9db766384b603fd003f3cc6c9118d3157a32108fcde9",
+      "assessment_input_sha256": "04203c4b0266a8f522ad0d6f30b858dc54da50c9ff4ee15a38f384bd17679850",
+      "material_sha256": "175832bf9a0ae30146a96226711338a8098833c878311de262992a2b7b97a43a",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2613077123",
+      "title": "Longitudinal adaptations in neural and behavioral systems following hearing restoration using cochlear implants",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "52d21fba390760b41244cc07fd9937927122f770b8814c65241189f72931baa8",
+      "assessment_input_sha256": "968eedda6e58a0140cb8e96caf75d2e3d2ba32058bf978f591b449985e67a8c9",
+      "material_sha256": "88172605d9d7c0986490abaed131de91c6fb7cd03eab90b1c21edb23a7eeb3e0",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2613113123",
+      "title": "Classifying strategy use in multiattribute subjective choice: Application to conjoint experiments in political science",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "727f18f530cc0be6dac42f6615c67c234d976d58649ffbf67c197d33e99a83ce",
+      "assessment_input_sha256": "bdbe4881d71d71ab37bd0ec3a0d48c0488e78690d5b1e0f24f3c5be209ded81f",
+      "material_sha256": "cd2d5481b05ebf13cc812f3dce46444ace8170496e92caffff4e05ddc955e8f1",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2613208123",
+      "title": "Climate-amplified wildland–urban interface disasters create persistent internal metal mixtures associated with pulmonary impairment",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "27620fdfaf60acc3ef1ceaa4ce0bedcdf168e01270910af8ac3f346eb77c13b4",
+      "assessment_input_sha256": "c9ff98d4d28b7d79f6a57c626ca594286424f1bc5e80bdc643c76716faffc3f7",
+      "material_sha256": "b62d1f8f0a5014cc0a76d7cb8ea427a45184cf28c86d2d4ba1c7970ba524e854",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2615021123",
+      "title": "Fragmentation outweighs forest cover in shaping land surface temperature across half of global forests",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "313e451e21d675bb9aeb19b12cfa1295228462548cb0b309a2269764ab7a6e51",
+      "assessment_input_sha256": "03b0ea43aa05e069bff89ccf659d663a914655fa8c8f64a3d814842319bd3a64",
+      "material_sha256": "ddc01856c6253f57ef590077b4704fe90a01617a4a5a686bdd9d158be3ec1e1e",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2615939123",
+      "title": "Spatiotemporally primed coelomic epithelium and supporting-like cells establish the dual origin of granulosa cells",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "bcbdedb932372ae0fb5a8d42045c33f73dbf16d9ab50acdba4672fd5e5657ace",
+      "assessment_input_sha256": "1070f0c78bc67c614c7516f1e91aa0b4fee17805ebd74a3a1032e39a609d5e3d",
+      "material_sha256": "36a95fb8567c03529ae55700a2a3b4f6b0de54c1b6bd922894a131fedc6f0e7a",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2617804123",
+      "title": "The economic returns to citizenship: Evidence from a meta-analysis",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "cdee35923f9dc113da491d9c2972e3f00364f510a444864b220c6e0f94de3543",
+      "assessment_input_sha256": "8c84755a04137f995ccd217022b913421ea1aeed77cfe2327e2556aa6e9b9d41",
+      "material_sha256": "f8adbabe0891680d209ecce611c07feafe2c99519865ff182286e771d049fa36",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2618249123",
+      "title": "MicroRNA-driven regulation of immunosuppressive microenvironment in hepatocellular carcinoma",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "756a6704a60dce3470dc9cf9f7924311a7e1b8315442c64601fba64606c6b6b8",
+      "assessment_input_sha256": "5d206775cad5d6bc0b0fe8b2efbe518c0ee9cbde03c8205cbac54876d7789c4a",
+      "material_sha256": "a6883ff34e5af3b8d6d9b9f065e124728af50cb896dcb77c3861bd76995bce49",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2618666123",
+      "title": "Uneven attention to climate tipping points",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "1b69ab8387171d26bbd5cd556ecaa20dc60d888cd7fd7398fa0a8fe667c4f644",
+      "assessment_input_sha256": "0ebfc78097593fc3e0a8984a4e49e9b11f172d9c06b751f4db8bf01785928671",
+      "material_sha256": "288dfe6339d0cde74678ceaeda5f1778be9ea568ac2dc6c437adf04f2c25e2ba",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2619004123",
+      "title": "Potential vascular confound in GPR84-PET imaging following systemic LPS administration",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "f634b1ac0a935ca461ca404b53b9d9663d81406d5db25e3a811895f80894d4da",
+      "assessment_input_sha256": "6dac4f28ba2c0ded8b5f65c63295714591f0fd2cd07f2f9efe1d532638267992",
+      "material_sha256": null,
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2621014123",
+      "title": "Unexplained rapid bill-size changes in an urban bird during the COVID-19 anthropause",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "1480490e043955d5ade61cd026cb2b5fb6ecec1e28aebbb0ca6e136f2aa89885",
+      "assessment_input_sha256": "a5a77c5e779066f52afb20a03711b6bc0fae7a81e611f9632e2d9a0531815d41",
+      "material_sha256": null,
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2622558123",
+      "title": "Masking phosphatidylserine prevents neuronal loss in two distinct Drosophila models of neurodegeneration",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "972e519f11392e2e99eceb83940ee9ae3b562317f29e0bb57220e878993a67e9",
+      "assessment_input_sha256": "d2ffa4d5e201a0c771e62fa21539c88ee63cfb34f42f6c9e08754d0c7d55a04c",
+      "material_sha256": "3bda0a62067f0ef55eeb4e0d14733ce36fe57b12297621e822cc7e1997e1f90f",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2623658123",
+      "title": "Reply to Zoghbi and Innis: Clarifying the cellular basis of GPR84-PET signal in neuroinflammation",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "4507d514a542e3afc5a399829d98c436351168ab62f64a675b46a4a2391a33d5",
+      "assessment_input_sha256": "b7adb62fd73dc09f7a34470c560e063aac48a2d8427c384d90cbfe8e32af5803",
+      "material_sha256": null,
+      "review_basis": "title and bibliographic/type evidence only; no abstract reviewed",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2624547123",
+      "title": "Reply to Acoca-Pidolle and Mathieu: Rapid phenotypic change in an urban bird likely driven by resource changes during COVID-19",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "94b20bc3e6a9c7d45d6789c144cda985499aa34e1956ef478fc7b134b2fb9ed2",
+      "assessment_input_sha256": "f6d1b088ca93a96eaa9ea0f360e728500d5f7174f94de0226f27ca5f76f6ef66",
+      "material_sha256": null,
+      "review_basis": "title and bibliographic/type evidence only; no abstract reviewed",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2624733123",
+      "title": "Three decades of urban densification reduced winter direct sunlight access across China’s old urban cores",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "89bc44d88caf728ab6756042824b388537511ee2d2f804ee2867eb96caa3bf26",
+      "assessment_input_sha256": "ecae7d77e8ce1c80743bd7baa5dc34862d742f560b65ab2cbae07b1b0387a583",
+      "material_sha256": "a77503312a0145b88fe251aae01a125c1c037d9a0078a5dccc564330bce9540d",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2625638123",
+      "title": "Human antibody heavy chain variable region exon interacts with the 3′ regulatory region to form a stable somatic hypermutation center",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "1befa6958dd13e9d7f9c2c155b6aff867e08ddb08b41bbd855928cc552c7001a",
+      "assessment_input_sha256": "3cca7d143e78fdd20bc6706b442da71d3ba8db04bc6b47e924cf7c6b65650f1b",
+      "material_sha256": "da124a546e074ec78c47bebe6813b4497d32f32049e1d15f32d2be9d180a196f",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2627537123",
+      "title": "Step-by-step maturation mechanism of the binary toxin pore revealed by cryo-EM analysis",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "f3b05a522d4fabccb3d8f1f73fb9850be17efe31bc525da38110b415274bf71e",
+      "assessment_input_sha256": "a7649bdf7b4fa32f569ceb18e494737ff132ec7b33495487d0cfab65e3d8e1f2",
+      "material_sha256": "332106274de6cb43cc9033b80b656798dcc80e051628dd4ff2c341a3e895bbd8",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2629158123",
+      "title": "The other immune landscape of SARS-CoV-2 evolution",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "0e2c88429912b91320b87a666e600a6ad8e5838a7505859a43a33f30b0f277d2",
+      "assessment_input_sha256": "8fd25ef89350303de14d20ee067a0d19b7020e34613b7745662b20f94cdf21b5",
+      "material_sha256": null,
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2630040123",
+      "title": "Twist in the fibril: Structure guides inhibition of TGFBIp amyloid formation",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "dc56a6f26157977e6f3ab9ec8a79befbd037f1d06853c88621e0defd877fc01b",
+      "assessment_input_sha256": "12abfe166a20386e03f2dcc785d970ca90ddbbae6b3d931a02fa6d078cfda810",
+      "material_sha256": null,
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2630482123",
+      "title": "A 40-y-old model of muscle metabolism, finally open to scrutiny",
+      "first_online_date": "2026-09-28",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "7edd519ca0d0fa053b221627acb344263d2b2194b9123478fa7560f1bba1f71b",
+      "assessment_input_sha256": "92c0d9c8a27b1a0181de13d98c68ce8375764483c83cdad82f3a1bf7cd5352a6",
+      "material_sha256": null,
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2524371123",
+      "title": "PKD2-like proteins target Chlamydomonas PKD2 to distinct subciliary regions",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "a86a77b83394999f850838c2d6b39fc1eb4bfe3f6a720ae4d4a6929fbda0adcc",
+      "assessment_input_sha256": "322fa022266fce57232734138b1572bcbfbc3a16cfde30a403eba75bf9eeca07",
+      "material_sha256": "70121eae56f32540687cced350a490991e2a5967f21cde5d9462ce7d2f799f7d",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2526156123",
+      "title": "Associative synaptic plasticity creates dynamic persistent activity",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "core",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "960d556048ec137617e6113f7348cf5d7cc50ad4959eb167791d4f671b84b4eb",
+      "assessment_input_sha256": "b78abfe34f22c597e7930da26fda40e616b09caa7b2ee22216f02390ef121440",
+      "material_sha256": "a607c86fa7d342ba9d1d5e5e57de5e9a028e279adf8bea4d7f5fbfa48db1b358",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2528513123",
+      "title": "Phosphoproteomic dysregulation promotes tumor proliferation in Cushing’s disease",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "7b14f5bcc885fd9d45f7282583d5f8e75c998d118f034d8e7c9823aea5a899e6",
+      "assessment_input_sha256": "7762a24f9582ad8a03449acb43174dcfa25fc14de06ab2f798ce9b0ef900e3a6",
+      "material_sha256": "1d6ea54e3e794311a9cb29fd490afaed2d401dd0fae6ad2536d0f8f7cca997d3",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2534566123",
+      "title": "Loss of cerebral autoregulation drives abnormal perfusion patterns after stroke",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "0297da4344ef9762ceb8b10c52cac0a3a35dbdfa6b31fb9657a815b3a2559a2c",
+      "assessment_input_sha256": "0256de5271653609b630e91e80219bc6ec88def975dbd0e50746838b134dbd92",
+      "material_sha256": "d0d91787e052c2a94be80fcc367f5c82e667244603940be1e9be7e20849c47af",
+      "review_basis": "Human scope arbitration using prior fixed abstract review; assistant rechecked evidence binding and reread the two inclusion abstracts, not full-text expert review.",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2534602123",
+      "title": "Twisted Rényi negativity as a reliable proxy for mixed-state entanglement in fermionic systems",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "ca2220b7543dc565119af9bca4f9b1ff8b16cb06d102b14703a6532ee30e13e0",
+      "assessment_input_sha256": "e97ffc50ba78e23304dc9d5fcae407ad8bc9374e8aa6f86ba2a412ec073354e2",
+      "material_sha256": "a45e207b3584ce5ceec5ff3f0c83434731ab1be1cac09cfd22f4fed8ee5c0782",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2536317123",
+      "title": "SRSF3 plays a key role in liver cancer sex disparity by facilitating hepatocyte expression of ERα and FOXA",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "9d0e7049ac9539f19cc11cd35eab11b5c4d0adb0bb1aa8d7bdcd5275f8b7682e",
+      "assessment_input_sha256": "267500f486f9f5ae6b5be3218660933e7058a1012d4dfca6dc50b83bc4aad34e",
+      "material_sha256": "216934abccec62a5f16dd1ff2de0bfc73e0638aaf572e752209f8bd81d4e14f2",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2601083123",
+      "title": "Slc35a1-mediated endothelial sialylation controls the fate and integrity of the intestinal microvascular network in adult mice",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "59f6dc0563404746b4834a0cbdc551c07cce37394eb10d67b51c97bbbf716081",
+      "assessment_input_sha256": "43f4a77b1c1df3bbf78fd0fe20f7248214bc3b3210fb50cd6764c443f7856e08",
+      "material_sha256": "3c5f6cb9f129800b0f709f2c4cd6ff3fbb2bc78eac6831d892f423bae5d3e004",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2601203123",
+      "title": "Functional brain networks underlying approach–avoidance conflict processing in humans and rats",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "core",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "1b52478cbf114996da5c178f1857acfc7e06377a665b7613005343a07aa01b9d",
+      "assessment_input_sha256": "56f221597cf88e0a5ac41adb30d6b29dcb887b9ef160de99945bdc5f7e0acd39",
+      "material_sha256": "fa2e96cd4bbe4610d8c81a897098fbb421bf1fadb03bc9971113223dc43b02fd",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/reviews/2026-10-05-editorial-revision-01",
+        "screening_log_file_sha256": "86a53bde6406411711a66faa9d932fb52be08f3bf3feec3c57bce39db28fd944",
+        "screening_log_head": "11953e4eb841ae7c3f589af8ab07b1a1c85edd8f0afa60ea8b3062a168d38b1f"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2607382123",
+      "title": "Mechanisms of substrate recognition and catalysis in a mammalian phosphatidylserine synthase 2",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "c78a0221a0ac025b9cf0ebd9735f946a09d89f25b8c3e9f22d3eacc6163dc043",
+      "assessment_input_sha256": "0f1555291e60f954217946fbd6b99659e3c0b68a2fed195706bd9514c215e2f5",
+      "material_sha256": "60384606938abdf78c1511f47ba3af7d804653968509a2b123f9e419177cd6e9",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2610600123",
+      "title": "Distribution and voltage dependence of ion channels shape single-neuron computations",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "5d9d487f3c49391c6d9e6bce5c4050c678f74e0461d91c90bbc3ca61dc432530",
+      "assessment_input_sha256": "96cd5dd288b4a88052c636b02ad9be5524e2b486e0e48903ca9386f137d6cc70",
+      "material_sha256": "fdff411fe60c6843ed397c4a06e8149f73b916fa271b90511ccf1416a0b3c3e6",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2612869123",
+      "title": "The Ca 2+ channel CYCLIC NUCLEOTIDE GATED CHANNEL13 regulates vasculature-mediated systemic Ca 2+ and jasmonate signaling on herbivory",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "f5cb4adca73a84964f21ac16a37ea8b92ad7535aa4aef1e05f00c42a911be1dc",
+      "assessment_input_sha256": "f592c71f6c5e6e572df62b9b2d5e81837689e641ae7c7ee0818b2f9ba1e18f64",
+      "material_sha256": "1a954355b0cad57e6017330dbe5e82cee72b079cc062011e44694d2d73caf74b",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2612904123",
+      "title": "TCR–mTORC1 signaling promotes epigenetic stabilization of Foxp3 expression in regulatory T cells via TET protein translation",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "6fcd51870f3503cfed4383b7251f402369b3c4b21987938f49f33e4964a61bee",
+      "assessment_input_sha256": "d96326cfc01142153beed983bc58f4a2deb63f496f1defc9e55aa33b1a4a7a79",
+      "material_sha256": "6d734c8ff8c20fa1b37fa33fc304fcca2681644696db71421de34f5e8c1a9a74",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2613824123",
+      "title": "Healing cascades and infections in wounds monitored using a wearable sensor of gaseous flux",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "62c879b5b9fb0bcd51e48bac29a501568f705426691dd9b9a51ce73cc4e7d2cf",
+      "assessment_input_sha256": "c3b3f940c08079c06e951700e5ee9155e4a990ee632736736700c33dc11dbe6c",
+      "material_sha256": "0212043df531442f895e78b65217823cd5cbe86a2056d80eece8e197b2372b9e",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2614926123",
+      "title": "Reproducible cortical links between functional hierarchy, structure, and metabolism",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "d96b09cd66c5320526468cab2ac0d6eb9136ac600e73efdd95646d007fd6cced",
+      "assessment_input_sha256": "1e53ce13ea9ffcf68a7796841696367d94eeb548850cd4cbb5842bb8f1332ad1",
+      "material_sha256": "70e680c413cde936e23a9f7f73f5c33878dc453a245014dbdc2f85c3be756f17",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2615054123",
+      "title": "Chain organization of dimple-ended magnetite magnetosomes supports field-dependent cell linking in unicellular magnetotactic bacteria",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "0d023fc3be6f95bc8ced580ed6a44f69d1d67204757e5b627e5fe6adae3a6a43",
+      "assessment_input_sha256": "ab3112844fb58b3aa61ee9d4e7a7273694dcd04b26254cc56fd61754ee671ffd",
+      "material_sha256": "dc1b9bc903428558dbf94e206163f27830cd1dfe1ec04164c33d507930ff051d",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2615454123",
+      "title": "Biosynthetic origin of anticancer dolastatin 15 reveals a noncanonical NRPS architecture enabling 2-keto acid activation",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "5f126904cc400507ff494b95f6760414dd5bf4953fce434cadc7e6aec695d791",
+      "assessment_input_sha256": "da0757b31f6cabca3faddfbd847324a013abab3e68ee2d69acf319b9495bb0ce",
+      "material_sha256": "a2834e20e51561c4227535fa6f0ab4a1ceedd088ff572ca1bd439c77131b1194",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2619440123",
+      "title": "The phenotypic landscape of the model firmicute Bacillus subtilis",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "bde757e15b4a101f9d3766224e804072ac92fb0c3af4659c4d2ebc8358877038",
+      "assessment_input_sha256": "4942f714d4fb15554e2c51d3bbf1281aa3c164f75ad2301b4cfd348449ec5e2b",
+      "material_sha256": "ec58e0905a17ac4c4f330771224b808d11b0fb09842dcd84a5cfa2cd9db0d56f",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2620180123",
+      "title": "Desulfinylation of the deubiquitinase USP7 by SRXN1 attenuates oxidative acute liver injury",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "df902f5fea8d71f3c58dcae4ea967e8e48d2503874a721e67ee8ec7bbbb84c53",
+      "assessment_input_sha256": "346ce76fdbfe89ffe7201f65576352fa5011eca7260636ee78ceb47924fb74f5",
+      "material_sha256": "ce3d9ab1daefac635634d3e69ee6bc7c1136bbbae599dc3d9f3a709515b2ab4a",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2620354123",
+      "title": "Deletions in variable region 1 of the HIV envelope accelerate V3-glycan bNAb induction in SHIV-infected rhesus macaques",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "e97e58bc13a929981322147445eb230288b71d96309885b8ea7c2d6cf7ad163f",
+      "assessment_input_sha256": "2c8d7ba9c25b2f3895b565032d9db988491d359d6d877870edb0c13d59792e6a",
+      "material_sha256": "224ce7500898f8789ad044df69c809148cfa9526503de98db7d07b86fa32576c",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2623500123",
+      "title": "The PKMYT1–ALDOA axis drives chemoresistance in cholangiocarcinoma by enhancing glycolysis and MRE11 lactylation",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "5627cb2bc8bb1b7a20c13599679ce45c4efe862e2af686bd959677c9b99cfd3e",
+      "assessment_input_sha256": "5cf00db5737ec5c18f8bd4d17c781926a3ee78dfab82018dac1cacedfafaa9a9",
+      "material_sha256": "aded7085548d9a5a762b474d4ee7d1c1ca5d1bd0f0c2a8aabd3c300268e2e292",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2624702123",
+      "title": "Loss of CsrA in Acinetobacter baumannii leads to lethal dysregulation of alanine metabolism",
+      "first_online_date": "2026-09-29",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "230ce5522245100c13e08b724469a2346c5b1bc4ff736aab05d7d75d7e6aa027",
+      "assessment_input_sha256": "54cc5a961807b5873e497beac44738bcc52210e85c0091d62a21b977bf6b884f",
+      "material_sha256": "a580977e3f1febbc8300086776f7838b0fae367bfbb494dddec1b0bcdbd68213",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2536158123",
+      "title": "Mathematical discovery and exploration can be done at scale",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "41f6f202a1dec378b628cd4fd253100425c6921034aebf3f95d6afdaeb06b4c9",
+      "assessment_input_sha256": "cea224daf8db8ab6ca12d8843f90a6062ea838c7ee6228d743259ef65134ad20",
+      "material_sha256": "7454248ea41b694d2f0dcc98cc9493f8b2f5136e5c01e3ac5b109c1c4772e300",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2601715123",
+      "title": "Repeated marine-to-freshwater fish transitions reveal paleoenvironmental modulation of adaptive radiation",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "cc416ca8c01644d80df01215c40569083a65c55ddab8521553dd8c2e1470338a",
+      "assessment_input_sha256": "ddd6bb9e2317561ec9924403e22452e3cfceab101a40259659bfca310b1e8df8",
+      "material_sha256": "516d1e19445251755c1152a4f33bb393b834f673f2a5f0f4d41218cd29683158",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2602013123",
+      "title": "Deep-earth water transport beyond the transition zone via subducted feldspars",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "e68754f014f33f4482fb652f0b383eedea35503310280b275f92214f73c2922d",
+      "assessment_input_sha256": "d47f9f13a26843afbfc68d8f7e3ef51511e1e16972fe281a4e20dcc9282c862e",
+      "material_sha256": "a60729805996082c9170d39883807c602a859da0ad1a9e9d2a02da02f9ff1e4e",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2604233123",
+      "title": "Passive sampling for grazer cues incorporates top-down effects in harmful algal bloom monitoring and toxin prediction",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "eac6d2d554810fe798161bfedf822b15959d14bd563f6a68b0bb6a23859f30e8",
+      "assessment_input_sha256": "fbe0bcd8b6da8e739340dc515e0ea7fa18d67f73a08b3757f479781bd7a234d5",
+      "material_sha256": "f6bebcd0fd485f9bdafb6ab9d5b533b877e69a2b994dc322e46f669119da4fbb",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2605220123",
+      "title": "Tandem RNA-binding domain architecture drives PKR activation through an intramolecular interface",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "90aba22529158560bf4ce219a3458f1e6506fd3c68365d6e6db0446ed6a1f930",
+      "assessment_input_sha256": "1616f3fec43eb3b29e31f5d7c7de636a5bedd9fdbe11548c498539a7da2ee273",
+      "material_sha256": "517177c487a9bc7852aa1a567caf9b954343d94e9ed1935f06a0d7688cbda25f",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2606579123",
+      "title": "α-aminobutyric acid promotes tumor progression by polarizing macrophages through the ASNS–mTORC2 axis",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "7eea2440ce77f1c39671cdd2d3bf5d2397c62c84aa436750ec4109657152e2c9",
+      "assessment_input_sha256": "23e665af84fe6bc4c5b4faa9e0a0010f3fe17cb12a407ef9faf40adf8b7163a7",
+      "material_sha256": "fa491fb9417bbf9329cebbf0d0a65920c3d1891bb2767dd34ea873007b08da59",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2610486123",
+      "title": "Functional similarity shapes global patterns of fish naturalization and invasion richness",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "fb9aa5eb29c99dc7d5c7efd5cf9192f89bad5aaba27c224f62728a3b80ebce7a",
+      "assessment_input_sha256": "5ac4da2ca062d52effef67d046ec58aaf65fb162f6ce94a579f069e193b4a4ba",
+      "material_sha256": "4503ac2bc4d0c016f2657287a5f853267b7ee1525d0396d39dba93e1aab88a84",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2612455123",
+      "title": "Scaling laws for massively parallel microfluidics enable rapid construction of ten-million-scale natively paired antibody libraries",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "4c545eef01754f728277e13deb54fdfc1c7419bb314577db339eec2c0348f895",
+      "assessment_input_sha256": "bccfda33b97bf4399e3085f6b05999917f3cfc35353b4619eca8e628b3cb4ffe",
+      "material_sha256": "f43e82f2e25d9618af22694262148e032ab4373edf3297d72c30bda96861e521",
+      "review_basis": "Human scope arbitration using prior fixed abstract review; assistant rechecked evidence binding and reread the two inclusion abstracts, not full-text expert review.",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2613799123",
+      "title": "A highly potent bispecific antibody confers complete protection against SFTSV in preclinical models",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "5eee88eecd88cc9fc41a5bef990fb613a49504216f8069d8ed47858618632c8e",
+      "assessment_input_sha256": "c87063ff00a5730cdc9945a1141092ca9b3466aeced960ef3392d610ee16025b",
+      "material_sha256": "06055838cc4e9d024a46bdfbce380c70cce494c41248fb26f75559db3fa55be1",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2613911123",
+      "title": "Thermosensor OsTT3.1 enhances rice thermotolerance by degrading OsGSK2 to reduce OsHsfB2c phosphorylation and nuclear translocation",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "c9ed8bd8d0179b66d367efae7d6bbadda12303d0bb6dc6ed84ff850de762fd57",
+      "assessment_input_sha256": "8e9e6f4210b1c4c420593052de6bfcf60743ef278e551dac8d1ae447f85e7c7a",
+      "material_sha256": "48c912b1a0b6e69afae8cc3648bc2e189cb433f2c5185ee409c6319635e73ebd",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2614237123",
+      "title": "Genome stability disrupted by the circRBM39(4,5,6)–RPA2 axis represses breast tumorigenesis",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "3237e1c3eb624db8157fd42ab63bc7696a13a8213ee67db22ef5e8dcf3be08e5",
+      "assessment_input_sha256": "f95bf7e6fae4625a278863c8f581d62444020d7eeac0818d0577b95453fb9ae6",
+      "material_sha256": "18dbc160627f76f137864c0a31ee3e629f617bf0622c0285f43db09eb4ed7c05",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2614593123",
+      "title": "The circSNX6 restricts dengue virus replication in association with PARP1 and ferroptosis",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "744ea3fee2f4f9c857e7a44bc1531aae6042ca928ad3911d2609457f5932e85c",
+      "assessment_input_sha256": "406b68e4fe63ca0dab0c8268b1158430d599ef55b0a6c1df0a827d3b3d57fc63",
+      "material_sha256": "ea0d52cc086e89793255a770ef48e4e82a72ac56faef20c490ca29c0468fe53a",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2614738123",
+      "title": "LAT condensation gates PLCγ1 activation via bimodal LAT phosphorylation",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "3905a791eaf4a7f21508e2b666a951b7a2d3d48ea016dd1b0d889be2edf0ddd9",
+      "assessment_input_sha256": "a0adfef7df3f2398fdfa8311a20982627106192c0b30cf78e60f953bf210b52b",
+      "material_sha256": "d2b76c383fb29a015ba0e6c57ca1127ed82ab13a6265d01f17240768dd7bbf0a",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2616216123",
+      "title": "Metabolite ratiomics: Rapid diagnosis and classification of gliomas for intraoperative application during brain surgery",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "7d57f3da5b635777e696874bb29fe6d8089d3e30119d2e8b74fe158be20c93fd",
+      "assessment_input_sha256": "b2868656132bbf57a8542a88dd81b56b70770623cbe256e685b08641eb60f68b",
+      "material_sha256": "67f3c7c1d8d784ac01d3d19eab9aa562270cc98078984d54042dbcf948cc6ac4",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2616692123",
+      "title": "MrtR of Mesorhizobium tianshanense reveals both activation and inhibition mechanisms of a LuxR-type quorum sensing receptor",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "d6fb4788c802e803a244aa213304a69786eabc84ffe4c629ef696bc5fca43987",
+      "assessment_input_sha256": "79400c61ad8511c69dcdefa1c158ec1b6016f64061b749c6145f117913412778",
+      "material_sha256": "78125d44d07583525bc41913cb467c99198798c85a13277dcc00a3bbc42521ea",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2616933123",
+      "title": "Targeted extracellular degradation of LRP8 promotes ferroptosis in cancer cells",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "1fad05f345dc3d5b845a5ac0650c3e7069dacc8f8e36c6aeb0523d073d366479",
+      "assessment_input_sha256": "ddfade88f8c0ac97e8b4d7533eae9651e94313940b5cc451fcb8f8fca523af8d",
+      "material_sha256": "2e9dc143c1064476f7f118721d3872e0d199f7f98523c8e8a4fdd4a26f6e8739",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2617741123",
+      "title": "Ufd4p-mediated Sum1p clearance ensures proper chromosome organization during cell division",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "8826aae581bcc70a12e76af1c5d56647e9172b84ba821a6317f8bbe8055d186f",
+      "assessment_input_sha256": "8fc554df4e5acff34a1d7ccb66c6634f8e627b17f660fc5f41e9268c0c3586af",
+      "material_sha256": "401c49f725475d83791412bc8b1b6035ddb1876165f97c132ac15086f2d4d8cd",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2620353123",
+      "title": "Atg39-dependent nucleophagy and Atg40-dependent ER-phagy require the Apq12/Brr6/Brl1 complex",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "c6ab52a862ab8826f6baffaf26eee76173dedf7a6bbac80e60aa92885a69e5c1",
+      "assessment_input_sha256": "5568635a784ec0605f3b8850520f4425c4d9fb7468cd751677e0bdfd8a9bbda3",
+      "material_sha256": "3778526fb56a8938d6519e7a5d4a386c38c2797fdf4ae964a25e99b90bb63268",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2620626123",
+      "title": "A conserved β-sheet motif mediates PIN2 hydrophilic loop–loop interactions to regulate PIN2 dynamics",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "18bd5fa603c4e5ac0a0e96382a551c404c6b9e5981c32674427b4231abab0a4c",
+      "assessment_input_sha256": "aba19f31ea2ef7a5268c474bccb0f11a3b7daca08678e7a8debd664767695c4b",
+      "material_sha256": "fc1498b785c31720c667646d8d16ab924e693bef7c49b94e82c830f20b2032c5",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2622416123",
+      "title": "Pressure-induced Lifshitz and quantum phase transitions in electron-doped cuprate superconductors",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "295b2c5e8ade2bee25285ea7ee6f0cde61fbe7723e8c0c702c89edff8e6e3078",
+      "assessment_input_sha256": "14382c2807f698cc6bf876dbb54dc6a55f6dfcf52fd90692655477dcba88526c",
+      "material_sha256": "40f9f8a7b7227ba5929b2f6b9dafde118334f1a68d1bca57c67bce47861a39fc",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2623665123",
+      "title": "Taxing the talent that builds American science",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "2e170b53dd79a8452fccec88121e8b9f06df71766fa6cd845f5124e950e9e329",
+      "assessment_input_sha256": "dba9de0ee35924f737fd3cff34af4bc3c38a93856f7d1cb489dd79fed5989f3f",
+      "material_sha256": null,
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2632530123",
+      "title": "Profile of Shang-Ping Xie",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "d52595d4070880e5d7d2b0323907a272e40b071e6d34d459e70c25b5bb417f74",
+      "assessment_input_sha256": "38b34442f65ec2af5e362a04d02e3e115e898416c0e1d31b2b46b0ed290cd1cd",
+      "material_sha256": "fe0e4036cab2f81c6f419cb2c668aa36f7de72f6f036a633ccaf08bb8f8d5358",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2632674123",
+      "title": "Retraction for Lin and Lee, A dual self-regulatory platform for programmable biosynthesis of L-lysine-derived alkaloids",
+      "first_online_date": "2026-09-30",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-09",
+      "assessment_sha256": "9b18eeb9f9267822175ed602fbad26efc1cbdb22f8cab62edcd48d105549546a",
+      "assessment_input_sha256": "f08b2cc1ee957aa1150e928078156374b026a36dd147d6fe98f5906845840241",
+      "material_sha256": null,
+      "review_basis": "title and bibliographic/type evidence only; no abstract reviewed",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-09",
+        "screening_log_file_sha256": "4e5b2a73b0669dfb38655fda1c6ddb8c01f89c05ba82788a2915fd003b28016f",
+        "screening_log_head": "7d775b8302a41c2bbb7255b73744abc5c9476b80a4e5202138de52ded01e86dd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2529250123",
+      "title": "The mycomembrane proteins PorH and ProtX are inserted at polar growth zones and linked to the cell wall",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "eabda19b24fede2082013e0be3a1e3170d2f2fc240ddfdf01d1a94027d7ced1f",
+      "assessment_input_sha256": "396e5d6a5113eab83d7cd32b420914b133b94899589df0a90e3ac8b8f14b07e3",
+      "material_sha256": "c1b0eb4f5a508c1425586c35f91b49b68204eb00379c492f8ea04afe66c851f2",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2605806123",
+      "title": "T–B interactions yield CD3 + B cells and CD20 + T cells with pathogenic features in multiple sclerosis",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "534043d5d399384d9aee238fc8c91e677756558e46fd3c0e9f704c54cf6224cb",
+      "assessment_input_sha256": "3ac20c601989962cf1879ff597616c053ddee36200498cdd0992d516b7b3b62e",
+      "material_sha256": "906502e9a95fe9746ea1f96397023b5c21ed095c95091a5e64d0ecbdf7e69f84",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2607475123",
+      "title": "Constitutive sporulation in wild fission yeast enhances insect-mediated survival",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "486dc35270860e1a49b47ada57b526e8a1225ac82a64558b2479b45f10478698",
+      "assessment_input_sha256": "7a8ba1d22e0f0feb40ba4bf70aeee9e5d106836103100182430267612cdd2b37",
+      "material_sha256": "a660b3c12de25da749d51eb30b8119a9bdae92afd1325e99f238c24f37bc3a1e",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2607529123",
+      "title": "Impaired control of autoimmunity increases pediatric multiple sclerosis risk in EBNA-1-seropositives and -seronegatives",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "96bd1256cc113ea8637f704cdb05b886a282ddd09b0095983811eb157de46e14",
+      "assessment_input_sha256": "1dd6a4dadb50df46d79873939d66ad967ac86e09a5eae858b239cc3999cf48c4",
+      "material_sha256": "5209cae5e250714c00ad07160afa6a3decdfdfbd090cbe3da4d7de132580a05a",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2611888123",
+      "title": "Generalized Taylor’s law for infinite-mean heavy-tailed data under dependence and heterogeneity",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "transferable_application",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "35377587785fa11efa28b8f52543a8bb1972868e879b51a77245cb43f5b7e198",
+      "assessment_input_sha256": "b66e23e17bea7142df7d8cb7501b45f8dffc71419605b04fdf2c8cdec32a676f",
+      "material_sha256": "460ac0d00c5983e0d451c653dae05bfd626f594551c0ee5b9c70f9f4c09edad6",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2613915123",
+      "title": "Development of A10P3C, an isoform-selective inhibitor of EGLN2, for targeting breast cancer",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "8a1b84066fbd9262b3e455aad3dd892cb7f479275e3b791e9ac7808697022fed",
+      "assessment_input_sha256": "69acfa7b58893d7e469ac7998747a395d88c2913abb74433287ed714c853a495",
+      "material_sha256": "dbf076f4dab5d73fd18ae83947b125feadda27c59cc947b9c6e1f6909d97279d",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2617622123",
+      "title": "Defensive networks provide basis for late pre-Hispanic Andean polities",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "transferable_application",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "a9bc73c339118047628ff3586bc9b90b0247f3a5410b4aa2c7b1f5500869932b",
+      "assessment_input_sha256": "add56450cdb3695969ce67044abac81fcb248bdc39499573b39a05613f306be0",
+      "material_sha256": "cc42551dacf8c65fe35e622d915162717b70d7f2a3716a8bbcbc3103204acc30",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2618715123",
+      "title": "Climate-driven adaptive microevolution in wild yeasts",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "2722524fd3f31e37a1c949c8f25223c88ac5ea29f8d3e6663b8e61434ebbedb4",
+      "assessment_input_sha256": "939899c9aa6213cf6f71f966b85cb98be07e35720063c1722ceb19fddcf33156",
+      "material_sha256": "5a57864240fb4b2396b37591faf1988707ec9f0ac7a645226e1892ad28863ba0",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2622107123",
+      "title": "Signaling by a tyrosine-sulfated peptide balances growth and osmotic stress response in rice",
+      "first_online_date": "2026-10-01",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "3b43766385284d4a3015ed9cc0abee1eea65219ac66c59875212b8128a6338da",
+      "assessment_input_sha256": "39f7111c29679084e9624527e986b14ddcbb328b3314b17f62db843b6bfee194",
+      "material_sha256": "09850f8589eb9bc260d85eb56db67ec116126520a368b6c5be45a13e80a933be",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2515233123",
+      "title": "Children from six cultures reliably help their peers—but in different ways",
+      "first_online_date": "2026-10-02",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "1d3e74c67484a7a5a77c7eaf05069cad90bdb03ce79dd566561a933082af0cb0",
+      "assessment_input_sha256": "df0d25697435faffd493a91b94bde087eab8cb8be2f557170373cfce22548d27",
+      "material_sha256": "479da37fb92ca86c6cc6b6d6bd830baeb47d765b8e6ed2e0c2febbd7b61f32fe",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2536086123",
+      "title": "PAK4 exacerbates melanoma immunosuppression by promoting exosome release",
+      "first_online_date": "2026-10-02",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "00ccaa5b6d787246a77599005856da7c7239eb8f36a7f0c63f6564d39072187e",
+      "assessment_input_sha256": "ad8481da5695d11847857baa6d82b8db5a518f277e78a54d8d2f1558836935ce",
+      "material_sha256": "6e104ace3bf31950491642bfd7ef171740fb5888d61a0c0576f75f88f9eef6ba",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2536965123",
+      "title": "A structure-aware generative AI framework for revealing functional relationships in protein families",
+      "first_online_date": "2026-10-02",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "8bedd113aebe7553950216f79a9307a408eaa9a9c242e278415627ba9b4866af",
+      "assessment_input_sha256": "13db4e5921856faa85678b6ac0453f9a08be1b2ee2925ccbd5703e60debefbf2",
+      "material_sha256": "8813168d486d21bb822510bbea733032b4764c03590f622f26563e9079de6966",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2607883123",
+      "title": "Cell size modulates SBF and Whi5 chromatin association to regulate the Start of the budding yeast cell cycle",
+      "first_online_date": "2026-10-02",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "a4b99dcc129400939d7c3ffd515000712be2edbe6360732c0709c097c287a6fa",
+      "assessment_input_sha256": "5d19cac92527f33000bcbd348e120aa4c1cc1859ca1b8e70160c6bfc5cac61c1",
+      "material_sha256": "d9d734baeb9e0e17c2581559b146d1350379804c4615abd58dccef3a349509af",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2615179123",
+      "title": "Lineage and renewal dynamics of sebaceous glands govern skin barrier integrity in mice",
+      "first_online_date": "2026-10-02",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "aa5f34af409cb5d0774b79beebbe3cfc899252283e17f1779d2bf0c8ba275c83",
+      "assessment_input_sha256": "94b82410ba93481d2510ebe6e5d86ff1b4a50a6ca9beb0b8b058472c13e0e682",
+      "material_sha256": "0bc24dd8bb88eadef0140d0db18c25a067872dfc4d24a8938dee0395ec3fff34",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2615985123",
+      "title": "Dynamic tRNA modification programs align codon usage with growth-phase-specific gene expression in Pseudomonas aeruginosa",
+      "first_online_date": "2026-10-02",
+      "history_status": "assessed",
+      "effective_category": "excluded",
+      "effective_release_run": "reports/runs/2026-10-01-to-05-01",
+      "assessment_sha256": "d6f88febad7143d8f69ced6c42c1e4d6bb3838e595a377f791d1383c81692da3",
+      "assessment_input_sha256": "4cf0bd3d05930fa2e38bb9708ae332076cc5ce4270900b4f9196a74ee22f418d",
+      "material_sha256": "38aedc28b1a4f1ced354af6797fc2410098ced1a02cb4a1d1ac5052b3863df53",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "original_assessment_source": {
+        "run": "reports/runs/2026-10-01-to-05-01",
+        "screening_log_file_sha256": "44fa01161e325550fd3b0042f061baf93b688900a8790be6011587de5cd9647d",
+        "screening_log_head": "dddbcccc1c2ef20ebc7baa0c2cee6e9b7413e909ca3afcd51a852387cbfd59fd"
+      }
+    }
+  ],
+  "carryover_reconciliation_complete": false,
+  "carryover_note": "Separate October 5 carryover items and accepted-to-published observations remain pending; this audit does not resolve those gaps."
+}

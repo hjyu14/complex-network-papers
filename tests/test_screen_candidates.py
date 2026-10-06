@@ -30,6 +30,17 @@ class EvidenceTests(unittest.TestCase):
             with self.subTest(k=k), self.assertRaises(ValueError):
                 s.validate_material({**self.m, k: v}, self.r)
 
+    def test_missing_abstract_cannot_become_type_exclusion(self):
+        decision = {'category':'excluded','hard_checks':{'type':{'status':'verified','value':'Correction'}}}
+        with self.assertRaises(ValueError):
+            s.validate_non_target_type(self.r, [], decision)
+        events = [{'kind':'publisher_type_observed','data':{'doi':self.r['doi'],'article_type':'Correction'}}]
+        s.validate_non_target_type(self.r, events, decision)
+        for typ in ['Letter','Commentary',None]:
+            record = {**self.r,'publisher_records':[{'article_type':typ}]}
+            with self.subTest(typ=typ),self.assertRaises(ValueError):
+                s.validate_non_target_type(record, [], decision)
+
     def test_inverted_index(self):
         self.assertEqual(s.rebuild_abstract({'one': [0, 2], 'two': [1]}), 'one two one')
         for bad in [{'a': [0], 'b': [0]}, {'a': [1]}, {'a': [-1]}]:
@@ -200,7 +211,8 @@ class EvidenceTests(unittest.TestCase):
                      'hard_checks': {k: {'status': 'verified'} for k in ['identity', 'type', 'date']}}
                 w.decide(d)
                 self.assertEqual(w.next()['doi'], '10.1/news')
-                w.decide({**d, 'doi': '10.1/news', 'exclusion_basis': 'publisher_non_target_type'})
+                w.decide({**d, 'doi': '10.1/news', 'exclusion_basis': 'publisher_non_target_type',
+                          'hard_checks': {**d['hard_checks'], 'type': {'status':'verified','value':'News'}}})
                 self.assertTrue(w.next()['batch_complete'])
                 restored = s.Workflow(out)
                 self.assertEqual(restored.status()['assessed'], 2)

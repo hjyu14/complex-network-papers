@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T03:36:12.366674+00:00",
+  "generated_at": "2026-10-06T04:56:28.536436+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-10-06",
   "window_days": 36,
@@ -8,8 +8,8 @@
   "config_sha256": "9301f9a098a284e161a3d37e7f43afceb4e870efa2a75c6d90931a209dedf604",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "6f0f95092ea02c922a618ad27898a76c2d9f7be5b69d7883fa53259f56b868ae",
-  "author_metadata_sha256": "73e339adccb4a210bc9c973e7de49d90f095d0fc899f483099066b15907dcc8c",
+  "reading_notes_sha256": "b685db627e7995b39bbb218b2d62206fc82dff83bfdc59d0a4afa55206337ee6",
+  "author_metadata_sha256": "c303a90e8dff5cd0ab42268a2115b83a56752262be0a66660517aa7effc23bf8",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1294,9 +1294,53 @@
       },
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-05-to-06-carryover-01",
+      "config_sha256": "ad1ead30904ad0fcf8d0dc84ac5b67058c66c8045401c5ee6c324b5450e9cd4d",
+      "window_start": "2026-10-05",
+      "window_end": "2026-10-06",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "screening_log_sha256": "48b1fa6d6caaf1e37d694b474a0da55df737dd5ccd791316c7ebca81db72599f",
+      "candidate_sha256": "712a40ec2c8e5fd0a13119c9178e18400a94a61c021ba51b56088e5049e08020",
+      "author_metadata_sha256": "02d8c2c6aea9af9dd5d9ac53a44d026c200bf16a19f5c077e83f7cbc49cacf99",
+      "run_manifest_sha256": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-05-to-06-carryover-01",
+          "files": {
+            "candidates.json": "712a40ec2c8e5fd0a13119c9178e18400a94a61c021ba51b56088e5049e08020",
+            "coverage.json": "e7bd43ecb254251a4864fd95e958284135f9ca0bb26349c049d1be3ab678d5b6",
+            "collection-log.jsonl": "32febf0ba3799ba9a7addea03ab0b112e72402df9d619844fc192dcbd8da8c4e",
+            "screening-log.jsonl": "bb80d241fa84687a293f9cf75be9c13144b3b51b7acb46179b8108f0094193db",
+            "inputs/manifest.json": "cf3fa32d4520fbe590f3a1d723eb7f0358247f1c71cf742f1135f6b5ae15caf9",
+            "inputs/sources.json": "8a2c7abf7b908a92d636da7a30be92ad72e80347bfcc1e0caf8b3d3ed4678514",
+            "inputs/screening-protocol.md": "8d7c28744a8bb38dd39c176deaf0a56068a7098ee218c2081a5c29aa26fe19bd"
+          },
+          "candidate_sha256": "712a40ec2c8e5fd0a13119c9178e18400a94a61c021ba51b56088e5049e08020",
+          "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+          "screening_log_sha256": "48b1fa6d6caaf1e37d694b474a0da55df737dd5ccd791316c7ebca81db72599f"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "02d8c2c6aea9af9dd5d9ac53a44d026c200bf16a19f5c077e83f7cbc49cacf99",
+          "audit": {
+            "path": "reports/runs/2026-10-05-to-06-carryover-01/screening-log.jsonl",
+            "sha256": "bb80d241fa84687a293f9cf75be9c13144b3b51b7acb46179b8108f0094193db"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "cc739c3409bef15e481615f76c80a47fdc653d42922208435ab0af7b90dde871"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 152,
+  "author_available_count": 158,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -1437,8 +1481,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 425,
-      "publisher_verified_inventory_count": 425,
+      "candidate_count": 430,
+      "publisher_verified_inventory_count": 430,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1458,6 +1502,15 @@
           "candidate_count": 15,
           "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": false,
+          "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "Nature",
+          "candidate_count": 5,
+          "publisher_verified_inventory_count": 5,
+          "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
         },
         {
@@ -1497,6 +1550,15 @@
           "metadata_reconciliation_complete": false
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "Science",
@@ -1509,8 +1571,8 @@
     },
     {
       "journal": "NC",
-      "candidate_count": 973,
-      "publisher_verified_inventory_count": 972,
+      "candidate_count": 1016,
+      "publisher_verified_inventory_count": 1014,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1529,6 +1591,15 @@
           "journal": "NC",
           "candidate_count": 61,
           "publisher_verified_inventory_count": 61,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "NC",
+          "candidate_count": 45,
+          "publisher_verified_inventory_count": 45,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         },
@@ -1569,6 +1640,15 @@
           "metadata_reconciliation_complete": true
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "NMI",
@@ -1581,8 +1661,8 @@
     },
     {
       "journal": "NCS",
-      "candidate_count": 14,
-      "publisher_verified_inventory_count": 14,
+      "candidate_count": 16,
+      "publisher_verified_inventory_count": 16,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -1605,6 +1685,15 @@
           "metadata_reconciliation_complete": true
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "NCS",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "NCS",
@@ -1617,8 +1706,8 @@
     },
     {
       "journal": "PRX",
-      "candidate_count": 48,
-      "publisher_verified_inventory_count": 48,
+      "candidate_count": 51,
+      "publisher_verified_inventory_count": 51,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1641,6 +1730,15 @@
           "metadata_reconciliation_complete": false
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "PRX",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "PRX",
@@ -1653,8 +1751,8 @@
     },
     {
       "journal": "PRL",
-      "candidate_count": 489,
-      "publisher_verified_inventory_count": 489,
+      "candidate_count": 501,
+      "publisher_verified_inventory_count": 501,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1673,6 +1771,15 @@
           "journal": "PRL",
           "candidate_count": 26,
           "publisher_verified_inventory_count": 26,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "PRL",
+          "candidate_count": 21,
+          "publisher_verified_inventory_count": 21,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
         },
@@ -1713,6 +1820,15 @@
           "metadata_reconciliation_complete": true
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "SA",
@@ -1725,8 +1841,8 @@
     },
     {
       "journal": "PNAS",
-      "candidate_count": 429,
-      "publisher_verified_inventory_count": 429,
+      "candidate_count": 459,
+      "publisher_verified_inventory_count": 459,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1749,6 +1865,15 @@
           "metadata_reconciliation_complete": false
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "PNAS",
+          "candidate_count": 30,
+          "publisher_verified_inventory_count": 30,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "PNAS",
@@ -1761,8 +1886,8 @@
     },
     {
       "journal": "CP",
-      "candidate_count": 69,
-      "publisher_verified_inventory_count": 69,
+      "candidate_count": 70,
+      "publisher_verified_inventory_count": 70,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -1785,6 +1910,15 @@
           "metadata_reconciliation_complete": true
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "CP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "CP",
@@ -1797,8 +1931,8 @@
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 260,
-      "publisher_verified_inventory_count": 260,
+      "candidate_count": 264,
+      "publisher_verified_inventory_count": 264,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1821,6 +1955,15 @@
           "metadata_reconciliation_complete": false
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "PRResearch",
+          "candidate_count": 14,
+          "publisher_verified_inventory_count": 14,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "PRResearch",
@@ -1833,8 +1976,8 @@
     },
     {
       "journal": "PRE",
-      "candidate_count": 337,
-      "publisher_verified_inventory_count": 337,
+      "candidate_count": 340,
+      "publisher_verified_inventory_count": 340,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1857,6 +2000,15 @@
           "metadata_reconciliation_complete": false
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "PRE",
+          "candidate_count": 10,
+          "publisher_verified_inventory_count": 10,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "PRE",
@@ -1869,8 +2021,8 @@
     },
     {
       "journal": "Chaos",
-      "candidate_count": 66,
-      "publisher_verified_inventory_count": 66,
+      "candidate_count": 70,
+      "publisher_verified_inventory_count": 70,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1893,6 +2045,15 @@
           "metadata_reconciliation_complete": true
         },
         {
+          "window_start": "2026-10-05",
+          "window_end": "2026-10-06",
+          "journal": "Chaos",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
           "window_start": "2026-10-06",
           "window_end": "2026-10-06",
           "journal": "Chaos",
@@ -1904,17 +2065,17 @@
       ]
     }
   ],
-  "candidate_count": 3770,
+  "candidate_count": 3877,
   "screening_counts": {
-    "excluded": 3618,
-    "core": 138,
-    "transferable_application": 14,
+    "excluded": 3719,
+    "core": 143,
+    "transferable_application": 15,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 152
+    "included": 158
   },
-  "published_count": 112,
-  "accepted_count": 40,
+  "published_count": 121,
+  "accepted_count": 37,
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
   "limitations": [
@@ -1923,6 +2084,664 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/ppm1-mxhz",
+      "url": "https://doi.org/10.1103/ppm1-mxhz",
+      "title": "Random walks across dimensions: Exploring simplicial complexes",
+      "authors": [
+        "Diego Febbe",
+        "Duccio Fanelli",
+        "Timoteo Carletti"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "affbd9d91fefc3cceaafc7a59d88eb5e4c14acced010b075daa8b7cb3c5bb0dc",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fppm1-mxhz",
+      "author_retrieved_at": "2026-10-06T04:43:20.192918+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "publisher.Published",
+        "publication_status": "published",
+        "published_date": "2026-10-05",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/ppm1-mxhz"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "3b3c7f48ae11cfc35050a0eb10800eb9c0940a8808db4ff9d36e7c3d778bfe32",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要明确提出新算子和高阶搜索分析；标题和官方证据无特殊类型冲突。",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/ppm1-mxhz"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Cross-dimensional random walks rank simplices of different orders and reveal how teleportation affects search on simplicial complexes.",
+      "note_zh": "跨维随机游走对不同阶单纯形排序，并揭示瞬移如何影响单纯复形上的搜索。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "46cbf2b8429cfd43910944a7fbba11edcb908180017f91d69d813dff92d34aeb",
+      "input_sha256": "02ad53420d455d5bef3cca4b393bfbedf23777349824e5e65b23b8f00ba115e1",
+      "material_sha256": "3b3c7f48ae11cfc35050a0eb10800eb9c0940a8808db4ff9d36e7c3d778bfe32",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3b3c7f48ae11cfc35050a0eb10800eb9c0940a8808db4ff9d36e7c3d778bfe32",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": null,
+      "evidence": [
+        "A random-walk operator bridges simplex dimensions, ranks higher-order simplices and analyzes teleportation search."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fppm1-mxhz",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/ppm1-mxhz",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/pngx-s5xx",
+      "url": "https://doi.org/10.1103/pngx-s5xx",
+      "title": "Cross-order induced behaviors in contagion dynamics on higher-order networks",
+      "authors": [
+        "Kaloyan Danovski",
+        "Sandro Meloni",
+        "Michele Starnini"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "a4aff41d4e36ade4f8b656a10bcdd29eec00bc2680e50fcc171cb69317f979f8",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fpngx-s5xx",
+      "author_retrieved_at": "2026-10-06T04:43:23.671510+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-05"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "dd4438998f25b10450c7b12ce5f49a0df6048fc9a97e928a5b6a53730b24f7fc",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要明确提出高阶传播模型、机制识别和指标比较结果；标题和官方证据无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1103%2Fpngx-s5xx"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "Information-theoretic signatures distinguish higher-order contagion mechanisms from cross-order behaviors; synergy best identifies mechanism order among tested measures.",
+      "note_zh": "信息论指标区分高阶传播机制与跨阶行为；在所比较指标中，协同信息最可靠地识别机制所在阶数。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "a66d6168e76d358497f0ee9af830e39dba2914bf089d3f0187a94789952b47a6",
+      "input_sha256": "5e9974a1e4993adcc4443ebf5caa82a8c6638944eea10c34a1950f94a5e7957c",
+      "material_sha256": "dd4438998f25b10450c7b12ce5f49a0df6048fc9a97e928a5b6a53730b24f7fc",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "dd4438998f25b10450c7b12ce5f49a0df6048fc9a97e928a5b6a53730b24f7fc",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": null,
+      "evidence": [
+        "Information-theoretic measures distinguish higher-order contagion mechanisms from cross-order behavioral signatures in simplicial SIS dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fpngx-s5xx",
+      "evidence_url": "https://api.crossref.org/works/10.1103%2Fpngx-s5xx",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/p2cj-1kkl",
+      "url": "https://doi.org/10.1103/p2cj-1kkl",
+      "title": "Operator dynamics in k -Markov random circuits",
+      "authors": [
+        "Unnati Akhouri",
+        "Pei-Jun Huang",
+        "Elliott Rose",
+        "Sarah Shandera"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5a1c3ff2d58afaeec988e7d0ef471b747bca9140e1e5d2f0b5791460338e0c88",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fp2cj-1kkl",
+      "author_retrieved_at": "2026-10-06T04:43:21.915056+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-05"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "74aae23c41cd3b1b33b9f3b6551846772399e5e54df0a40b4bcfa955a42039a3",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要明确提出k-Markov序列和图覆盖时间分析及动力学结果；标题和官方证据无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1103%2Fp2cj-1kkl"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Finite-memory gate sequences control operator transport, scrambling and persistent correlations across qubit networks, using graph cover time.",
+      "note_zh": "有限记忆门序列借助图覆盖时间分析，调控量子比特网络上的算符输运、混洗及持续相关。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "105107c14b699fbf647abbdec2f4db73840e73ec0a2d02cae6a36d038591a95f",
+      "input_sha256": "7a9f3ab613a8b0f8e95cc8a5fe7cdb30814d87c29c7d4f7d29a6b5e6655fc293",
+      "material_sha256": "74aae23c41cd3b1b33b9f3b6551846772399e5e54df0a40b4bcfa955a42039a3",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "74aae23c41cd3b1b33b9f3b6551846772399e5e54df0a40b4bcfa955a42039a3",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": null,
+      "evidence": [
+        "Finite-memory gate sequences control graph cover time, operator transport and persistent correlations across qubit networks."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fp2cj-1kkl",
+      "evidence_url": "https://api.crossref.org/works/10.1103%2Fp2cj-1kkl",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/bg2r-m6g5",
+      "url": "https://doi.org/10.1103/bg2r-m6g5",
+      "title": "Towards critical branching mechanism in recurrent neural networks",
+      "authors": [
+        "Feixiang Ren",
+        "Ling Feng"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b0a9c0cc6d1a077841627d7f8242f8cea53d49373f977d1b9df9f3ee41ad8e13",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fbg2r-m6g5",
+      "author_retrieved_at": "2026-10-06T04:43:11.446580+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "publisher.Published",
+        "publication_status": "published",
+        "published_date": "2026-10-05",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/bg2r-m6g5"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "d258cafb71232bad107742b00deec2b9441e92f321783184fd43661016bd0a30",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要明确给出LSTM动力学分析、新混合分枝框架和结果；标题和官方证据无特殊类型冲突。",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/bg2r-m6g5"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "LSTM activity exhibits capacity-dependent critical-like avalanches, while heterogeneous branching explains coexistence with long-range temporal correlations.",
+      "note_zh": "LSTM 活动呈现依赖容量的类临界雪崩，异质分枝机制解释其与长程时间关联的共存。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "0bd913001a4572d2cf0f965cbd0ae6b1653583aaacc5996fb9c8f0eca756b020",
+      "input_sha256": "deb9cff7a6d8f1a17375659bdac77158d8b49456623bdd4feb82b64d1595e657",
+      "material_sha256": "d258cafb71232bad107742b00deec2b9441e92f321783184fd43661016bd0a30",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d258cafb71232bad107742b00deec2b9441e92f321783184fd43661016bd0a30",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": null,
+      "evidence": [
+        "LSTM hidden-state avalanches show capacity-dependent near-critical branching; a mixture branching framework explains long-range temporal correlations."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fbg2r-m6g5",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/bg2r-m6g5",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/8p2h-fzt8",
+      "url": "https://doi.org/10.1103/8p2h-fzt8",
+      "title": "Hierarchy of collective ordering in swarmalator systems",
+      "authors": [
+        "Hyunsuk Hong",
+        "Junghyo Jo",
+        "Daniel D. Lee"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "29251b5b5953437b9e508690703b418d7b8043f4bbcc42fdf1bec34a395d9aa7",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F8p2h-fzt8",
+      "author_retrieved_at": "2026-10-06T04:43:18.470478+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "publisher.Published",
+        "publication_status": "published",
+        "published_date": "2026-10-05",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/8p2h-fzt8"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": "Letter",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Letter",
+        "basis": "Observed official directory type",
+        "sources": [
+          "https://journals.aps.org/prresearch/recent?page=1"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A solvable multispecies model links competing internal and cross-species couplings to a hierarchy of swarmalator ordering transitions.",
+      "note_zh": "可解多物种模型将内部与跨物种耦合的竞争联系到群振子有序转变的层次结构。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b327155a1e715edf10ffb4577d38321890f697e066ff584a903f63834a412160",
+      "input_sha256": "f13ecc33e3d3408c6cde0640b27d59064570dd21a0bfdd381130820dec92651d",
+      "material_sha256": "d44ff2b6f6199fbf60f5e681ee2b34736bc21b5f552454d307bbf5d007cb3890",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d44ff2b6f6199fbf60f5e681ee2b34736bc21b5f552454d307bbf5d007cb3890",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": null,
+      "evidence": [
+        "An exactly solvable coupled-species model maps swarmalator collective phases and first- and second-order transition boundaries."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F8p2h-fzt8",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/8p2h-fzt8",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2538060123",
+      "url": "https://doi.org/10.1073/pnas.2538060123",
+      "title": "Regulation of morphogen signaling pathways by recurrent hypermotif circuits",
+      "authors": [
+        "Miri Adler",
+        "Ruslan Medzhitov"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "dcec619f2c14b6f61fd547f518628064c9f68b89d3d97e7cd12d1a10f8292d66",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2538060123",
+      "author_retrieved_at": "2026-10-06T04:43:16.762729+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-05"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": "Research Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Research Article",
+        "basis": "Observed official directory type",
+        "sources": [
+          "https://www.pnas.org/action/doSearch?field1=AllField&text1=&publication%5B%5D=pnas&publication=&Ppub=&startPage=0&sortBy=Earliest"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Intercellular hypermotif topologies connect regulatory loops and generate oscillatory or antagonistic morphogen responses in dynamical models.",
+      "note_zh": "跨细胞超模体连接调控回路，其拓扑可在动力学模型中产生振荡或拮抗的形态发生信号响应。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b0c743bce9f714a93897d4e4ba2597841160b77d89c1bdae18bfbbc7fa4ba2f1",
+      "input_sha256": "3fdb1b4507cf2054767fd542ae147d993812bea264a32d1e76bc90600b1a2ce0",
+      "material_sha256": "26d73791ed8e1d1b3414ffdc87cc487a14849f9b3d6d7c0c1d729867dffec776",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "26d73791ed8e1d1b3414ffdc87cc487a14849f9b3d6d7c0c1d729867dffec776",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": "PNAS",
+      "evidence": [
+        "Hypermotif topologies connect regulatory circuits across cell types and generate oscillatory and antagonistic signaling dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2538060123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2538060123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2538056123",
+      "url": "https://doi.org/10.1073/pnas.2538056123",
+      "title": "Recurrent hypermotif regulatory circuits in developmental programs",
+      "authors": [
+        "Miri Adler",
+        "Ruslan Medzhitov"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5ccdf942b442b863e9e3ac7d9fce953c264988d95a63aeed799b0bf9b8346a66",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2538056123",
+      "author_retrieved_at": "2026-10-06T04:43:14.959405+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-05"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": "Research Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Research Article",
+        "basis": "Observed official directory type",
+        "sources": [
+          "https://www.pnas.org/action/doSearch?field1=AllField&text1=&publication%5B%5D=pnas&publication=&Ppub=&startPage=0&sortBy=Earliest"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Recurrent regulatory motifs combine into hypermotif circuits whose wiring links developmental architecture to emergent dynamics.",
+      "note_zh": "发育调控网络中的重复模体组合为超模体，将调控架构与涌现动力学联系起来。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "c6966dd627311757ba5edb7616f810ff723a5fdb96fd031787cb11db93cd152d",
+      "input_sha256": "593ead7b012ec6c3c302cf9f74cbfc4d8ee1d151d6ca2717075390f91946b321",
+      "material_sha256": "e41bb26fba2c1d39c5611528ef87943c91965dac50653ae4788feee63892c208",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e41bb26fba2c1d39c5611528ef87943c91965dac50653ae4788feee63892c208",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": "PNAS",
+      "evidence": [
+        "Developmental regulatory networks combine recurrent motifs into hypermotif circuits with stage-dependent architecture and emergent dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2538056123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2538056123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0355263",
+      "url": "https://doi.org/10.1063/5.0355263",
+      "title": "Contrasting seasonal organization of Arctic dynamical and thermodynamic variability",
+      "authors": [
+        "Sujata Kulkarni",
+        "Ankit Agarwal"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "929a28859e32ae01d8603b72f09db0c7f30096b7f39cea198e950b60b25eee6e",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0355263",
+      "author_retrieved_at": "2026-10-06T04:43:13.188544+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-05"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "28c760eb284e279b963e69fe2fab8350c96c8f51dc497a180491e82bcf8c97e8",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要明确给出气候数据、网络构造、空间连通分析与原创结果；标题和官方证据无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0355263"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Climate networks reveal opposite seasonal changes in Arctic circulation and temperature connectivity within a common quantitative framework.",
+      "note_zh": "气候网络揭示北极环流与温度连通组织在冬夏之间呈相反变化。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "54c68cd46c68cba514b30cf8d4ef60a7a046cff8c5c323acda098d263834f9f5",
+      "input_sha256": "d6461ab9002bd018b4521196eca91a58cf0e6d4bd6b7eb35d3ef7737c02c3679",
+      "material_sha256": "28c760eb284e279b963e69fe2fab8350c96c8f51dc497a180491e82bcf8c97e8",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "28c760eb284e279b963e69fe2fab8350c96c8f51dc497a180491e82bcf8c97e8",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": null,
+      "evidence": [
+        "Fixed-density climate networks reveal contrasting seasonal connectivity organization of Arctic circulation and near-surface temperature."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0355263",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0355263",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0340752",
+      "url": "https://doi.org/10.1063/5.0340752",
+      "title": "Spatiotemporal dynamics in the bi-layer memristive Morris–Lecar neurons with different obstacles",
+      "authors": [
+        "Vinoth Seralan",
+        "Sabarathinam Srinivasan",
+        "Anitha Karthikeyan",
+        "Karthikeyan Rajagopal",
+        "Viktor Popov"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "1154702b132099aec6b76d870dda68ffd6473085a12d0113efa22f790677a9c0",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0340752",
+      "author_retrieved_at": "2026-10-06T04:43:09.821979+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-10-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-05",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-05"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "19cae9f6725c6d176776ec2d7134b43b64fc554efd7703a5db6385f34ca63fa7",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要明确提出耦合神经元模型、驱动参数、层间传播与同步分析；标题和官方证据无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0340752"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Obstacles and coupling shape spiral-wave propagation and interlayer synchronization in bilayer memristive neuronal media.",
+      "note_zh": "障碍与耦合如何改变双层忆阻神经元系统中的螺旋波传播和层间同步？",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8d2e176737780dc147e1cc21a14e20363c6066667fc0d620a2bc2da1958c4eda",
+      "input_sha256": "1776f154792425b72d2b00d6329d51aa8356feb0d70474df2c58fe53b14db79d",
+      "material_sha256": "19cae9f6725c6d176776ec2d7134b43b64fc554efd7703a5db6385f34ca63fa7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "19cae9f6725c6d176776ec2d7134b43b64fc554efd7703a5db6385f34ca63fa7",
+      "rule_sha256": "3162a91a3d9092993e1baa8d99b253dbaacb4681d6f89948afbadc67f4b062eb",
+      "featured": null,
+      "evidence": [
+        "Coupled single- and bilayer neuron media exhibit obstacle-dependent spiral waves, interlayer transfer and coupling-dependent synchronization."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0340752",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0340752",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1038/s42005-026-02894-z",
       "url": "https://doi.org/10.1038/s42005-026-02894-z",
@@ -10293,92 +11112,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/bg2r-m6g5",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/bg2r-m6g5",
-      "title": "Towards critical branching mechanism in recurrent neural networks",
-      "authors": [
-        "Feixiang Ren",
-        "Ling Feng"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "06dca96f595884bcd3f52cc10ff2bd9af14ddad3229b5b4023e2de0f735c29f2",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/bg2r-m6g5",
-      "author_retrieved_at": "2026-10-04T05:38:14.830Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-11",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-11",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/bg2r-m6g5"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-11",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要分析训练 LSTM 隐状态雪崩并提出混合分枝框架解释时间关联，无特殊类型冲突。",
-        "material_sha256": "c308c0887c56f653da9e0ab9cff901ddde3cabf86e7c1f120a0957eb3dee7243",
-        "abstract_sha256": "42a7ea28488dadf745160fd658d0fa0edca69045d34cfa2138ebe827f0cb31fc",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/bg2r-m6g5"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/bg2r-m6g5"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "LSTM activity exhibits capacity-dependent critical-like avalanches, while heterogeneous branching explains coexistence with long-range temporal correlations.",
-      "note_zh": "LSTM 活动呈现依赖容量的类临界雪崩，异质分枝机制解释其与长程时间关联的共存。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "c33efeaa9136ff55fa5f99dfdae8ffdfec9ece27ac6c72481585b6cb02a53d99",
-      "assessment_sha256": "c33efeaa9136ff55fa5f99dfdae8ffdfec9ece27ac6c72481585b6cb02a53d99",
-      "input_sha256": "972e00e213363b9c93966c7eed35cf6002fd836fc0935c6cb1c83a147015e416",
-      "material_sha256": "c308c0887c56f653da9e0ab9cff901ddde3cabf86e7c1f120a0957eb3dee7243",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "c308c0887c56f653da9e0ab9cff901ddde3cabf86e7c1f120a0957eb3dee7243",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Capacity-dependent LSTM activity exhibits critical-like avalanches, while a mixture branching framework relates heterogeneous branching to temporal correlations."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fbg2r-m6g5",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/bg2r-m6g5",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/81gf-mlhm",
       "url": "https://doi.org/10.1103/81gf-mlhm",
       "title": "Emergence of contagious cooperation in community-structured networks",
@@ -11302,94 +12035,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fqjl4-wqvx",
       "evidence_url": "https://api.crossref.org/works/10.1103%2Fqjl4-wqvx",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/ppm1-mxhz",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/ppm1-mxhz",
-      "title": "Random walks across dimensions: Exploring simplicial complexes",
-      "authors": [
-        "Diego Febbe",
-        "Duccio Fanelli",
-        "Timoteo Carletti"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "a6f07a41999da5181c119064f2b4a62a45fbcad211cee301cafe760bf802fe9c",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/ppm1-mxhz",
-      "author_retrieved_at": "2026-10-04T05:36:51.379Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-09",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-09",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/ppm1-mxhz"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-09",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要提出跨维单纯形随机游走算符并研究高阶排序/搜索，无特殊类型冲突。",
-        "material_sha256": "0ebdfd7649f2b560743d77bee1ae03396b9c4baa8aca1ee929931997a54d6d06",
-        "abstract_sha256": "0d42f69bee5c4a1cc3d1598f583dead1a79aee7bd9001dbd4e6789e2c7cb2934",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/ppm1-mxhz"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/ppm1-mxhz"
-          ]
-        }
-      },
-      "categories": [
-        "network_spreading",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Cross-dimensional random walks rank simplices of different orders and reveal how teleportation affects search on simplicial complexes.",
-      "note_zh": "跨维随机游走对不同阶单纯形排序，并揭示瞬移如何影响单纯复形上的搜索。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "655d95e203dd88280c4440bd8e2fd07a14f2b9d709aa876fa67402cbcf4403e8",
-      "assessment_sha256": "655d95e203dd88280c4440bd8e2fd07a14f2b9d709aa876fa67402cbcf4403e8",
-      "input_sha256": "01049edb834a8a3a60b94c549dd1f70195e955b4f6d4abc6ad2f5f8f31988602",
-      "material_sha256": "0ebdfd7649f2b560743d77bee1ae03396b9c4baa8aca1ee929931997a54d6d06",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "0ebdfd7649f2b560743d77bee1ae03396b9c4baa8aca1ee929931997a54d6d06",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "A cross-dimensional simplicial random-walk operator yields higher-order simplex rankings and teleportation-dependent search strategies."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fppm1-mxhz",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/ppm1-mxhz",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -13204,92 +13849,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/8p2h-fzt8",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/8p2h-fzt8",
-      "title": "Hierarchy of collective ordering in swarmalator systems",
-      "authors": [
-        "Hyunsuk Hong",
-        "Junghyo Jo",
-        "Daniel D. Lee"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "71b5aaec00fce63d3c2c2b4becadb749bbe78b80312996aca5d590bd52f22dfe",
-      "author_source_url": "https://journals.aps.org/prresearch/accepted/10.1103/8p2h-fzt8",
-      "author_retrieved_at": "2026-10-04T05:36:47.077Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-09-02",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-02",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/8p2h-fzt8"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-02",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要提出精确可解多物种球形自旋模型并解析完整相图和转变边界，无特殊类型冲突。",
-        "material_sha256": "bf90d2d5fed0b57d614a95dcddd0627417599f71de06a98f798841d15d6b41c5",
-        "abstract_sha256": "842621491f205eeb28fd035db455200329ef42c1377f1e439e4725287db44101",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/8p2h-fzt8"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/prresearch/accepted/10.1103/8p2h-fzt8"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "A solvable multispecies model links competing internal and cross-species couplings to a hierarchy of swarmalator ordering transitions.",
-      "note_zh": "可解多物种模型将内部与跨物种耦合的竞争联系到群振子有序转变的层次结构。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "c728c2fcf5c748f65bfb5b3f89718cdf3f54d2848944c5b1c38333757ee16c64",
-      "assessment_sha256": "c728c2fcf5c748f65bfb5b3f89718cdf3f54d2848944c5b1c38333757ee16c64",
-      "input_sha256": "43469c2376464ec3f73cac66fb15042c89df5a0bbdcfe3dec1f8ee2783b52e83",
-      "material_sha256": "bf90d2d5fed0b57d614a95dcddd0627417599f71de06a98f798841d15d6b41c5",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "bf90d2d5fed0b57d614a95dcddd0627417599f71de06a98f798841d15d6b41c5",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "A solvable multispecies spherical model links internal and cross-species couplings to a hierarchy of swarmalator ordering transitions."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F8p2h-fzt8",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/8p2h-fzt8",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/72hc-zmsb",
       "url": "https://doi.org/10.1103/72hc-zmsb",
       "title": "Solvable model of noisy coupled oscillators with fully random interactions",
@@ -14343,6 +14902,33 @@
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
       ],
       "screening_version": "newflow-1"
+    }
+  ],
+  "carryover_audits": [
+    {
+      "current_run": "reports/runs/2026-10-05-to-06-carryover-01",
+      "candidate_sha256": "712a40ec2c8e5fd0a13119c9178e18400a94a61c021ba51b56088e5049e08020",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af"
+      },
+      "counts": {
+        "in_window": 135,
+        "newly_reviewed": 107,
+        "historically_reviewed": 121,
+        "state_updates": 22,
+        "categories": {
+          "excluded": 126,
+          "core": 8,
+          "transferable_application": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "2d16c22d9ad59cf75456fd2ea516784c80149934a83de4089abace89ab7d5d0b"
     }
   ]
 }
