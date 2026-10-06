@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-05T11:31:33.830149+00:00",
+  "generated_at": "2026-10-06T03:36:12.366674+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-05",
-  "window_days": 35,
+  "window_end": "2026-10-06",
+  "window_days": 36,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "9301f9a098a284e161a3d37e7f43afceb4e870efa2a75c6d90931a209dedf604",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
   "reading_notes_sha256": "6f0f95092ea02c922a618ad27898a76c2d9f7be5b69d7883fa53259f56b868ae",
-  "author_metadata_sha256": "c3050b6d59ca653b19ac75490cce38a0cf853ac435e13d0a42609d3e81cb49e4",
+  "author_metadata_sha256": "73e339adccb4a210bc9c973e7de49d90f095d0fc899f483099066b15907dcc8c",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1209,12 +1209,97 @@
       },
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-06-01",
+      "config_sha256": "69f0b27f60995946dcabee606faac7bc6a398d23b01d483902a303155432df4c",
+      "window_start": "2026-10-06",
+      "window_end": "2026-10-06",
+      "rule_sha256": "88ec24ef9cd1d4d26e806ad5797e1788fc85e1b4494c0e178e581f857fccf5f4",
+      "screening_log_sha256": "5648c77cf694b82e8194af88dbe5aeaf4af7e472fca0366eab167800ceb8097c",
+      "candidate_sha256": "09fedec44ffcecbe8e8ab118d8f8b7a2ce4f3972c7aeb4be68bfa8fc1af0b3b1",
+      "author_metadata_sha256": "755d667d08012c806d159ceed5785024dc9b6c572dfb2c98ac9048646d779b31",
+      "run_manifest_sha256": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-06-01",
+          "files": {
+            "candidates.json": "09fedec44ffcecbe8e8ab118d8f8b7a2ce4f3972c7aeb4be68bfa8fc1af0b3b1",
+            "coverage.json": "9a670db8c16765a297a38f8d683d07d6e83e54a84b7d39555b82f8c133b698f3",
+            "collection-log.jsonl": "c9376db0889663c6158f83af5848cca0434682102200e4fa8999ad47e3fb4934",
+            "screening-log.jsonl": "9f24548573b6916515e3ccb564ad95a840501a2e1e3bcd8144f3271b421b6e89",
+            "inputs/manifest.json": "edaf2cd5e5a2ac9d940c5a4acf2e81a98f881436842b27cfa565117f0fb02880",
+            "inputs/sources.json": "345f49b681614f1d8b62a66bebad3d2727691b32b9a5ad49a959383a0948b81f",
+            "inputs/screening-protocol.md": "8d7c28744a8bb38dd39c176deaf0a56068a7098ee218c2081a5c29aa26fe19bd"
+          },
+          "candidate_sha256": "09fedec44ffcecbe8e8ab118d8f8b7a2ce4f3972c7aeb4be68bfa8fc1af0b3b1",
+          "rule_sha256": "88ec24ef9cd1d4d26e806ad5797e1788fc85e1b4494c0e178e581f857fccf5f4",
+          "screening_log_sha256": "5648c77cf694b82e8194af88dbe5aeaf4af7e472fca0366eab167800ceb8097c"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "755d667d08012c806d159ceed5785024dc9b6c572dfb2c98ac9048646d779b31",
+          "audit": {
+            "path": "reports/runs/2026-10-06-01/screening-log.jsonl",
+            "sha256": "9f24548573b6916515e3ccb564ad95a840501a2e1e3bcd8144f3271b421b6e89"
+          }
+        }
+      },
+      "publication_evidence": {
+        "version": "publication-evidence-1",
+        "candidate_sha256": "09fedec44ffcecbe8e8ab118d8f8b7a2ce4f3972c7aeb4be68bfa8fc1af0b3b1",
+        "files": [
+          {
+            "path": "evidence/browser-directory.json",
+            "sha256": "6bc55d33d63c560f5e7aa0847b063fb23419b95415cea5fff4f72a65c61b06d8"
+          },
+          {
+            "path": "evidence/browser-directory-log.jsonl",
+            "sha256": "434530d810f49bd42e7a4808c1494c48b7e82f12ea31a9cfbd1fc76ed11cd832"
+          }
+        ],
+        "summary": {
+          "journals": [
+            "Science",
+            "SA",
+            "PNAS",
+            "Chaos"
+          ],
+          "window_start": "2026-10-06",
+          "window_end": "2026-10-06",
+          "supplemental_candidate_inventory_complete": true,
+          "supplemental_metadata_reconciliation_complete": false,
+          "new_in_window_dois": [],
+          "pnas_original_issue_DOI_set_equal": true,
+          "pnas_first_online_dates_equal": true,
+          "pnas_out_of_window_count": 93,
+          "source_relative_snapshot": true,
+          "original_coverage_flags_unchanged": true,
+          "not_complete_calendar_day_coverage": true,
+          "basis": "All-type current/first-release directories and earlier guards verified; PNAS unfiltered full 20-card newest page plus future issues 41/42; Chaos explicit dates for full 20-card prefix and October issue DOI equality. No new in-window DOI.",
+          "strict_reconciliation_limit": "Two PNAS title typography/encoding differences retained for out-of-window records; no strict title reconciliation claim."
+        },
+        "storage_files": [
+          {
+            "path": "evidence/browser-directory.json",
+            "sha256": "6bc55d33d63c560f5e7aa0847b063fb23419b95415cea5fff4f72a65c61b06d8"
+          },
+          {
+            "path": "evidence/browser-directory-log.jsonl",
+            "sha256": "434530d810f49bd42e7a4808c1494c48b7e82f12ea31a9cfbd1fc76ed11cd832"
+          }
+        ]
+      },
+      "candidate_inventory_complete": false,
+      "metadata_reconciliation_complete": false
     }
   ],
   "author_available_count": 152,
-  "candidate_count": 3768,
+  "candidate_count": 3770,
   "screening_counts": {
-    "excluded": 3616,
+    "excluded": 3618,
     "core": 138,
     "transferable_application": 14,
     "review": 0,

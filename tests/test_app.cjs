@@ -354,14 +354,14 @@ test('published artifact has consistent rules, date bounds, counts and unique DO
   assert.equal(audit.candidate_inventory_complete, false);
   assert.equal(audit.metadata_reconciliation_complete, false);
   assert.equal(data.papers.length, data.screening_counts.included);
-  assert.equal(data.candidate_count, 3768);
+  assert.equal(data.candidate_count, 3770);
   assert.equal(audit.included_assessments.length, 152);
   assert.equal(new Set(data.papers.map(p => p.doi)).size, data.papers.length);
   assert.ok(data.papers.every(p => p.date >= data.window_start && p.date <= data.window_end && !('abstract' in p)));
-  assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 35);
+  assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1, 36);
   assert.equal(data.coverage.length,13);
   assert.equal(data.coverage.find(q => q.journal === 'NC').candidate_inventory_complete,false);
-  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed, 3768);
+  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed, 3770);
   assert.equal(data.published_count,112);
   assert.equal(data.accepted_count,40);
 });
@@ -452,7 +452,7 @@ test('editor-selected related readings are not advertised as core transferable m
 
 test('release audit retains all windows and separately pinned October coverage evidence', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
-  assert.equal(data.run_inputs.length,3);
+  assert.equal(data.run_inputs.length,4);
   const october=data.run_inputs.find(i=>i.run==='reports/runs/2026-10-01-to-05-01');
   assert.equal(october.window_start,'2026-10-01');
   assert.equal(october.window_end,'2026-10-05');
@@ -460,8 +460,16 @@ test('release audit retains all windows and separately pinned October coverage e
   assert.equal(october.publication_evidence.summary.supplemental_metadata_reconciliation_complete,false);
   assert.equal(october.publication_evidence.summary.original_coverage_flags_unchanged,true);
   assert.equal(october.publication_evidence.unidentified_candidate_dispositions[0].category,'excluded');
+  const october6=data.run_inputs.find(i=>i.run==='reports/runs/2026-10-06-01');
+  assert.equal(october6.window_start,'2026-10-06');
+  assert.equal(october6.window_end,'2026-10-06');
+  assert.deepEqual(october6.publication_evidence.summary.journals,['Science','SA','PNAS','Chaos']);
+  assert.equal(october6.publication_evidence.summary.supplemental_candidate_inventory_complete,true);
+  assert.equal(october6.publication_evidence.summary.original_coverage_flags_unchanged,true);
+  assert.equal(october6.publication_evidence.summary.not_complete_calendar_day_coverage,true);
+  assert.deepEqual(october6.publication_evidence.summary.new_in_window_dois,[]);
   for (const coverage of data.coverage) {
-    assert.deepEqual(coverage.windows.map(w=>[w.window_start,w.window_end]),[['2026-09-01','2026-09-30'],['2026-10-01','2026-10-05']]);
+    assert.deepEqual(coverage.windows.map(w=>[w.window_start,w.window_end]),[['2026-09-01','2026-09-30'],['2026-10-01','2026-10-05'],['2026-10-06','2026-10-06']]);
   }
 });
 
@@ -470,7 +478,7 @@ test('public export has notes for exactly the current included DOIs and preserve
   const rows=reportText('reports/runs/2026-09/screening-log.jsonl').trim().split('\n').map(JSON.parse);
   const latest=new Map();
   for (const row of rows) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
-  for (const run of ['runs/2026-09-expansion-01','reviews/2026-09-expansion-adjudication-01','runs/2026-10-01-to-05-01','reviews/2026-10-05-editorial-revision-01']) {
+  for (const run of ['runs/2026-09-expansion-01','reviews/2026-09-expansion-adjudication-01','runs/2026-10-01-to-05-01','runs/2026-10-06-01','reviews/2026-10-05-editorial-revision-01']) {
     const events=reportText(`reports/${run}/screening-log.jsonl`).trim().split('\n').map(JSON.parse);
     for (const row of events) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
   }
