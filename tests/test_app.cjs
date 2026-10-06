@@ -306,7 +306,12 @@ test('published expansion adds four filter journals without changing spotlight m
     assert.ok(data.papers.filter(p=>p.journal_short===short).every(p=>p.featured===null));
   }
   const expanded = setup('newflow-1',collectionConfig); await ready();
-  assert.deepEqual(expanded.node('#journal').children.map(n=>n.textContent),collectionConfig.journals.map(j=>j.short==='PNAS'?'PNAS':j.name));
+  const options = expanded.node('#journal').children;
+  assert.deepEqual(options.map(n=>n.value), [...collectionConfig.featured_journals,
+    ...collectionConfig.journals.filter(j=>!collectionConfig.featured_journals.includes(j.short)).map(j=>j.short)]);
+  assert.equal(options[7].textContent, 'Science Advances');
+  assert.equal(options[8].textContent, 'PNAS');
+  assert.equal(options[9].textContent, 'Communications Physics');
   assert.equal(expanded.node('#scope-control').hidden,false);
 });
 

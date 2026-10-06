@@ -209,7 +209,15 @@ function renderPagination(pages) {
   nav.append(next);
 }
 function bindControls() {
-  state.data.journals.forEach((journal) => {
+  // Keep the original Spotlight order; append the other journals in source order.
+  const journals = [...state.data.journals].sort((a, b) => {
+    const rank = (journal) => {
+      const index = state.data.featured_journals.indexOf(journal.short);
+      return index < 0 ? state.data.featured_journals.length : index;
+    };
+    return rank(a) - rank(b);
+  });
+  journals.forEach((journal) => {
     const node = element("option", "", journalLabel(journal)); node.value = journal.short; $("#journal").append(node);
   });
   $("#journal").addEventListener("change", (event) => {
