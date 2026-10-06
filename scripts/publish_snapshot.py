@@ -464,6 +464,9 @@ def main():
     parser.add_argument('--check', action='store_true', help='Verify public snapshot matches the audited inputs without rewriting it')
     args = parser.parse_args()
     artifacts = build_release(selected_runs(ROOT/args.release))
+    from daily_suggestions import attach_suggestions
+    artifacts = attach_suggestions(artifacts, ROOT/'config/daily-suggestions.json', ROOT,
+                                   as_of=artifacts['papers.json']['window_end'])
     target = ROOT/args.out
     if args.check:
         for name, value in artifacts.items():

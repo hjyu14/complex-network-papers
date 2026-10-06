@@ -33,6 +33,48 @@ function timeNode(paper) {
 function readingNote(paper) {
   return element("p", "reading-note", tr(paper.note_en, paper.note_zh));
 }
+function journalLabel(paper) {
+  return paper.journal_short === "PNAS" || paper.short === "PNAS" ? "PNAS" : paper.journal || paper.name;
+}
+function renderSuggestion() {
+  const entry = state.data.daily_suggestions?.[0];
+  const paper = entry && state.papers.find(p => p.doi === entry.doi);
+  $("#suggestion").hidden = !paper;
+  $("#suggestion-content").replaceChildren();
+  if (!paper) return;
+  $("#suggestion-date").textContent = tr(`Recommended ${entry.recommended_on}`, `推荐于 ${entry.recommended_on}`);
+  const card = element("article", "suggestion-card");
+  const body = element("div", "suggestion-body");
+  const intro = element("div", "suggestion-intro");
+  const meta = element("div", "feature-top");
+  const journal = element("span", "journal-badge", journalLabel(paper));
+  journal.title = paper.journal;
+  meta.append(journal, timeNode(paper));
+  if (paper.publication_status === "accepted") meta.append(statusBadge(paper));
+  const title = element("h3"); title.append(link(paper.title, paper.url));
+  intro.append(meta, title, element("p", "authors", paper.authors.join(" · ")),
+    element("p", "suggestion-question", tr(entry.question.en, entry.question.zh)),
+    link(tr("Read paper ↗", "阅读原文 ↗"), paper.url, "suggestion-link"));
+  const reasons = element("div", "suggestion-reasons");
+  reasons.append(element("h4", "", tr("Why read it", "为什么值得读")));
+  entry.reasons.forEach((reason, index) => {
+    const row = element("div", "suggestion-reason");
+    const text = element("div");
+    text.append(element("h5", "", tr(reason.heading.en, reason.heading.zh)),
+      element("p", "", tr(reason.text.en, reason.text.zh)));
+    row.append(element("span", "reason-number", String(index + 1).padStart(2, "0")), text);
+    reasons.append(row);
+  });
+  reasons.append(element("p", "suggestion-audience", tr("For: ", "适合读者：") + tr(entry.audience.en, entry.audience.zh)));
+  body.append(intro, reasons);
+  const footer = element("div", "suggestion-footer");
+  footer.append(element("p", "", entry.selection === "from_archive" ? tr("From the collection · original paper date shown above", "馆藏回选 · 原文日期如上") : tr("Newly added in this update", "本轮新收录")));
+  const details = element("details");
+  details.append(element("summary", "", tr("Reading basis & limitations", "审读依据与阅读提示")),
+    element("p", "", tr(entry.reading_caveat.en, entry.reading_caveat.zh)));
+  footer.append(details); card.append(body, footer);
+  $("#suggestion-content").append(card);
+}
 function statusBadge(paper) {
   return element("span", "badge accepted-badge", tr("Accepted · publication pending", "已接收 · 待正式发表"));
 }
@@ -46,7 +88,9 @@ function hasOtherJournals() {
 function featureCard(paper) {
   const card = element("article", "feature-card");
   const top = element("div", "feature-top");
-  top.append(element("span", "journal-badge", paper.journal), timeNode(paper));
+  const journal = element("span", "journal-badge", journalLabel(paper));
+  journal.title = paper.journal;
+  top.append(journal, timeNode(paper));
   if (paper.publication_status === "accepted") top.append(statusBadge(paper));
   const type = articleBadge(paper);
   if (type) top.append(type);
@@ -60,7 +104,7 @@ function featureCard(paper) {
 function paperCard(paper) {
   const card = element("article", "paper-card");
   const top = element("div", "paper-top");
-  const journal = element("span", "journal-name", paper.journal || tr("Journal unavailable", "期刊名称缺失"));
+  const journal = element("span", "journal-name", journalLabel(paper) || tr("Journal unavailable", "期刊名称缺失"));
   journal.title = paper.journal;
   top.append(journal);
   top.append(timeNode(paper));
@@ -166,7 +210,7 @@ function renderPagination(pages) {
 }
 function bindControls() {
   state.data.journals.forEach((journal) => {
-    const node = element("option", "", journal.name); node.value = journal.short; $("#journal").append(node);
+    const node = element("option", "", journalLabel(journal)); node.value = journal.short; $("#journal").append(node);
   });
   $("#journal").addEventListener("change", (event) => {
     state.journal = event.target.value;
@@ -197,6 +241,7 @@ async function getJSON(path) {
 function renderSnapshot() {
   if (!state.data) return;
   const data = state.data;
+  renderSuggestion();
   $("#journal").setAttribute("aria-label", tr("Journal", "期刊"));
   $("#period").setAttribute("aria-label", tr("Dates", "日期"));
   $("#scope").setAttribute("aria-label", tr("Journal scope", "期刊范围"));
@@ -224,6 +269,7 @@ function renderSnapshot() {
   renderCategories(); renderResults();
 }
 function renderUnavailable() {
+  $("#suggestion").hidden = true;
   $("#status").hidden = false;
   $("#status").textContent = tr("Paper list unavailable or incompatible. Please try again later.", "文献列表暂不可用或为旧版快照，请稍后重试。");
   $("#status").classList.add("warning");

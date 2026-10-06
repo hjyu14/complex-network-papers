@@ -225,14 +225,34 @@ test('search, dates, theme intersection and other', async () => {
   assert.equal(node('#paper-list').children[0].className,'empty');
 });
 
-test('six newest cards, full journal names and other last', async () => {
-  const {node} = setup(); await ready();
+test('six newest cards, PNAS abbreviation and other last', async () => {
+  const {node, context} = setup(); await ready();
   const cards = node('#featured-list').children;
   assert.equal(cards.length,6);
-  assert.equal(cards[0].children[0].children[0].textContent,'Proceedings of the National Academy of Sciences');
+  assert.equal(cards[0].children[0].children[0].textContent,'PNAS');
+  assert.equal(vm.runInContext('journalLabel(state.papers.find(p => p.journal_short === "NMI"))', context),'Nature Machine Intelligence');
   assert.equal(cards[0].children[1].children[0].textContent,'Synthetic test 7');
   assert.equal(node('#categories').children[0].children[0].textContent,'All topics');
   assert.equal(node('#categories').children.at(-1).children[0].textContent,'Other');
+});
+
+test('recommendation switches language and disappears if its DOI is unavailable', async () => {
+  const {node, context, data} = setup(); await ready();
+  assert.equal(node('#suggestion').hidden, true);
+  const entry = JSON.parse(fs.readFileSync(path.join(__dirname,'../config/daily-suggestions.json'),'utf8')).entries[0];
+  data.daily_suggestions = [{...entry, doi:data.papers[0].doi}];
+  vm.runInContext('renderSnapshot()', context);
+  const texts = n => [n.textContent, ...n.children.flatMap(texts)].join(' ');
+  assert.equal(node('#suggestion').hidden, false);
+  assert.match(texts(node('#suggestion-content')), /Separate observed behavior/);
+  assert.match(node('#suggestion-date').textContent, /2026-10-06/);
+  node('#language-toggle').events.click();
+  assert.match(texts(node('#suggestion-content')), /区分行为表现/);
+  assert.match(texts(node('#suggestion-content')), /未审读全文/);
+  data.daily_suggestions[0].doi = '10.1234/unavailable';
+  vm.runInContext('renderSnapshot()', context);
+  assert.equal(node('#suggestion').hidden, true);
+  assert.equal(node('#suggestion-content').children.length, 0);
 });
 
 test('old snapshot is blocked, not mislabeled as whitelist results', async () => {
@@ -270,9 +290,9 @@ test('language switch preserves filters, paper titles and authors', async () => 
   assert.match(card.children[2].children[0].textContent,/incomplete/);
 });
 
-test('journal options use only full names', async () => {
+test('journal options abbreviate only PNAS', async () => {
   const {node} = setup(); await ready();
-  assert.deepEqual(node('#journal').children.map((n)=>n.textContent),config.journals.map((j)=>j.name));
+  assert.deepEqual(node('#journal').children.map((n)=>n.textContent),config.journals.map((j)=>j.short==='PNAS'?'PNAS':j.name));
 });
 
 test('published expansion adds four filter journals without changing spotlight membership', async () => {
@@ -286,7 +306,7 @@ test('published expansion adds four filter journals without changing spotlight m
     assert.ok(data.papers.filter(p=>p.journal_short===short).every(p=>p.featured===null));
   }
   const expanded = setup('newflow-1',collectionConfig); await ready();
-  assert.deepEqual(expanded.node('#journal').children.map(n=>n.textContent),collectionConfig.journals.map(j=>j.name));
+  assert.deepEqual(expanded.node('#journal').children.map(n=>n.textContent),collectionConfig.journals.map(j=>j.short==='PNAS'?'PNAS':j.name));
   assert.equal(expanded.node('#scope-control').hidden,false);
 });
 
@@ -304,7 +324,7 @@ test('public rules article is linked and bilingual', () => {
   assert.match(home, /<html lang="en">/);
   assert.match(rules, /data-language="en"/);
   assert.match(rules, /data-language="zh" hidden/);
-  assert.equal((rules.match(/<h2>/g) || []).length,10);
+  assert.equal((rules.match(/<h2>/g) || []).length,12);
   assert.match(rules, /Preprints are excluded/);
   assert.match(rules, /预印本不收录/);
   assert.match(rules, /AI assistance/);

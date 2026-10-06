@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T04:56:28.536436+00:00",
+  "generated_at": "2026-10-06T06:23:13.014693+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-10-06",
   "window_days": 36,
@@ -14930,5 +14930,64 @@
       ],
       "audit_sha256": "2d16c22d9ad59cf75456fd2ea516784c80149934a83de4089abace89ab7d5d0b"
     }
-  ]
+  ],
+  "daily_suggestions": [
+    {
+      "doi": "10.1103/pngx-s5xx",
+      "recommended_on": "2026-10-06",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-05-to-06-carryover-01",
+      "publication_sha256": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+      "assessment_sha256": "a66d6168e76d358497f0ee9af830e39dba2914bf089d3f0187a94789952b47a6",
+      "input_sha256": "5e9974a1e4993adcc4443ebf5caa82a8c6638944eea10c34a1950f94a5e7957c",
+      "evidence_sha256": "dd4438998f25b10450c7b12ce5f49a0df6048fc9a97e928a5b6a53730b24f7fc",
+      "review_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-06T14:22:47+08:00",
+      "question": {
+        "en": "Does an observed higher-order behavior imply a mechanism at the same interaction order?",
+        "zh": "观察到高阶行为，就意味着存在同阶的相互作用机制吗？"
+      },
+      "reasons": [
+        {
+          "heading": {
+            "en": "Separate observed behavior from its mechanism",
+            "zh": "区分行为表现与生成机制"
+          },
+          "text": {
+            "en": "The abstract describes cross-order behavioral signatures that can appear without a direct mechanism at that order. I recommend it as a concrete example of why inferring interactions from observed dynamics requires care.",
+            "zh": "文章研究跨阶诱导行为：某一阶上的行为信号，可能在没有该阶直接作用机制时出现。我推荐它，是因为这一具体案例提醒我们，从观测动力学推断相互作用阶数时需要谨慎。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Compare practical identification measures",
+            "zh": "给出可比较的识别思路"
+          },
+          "text": {
+            "en": "The study compares information-theoretic measures in a simplicial SIS contagion model. Synergy is reported as the most reliable indicator of mechanism order among the tested measures. That makes the paper a useful starting point for choosing and evaluating inference statistics.",
+            "zh": "研究在单纯形 SIS 传播模型中比较信息论指标；在其测试的指标中，协同信息最可靠地识别真实机制所在的阶数。这为选择和评估推断统计量提供了一个值得进一步核查的起点。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Bring a sharper question to your own research",
+            "zh": "带着更明确的问题回到自己的研究"
+          },
+          "text": {
+            "en": "For researchers working on higher-order networks, its value is the distinction between detecting a behavioral signature and identifying a generating mechanism. When reading the full paper, I would check how this distinction depends on the model, parameters and observation scheme.",
+            "zh": "对高阶网络研究者而言，它的启发在于区分“检测到了某种行为信号”与“识别出了生成机制”。阅读全文时，我会重点检查这种区分对模型、参数和观测方式的依赖。"
+          }
+        }
+      ],
+      "audience": {
+        "en": "Researchers in higher-order networks, contagion dynamics and network inference.",
+        "zh": "高阶网络、传播动力学和网络推断研究者。"
+      },
+      "reading_caveat": {
+        "en": "Based on a rereading of the identity-matched explicit abstract and the saved assessment. The reported findings apply to the model and comparisons described there. The full text, algorithms and numerical results have not been independently reviewed or verified.",
+        "zh": "依据回读的身份匹配明确摘要及已保存审核记录。研究结果限于摘要报告的模型与比较范围；未审读全文，也未独立验证算法或数值结果。推荐理由中的阅读价值判断属于 AI 的编辑意见。"
+      }
+    }
+  ],
+  "daily_suggestions_sha256": "1b4fb2b2bf4028c950bcd5d98d3b782af1a619622f16e94dd3f13a14313da764"
 }

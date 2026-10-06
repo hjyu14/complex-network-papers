@@ -29,6 +29,7 @@
 - `reports/reviews/<review-id>/`：封存后或跨轮的明确复议，绑定旧判断与输入。不是新整刊覆盖。
 - `config/release.json`：直接选定原始轮，并钉住各轮 `publication.json`。该文件列出有序修订及作者、补证来源；不嵌套发布视图。
 - `config/publication-notes.json`：当前中英文短说明与主题，按 DOI 绑定正式判断。
+- `config/daily-suggestions.json`：按日期保存原创双语荐读及历史，绑定原始发布清单、判断与材料；与摘要缓存分离，执行约定见发布文档。
 - `site/data/`：唯一当前网站快照，不是审核记录的来源。
 
 ## 轮次内容

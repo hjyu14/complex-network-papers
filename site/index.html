@@ -6,8 +6,8 @@
   <meta name="color-scheme" content="light">
   <title>NetSci Observatory</title>
   <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg?v=1">
-  <link rel="stylesheet" href="styles.css?v=reading-list-7">
-  <script src="i18n.js?v=reading-list-7" defer></script><script src="app.js?v=reading-list-10" defer></script>
+  <link rel="stylesheet" href="styles.css?v=reading-list-8">
+  <script src="i18n.js?v=reading-list-7" defer></script><script src="app.js?v=reading-list-11" defer></script>
 </head>
 <body>
   <a class="skip" href="#latest" data-en="Skip to papers" data-zh="跳转至文献列表">Skip to papers</a>
@@ -25,6 +25,10 @@
   </div>
   <main class="wrap">
     <div id="status" class="notice" role="status" aria-live="polite">Loading papers…</div>
+    <section id="suggestion" class="suggestion-section" aria-labelledby="suggestion-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow">AI’S SUGGESTION</p><h2 id="suggestion-title" data-en="Today’s reading pick" data-zh="今日荐读">Today’s reading pick</h2></div><p id="suggestion-date" class="suggestion-date"></p></div>
+      <div id="suggestion-content"></div>
+    </section>
     <section class="featured-section" aria-labelledby="featured-title">
       <div class="section-heading"><div><p class="eyebrow">SPOTLIGHT</p><h2 id="featured-title" data-en="Latest papers" data-zh="最新文献">Latest papers</h2></div><button id="featured-all" class="text-button" type="button">View all Spotlight papers →</button></div>
       <div id="featured-list" class="featured-grid"><p class="empty">Loading papers…</p></div>
