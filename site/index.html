@@ -6,15 +6,15 @@
   <meta name="color-scheme" content="light">
   <title>NetSci Observatory</title>
   <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg?v=1">
-  <link rel="stylesheet" href="styles.css?v=reading-list-12">
-  <script src="i18n.js?v=reading-list-7" defer></script><script src="app.js?v=reading-list-16" defer></script>
+  <link rel="stylesheet" href="styles.css?v=reading-list-16">
+  <script src="i18n.js?v=reading-list-7" defer></script><script src="app.js?v=reading-list-18" defer></script>
 </head>
 <body>
   <a class="skip" href="#latest" data-en="Skip to papers" data-zh="跳转至文献列表">Skip to papers</a>
   <div class="site-head">
     <header class="masthead wrap">
       <a class="brand" href="./" aria-label="NetSci Observatory home"><span class="brand-mark" aria-hidden="true">N<span>·</span></span><span>NETSCI OBSERVATORY</span></a>
-      <nav class="header-actions" aria-label="Main navigation"><a href="#latest" data-en="Papers" data-zh="文献">Papers</a><a href="rules.html" data-en="About" data-zh="选文说明">About</a><button id="language-toggle" class="language-toggle" type="button">中文</button></nav>
+      <nav class="header-actions" aria-label="Main navigation"><a href="#latest" data-en="Papers" data-zh="文献">Papers</a><a href="changelog.html" data-en="Changelog" data-zh="更新日志">Changelog</a><a href="rules.html" data-en="About" data-zh="选文说明">About</a><button id="language-toggle" class="language-toggle" type="button">中文</button></nav>
     </header>
     <section class="hero wrap" aria-labelledby="page-title">
       <p class="eyebrow" id="edition">September 2026</p>
@@ -25,6 +25,10 @@
   </div>
   <main class="wrap">
     <div id="status" class="notice" role="status" aria-live="polite">Loading papers…</div>
+    <section id="collection-update" class="collection-update" aria-labelledby="collection-update-title" hidden>
+      <div><h2 id="collection-update-title"></h2><p id="collection-update-counts"></p></div>
+      <button id="read-update" class="text-button" type="button" data-en="Read this update’s papers →" data-zh="阅读本次更新文献 →">Read this update’s papers →</button>
+    </section>
     <section id="suggestion" class="suggestion-section" aria-labelledby="suggestion-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">AI’S SUGGESTION</p><h2 id="suggestion-title" data-en="Today’s reading pick" data-zh="今日荐读">Today’s reading pick</h2></div><p id="suggestion-date" class="suggestion-date"></p></div>
       <div id="suggestion-content"></div>
@@ -45,7 +49,7 @@
         </div>
         <div class="facet-controls">
           <label><span data-en="Journal" data-zh="期刊">Journal</span><select id="journal"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option></select></label>
-          <label><span data-en="Dates" data-zh="日期">Dates</span><select id="period" aria-describedby="date-cutoff"><option value="30" data-en="Last 30 days" data-zh="最近 30 天">Last 30 days</option><option value="7" data-en="Last 7 days" data-zh="最近 7 天">Last 7 days</option><option value="0" data-en="All collected dates" data-zh="全部收录日期">All collected dates</option></select><small id="date-cutoff"></small></label>
+          <label><span data-en="Dates" data-zh="日期">Dates</span><select id="period" aria-describedby="date-cutoff"><option id="period-update" value="update" disabled>This update</option><option value="30" data-en="Last 30 days" data-zh="最近 30 天">Last 30 days</option><option value="7" data-en="Last 7 days" data-zh="最近 7 天">Last 7 days</option><option value="0" data-en="All collected dates" data-zh="全部收录日期">All collected dates</option></select><small id="date-cutoff"></small></label>
           <label id="scope-control" hidden><span data-en="Journal scope" data-zh="期刊范围">Journal scope</span><select id="scope"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option><option value="featured" data-en="Spotlight journals" data-zh="Spotlight 期刊">Spotlight journals</option><option value="other" data-en="Other journals" data-zh="其他期刊">Other journals</option></select></label>
         </div>
         <button id="back-all" type="button" class="back-all" hidden data-en="← Back to all papers" data-zh="← 返回全部文献">← Back to all papers</button>
@@ -63,7 +67,7 @@
       </details>
     </section>
   </main>
-  <footer class="wrap"><span>NETSCI OBSERVATORY</span><p id="updated"></p><a href="rules.html" data-en="Selection & sources" data-zh="选文与来源">Selection & sources</a></footer>
+  <footer class="wrap"><span>NETSCI OBSERVATORY</span><p id="updated"></p><a href="changelog.html" data-en="Changelog" data-zh="更新日志">Changelog</a><a href="rules.html" data-en="Selection & sources" data-zh="选文与来源">Selection & sources</a></footer>
   <noscript><p class="wrap">JavaScript is required to browse the list. / 浏览列表需要 JavaScript。 <a href="data/papers.json">Paper data / 文献数据</a></p></noscript>
   <!-- Cloudflare Web Analytics -->
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"4948fb6be20f4793b65fcc1278d98a40"}'></script>

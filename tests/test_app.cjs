@@ -81,8 +81,8 @@ test('public README defaults to English and offers a reciprocal Chinese version'
   }
 });
 
-test('home and rules pages share a local scalable favicon', () => {
-  for (const page of ['index.html', 'rules.html']) {
+test('public pages share a local scalable favicon', () => {
+  for (const page of ['index.html', 'rules.html', 'changelog.html']) {
     const html = fs.readFileSync(path.join(__dirname, '../site', page), 'utf8');
     assert.match(html.split('</head>')[0], /<link rel="icon" type="image\/svg\+xml" sizes="any" href="favicon\.svg\?v=1">/);
   }
@@ -93,8 +93,8 @@ test('home and rules pages share a local scalable favicon', () => {
   assert.doesNotMatch(icon, /<(?:script|foreignObject|image)\b|\bhref=/i);
 });
 
-test('both public pages load one module analytics beacon and disclose it bilingually', () => {
-  for (const page of ['index.html', 'rules.html']) {
+test('public pages load one module analytics beacon and disclose it bilingually', () => {
+  for (const page of ['index.html', 'rules.html', 'changelog.html']) {
     const html = fs.readFileSync(path.join(__dirname, '../site', page), 'utf8');
     const beacons = [...html.matchAll(/<script\b[^>]*data-cf-beacon='([^']+)'[^>]*><\/script>/g)];
     assert.equal(beacons.length, 1);
@@ -614,6 +614,69 @@ test('publication transitions show bilingual history and count separately from a
   assert.match(texts(node('#paper-list')),/此前以接收稿收录/);
   assert.match(texts(node('#paper-list')),/接收稿已正式发表/);
   assert.match(node('#update-summary').textContent,/新增 2 篇 · 接收转正式发表 1 篇/);
+});
+
+test('this update filters by audited DOI membership, includes older papers and preserves intersections', async () => {
+  const {context,node,data}=setup();
+  data.latest_update={reviewed_at:'2026-10-06T17:30:00+00:00',newly_included_count:2,
+    newly_included_dois:[data.papers[0].doi,data.papers[12].doi],accepted_to_published_count:1,
+    accepted_to_published_dois:[data.papers[11].doi]};
+  await ready();
+  assert.match(node('#collection-update-title').textContent,/2026-10-07/);
+  assert.equal(node('#collection-update').hidden,false);
+  node('#period').events.change({target:{value:'7'}});
+  node('#search').events.input({target:{value:'no match'}});
+  node('#read-update').events.click();
+  assert.equal(node('#period').value,'update');
+  assert.equal(node('#search').value,'');
+  assert.equal(node('#result-count').textContent,'3 papers');
+  assert.equal(node('#latest-title').textContent,'This update’s papers');
+  const texts=n=>[n.textContent,...n.children.flatMap(texts)].join(' ');
+  const results=texts(node('#paper-list'));
+  assert.match(results,/Synthetic test 12/);
+  assert.match(results,/Synthetic test 11/);
+  assert.doesNotMatch(results,/Synthetic test 1\b/);
+  assert.equal(node('#back-all').hidden,false);
+  assert.match(node('#period-update').textContent,/10-07/);
+  assert.equal(node('#paper-list').children.filter(n=>texts(n).includes('SPOTLIGHT')).length,1);
+  node('#journal').events.change({target:{value:'PNAS'}});
+  assert.match(node('#result-count').textContent,/^1 paper/);
+  node('#language-toggle').events.click();
+  assert.equal(node('#latest-title').textContent,'本次更新文献');
+  assert.match(node('#collection-update-counts').textContent,/新增收录 2 篇 · 接收转正式发表 1 篇/);
+  assert.match(node('#period-update').textContent,/本次更新 · 10-07/);
+  assert.match(node('#date-cutoff').textContent,/本轮收录 · 2026-10-07/);
+  node('#back-all').events.click();
+  assert.equal(node('#result-count').textContent,'35 篇文献');
+  assert.equal(node('#period').value,'0');
+  node('#period').events.change({target:{value:'update'}});
+  assert.equal(node('#result-count').textContent,'3 篇文献');
+  node('#period').events.change({target:{value:'0'}});
+  assert.equal(node('#result-count').textContent,'35 篇文献');
+  node('#read-update').events.click();
+  node('#featured-all').events.click();
+  assert.equal(vm.runInContext('state.updatesOnly',context),false);
+  assert.match(node('#result-count').textContent,/^8 篇文献/);
+});
+
+test('empty updates display the actual review date; incomplete or inconsistent membership has no entry button', async () => {
+  const {context,node,data}=setup();
+  data.latest_update={reviewed_at:'2026-10-07T01:00:00Z',newly_included_count:0,
+    newly_included_dois:[],accepted_to_published_count:0,accepted_to_published_dois:[]};
+  await ready();
+  assert.equal(node('#collection-update').hidden,false);
+  assert.equal(node('#read-update').disabled,true);
+  assert.match(node('#read-update').textContent,/No new papers/);
+  assert.equal(node('#period-update').disabled,false);
+  node('#period').events.change({target:{value:'update'}});
+  assert.equal(node('#result-count').textContent,'0 papers');
+  data.latest_update.newly_included_count=1;
+  vm.runInContext('renderSnapshot()',context);
+  assert.equal(node('#collection-update').hidden,true);
+  assert.equal(node('#period-update').disabled,true);
+  data.latest_update.newly_included_dois=['10.1234/not-in-collection'];
+  vm.runInContext('renderSnapshot()',context);
+  assert.equal(node('#collection-update').hidden,true);
 });
 
 test('explicit editorial revision adds six and preserves three exclusions with bound source views', () => {

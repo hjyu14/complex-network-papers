@@ -53,6 +53,11 @@ class CarryoverTests(unittest.TestCase):
         self.assertEqual(data['candidate_count'],2)
         self.assertEqual(before,{p:p.read_bytes() for p in before})
         self.assertEqual(data['carryover_audits'][0]['counts']['newly_reviewed'],1)
+        self.assertEqual(data['latest_update']['newly_included_dois'],['10.1/b'])
+        self.assertEqual(data['latest_update']['reviewed_at'],screen.Workflow(new).log.events[-1]['at'])
+        with patch.object(publish,'now',return_value='2099-01-01T00:00:00+00:00'):
+            rebuilt=publish.build_release([old,new])['papers.json']
+        self.assertEqual(rebuilt['latest_update'],data['latest_update'])
 
     def test_same_doi_requires_explicit_binding_and_never_duplicates(self):
         old,new = self.pair(True)
@@ -63,6 +68,8 @@ class CarryoverTests(unittest.TestCase):
         self.assertEqual(len(data['papers']),1)
         self.assertEqual(data['papers'][0]['date'],'2026-09-30')
         self.assertEqual(data['candidate_count'],1)
+        self.assertEqual(data['latest_update']['newly_included_count'],0)
+        self.assertEqual(data['latest_update']['newly_included_dois'],[])
         saved = json.loads((new/'evidence/cross-run-audit.json').read_text())
         saved['records'][0]['previous_assessment_sha256']='forged'
         self.f.write('reports/current/evidence/cross-run-audit.json',saved)

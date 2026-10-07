@@ -31,6 +31,7 @@
 - `config/publication-notes.json`：当前中英文短说明与主题，按 DOI 绑定正式判断。
 - `config/daily-suggestions.json`：按日期保存原创双语荐读及历史，绑定原始发布清单、判断与材料；与摘要缓存分离，执行约定见发布文档。
 - `site/data/`：唯一当前网站快照，不是审核记录的来源。
+- `site/changelog.html`：面向读者的双语网站更新日志，维护约定见发布文档；不替代正式文献审核日志，未上线的预览不计作发布。
 
 ## 轮次内容
 

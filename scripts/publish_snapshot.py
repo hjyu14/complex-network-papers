@@ -462,7 +462,9 @@ def build_release(runs):
         p['retrieved_by'] = ['Explicitly selected journal inventories; DOI-bound reviewed evidence']
     transitions = publication_transitions(papers, overlap_audits, histories)
     latest_transitions = sorted(doi for doi, value in transitions.items() if value['source_run'] == relative)
-    latest_update = {'run': relative, 'newly_included_count': len(newly_included),
+    latest_update = {'run': relative, 'reviewed_at': w.log.events[-1]['at'],
+                     'newly_included_count': len(newly_included),
+                     'newly_included_dois': sorted(newly_included),
                      'accepted_to_published_count': len(latest_transitions),
                      'accepted_to_published_dois': latest_transitions}
     rows = sorted(papers.values(), key=lambda p: (p['date'], p['doi']), reverse=True)

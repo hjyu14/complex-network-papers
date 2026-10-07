@@ -1,6 +1,6 @@
 "use strict";
 const $ = (selector) => document.querySelector(selector);
-const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", query: "", days: 30, page: 1, pageSize: 10 };
+const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", query: "", days: 30, updatesOnly: false, page: 1, pageSize: 10 };
 const scopeLabel = (id) => ({ all: tr("All journals", "全部期刊"), featured: tr("Spotlight journals", "Spotlight 期刊"), other: tr("Other journals", "其他期刊") })[id];
 const dateLabel = (id) => ({ "publisher.accepted": tr("Accepted date — not publication", "接收日期，非发表日期"), "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print publication", "纸刊发表"), published: tr("Publication date", "发表日期"), issued: tr("Issue date", "出版日期") })[id] || id;
 const englishCategories = { network_structure: "Structure & formation", network_inference: "Community detection, inference & reconstruction", network_spreading: "Spreading, diffusion & percolation", network_collective: "Synchronization, games & collective behavior", network_resilience: "Robustness, cascades & control", other: "Other" };
@@ -95,6 +95,31 @@ function articleBadge(paper) {
 function hasOtherJournals() {
   return state.papers.some((paper) => !paper.featured) || state.data.journals.some((journal) => !state.data.featured_journals.includes(journal.short));
 }
+function currentUpdate() {
+  const update = state.data?.latest_update;
+  if (!update || !Array.isArray(update.newly_included_dois) || !Array.isArray(update.accepted_to_published_dois)) return null;
+  const added = update.newly_included_dois, published = update.accepted_to_published_dois;
+  const dois = new Set([...added, ...published]);
+  const reviewed = new Date(update.reviewed_at);
+  if (Number.isNaN(reviewed.getTime()) || added.length !== update.newly_included_count || published.length !== update.accepted_to_published_count ||
+      dois.size !== added.length + published.length || [...dois].some(doi => !state.papers.some(p => p.doi === doi))) return null;
+  const date = reviewed.toLocaleDateString("en-CA", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" });
+  return { ...update, dois, date };
+}
+function renderCollectionUpdate() {
+  const update = currentUpdate();
+  $("#collection-update").hidden = !update;
+  $("#period-update").disabled = !update;
+  $("#period-update").textContent = update ? tr(`Update · ${update.date.slice(5)}`, `本次更新 · ${update.date.slice(5)}`) : tr("This update unavailable", "暂无本次更新记录");
+  $("#period-update").title = update ? tr(`This update · ${update.date}`, `本次更新 · ${update.date}`) : "";
+  if (!update) return;
+  $("#collection-update-title").textContent = tr(`Latest update · ${update.date}`, `最近更新 · ${update.date}`);
+  $("#collection-update-counts").textContent = tr(
+    `${update.newly_included_count} newly added · ${update.accepted_to_published_count} accepted manuscripts now published`,
+    `新增收录 ${update.newly_included_count} 篇 · 接收转正式发表 ${update.accepted_to_published_count} 篇`);
+  $("#read-update").disabled = update.dois.size === 0;
+  $("#read-update").textContent = update.dois.size === 0 ? tr("No new papers in this update", "本次没有新增或转发表文献") : tr("Read this update’s papers →", "阅读本次更新文献 →");
+}
 function featureCard(paper) {
   const card = element("article", "feature-card");
   const top = element("div", "feature-top");
@@ -121,6 +146,11 @@ function paperCard(paper) {
   const journal = element("span", "journal-name", journalLabel(paper) || tr("Journal unavailable", "期刊名称缺失"));
   journal.title = journalLabel(paper);
   top.append(journal);
+  if (paper.featured) {
+    const spotlight = element("span", "spotlight-badge", "SPOTLIGHT");
+    spotlight.title = tr("Spotlight journal · same selection criteria as the full collection", "Spotlight 期刊 · 与全部馆藏使用相同收录标准");
+    top.append(spotlight);
+  }
   top.append(timeNode(paper));
   if (paper.publication_status === "accepted" || paper.publication_transition?.kind === "accepted_to_published") top.append(statusBadge(paper));
   const type = articleBadge(paper);
@@ -172,9 +202,9 @@ function renderCategories() {
     nav.append(button);
   });
 }
-function resetFilters(scope = "all", days = 30) {
-  Object.assign(state, { category: "all", journal: "all", scope, query: "", days, page: 1 });
-  $("#search").value = ""; $("#period").value = String(days);
+function resetFilters(scope = "all", days = 30, updatesOnly = false) {
+  Object.assign(state, { category: "all", journal: "all", scope, query: "", days, updatesOnly, page: 1 });
+  $("#search").value = ""; $("#period").value = updatesOnly ? "update" : String(days);
   $("#journal").value = "all"; $("#scope").value = scope;
   renderCategories(); renderResults();
 }
@@ -182,13 +212,15 @@ function renderResults() {
   const end = new Date(state.data.window_end + "T00:00:00Z");
   const cutoff = state.days === 0 ? state.data.window_start : new Date(end.getTime() - (state.days - 1) * 86400000).toISOString().slice(0, 10);
   const query = state.query.trim().toLowerCase();
+  const update = currentUpdate();
   const results = state.papers.filter((paper) =>
+    (!state.updatesOnly || update?.dois.has(paper.doi)) &&
     paper.date >= cutoff && (state.category === "all" || paper.categories.includes(state.category)) &&
     (state.journal === "all" || paper.journal_short === state.journal) &&
     (state.scope === "all" || (state.scope === "featured" ? Boolean(paper.featured) : !paper.featured)) &&
     (!query || [paper.title, paper.journal, paper.journal_short, paper.doi, ...paper.authors].join(" ").toLowerCase().includes(query))
   );
-  $("#latest-title").textContent = state.scope === "featured" ? tr("Spotlight papers", "Spotlight 文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("All papers", "全部文献");
+  $("#latest-title").textContent = state.updatesOnly ? tr("This update’s papers", "本次更新文献") : state.scope === "featured" ? tr("Spotlight papers", "Spotlight 文献") : state.scope === "other" ? tr("Other journal papers", "其他期刊文献") : tr("All papers", "全部文献");
   const selectedJournal = state.data.journals.find((j) => j.short === state.journal);
   const journalName = selectedJournal && journalLabel(selectedJournal);
   $("#result-count").textContent = `${results.length} ${tr(results.length === 1 ? "paper" : "papers", "篇文献")}${journalName ? " · " + journalName : ""}${state.category === "all" ? "" : " · " + categoryLabel(state.category)}`;
@@ -198,8 +230,9 @@ function renderResults() {
   $("#paper-list").replaceChildren(...results.slice(start, start + state.pageSize).map(paperCard));
   if (!results.length) $("#paper-list").append(element("p", "empty", tr("No matching papers. Clear filters or expand the date range.", "当前条件下没有匹配文献。可以清除筛选或扩大时间范围。")));
   renderPagination(pages);
-  $("#clear").hidden = [state.category, state.journal, state.scope].every((v) => v === "all") && !state.query && state.days === 30;
-  $("#back-all").hidden = state.scope === "all";
+  $("#clear").hidden = !state.updatesOnly && [state.category, state.journal, state.scope].every((v) => v === "all") && !state.query && state.days === 30;
+  $("#back-all").hidden = state.scope === "all" && !state.updatesOnly;
+  $("#date-cutoff").textContent = state.updatesOnly ? tr(`Collection update · ${update?.date || ""}`, `本轮收录 · ${update?.date || ""}`) : tr(`Data through ${state.data.window_end}`, `数据截至 ${state.data.window_end}`);
 }
 function renderPagination(pages) {
   const nav = $("#pagination");
@@ -250,14 +283,24 @@ function bindControls() {
     state.page = 1; renderResults();
   });
   $("#search").addEventListener("input", (event) => { state.query = event.target.value; state.page = 1; renderResults(); });
-  $("#period").addEventListener("change", (event) => { state.days = Number(event.target.value); state.page = 1; renderResults(); });
+  $("#period").addEventListener("change", (event) => {
+    const updatesOnly = event.target.value === "update";
+    if (updatesOnly && !currentUpdate()) return;
+    state.updatesOnly = updatesOnly;
+    state.days = updatesOnly ? 0 : Number(event.target.value);
+    state.page = 1; renderResults();
+  });
   $("#featured-all").addEventListener("click", () => {
     resetFilters(hasOtherJournals() ? "featured" : "all", 0); $("#latest").scrollIntoView({ behavior: "auto" });
+  });
+  $("#read-update").addEventListener("click", () => {
+    if (!currentUpdate()?.dois.size) return;
+    resetFilters("all", 0, true); $("#latest").scrollIntoView({ behavior: "auto" });
   });
   $("#clear").addEventListener("click", () => {
     resetFilters();
   });
-  $("#back-all").addEventListener("click", () => resetFilters());
+  $("#back-all").addEventListener("click", () => resetFilters("all", state.updatesOnly ? 0 : 30));
 }
 async function getJSON(path) {
   const response = await fetch(path, { cache: "no-store" });
@@ -267,6 +310,7 @@ async function getJSON(path) {
 function renderSnapshot() {
   if (!state.data) return;
   const data = state.data;
+  renderCollectionUpdate();
   renderSuggestion();
   $("#journal").setAttribute("aria-label", tr("Journal", "期刊"));
   $("#period").setAttribute("aria-label", tr("Dates", "日期"));
@@ -300,6 +344,7 @@ function renderSnapshot() {
   renderCategories(); renderResults();
 }
 function renderUnavailable() {
+  $("#collection-update").hidden = true;
   $("#suggestion").hidden = true;
   $("#status").hidden = false;
   $("#status").textContent = tr("Paper list unavailable or incompatible. Please try again later.", "文献列表暂不可用或为旧版快照，请稍后重试。");

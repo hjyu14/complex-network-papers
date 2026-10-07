@@ -38,11 +38,11 @@ body{background:#f5f7fa}
 @media(max-width:720px){.featured-grid{grid-template-columns:1fr;gap:14px}.feature-card{padding:21px}.feature-card h3{font-size:21px}.feature-top time{margin-left:auto}.paper-card{padding:21px}.paper-card h3{font-size:20px}.paper-top time{margin-left:auto}.paper-top .journal-name{flex-basis:100%}.paper-bottom{flex-wrap:wrap}.sidebar nav{gap:9px}.category-button{padding:10px 13px;border-radius:11px}.suggestion-section{padding-top:25px}.suggestion-section>.section-heading{align-items:flex-start}.suggestion-date{font-size:11px;text-align:right;max-width:125px}.suggestion-card{margin-top:16px;border-radius:17px}.suggestion-body{grid-template-columns:1fr;padding:23px;gap:23px}.suggestion-intro h3{font-size:26px}.suggestion-reasons{border-left:0;border-top:1px solid #d5dfeb;padding:21px 0 0}.suggestion-footer{flex-direction:column;gap:7px;padding:13px 23px}.suggestion-question{font-size:16px}.feature-top .journal-badge{flex-basis:100%}.feature-top time{margin-left:0}.header-actions{gap:12px}}
 .feature-card,.paper-card{--card-x:24px;--card-y:23px;overflow:hidden;border-top-width:1px}
 .paper-card{--card-x:26px;--card-y:24px}
-.feature-card>.feature-top,.paper-card>.paper-top{background:#647895;color:#fff;margin:calc(-1 * var(--card-y)) calc(-1 * var(--card-x)) 4px;padding:17px var(--card-x);border-bottom:2px solid #91a2ba;min-height:58px;align-items:center}
+.feature-card>.feature-top,.paper-card>.paper-top{background:var(--night);color:#fff;margin:calc(-1 * var(--card-y)) calc(-1 * var(--card-x)) 4px;padding:17px var(--card-x);border-bottom:2px solid #44516e;min-height:58px;align-items:center}
 .feature-card>.feature-top .journal-badge,.paper-card>.paper-top .journal-name{color:#fff;font-size:13px;font-weight:600}
 .feature-card>.feature-top time,.paper-card>.paper-top time{color:#fff;font-size:12px}
 .feature-card>.feature-top .badge,.paper-card>.paper-top .badge{flex-basis:auto}
-.category-button[aria-pressed=true]{background:#647895;border-color:#647895;color:#fff}
+.category-button[aria-pressed=true]{background:var(--night);border-color:var(--night);color:#fff}
 .suggestion-link{background:none;border:0;border-radius:0;padding:0;color:var(--ink);box-shadow:none}
 .suggestion-link:hover{background:none;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
 .suggestion-question{font-size:16px;font-weight:600;line-height:1.7;margin:16px 0 12px;color:var(--night)}
@@ -57,3 +57,36 @@ body{background:#f5f7fa}
 @media(hover:hover){.feature-card:hover,.paper-card:hover{border-color:#9eb3c4;box-shadow:0 5px 12px #26395709,0 13px 28px #26395708}}
 @media(prefers-contrast:more),(prefers-reduced-transparency:reduce){.feature-card,.paper-card,.category-button,.suggestion-card,.feature-card:nth-child(n),.paper-card:nth-child(n),.category-button:nth-child(n){background:#fff;border-color:#8494a5;box-shadow:none;backdrop-filter:none}.category-button[aria-pressed=true]{background:#deebf2;border-color:#54798c;color:#15566b}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Public release notes share the site's palette and language controls. */
+.collection-update{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 23px;margin-top:28px;background:#edf1f6;border:1px solid #d4dce8;border-left:3px solid var(--night);border-radius:10px}
+.collection-update h2{font-size:16px;letter-spacing:0;color:#334661}.collection-update p{font-size:13px;color:#52647c;margin:5px 0 0}
+.collection-update .text-button{white-space:nowrap;font-size:13px;color:#334e6e}.collection-update .text-button:disabled{color:var(--muted)}
+.spotlight-badge{font-size:10px;letter-spacing:1px;font-weight:650;line-height:1.6;border:1px solid #ffffff80;border-radius:4px;background:#ffffff16;color:#fff;padding:2px 7px;white-space:nowrap}
+@media(max-width:720px){.collection-update{align-items:flex-start;flex-direction:column;gap:8px;padding:17px 18px;margin-top:23px}.collection-update p{font-size:12px}.collection-update .text-button{font-size:12px;padding:4px 0}.paper-top .spotlight-badge{margin-right:auto}.paper-top .spotlight-badge+time{margin-left:0}}
+.header-actions [aria-current=page]{color:var(--cyan);text-decoration:underline;text-underline-offset:6px}
+.changelog-hero{min-height:0;padding:32px 0 38px}.changelog-hero .intro{max-width:710px}
+.changelog-page{max-width:1040px;padding:28px 0 12px;scroll-margin-top:20px}
+.changelog-note{margin:0 0 28px;color:var(--muted);font-size:13px}
+.changelog-list{display:grid;gap:26px}
+.changelog-entry{display:grid;grid-template-columns:148px minmax(0,1fr);gap:30px;scroll-margin-top:24px}
+.changelog-date{padding-top:26px;font-variant-numeric:tabular-nums;font-size:16px;font-weight:600;color:#435a77}
+.changelog-date a{display:inline-flex;align-items:center;gap:10px}.changelog-date span{font-size:13px;font-weight:400;color:var(--muted)}
+.changelog-content{background:#fff;border:1px solid var(--line);border-radius:12px;padding:25px 30px 26px}
+.changelog-labels{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.changelog-labels span{background:#edf1f6;border:1px solid #dde4ee;border-radius:5px;padding:2px 8px;font-size:11px;color:#49617f}
+.changelog-content h2{font-size:23px;line-height:1.45;letter-spacing:-.3px;margin:0 0 14px}
+.changelog-content ul{padding-left:19px;margin:0;color:#43536a;font-size:14px;line-height:1.9}
+.changelog-content li+li{margin-top:9px}.changelog-content li::marker{color:#8292a8}
+.changelog-links{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:20px;padding-top:16px;border-top:1px solid #e7ecf2;font-size:12px;color:var(--accent)}
+.changelog-links a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:720px){
+  .masthead{flex-direction:column;align-items:flex-start;gap:14px;padding-top:15px;padding-bottom:14px}
+  .masthead .header-actions{width:100%;justify-content:space-between;gap:12px}
+  .header-actions a[href="#latest"]{display:inline}
+  .changelog-hero{padding:25px 0 28px}.changelog-hero h1{font-size:30px}
+  .changelog-page{padding-top:22px}.changelog-note{font-size:12px;margin-bottom:24px}
+  .changelog-list{gap:25px}.changelog-entry{grid-template-columns:1fr;gap:10px}
+  .changelog-date{padding-top:0;font-size:14px}.changelog-content{padding:21px 20px 22px}
+  .changelog-content h2{font-size:21px}.changelog-content ul{font-size:14px;line-height:1.85}
+}
