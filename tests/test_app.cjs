@@ -226,12 +226,17 @@ test('search, dates, theme intersection and other', async () => {
 });
 
 test('six newest cards, PNAS abbreviation and other last', async () => {
-  const {node, context} = setup(); await ready();
+  const {node, context, data} = setup();
+  data.papers[7].authors = ['Author One','Author Two','Author Three','Author Four','Author Five'];
+  await ready();
   const cards = node('#featured-list').children;
   assert.equal(cards.length,6);
   assert.equal(cards[0].children[0].children[0].textContent,'PNAS');
   assert.equal(vm.runInContext('journalLabel(state.papers.find(p => p.journal_short === "NMI"))', context),'Nature Machine Intelligence');
   assert.equal(cards[0].children[1].children[0].textContent,'Synthetic test 7');
+  const paper = vm.runInContext('state.papers.find(p => p.title === "Synthetic test 7")',context);
+  assert.equal(cards[0].children[2].className,'authors');
+  assert.equal(cards[0].children[2].textContent,paper.authors.slice(0,4).join(' · ') + (paper.authors.length > 4 ? ' · et al.' : ''));
   assert.equal(node('#categories').children[0].children[0].textContent,'All topics');
   assert.equal(node('#categories').children.at(-1).children[0].textContent,'Other');
 });
@@ -460,7 +465,7 @@ test('accepted date and reading notes are visible and bilingual without changing
   assert.match(card.children[0].children[1].textContent,/Accepted/);
   assert.equal(card.children[3].textContent,'A factual network reading note.');
   const feature=vm.runInContext('featureCard(state.papers[0])',context);
-  assert.equal(feature.children[2].textContent,'A factual network reading note.');
+  assert.equal(feature.children[3].textContent,'A factual network reading note.');
   node('#language-toggle').events.click();
   assert.equal(node('#paper-list').children[0].children[3].textContent,'一条有证据的网络阅读说明。');
   assert.equal(node('#paper-list').children[0].children[1].children[0].textContent,title);

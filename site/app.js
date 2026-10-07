@@ -103,9 +103,13 @@ function featureCard(paper) {
   if (type) top.append(type);
   const title = element("h3");
   title.append(link(paper.title, paper.url));
+  const authors = paper.authors.filter(Boolean);
+  const byline = element("p", "authors", authors.slice(0, 4).join(" · ") + (authors.length > 4 ? " · et al." : "") || tr("Author information awaiting verification — see publisher", "作者信息待核验，请查看出版方"));
+  byline.title = authors.join(" · ");
+  if (paper.author_metadata_status === "partial") byline.append(element("span", "", tr(" · Author list incomplete — see publisher", " · 作者名单不完整，请查看出版方")));
   const bottom = element("div", "feature-bottom");
   bottom.append(element("span", "", categoryLabel(paper.categories[0])), link(tr("Read paper ↗", "阅读原文 ↗"), paper.url));
-  card.append(top, title, readingNote(paper), bottom);
+  card.append(top, title, byline, readingNote(paper), bottom);
   return card;
 }
 function paperCard(paper) {
