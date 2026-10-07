@@ -70,6 +70,8 @@ python scripts/collect_candidates.py --out reports/runs/example-run --as-of 2026
 
 ## 正式输出与状态
 
+已收录接收稿转正式发表时，采集与审读继续保留新旧证据并绑定跨轮审计；展示标记、双日期保留及“新增／转发表”分别计数按 `docs/publication.md` 的“已收录接收稿转正式发表”执行。不得以日期出窗、曾登记或 DOI 已存在省略必要核验。
+
 ### Nature 系列浏览器目录导入
 
 普通 HTTP 目录读取失败时，可由正常浏览器读取全类型年度列表的连续页、刊名／ISSN、年份、年度计数和分页。允许书目转录使用 `scripts/import_nature_directory.py --out <run> --input <bibliography.json>`；它只追加经过结构核验的 `official_page` 事件，不自行宣称覆盖完成。恢复采集器后仍由原有排序、下界守卫、跨页唯一性和年度计数变化的二次前缀核验决定完成状态。文章页 DOI 身份补核另行留痕，不从 Nature 页面 URL 推造 DOI。

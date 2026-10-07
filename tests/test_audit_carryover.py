@@ -137,6 +137,45 @@ class CarryoverTests(unittest.TestCase):
         result=audit.build_audit(w,[old])
         self.assertTrue(any('previous cutoff' in b['reason'] for b in result['blockers']))
 
+    def transition_fixture(self, previous_category='core'):
+        old={'doi':'10.1/a','category':previous_category,
+             'hard_checks':{'date':{'value':'2026-09-02','publication_status':'accepted'}}}
+        new={'doi':'10.1/a','category':previous_category,
+             'hard_checks':{'date':{'value':'2026-09-30','publication_status':'published'}}}
+        histories={'reports/old':{'10.1/a':old},'reports/new':{'10.1/a':new}}
+        row={'doi':'10.1/a','publication_status_changed':True,
+             'previous_publication_status':'accepted','publication_status':'published',
+             'previous_category':previous_category,'category':previous_category,
+             'previous_run':'reports/old','previous_assessment_sha256':screen.digest(old),
+             'assessment_sha256':screen.digest(new)}
+        audits=[{'current_run':'reports/new','records':[row]}]
+        papers={'10.1/a':{'publication_status':'published','published_date':'2026-09-30'}}
+        return papers,audits,histories
+
+    def test_transition_keeps_original_dates_and_bound_history(self):
+        papers,audits,histories=self.transition_fixture()
+        transitions=publish.publication_transitions(papers,audits,histories)
+        self.assertEqual(papers['10.1/a']['accepted_date'],'2026-09-02')
+        self.assertEqual(transitions['10.1/a']['audit_sha256'],screen.digest(audits[0]))
+        self.assertEqual(len(papers),1)
+        with self.assertRaisesRegex(ValueError,'binding mismatch'):
+            histories['reports/old']['10.1/a']['hard_checks']['date']['value']='2026-09-01'
+            publish.publication_transitions(papers,audits,histories)
+
+    def test_excluded_transitions_and_unlisted_dois_get_no_badge(self):
+        papers,audits,histories=self.transition_fixture('excluded')
+        self.assertEqual(publish.publication_transitions(papers,audits,histories),{})
+        self.assertNotIn('publication_transition',papers['10.1/a'])
+        papers,audits,histories=self.transition_fixture()
+        self.assertEqual(publish.publication_transitions({},audits,histories),{})
+
+    def test_invalid_transition_chronology_is_rejected(self):
+        papers,audits,histories=self.transition_fixture()
+        histories['reports/old']['10.1/a']['hard_checks']['date']['value']='2026-10-01'
+        audits[0]['records'][0]['previous_assessment_sha256']=screen.digest(histories['reports/old']['10.1/a'])
+        with self.assertRaisesRegex(ValueError,'precedes accepted'):
+            publish.publication_transitions(papers,audits,histories)
+
 
 if __name__=='__main__':
     unittest.main()

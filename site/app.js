@@ -83,6 +83,9 @@ function renderSuggestion() {
   $("#suggestion-content").append(card);
 }
 function statusBadge(paper) {
+  if (paper.publication_status === "published" && paper.publication_transition?.kind === "accepted_to_published") {
+    return element("span", "badge publication-badge", tr("Published · previously accepted", "接收稿已正式发表"));
+  }
   return element("span", "badge accepted-badge", tr("Accepted · publication pending", "已接收 · 待正式发表"));
 }
 function articleBadge(paper) {
@@ -98,7 +101,7 @@ function featureCard(paper) {
   const journal = element("span", "journal-badge", journalLabel(paper));
   journal.title = journalLabel(paper);
   top.append(journal, timeNode(paper));
-  if (paper.publication_status === "accepted") top.append(statusBadge(paper));
+  if (paper.publication_status === "accepted" || paper.publication_transition?.kind === "accepted_to_published") top.append(statusBadge(paper));
   const type = articleBadge(paper);
   if (type) top.append(type);
   const title = element("h3");
@@ -119,7 +122,7 @@ function paperCard(paper) {
   journal.title = journalLabel(paper);
   top.append(journal);
   top.append(timeNode(paper));
-  if (paper.publication_status === "accepted") top.append(statusBadge(paper));
+  if (paper.publication_status === "accepted" || paper.publication_transition?.kind === "accepted_to_published") top.append(statusBadge(paper));
   const type = articleBadge(paper);
   if (type) top.append(type);
   const title = element("h3");
@@ -137,6 +140,9 @@ function paperCard(paper) {
   if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
   if (paper.type_provenance?.basis_kind === "explicit_abstract_research_inference") details.append(element("p", "", tr("Original research supported by the abstract; exact publisher subtype not specified.", "摘要支持其研究性质；未指定出版方的精确文章子类型。")));
   if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date and available publisher subtype will be rechecked after publication.", "已接收，待正式发表；届时补核发表日期及可获得的出版方文章子类型。")));
+  if (paper.publication_status === "published" && paper.publication_transition?.kind === "accepted_to_published") details.append(element("p", "", tr(
+    `Previously listed here as an accepted manuscript. Accepted: ${paper.accepted_date}; published online: ${paper.published_date}.`,
+    `此前以接收稿收录，现已正式发表。接收日期：${paper.accepted_date}；正式在线发表日期：${paper.published_date}。`)));
   if (paper.review_evidence_kind === "online_short_comment") details.append(element("p", "", tr("Reading note based on the accessible text of a no-abstract scientific commentary.", "阅读说明依据在线审读的无摘要科学评论正文。")));
   if (paper.review_evidence_kind === "abstract_excerpt") details.append(element("p", "", tr("Reading note based on the publisher's Abstract excerpt; the full article was not reviewed.", "阅读说明依据出版方的摘要摘段，未审读全文。")));
   details.append(element("p", "", `${dateLabel(paper.date_source)} · ${paper.date} · DOI: ${paper.doi}`));
@@ -274,6 +280,11 @@ function renderSnapshot() {
   $("#scope-control").hidden = !hasOtherJournals();
   const updated = new Date(data.generated_at).toLocaleDateString(language === "zh" ? "zh-CN" : "en-GB", { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric" });
   $("#updated").textContent = tr(`Updated ${updated}`, `更新于 ${updated}`);
+  const update = data.latest_update;
+  $("#update-summary").hidden = !update;
+  if (update) $("#update-summary").textContent = tr(
+    `Latest collection: ${update.newly_included_count} newly added · ${update.accepted_to_published_count} accepted manuscripts now published`,
+    `最近一轮采集：新增 ${update.newly_included_count} 篇 · 接收转正式发表 ${update.accepted_to_published_count} 篇`);
   $("#featured-list").replaceChildren(...featured.slice(0, 6).map(featureCard));
   if (!featured.length) $("#featured-list").append(element("p", "empty", tr("No spotlight papers passed this snapshot's screening. This does not mean no relevant papers were published.", "本次快照没有通过筛选的 Spotlight 文献；这不代表近期没有相关论文。")));
   const counts = data.screening_counts;

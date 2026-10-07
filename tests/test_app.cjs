@@ -585,9 +585,35 @@ test('carryover adds six and updates three published states through explicit aud
     assert.equal(rows.length,1);
     assert.equal(rows[0].publication_status,'published');
     assert.equal(rows[0].published_date,'2026-10-05');
+    assert.equal(rows[0].publication_transition.kind,'accepted_to_published');
+    assert.ok(rows[0].accepted_date <= rows[0].published_date);
+    assert.equal(rows[0].publication_transition.accepted_date,rows[0].accepted_date);
     assert.ok(audit.records.find(r=>r.doi===doi && r.previous_publication_status==='accepted' && r.previous_assessment_sha256));
   }
   assert.equal(data.carryover_audits[0].candidate_sha256,audit.candidate_sha256);
+  assert.equal(data.papers.filter(p=>p.publication_transition).length,3);
+  assert.equal(data.latest_update.newly_included_count,6);
+  assert.equal(data.latest_update.accepted_to_published_count,0);
+});
+
+test('publication transitions show bilingual history and count separately from additions', async () => {
+  const {context,node,data}=setup();
+  const snapshot=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
+  const transitioned=snapshot.papers.find(p=>p.publication_transition);
+  data.papers[0]={...data.papers[0],...transitioned};
+  data.latest_update={newly_included_count:2,accepted_to_published_count:1};
+  await ready();
+  const texts=n=>[n.textContent,...n.children.flatMap(texts)].join(' ');
+  assert.match(texts(node('#paper-list')),/Previously listed here as an accepted manuscript/);
+  assert.match(texts(node('#paper-list')),new RegExp(transitioned.accepted_date));
+  assert.match(texts(node('#paper-list')),/Published · previously accepted/);
+  const featured=vm.runInContext('featureCard(state.papers.find(p=>p.publication_transition))',context);
+  assert.match(texts(featured),/Published · previously accepted/);
+  assert.match(node('#update-summary').textContent,/2 newly added · 1 accepted manuscripts now published/);
+  node('#language-toggle').events.click();
+  assert.match(texts(node('#paper-list')),/此前以接收稿收录/);
+  assert.match(texts(node('#paper-list')),/接收稿已正式发表/);
+  assert.match(node('#update-summary').textContent,/新增 2 篇 · 接收转正式发表 1 篇/);
 });
 
 test('explicit editorial revision adds six and preserves three exclusions with bound source views', () => {

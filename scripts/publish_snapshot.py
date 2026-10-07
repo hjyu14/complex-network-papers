@@ -313,6 +313,42 @@ def selected_runs(selection):
     return runs
 
 
+def publication_transitions(papers, audits, histories):
+    """Attach only audited transitions from a previously selected inclusion."""
+    included = {'core', 'transferable_application'}
+    transitions = {}
+    for audit in audits:
+        for row in audit['records']:
+            if not (row.get('publication_status_changed')
+                    and row.get('previous_publication_status') == 'accepted'
+                    and row.get('publication_status') == 'published'
+                    and row.get('previous_category') in included
+                    and row.get('category') in included and row['doi'] in papers):
+                continue
+            previous = histories[row['previous_run']][row['doi']]
+            current = histories[audit['current_run']][row['doi']]
+            if (digest(previous) != row['previous_assessment_sha256']
+                    or digest(current) != row['assessment_sha256']):
+                raise ValueError('Publication transition assessment binding mismatch')
+            accepted = previous['hard_checks']['date']['value']
+            published = current['hard_checks']['date']['value']
+            if not accepted <= published:
+                raise ValueError('Publication precedes accepted date')
+            transitions[row['doi']] = {
+                'kind': 'accepted_to_published', 'accepted_date': accepted,
+                'published_date': published, 'previous_run': row['previous_run'],
+                'source_run': audit['current_run'], 'audit_sha256': digest(audit),
+                'previous_assessment_sha256': row['previous_assessment_sha256'],
+                'assessment_sha256': row['assessment_sha256']}
+    for doi, transition in transitions.items():
+        paper = papers[doi]
+        if paper['publication_status'] != 'published' or paper['published_date'] != transition['published_date']:
+            raise ValueError('Current paper conflicts with publication transition')
+        paper['accepted_date'] = transition['accepted_date']
+        paper['publication_transition'] = transition
+    return transitions
+
+
 def build_release(runs):
     if not runs or len(runs) != len({Path(p).resolve() for p in runs}):
         raise ValueError('Select distinct runs')
@@ -325,9 +361,10 @@ def build_release(runs):
     windows = []
     from audit_carryover import load_audit
     overlap_audits, replacements, superseded, allowed_overlaps, verified_dois = [], {}, {}, set(), {}
-    audit_memo = {}
+    audit_memo, histories = {}, {}
     for index, run in enumerate(runs):
         view = publication_workflow(run)
+        histories[view.out.relative_to(ROOT).as_posix()] = {d['doi']: d for d in view.assessments()}
         audit = load_audit(view, runs[:index], _memo=audit_memo) if isinstance(view, PublicationView) else None
         if not audit:
             continue
@@ -344,6 +381,7 @@ def build_release(runs):
                 if start <= current_window[1] and current_window[0] <= end:
                     a,b = sorted([prior,current_window])
                     allowed_overlaps.add((journal,a,b))
+    previously_included = set()
     for run in runs:
         w = publication_workflow(run)
         relative = w.out.relative_to(ROOT).as_posix()
@@ -351,6 +389,8 @@ def build_release(runs):
         windows.append(current_window)
         latest = {d['doi']: d for d in w.assessments()}
         own = {doi for doi, d in latest.items() if d['category'] in {'core', 'transferable_application'}}
+        newly_included = own - previously_included
+        previously_included.update(own)
         if not own <= set(notes['papers']):
             raise ValueError('Missing reading note for selected inclusion')
         hidden = superseded.get(relative,set())
@@ -420,6 +460,11 @@ def build_release(runs):
             raise ValueError('Display journal conflicts with frozen identity')
         p['featured'] = j['short'] if j['short'] in display['featured_journals'] else None
         p['retrieved_by'] = ['Explicitly selected journal inventories; DOI-bound reviewed evidence']
+    transitions = publication_transitions(papers, overlap_audits, histories)
+    latest_transitions = sorted(doi for doi, value in transitions.items() if value['source_run'] == relative)
+    latest_update = {'run': relative, 'newly_included_count': len(newly_included),
+                     'accepted_to_published_count': len(latest_transitions),
+                     'accepted_to_published_dois': latest_transitions}
     rows = sorted(papers.values(), key=lambda p: (p['date'], p['doi']), reverse=True)
     counts = Counter(v['decision']['category'] for v in candidates.values())
     counts.update({'review': 0, 'deferred_unassessed': 0, 'included': len(rows)})
@@ -439,6 +484,7 @@ def build_release(runs):
         'coverage': list(coverage.values()), 'candidate_count': len(candidates), 'screening_counts': dict(counts),
         'published_count': sum(p['publication_status']=='published' for p in rows),
         'accepted_count': sum(p['publication_status']=='accepted' for p in rows),
+        'latest_update': latest_update,
         'candidate_inventory_complete': complete, 'metadata_reconciliation_complete': reconciled,
         'limitations': ['Fixed date-window trial, not a current 90-day feed.',
             'Coverage flags preserve original source-relative enumeration limits; separately pinned supplemental evidence is retained in run_inputs.',
