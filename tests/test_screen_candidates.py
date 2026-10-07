@@ -47,6 +47,35 @@ class EvidenceTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 s.rebuild_abstract(bad)
 
+    def test_official_news_section_names_remain_type_exclusions(self):
+        for typ in ['Muse', 'Technology Feature', 'This Week In Pnas']:
+            decision = {'category':'excluded','hard_checks':{'type':{'status':'verified','value':typ}}}
+            record = {**self.r,'publisher_records':[{'article_type':typ}]}
+            s.validate_non_target_type(record, [], decision)
+            # A conflicting official research label still requires resolution.
+            record['publisher_records'].append({'article_type':'Article'})
+            with self.assertRaises(ValueError):
+                s.validate_non_target_type(record, [], decision)
+
+    def test_brief_communication_still_requires_actual_bound_reading(self):
+        record = {**self.r,'journal':'Test journal'}
+        observation = {**record,'source_url':'https://example.org/communication',
+            'article_type':'BriefCommunication','explicit_abstract_absent':True,
+            'identity_verified':True,'full_visible_comment_read':True}
+        observation['evidence_sha256'] = s.digest(observation)
+        decision = {'sources':[observation['source_url']], 'hard_checks':{
+            'identity':{'evidence_sha256':observation['evidence_sha256']},
+            'type':{'value':'BriefCommunication'}}}
+        s.validate_short_comment_review(observation, record, decision)
+        for changes in [{'full_visible_comment_read':False},{'identity_verified':False},
+                        {'explicit_abstract_absent':False}]:
+            changed = {**observation,**changes};changed.pop('evidence_sha256')
+            changed['evidence_sha256'] = s.digest(changed)
+            bound = {**decision,'hard_checks':{**decision['hard_checks'],
+                'identity':{'evidence_sha256':changed['evidence_sha256']}}}
+            with self.assertRaises(ValueError):
+                s.validate_short_comment_review(changed, record, bound)
+
     def test_audience_marker_is_not_an_abstract(self):
         for text in ['International audience', 'Data supplement for the publication "Example".']:
             with self.subTest(text=text), self.assertRaises(ValueError):

@@ -12,6 +12,9 @@ class SuggestionTests(unittest.TestCase):
     def setUp(self):
         root = Path(__file__).resolve().parents[1]
         self.config = json.loads((root/'config/daily-suggestions.json').read_text(encoding='utf-8'))
+        # Keep this historical revision fixture independent of subsequent daily entries.
+        self.config['entries'] = [e for e in self.config['entries'] if e['recommended_on'] == '2026-10-06']
+        self.config['revisions'] = [e for e in self.config['revisions'] if e['recommended_on'] == '2026-10-06']
         e = self.config['entries'][0]
         self.papers = {e['doi']: {'assessment_sha256': e['assessment_sha256'],
             'title': 'Cross-order induced behaviors in contagion dynamics on higher-order networks',

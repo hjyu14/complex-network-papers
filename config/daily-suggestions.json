@@ -56,6 +56,84 @@
         "en": "Based on a rereading of the identity-matched explicit abstract and the saved assessment. The reported findings apply to the model and comparisons described there. The full text, algorithms and numerical results have not been independently reviewed or verified.",
         "zh": "依据回读的身份匹配明确摘要及已保存审核记录。研究结果限于摘要报告的模型与比较范围；未审读全文，也未独立验证算法或数值结果。推荐理由中的阅读价值判断属于 AI 的编辑意见。"
       }
+    },
+    {
+      "doi": "10.1063/5.0353880",
+      "recommended_on": "2026-10-07",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-06-to-07-01",
+      "publication_sha256": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+      "assessment_sha256": "eb9dc7c1e7c013614a2e7358387dd1e99ac5410e17586be95a4bc1ede9c53c8a",
+      "input_sha256": "0d1436f8be1da3e4ceac52afd95284fead99ce68c86d0a4f58df70d6b19ec0cf",
+      "evidence_sha256": "22174688d1a6dcfdd95be67013d3e473f8c6a053cc89d4951876138bcdaf9d2f",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-07T03:04:02.417919+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0353880",
+        "title": "Birth and breakdown of breathing and rotobreathing cyclops states in Kuramoto networks with higher-mode coupling",
+        "sha256": "3cc1a1b1a5df58be39f8feb80a2c1e93963cd926c290a04051ea2755258b357c",
+        "version": "Chaos 36, 103113 (2026), publisher version published online 2026-10-06",
+        "source_url": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0353880/21164236/103113_1_5.0353880.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 21,
+        "read_scope": "Publisher cover and complete 20-page article: main text, equations, figure captions 1-15, Appendices A-B and references; rendered visual checks of representative figures. No independent code or numerical reproduction.",
+        "reviewed_at": "2026-10-07T03:04:02.417919+00:00"
+      },
+      "question": {
+        "zh": "看起来相似的簇振荡，真的是同一条分岔路径吗？",
+        "en": "Do similar-looking cluster oscillations follow the same bifurcation route?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把复杂的簇同步现象拆成可检验的分岔问题：呼吸与旋转呼吸看似相近，却往往有不同的形成路径。",
+          "值得带走的是它的验证顺序：先降维找轨道，再回到全网络检验稳定性，最后检查吸引域。做同步研究时，这套思路比只展示漂亮的时间序列更有帮助。"
+        ],
+        "en": [
+          "Today’s pick turns complex cluster motion into testable bifurcation questions: breathing and rotobreathing look related, yet often have distinct origins.",
+          "Borrow its validation sequence: reduce the model to locate orbits, check stability in the full network, then examine attraction basins. This provides a practical route from observing synchronization to understanding its mechanism."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "降维后补查横向稳定性",
+            "en": "Check transverse stability after reduction"
+          },
+          "text": {
+            "zh": "簇间轨道稳定，不等于簇内扰动稳定。第 III B 节的模态分块同时检查两者，可借鉴到簇同步分析。",
+            "en": "A stable intercluster orbit can still have unstable intracluster modes. Section III B checks both through a block decomposition useful for cluster synchronization."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分存在边界与稳定边界",
+            "en": "Separate existence from stability"
+          },
+          "text": {
+            "zh": "图 2 延拓稳定与不稳定分支；轨道消失和观测状态切换分开解释，避免把吸引子跳变当作连续演化。",
+            "en": "Figure 2 follows stable and unstable branches. Distinguish orbit termination from attractor switching before interpreting an observed transition as smooth evolution."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用吸引域与规模对照验证",
+            "en": "Test basins and network size"
+          },
+          "text": {
+            "zh": "多初值统计及奇偶规模对照检验状态是否容易出现。局部稳定、吸引域大小和规模适用性应分别报告。",
+            "en": "Random initial conditions and odd-versus-even size comparisons test accessibility. Report local stability, basin size and size dependence separately."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络同步、簇动力学与分岔分析研究者。",
+        "en": "Researchers in network synchronization, cluster dynamics and bifurcation analysis."
+      },
+      "reading_caveat": {
+        "zh": "已阅读全文及附录 A–B。结果针对全局耦合、含惯性和双谐波的模型；异宿连接由数值迹象支持，未严格证明。荐读为 AI 编辑意见，未独立复现实验。",
+        "en": "Full text and Appendices A-B were read. Results concern globally coupled inertial oscillators with two harmonics; the saddle connection has numerical support, not an exact proof. This is AI editorial guidance; experiments were not independently reproduced."
+      }
     }
   ],
   "revisions": [

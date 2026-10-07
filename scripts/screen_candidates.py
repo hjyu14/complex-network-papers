@@ -29,7 +29,8 @@ NON_TARGET_TYPES = {'News', 'Career Column', 'Career Feature', 'News & Views',
                     'Author Correction', 'Publisher Correction', 'Editorial',
                     'News Q&A', 'Nature Podcast', 'Book Review', 'Obituary',
                     'Career Q&A', 'Career News', 'Retraction', 'News Explainer',
-                    'Reply', 'Correction', 'Erratum'}
+                    'Reply', 'Correction', 'Erratum', 'Muse',
+                    'Technology Feature', 'This Week In Pnas'}
 
 
 class BufferedLog:
@@ -78,7 +79,7 @@ def validate_short_comment_review(short_review, r, decision):
         raise ValueError('Short comment identity, source, type and decision evidence hash must match')
     if not (short_review.get('full_visible_comment_read') and short_review.get('identity_verified')
             and short_review.get('explicit_abstract_absent')
-            and short_review.get('article_type') in {'Commentary','Perspective','Comment','Introduction','Letter','Correspondence','World View','Essay','Opinion','Expert Voices','Policy Forum','Matters Arising'}):
+            and short_review.get('article_type') in {'Commentary','Perspective','Comment','Introduction','Letter','Correspondence','World View','Essay','Opinion','Expert Voices','Policy Forum','Matters Arising','BriefCommunication'}):
         raise ValueError('Short comment exception requires actual complete accessible review and verified identity/type')
     safe_url(short_review['source_url'])
 
