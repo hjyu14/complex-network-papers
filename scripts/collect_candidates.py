@@ -652,7 +652,9 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
             if not c['issns']:
                 c['issns'] = publisher['issns']
         if c.get('publisher_identity') and not c['issns']:
-            c['issns'] = [c['publisher_identity']['metadata']['citation_issn']]
+            identity_issn = c['publisher_identity']['metadata'].get('citation_issn')
+            if identity_issn in journal['issns']:
+                c['issns'] = [identity_issn]
         chosen, basis, error = crossref_date(item) if item else (None,None,'crossref_metadata_unavailable')
         if not item and publisher and publisher.get('date'):
             chosen, basis = publisher['date'], publisher['date_basis']

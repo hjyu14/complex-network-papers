@@ -90,6 +90,20 @@ def validate_non_target_type(record, events, decision):
     types.update(e['data']['article_type'] for e in events
                  if e['kind'] == 'publisher_type_observed'
                  and e['data'].get('doi') == record['doi'] and e['data'].get('article_type'))
+    # Journal-specific headings need an actual, identity-bound interpretation.
+    # Do not treat an unfamiliar section name as non-research automatically.
+    for event in events:
+        mapping = event['data']
+        if event['kind'] != 'publisher_type_mapping_reviewed' or mapping.get('doi') != record['doi']:
+            continue
+        original, canonical = mapping.get('official_type'), mapping.get('article_type')
+        if (mapping.get('record_sha256') != digest(record) or not mapping.get('reason')
+                or not mapping.get('reviewer') or canonical not in NON_TARGET_TYPES
+                or original not in types):
+            raise ValueError('Non-target section mapping needs reviewed record-bound official evidence')
+        safe_url(mapping['source_url'])
+        types.remove(original)
+        types.add(canonical)
     check = decision['hard_checks']['type']
     if (decision['category'] != 'excluded' or len(types) != 1 or not types <= NON_TARGET_TYPES
             or check.get('status') != 'verified' or check.get('value') not in types):

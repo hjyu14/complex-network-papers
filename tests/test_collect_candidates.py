@@ -31,6 +31,23 @@ class Client:
 
 
 class CollectorTests(unittest.TestCase):
+    def test_missing_identity_issn_preserves_unresolved_candidate(self):
+        journal = {'short': 'NMI', 'issns': ['2522-5839'], 'collection': {'family': 'nature'}}
+        url = 'https://www.nature.com/articles/synthetic'
+        official = [{'records': [{'title': 'Synthetic title', 'date': '2026-09-30',
+                                   'article_url': url}]}]
+        with TemporaryDirectory() as tmp:
+            log = EventLog(Path(tmp) / 'log.jsonl')
+            log.add('publisher_identity', {'key': 'identity:' + url, 'metadata': {}, 'url': url})
+            rows = reconcile({}, official, journal, '2026-09-01', '2026-09-30',
+                             '2026-09-30', Client([]), log)
+        self.assertEqual(len(rows), 1)
+        self.assertIsNone(rows[0]['doi'])
+        self.assertEqual(rows[0]['issns'], [])
+        self.assertFalse(rows[0]['identity_verified'])
+        self.assertEqual(rows[0]['window_membership'], 'unresolved')
+        self.assertIn('doi_identity_unconfirmed', rows[0]['issues'])
+
     def test_cli_window_override_is_frozen_without_global_change(self):
         record=item(**{'published-online':{'date-parts':[[2026,10,1]]}})
         response=json.dumps({'status':'ok','message':{'items':[record],'total-results':1}})

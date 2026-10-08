@@ -134,6 +134,84 @@
         "zh": "已阅读全文及附录 A–B。结果针对全局耦合、含惯性和双谐波的模型；异宿连接由数值迹象支持，未严格证明。荐读为 AI 编辑意见，未独立复现实验。",
         "en": "Full text and Appendices A-B were read. Results concern globally coupled inertial oscillators with two harmonics; the saddle connection has numerical support, not an exact proof. This is AI editorial guidance; experiments were not independently reproduced."
       }
+    },
+    {
+      "doi": "10.1103/76kb-hyp4",
+      "recommended_on": "2026-10-08",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-07-to-08-02",
+      "publication_sha256": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+      "assessment_sha256": "816af285a423419893542924f913e8f774abaee3187c60da5549eec9fe228fc5",
+      "input_sha256": "83241a18e6819198f5967527eec2c89da07611f8c46d53aa9311acaf02a8fd13",
+      "evidence_sha256": "b5e975a3583ec153e0cfb02ef80ace7a08235433595821143fa9270973e594e3",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-08T03:00:21.833640+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/76kb-hyp4",
+        "title": "Missing links prediction: Comparing machine learning with physics-rooted approaches",
+        "sha256": "43f6f9a79e09135f968023e1084c22d89acb5f97388bca6accc517b7a335fc32",
+        "version": "Physical Review Research 8, 043020 (2026), publisher version published online 2026-10-07",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/76kb-hyp4",
+        "source_kind": "publisher_fulltext",
+        "pages": 28,
+        "read_scope": "Complete 28-page publisher article: main text, equations, Figures 1-20 and captions, Tables I-VI, Appendices A-F and references. Representative rendered figures inspected. No independent code or numerical reproduction.",
+        "reviewed_at": "2026-10-08T03:00:21.833640+00:00"
+      },
+      "question": {
+        "zh": "相同信息条件下，复杂模型能带来多少额外收益？",
+        "en": "With the same information, how much does a more complex model gain?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为缺失边预测是网络研究中的常见问题，而这篇论文把模型比较的起点放在“双方究竟看到了什么信息”上。对齐信息后，简单、可解释的网络模型也可能具有竞争力。",
+          "值得复用的是比较协议：先对齐可观测特征，再改变缺边采样方式，最后同时检查预测质量和计算成本。这套思路能帮助我们判断，性能提升究竟来自模型，还是来自信息与评价设置。"
+        ],
+        "en": [
+          "Today’s pick addresses a common network problem: predicting missing links. Its useful starting point is what information each model can see. Once that information is aligned, simple, interpretable network models can be competitive.",
+          "Borrow its comparison protocol: match observable features, vary the missing-edge sampling scheme, and report prediction quality alongside computational cost. This helps distinguish gains from the model from gains due to information or evaluation choices."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先对齐可见信息",
+            "en": "Match observable information"
+          },
+          "text": {
+            "zh": "度与结构特征从观测网络计算，再按相同特征组比较。做重构基准时，避免把完整网络的真实度泄漏给模型。",
+            "en": "Compute degrees and structural features from the observed network, then compare matched feature groups. Avoid leaking true degrees from the complete network into reconstruction benchmarks."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检查缺边采样偏差",
+            "en": "Check missing-edge sampling"
+          },
+          "text": {
+            "zh": "均匀删边更容易涉及高度节点。附录 D 改变采样机制后，各方法表现均下降，提醒我们检验结论对缺失机制的依赖。",
+            "en": "Uniform edge removal more often involves high-degree nodes. In Appendix D, alternative sampling lowers performance across methods: test how conclusions depend on the missingness mechanism."
+          }
+        },
+        {
+          "heading": {
+            "zh": "联合报告指标与成本",
+            "en": "Report metrics and cost together"
+          },
+          "text": {
+            "zh": "稀疏网络中，AUROC 与 AUPRC 可能给出不同印象。附录 B、E–F 分别检查指标、计算与统计比较，避免只凭单一分数选模型。",
+            "en": "AUROC and AUPRC can give different impressions on sparse networks. Appendices B, E-F examine metrics, computation and statistical comparisons; avoid selecting models from one score alone."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络推断、链路预测与模型基准比较研究者。",
+        "en": "Researchers in network inference, link prediction and model benchmarking."
+      },
+      "reading_caveat": {
+        "zh": "已阅读全文及附录 A–F。实验针对二值无向经济金融网络的缺失边恢复，不等于未来边预测或对所有机器学习方法的结论。推荐为 AI 编辑意见，未独立复现实验。",
+        "en": "Full text and Appendices A-F were read. Experiments concern missing-edge recovery in binary undirected economic and financial networks, not future-link prediction or all machine-learning methods. This is AI editorial guidance; experiments were not independently reproduced."
+      }
     }
   ],
   "revisions": [

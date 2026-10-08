@@ -1,0 +1,17 @@
+{
+  "version": "explicit-interrupted-run-recovery-1",
+  "source_run": "reports/runs/2026-10-07-to-08-01",
+  "reason": "Concurrent collection and decision writers produced a forked event chain; source retained byte-for-byte and never accepted as a valid chained review.",
+  "source_files": {
+    "candidates.json": "19a1e4bcc07acaf5e283e63d69f8f84e955dc7c90c4409f9997c9ce073882615",
+    "coverage.json": "0532f4908d721532e69cd7b4a8e2872028281f0bf4bd0e9c0ca992e842ea5982",
+    "collection-log.jsonl": "b330e661ab2c03024b0a8c4e7f976cf5b67da141767322832fa4c1a669a76982",
+    "inputs/manifest.json": "91bdcb0b7c2fce03979874e7663047e5f9297ff39ce25a6fbd6190c0ff186b2a",
+    "inputs/sources.json": "ee0df1a4e2dcbe084f3452ec26f36d1951f87fd5d352488c2122cc42437084d9",
+    "inputs/screening-protocol.md": "faecca114e7db7a09ed1b1a038aa9b5da94d91263a6d93d5e660341257fc8160",
+    "screening-log.jsonl": "02c9aecf629ff37a73be5a91d7c0470897cee8a7eac637acd11aaeed64d690cc"
+  },
+  "individual_payloads_validated": 536,
+  "decisions_reused": 29,
+  "recovery_policy": "Fresh valid review chain; verified private material versions rebound; only actually read decisions explicitly replayed. All later mutations serial."
+}

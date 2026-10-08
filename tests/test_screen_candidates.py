@@ -47,6 +47,23 @@ class EvidenceTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 s.rebuild_abstract(bad)
 
+    def test_non_target_section_mapping_requires_bound_review_and_preserves_conflicts(self):
+        record = {**self.r, 'publisher_records':[{'article_type':'Inner Workings'}]}
+        decision = {'category':'excluded','hard_checks':{'type':{'status':'verified','value':'News Feature'}}}
+        mapping = {'doi':record['doi'],'official_type':'Inner Workings','article_type':'News Feature',
+                   'record_sha256':s.digest(record),'reason':'Official journalist-written science feature',
+                   'reviewer':'Actual reviewer','source_url':'https://example.org/article'}
+        with self.assertRaises(ValueError):
+            s.validate_non_target_type(record, [], decision)
+        events = [{'kind':'publisher_type_mapping_reviewed','data':mapping}]
+        s.validate_non_target_type(record, events, decision)
+        for key,value in [('record_sha256','wrong'),('reason',''),('article_type','Article')]:
+            with self.subTest(key=key),self.assertRaises(ValueError):
+                s.validate_non_target_type(record,[{'kind':events[0]['kind'],'data':{**mapping,key:value}}],decision)
+        conflicting = {**record,'publisher_records':record['publisher_records']+[{'article_type':'Article'}]}
+        with self.assertRaises(ValueError):
+            s.validate_non_target_type(conflicting,[{'kind':events[0]['kind'],'data':{**mapping,'record_sha256':s.digest(conflicting)}}],decision)
+
     def test_official_news_section_names_remain_type_exclusions(self):
         for typ in ['Muse', 'Technology Feature', 'This Week In Pnas']:
             decision = {'category':'excluded','hard_checks':{'type':{'status':'verified','value':typ}}}
