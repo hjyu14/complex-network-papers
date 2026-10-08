@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T03:02:15.188518+00:00",
+  "generated_at": "2026-10-08T14:01:02.222818+00:00",
   "window_start": "2026-09-01",
   "window_end": "2026-10-08",
   "window_days": 38,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
-  "config_sha256": "9301f9a098a284e161a3d37e7f43afceb4e870efa2a75c6d90931a209dedf604",
+  "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "95b9eb7559644f870636c52304b1bef782fb62d3063888485f5cd50af91f2120",
-  "author_metadata_sha256": "a8932f994caee746aca34e15dc2e853463a9debb594867df7b15bf5b8098e284",
+  "reading_notes_sha256": "8483a97d5b17e528702d85c872f9c66dd0f2faadfd7e8c2e13f87fe0b37e9ac1",
+  "author_metadata_sha256": "3728d0dc956563267e212c0f77710dc1e92c51d777e8beb7eb4d69c3970f5ddb",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1427,9 +1427,49 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-09-01-to-10-08-np-01",
+      "config_sha256": "648b78e8d25ba9aac68a01a68a53ce2dfe923687b4829c41bb223d2c4bd44939",
+      "window_start": "2026-09-01",
+      "window_end": "2026-10-08",
+      "rule_sha256": "2f321fd804971cd4cae0563f427a7b53a38cf0ee0443c44245a0a529e9340142",
+      "screening_log_sha256": "2e58dabd582c800d047df5a40499afc2fac1dc7450d0c1aa27500d471b12ce41",
+      "candidate_sha256": "3c8244fbf0e37c617bb1e432f5feb21f628b3c9bde459fc9aa80128b21d882ba",
+      "author_metadata_sha256": "1cec6e9d6c9e2de6856803bad2515ca841dae2e578b63ea552ece42af207d3c9",
+      "run_manifest_sha256": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-09-01-to-10-08-np-01",
+          "files": {
+            "candidates.json": "3c8244fbf0e37c617bb1e432f5feb21f628b3c9bde459fc9aa80128b21d882ba",
+            "coverage.json": "e620182cc8579bceb3f8e0a52d5f4ba7f75bb8f3364d188c9ded1ada0e1801c7",
+            "collection-log.jsonl": "dbdb7e2e915f2661e041e0bf7611eab2c59019139a0317fac644f10efaa8d0e5",
+            "screening-log.jsonl": "547373cfae8a5e19a86c088bdb381a38d5e84900da283fa4a3bf7c59636b9f3a",
+            "inputs/manifest.json": "2da544247333c65c1bb8bf65a3f3f5d2d375d7b6eeea7354691a2bd84dc8a7c8",
+            "inputs/sources.json": "650fb88465b3f1e35cc08f517d40ddbd0e7298d498937afa3d10e3349e4664ff",
+            "inputs/screening-protocol.md": "1caa7b3c6bd4466dd8d183d89b7c1512c09636dd7a4b089581fb6cdc38bb29e6"
+          },
+          "candidate_sha256": "3c8244fbf0e37c617bb1e432f5feb21f628b3c9bde459fc9aa80128b21d882ba",
+          "rule_sha256": "2f321fd804971cd4cae0563f427a7b53a38cf0ee0443c44245a0a529e9340142",
+          "screening_log_sha256": "2e58dabd582c800d047df5a40499afc2fac1dc7450d0c1aa27500d471b12ce41"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "1cec6e9d6c9e2de6856803bad2515ca841dae2e578b63ea552ece42af207d3c9",
+          "audit": {
+            "path": "reports/runs/2026-09-01-to-10-08-np-01/screening-log.jsonl",
+            "sha256": "547373cfae8a5e19a86c088bdb381a38d5e84900da283fa4a3bf7c59636b9f3a"
+          }
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 173,
+  "author_available_count": 174,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -1459,6 +1499,7 @@
   ],
   "featured_journals": [
     "Nature",
+    "NP",
     "Science",
     "NC",
     "NMI",
@@ -1475,6 +1516,14 @@
       "issns": [
         "1476-4687",
         "0028-0836"
+      ]
+    },
+    {
+      "name": "Nature Physics",
+      "short": "NP",
+      "issns": [
+        "1745-2481",
+        "1745-2473"
       ]
     },
     {
@@ -2386,33 +2435,43 @@
           "metadata_reconciliation_complete": true
         }
       ]
+    },
+    {
+      "journal": "NP",
+      "candidate_count": 47,
+      "publisher_verified_inventory_count": 47,
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false,
+      "windows": [
+        {
+          "window_start": "2026-09-01",
+          "window_end": "2026-10-08",
+          "journal": "NP",
+          "candidate_count": 47,
+          "publisher_verified_inventory_count": 47,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        }
+      ]
     }
   ],
-  "candidate_count": 4171,
+  "candidate_count": 4218,
   "screening_counts": {
-    "excluded": 3998,
-    "core": 156,
+    "excluded": 4044,
+    "core": 157,
     "transferable_application": 17,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 173
+    "included": 174
   },
-  "published_count": 128,
+  "published_count": 129,
   "accepted_count": 45,
   "latest_update": {
-    "run": "reports/runs/2026-10-07-to-08-02",
-    "reviewed_at": "2026-10-08T02:54:10.726854+00:00",
-    "newly_included_count": 9,
+    "run": "reports/runs/2026-09-01-to-10-08-np-01",
+    "reviewed_at": "2026-10-08T13:49:54.973266+00:00",
+    "newly_included_count": 1,
     "newly_included_dois": [
-      "10.1038/s41467-026-78293-3",
-      "10.1038/s41586-026-11144-9",
-      "10.1063/5.0348978",
-      "10.1103/76kb-hyp4",
-      "10.1103/b1qh-k8pn",
-      "10.1103/kj33-q69c",
-      "10.1103/m3bb-1nhk",
-      "10.1103/mwny-nmf1",
-      "10.1103/y4cy-9l8m"
+      "10.1038/s41567-026-03408-y"
     ],
     "accepted_to_published_count": 0,
     "accepted_to_published_dois": []
@@ -6387,6 +6446,84 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fm6s5-r1cq",
       "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/m6s5-r1cq",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41567-026-03408-y",
+      "url": "https://doi.org/10.1038/s41567-026-03408-y",
+      "title": "Fully developed active turbulence defined through a non-equilibrium phase transition",
+      "authors": [
+        "Lasse Bonn",
+        "Tianxiang Ma",
+        "Olga Bantysh",
+        "Wei Feng",
+        "Martin Cramer Pedersen",
+        "Guangyin Jing",
+        "Jordi Ignés-Mullol",
+        "Francesc Sagués",
+        "Nuno A. M. Araujo",
+        "Amin Doostmohammadi"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "babbcb5541ea867349bb61e67ddc713028c08547a78b89838f1ced2d48728e58",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41567-026-03408-y",
+      "author_retrieved_at": "2026-10-08T13:49:54.720852+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Physics",
+      "journal_short": "NP",
+      "issns": [
+        "1745-2473",
+        "1745-2481"
+      ],
+      "date": "2026-09-30",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-09-30",
+        "basis": "published-online",
+        "sources": [
+          "https://www.nature.com/articles/s41567-026-03408-y"
+        ],
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-09-30",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Official full-type Nature Physics directory.",
+        "sources": [
+          "https://www.nature.com/articles/s41567-026-03408-y"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Geometric and rigidity percolation link connected vorticity structures and vortex-centre networks to the onset of fully developed active turbulence.",
+      "note_zh": "用几何渗流和刚性渗流刻画活性湍流起点，将涡量零线的贯通与涡心网络的力学刚性联系起来。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "e54e2e25f72e9b95a7e334b52143158cace09e786a7df8cf62679e621fe023ab",
+      "input_sha256": "043555db9da39fc2a26d62116372e60a25562d86543f5478f4606565a3916d4f",
+      "material_sha256": "250383c5ffa2047890130e14f90969f6ad73654b636a980c243c4a986ea36475",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "250383c5ffa2047890130e14f90969f6ad73654b636a980c243c4a986ea36475",
+      "rule_sha256": "2f321fd804971cd4cae0563f427a7b53a38cf0ee0443c44245a0a529e9340142",
+      "featured": "NP",
+      "evidence": [
+        "Activity drives vorticity-line percolation and rigidity percolation of vortex-centre networks, linking fragmented structures to system-spanning active turbulence."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41567-026-03408-y",
+      "evidence_url": "https://www.nature.com/articles/s41567-026-03408-y",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"

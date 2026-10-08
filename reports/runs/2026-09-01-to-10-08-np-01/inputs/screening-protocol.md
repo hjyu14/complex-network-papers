@@ -35,8 +35,6 @@
 
 ### CSF／Physica A：按官方 Available online 日期定窗
 
-当前接入状态：用户于 2026-10-08 暂缓两刊，仅正式增加 Nature Physics。以下为以后恢复接入时使用的已确认日期规范；两刊不在当前 `config/sources.json` 白名单内，原三刊试采输入与观察保留，不纳入本次发布。
-
 用户于 2026-10-08 最终确认：Chaos, Solitons & Fractals（CSF）与 Physica A: Statistical Mechanics and its Applications，在白名单接入后的新冻结轮中，均以目标文章的官方 `Available online`（首次在线）日期确定纳入窗口；此确认替代本次讨论中此前的严格 Accepted 定窗方案，后者未用于正式采集或发布。Chaos, Solitons & Fractals: X 不纳入。其他期刊继续采用上面的现行日期政策，旧轮依据不追溯改写。
 
 - 首次在线日期须来自身份匹配的出版社文章页／文章历史或明确官方目录，精确到完整年月日、不晚于采集截止日且无未解决冲突。`Received`、`Revised`、`Accepted`、后续 `Version of Record` 日期、卷期日及未经官方核验的数据库日期不能代替首次 `Available online`。

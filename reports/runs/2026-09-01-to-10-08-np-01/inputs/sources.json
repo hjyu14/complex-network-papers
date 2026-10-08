@@ -1,0 +1,38 @@
+{
+  "version": "collection-workflow-2",
+  "status": "bibliographic_collection",
+  "window_days": 90,
+  "initial_trial": {
+    "start": "2026-09-01",
+    "end": "2026-10-08",
+    "backfill_before_start": false
+  },
+  "screening_protocol": "docs/screening-protocol.md",
+  "featured_journals": [
+    "Nature",
+    "NP",
+    "Science",
+    "NC",
+    "NMI",
+    "NCS",
+    "PRX",
+    "PRL",
+    "SA",
+    "PNAS"
+  ],
+  "journals": [
+    {
+      "name": "Nature Physics",
+      "short": "NP",
+      "issns": [
+        "1745-2481",
+        "1745-2473"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/nphys/articles",
+        "max_pages": 24
+      }
+    }
+  ]
+}

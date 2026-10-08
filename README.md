@@ -8,7 +8,7 @@ A public, registration-free reading list for network science. Discover research 
 
 ## What you can do
 
-- Browse relevant papers from thirteen journals in one place.
+- Browse relevant papers from fourteen journals in one place.
 - Filter by research topic, journal, date, or Spotlight journal scope; search titles, authors, journals, and DOIs.
 - Read short English or Chinese notes explaining each paper's connection to network science.
 - Follow links to the original papers, with accepted manuscripts and special article types identified.
@@ -24,9 +24,10 @@ Studies of specific systems are included when network organization is a central 
 
 ## Journals and Spotlight
 
-Spotlight displays included papers from the following nine journals. The homepage shows the latest six; the Spotlight link opens the full Spotlight list. This is a display grouping, not a quality ranking, and all papers follow the same inclusion criteria.
+Spotlight displays included papers from the following ten journals. The homepage shows the latest six; the Spotlight link opens the full Spotlight list. This is a display grouping, not a quality ranking, and all papers follow the same inclusion criteria.
 
 - Nature
+- Nature Physics
 - Science
 - Nature Communications
 - Nature Machine Intelligence
