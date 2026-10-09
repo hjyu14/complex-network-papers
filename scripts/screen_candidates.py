@@ -77,9 +77,14 @@ def validate_short_comment_review(short_review, r, decision):
             or decision['hard_checks']['identity'].get('evidence_sha256') != short_review['evidence_sha256']
             or decision['hard_checks']['type'].get('value') != short_review.get('article_type')):
         raise ValueError('Short comment identity, source, type and decision evidence hash must match')
+    single_policy_exception = (doi == '10.1126/science.aef7249'
+        and short_review.get('article_type') == 'Policy Article'
+        and short_review.get('user_authorization') == '允许这篇例外审读'
+        and short_review.get('authorization_source') == 'user_message'
+        and decision.get('category') == 'excluded')
     if not (short_review.get('full_visible_comment_read') and short_review.get('identity_verified')
             and short_review.get('explicit_abstract_absent')
-            and short_review.get('article_type') in {'Commentary','Perspective','Comment','Introduction','Letter','Correspondence','World View','Essay','Opinion','Expert Voices','Policy Forum','Matters Arising','BriefCommunication'}):
+            and (single_policy_exception or short_review.get('article_type') in {'Commentary','Perspective','Comment','Introduction','Letter','Correspondence','World View','Essay','Opinion','Expert Voices','Policy Forum','Matters Arising','BriefCommunication'})):
         raise ValueError('Short comment exception requires actual complete accessible review and verified identity/type')
     safe_url(short_review['source_url'])
 

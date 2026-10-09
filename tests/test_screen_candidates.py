@@ -93,6 +93,28 @@ class EvidenceTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 s.validate_short_comment_review(changed, record, bound)
 
+    def test_policy_article_exception_is_one_authorized_exclusion(self):
+        record = {**self.r, 'doi':'10.1126/science.aef7249', 'journal':'Science'}
+        observation = {**record, 'source_url':'https://www.science.org/doi/10.1126/science.aef7249',
+            'article_type':'Policy Article', 'explicit_abstract_absent':True,
+            'identity_verified':True, 'full_visible_comment_read':True,
+            'user_authorization':'允许这篇例外审读', 'authorization_source':'user_message'}
+        def check(obs, rec, category):
+            obs = dict(obs); obs.pop('evidence_sha256', None)
+            obs['evidence_sha256'] = s.digest(obs)
+            decision = {'category':category, 'sources':[obs['source_url']], 'hard_checks':{
+                'identity':{'evidence_sha256':obs['evidence_sha256']}, 'type':{'value':'Policy Article'}}}
+            s.validate_short_comment_review(obs, rec, decision)
+        check(observation, record, 'excluded')
+        for category in ['core', 'transferable_application']:
+            with self.assertRaises(ValueError):
+                check(observation, record, category)
+        with self.assertRaises(ValueError):
+            check({**observation, 'user_authorization':''}, record, 'excluded')
+        other = {**record, 'doi':'10.1126/science.other'}
+        with self.assertRaises(ValueError):
+            check({**observation, 'doi':other['doi']}, other, 'excluded')
+
     def test_audience_marker_is_not_an_abstract(self):
         for text in ['International audience', 'Data supplement for the publication "Example".']:
             with self.subTest(text=text), self.assertRaises(ValueError):

@@ -212,6 +212,84 @@
         "zh": "已阅读全文及附录 A–F。实验针对二值无向经济金融网络的缺失边恢复，不等于未来边预测或对所有机器学习方法的结论。推荐为 AI 编辑意见，未独立复现实验。",
         "en": "Full text and Appendices A-F were read. Experiments concern missing-edge recovery in binary undirected economic and financial networks, not future-link prediction or all machine-learning methods. This is AI editorial guidance; experiments were not independently reproduced."
       }
+    },
+    {
+      "doi": "10.1038/s41467-026-77672-0",
+      "recommended_on": "2026-10-09",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-08-to-09-02",
+      "publication_sha256": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+      "assessment_sha256": "aec7b9f0db0074297716bbb10956d519d1d67340e5e11747874982c0268a36b6",
+      "input_sha256": "1655d8ca39ccb7a15ba734b0d6e2b1a8a5858568fd8c6b9e411449ab6518938d",
+      "evidence_sha256": "f415896111d599099cf831038785715b11609114202f04105784c7c53dedf30f",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-09T02:03:20.473798+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-77672-0",
+        "title": "Community-centric modeling of citation dynamics explains collective citation patterns across different knowledge systems",
+        "sha256": "8a69f055ea19950ab6b812829bc38f4f2d283d61ab7f23b2e864cbd5c92f98f6",
+        "version": "Publisher Article in Press, first published online 2026-10-08; subject to further editing, not final Version of Record",
+        "source_url": "https://www.nature.com/articles/s41467-026-77672-0_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "read_scope": "Complete 15-page publisher article, principal text, Methods, equations, Figures 1–4 and captions, references and declarations. Rendered Figures 2 and 4 inspected. Supplementary Information and peer-review file not read; no independent reproduction.",
+        "reviewed_at": "2026-10-09T02:03:20.473798+00:00"
+      },
+      "question": {
+        "zh": "为什么有些成果会沉睡多年后突然被发现？",
+        "en": "Why are some works discovered only after years of obscurity?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把引文网络中的“遗忘”与“延迟认可”放进同一个生成模型：社区在知识空间中的移动，既可能远离旧成果，也可能重新接近被忽视的成果。对研究网络增长的人，这提供了一个可检验的机制视角。",
+          "值得借用的研究步骤是：跨系统寻找共同模式，用生成模型同时解释多个现象，再检查模型在哪些指标和条件下有效。它提醒我们，预测优势与机制解释需要分别验证。"
+        ],
+        "en": [
+          "Today’s pick puts aging and delayed recognition into one generative model: communities moving through knowledge space can leave older work behind or approach overlooked work. This offers a testable mechanism for researchers studying network growth.",
+          "Borrow its workflow: compare patterns across systems, explain several phenomena with one generative model, and inspect the metrics and conditions under which it works. Predictive gains and mechanistic explanations need separate checks."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从社区变化解释节点命运",
+            "en": "Model communities around nodes"
+          },
+          "text": {
+            "zh": "相似性、累积优势与适应度共同决定引用；不显式加入老化项，也能生成一定的衰退和再发现。",
+            "en": "Relevance, cumulative advantage and fitness shape citations; some aging and rediscovery emerge without an explicit aging term."
+          }
+        },
+        {
+          "heading": {
+            "zh": "同时检验多种统计模式",
+            "en": "Test several patterns together"
+          },
+          "text": {
+            "zh": "比较科学、法律和专利的度分布、优先连接与“睡美人”现象，检验机制能否跨系统成立。",
+            "en": "Compare degree distributions, preferential attachment and sleeping beauties across science, law and patents to test transfer across systems."
+          }
+        },
+        {
+          "heading": {
+            "zh": "看清预测的信息条件",
+            "en": "Inspect forecasting conditions"
+          },
+          "text": {
+            "zh": "时间切分后比较误差与高被引识别；实验给定未来实际出版量和参考文献数，不能当作完全未知未来的预测。",
+            "en": "Compare temporal prediction errors and high-impact retrieval; future publication and reference counts are given, so forecasting is conditional."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络生成模型、科学学与时序网络研究者。",
+        "en": "Researchers in network growth, science of science and temporal networks."
+      },
+      "reading_caveat": {
+        "zh": "已读15页官方在线先行全文及方法，未读补充材料。跨系统统计一致不证明唯一因果机制，图4的预测优势也依赖系统与指标。本文尚待最终编辑；推荐为 AI 编辑意见，未独立复现。",
+        "en": "Read the 15-page publisher Article in Press and Methods; supplements were not read. Shared patterns do not establish a unique causal mechanism, and Figure 4 gains depend on system and metric. Final editing is pending. AI editorial guidance; no independent reproduction."
+      }
     }
   ],
   "revisions": [
