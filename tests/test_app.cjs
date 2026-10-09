@@ -297,7 +297,7 @@ test('language switch preserves filters, paper titles and authors', async () => 
 
 test('journal display uses PNAS and Chaos and otherwise full names', async () => {
   const {node} = setup(); await ready();
-  assert.deepEqual(node('#journal').children.map((n)=>n.textContent),config.journals.map((j)=>['PNAS','Chaos'].includes(j.short)?j.short:j.name));
+  assert.deepEqual(node('#journal').children.map((n)=>n.textContent).sort(),config.journals.map((j)=>['PNAS','Chaos'].includes(j.short)?j.short:j.name).sort());
   const {context,node:expandedNode} = setup('newflow-1', collectionConfig); await ready();
   assert.equal(vm.runInContext('journalLabel({journal_short:"Chaos",journal:"Chaos: An Interdisciplinary Journal of Nonlinear Science"})',context),'Chaos');
   expandedNode('#journal').events.change({target:{value:'Chaos'}});
@@ -322,7 +322,7 @@ test('published full-text commentary renders bilingually with its actual reading
   assert.doesNotMatch(texts(node('#suggestion-content')),/本地.*草稿/);
 });
 
-test('published expansion adds four filter journals without changing spotlight membership', async () => {
+test('journal filter order is independent of spotlight membership', async () => {
   const data = JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   assert.deepEqual(data.journals.map(j=>j.short).sort(),collectionConfig.journals.map(j=>j.short).sort());
   for (const short of ['CP','PRResearch','PRE','Chaos']) {
@@ -334,11 +334,10 @@ test('published expansion adds four filter journals without changing spotlight m
   }
   const expanded = setup('newflow-1',collectionConfig); await ready();
   const options = expanded.node('#journal').children;
-  assert.deepEqual(options.map(n=>n.value), [...collectionConfig.featured_journals,
-    ...collectionConfig.journals.filter(j=>!collectionConfig.featured_journals.includes(j.short)).map(j=>j.short)]);
-  assert.equal(options[1].textContent, 'Nature Physics');
-  assert.equal(options[8].textContent, 'Science Advances');
-  assert.equal(options[9].textContent, 'PNAS');
+  assert.deepEqual(options.map(n=>n.value), ['Nature','Science','NMI','NCS','NC','NP','PRX','SA','PNAS','PRL','CP','PRResearch','Chaos','PRE']);
+  assert.equal(options[5].textContent, 'Nature Physics');
+  assert.equal(options[7].textContent, 'Science Advances');
+  assert.equal(options[8].textContent, 'PNAS');
   assert.equal(options[10].textContent, 'Communications Physics');
   assert.equal(expanded.node('#scope-control').hidden,false);
 });

@@ -260,11 +260,11 @@ function renderPagination(pages) {
   nav.append(next);
 }
 function bindControls() {
-  // Keep the original Spotlight order; append the other journals in source order.
+  const journalOrder = ["Nature", "Science", "NMI", "NCS", "NC", "NP", "PRX", "SA", "PNAS", "PRL", "CP", "PRResearch", "Chaos", "PRE"];
   const journals = [...state.data.journals].sort((a, b) => {
     const rank = (journal) => {
-      const index = state.data.featured_journals.indexOf(journal.short);
-      return index < 0 ? state.data.featured_journals.length : index;
+      const index = journalOrder.indexOf(journal.short);
+      return index < 0 ? journalOrder.length : index;
     };
     return rank(a) - rank(b);
   });
