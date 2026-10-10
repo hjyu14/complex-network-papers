@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T02:05:49.145047+00:00",
+  "generated_at": "2026-10-10T02:19:52.901643+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-09",
-  "window_days": 39,
+  "window_end": "2026-10-10",
+  "window_days": 40,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "e352df0060654af5ef4c0da5c9659bbc6e8b4851c3704ba2aad76b4a9e651726",
-  "author_metadata_sha256": "22464a61c5d9dc3cd1e38d8bfa1858b3212ea9dbb750f5b7187cb2feadb76d60",
+  "reading_notes_sha256": "428ac0be2f2058ddf03fb282fd510155888bd2aafe5cc6bc189afdd68e55acb6",
+  "author_metadata_sha256": "77fd6018ef90ae1b5671ef200723b3fe93eef23fe91b0fe21ffa8d1f33b3a01d",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1511,9 +1511,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-09-to-10-01",
+      "config_sha256": "cf62bb01cb039e2858ca6bd6eed9c4a21103cc3a320a59fd7c418fca2166131f",
+      "window_start": "2026-10-09",
+      "window_end": "2026-10-10",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "screening_log_sha256": "676ea558a420906b2298be9f35473f6472ac4d969092d09d814312dd9547864f",
+      "candidate_sha256": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+      "author_metadata_sha256": "8437997ea8b3a77ea29112b7d0de91178482e048bbb6456aa50e307aaae28b5d",
+      "run_manifest_sha256": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-09-to-10-01",
+          "files": {
+            "candidates.json": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+            "coverage.json": "793bc8962560dafd8118fbde5c7ee2bcf9404a569dc114172b7e3a30c9218a1b",
+            "collection-log.jsonl": "b93548e29624850db40ced3db7b2d61edf221e4d793d43a6d4ffc00a53ad82e6",
+            "screening-log.jsonl": "0e433144dd06aefc76318a81954520534b73fac0f8653d1257d88fa8b4a15460",
+            "inputs/manifest.json": "000c16499c5e53edaf4f2da6dafe04a82aba36cc5e85a51117573c4ae0d59e23",
+            "inputs/sources.json": "6b38c8862bd73769f2a51bd75c27dc484c03c0cd71bf0088688ce4b0b9c3ddb4",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+          "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+          "screening_log_sha256": "676ea558a420906b2298be9f35473f6472ac4d969092d09d814312dd9547864f"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "8437997ea8b3a77ea29112b7d0de91178482e048bbb6456aa50e307aaae28b5d",
+          "audit": {
+            "path": "reports/runs/2026-10-09-to-10-01/screening-log.jsonl",
+            "sha256": "0e433144dd06aefc76318a81954520534b73fac0f8653d1257d88fa8b4a15460"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "c32c990676c769ef9f81d1cd677a21ac04d96b6cf7971a07165552ca56e9ebd4"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 184,
+  "author_available_count": 190,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -1663,8 +1707,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 506,
-      "publisher_verified_inventory_count": 506,
+      "candidate_count": 514,
+      "publisher_verified_inventory_count": 514,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1728,6 +1772,15 @@
           "journal": "Nature",
           "candidate_count": 10,
           "publisher_verified_inventory_count": 10,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "Nature",
+          "candidate_count": 8,
+          "publisher_verified_inventory_count": 8,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -1802,13 +1855,22 @@
           "publisher_verified_inventory_count": 39,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1106,
-      "publisher_verified_inventory_count": 1103,
+      "candidate_count": 1144,
+      "publisher_verified_inventory_count": 1142,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1874,6 +1936,15 @@
           "publisher_verified_inventory_count": 32,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "NC",
+          "candidate_count": 42,
+          "publisher_verified_inventory_count": 42,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -1946,13 +2017,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 16,
-      "publisher_verified_inventory_count": 16,
+      "candidate_count": 20,
+      "publisher_verified_inventory_count": 20,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2018,13 +2098,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "NCS",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 61,
-      "publisher_verified_inventory_count": 61,
+      "candidate_count": 64,
+      "publisher_verified_inventory_count": 64,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2090,13 +2179,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "PRX",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 537,
-      "publisher_verified_inventory_count": 537,
+      "candidate_count": 547,
+      "publisher_verified_inventory_count": 547,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2162,13 +2260,22 @@
           "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "PRL",
+          "candidate_count": 18,
+          "publisher_verified_inventory_count": 18,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "SA",
-      "candidate_count": 483,
-      "publisher_verified_inventory_count": 483,
+      "candidate_count": 530,
+      "publisher_verified_inventory_count": 530,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2234,13 +2341,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "SA",
+          "candidate_count": 47,
+          "publisher_verified_inventory_count": 47,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 516,
-      "publisher_verified_inventory_count": 516,
+      "candidate_count": 532,
+      "publisher_verified_inventory_count": 532,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2306,13 +2422,22 @@
           "publisher_verified_inventory_count": 10,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "PNAS",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 74,
-      "publisher_verified_inventory_count": 74,
+      "candidate_count": 76,
+      "publisher_verified_inventory_count": 76,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2378,13 +2503,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "CP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 283,
-      "publisher_verified_inventory_count": 283,
+      "candidate_count": 295,
+      "publisher_verified_inventory_count": 295,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2450,13 +2584,22 @@
           "publisher_verified_inventory_count": 7,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "PRResearch",
+          "candidate_count": 17,
+          "publisher_verified_inventory_count": 17,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 375,
-      "publisher_verified_inventory_count": 375,
+      "candidate_count": 386,
+      "publisher_verified_inventory_count": 386,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2522,13 +2665,22 @@
           "publisher_verified_inventory_count": 18,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "PRE",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 75,
-      "publisher_verified_inventory_count": 75,
+      "candidate_count": 78,
+      "publisher_verified_inventory_count": 78,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2594,13 +2746,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "Chaos",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 47,
-      "publisher_verified_inventory_count": 47,
+      "candidate_count": 54,
+      "publisher_verified_inventory_count": 54,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2621,42 +2782,44 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-09",
+          "window_end": "2026-10-10",
+          "journal": "NP",
+          "candidate_count": 7,
+          "publisher_verified_inventory_count": 7,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 4341,
+  "candidate_count": 4502,
   "screening_counts": {
-    "excluded": 4157,
-    "core": 164,
+    "excluded": 4312,
+    "core": 170,
     "transferable_application": 20,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 184
+    "included": 190
   },
-  "published_count": 138,
-  "accepted_count": 46,
+  "published_count": 143,
+  "accepted_count": 47,
   "latest_update": {
-    "run": "reports/runs/2026-10-08-to-09-02",
-    "reviewed_at": "2026-10-09T02:01:07.720677+00:00",
-    "newly_included_count": 10,
+    "run": "reports/runs/2026-10-09-to-10-01",
+    "reviewed_at": "2026-10-10T02:14:42.357384+00:00",
+    "newly_included_count": 6,
     "newly_included_dois": [
-      "10.1038/s41467-026-77672-0",
-      "10.1038/s41467-026-78228-y",
-      "10.1038/s42005-026-02899-8",
-      "10.1073/pnas.2602161123",
-      "10.1073/pnas.2602244123",
-      "10.1073/pnas.2602630123",
-      "10.1073/pnas.2619598123",
-      "10.1103/366d-8m6s",
-      "10.1103/hs2n-6rsn",
-      "10.1103/hyp9-zngr"
+      "10.1063/5.0350660",
+      "10.1073/pnas.2606245123",
+      "10.1103/52n3-kwdj",
+      "10.1103/hh4n-pw7w",
+      "10.1126/sciadv.adz4710",
+      "10.1126/sciadv.aee5886"
     ],
-    "accepted_to_published_count": 2,
-    "accepted_to_published_dois": [
-      "10.1103/qqwq-7j7j",
-      "10.1103/xp24-5rj6"
-    ]
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": []
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -2666,6 +2829,457 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1126/sciadv.aee5886",
+      "url": "https://doi.org/10.1126/sciadv.aee5886",
+      "title": "Mesoscale structures in signed networks",
+      "authors": [
+        "Wei Zhang",
+        "Olga Boichak",
+        "Tristram J. Alexander",
+        "Tiago P. Peixoto",
+        "Eduardo G. Altmann"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c6e1abc5f8cb8538712b1801c2d781c4b209faa679e8dca68538f4a401023a79",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee5886",
+      "author_retrieved_at": "2026-10-10T02:05:57.042260+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-10-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-09",
+        "basis": "published-print",
+        "publication_status": "published",
+        "published_date": "2026-10-09",
+        "issues_retained": []
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "d2114ad0a7db080a4a865270b689116557aadd43b44420f05ca117eb9724b269",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要提出介观结构识别方法并分析24个实证网络，明确原创网络研究；无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aee5886"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Pattern-agnostic analysis reveals unbalanced mesoscale organization and differences across scales in empirical signed networks.",
+      "note_zh": "不预设社会平衡模式，识别实证有符号网络的不平衡介观组织及跨尺度结构差异。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "be08ba0aedc27a998026f58dc535266b82dac727a3bb1c23d12c942e84a6aa4e",
+      "input_sha256": "658405a17906b1966f75faffa4047657b8583138c0665cba019c407a81234b26",
+      "material_sha256": "d2114ad0a7db080a4a865270b689116557aadd43b44420f05ca117eb9724b269",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d2114ad0a7db080a4a865270b689116557aadd43b44420f05ca117eb9724b269",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "featured": "SA",
+      "evidence": [
+        "Pattern-agnostic signed-network analysis reveals prevalent unbalanced mesoscale structures across empirical systems."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee5886",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee5886",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1126/sciadv.adz4710",
+      "url": "https://doi.org/10.1126/sciadv.adz4710",
+      "title": "Contagion-preserving compression for multiscale epidemic modeling",
+      "authors": [
+        "Leyang Xue",
+        "Zengru Di",
+        "An Zeng"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "ed839e4d2ce57858011aa3dd9fa7ee869ff644273a61f7555dd037c1d546e8d8",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.adz4710",
+      "author_retrieved_at": "2026-10-10T02:05:53.635110+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-10-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-09",
+        "basis": "published-print",
+        "publication_status": "published",
+        "published_date": "2026-10-09",
+        "issues_retained": []
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要提出ISCG并报告多尺度传播与干预比较结果，明确原创网络方法；无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.adz4710"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Clique-based coarse-graining connects network compression to contagion fidelity and tests the resulting multiscale intervention strategies.",
+      "note_zh": "以团为单元粗粒化网络，分析传播保真与压缩程度的折中，并检验多尺度干预策略。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8f66381f2e359391a2c1330fdc49fea6aca82bc2097b6f63965e805d96096e25",
+      "input_sha256": "a3454a4c03501ab2c1e7fb6e69ed37d36b1721013858aa1c2b6e52bf6059e3e2",
+      "material_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "featured": "SA",
+      "evidence": [
+        "Structural coarse-graining compresses networks while preserving contagion dynamics in the saturation regime."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.adz4710",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.adz4710",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/hh4n-pw7w",
+      "url": "https://doi.org/10.1103/hh4n-pw7w",
+      "title": "Fluidic Hysterons and Memory in Flow Networks",
+      "authors": [
+        "Abhineet Singh Rajput",
+        "Amir A. Pahlavan"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3f41c2760bbdc18f857d2fcc82aef0328fd1edef413ff8dc024a566427cfbec5",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fhh4n-pw7w",
+      "author_retrieved_at": "2026-10-10T02:05:48.335157+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review X",
+      "journal_short": "PRX",
+      "issns": [
+        "2160-3308"
+      ],
+      "date": "2026-10-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-09",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-09",
+        "issues_retained": []
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "4420b2e51a60864b7966a4d89771d52c073934321e17d8b4aeb2dc92e8ddd934",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要明确报告微流体纤维实验、旁路耦合及阵列记忆转变，是原创研究；无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1103%2Fhh4n-pw7w"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Hydraulic coupling changes fluidic hysterons from independent memory elements into networks with configuration-dependent switching.",
+      "note_zh": "水力耦合使流体迟滞元件形成相互作用网络，揭示切换阈值与集体记忆如何依赖系统状态。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "585c6003c92ceaec7451ccb3ba72ae5c3c43ff812f37edb9fa4a0efe5d8cf243",
+      "input_sha256": "924c51cc1d4e5c63ea07fd4c2613fd61b8b7b94b484bf6f591db7b1d8e9e0186",
+      "material_sha256": "4420b2e51a60864b7966a4d89771d52c073934321e17d8b4aeb2dc92e8ddd934",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "4420b2e51a60864b7966a4d89771d52c073934321e17d8b4aeb2dc92e8ddd934",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "featured": "PRX",
+      "evidence": [
+        "Hydraulic coupling transforms independent hysterons into interacting memory networks with configuration-dependent switching."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhh4n-pw7w",
+      "evidence_url": "https://api.crossref.org/works/10.1103%2Fhh4n-pw7w",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/52n3-kwdj",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/52n3-kwdj",
+      "title": "Framework for proto-immunity in open chemical reaction networks",
+      "authors": [
+        "Yannick De Decker"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "7972c87fa6e10f003bce2c3b7cb0b1216c39fc638a87d0d493cd1c59b48f6ecb",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F52n3-kwdj",
+      "author_retrieved_at": "2026-10-10T02:05:55.244655+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-09",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-09",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "issues_retained": []
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-09",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "b6318eacbe6ece1c3a54e4893f3e7f58de4b502c40d0fb52e10222cc14488148",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要定义新的反应网络保护框架，并分析三种威胁与防御动力学，是原创研究；无特殊类型冲突。",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/52n3-kwdj"
+        ]
+      },
+      "categories": [
+        "network_resilience",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A throughput-based proto-immunity framework analyzes defense motifs and invasion stability in open chemical reaction networks.",
+      "note_zh": "以通量保护定义开放化学反应网络的原免疫能力，分析防御模体与入侵稳定性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "c32a03239112d8811b0dc92673cb764c267bb9f47a8dd770aa5770a96c856c80",
+      "input_sha256": "59209ad3eb31417ea90b60d0e6d1776800936ae0afb14a719aa6eeefae4ce1e0",
+      "material_sha256": "b6318eacbe6ece1c3a54e4893f3e7f58de4b502c40d0fb52e10222cc14488148",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "b6318eacbe6ece1c3a54e4893f3e7f58de4b502c40d0fb52e10222cc14488148",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "featured": null,
+      "evidence": [
+        "Defense motifs protect chemical reaction-network throughput against invading species and reactions."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F52n3-kwdj",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/52n3-kwdj",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2606245123",
+      "url": "https://doi.org/10.1073/pnas.2606245123",
+      "title": "How biological synapses self-assemble gradient learning",
+      "authors": [
+        "Qianli Liao",
+        "Liu Ziyin",
+        "Yulu Gan",
+        "Brian Cheung",
+        "Mark T. Harnett",
+        "Tomaso Poggio"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e983efc215c5891fda62ea5d9463f7498b8c95ae40396f6c8d6c40dc1eb725ad",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2606245123",
+      "author_retrieved_at": "2026-10-10T02:05:52.027679+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-09",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-09",
+        "issues_retained": []
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-09",
+      "article_type": "Research Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Research Article",
+        "basis": "Observed official type",
+        "sources": [
+          "https://www.pnas.org/toc/pnas/123/41",
+          "https://www.pnas.org/latest",
+          "https://www.pnas.org/action/doSearch?field1=AllField&text1=&publication%5B%5D=pnas&publication=&Ppub=&access=on&startPage=0&sortBy=Earliest"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Local synaptic plasticity self-assembles learning motifs whose hierarchical networks approximate gradient learning.",
+      "note_zh": "局部突触可塑性从随机连接自组装学习模体，使层级网络涌现近似梯度学习。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "e2770dd62672f6fa3730f64a9ee036b3047223159915828bec503e6dfdef7e7c",
+      "input_sha256": "dbc221519c9b21a7fa091b21804914994f868fdc8b86833bc4252981edfa7477",
+      "material_sha256": "20188a29551b6b48044bfe934c51cd939a3a1dde7da6e75773fc8707fdf6dfc1",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "20188a29551b6b48044bfe934c51cd939a3a1dde7da6e75773fc8707fdf6dfc1",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "featured": "PNAS",
+      "evidence": [
+        "Local plasticity self-assembles motifs whose hierarchical networks approximate stochastic gradient descent."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2606245123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2606245123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0350660",
+      "url": "https://doi.org/10.1063/5.0350660",
+      "title": "Hidden synchrony in networks through Laplacian-spectrum-based En matrices",
+      "authors": [
+        "Sajad Jafari",
+        "Deivasundari Muthukumar",
+        "Karthikeyan Rajagopal",
+        "Atiyeh Bayani",
+        "Fahimeh Nazarimehr"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "012f4bd677b70b964fec640e13eb2723ceda175c67c6a9ba068fb3330a71d882",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0350660",
+      "author_retrieved_at": "2026-10-10T02:05:50.281731+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-10-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-09",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-09",
+        "issues_retained": []
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "e151f16ca1029a42a22c878c1b9bac1090cdd8079704ef9f798e788571605042",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "摘要提出谱矩阵分析并在耦合振子网络中检验隐藏同步结构，明确原创分析与结果；无特殊类型冲突。",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0350660"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Laplacian-spectrum-derived matrices reveal hidden synchronization clusters and connect their visibility to dynamical stability.",
+      "note_zh": "利用拉普拉斯谱矩阵识别隐藏同步簇，并分析动力学稳定性如何决定这些簇能否显现。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8851aea42a62804c6599920c5e02e4c4b8782384eec0cbc496791c9b83c47c1d",
+      "input_sha256": "86e38ea15d0a0cdceb1eb4ccb9b2ce267b404738337112261512fc9b94448536",
+      "material_sha256": "e151f16ca1029a42a22c878c1b9bac1090cdd8079704ef9f798e788571605042",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e151f16ca1029a42a22c878c1b9bac1090cdd8079704ef9f798e788571605042",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "featured": null,
+      "evidence": [
+        "Laplacian-derived matrices reveal hidden synchronization clusters and their dynamical visibility."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0350660",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0350660",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/xp24-5rj6",
       "url": "https://doi.org/10.1103/xp24-5rj6",
@@ -17544,9 +18158,116 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "a4e2e5d3092480598a39fa2a904805f1e99afd03505b3dcc23fa9a47711f6767"
+    },
+    {
+      "current_run": "reports/runs/2026-10-09-to-10-01",
+      "candidate_sha256": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f"
+      },
+      "counts": {
+        "in_window": 184,
+        "newly_reviewed": 161,
+        "historically_reviewed": 67,
+        "state_updates": 17,
+        "categories": {
+          "excluded": 178,
+          "core": 6
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "08c44ff3e585a109f3e332793a371b091f3d8318419ba6e4f1960c2c8822b0e4"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1126/sciadv.adz4710",
+      "recommended_on": "2026-10-10",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-09-to-10-01",
+      "publication_sha256": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+      "assessment_sha256": "8f66381f2e359391a2c1330fdc49fea6aca82bc2097b6f63965e805d96096e25",
+      "input_sha256": "a3454a4c03501ab2c1e7fb6e69ed37d36b1721013858aa1c2b6e52bf6059e3e2",
+      "evidence_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-10T02:18:01.794318+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.adz4710",
+        "title": "Contagion-preserving compression for multiscale epidemic modeling",
+        "sha256": "6dfdd662358180b0a9ce97c2cb472e6da26906efb08b5d5bd7d49de06dbc8dea",
+        "version": "Science Advances 12, eadz4710 (2026), publisher Version of Record, published 2026-10-09",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/sciadv.adz4710?download=true",
+        "source_kind": "publisher_fulltext",
+        "pages": 17,
+        "read_scope": "Complete 17-page PDF: article pages 1–16 and final publisher information page; main text, Methods, equations, Figures 1–8 and captions, references and declarations. Rendered page 4 (Eq. 4–6, Fig. 2) and page 7 (Fig. 4) inspected. Separate Supplementary Materials not read; no independent reproduction.",
+        "reviewed_at": "2026-10-10T02:18:01.794318+00:00"
+      },
+      "question": {
+        "zh": "网络缩小之后，哪些传播规律还能保留下来？",
+        "en": "Which contagion properties survive when a network is compressed?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络压缩与传播机制直接联系起来：密集团何时可作为传播单元，合并后的边又该如何传递感染？这让粗粒化的选择有了可检查的动力学依据。",
+          "值得带走的是一套验证步骤：同时检查疫情规模、节点感染风险与传播时间，再按误差容忍度选择压缩尺度。做大网络模拟或干预设计时，这比只比较最终规模更有参考价值。"
+        ],
+        "en": [
+          "Today’s pick ties network compression to contagion mechanisms: when can a dense clique act as one spreading unit, and how should merged edges transmit infection? These questions give coarse-graining a checkable dynamical basis.",
+          "Borrow its validation workflow: compare outbreak size, node-level risk and timing, then choose compression scales under an error tolerance. This is useful for large-network simulation and intervention design."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从传播机制定义粗粒化",
+            "en": "Define units through dynamics"
+          },
+          "text": {
+            "zh": "检查块内感染是否近饱和，并按原始跨块边数合成传播概率，而非直接沿用原网络的感染率。",
+            "en": "Check near-saturation within blocks and aggregate transmission probabilities using original interblock edges, rather than reusing the original rate."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多层指标检查误差",
+            "en": "Check fidelity at several levels"
+          },
+          "text": {
+            "zh": "同时比较总规模与节点风险；时间轨迹另需全局对齐，不能把对齐后的吻合视为原始时间完全一致。",
+            "en": "Compare aggregate size and node-level risk; trajectories require global time alignment, which is not identity in unshifted time."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把压缩结构用于干预",
+            "en": "Use compression for intervention"
+          },
+          "text": {
+            "zh": "先在粗粒化网络定位关键区域，再映回原节点或边，减少播种冗余并针对跨组传播通道。",
+            "en": "Locate regions on the reduced network, then map back to original nodes or edges to limit redundant seeds and target intergroup channels."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络传播、粗粒化、影响力最大化与干预设计研究者。",
+        "en": "Researchers in contagion, coarse-graining, influence maximization and network intervention."
+      },
+      "reading_caveat": {
+        "zh": "已读17页官方PDF，未读另附补充材料。核心理论针对静态无向SIR及确定恢复；有限团在感染率小于1时仍有初始传播失败概率，不宜将近饱和或模拟吻合等同普遍严格无损。时间比较经过对齐。AI编辑意见，未独立复现。",
+        "en": "Read the 17-page publisher PDF, not separate supplements. Core theory uses static undirected SIR with deterministic recovery. Finite cliques below unit transmission retain seed-extinction risk; near-saturation or simulated agreement is not universal exactness. Timing comparisons are aligned. AI editorial guidance; no independent reproduction."
+      }
+    },
     {
       "doi": "10.1038/s41467-026-77672-0",
       "recommended_on": "2026-10-09",
@@ -18153,6 +18874,84 @@
       }
     },
     {
+      "doi": "10.1126/sciadv.adz4710",
+      "recommended_on": "2026-10-10",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-09-to-10-01",
+      "publication_sha256": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+      "assessment_sha256": "8f66381f2e359391a2c1330fdc49fea6aca82bc2097b6f63965e805d96096e25",
+      "input_sha256": "a3454a4c03501ab2c1e7fb6e69ed37d36b1721013858aa1c2b6e52bf6059e3e2",
+      "evidence_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-10T02:18:01.794318+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.adz4710",
+        "title": "Contagion-preserving compression for multiscale epidemic modeling",
+        "sha256": "6dfdd662358180b0a9ce97c2cb472e6da26906efb08b5d5bd7d49de06dbc8dea",
+        "version": "Science Advances 12, eadz4710 (2026), publisher Version of Record, published 2026-10-09",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/sciadv.adz4710?download=true",
+        "source_kind": "publisher_fulltext",
+        "pages": 17,
+        "read_scope": "Complete 17-page PDF: article pages 1–16 and final publisher information page; main text, Methods, equations, Figures 1–8 and captions, references and declarations. Rendered page 4 (Eq. 4–6, Fig. 2) and page 7 (Fig. 4) inspected. Separate Supplementary Materials not read; no independent reproduction.",
+        "reviewed_at": "2026-10-10T02:18:01.794318+00:00"
+      },
+      "question": {
+        "zh": "网络缩小之后，哪些传播规律还能保留下来？",
+        "en": "Which contagion properties survive when a network is compressed?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络压缩与传播机制直接联系起来：密集团何时可作为传播单元，合并后的边又该如何传递感染？这让粗粒化的选择有了可检查的动力学依据。",
+          "值得带走的是一套验证步骤：同时检查疫情规模、节点感染风险与传播时间，再按误差容忍度选择压缩尺度。做大网络模拟或干预设计时，这比只比较最终规模更有参考价值。"
+        ],
+        "en": [
+          "Today’s pick ties network compression to contagion mechanisms: when can a dense clique act as one spreading unit, and how should merged edges transmit infection? These questions give coarse-graining a checkable dynamical basis.",
+          "Borrow its validation workflow: compare outbreak size, node-level risk and timing, then choose compression scales under an error tolerance. This is useful for large-network simulation and intervention design."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从传播机制定义粗粒化",
+            "en": "Define units through dynamics"
+          },
+          "text": {
+            "zh": "检查块内感染是否近饱和，并按原始跨块边数合成传播概率，而非直接沿用原网络的感染率。",
+            "en": "Check near-saturation within blocks and aggregate transmission probabilities using original interblock edges, rather than reusing the original rate."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多层指标检查误差",
+            "en": "Check fidelity at several levels"
+          },
+          "text": {
+            "zh": "同时比较总规模与节点风险；时间轨迹另需全局对齐，不能把对齐后的吻合视为原始时间完全一致。",
+            "en": "Compare aggregate size and node-level risk; trajectories require global time alignment, which is not identity in unshifted time."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把压缩结构用于干预",
+            "en": "Use compression for intervention"
+          },
+          "text": {
+            "zh": "先在粗粒化网络定位关键区域，再映回原节点或边，减少播种冗余并针对跨组传播通道。",
+            "en": "Locate regions on the reduced network, then map back to original nodes or edges to limit redundant seeds and target intergroup channels."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络传播、粗粒化、影响力最大化与干预设计研究者。",
+        "en": "Researchers in contagion, coarse-graining, influence maximization and network intervention."
+      },
+      "reading_caveat": {
+        "zh": "已读17页官方PDF，未读另附补充材料。核心理论针对静态无向SIR及确定恢复；有限团在感染率小于1时仍有初始传播失败概率，不宜将近饱和或模拟吻合等同普遍严格无损。时间比较经过对齐。AI编辑意见，未独立复现。",
+        "en": "Read the 17-page publisher PDF, not separate supplements. Core theory uses static undirected SIR with deterministic recovery. Finite cliques below unit transmission retain seed-extinction risk; near-saturation or simulated agreement is not universal exactness. Timing comparisons are aligned. AI editorial guidance; no independent reproduction."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -18232,5 +19031,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "6840056b3d29c9fa809bd36838ab59cb70acc3cd585a14df7858c6794f935a3b"
+  "daily_suggestions_sha256": "06c728cca727c1cfa0385bdfaf6ea6a4a0210a9e24b3280a74c93aa03800abfa"
 }

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T02:05:49.145047+00:00",
+  "generated_at": "2026-10-10T02:19:52.901643+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-09",
-  "window_days": 39,
+  "window_end": "2026-10-10",
+  "window_days": 40,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "e352df0060654af5ef4c0da5c9659bbc6e8b4851c3704ba2aad76b4a9e651726",
-  "author_metadata_sha256": "22464a61c5d9dc3cd1e38d8bfa1858b3212ea9dbb750f5b7187cb2feadb76d60",
+  "reading_notes_sha256": "428ac0be2f2058ddf03fb282fd510155888bd2aafe5cc6bc189afdd68e55acb6",
+  "author_metadata_sha256": "77fd6018ef90ae1b5671ef200723b3fe93eef23fe91b0fe21ffa8d1f33b3a01d",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1511,41 +1511,78 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-09-to-10-01",
+      "config_sha256": "cf62bb01cb039e2858ca6bd6eed9c4a21103cc3a320a59fd7c418fca2166131f",
+      "window_start": "2026-10-09",
+      "window_end": "2026-10-10",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "screening_log_sha256": "676ea558a420906b2298be9f35473f6472ac4d969092d09d814312dd9547864f",
+      "candidate_sha256": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+      "author_metadata_sha256": "8437997ea8b3a77ea29112b7d0de91178482e048bbb6456aa50e307aaae28b5d",
+      "run_manifest_sha256": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-09-to-10-01",
+          "files": {
+            "candidates.json": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+            "coverage.json": "793bc8962560dafd8118fbde5c7ee2bcf9404a569dc114172b7e3a30c9218a1b",
+            "collection-log.jsonl": "b93548e29624850db40ced3db7b2d61edf221e4d793d43a6d4ffc00a53ad82e6",
+            "screening-log.jsonl": "0e433144dd06aefc76318a81954520534b73fac0f8653d1257d88fa8b4a15460",
+            "inputs/manifest.json": "000c16499c5e53edaf4f2da6dafe04a82aba36cc5e85a51117573c4ae0d59e23",
+            "inputs/sources.json": "6b38c8862bd73769f2a51bd75c27dc484c03c0cd71bf0088688ce4b0b9c3ddb4",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+          "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+          "screening_log_sha256": "676ea558a420906b2298be9f35473f6472ac4d969092d09d814312dd9547864f"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "8437997ea8b3a77ea29112b7d0de91178482e048bbb6456aa50e307aaae28b5d",
+          "audit": {
+            "path": "reports/runs/2026-10-09-to-10-01/screening-log.jsonl",
+            "sha256": "0e433144dd06aefc76318a81954520534b73fac0f8653d1257d88fa8b4a15460"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "c32c990676c769ef9f81d1cd677a21ac04d96b6cf7971a07165552ca56e9ebd4"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 184,
-  "candidate_count": 4341,
+  "author_available_count": 190,
+  "candidate_count": 4502,
   "screening_counts": {
-    "excluded": 4157,
-    "core": 164,
+    "excluded": 4312,
+    "core": 170,
     "transferable_application": 20,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 184
+    "included": 190
   },
-  "published_count": 138,
-  "accepted_count": 46,
+  "published_count": 143,
+  "accepted_count": 47,
   "latest_update": {
-    "run": "reports/runs/2026-10-08-to-09-02",
-    "reviewed_at": "2026-10-09T02:01:07.720677+00:00",
-    "newly_included_count": 10,
+    "run": "reports/runs/2026-10-09-to-10-01",
+    "reviewed_at": "2026-10-10T02:14:42.357384+00:00",
+    "newly_included_count": 6,
     "newly_included_dois": [
-      "10.1038/s41467-026-77672-0",
-      "10.1038/s41467-026-78228-y",
-      "10.1038/s42005-026-02899-8",
-      "10.1073/pnas.2602161123",
-      "10.1073/pnas.2602244123",
-      "10.1073/pnas.2602630123",
-      "10.1073/pnas.2619598123",
-      "10.1103/366d-8m6s",
-      "10.1103/hs2n-6rsn",
-      "10.1103/hyp9-zngr"
+      "10.1063/5.0350660",
+      "10.1073/pnas.2606245123",
+      "10.1103/52n3-kwdj",
+      "10.1103/hh4n-pw7w",
+      "10.1126/sciadv.adz4710",
+      "10.1126/sciadv.aee5886"
     ],
-    "accepted_to_published_count": 2,
-    "accepted_to_published_dois": [
-      "10.1103/qqwq-7j7j",
-      "10.1103/xp24-5rj6"
-    ]
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": []
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -1661,9 +1698,122 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "a4e2e5d3092480598a39fa2a904805f1e99afd03505b3dcc23fa9a47711f6767"
+    },
+    {
+      "current_run": "reports/runs/2026-10-09-to-10-01",
+      "candidate_sha256": "1f1db4f17a91e99f6516fabb1b1b39c5fbff2cc1f970dacc25625b9b827ef88e",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f"
+      },
+      "counts": {
+        "in_window": 184,
+        "newly_reviewed": 161,
+        "historically_reviewed": 67,
+        "state_updates": 17,
+        "categories": {
+          "excluded": 178,
+          "core": 6
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "08c44ff3e585a109f3e332793a371b091f3d8318419ba6e4f1960c2c8822b0e4"
     }
   ],
   "included_assessments": [
+    {
+      "doi": "10.1126/sciadv.aee5886",
+      "scope_class": "core",
+      "publication_status": "published",
+      "assessment_sha256": "be08ba0aedc27a998026f58dc535266b82dac727a3bb1c23d12c942e84a6aa4e",
+      "input_sha256": "658405a17906b1966f75faffa4047657b8583138c0665cba019c407a81234b26",
+      "material_sha256": "d2114ad0a7db080a4a865270b689116557aadd43b44420f05ca117eb9724b269",
+      "review_evidence_kind": "abstract",
+      "review_evidence_sha256": "d2114ad0a7db080a4a865270b689116557aadd43b44420f05ca117eb9724b269",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c6e1abc5f8cb8538712b1801c2d781c4b209faa679e8dca68538f4a401023a79"
+    },
+    {
+      "doi": "10.1126/sciadv.adz4710",
+      "scope_class": "core",
+      "publication_status": "published",
+      "assessment_sha256": "8f66381f2e359391a2c1330fdc49fea6aca82bc2097b6f63965e805d96096e25",
+      "input_sha256": "a3454a4c03501ab2c1e7fb6e69ed37d36b1721013858aa1c2b6e52bf6059e3e2",
+      "material_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+      "review_evidence_kind": "abstract",
+      "review_evidence_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "ed839e4d2ce57858011aa3dd9fa7ee869ff644273a61f7555dd037c1d546e8d8"
+    },
+    {
+      "doi": "10.1103/hh4n-pw7w",
+      "scope_class": "core",
+      "publication_status": "published",
+      "assessment_sha256": "585c6003c92ceaec7451ccb3ba72ae5c3c43ff812f37edb9fa4a0efe5d8cf243",
+      "input_sha256": "924c51cc1d4e5c63ea07fd4c2613fd61b8b7b94b484bf6f591db7b1d8e9e0186",
+      "material_sha256": "4420b2e51a60864b7966a4d89771d52c073934321e17d8b4aeb2dc92e8ddd934",
+      "review_evidence_kind": "abstract",
+      "review_evidence_sha256": "4420b2e51a60864b7966a4d89771d52c073934321e17d8b4aeb2dc92e8ddd934",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3f41c2760bbdc18f857d2fcc82aef0328fd1edef413ff8dc024a566427cfbec5"
+    },
+    {
+      "doi": "10.1103/52n3-kwdj",
+      "scope_class": "core",
+      "publication_status": "accepted",
+      "assessment_sha256": "c32a03239112d8811b0dc92673cb764c267bb9f47a8dd770aa5770a96c856c80",
+      "input_sha256": "59209ad3eb31417ea90b60d0e6d1776800936ae0afb14a719aa6eeefae4ce1e0",
+      "material_sha256": "b6318eacbe6ece1c3a54e4893f3e7f58de4b502c40d0fb52e10222cc14488148",
+      "review_evidence_kind": "abstract",
+      "review_evidence_sha256": "b6318eacbe6ece1c3a54e4893f3e7f58de4b502c40d0fb52e10222cc14488148",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "7972c87fa6e10f003bce2c3b7cb0b1216c39fc638a87d0d493cd1c59b48f6ecb"
+    },
+    {
+      "doi": "10.1073/pnas.2606245123",
+      "scope_class": "core",
+      "publication_status": "published",
+      "assessment_sha256": "e2770dd62672f6fa3730f64a9ee036b3047223159915828bec503e6dfdef7e7c",
+      "input_sha256": "dbc221519c9b21a7fa091b21804914994f868fdc8b86833bc4252981edfa7477",
+      "material_sha256": "20188a29551b6b48044bfe934c51cd939a3a1dde7da6e75773fc8707fdf6dfc1",
+      "review_evidence_kind": "abstract",
+      "review_evidence_sha256": "20188a29551b6b48044bfe934c51cd939a3a1dde7da6e75773fc8707fdf6dfc1",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e983efc215c5891fda62ea5d9463f7498b8c95ae40396f6c8d6c40dc1eb725ad"
+    },
+    {
+      "doi": "10.1063/5.0350660",
+      "scope_class": "core",
+      "publication_status": "published",
+      "assessment_sha256": "8851aea42a62804c6599920c5e02e4c4b8782384eec0cbc496791c9b83c47c1d",
+      "input_sha256": "86e38ea15d0a0cdceb1eb4ccb9b2ce267b404738337112261512fc9b94448536",
+      "material_sha256": "e151f16ca1029a42a22c878c1b9bac1090cdd8079704ef9f798e788571605042",
+      "review_evidence_kind": "abstract",
+      "review_evidence_sha256": "e151f16ca1029a42a22c878c1b9bac1090cdd8079704ef9f798e788571605042",
+      "rule_sha256": "c200d5112c80ffcee6fb7c3ef5d4a826fde2e28aa7e7dbfdfda1c547b1c654ec",
+      "scope_authority": "assistant_abstract_screening",
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "012f4bd677b70b964fec640e13eb2723ceda175c67c6a9ba068fb3330a71d882"
+    },
     {
       "doi": "10.1103/xp24-5rj6",
       "scope_class": "core",
@@ -4241,5 +4391,5 @@
       "author_metadata_sha256": "c91705c243afb46ad8699fee9ad0a4dbb45ff276879200732a8a6435ae823232"
     }
   ],
-  "daily_suggestions_sha256": "6840056b3d29c9fa809bd36838ab59cb70acc3cd585a14df7858c6794f935a3b"
+  "daily_suggestions_sha256": "06c728cca727c1cfa0385bdfaf6ea6a4a0210a9e24b3280a74c93aa03800abfa"
 }

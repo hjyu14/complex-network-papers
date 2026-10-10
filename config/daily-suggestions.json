@@ -290,6 +290,84 @@
         "zh": "已读15页官方在线先行全文及方法，未读补充材料。跨系统统计一致不证明唯一因果机制，图4的预测优势也依赖系统与指标。本文尚待最终编辑；推荐为 AI 编辑意见，未独立复现。",
         "en": "Read the 15-page publisher Article in Press and Methods; supplements were not read. Shared patterns do not establish a unique causal mechanism, and Figure 4 gains depend on system and metric. Final editing is pending. AI editorial guidance; no independent reproduction."
       }
+    },
+    {
+      "doi": "10.1126/sciadv.adz4710",
+      "recommended_on": "2026-10-10",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-09-to-10-01",
+      "publication_sha256": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+      "assessment_sha256": "8f66381f2e359391a2c1330fdc49fea6aca82bc2097b6f63965e805d96096e25",
+      "input_sha256": "a3454a4c03501ab2c1e7fb6e69ed37d36b1721013858aa1c2b6e52bf6059e3e2",
+      "evidence_sha256": "e905a0e6e25f980b9b12b8077edeeb54e0702d47e19478beb3690384e5e78d28",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-10T02:18:01.794318+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.adz4710",
+        "title": "Contagion-preserving compression for multiscale epidemic modeling",
+        "sha256": "6dfdd662358180b0a9ce97c2cb472e6da26906efb08b5d5bd7d49de06dbc8dea",
+        "version": "Science Advances 12, eadz4710 (2026), publisher Version of Record, published 2026-10-09",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/sciadv.adz4710?download=true",
+        "source_kind": "publisher_fulltext",
+        "pages": 17,
+        "read_scope": "Complete 17-page PDF: article pages 1–16 and final publisher information page; main text, Methods, equations, Figures 1–8 and captions, references and declarations. Rendered page 4 (Eq. 4–6, Fig. 2) and page 7 (Fig. 4) inspected. Separate Supplementary Materials not read; no independent reproduction.",
+        "reviewed_at": "2026-10-10T02:18:01.794318+00:00"
+      },
+      "question": {
+        "zh": "网络缩小之后，哪些传播规律还能保留下来？",
+        "en": "Which contagion properties survive when a network is compressed?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络压缩与传播机制直接联系起来：密集团何时可作为传播单元，合并后的边又该如何传递感染？这让粗粒化的选择有了可检查的动力学依据。",
+          "值得带走的是一套验证步骤：同时检查疫情规模、节点感染风险与传播时间，再按误差容忍度选择压缩尺度。做大网络模拟或干预设计时，这比只比较最终规模更有参考价值。"
+        ],
+        "en": [
+          "Today’s pick ties network compression to contagion mechanisms: when can a dense clique act as one spreading unit, and how should merged edges transmit infection? These questions give coarse-graining a checkable dynamical basis.",
+          "Borrow its validation workflow: compare outbreak size, node-level risk and timing, then choose compression scales under an error tolerance. This is useful for large-network simulation and intervention design."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从传播机制定义粗粒化",
+            "en": "Define units through dynamics"
+          },
+          "text": {
+            "zh": "检查块内感染是否近饱和，并按原始跨块边数合成传播概率，而非直接沿用原网络的感染率。",
+            "en": "Check near-saturation within blocks and aggregate transmission probabilities using original interblock edges, rather than reusing the original rate."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多层指标检查误差",
+            "en": "Check fidelity at several levels"
+          },
+          "text": {
+            "zh": "同时比较总规模与节点风险；时间轨迹另需全局对齐，不能把对齐后的吻合视为原始时间完全一致。",
+            "en": "Compare aggregate size and node-level risk; trajectories require global time alignment, which is not identity in unshifted time."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把压缩结构用于干预",
+            "en": "Use compression for intervention"
+          },
+          "text": {
+            "zh": "先在粗粒化网络定位关键区域，再映回原节点或边，减少播种冗余并针对跨组传播通道。",
+            "en": "Locate regions on the reduced network, then map back to original nodes or edges to limit redundant seeds and target intergroup channels."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络传播、粗粒化、影响力最大化与干预设计研究者。",
+        "en": "Researchers in contagion, coarse-graining, influence maximization and network intervention."
+      },
+      "reading_caveat": {
+        "zh": "已读17页官方PDF，未读另附补充材料。核心理论针对静态无向SIR及确定恢复；有限团在感染率小于1时仍有初始传播失败概率，不宜将近饱和或模拟吻合等同普遍严格无损。时间比较经过对齐。AI编辑意见，未独立复现。",
+        "en": "Read the 17-page publisher PDF, not separate supplements. Core theory uses static undirected SIR with deterministic recovery. Finite cliques below unit transmission retain seed-extinction risk; near-saturation or simulated agreement is not universal exactness. Timing comparisons are aligned. AI editorial guidance; no independent reproduction."
+      }
     }
   ],
   "revisions": [

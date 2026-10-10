@@ -1,0 +1,23 @@
+{
+  "authorization": "User explicitly allowed this recovery on 2026-10-10 after the concurrency failure was reported.",
+  "cause": "Directory guard audit appended while automatic evidence collector retained an earlier log head.",
+  "original_file": "evidence/screening-log-concurrent-original.jsonl",
+  "original_sha256": "ebb1792c6c123a69396c04c383be188646a01406c68b781543010c7c40cd17ea",
+  "valid_events_preserved": 491,
+  "valid_events_bytes_sha256": "4b04e44d8a9cf7d605ad6d8573460d3e34179252b90a721bb1d5b4b5f3251c40",
+  "displaced_event": {
+    "sequence": 114,
+    "at": "2026-10-10T01:52:45.809311+00:00",
+    "kind": "directory_guard_history_checked",
+    "previous_sha256": "c79670bd93621a47dd713769045b9840ce42291e727b716e9a532b572fd70cc3",
+    "data": {
+      "file": "evidence/directory-guard-history.json",
+      "sha256": "9b1a70c9d8fd5a85f57a3802d7abe3f7098a2263472cb73a1a87f84b876dd385",
+      "record_count": 621,
+      "blockers": 0,
+      "scope": "all observed official Nature/APS/other directories and browser directories"
+    },
+    "sha256": "eaa4d2a2a259eb895b4b1038a0447986dd4752b230d3b6f811b85c495f4724ca"
+  },
+  "change": "Only displaced event removed from its concurrent position; all other original event bytes and hashes retained. Its payload is appended again after recovery."
+}

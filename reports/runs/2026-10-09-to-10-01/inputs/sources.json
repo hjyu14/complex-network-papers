@@ -1,0 +1,208 @@
+{
+  "version": "collection-workflow-2",
+  "status": "bibliographic_collection",
+  "window_days": 90,
+  "initial_trial": {
+    "start": "2026-10-09",
+    "end": "2026-10-10",
+    "backfill_before_start": false
+  },
+  "screening_protocol": "docs/screening-protocol.md",
+  "featured_journals": [
+    "Nature",
+    "NP",
+    "Science",
+    "NC",
+    "NMI",
+    "NCS",
+    "PRX",
+    "PRL",
+    "SA",
+    "PNAS"
+  ],
+  "journals": [
+    {
+      "name": "Nature",
+      "short": "Nature",
+      "issns": [
+        "1476-4687",
+        "0028-0836"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/nature/articles",
+        "max_pages": 48
+      }
+    },
+    {
+      "name": "Nature Physics",
+      "short": "NP",
+      "issns": [
+        "1745-2481",
+        "1745-2473"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/nphys/articles",
+        "max_pages": 24
+      }
+    },
+    {
+      "name": "Science",
+      "short": "Science",
+      "issns": [
+        "1095-9203",
+        "0036-8075"
+      ],
+      "collection": {
+        "family": "science",
+        "url": "https://www.science.org/toc/science/current",
+        "max_pages": 1
+      }
+    },
+    {
+      "name": "Nature Communications",
+      "short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/ncomms/articles",
+        "max_pages": 100
+      }
+    },
+    {
+      "name": "Nature Machine Intelligence",
+      "short": "NMI",
+      "issns": [
+        "2522-5839"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/natmachintell/articles",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Nature Computational Science",
+      "short": "NCS",
+      "issns": [
+        "2662-8457"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/natcomputsci/articles",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Physical Review X",
+      "short": "PRX",
+      "issns": [
+        "2160-3308"
+      ],
+      "collection": {
+        "family": "aps",
+        "slug": "prx",
+        "url": "https://journals.aps.org/prx/recent",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Physical Review Letters",
+      "short": "PRL",
+      "issns": [
+        "1079-7114",
+        "0031-9007"
+      ],
+      "collection": {
+        "family": "aps",
+        "slug": "prl",
+        "url": "https://journals.aps.org/prl/recent",
+        "max_pages": 40
+      }
+    },
+    {
+      "name": "Science Advances",
+      "short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "collection": {
+        "family": "science",
+        "url": "https://www.science.org/toc/sciadv/current",
+        "max_pages": 1
+      }
+    },
+    {
+      "name": "Communications Physics",
+      "short": "CP",
+      "issns": [
+        "2399-3650"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/commsphys/articles",
+        "max_pages": 12
+      }
+    },
+    {
+      "name": "Physical Review Research",
+      "short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "collection": {
+        "family": "aps",
+        "slug": "prresearch",
+        "url": "https://journals.aps.org/prresearch/recent",
+        "max_pages": 30,
+        "history_lookups": 250
+      }
+    },
+    {
+      "name": "Physical Review E",
+      "short": "PRE",
+      "issns": [
+        "2470-0053",
+        "2470-0045"
+      ],
+      "collection": {
+        "family": "aps",
+        "slug": "pre",
+        "url": "https://journals.aps.org/pre/recent",
+        "max_pages": 40,
+        "history_lookups": 350
+      }
+    },
+    {
+      "name": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "short": "Chaos",
+      "issns": [
+        "1089-7682",
+        "1054-1500"
+      ],
+      "collection": {
+        "family": "aip",
+        "url": "https://pubs.aip.org/aip/cha/issue/browse-by-year/2026",
+        "max_pages": 12,
+        "article_lookups": 120,
+        "access": "browser_directory"
+      }
+    },
+    {
+      "name": "Proceedings of the National Academy of Sciences",
+      "short": "PNAS",
+      "issns": [
+        "1091-6490",
+        "0027-8424"
+      ],
+      "collection": {
+        "family": "pnas",
+        "url": "https://www.pnas.org/toc/pnas/current",
+        "max_pages": 1
+      }
+    }
+  ]
+}
