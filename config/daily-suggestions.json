@@ -368,6 +368,84 @@
         "zh": "已读17页官方PDF，未读另附补充材料。核心理论针对静态无向SIR及确定恢复；有限团在感染率小于1时仍有初始传播失败概率，不宜将近饱和或模拟吻合等同普遍严格无损。时间比较经过对齐。AI编辑意见，未独立复现。",
         "en": "Read the 17-page publisher PDF, not separate supplements. Core theory uses static undirected SIR with deterministic recovery. Finite cliques below unit transmission retain seed-extinction risk; near-saturation or simulated agreement is not universal exactness. Timing comparisons are aligned. AI editorial guidance; no independent reproduction."
       }
+    },
+    {
+      "doi": "10.1126/sciadv.aee5886",
+      "recommended_on": "2026-10-11",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-10-09-to-10-01",
+      "publication_sha256": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+      "assessment_sha256": "be08ba0aedc27a998026f58dc535266b82dac727a3bb1c23d12c942e84a6aa4e",
+      "input_sha256": "658405a17906b1966f75faffa4047657b8583138c0665cba019c407a81234b26",
+      "evidence_sha256": "d2114ad0a7db080a4a865270b689116557aadd43b44420f05ca117eb9724b269",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-11T01:58:00.500757+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.aee5886",
+        "title": "Mesoscale structures in signed networks",
+        "sha256": "9aaea6c65af89d71d08db4111d434b25a0590b27efc6027f9484193bef37f1ae",
+        "version": "Science Advances 12, eaee5886 (2026), publisher Version of Record, published 2026-10-09",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/sciadv.aee5886?download=true",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "read_scope": "Complete 15-page publisher PDF: article pages 1–14 and final publisher information page; Introduction, Results, Discussion, Materials and Methods, equations, Figures 1–9, Table 1, captions, references and declarations. Rendered page 2 (Equations 1–2, Fig. 1) and page 9 (Fig. 9) inspected. Separate Supplementary Materials not read; no independent reproduction.",
+        "reviewed_at": "2026-10-11T01:58:00.500757+00:00"
+      },
+      "question": {
+        "zh": "发现的平衡结构，来自数据还是算法的预设？",
+        "en": "Does a balanced partition come from the data or the algorithm’s assumptions?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选它，因为它提出一个直接影响网络分析结论的问题：如果算法本来就在寻找平衡分组，找到平衡能否算作理论证据？论文用18类群组关系和24个实证网络，让常被忽略的不平衡组织显现。",
+          "值得复用的是检验顺序：先检查方法预设，再比较带符号与无符号模型，最后分别评估三角形和群组尺度。它提醒我们，漂亮的分组结果也需要对照与不确定性。"
+        ],
+        "en": [
+          "Today’s archive pick asks a consequential question: if an algorithm seeks balanced groups, does finding them support balance theory? Its 18 pairwise relationship types and 24 empirical networks expose overlooked unbalanced organization.",
+          "Borrow the sequence: inspect methodological assumptions, compare signed and unsigned models, then assess triangles and groups separately. An appealing partition still needs controls and uncertainty checks."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "检查目标函数的预设",
+            "en": "Inspect the objective’s assumptions"
+          },
+          "text": {
+            "zh": "对照平衡导向方法与度修正SBM，用已知分组的合成网络检验结果是否被目标函数牵引。",
+            "en": "Contrast balance-oriented methods with degree-corrected SBMs, using synthetic networks with known groups to test objective-driven conclusions."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检验符号的额外信息",
+            "en": "Test what signs add"
+          },
+          "text": {
+            "zh": "比较带符号模型与“无符号拓扑＋独立符号”基线的描述长度，不默认正负标签一定改善分组。",
+            "en": "Compare description lengths against an unsigned-topology plus independent-sign baseline; do not assume signs necessarily improve grouping."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分尺度报告与检验",
+            "en": "Evaluate each scale separately"
+          },
+          "text": {
+            "zh": "同时检查三角形平衡与群组挫折度；保留介观结构的零模型，再报告分组和关系类型的不确定性。",
+            "en": "Check triadic balance and group-level frustration separately, use block-preserving null models, and report partition and type uncertainty."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "有符号网络、社区发现、社会平衡及实证网络研究者。",
+        "en": "Researchers in signed networks, community detection, social balance and empirical network analysis."
+      },
+      "reading_caveat": {
+        "zh": "已读15页官方PDF，未读另附补充材料。实证比较采用最大连通分量、无向化及二值化；关系类型依赖分组和模型，部分案例存在替代分组。结构解释不等于因果或传播验证。AI编辑意见，未独立复现。",
+        "en": "Read the 15-page publisher PDF, not separate supplements. Empirical comparisons use largest connected components, symmetrization and binarization. Types depend on partitions and models; some cases admit alternatives. Structural interpretations are not causal or diffusion tests. AI editorial guidance; no independent reproduction."
+      }
     }
   ],
   "revisions": [
