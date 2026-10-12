@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-11T01:58:39.396748+00:00",
+  "generated_at": "2026-10-12T01:56:31.621905+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-11",
-  "window_days": 41,
+  "window_end": "2026-10-12",
+  "window_days": 42,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
   "reading_notes_sha256": "428ac0be2f2058ddf03fb282fd510155888bd2aafe5cc6bc189afdd68e55acb6",
-  "author_metadata_sha256": "3b0eb599c72216393823972eb2b4fa9f1c97d4d7ea404bcd5e196b7846207318",
+  "author_metadata_sha256": "c1b4617f55ad9f2750527f018e29dfe7f323af8123f437fa3359df6d58588c41",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1599,12 +1599,56 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-11-to-12-02",
+      "config_sha256": "92e77fb65fde60b8a43f5cc817f3010486dd51e36daf9c1e2c6d5c8b7b5a2fb3",
+      "window_start": "2026-10-11",
+      "window_end": "2026-10-12",
+      "rule_sha256": "fe9ced42a384b88bf060eb05e39dcd768d0f4aa243dbc31a0f303e73b800857b",
+      "screening_log_sha256": "672ff3837281a609c784e4e79f0f1a626018ac2884ed01fefe24663457a2214b",
+      "candidate_sha256": "a21c4fa643c08bce561e3138efa9b21928ee10c0a8b56da8fa8b9bd4d6065edb",
+      "author_metadata_sha256": "7093752b51b96046f7f6806998bc15bbff3dce982b105814f331a4c0b81a5dcb",
+      "run_manifest_sha256": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-11-to-12-02",
+          "files": {
+            "candidates.json": "a21c4fa643c08bce561e3138efa9b21928ee10c0a8b56da8fa8b9bd4d6065edb",
+            "coverage.json": "f65b6d42b878ed3fd312c0c4121e0b5cf91e26872f248cb10ed6a51573a1226c",
+            "collection-log.jsonl": "9555694e55c2bee4ec5c135c91398068ced2658dfa7b6261da0b2d7110b829cc",
+            "screening-log.jsonl": "46a30baa617d216999d5506d07f9f574051e9ec588f6a348bba796e876b40b6a",
+            "inputs/manifest.json": "2cf6e80599548548e8ade11ef7feafd3389a43ed12fe387e1d5aa1bad8fdb0e5",
+            "inputs/sources.json": "c8927ae7602ffbe08157a5227c3087ba5098a38a111b1f0ae31414422ce441fd",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "a21c4fa643c08bce561e3138efa9b21928ee10c0a8b56da8fa8b9bd4d6065edb",
+          "rule_sha256": "fe9ced42a384b88bf060eb05e39dcd768d0f4aa243dbc31a0f303e73b800857b",
+          "screening_log_sha256": "672ff3837281a609c784e4e79f0f1a626018ac2884ed01fefe24663457a2214b"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "7093752b51b96046f7f6806998bc15bbff3dce982b105814f331a4c0b81a5dcb",
+          "audit": {
+            "path": "reports/runs/2026-10-11-to-12-02/screening-log.jsonl",
+            "sha256": "46a30baa617d216999d5506d07f9f574051e9ec588f6a348bba796e876b40b6a"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "9a0826cc31e9ebc30d7804387cbd7128fe7898410983f13984aa412b1d12a887"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
   "author_available_count": 190,
-  "candidate_count": 4527,
+  "candidate_count": 4533,
   "screening_counts": {
-    "excluded": 4337,
+    "excluded": 4343,
     "core": 170,
     "transferable_application": 20,
     "review": 0,
@@ -1614,8 +1658,8 @@
   "published_count": 143,
   "accepted_count": 47,
   "latest_update": {
-    "run": "reports/runs/2026-10-10-to-11-01",
-    "reviewed_at": "2026-10-11T01:44:53.148874+00:00",
+    "run": "reports/runs/2026-10-11-to-12-02",
+    "reviewed_at": "2026-10-12T01:49:39.052703+00:00",
     "newly_included_count": 0,
     "newly_included_dois": [],
     "accepted_to_published_count": 0,
@@ -1793,6 +1837,36 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "94713540fe3ee7bd83e1b2283851eb02da5a8fb62876d4bcd2c57dc33a5b4e8f"
+    },
+    {
+      "current_run": "reports/runs/2026-10-11-to-12-02",
+      "candidate_sha256": "a21c4fa643c08bce561e3138efa9b21928ee10c0a8b56da8fa8b9bd4d6065edb",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189"
+      },
+      "counts": {
+        "in_window": 8,
+        "newly_reviewed": 6,
+        "historically_reviewed": 2,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 8
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "bfc0093005ec26815298214198f9f4b40cdd609075ccb7fc2579ac6a9f3b3c97"
     }
   ],
   "included_assessments": [
@@ -4457,5 +4531,5 @@
       "author_metadata_sha256": "c91705c243afb46ad8699fee9ad0a4dbb45ff276879200732a8a6435ae823232"
     }
   ],
-  "daily_suggestions_sha256": "77c89ac3a511882929c069084132942dd3cda765d199a582c1fb340a3cb8b0d9"
+  "daily_suggestions_sha256": "05fbd9e28f440787e198f3b200c1e74fdb5d6c8e653799a82e77ace21bd2e7c1"
 }

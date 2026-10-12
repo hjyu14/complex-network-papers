@@ -446,6 +446,84 @@
         "zh": "已读15页官方PDF，未读另附补充材料。实证比较采用最大连通分量、无向化及二值化；关系类型依赖分组和模型，部分案例存在替代分组。结构解释不等于因果或传播验证。AI编辑意见，未独立复现。",
         "en": "Read the 15-page publisher PDF, not separate supplements. Empirical comparisons use largest connected components, symmetrization and binarization. Types depend on partitions and models; some cases admit alternatives. Structural interpretations are not causal or diffusion tests. AI editorial guidance; no independent reproduction."
       }
+    },
+    {
+      "doi": "10.1103/hh4n-pw7w",
+      "recommended_on": "2026-10-12",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-10-09-to-10-01",
+      "publication_sha256": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+      "assessment_sha256": "585c6003c92ceaec7451ccb3ba72ae5c3c43ff812f37edb9fa4a0efe5d8cf243",
+      "input_sha256": "924c51cc1d4e5c63ea07fd4c2613fd61b8b7b94b484bf6f591db7b1d8e9e0186",
+      "evidence_sha256": "4420b2e51a60864b7966a4d89771d52c073934321e17d8b4aeb2dc92e8ddd934",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-12T01:53:19.870148+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/hh4n-pw7w",
+        "title": "Fluidic Hysterons and Memory in Flow Networks",
+        "sha256": "488c448e7ef4cbec42a513b3fa5da3039987dd39c48d4c5dd49963417a3f8306",
+        "version": "Physical Review X 16, 041011 (2026), publisher Version of Record, published 2026-10-09",
+        "source_url": "https://journals.aps.org/prx/pdf/10.1103/hh4n-pw7w",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "read_scope": "Complete 11-page publisher PDF: Introduction, sections II–VI, Methods A–F, Equations 1–2, Figures 1–5 and captions, note added, data availability and all references. Rendered page5 (Fig4, state-transition graphs) and page6 (Eq2, Fig5, collective memory) visually inspected. Separate Supplemental Material and movies not read; no independent reproduction.",
+        "reviewed_at": "2026-10-12T01:53:19.870148+00:00"
+      },
+      "question": {
+        "zh": "网络出现记忆，是单元的性质，还是耦合的结果？",
+        "en": "Does network memory come from its elements or their coupling?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选它，因为一个可调旁路就能把独立的迟滞单元变成相互作用网络，清楚展示局部形变如何经全局流量约束改变集体切换。它让“耦合从何而来”成为可以控制和检验的问题。",
+          "值得借鉴的是它的证据分层：先建立单元与无耦合基线，再比较状态切换路径和平均响应。尤其要注意，平均曲线越出原包络时，测试中的完整状态仍能恢复；不同的记忆判据不能互相替代。"
+        ],
+        "en": [
+          "Today’s archive pick uses a tunable bypass to turn independent hysterons into an interacting network. Local deformation changes collective switching through a global flow constraint, making the origin of coupling experimentally testable.",
+          "Borrow its layered checks: establish the element and uncoupled baseline, then compare state paths with average responses. Crossing the original envelope coexists with full-state recovery in tested protocols; different memory criteria are not interchangeable."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从守恒约束推导耦合",
+            "en": "Derive coupling from conservation"
+          },
+          "text": {
+            "zh": "用流量与压差平衡解释远处单元为何相互影响，不把物理距离或直接接触当作唯一连接依据。",
+            "en": "Use flow and pressure balance to explain distant interactions; physical proximity or contact need not define the effective coupling."
+          }
+        },
+        {
+          "heading": {
+            "zh": "明确驱动与对照条件",
+            "en": "Specify the drive and baseline"
+          },
+          "text": {
+            "zh": "固定总流量时，无旁路串联单元可独立；固定总压差时则未必。对照必须和驱动方式一起定义。",
+            "en": "Series elements can be independent without a bypass under fixed flow, but not necessarily under fixed pressure. Define the baseline with the drive."
+          }
+        },
+        {
+          "heading": {
+            "zh": "完整状态核验平均读数",
+            "en": "Check averages against full states"
+          },
+          "text": {
+            "zh": "结合切换图与状态向量区分反向切换、包络越界和回返点恢复，避免一条平均曲线承担多个结论。",
+            "en": "Combine transition graphs and state vectors to distinguish counterswitching, envelope crossing and return-point recovery; one average curve cannot establish all three."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络动力学、集体记忆、流动网络与软物质研究者。",
+        "en": "Researchers in network dynamics, collective memory, flow networks and soft matter."
+      },
+      "reading_caveat": {
+        "zh": "已读11页官方全文，未读独立补充材料和视频。结论基于低雷诺数、准静态流量驱动及有限阵列；复杂拓扑是后续方向。所测回返点均恢复，不能声称严格回返点记忆失效。AI编辑意见，未独立复现。",
+        "en": "Read the 11-page publisher article, not separate supplements or movies. Results concern low-Reynolds-number, quasistatic flow driving and finite arrays; complex topologies remain future work. Tested return points recover, so strict return-point memory failure is not established. AI editorial guidance; no independent reproduction."
+      }
     }
   ],
   "revisions": [
