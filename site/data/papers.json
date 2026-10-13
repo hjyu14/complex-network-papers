@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-12T01:56:31.621905+00:00",
+  "generated_at": "2026-10-13T05:10:09.239425+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-12",
-  "window_days": 42,
+  "window_end": "2026-10-13",
+  "window_days": 43,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "428ac0be2f2058ddf03fb282fd510155888bd2aafe5cc6bc189afdd68e55acb6",
-  "author_metadata_sha256": "c1b4617f55ad9f2750527f018e29dfe7f323af8123f437fa3359df6d58588c41",
+  "reading_notes_sha256": "315806519adbfb6e6754a2c30caa8e3542472304d1b6c7f30c7a9937b58e598a",
+  "author_metadata_sha256": "31a80419deaae033a632dd870b220ad7862e108eb3d90fb2b9ea02f43fde403c",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1643,9 +1643,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-10-12-to-13-03",
+      "config_sha256": "65911f0d19a19610cb9775d11e9c6ca26dce590600d2bc034a1ea4a8dce0fe5d",
+      "window_start": "2026-10-12",
+      "window_end": "2026-10-13",
+      "rule_sha256": "1d6b3359102247fdbb1b441b02c73f9c3e58ae42aecaa2c093a99e918ae18b4a",
+      "screening_log_sha256": "20c8649021797771bb7e9b9bdd6f4c842ccf4edf67a70e76a67da8c9794d7ae4",
+      "candidate_sha256": "3af53058da84d1dd9becc741bec8b707ff0e9372ac7e0a38d2388233db72bb47",
+      "author_metadata_sha256": "6446eb480ca74a1c72ed852b9d23db34a8a451dc181899ab2c593bff5388c77f",
+      "run_manifest_sha256": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-12-to-13-03",
+          "files": {
+            "candidates.json": "3af53058da84d1dd9becc741bec8b707ff0e9372ac7e0a38d2388233db72bb47",
+            "coverage.json": "688debcdcef6d96ba220178f96c04573ad8babab8e603d8c09f39fcf67d858a1",
+            "collection-log.jsonl": "bea2c47078a96ce4b6ba4a7045f970c4a3afb108d0782d6a8abb4ee4104b3ce4",
+            "screening-log.jsonl": "021c5243ecf475d68e6cdc3a60dc2a7ad1a020ff377847ba8cf73ec333f557dd",
+            "inputs/manifest.json": "5e0f4dea06c7af79de4b612b2e5548603f7b7b767b620272ea260fcf582d54c1",
+            "inputs/sources.json": "822e8a1d045b7515b3c99ca258d05f90824f45e7780cebf89c444279590b761b",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "3af53058da84d1dd9becc741bec8b707ff0e9372ac7e0a38d2388233db72bb47",
+          "rule_sha256": "1d6b3359102247fdbb1b441b02c73f9c3e58ae42aecaa2c093a99e918ae18b4a",
+          "screening_log_sha256": "20c8649021797771bb7e9b9bdd6f4c842ccf4edf67a70e76a67da8c9794d7ae4"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "6446eb480ca74a1c72ed852b9d23db34a8a451dc181899ab2c593bff5388c77f",
+          "audit": {
+            "path": "reports/runs/2026-10-12-to-13-03/screening-log.jsonl",
+            "sha256": "021c5243ecf475d68e6cdc3a60dc2a7ad1a020ff377847ba8cf73ec333f557dd"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "7689a08d66cc8dd3e13d4f86f3ceb2870f6d8b6b4761f6405023dc27c82f551e"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 190,
+  "author_available_count": 194,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -1795,8 +1839,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 514,
-      "publisher_verified_inventory_count": 514,
+      "candidate_count": 525,
+      "publisher_verified_inventory_count": 525,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1889,6 +1933,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "Nature",
+          "candidate_count": 11,
+          "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
@@ -1988,13 +2041,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1172,
-      "publisher_verified_inventory_count": 1170,
+      "candidate_count": 1210,
+      "publisher_verified_inventory_count": 1208,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2087,6 +2149,15 @@
           "publisher_verified_inventory_count": 8,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "NC",
+          "candidate_count": 38,
+          "publisher_verified_inventory_count": 38,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
@@ -2186,13 +2257,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 20,
-      "publisher_verified_inventory_count": 20,
+      "candidate_count": 21,
+      "publisher_verified_inventory_count": 21,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2283,6 +2363,15 @@
           "journal": "NCS",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "NCS",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -2379,6 +2468,15 @@
         {
           "window_start": "2026-10-11",
           "window_end": "2026-10-12",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
           "journal": "PRX",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -2483,6 +2581,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -2582,13 +2689,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 532,
-      "publisher_verified_inventory_count": 532,
+      "candidate_count": 574,
+      "publisher_verified_inventory_count": 574,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2681,13 +2797,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "PNAS",
+          "candidate_count": 42,
+          "publisher_verified_inventory_count": 42,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 76,
-      "publisher_verified_inventory_count": 76,
+      "candidate_count": 78,
+      "publisher_verified_inventory_count": 78,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2778,6 +2903,15 @@
           "journal": "CP",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "CP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -2874,6 +3008,15 @@
         {
           "window_start": "2026-10-11",
           "window_end": "2026-10-12",
+          "journal": "PRResearch",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
           "journal": "PRResearch",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -2978,13 +3121,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 78,
-      "publisher_verified_inventory_count": 78,
+      "candidate_count": 80,
+      "publisher_verified_inventory_count": 80,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3077,13 +3229,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "Chaos",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 54,
-      "publisher_verified_inventory_count": 54,
+      "candidate_count": 56,
+      "publisher_verified_inventory_count": 56,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3131,26 +3292,40 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-12",
+          "window_end": "2026-10-13",
+          "journal": "NP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 4533,
+  "candidate_count": 4631,
   "screening_counts": {
-    "excluded": 4343,
-    "core": 170,
-    "transferable_application": 20,
+    "excluded": 4437,
+    "core": 173,
+    "transferable_application": 21,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 190
+    "included": 194
   },
-  "published_count": 143,
+  "published_count": 147,
   "accepted_count": 47,
   "latest_update": {
-    "run": "reports/runs/2026-10-11-to-12-02",
-    "reviewed_at": "2026-10-12T01:49:39.052703+00:00",
-    "newly_included_count": 0,
-    "newly_included_dois": [],
+    "run": "reports/runs/2026-10-12-to-13-03",
+    "reviewed_at": "2026-10-13T05:05:49.063620+00:00",
+    "newly_included_count": 4,
+    "newly_included_dois": [
+      "10.1038/s41467-026-78115-6",
+      "10.1038/s42005-026-02914-y",
+      "10.1073/pnas.2532121123",
+      "10.1073/pnas.2610400123"
+    ],
     "accepted_to_published_count": 0,
     "accepted_to_published_dois": []
   },
@@ -3162,6 +3337,288 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1038/s42005-026-02914-y",
+      "url": "https://doi.org/10.1038/s42005-026-02914-y",
+      "title": "Cycle holonomy captures higher-order compatibility constraints in remote synchronization",
+      "authors": [
+        "Lluís Torres-Hugas",
+        "Jordi Duch",
+        "Sergio Gómez",
+        "Alex Arenas"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0b483ab66af1d3f7a2e83f8289481bf2ded29b2d7b3c80418821202ee193d0c4",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02914-y",
+      "author_retrieved_at": "2026-10-13T05:05:43.780474+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Communications Physics",
+      "journal_short": "CP",
+      "issns": [
+        "2399-3650"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-13",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Identity-bound official full-type directory",
+        "sources": [
+          "https://www.nature.com/commsphys/articles?year=2026&page=1&sort=PubDate&searchType=journalSearch"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Cycle holonomy connects local phase mismatch, Laplacian zero modes and global synchronization compatibility.",
+      "note_zh": "从图上循环holonomy连接局部相位失配、拉普拉斯零模与同步兼容性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "5bd15247eb2f3042ec5153a13ccba4b916f77ddef1159a115f9ee32e41f5110f",
+      "input_sha256": "b7f55bd0f54052b07b8b231ed29bc74d6cd10aae13eb5b6ee6534f77b58f60e4",
+      "material_sha256": "dde69f3d5cb09737637317bc79cba69a3ed1910ce8cbdcd65b1ac4e100cf59f8",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "dde69f3d5cb09737637317bc79cba69a3ed1910ce8cbdcd65b1ac4e100cf59f8",
+      "rule_sha256": "1d6b3359102247fdbb1b441b02c73f9c3e58ae42aecaa2c093a99e918ae18b4a",
+      "featured": null,
+      "evidence": [
+        "Gauge phase lags accumulated around graph cycles determine global compatibility and twisted-Laplacian zero modes, with conditions for synchronization path mismatches."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02914-y",
+      "evidence_url": "https://www.nature.com/articles/s42005-026-02914-y",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2610400123",
+      "url": "https://doi.org/10.1073/pnas.2610400123",
+      "title": "Heterochronicity shapes brain network formation",
+      "authors": [
+        "Francesco Poli",
+        "Stuart Oldham",
+        "Alexa Mousley",
+        "Edward T. Bullmore",
+        "Petra E. Vértes",
+        "Duncan E. Astle"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c9fc96192fe17a54a1db5c574d748c7c2b7f1d73ad551043d55e6cb6b4cc6c9a",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2610400123",
+      "author_retrieved_at": "2026-10-13T05:05:48.811029+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-12",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-12",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-12",
+      "article_type": "Research Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Research Article",
+        "basis": "Identity-bound official full-type directory",
+        "sources": [
+          "https://www.pnas.org/toc/pnas/123/42",
+          "https://www.pnas.org/action/doSearch?field1=AllField&text1=&publication%5B%5D=pnas&publication=&Ppub=&access=on&startPage=0&sortBy=Earliest"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Heterochronous connection growth improves generative connectome models by jointly fitting topology and spatial layout.",
+      "note_zh": "在生成模型中加入不同脑区的连接形成时序，同时改进拓扑与空间布局拟合。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "e066a94da4862d0ec9b9ffa6cfe87f2f0f2823009b814823cb38bbdaddb44c3b",
+      "input_sha256": "ed398e8068adb0b9d770c3f29387b25e3827ae5bf7ce713fb2e49405ce99b745",
+      "material_sha256": "67d47c0b17636f398557b7ea07bb7220f28bbbfda43616a4231aedd13d294969",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "67d47c0b17636f398557b7ea07bb7220f28bbbfda43616a4231aedd13d294969",
+      "rule_sha256": "1d6b3359102247fdbb1b441b02c73f9c3e58ae42aecaa2c093a99e918ae18b4a",
+      "featured": "PNAS",
+      "evidence": [
+        "Adding heterogeneous developmental timing to generative connectome models improves topology/topography fit and spatial placement of hubs and modules."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2610400123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2610400123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2532121123",
+      "url": "https://doi.org/10.1073/pnas.2532121123",
+      "title": "Laundering and evasion in response to antislavery policies in Brazil’s cattle sector",
+      "authors": [
+        "Tara Mittelberg",
+        "Marin E. Skidmore",
+        "Juliana L. S. C. Brandão",
+        "Lisa L. Rausch",
+        "Holly K. Gibbs"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "f0825f39418dc4e10b2f86861e36f624b7afed748e3c525d71310c2eaff23cf6",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2532121123",
+      "author_retrieved_at": "2026-10-13T05:05:45.415450+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-12",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-12",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-12",
+      "article_type": "Research Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Research Article",
+        "basis": "Identity-bound official full-type directory",
+        "sources": [
+          "https://www.pnas.org/toc/pnas/123/42",
+          "https://www.pnas.org/latest",
+          "https://www.pnas.org/action/doSearch?field1=AllField&text1=&publication%5B%5D=pnas&publication=&Ppub=&access=on&startPage=0&sortBy=Earliest"
+        ]
+      },
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Cattle transactions reveal indirect-path evasion after sanctions and vulnerabilities of downstream-only supply-chain enforcement.",
+      "note_zh": "从牛交易记录识别制裁后的间接路径绕行，揭示仅监管下游的供应链漏洞。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b883ee5a8bf894b155421066911c93b401aece21059f1f5b6d5860e92dcad8df",
+      "input_sha256": "a895217d234eed55f12f0c1c56204dfcf182879dd6805887756259e7fa1cc426",
+      "material_sha256": "37846c025cfdd3817e5d0c7559e3784ab2b9587160852f1d549c46ff5aa22a48",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "37846c025cfdd3817e5d0c7559e3784ab2b9587160852f1d549c46ff5aa22a48",
+      "rule_sha256": "1d6b3359102247fdbb1b441b02c73f9c3e58ae42aecaa2c093a99e918ae18b4a",
+      "featured": "PNAS",
+      "evidence": [
+        "Transaction data reveal that sanctioned suppliers bypass downstream commitments through intermediaries and alternative outlets, exposing indirect-path vulnerabilities in supply-chain enforcement."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2532121123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2532121123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-78115-6",
+      "url": "https://doi.org/10.1038/s41467-026-78115-6",
+      "title": "Block-fitness modeling of the global air mobility network",
+      "authors": [
+        "Giulia Fischetti",
+        "Anna Mancini",
+        "Giulio Cimini",
+        "Jessica T. Davis",
+        "Abby O. K. Leung",
+        "Alessandro Vespignani",
+        "Guido Caldarelli"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "9c23923238bee25efc5a8a8b835225667786d06a2f8744aaa7b236dd3a2f4cbd",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78115-6",
+      "author_retrieved_at": "2026-10-13T05:05:47.112886+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-10-12",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-12",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-12",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Identity-bound official full-type directory",
+        "sources": [
+          "https://www.nature.com/ncomms/articles?year=2026&page=1&sort=PubDate&searchType=journalSearch"
+        ]
+      },
+      "categories": [
+        "network_inference",
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Aggregate location and regional flows inform sparse air-mobility reconstruction, evaluated through topology and epidemic dynamics.",
+      "note_zh": "用节点与区域汇总流量构造稀疏航空网络，并以传播动力学检验重建质量。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "5dc821300b87c632d56ba230c2fedd4e85e7dadbdee24db07f5366e888da64d3",
+      "input_sha256": "cd5be784d5ce01cbda11a51126d5c2a75487f2a2401f71ce1d14487b38e297e5",
+      "material_sha256": "f2af7abf0e181ddf7e688c1895dd3d4bbfeeca51edf3312e6aea85ab869c37b5",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "f2af7abf0e181ddf7e688c1895dd3d4bbfeeca51edf3312e6aea85ab869c37b5",
+      "rule_sha256": "1d6b3359102247fdbb1b441b02c73f9c3e58ae42aecaa2c093a99e918ae18b4a",
+      "featured": "NC",
+      "evidence": [
+        "A sparse maximum-entropy model reconstructs air-transport topology and passenger flows from aggregate traffic and reproduces mobility-driven epidemic trajectories."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78115-6",
+      "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78115-6",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1126/sciadv.aee5886",
       "url": "https://doi.org/10.1126/sciadv.aee5886",
@@ -18579,9 +19036,120 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "bfc0093005ec26815298214198f9f4b40cdd609075ccb7fc2579ac6a9f3b3c97"
+    },
+    {
+      "current_run": "reports/runs/2026-10-12-to-13-03",
+      "candidate_sha256": "3af53058da84d1dd9becc741bec8b707ff0e9372ac7e0a38d2388233db72bb47",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39"
+      },
+      "counts": {
+        "in_window": 98,
+        "newly_reviewed": 98,
+        "historically_reviewed": 96,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 94,
+          "core": 3,
+          "transferable_application": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "6564428500496f4b62b45cd22846babf8fcec14ae9e7a6cac39d6401e0191714"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41467-026-78115-6",
+      "recommended_on": "2026-10-13",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-12-to-13-03",
+      "publication_sha256": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+      "assessment_sha256": "5dc821300b87c632d56ba230c2fedd4e85e7dadbdee24db07f5366e888da64d3",
+      "input_sha256": "cd5be784d5ce01cbda11a51126d5c2a75487f2a2401f71ce1d14487b38e297e5",
+      "evidence_sha256": "f2af7abf0e181ddf7e688c1895dd3d4bbfeeca51edf3312e6aea85ab869c37b5",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-13T05:06:47.804613+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78115-6",
+        "title": "Block-fitness modeling of the global air mobility network",
+        "sha256": "d6502864b87d0e1eeaab046bbd80e7f4d1ba685cc5ccffec21e07f558353052a",
+        "version": "Nature Communications Article in Press; early published version, 2026-10-12; final edited version not yet issued",
+        "source_url": "https://www.nature.com/articles/s41467-026-78115-6_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 9,
+        "read_scope": "Complete 9-page publisher Article in Press: introduction, Results, Discussion, all Methods, Equations1–3, Figures1–3 and captions, Tables1–2, data/code availability, references and end matter. Rendered pages3–6 visually inspected for plots, formulas and tables. Separate Supplementary Information and peer-review file not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-13T05:06:47.804613+00:00"
+      },
+      "question": {
+        "zh": "拿不到完整流量，怎样重建一张可用的网络？",
+        "en": "How can aggregate flows reconstruct a useful network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它直面网络研究常见的资料瓶颈：只有节点总量和区域信息，怎样生成可用于传播分析的稀疏加权网络？航空案例把约束选择、模型构造和任务检验连成一条清晰路径。",
+          "最值得复用的是分层验证：匹配已有约束之后，还要检查连接、空间模式和传播曲线。开放数据实验也提醒我们，先交代校准信息，再讨论重建效果。"
+        ],
+        "en": [
+          "Today’s pick addresses a recurring bottleneck: reconstructing a sparse weighted network from aggregate location and regional flows. Its aviation case connects constraint selection, model construction and epidemic-task validation.",
+          "Borrow the layered checks: after matching imposed constraints, test links, spatial patterns and spreading curves. The open-data experiment also makes it essential to state which calibration information remains available."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先定义流量的含义",
+            "en": "Define what the flow represents"
+          },
+          "text": {
+            "zh": "区分直接航班与实际起终点出行，避免把中转枢纽的流量当作最终人口混合。",
+            "en": "Distinguish flight legs from origin-to-final-destination trips; transit-hub traffic need not represent population mixing."
+          }
+        },
+        {
+          "heading": {
+            "zh": "连接与权重分别约束",
+            "en": "Constrain topology and weights"
+          },
+          "text": {
+            "zh": "先生成稀疏连接，再分配流量；节点强度与区域约束各自承担明确的模型角色。",
+            "en": "Sample sparse links before assigning flows, giving location strengths and regional constraints explicit modeling roles."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用目标任务检验重建",
+            "en": "Validate the downstream task"
+          },
+          "text": {
+            "zh": "对照真实网络上的传播峰值与空间分布，并将误差和随机模拟的自身波动比较。",
+            "en": "Compare epidemic peaks and spatial patterns against the empirical network, using intrinsic simulation variability as a baseline."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络重构、加权网络、人口流动与传播动力学研究者。",
+        "en": "Researchers in network reconstruction, weighted networks, mobility and spreading dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读9页官方早期在线全文，未读独立补充材料，未复现。网络基于2019年数据；开放数据测试仅覆盖739个区域，且连接密度仍按OAG校准，不能视为完全独立的开放数据重建。AI编辑荐读。",
+        "en": "Read the 9-page publisher Article in Press, not separate supplements; no reproduction. Networks use 2019 data. The open-data test covers 739 basins and still calibrates connectivity density against OAG; it is not a fully independent open-data reconstruction. AI editorial guidance."
+      }
+    },
     {
       "doi": "10.1103/hh4n-pw7w",
       "recommended_on": "2026-10-12",
@@ -19656,6 +20224,84 @@
       }
     },
     {
+      "doi": "10.1038/s41467-026-78115-6",
+      "recommended_on": "2026-10-13",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-12-to-13-03",
+      "publication_sha256": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+      "assessment_sha256": "5dc821300b87c632d56ba230c2fedd4e85e7dadbdee24db07f5366e888da64d3",
+      "input_sha256": "cd5be784d5ce01cbda11a51126d5c2a75487f2a2401f71ce1d14487b38e297e5",
+      "evidence_sha256": "f2af7abf0e181ddf7e688c1895dd3d4bbfeeca51edf3312e6aea85ab869c37b5",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-13T05:06:47.804613+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78115-6",
+        "title": "Block-fitness modeling of the global air mobility network",
+        "sha256": "d6502864b87d0e1eeaab046bbd80e7f4d1ba685cc5ccffec21e07f558353052a",
+        "version": "Nature Communications Article in Press; early published version, 2026-10-12; final edited version not yet issued",
+        "source_url": "https://www.nature.com/articles/s41467-026-78115-6_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 9,
+        "read_scope": "Complete 9-page publisher Article in Press: introduction, Results, Discussion, all Methods, Equations1–3, Figures1–3 and captions, Tables1–2, data/code availability, references and end matter. Rendered pages3–6 visually inspected for plots, formulas and tables. Separate Supplementary Information and peer-review file not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-13T05:06:47.804613+00:00"
+      },
+      "question": {
+        "zh": "拿不到完整流量，怎样重建一张可用的网络？",
+        "en": "How can aggregate flows reconstruct a useful network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它直面网络研究常见的资料瓶颈：只有节点总量和区域信息，怎样生成可用于传播分析的稀疏加权网络？航空案例把约束选择、模型构造和任务检验连成一条清晰路径。",
+          "最值得复用的是分层验证：匹配已有约束之后，还要检查连接、空间模式和传播曲线。开放数据实验也提醒我们，先交代校准信息，再讨论重建效果。"
+        ],
+        "en": [
+          "Today’s pick addresses a recurring bottleneck: reconstructing a sparse weighted network from aggregate location and regional flows. Its aviation case connects constraint selection, model construction and epidemic-task validation.",
+          "Borrow the layered checks: after matching imposed constraints, test links, spatial patterns and spreading curves. The open-data experiment also makes it essential to state which calibration information remains available."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先定义流量的含义",
+            "en": "Define what the flow represents"
+          },
+          "text": {
+            "zh": "区分直接航班与实际起终点出行，避免把中转枢纽的流量当作最终人口混合。",
+            "en": "Distinguish flight legs from origin-to-final-destination trips; transit-hub traffic need not represent population mixing."
+          }
+        },
+        {
+          "heading": {
+            "zh": "连接与权重分别约束",
+            "en": "Constrain topology and weights"
+          },
+          "text": {
+            "zh": "先生成稀疏连接，再分配流量；节点强度与区域约束各自承担明确的模型角色。",
+            "en": "Sample sparse links before assigning flows, giving location strengths and regional constraints explicit modeling roles."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用目标任务检验重建",
+            "en": "Validate the downstream task"
+          },
+          "text": {
+            "zh": "对照真实网络上的传播峰值与空间分布，并将误差和随机模拟的自身波动比较。",
+            "en": "Compare epidemic peaks and spatial patterns against the empirical network, using intrinsic simulation variability as a baseline."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络重构、加权网络、人口流动与传播动力学研究者。",
+        "en": "Researchers in network reconstruction, weighted networks, mobility and spreading dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读9页官方早期在线全文，未读独立补充材料，未复现。网络基于2019年数据；开放数据测试仅覆盖739个区域，且连接密度仍按OAG校准，不能视为完全独立的开放数据重建。AI编辑荐读。",
+        "en": "Read the 9-page publisher Article in Press, not separate supplements; no reproduction. Networks use 2019 data. The open-data test covers 739 basins and still calibrates connectivity density against OAG; it is not a fully independent open-data reconstruction. AI editorial guidance."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -19735,5 +20381,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "05fbd9e28f440787e198f3b200c1e74fdb5d6c8e653799a82e77ace21bd2e7c1"
+  "daily_suggestions_sha256": "3c5e2981ee860ab5cd019a68a4764914081f50aeb18b661abfaff7bc0daa7ae0"
 }

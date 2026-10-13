@@ -524,6 +524,84 @@
         "zh": "已读11页官方全文，未读独立补充材料和视频。结论基于低雷诺数、准静态流量驱动及有限阵列；复杂拓扑是后续方向。所测回返点均恢复，不能声称严格回返点记忆失效。AI编辑意见，未独立复现。",
         "en": "Read the 11-page publisher article, not separate supplements or movies. Results concern low-Reynolds-number, quasistatic flow driving and finite arrays; complex topologies remain future work. Tested return points recover, so strict return-point memory failure is not established. AI editorial guidance; no independent reproduction."
       }
+    },
+    {
+      "doi": "10.1038/s41467-026-78115-6",
+      "recommended_on": "2026-10-13",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-12-to-13-03",
+      "publication_sha256": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+      "assessment_sha256": "5dc821300b87c632d56ba230c2fedd4e85e7dadbdee24db07f5366e888da64d3",
+      "input_sha256": "cd5be784d5ce01cbda11a51126d5c2a75487f2a2401f71ce1d14487b38e297e5",
+      "evidence_sha256": "f2af7abf0e181ddf7e688c1895dd3d4bbfeeca51edf3312e6aea85ab869c37b5",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-13T05:06:47.804613+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78115-6",
+        "title": "Block-fitness modeling of the global air mobility network",
+        "sha256": "d6502864b87d0e1eeaab046bbd80e7f4d1ba685cc5ccffec21e07f558353052a",
+        "version": "Nature Communications Article in Press; early published version, 2026-10-12; final edited version not yet issued",
+        "source_url": "https://www.nature.com/articles/s41467-026-78115-6_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 9,
+        "read_scope": "Complete 9-page publisher Article in Press: introduction, Results, Discussion, all Methods, Equations1–3, Figures1–3 and captions, Tables1–2, data/code availability, references and end matter. Rendered pages3–6 visually inspected for plots, formulas and tables. Separate Supplementary Information and peer-review file not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-13T05:06:47.804613+00:00"
+      },
+      "question": {
+        "zh": "拿不到完整流量，怎样重建一张可用的网络？",
+        "en": "How can aggregate flows reconstruct a useful network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它直面网络研究常见的资料瓶颈：只有节点总量和区域信息，怎样生成可用于传播分析的稀疏加权网络？航空案例把约束选择、模型构造和任务检验连成一条清晰路径。",
+          "最值得复用的是分层验证：匹配已有约束之后，还要检查连接、空间模式和传播曲线。开放数据实验也提醒我们，先交代校准信息，再讨论重建效果。"
+        ],
+        "en": [
+          "Today’s pick addresses a recurring bottleneck: reconstructing a sparse weighted network from aggregate location and regional flows. Its aviation case connects constraint selection, model construction and epidemic-task validation.",
+          "Borrow the layered checks: after matching imposed constraints, test links, spatial patterns and spreading curves. The open-data experiment also makes it essential to state which calibration information remains available."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先定义流量的含义",
+            "en": "Define what the flow represents"
+          },
+          "text": {
+            "zh": "区分直接航班与实际起终点出行，避免把中转枢纽的流量当作最终人口混合。",
+            "en": "Distinguish flight legs from origin-to-final-destination trips; transit-hub traffic need not represent population mixing."
+          }
+        },
+        {
+          "heading": {
+            "zh": "连接与权重分别约束",
+            "en": "Constrain topology and weights"
+          },
+          "text": {
+            "zh": "先生成稀疏连接，再分配流量；节点强度与区域约束各自承担明确的模型角色。",
+            "en": "Sample sparse links before assigning flows, giving location strengths and regional constraints explicit modeling roles."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用目标任务检验重建",
+            "en": "Validate the downstream task"
+          },
+          "text": {
+            "zh": "对照真实网络上的传播峰值与空间分布，并将误差和随机模拟的自身波动比较。",
+            "en": "Compare epidemic peaks and spatial patterns against the empirical network, using intrinsic simulation variability as a baseline."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络重构、加权网络、人口流动与传播动力学研究者。",
+        "en": "Researchers in network reconstruction, weighted networks, mobility and spreading dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读9页官方早期在线全文，未读独立补充材料，未复现。网络基于2019年数据；开放数据测试仅覆盖739个区域，且连接密度仍按OAG校准，不能视为完全独立的开放数据重建。AI编辑荐读。",
+        "en": "Read the 9-page publisher Article in Press, not separate supplements; no reproduction. Networks use 2019 data. The open-data test covers 739 basins and still calibrates connectivity density against OAG; it is not a fully independent open-data reconstruction. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
