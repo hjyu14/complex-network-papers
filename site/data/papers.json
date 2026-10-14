@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-13T05:10:09.239425+00:00",
+  "generated_at": "2026-10-14T02:16:42.192222+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-13",
-  "window_days": 43,
+  "window_end": "2026-10-14",
+  "window_days": 44,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "315806519adbfb6e6754a2c30caa8e3542472304d1b6c7f30c7a9937b58e598a",
-  "author_metadata_sha256": "31a80419deaae033a632dd870b220ad7862e108eb3d90fb2b9ea02f43fde403c",
+  "reading_notes_sha256": "2b7a74eabdcd1b8848a26e29eb53f46bb540ebc74eebae3995689d8cb2688bb4",
+  "author_metadata_sha256": "c6f9a685a73ea04ebbbb728503f9d5a45e83389d79d690d4641c662816571e4c",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1687,9 +1687,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-13-to-14-01",
+      "config_sha256": "0d9238a17df3306180a88c53d76b079f5fa7faaa5e1262af46bc42f9f242069f",
+      "window_start": "2026-10-13",
+      "window_end": "2026-10-14",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "screening_log_sha256": "05b1906b81105f5defd905c806aa34d6217ef9607d4ede49da6bba711157d967",
+      "candidate_sha256": "0146fa1f04383724cbd15584127eff7d70153545d168130c922f76905a018cc5",
+      "author_metadata_sha256": "e8c85a496f80a7128cbda95805d03409fe00d2f458b20c54700992e098dc1c20",
+      "run_manifest_sha256": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-13-to-14-01",
+          "files": {
+            "candidates.json": "0146fa1f04383724cbd15584127eff7d70153545d168130c922f76905a018cc5",
+            "coverage.json": "9bdb2a1f11f26784973631b5f69a6b22f1c1c5278ccb4f5528eb4f1e8d35c91b",
+            "collection-log.jsonl": "f5483cc772c67232e4a3e0b2911e631bf544f8a7044c5f330a309ea2ced27e4e",
+            "screening-log.jsonl": "bd7b4979ee5b7c33c1f411bb8d936614e23b0e38487224c45929c773107ea4ba",
+            "inputs/manifest.json": "29671296baec0400cc1f17a2baa424375e10ffd85c05e56ad4b29abb0dbfef0c",
+            "inputs/sources.json": "0f2aa4df886963364fafc8c3ba0871ceea723016a38556e637cd10e64a5c0f99",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "0146fa1f04383724cbd15584127eff7d70153545d168130c922f76905a018cc5",
+          "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+          "screening_log_sha256": "05b1906b81105f5defd905c806aa34d6217ef9607d4ede49da6bba711157d967"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "e8c85a496f80a7128cbda95805d03409fe00d2f458b20c54700992e098dc1c20",
+          "audit": {
+            "path": "reports/runs/2026-10-13-to-14-01/screening-log.jsonl",
+            "sha256": "bd7b4979ee5b7c33c1f411bb8d936614e23b0e38487224c45929c773107ea4ba"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "cc6f7811179d88ca50bf64499ca210bb44e4244def8c6e3c374a52d178d28821"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 194,
+  "author_available_count": 197,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -1839,8 +1883,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 525,
-      "publisher_verified_inventory_count": 525,
+      "candidate_count": 542,
+      "publisher_verified_inventory_count": 542,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1940,6 +1984,15 @@
           "journal": "Nature",
           "candidate_count": 11,
           "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "Nature",
+          "candidate_count": 17,
+          "publisher_verified_inventory_count": 17,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
         }
@@ -2050,13 +2103,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1210,
-      "publisher_verified_inventory_count": 1208,
+      "candidate_count": 1234,
+      "publisher_verified_inventory_count": 1232,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2158,13 +2220,22 @@
           "publisher_verified_inventory_count": 38,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "NC",
+          "candidate_count": 24,
+          "publisher_verified_inventory_count": 24,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 17,
-      "publisher_verified_inventory_count": 17,
+      "candidate_count": 18,
+      "publisher_verified_inventory_count": 18,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2266,13 +2337,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "NMI",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 21,
-      "publisher_verified_inventory_count": 21,
+      "candidate_count": 23,
+      "publisher_verified_inventory_count": 23,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2374,13 +2454,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "NCS",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 64,
-      "publisher_verified_inventory_count": 64,
+      "candidate_count": 67,
+      "publisher_verified_inventory_count": 67,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2482,13 +2571,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "PRX",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 547,
-      "publisher_verified_inventory_count": 547,
+      "candidate_count": 565,
+      "publisher_verified_inventory_count": 565,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2590,6 +2688,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "PRL",
+          "candidate_count": 20,
+          "publisher_verified_inventory_count": 20,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
@@ -2693,6 +2800,15 @@
         {
           "window_start": "2026-10-12",
           "window_end": "2026-10-13",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
           "journal": "SA",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -2806,13 +2922,22 @@
           "publisher_verified_inventory_count": 42,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 78,
-      "publisher_verified_inventory_count": 78,
+      "candidate_count": 80,
+      "publisher_verified_inventory_count": 80,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2914,13 +3039,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "CP",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 298,
-      "publisher_verified_inventory_count": 298,
+      "candidate_count": 301,
+      "publisher_verified_inventory_count": 301,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3022,13 +3156,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "PRResearch",
+          "candidate_count": 9,
+          "publisher_verified_inventory_count": 9,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 386,
-      "publisher_verified_inventory_count": 386,
+      "candidate_count": 392,
+      "publisher_verified_inventory_count": 392,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3130,13 +3273,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "PRE",
+          "candidate_count": 23,
+          "publisher_verified_inventory_count": 23,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 80,
-      "publisher_verified_inventory_count": 80,
+      "candidate_count": 83,
+      "publisher_verified_inventory_count": 83,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3238,13 +3390,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "Chaos",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 56,
-      "publisher_verified_inventory_count": 56,
+      "candidate_count": 57,
+      "publisher_verified_inventory_count": 57,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3301,33 +3462,50 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-13",
+          "window_end": "2026-10-14",
+          "journal": "NP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 4631,
+  "candidate_count": 4711,
   "screening_counts": {
-    "excluded": 4437,
-    "core": 173,
+    "excluded": 4514,
+    "core": 176,
     "transferable_application": 21,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 194
+    "included": 197
   },
-  "published_count": 147,
-  "accepted_count": 47,
+  "published_count": 157,
+  "accepted_count": 40,
   "latest_update": {
-    "run": "reports/runs/2026-10-12-to-13-03",
-    "reviewed_at": "2026-10-13T05:05:49.063620+00:00",
-    "newly_included_count": 4,
+    "run": "reports/runs/2026-10-13-to-14-01",
+    "reviewed_at": "2026-10-14T02:08:15.584976+00:00",
+    "newly_included_count": 3,
     "newly_included_dois": [
-      "10.1038/s41467-026-78115-6",
-      "10.1038/s42005-026-02914-y",
-      "10.1073/pnas.2532121123",
-      "10.1073/pnas.2610400123"
+      "10.1063/5.0347841",
+      "10.1103/g7f3-85bn",
+      "10.1103/g8rc-615y"
     ],
-    "accepted_to_published_count": 0,
-    "accepted_to_published_dois": []
+    "accepted_to_published_count": 8,
+    "accepted_to_published_dois": [
+      "10.1103/33lg-7kmc",
+      "10.1103/3v5l-pgzz",
+      "10.1103/br97-fw3p",
+      "10.1103/t1sg-qhhf",
+      "10.1103/v1vq-skr1",
+      "10.1103/v5cl-krph",
+      "10.1103/y6ss-j5qv",
+      "10.1103/ys6r-4mbf"
+    ]
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -3337,6 +3515,884 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/ys6r-4mbf",
+      "url": "https://doi.org/10.1103/ys6r-4mbf",
+      "title": "Localization of active particles on random arrays of parallel filaments",
+      "authors": [
+        "Owen Santoso",
+        "Elena F. Koslover"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "89526e02b97620d2cf68669e5351613275e6f97893d3326481708dc1ff62ce36",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fys6r-4mbf",
+      "author_retrieved_at": "2026-10-14T02:05:24.513922+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-18",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "90fdce31b68b554b31454ed711891b4fdb6ad942a6891a78dba2233e13995dc7",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Disordered filament polarity and switching transport kinetics create particle localization, strongest at intermediate run lengths in the studied model.",
+      "note_zh": "无序丝状结构极性与切换传播动力学产生粒子局域化，在所研究模型中以中等行程长度最强。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "c7cf1d4fe18a90eef8f539473aaec4ee30309d20b7182b103696e5fc0d339e65",
+      "input_sha256": "9247218693dca5c8acb2fbd61e2f924c8b04d22a46573890b695201e2f6685bb",
+      "material_sha256": "90fdce31b68b554b31454ed711891b4fdb6ad942a6891a78dba2233e13995dc7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "90fdce31b68b554b31454ed711891b4fdb6ad942a6891a78dba2233e13995dc7",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Filament polarity disorder and transport kinetics produce localization at convergent orientations."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fys6r-4mbf",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-18",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "003484a196e653f9ca17f62a72a58da8869eb57749df4139f856adf57416c11e",
+        "assessment_sha256": "c7cf1d4fe18a90eef8f539473aaec4ee30309d20b7182b103696e5fc0d339e65"
+      }
+    },
+    {
+      "doi": "10.1103/y6ss-j5qv",
+      "url": "https://doi.org/10.1103/y6ss-j5qv",
+      "title": "Heuristic and exact modularity optimization with size-constrained communities",
+      "authors": [
+        "Filipi N. Silva",
+        "Samin Aref",
+        "Vincent Traag",
+        "Santo Fortunato"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "2d35e46f5dbb93848d370eaf792db62b752c861f89e22a4ab2c9f7788aa53235",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fy6ss-j5qv",
+      "author_retrieved_at": "2026-10-14T02:05:22.730473+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-11",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "6f641acb20cd7309a03a02e9ac287f105fe9bb1044c1376f408501dd8a624c68",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "Heuristic and exact modularity optimization enforce individual community-size bounds, avoiding indirect size control through a resolution parameter alone.",
+      "note_zh": "启发式及精确模块度优化直接约束各社区规模，避免仅通过分辨率参数间接控制。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "1f0748193a90b5a6f34232a7de8a7b896aa98b52287be36686d280d0aace47ae",
+      "input_sha256": "8e64a3414278af69b7c423697c589e6cdd9849e96d6d0cd22994848906ec198c",
+      "material_sha256": "6f641acb20cd7309a03a02e9ac287f105fe9bb1044c1376f408501dd8a624c68",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "6f641acb20cd7309a03a02e9ac287f105fe9bb1044c1376f408501dd8a624c68",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Heuristic and exact modularity optimization enforce individual community-size bounds."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fy6ss-j5qv",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-11",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "e96cee649db13265ee9604e9d6a1518c98c251c802e1d2d459642c25614586cf",
+        "assessment_sha256": "1f0748193a90b5a6f34232a7de8a7b896aa98b52287be36686d280d0aace47ae"
+      }
+    },
+    {
+      "doi": "10.1103/v5cl-krph",
+      "url": "https://doi.org/10.1103/v5cl-krph",
+      "title": "Combined framework for synchronization with distributed delays and noise in Kuramoto-Daido oscillators",
+      "authors": [
+        "Samir Sahoo",
+        "Antonio Palacios"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "bc440d3111851ae750e3d37eca22c9a8977a8c3f89e00643614b5cbb898a1f7a",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fv5cl-krph",
+      "author_retrieved_at": "2026-10-14T02:05:11.749682+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-18",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "c148b5dfd4453136be903124ec62a077f2b52389fa8ea0b310ca67c8045da126",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A unified characteristic equation combines distributed delays, noise and periodic coupling to determine oscillator-ensemble incoherence stability.",
+      "note_zh": "统一特征方程结合分布时延、噪声与周期耦合，确定振子群非相干态稳定性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "cdef54d9c91bc57eef8143eebf94a44b84d8f977431c24639dff463b4162357c",
+      "input_sha256": "396f48cc0cc85c906073f9452845cae8e9461b5b32f8dc6f7b16831d32e23370",
+      "material_sha256": "c148b5dfd4453136be903124ec62a077f2b52389fa8ea0b310ca67c8045da126",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c148b5dfd4453136be903124ec62a077f2b52389fa8ea0b310ca67c8045da126",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Delay kernels, noise and common-load drift determine incoherent-state stability in coupled oscillator arrays."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fv5cl-krph",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-18",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "8ab8a714d542818b7e8b175a1cb8344ec1a29b7a0032c2ff67aa6c9b4583b557",
+        "assessment_sha256": "cdef54d9c91bc57eef8143eebf94a44b84d8f977431c24639dff463b4162357c"
+      }
+    },
+    {
+      "doi": "10.1103/v1vq-skr1",
+      "url": "https://doi.org/10.1103/v1vq-skr1",
+      "title": "Timescale-induced synchronization of contrarians in adaptive dynamical networks",
+      "authors": [
+        "Akash Yadav",
+        "V. K. Chandrasekar",
+        "D. V. Senthilkumar"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0084104ca655f7c2f574a89175033124c50d7a3e9a9d66147714d67090374b8c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fv1vq-skr1",
+      "author_retrieved_at": "2026-10-14T02:05:20.837652+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-29",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "0c694496e22be98eb6e172350f3e753bfeb24c35645cc5540bceaba9bd228e13",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Fast adaptation entrains contrarians into synchronized clusters in adaptive networks, requiring a conformist majority and an intermediate coupling window.",
+      "note_zh": "快速适应使逆从者在自适应网络中形成同步簇，需要从众者占多数及适中的耦合区间。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "348eca96fac0326942f2142c9d1e1c802a737d051358d21552e478be6f999cf2",
+      "input_sha256": "2bcd9b593c38a48d7604148af80c97be9dbc3a4191e14787a2bbd7068921d0ab",
+      "material_sha256": "0c694496e22be98eb6e172350f3e753bfeb24c35645cc5540bceaba9bd228e13",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "0c694496e22be98eb6e172350f3e753bfeb24c35645cc5540bceaba9bd228e13",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Fast topology adaptation entrains contrarians within an intermediate coupling window."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fv1vq-skr1",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-29",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "e20804645b4f414d12879a114a9d024755af1db1c5230eadb35f1d9eed537b4a",
+        "assessment_sha256": "348eca96fac0326942f2142c9d1e1c802a737d051358d21552e478be6f999cf2"
+      }
+    },
+    {
+      "doi": "10.1103/t1sg-qhhf",
+      "url": "https://doi.org/10.1103/t1sg-qhhf",
+      "title": "Local network evolution rules driving shortest path multiplicity",
+      "authors": [
+        "Alexei Vazquez"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "2169a006257d200d37ac1577294bc809c92be95964a031d86d5e95452faf4c9c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Ft1sg-qhhf",
+      "author_retrieved_at": "2026-10-14T02:05:17.077162+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-25",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "1481353effd048632ec738144eb07ddfc82df37cb2942a3b6c2d563632205bc4",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/t1sg-qhhf"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Local network growth rules increase shortest-path multiplicity and connect its size scaling to degree distributions and community organization.",
+      "note_zh": "局部网络增长规则提高最短路径多重性，并将其规模标度与度分布及社区组织联系起来。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "913e9b30d387f6b53946a2c4af14288a6125cb6eb8a9c0a31a60652f3596b515",
+      "input_sha256": "08519f7c9f7481830d519358b56443eed9894aeb98979b5d8d097ced39e00de6",
+      "material_sha256": "1481353effd048632ec738144eb07ddfc82df37cb2942a3b6c2d563632205bc4",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "1481353effd048632ec738144eb07ddfc82df37cb2942a3b6c2d563632205bc4",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Local evolution increases shortest-path multiplicity and its association with network communities."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Ft1sg-qhhf",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/t1sg-qhhf",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-25",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "a22c254c6a074b19e62ffc3894bd67b83271d7353b7a5697957cf9a2e110f411",
+        "assessment_sha256": "913e9b30d387f6b53946a2c4af14288a6125cb6eb8a9c0a31a60652f3596b515"
+      }
+    },
+    {
+      "doi": "10.1103/g8rc-615y",
+      "url": "https://doi.org/10.1103/g8rc-615y",
+      "title": "Fluctuation-response design rules for nonequilibrium flows",
+      "authors": [
+        "Ying-Jen Yang",
+        "Ken A. Dill"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "7c3609fb8bb546c350ffed2755a60a80bbb81b9afef8b4dbaab080c1813d776f",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fg8rc-615y",
+      "author_retrieved_at": "2026-10-14T02:05:08.150242+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "a1b031d228a3a8ab0e369eda47b7fc625fd68eea9195519763fb7091fbbdcc0b",
+        "sources": [
+          "https://api.crossref.org/works/10.1103%2Fg8rc-615y"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "A force–rate Jacobian and fluctuation–response duality connect local transition-rate changes to global stochastic network-flow control.",
+      "note_zh": "用力–速率Jacobian和涨落响应，连接局部跃迁速率调节与全局随机网络流控制。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "38be22aff1863c2cbfc52a008e6457d9b019f85703fd8456d319059f669b104a",
+      "input_sha256": "130634633f32e9cfd721d5e5ffae34744ff454fa816acdbbd4b5bbd5345170f0",
+      "material_sha256": "a1b031d228a3a8ab0e369eda47b7fc625fd68eea9195519763fb7091fbbdcc0b",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "a1b031d228a3a8ab0e369eda47b7fc625fd68eea9195519763fb7091fbbdcc0b",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "A force-rate Jacobian and fluctuation-response duality guide local control of stochastic network flows."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fg8rc-615y",
+      "evidence_url": "https://api.crossref.org/works/10.1103%2Fg8rc-615y",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/g7f3-85bn",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/g7f3-85bn",
+      "title": "Noise-controlled phase transitions and memory-state switching in connectome-informed modular spiking networks",
+      "authors": [
+        "Siyu Huo"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c4b56ce611163110da9a235f4589eb6d2af169cb74cd0b6e6660621fcdd7dfca",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fg7f3-85bn",
+      "author_retrieved_at": "2026-10-14T02:05:15.369260+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-13",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "23a04d14dcab8b3264b43daadb2f87420faa26f612b3f53cb24bdaf1ff8cf4d7",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/g7f3-85bn"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Noise controls memory-retrieval transitions and attractor switching in connectome-informed modular spiking networks, with topology-randomization checks.",
+      "note_zh": "连接组启发的模块脉冲网络中，噪声控制记忆检索相变和吸引子切换，并检验拓扑随机化的稳健性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "37cbf7775a2ff8abd0bec9071e8c2bb24bb1db0476b4e0d8045b4b897ada2b3f",
+      "input_sha256": "65baeebfd6b5627fc287dbd17b43a44cace4cb7f4f17c8646f4d47c34611e5de",
+      "material_sha256": "23a04d14dcab8b3264b43daadb2f87420faa26f612b3f53cb24bdaf1ff8cf4d7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "23a04d14dcab8b3264b43daadb2f87420faa26f612b3f53cb24bdaf1ff8cf4d7",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Noise tunes retrieval transitions and spontaneous memory switching in modular spiking networks."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fg7f3-85bn",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/g7f3-85bn",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/br97-fw3p",
+      "url": "https://doi.org/10.1103/br97-fw3p",
+      "title": "Modularity, asymmetry, and polarization shape consensus speed in the voter model",
+      "authors": [
+        "Madi Yerlanov",
+        "Zachary P. Kilpatrick",
+        "Nancy Rodriguez"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4966fa38df46a8983ac773f807af99cdd3f69b2872938c59b98a72b7de9af157",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fbr97-fw3p",
+      "author_retrieved_at": "2026-10-14T02:05:13.575419+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-29",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "629875ae4ac11fd12d8f6e11cbaa30f503f6a2ca8ec7553d63eb4c0ef86e4a19",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "A two-clique voter model separates fast intergroup alignment from slow consensus diffusion, with asymmetry producing intermediate-coupling optima.",
+      "note_zh": "双团选民模型区分快速群间对齐与缓慢共识扩散，不对称性可产生中等耦合下的最优点。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "784722b47124fcb9fc64122824e64ae36bf80097f2e42215c34106922b5d704c",
+      "input_sha256": "07e40c056dc6b0297977cc236c8402453657ecd1547802d56468cd92f5718ae2",
+      "material_sha256": "629875ae4ac11fd12d8f6e11cbaa30f503f6a2ca8ec7553d63eb4c0ef86e4a19",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "629875ae4ac11fd12d8f6e11cbaa30f503f6a2ca8ec7553d63eb4c0ef86e4a19",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Two-clique modularity and imbalance govern alignment drift, noise and consensus times."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fbr97-fw3p",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-29",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "84ee899625763a223b71658185e6a88f30d6d7d795043d42fa86ba18234b9c0f",
+        "assessment_sha256": "784722b47124fcb9fc64122824e64ae36bf80097f2e42215c34106922b5d704c"
+      }
+    },
+    {
+      "doi": "10.1103/3v5l-pgzz",
+      "url": "https://doi.org/10.1103/3v5l-pgzz",
+      "title": "Traveling chimeras and collective coordination in β -cell networks",
+      "authors": [
+        "Carine Simo",
+        "Venceslas Nguefoue Meli",
+        "Patrick Louodop",
+        "Samuel Bowong",
+        "Thierry Njougouo"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e759173de1bcc46353506cc40be571312018ea4266d57bbc8f509c387d7af8a3",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F3v5l-pgzz",
+      "author_retrieved_at": "2026-10-14T02:05:09.958850+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-25",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "26ffabd475ab80e264472490c4b4cb11993df432a93d24f8d7323eed1eb89ed3",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Electrical and metabolic coupling in an idealized beta-cell ring produces synchronization, traveling waves and traveling chimera states.",
+      "note_zh": "理想化胰岛细胞环中的电与代谢耦合产生同步、行波及旅行奇美拉态。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "9942592f901768b37c351352ba7716454bd574f0126f9db89cb29717b64070b3",
+      "input_sha256": "685c742bfe576395058a7481e8e737fefd4951d8ca0dd802e9c691c5362515c4",
+      "material_sha256": "26ffabd475ab80e264472490c4b4cb11993df432a93d24f8d7323eed1eb89ed3",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "26ffabd475ab80e264472490c4b4cb11993df432a93d24f8d7323eed1eb89ed3",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Electrical and metabolic coupling on an idealized nonlocal ring produces traveling chimeras."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F3v5l-pgzz",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-25",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "30a4d3fce86f50509019ed41c1d979a1f90949ba139943f2db09c410867afaf7",
+        "assessment_sha256": "9942592f901768b37c351352ba7716454bd574f0126f9db89cb29717b64070b3"
+      }
+    },
+    {
+      "doi": "10.1103/33lg-7kmc",
+      "url": "https://doi.org/10.1103/33lg-7kmc",
+      "title": "Equivalence between nonlinear graph-based dynamics and linear dynamics on higher-order networks",
+      "authors": [
+        "Lucas Lacasa"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "8945b826dad0fc3c571ed9d8b60d4b93d6c993672b269e8fe64565ca7d794da2",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F33lg-7kmc",
+      "author_retrieved_at": "2026-10-14T02:05:04.443282+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-29",
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "598e72e17789cfd1338bc051c384d7054ba04a0bb592ca4278554294a8fa0b09",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Carleman linearization represents nonlinear graph dynamics as linear dynamics on richer higher-order structures, with exact and truncated constructions.",
+      "note_zh": "Carleman 线性化将非线性图动力学表示为更丰富高阶结构上的线性动力学，提供精确及截断构造。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "efb0c033663f0df08fbca2373795d68924ad07a1c33e1cdd9e763aa9a2298e71",
+      "input_sha256": "b640cab8e5629c55b349f40cba710808e947804a2d20a09e38960351ab5a57c9",
+      "material_sha256": "598e72e17789cfd1338bc051c384d7054ba04a0bb592ca4278554294a8fa0b09",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "598e72e17789cfd1338bc051c384d7054ba04a0bb592ca4278554294a8fa0b09",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Nonlinear graph dynamics admits linear representations on multiplicity-aware higher-order interaction structures."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F33lg-7kmc",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-29",
+        "published_date": "2026-10-13",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-13-to-14-01",
+        "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9",
+        "previous_assessment_sha256": "2dfe040f3fff4f981b17f8f08f73ccec90754d12a662d0a6a6034b8d0379bc83",
+        "assessment_sha256": "efb0c033663f0df08fbca2373795d68924ad07a1c33e1cdd9e763aa9a2298e71"
+      }
+    },
+    {
+      "doi": "10.1063/5.0347841",
+      "url": "https://doi.org/10.1063/5.0347841",
+      "title": "Emergent multifractality in a multi-asset three-state agent-based market model",
+      "authors": [
+        "Rafał Kowalski",
+        "Paweł Oświęcimka",
+        "Stanisław Drożdż"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "7401360c3cab4f16716d83290e20b295e0b826ddaba352e3e3f75a9f6a20a8d5",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0347841",
+      "author_retrieved_at": "2026-10-14T02:05:06.347946+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-10-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-13",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "3df31555f6a9c0d682bae09fe9a3ace1a4fbf8a9a103ada0fa0697aa2216ee49",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0347841"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Local investor interactions and cross-asset coupling generate multifractality and cross-correlations near collective synchronization balance.",
+      "note_zh": "局部投资者相互作用与跨资产耦合，在集体同步平衡附近产生多重分形及交叉相关。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "36056fccb923a486ed960e83af49bc313acd68da6e4680cbde9fe69592733781",
+      "input_sha256": "954c1cd7c0fbad8fe9dea162e71bbc5f3536df2299d0fee650dc3e9a135519b6",
+      "material_sha256": "3df31555f6a9c0d682bae09fe9a3ace1a4fbf8a9a103ada0fa0697aa2216ee49",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3df31555f6a9c0d682bae09fe9a3ace1a4fbf8a9a103ada0fa0697aa2216ee49",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
+      "featured": null,
+      "evidence": [
+        "Local agent interactions and cross-asset coupling generate multifractality near collective synchronization balance."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0347841",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0347841",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1038/s42005-026-02914-y",
       "url": "https://doi.org/10.1038/s42005-026-02914-y",
@@ -3348,9 +4404,9 @@
         "Alex Arenas"
       ],
       "author_metadata_status": "available",
-      "author_metadata_sha256": "0b483ab66af1d3f7a2e83f8289481bf2ded29b2d7b3c80418821202ee193d0c4",
+      "author_metadata_sha256": "a845aedf38df576b48136276cb2f1d112153b24379715b1e272f75dc682c7592",
       "author_source_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02914-y",
-      "author_retrieved_at": "2026-10-13T05:05:43.780474+00:00",
+      "author_retrieved_at": "2026-10-14T02:05:02.803577+00:00",
       "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Communications Physics",
       "journal_short": "CP",
@@ -3386,16 +4442,16 @@
       "note_zh": "从图上循环holonomy连接局部相位失配、拉普拉斯零模与同步兼容性。",
       "scope_authority": "assistant_abstract_screening",
       "editorial_support_sha256": null,
-      "assessment_sha256": "5bd15247eb2f3042ec5153a13ccba4b916f77ddef1159a115f9ee32e41f5110f",
-      "input_sha256": "b7f55bd0f54052b07b8b231ed29bc74d6cd10aae13eb5b6ee6534f77b58f60e4",
+      "assessment_sha256": "2bf9c69aa795299e276c625c23d70f1df6abfa81048285fe795aebd7490d7ec2",
+      "input_sha256": "efa6c0dd33e51e009d0d4b6cf6da9b69a08bcb488efafdb5933941b80f2b4fe2",
       "material_sha256": "dde69f3d5cb09737637317bc79cba69a3ed1910ce8cbdcd65b1ac4e100cf59f8",
       "review_evidence_kind": "abstract",
       "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
       "review_evidence_sha256": "dde69f3d5cb09737637317bc79cba69a3ed1910ce8cbdcd65b1ac4e100cf59f8",
-      "rule_sha256": "1d6b3359102247fdbb1b441b02c73f9c3e58ae42aecaa2c093a99e918ae18b4a",
+      "rule_sha256": "5ad0e6283cfaf499c0803f2cf261c30526784de08784b3ad052e67d649f6780b",
       "featured": null,
       "evidence": [
-        "Gauge phase lags accumulated around graph cycles determine global compatibility and twisted-Laplacian zero modes, with conditions for synchronization path mismatches."
+        "Cycle holonomies link graph frustration, twisted Laplacian zero modes and synchronization compatibility."
       ],
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02914-y",
       "evidence_url": "https://www.nature.com/articles/s42005-026-02914-y",
@@ -9121,93 +10177,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/v1vq-skr1",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1",
-      "title": "Timescale-induced synchronization of contrarians in adaptive dynamical networks",
-      "authors": [
-        "Akash Yadav",
-        "V. K. Chandrasekar",
-        "D. V. Senthilkumar"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "c96d41ca612ad6b02d33902cc6c7678a9dbf62199a01879f755738137faec004",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1",
-      "author_retrieved_at": "2026-10-04T05:40:45.258Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-29",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-29",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-29",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要构造 conformist/contrarian 自适应网络，解析时间尺度阈值并作模拟，无特殊类型冲突。",
-        "material_sha256": "0c694496e22be98eb6e172350f3e753bfeb24c35645cc5540bceaba9bd228e13",
-        "abstract_sha256": "3b65e9777a48fbdc55c7323a1b4df1c40b70bf06bba1ff0fac4848dc32dd1109",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Fast adaptation entrains contrarians into synchronized clusters in adaptive networks, requiring a conformist majority and an intermediate coupling window.",
-      "note_zh": "快速适应使逆从者在自适应网络中形成同步簇，需要从众者占多数及适中的耦合区间。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "e20804645b4f414d12879a114a9d024755af1db1c5230eadb35f1d9eed537b4a",
-      "assessment_sha256": "e20804645b4f414d12879a114a9d024755af1db1c5230eadb35f1d9eed537b4a",
-      "input_sha256": "d5d2667c883e59115bde1e5a6fb4d0396dc97b49284776b56eba63747ca881eb",
-      "material_sha256": "0c694496e22be98eb6e172350f3e753bfeb24c35645cc5540bceaba9bd228e13",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "0c694496e22be98eb6e172350f3e753bfeb24c35645cc5540bceaba9bd228e13",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Fast adaptive-network feedback synchronizes contrarians within a conformist scaffold, subject to coupling and adaptation-rate thresholds."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fv1vq-skr1",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/v1vq-skr1",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/nl7d-16n8",
       "url": "https://doi.org/10.1103/nl7d-16n8",
       "title": "Avalanche assemblies in arbitrary connection topologies",
@@ -9289,94 +10258,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fnl7d-16n8",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/nl7d-16n8",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/br97-fw3p",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p",
-      "title": "Modularity, asymmetry, and polarization shape consensus speed in the voter model",
-      "authors": [
-        "Madi Yerlanov",
-        "Zachary P. Kilpatrick",
-        "Nancy Rodriguez"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "a2f87b23f291b44fb134d706d66b4a0d06e139124c6aa212c489a6c2a63493cd",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p",
-      "author_retrieved_at": "2026-10-04T05:40:44.350Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-29",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-29",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-29",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要推导双 clique voter 连续近似并分析共识时间和小群组噪声标度，无特殊类型冲突。",
-        "material_sha256": "629875ae4ac11fd12d8f6e11cbaa30f503f6a2ca8ec7553d63eb4c0ef86e4a19",
-        "abstract_sha256": "16b4ebaa6db221cbad751650f3f1f6197ff5c3c0047f7a66904fab35efdcf063",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "A two-clique voter model separates fast intergroup alignment from slow consensus diffusion, with asymmetry producing intermediate-coupling optima.",
-      "note_zh": "双团选民模型区分快速群间对齐与缓慢共识扩散，不对称性可产生中等耦合下的最优点。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "84ee899625763a223b71658185e6a88f30d6d7d795043d42fa86ba18234b9c0f",
-      "assessment_sha256": "84ee899625763a223b71658185e6a88f30d6d7d795043d42fa86ba18234b9c0f",
-      "input_sha256": "25fd5b6ade36b6b1f64540682faf9830c0505c05e9d1d073b5b1e421d4101701",
-      "material_sha256": "629875ae4ac11fd12d8f6e11cbaa30f503f6a2ca8ec7553d63eb4c0ef86e4a19",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "629875ae4ac11fd12d8f6e11cbaa30f503f6a2ca8ec7553d63eb4c0ef86e4a19",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Modularity, population asymmetry and polarization determine alignment and diffusion stages of consensus in a two-clique voter model."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fbr97-fw3p",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/br97-fw3p",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -9623,92 +10504,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2F54zg-75zk",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/54zg-75zk",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/33lg-7kmc",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc",
-      "title": "Equivalence between nonlinear graph-based dynamics and linear dynamics on higher-order networks",
-      "authors": [
-        "Lucas Lacasa"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "9483f8b6a308b9d52f0e2edfa010001d9da2e0735647b5abc6193e68248bde90",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc",
-      "author_retrieved_at": "2026-10-04T05:40:42.649Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-29",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-29",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-29",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要用 Carleman 线性化证明图非线性与高阶 hb-graph 线性表示关系并说明截断，无特殊类型冲突。",
-        "material_sha256": "598e72e17789cfd1338bc051c384d7054ba04a0bb592ca4278554294a8fa0b09",
-        "abstract_sha256": "4c222c3573341d622339d7321cda90fe4a213c1454cdcb20fa1ce7f6ff095c71",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Carleman linearization represents nonlinear graph dynamics as linear dynamics on richer higher-order structures, with exact and truncated constructions.",
-      "note_zh": "Carleman 线性化将非线性图动力学表示为更丰富高阶结构上的线性动力学，提供精确及截断构造。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "2dfe040f3fff4f981b17f8f08f73ccec90754d12a662d0a6a6034b8d0379bc83",
-      "assessment_sha256": "2dfe040f3fff4f981b17f8f08f73ccec90754d12a662d0a6a6034b8d0379bc83",
-      "input_sha256": "f48c667df25115cb93c384f9406824882d4ca26e963222cc0362f67412587fd4",
-      "material_sha256": "598e72e17789cfd1338bc051c384d7054ba04a0bb592ca4278554294a8fa0b09",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "598e72e17789cfd1338bc051c384d7054ba04a0bb592ca4278554294a8fa0b09",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Carleman linearization relates nonlinear vertex dynamics on graphs to linear dynamics on richer higher-order multiset structures, with exact and truncated representations."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F33lg-7kmc",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/33lg-7kmc",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -10690,93 +11485,6 @@
       "scope_class_semantics": "Single editor-selected related reading, not a confirmed transferable network-science contribution; contact topology unspecified in abstract."
     },
     {
-      "doi": "10.1103/t1sg-qhhf",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/t1sg-qhhf",
-      "title": "Local network evolution rules drive shortest path multiplicity",
-      "authors": [
-        "Alexei Vazquez"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "08db0b622fd296be20fff9e131a5b1d4fd0c5db145fe7154ebb450dc3b2747fc",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/t1sg-qhhf",
-      "author_retrieved_at": "2026-10-04T05:39:41.764Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-25",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-25",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/t1sg-qhhf"
-        ],
-        "limitations": [
-          "publisher_crossref_title_conflict"
-        ]
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-25",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要给出局域演化规则下最短路多重性的精确结果和模拟，是原创图研究；官方 drive/driving 题名差异保留，不存在已知类型冲突。",
-        "material_sha256": "e35afa97ecaa3b485741130d096ca24877c5626b13dad24efcde1ea33dd56826",
-        "abstract_sha256": "cfc6baf7d1b85d37d6434c455f82c36bbf02aeb648c42043847c1e562789abd2",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/t1sg-qhhf"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/t1sg-qhhf"
-          ]
-        }
-      },
-      "categories": [
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Local network growth rules increase shortest-path multiplicity and connect its size scaling to degree distributions and community organization.",
-      "note_zh": "局部网络增长规则提高最短路径多重性，并将其规模标度与度分布及社区组织联系起来。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "a22c254c6a074b19e62ffc3894bd67b83271d7353b7a5697957cf9a2e110f411",
-      "assessment_sha256": "a22c254c6a074b19e62ffc3894bd67b83271d7353b7a5697957cf9a2e110f411",
-      "input_sha256": "9230623e09240ff11724fc93f272c41eb78ebb7992b48df2566302e9756ae29d",
-      "material_sha256": "e35afa97ecaa3b485741130d096ca24877c5626b13dad24efcde1ea33dd56826",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "e35afa97ecaa3b485741130d096ca24877c5626b13dad24efcde1ea33dd56826",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Local network evolution increases shortest-path multiplicity and connects its scaling to community organization and degree distributions."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Ft1sg-qhhf",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/t1sg-qhhf",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/d6lk-4f62",
       "url": "https://doi.org/10.1103/d6lk-4f62",
       "title": "Articulation points in multiplex networks",
@@ -11121,97 +11829,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2F92jk-cj5x",
       "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/92jk-cj5x",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/3v5l-pgzz",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz",
-      "title": "Traveling chimeras and collective coordination in β -cell networks",
-      "authors": [
-        "Carine Simo",
-        "Venceslas Nguefoue Meli",
-        "Patrick Louodop",
-        "Samuel Bowong",
-        "Thierry Njougouo"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "a149bc790a6cb0c00ebe29b33db63f66871f178bf8300fd52718c168b5f8de7a",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz",
-      "author_retrieved_at": "2026-10-04T05:39:40.739Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-25",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-25",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz"
-        ],
-        "limitations": [
-          "publisher_crossref_title_conflict"
-        ]
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-25",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要模拟非局域环上电/代谢双耦合 β-cell 网络的同步、行波和 chimera，无特殊类型冲突；beta 数学排版已核对。",
-        "material_sha256": "26ffabd475ab80e264472490c4b4cb11993df432a93d24f8d7323eed1eb89ed3",
-        "abstract_sha256": "35bad80ed00c120eb30a75bd33bd1cefb6d6224428f27c276d3e5b92b300a931",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Electrical and metabolic coupling in an idealized beta-cell ring produces synchronization, traveling waves and traveling chimera states.",
-      "note_zh": "理想化胰岛细胞环中的电与代谢耦合产生同步、行波及旅行奇美拉态。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "30a4d3fce86f50509019ed41c1d979a1f90949ba139943f2db09c410867afaf7",
-      "assessment_sha256": "30a4d3fce86f50509019ed41c1d979a1f90949ba139943f2db09c410867afaf7",
-      "input_sha256": "4f5ac4dede84cd9dedaf2d29407899469aad965102ea732f25da8b05d2e0719e",
-      "material_sha256": "26ffabd475ab80e264472490c4b4cb11993df432a93d24f8d7323eed1eb89ed3",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "26ffabd475ab80e264472490c4b4cb11993df432a93d24f8d7323eed1eb89ed3",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Electrical and metabolic coupling on an idealized nonlocal beta-cell ring supports synchronization, traveling waves and traveling chimeras."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F3v5l-pgzz",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/3v5l-pgzz",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -13081,177 +13698,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/ys6r-4mbf",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf",
-      "title": "Localization of active particles on random arrays of parallel filaments",
-      "authors": [
-        "Owen Santoso",
-        "Elena F. Koslover"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "cfd10c2d92593ed8a171eb54028c2a178d1e523e23298644b2da709b6ae917a3",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf",
-      "author_retrieved_at": "2026-10-04T05:38:20.483Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-18",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-18",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-18",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要建立随机丝状网络的主动/扩散输运模型并推导有效能量景观及局域化，无特殊类型冲突。",
-        "material_sha256": "90fdce31b68b554b31454ed711891b4fdb6ad942a6891a78dba2233e13995dc7",
-        "abstract_sha256": "abaa76bf1d009bdc30ef769a5099df956bf94da2c80476be7d1c7d553d5fb1e7",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf"
-          ]
-        }
-      },
-      "categories": [
-        "network_spreading"
-      ],
-      "scope_class": "transferable_application",
-      "note_en": "Disordered filament polarity and switching transport kinetics create particle localization, strongest at intermediate run lengths in the studied model.",
-      "note_zh": "无序丝状结构极性与切换传播动力学产生粒子局域化，在所研究模型中以中等行程长度最强。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "003484a196e653f9ca17f62a72a58da8869eb57749df4139f856adf57416c11e",
-      "assessment_sha256": "003484a196e653f9ca17f62a72a58da8869eb57749df4139f856adf57416c11e",
-      "input_sha256": "ca7be9d0dd85e8024575c90d2a7d011cd7a41fc5affcbb0283c8951f602a5973",
-      "material_sha256": "90fdce31b68b554b31454ed711891b4fdb6ad942a6891a78dba2233e13995dc7",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "90fdce31b68b554b31454ed711891b4fdb6ad942a6891a78dba2233e13995dc7",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Quenched filament polarity and switching transport kinetics generate localization, described by an effective disordered landscape and run-length dependence."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fys6r-4mbf",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/ys6r-4mbf",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/v5cl-krph",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph",
-      "title": "Combined framework for synchronization with distributed delays and noise in Kuramoto-Daido oscillators",
-      "authors": [
-        "Samir Sahoo",
-        "Antonio Palacios"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "e1869c48ddf4cabc7e429e0c4ef9ef6e985d3f62d7c37038fd3ba5a444f8871e",
-      "author_source_url": "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph",
-      "author_retrieved_at": "2026-10-04T05:38:18.410Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-09-18",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-18",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-18",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要推导延迟噪声 Kuramoto-Daido 特征方程并应用 Josephson 阵列降维和模拟，无特殊类型冲突。",
-        "material_sha256": "c148b5dfd4453136be903124ec62a077f2b52389fa8ea0b310ca67c8045da126",
-        "abstract_sha256": "0c2155db428e8ea2ddfead7165fdbb7ab9877df12c0c14a03afb52aee5df77fe",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "A unified characteristic equation combines distributed delays, noise and periodic coupling to determine oscillator-ensemble incoherence stability.",
-      "note_zh": "统一特征方程结合分布时延、噪声与周期耦合，确定振子群非相干态稳定性。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "8ab8a714d542818b7e8b175a1cb8344ec1a29b7a0032c2ff67aa6c9b4583b557",
-      "assessment_sha256": "8ab8a714d542818b7e8b175a1cb8344ec1a29b7a0032c2ff67aa6c9b4583b557",
-      "input_sha256": "1059deab2433326922e4651348bfe1b034fd960d4bbe4a077b7f0ebac8eefd54",
-      "material_sha256": "c148b5dfd4453136be903124ec62a077f2b52389fa8ea0b310ca67c8045da126",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "c148b5dfd4453136be903124ec62a077f2b52389fa8ea0b310ca67c8045da126",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Delay-kernel transforms, noise and periodic coupling determine oscillator-ensemble incoherence stability, with a delayed-load Josephson-array application."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fv5cl-krph",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/v5cl-krph",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/nxwl-5wvf",
       "url": "https://doi.org/10.1103/nxwl-5wvf",
       "title": "Emergent correlations in the selected link times along optimal paths",
@@ -14865,94 +15311,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0342298",
       "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0342298",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/y6ss-j5qv",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv",
-      "title": "Heuristic and exact modularity optimization with size-constrained communities",
-      "authors": [
-        "Filipi N. Silva",
-        "Samin Aref",
-        "Vincent Traag",
-        "Santo Fortunato"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "0e80bb2b07bd7384f3669c314c738adee24ada8de94f0ffda895e56040bf5e0f",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv",
-      "author_retrieved_at": "2026-10-04T05:38:15.993Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-11",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-11",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-11",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要提出带社区尺寸约束的 modularity 启发式和精确整数优化基线，无特殊类型冲突。",
-        "material_sha256": "6f641acb20cd7309a03a02e9ac287f105fe9bb1044c1376f408501dd8a624c68",
-        "abstract_sha256": "c6a446a9aa5776c98e356e7e6f680623c6a3e6eaf7e33823f685385dfba6e880",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv"
-          ]
-        }
-      },
-      "categories": [
-        "network_inference"
-      ],
-      "scope_class": "core",
-      "note_en": "Heuristic and exact modularity optimization enforce individual community-size bounds, avoiding indirect size control through a resolution parameter alone.",
-      "note_zh": "启发式及精确模块度优化直接约束各社区规模，避免仅通过分辨率参数间接控制。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "e96cee649db13265ee9604e9d6a1518c98c251c802e1d2d459642c25614586cf",
-      "assessment_sha256": "e96cee649db13265ee9604e9d6a1518c98c251c802e1d2d459642c25614586cf",
-      "input_sha256": "516006df1bd5d66d8096b4705c58de3ef3962fc528d0f833b7162d5e25e1ccb2",
-      "material_sha256": "6f641acb20cd7309a03a02e9ac287f105fe9bb1044c1376f408501dd8a624c68",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "6f641acb20cd7309a03a02e9ac287f105fe9bb1044c1376f408501dd8a624c68",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Heuristic and exact modularity optimization enforce individual community-size bounds instead of indirectly tuning average sizes through resolution parameters."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fy6ss-j5qv",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/y6ss-j5qv",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -19069,9 +19427,121 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "6564428500496f4b62b45cd22846babf8fcec14ae9e7a6cac39d6401e0191714"
+    },
+    {
+      "current_run": "reports/runs/2026-10-13-to-14-01",
+      "candidate_sha256": "0146fa1f04383724cbd15584127eff7d70153545d168130c922f76905a018cc5",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32"
+      },
+      "counts": {
+        "in_window": 106,
+        "newly_reviewed": 80,
+        "historically_reviewed": 122,
+        "state_updates": 25,
+        "categories": {
+          "excluded": 94,
+          "core": 11,
+          "transferable_application": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/g8rc-615y",
+      "recommended_on": "2026-10-14",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-13-to-14-01",
+      "publication_sha256": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+      "assessment_sha256": "38be22aff1863c2cbfc52a008e6457d9b019f85703fd8456d319059f669b104a",
+      "input_sha256": "130634633f32e9cfd721d5e5ffae34744ff454fa816acdbbd4b5bbd5345170f0",
+      "evidence_sha256": "a1b031d228a3a8ab0e369eda47b7fc625fd68eea9195519763fb7091fbbdcc0b",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-14T02:14:40.943590+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/g8rc-615y",
+        "title": "Fluctuation-response design rules for nonequilibrium flows",
+        "sha256": "635e7d75157abc5aea64b5b7b7944fd87ec93bba8ada961cf79ec6e285df2d81",
+        "version": "Publisher version of record, Physical Review Research 8, 043039 (2026), published 2026-10-13",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/g8rc-615y",
+        "source_kind": "publisher_fulltext",
+        "pages": 7,
+        "read_scope": "Complete seven-page publisher PDF: introduction, theory and derivations, Equations 1–12, Figures 1–3 and captions, discussion, references and footnotes. Rendered pages 3 and 5 visually inspected for the Jacobian, kinesin noise decomposition and local control protocols. Separate Supplemental Material not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-14T02:14:40.943590+00:00"
+      },
+      "question": {
+        "zh": "怎样调局部速率，才能控制全局网络流？",
+        "en": "How can local rates control global network flows?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络控制中常见的问题说具体了：改变一条边的跃迁速率，怎样影响全局流量与波动？论文给出统一的涨落响应框架，并用分子马达网络演示控制设计。",
+          "最值得带走的是先选独立观测量，再拆解噪声来源，最后检查控制的副作用。这条分析路径也能启发其他随机网络的模型设计。"
+        ],
+        "en": [
+          "Today’s pick makes a recurring control problem concrete: how does changing an edge’s transition rate alter global flows and fluctuations? A unified fluctuation–response framework connects these quantities and demonstrates control in a molecular-motor network.",
+          "Borrow the sequence: choose independent observables, identify noise sources, then check control side effects. This offers a reusable way to reason about other stochastic network models."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先选独立坐标",
+            "en": "Choose independent coordinates"
+          },
+          "text": {
+            "zh": "区分双向通量、净流与驻留概率，排除守恒带来的冗余，明确真正要控制的量。",
+            "en": "Separate traffic, net flux and dwell probabilities; remove conservation redundancies before defining the control target."
+          }
+        },
+        {
+          "heading": {
+            "zh": "从噪声定位机制",
+            "en": "Use noise to locate mechanisms"
+          },
+          "text": {
+            "zh": "分子马达案例区分等待时间与路径分支的贡献，提示不同负载下该调哪些跃迁。",
+            "en": "The motor example separates timing and branching contributions, suggesting which transitions to target at different loads."
+          }
+        },
+        {
+          "heading": {
+            "zh": "同时检查副作用",
+            "en": "Check side effects together"
+          },
+          "text": {
+            "zh": "局部边、节点和循环调节协议展示如何改变目标观测量，并保持其余选定量不变。",
+            "en": "Local edge, node and cycle protocols change a target observable while preserving the other selected observables."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "随机网络、非平衡动力学、网络流与控制研究者。",
+        "en": "Researchers in stochastic networks, nonequilibrium dynamics, network flows and control."
+      },
+      "reading_caveat": {
+        "zh": "已读7页正式全文，未读独立补充材料，未复现。框架针对长时稳态Markov跃迁网络；稠密图无普遍效率优势，形式对称性不意味着一般参数下的互易关系。AI编辑荐读。",
+        "en": "Read the seven-page version of record, not separate supplements; no reproduction. The framework concerns long-time stationary Markov jump networks. Dense graphs have no general efficiency advantage, and formal symmetry does not imply reciprocity for arbitrary parameters. AI editorial guidance."
+      }
+    },
     {
       "doi": "10.1038/s41467-026-78115-6",
       "recommended_on": "2026-10-13",
@@ -20302,6 +20772,84 @@
       }
     },
     {
+      "doi": "10.1103/g8rc-615y",
+      "recommended_on": "2026-10-14",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-13-to-14-01",
+      "publication_sha256": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+      "assessment_sha256": "38be22aff1863c2cbfc52a008e6457d9b019f85703fd8456d319059f669b104a",
+      "input_sha256": "130634633f32e9cfd721d5e5ffae34744ff454fa816acdbbd4b5bbd5345170f0",
+      "evidence_sha256": "a1b031d228a3a8ab0e369eda47b7fc625fd68eea9195519763fb7091fbbdcc0b",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-14T02:14:40.943590+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/g8rc-615y",
+        "title": "Fluctuation-response design rules for nonequilibrium flows",
+        "sha256": "635e7d75157abc5aea64b5b7b7944fd87ec93bba8ada961cf79ec6e285df2d81",
+        "version": "Publisher version of record, Physical Review Research 8, 043039 (2026), published 2026-10-13",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/g8rc-615y",
+        "source_kind": "publisher_fulltext",
+        "pages": 7,
+        "read_scope": "Complete seven-page publisher PDF: introduction, theory and derivations, Equations 1–12, Figures 1–3 and captions, discussion, references and footnotes. Rendered pages 3 and 5 visually inspected for the Jacobian, kinesin noise decomposition and local control protocols. Separate Supplemental Material not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-14T02:14:40.943590+00:00"
+      },
+      "question": {
+        "zh": "怎样调局部速率，才能控制全局网络流？",
+        "en": "How can local rates control global network flows?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络控制中常见的问题说具体了：改变一条边的跃迁速率，怎样影响全局流量与波动？论文给出统一的涨落响应框架，并用分子马达网络演示控制设计。",
+          "最值得带走的是先选独立观测量，再拆解噪声来源，最后检查控制的副作用。这条分析路径也能启发其他随机网络的模型设计。"
+        ],
+        "en": [
+          "Today’s pick makes a recurring control problem concrete: how does changing an edge’s transition rate alter global flows and fluctuations? A unified fluctuation–response framework connects these quantities and demonstrates control in a molecular-motor network.",
+          "Borrow the sequence: choose independent observables, identify noise sources, then check control side effects. This offers a reusable way to reason about other stochastic network models."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先选独立坐标",
+            "en": "Choose independent coordinates"
+          },
+          "text": {
+            "zh": "区分双向通量、净流与驻留概率，排除守恒带来的冗余，明确真正要控制的量。",
+            "en": "Separate traffic, net flux and dwell probabilities; remove conservation redundancies before defining the control target."
+          }
+        },
+        {
+          "heading": {
+            "zh": "从噪声定位机制",
+            "en": "Use noise to locate mechanisms"
+          },
+          "text": {
+            "zh": "分子马达案例区分等待时间与路径分支的贡献，提示不同负载下该调哪些跃迁。",
+            "en": "The motor example separates timing and branching contributions, suggesting which transitions to target at different loads."
+          }
+        },
+        {
+          "heading": {
+            "zh": "同时检查副作用",
+            "en": "Check side effects together"
+          },
+          "text": {
+            "zh": "局部边、节点和循环调节协议展示如何改变目标观测量，并保持其余选定量不变。",
+            "en": "Local edge, node and cycle protocols change a target observable while preserving the other selected observables."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "随机网络、非平衡动力学、网络流与控制研究者。",
+        "en": "Researchers in stochastic networks, nonequilibrium dynamics, network flows and control."
+      },
+      "reading_caveat": {
+        "zh": "已读7页正式全文，未读独立补充材料，未复现。框架针对长时稳态Markov跃迁网络；稠密图无普遍效率优势，形式对称性不意味着一般参数下的互易关系。AI编辑荐读。",
+        "en": "Read the seven-page version of record, not separate supplements; no reproduction. The framework concerns long-time stationary Markov jump networks. Dense graphs have no general efficiency advantage, and formal symmetry does not imply reciprocity for arbitrary parameters. AI editorial guidance."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -20381,5 +20929,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "3c5e2981ee860ab5cd019a68a4764914081f50aeb18b661abfaff7bc0daa7ae0"
+  "daily_suggestions_sha256": "5a8b4128224e2c485697f03009f4910614f6b30f0bed9915e9db0566949d182a"
 }

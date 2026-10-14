@@ -602,6 +602,84 @@
         "zh": "已读9页官方早期在线全文，未读独立补充材料，未复现。网络基于2019年数据；开放数据测试仅覆盖739个区域，且连接密度仍按OAG校准，不能视为完全独立的开放数据重建。AI编辑荐读。",
         "en": "Read the 9-page publisher Article in Press, not separate supplements; no reproduction. Networks use 2019 data. The open-data test covers 739 basins and still calibrates connectivity density against OAG; it is not a fully independent open-data reconstruction. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1103/g8rc-615y",
+      "recommended_on": "2026-10-14",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-13-to-14-01",
+      "publication_sha256": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+      "assessment_sha256": "38be22aff1863c2cbfc52a008e6457d9b019f85703fd8456d319059f669b104a",
+      "input_sha256": "130634633f32e9cfd721d5e5ffae34744ff454fa816acdbbd4b5bbd5345170f0",
+      "evidence_sha256": "a1b031d228a3a8ab0e369eda47b7fc625fd68eea9195519763fb7091fbbdcc0b",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-14T02:14:40.943590+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/g8rc-615y",
+        "title": "Fluctuation-response design rules for nonequilibrium flows",
+        "sha256": "635e7d75157abc5aea64b5b7b7944fd87ec93bba8ada961cf79ec6e285df2d81",
+        "version": "Publisher version of record, Physical Review Research 8, 043039 (2026), published 2026-10-13",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/g8rc-615y",
+        "source_kind": "publisher_fulltext",
+        "pages": 7,
+        "read_scope": "Complete seven-page publisher PDF: introduction, theory and derivations, Equations 1–12, Figures 1–3 and captions, discussion, references and footnotes. Rendered pages 3 and 5 visually inspected for the Jacobian, kinesin noise decomposition and local control protocols. Separate Supplemental Material not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-14T02:14:40.943590+00:00"
+      },
+      "question": {
+        "zh": "怎样调局部速率，才能控制全局网络流？",
+        "en": "How can local rates control global network flows?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络控制中常见的问题说具体了：改变一条边的跃迁速率，怎样影响全局流量与波动？论文给出统一的涨落响应框架，并用分子马达网络演示控制设计。",
+          "最值得带走的是先选独立观测量，再拆解噪声来源，最后检查控制的副作用。这条分析路径也能启发其他随机网络的模型设计。"
+        ],
+        "en": [
+          "Today’s pick makes a recurring control problem concrete: how does changing an edge’s transition rate alter global flows and fluctuations? A unified fluctuation–response framework connects these quantities and demonstrates control in a molecular-motor network.",
+          "Borrow the sequence: choose independent observables, identify noise sources, then check control side effects. This offers a reusable way to reason about other stochastic network models."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先选独立坐标",
+            "en": "Choose independent coordinates"
+          },
+          "text": {
+            "zh": "区分双向通量、净流与驻留概率，排除守恒带来的冗余，明确真正要控制的量。",
+            "en": "Separate traffic, net flux and dwell probabilities; remove conservation redundancies before defining the control target."
+          }
+        },
+        {
+          "heading": {
+            "zh": "从噪声定位机制",
+            "en": "Use noise to locate mechanisms"
+          },
+          "text": {
+            "zh": "分子马达案例区分等待时间与路径分支的贡献，提示不同负载下该调哪些跃迁。",
+            "en": "The motor example separates timing and branching contributions, suggesting which transitions to target at different loads."
+          }
+        },
+        {
+          "heading": {
+            "zh": "同时检查副作用",
+            "en": "Check side effects together"
+          },
+          "text": {
+            "zh": "局部边、节点和循环调节协议展示如何改变目标观测量，并保持其余选定量不变。",
+            "en": "Local edge, node and cycle protocols change a target observable while preserving the other selected observables."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "随机网络、非平衡动力学、网络流与控制研究者。",
+        "en": "Researchers in stochastic networks, nonequilibrium dynamics, network flows and control."
+      },
+      "reading_caveat": {
+        "zh": "已读7页正式全文，未读独立补充材料，未复现。框架针对长时稳态Markov跃迁网络；稠密图无普遍效率优势，形式对称性不意味着一般参数下的互易关系。AI编辑荐读。",
+        "en": "Read the seven-page version of record, not separate supplements; no reproduction. The framework concerns long-time stationary Markov jump networks. Dense graphs have no general efficiency advantage, and formal symmetry does not imply reciprocity for arbitrary parameters. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
