@@ -120,7 +120,7 @@ def main():
             row['attempts'].append({'channel':'crossref','source_url':url,'retrieved_at':now(),'outcome':'rejected_or_failed','error_kind':type(e).__name__,'reason':str(e)[:180]})
         time.sleep(0.25)
         if not row['authors']:
-            publisher = r.get('crossref',{}).get('resource',{}).get('primary',{}).get('URL')
+            publisher = (r.get('crossref') or {}).get('resource',{}).get('primary',{}).get('URL') or publisher_url(r, d)
             if d['hard_checks']['date'].get('publication_status')=='accepted' or d['hard_checks']['date'].get('basis','').startswith('publisher.accepted'):
                 publisher=publisher_url(r, d)
             if publisher:

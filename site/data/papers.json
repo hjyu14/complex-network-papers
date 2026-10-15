@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-14T02:16:42.192222+00:00",
+  "generated_at": "2026-10-15T01:00:31.435526+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-14",
-  "window_days": 44,
+  "window_end": "2026-10-15",
+  "window_days": 45,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "2b7a74eabdcd1b8848a26e29eb53f46bb540ebc74eebae3995689d8cb2688bb4",
-  "author_metadata_sha256": "c6f9a685a73ea04ebbbb728503f9d5a45e83389d79d690d4641c662816571e4c",
+  "reading_notes_sha256": "b1a33e77b6a74d703de93508ae93387475ea3c75ea7b1e8a47d847dd999ee553",
+  "author_metadata_sha256": "fbca2125998724c4e2ee0f8c6e469855fcc2fb67c1a8bd015d088b6e160c829d",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1731,9 +1731,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-14-to-15-01",
+      "config_sha256": "bc68e7333c0402369c800a070ea6f3e9a5dbb6c97d78255abf8e45968bf70879",
+      "window_start": "2026-10-14",
+      "window_end": "2026-10-15",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "screening_log_sha256": "ea1572ff9bf8c623b8d3ab0ad3171934296f5194b162ed8e50f21b406b39000d",
+      "candidate_sha256": "1eadfe49b39c47c12d7d7fefcc56dc8e3d93c8a7a4ed71e6c832a97b002e48db",
+      "author_metadata_sha256": "35ddd2981864f683140d1795e67efa6cb8987bc5e7be8353294a916551288222",
+      "run_manifest_sha256": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-14-to-15-01",
+          "files": {
+            "candidates.json": "1eadfe49b39c47c12d7d7fefcc56dc8e3d93c8a7a4ed71e6c832a97b002e48db",
+            "coverage.json": "41c044725c1ab961d590975efd0467afb23bc11fdb6d01f9f8cf8b89f41133aa",
+            "collection-log.jsonl": "8ac365587bdd17fc53a2457bb231e693e16c5383558cf678ceca45e97c5d1898",
+            "screening-log.jsonl": "6e41797b704e73b1995a57773cccc8fb1e326dc047765bedd6556b26eb02d7e2",
+            "inputs/manifest.json": "33be0e14fab90e864fcf08fd33b7b5e7f713c0bcc8781dbdd5e024251f1f7bb4",
+            "inputs/sources.json": "02ef1b229037e270f6bcf4d75c7cea693cee7410eeb429bc19f51b4a99db2112",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "1eadfe49b39c47c12d7d7fefcc56dc8e3d93c8a7a4ed71e6c832a97b002e48db",
+          "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+          "screening_log_sha256": "ea1572ff9bf8c623b8d3ab0ad3171934296f5194b162ed8e50f21b406b39000d"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "35ddd2981864f683140d1795e67efa6cb8987bc5e7be8353294a916551288222",
+          "audit": {
+            "path": "reports/runs/2026-10-14-to-15-01/screening-log.jsonl",
+            "sha256": "6e41797b704e73b1995a57773cccc8fb1e326dc047765bedd6556b26eb02d7e2"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "f35caf77e74cd4c55bf4dba19095c9432ed6e4efa2c37e30e5cee9c081a8a9e1"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 197,
+  "author_available_count": 209,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -1883,8 +1927,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 542,
-      "publisher_verified_inventory_count": 542,
+      "candidate_count": 591,
+      "publisher_verified_inventory_count": 591,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -1993,6 +2037,15 @@
           "journal": "Nature",
           "candidate_count": 17,
           "publisher_verified_inventory_count": 17,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "Nature",
+          "candidate_count": 50,
+          "publisher_verified_inventory_count": 50,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
         }
@@ -2112,13 +2165,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1234,
-      "publisher_verified_inventory_count": 1232,
+      "candidate_count": 1278,
+      "publisher_verified_inventory_count": 1276,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2227,6 +2289,15 @@
           "journal": "NC",
           "candidate_count": 24,
           "publisher_verified_inventory_count": 24,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "NC",
+          "candidate_count": 45,
+          "publisher_verified_inventory_count": 45,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
         }
@@ -2346,13 +2417,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 23,
-      "publisher_verified_inventory_count": 23,
+      "candidate_count": 24,
+      "publisher_verified_inventory_count": 24,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2463,13 +2543,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "NCS",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 67,
-      "publisher_verified_inventory_count": 67,
+      "candidate_count": 69,
+      "publisher_verified_inventory_count": 69,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2580,13 +2669,22 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "PRX",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 565,
-      "publisher_verified_inventory_count": 565,
+      "candidate_count": 577,
+      "publisher_verified_inventory_count": 577,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2697,13 +2795,22 @@
           "publisher_verified_inventory_count": 20,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "PRL",
+          "candidate_count": 39,
+          "publisher_verified_inventory_count": 39,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "SA",
-      "candidate_count": 530,
-      "publisher_verified_inventory_count": 530,
+      "candidate_count": 576,
+      "publisher_verified_inventory_count": 576,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2814,13 +2921,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "SA",
+          "candidate_count": 46,
+          "publisher_verified_inventory_count": 46,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 574,
-      "publisher_verified_inventory_count": 574,
+      "candidate_count": 578,
+      "publisher_verified_inventory_count": 578,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2931,15 +3047,24 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "PNAS",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 80,
-      "publisher_verified_inventory_count": 80,
+      "candidate_count": 84,
+      "publisher_verified_inventory_count": 84,
       "candidate_inventory_complete": true,
-      "metadata_reconciliation_complete": true,
+      "metadata_reconciliation_complete": false,
       "windows": [
         {
           "window_start": "2026-09-01",
@@ -3048,13 +3173,22 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "CP",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 301,
-      "publisher_verified_inventory_count": 301,
+      "candidate_count": 315,
+      "publisher_verified_inventory_count": 315,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3165,13 +3299,22 @@
           "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "PRResearch",
+          "candidate_count": 22,
+          "publisher_verified_inventory_count": 22,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 392,
-      "publisher_verified_inventory_count": 392,
+      "candidate_count": 401,
+      "publisher_verified_inventory_count": 401,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3282,13 +3425,22 @@
           "publisher_verified_inventory_count": 23,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "PRE",
+          "candidate_count": 11,
+          "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 83,
-      "publisher_verified_inventory_count": 83,
+      "candidate_count": 87,
+      "publisher_verified_inventory_count": 87,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3399,13 +3551,22 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "Chaos",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 57,
-      "publisher_verified_inventory_count": 57,
+      "candidate_count": 59,
+      "publisher_verified_inventory_count": 59,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3471,40 +3632,51 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-14",
+          "window_end": "2026-10-15",
+          "journal": "NP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 4711,
+  "candidate_count": 4902,
   "screening_counts": {
-    "excluded": 4514,
-    "core": 176,
-    "transferable_application": 21,
+    "excluded": 4693,
+    "core": 186,
+    "transferable_application": 23,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 197
+    "included": 209
   },
-  "published_count": 157,
-  "accepted_count": 40,
+  "published_count": 167,
+  "accepted_count": 42,
   "latest_update": {
-    "run": "reports/runs/2026-10-13-to-14-01",
-    "reviewed_at": "2026-10-14T02:08:15.584976+00:00",
-    "newly_included_count": 3,
+    "run": "reports/runs/2026-10-14-to-15-01",
+    "reviewed_at": "2026-10-15T00:52:33.015394+00:00",
+    "newly_included_count": 12,
     "newly_included_dois": [
-      "10.1063/5.0347841",
-      "10.1103/g7f3-85bn",
-      "10.1103/g8rc-615y"
+      "10.1038/s41467-026-78449-1",
+      "10.1038/s41586-026-11154-7",
+      "10.1063/5.0332769",
+      "10.1063/5.0356660",
+      "10.1103/rvlj-fmf9",
+      "10.1103/tr4w-yrs1",
+      "10.1103/w3lf-h7nt",
+      "10.1103/wlyc-rtgs",
+      "10.1126/sciadv.ady6737",
+      "10.1126/sciadv.aed2474",
+      "10.1126/sciadv.aed7447",
+      "10.1126/sciadv.aee5162"
     ],
-    "accepted_to_published_count": 8,
+    "accepted_to_published_count": 1,
     "accepted_to_published_dois": [
-      "10.1103/33lg-7kmc",
-      "10.1103/3v5l-pgzz",
-      "10.1103/br97-fw3p",
-      "10.1103/t1sg-qhhf",
-      "10.1103/v1vq-skr1",
-      "10.1103/v5cl-krph",
-      "10.1103/y6ss-j5qv",
-      "10.1103/ys6r-4mbf"
+      "10.1103/zrk4-g7fj"
     ]
   },
   "candidate_inventory_complete": false,
@@ -3515,6 +3687,971 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1126/sciadv.aee5162",
+      "url": "https://doi.org/10.1126/sciadv.aee5162",
+      "title": "The network structure of the urban revolution",
+      "authors": [
+        "Giacomo Benati",
+        "Sergi Lozano"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "fb78b37aa9ce8ea5225f1f93fcff81daa0e4885b0d824263848c8f7af661b581",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee5162",
+      "author_retrieved_at": "2026-10-15T00:49:57.992877+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.visible_directory_card_date",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "fec2719e37d88118f1877a295b0efc4d6f200c2e4cee5039751bc66c9a657410",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aee5162"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Reconstructs Uruk transport-network evolution from dendritic rivers to modules and long-range shortcuts, explaining small-world organization and reduced broker dependence.",
+      "note_zh": "重建Uruk运输网络从河流树形结构到模块与长距捷径的演化，解释小世界组织与中间人依赖下降。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b0cb3eddc29a8a457e2668a20cff5bac96970a53a4f794f2040642e42ae5bd24",
+      "input_sha256": "f843268333935b472f4b2db1057f0afc95e9a91fb5c8acb833746faa3835ca4f",
+      "material_sha256": "fec2719e37d88118f1877a295b0efc4d6f200c2e4cee5039751bc66c9a657410",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "fec2719e37d88118f1877a295b0efc4d6f200c2e4cee5039751bc66c9a657410",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": "SA",
+      "evidence": [
+        "Uruk transport evolved from dendritic rivers to regional modules and long-distance shortcuts, reducing broker dependence while combining local cohesion and global reach."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee5162",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee5162",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1126/sciadv.aed7447",
+      "url": "https://doi.org/10.1126/sciadv.aed7447",
+      "title": "Photomapping electrically coupled networks of the mature thalamus and cortex",
+      "authors": [
+        "Mitchell J. Vaughn",
+        "David S. Uygun",
+        "Radhika Basheer",
+        "Kevin J. Bender",
+        "Julie S. Haas"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "a4c657db2d945cb47627c91f3dc79e138b4507f2de61ea8cdb1d516f6af9ea07",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aed7447",
+      "author_retrieved_at": "2026-10-15T00:49:55.982353+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.visible_directory_card_date",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "a7f1315ebfda6c3b632df3531b2713734c71653ffcc2c19b7e47f79ec004d21d",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aed7447"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "Uses focal photostimulation and spike timing to identify electrical-synapse strengths and map thalamic and cortical coupling networks.",
+      "note_zh": "以局部光刺激与放电时序识别电突触强度，重建丘脑及皮层电耦合网络。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8d6726b7a8c6abc81d37132cd7b611a3b5831b1f756a73a1e83170151f46434e",
+      "input_sha256": "81ae367b3b93aab39321a42730980d48ba4dd5163634320640224e20f30d3580",
+      "material_sha256": "a7f1315ebfda6c3b632df3531b2713734c71653ffcc2c19b7e47f79ec004d21d",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "a7f1315ebfda6c3b632df3531b2713734c71653ffcc2c19b7e47f79ec004d21d",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": "SA",
+      "evidence": [
+        "Focal photostimulation and spike-timing measurements map electrical-synapse strength, extent and cross-subtype connectivity in living neural networks."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aed7447",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aed7447",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1126/sciadv.aed2474",
+      "url": "https://doi.org/10.1126/sciadv.aed2474",
+      "title": "An inspiration-off attractor supports the robust and flexible control of breathing",
+      "authors": [
+        "Nicholas E. Bush",
+        "Luiz M. Oliveira",
+        "Zachary T. Glovak",
+        "Jan-Marino Ramirez"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "056c0e176f66a45cabaef28c6de92c6288aaab97525baa786a46eb97718ca4f8",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aed2474",
+      "author_retrieved_at": "2026-10-15T00:49:50.501444+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.visible_directory_card_date",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "ec7e7816d05221391d5b06edc907d5916dd4db0015690712b0406b182b493464",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aed2474"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_resilience",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Combines respiratory-circuit perturbations and a generative dynamical model to explain rhythm control through transient stabilization of an expiration attractor.",
+      "note_zh": "结合呼吸回路干预与生成动力学模型，解释抑制输入通过暂时稳定呼气吸引区控制网络节律。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "db20acab90b5d4ffa72242b49ad5f4969068fc87b7ed456b1fe2f595dce00c13",
+      "input_sha256": "8f95404b6f417deed2a92f5777d5cc2714b5ca20fa835c853b3a9c025e41f63c",
+      "material_sha256": "ec7e7816d05221391d5b06edc907d5916dd4db0015690712b0406b182b493464",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "ec7e7816d05221391d5b06edc907d5916dd4db0015690712b0406b182b493464",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": "SA",
+      "evidence": [
+        "Neural recordings and inhibitory perturbations show transient stabilization of an expiration attractor governing robust respiratory-network control."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aed2474",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aed2474",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1126/sciadv.ady6737",
+      "url": "https://doi.org/10.1126/sciadv.ady6737",
+      "title": "How inequality became durable before states: Evidence from 6000 years in the Central Plain of China",
+      "authors": [
+        "Dongdong Li",
+        "Suwei Guo",
+        "Xingcan Chen"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5a0814e29378fb4ca978d270e54a4ef1f2690627b07061cf245ced3ad438cbc9",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.ady6737",
+      "author_retrieved_at": "2026-10-15T00:49:44.773220+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.visible_directory_card_date",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "01b477436679e6f915e5e05f9f2826483462f3b49d3a961bed89e2c26fefc681",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.ady6737"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Uses long-term mortuary evidence to examine how relational positions and network reorganization shape enduring inequality before states.",
+      "note_zh": "以长期墓葬证据考察社会关系网络位置与重组如何形成国家出现前的持久不平等。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8aabc6b309ed8d50f1a41e448be263a33a2369a87c25ac308e0f23c12ec4ece4",
+      "input_sha256": "60e7c6af7e63f98a98551d3a4b913c9b593879e0c8b5d02aec648aaf60af0fa4",
+      "material_sha256": "01b477436679e6f915e5e05f9f2826483462f3b49d3a961bed89e2c26fefc681",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "01b477436679e6f915e5e05f9f2826483462f3b49d3a961bed89e2c26fefc681",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": "SA",
+      "evidence": [
+        "Relational network positions structure access to labor, resources and symbolic capital; wealth and conflict reorganize connections before states institutionalize disparities."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.ady6737",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.ady6737",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/zrk4-g7fj",
+      "url": "https://doi.org/10.1103/zrk4-g7fj",
+      "title": "Emergent dilemma and periodic oscillation in behavioral epidemics with nonlinear feedback",
+      "authors": [
+        "Longzhao Liu",
+        "Hongwei Zheng",
+        "Yajing Hao",
+        "Qun Wang",
+        "Xin Wang",
+        "Shaoting Tang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "693bb3bd85007816b61c501dab49b048e5b70ac3597b4342ed0c77a07f44f5cc",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fzrk4-g7fj",
+      "author_retrieved_at": "2026-10-15T00:49:59.915589+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-02",
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "5a1ef8121d707b17866afbca82ad5e8f8ef084c41a98e76ce40156e1a6af40d1",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/zrk4-g7fj"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Nonlinear behavioral feedback creates intervention-abandonment thresholds and epidemic oscillations, with robustness checks in networked populations.",
+      "note_zh": "行为与传播的非线性反馈产生防护放弃阈值和周期性疫情，并在网络种群中检验稳健性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "3a63f68aca8f7ff700bfa9689058c31eff3d0531e3bc72a044c35b00cd257bc9",
+      "input_sha256": "a0c5a963f1f2d9952c96462075ddc05e253ade9f05c94a5e1f0f3fdb1412c991",
+      "material_sha256": "5a1ef8121d707b17866afbca82ad5e8f8ef084c41a98e76ce40156e1a6af40d1",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "5a1ef8121d707b17866afbca82ad5e8f8ef084c41a98e76ce40156e1a6af40d1",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": null,
+      "evidence": [
+        "Nonlinear behavioral feedback creates abrupt intervention abandonment and social-influence-driven epidemic oscillations, robust in networked populations."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fzrk4-g7fj",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/zrk4-g7fj",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-02",
+        "published_date": "2026-10-14",
+        "previous_run": "reports/runs/2026-10-01-to-05-01",
+        "source_run": "reports/runs/2026-10-14-to-15-01",
+        "audit_sha256": "318d504636a5c2817c74f282e2541a7af76082dce8cad14f9fc6ebf7944ae88a",
+        "previous_assessment_sha256": "5a07f677445510c0125dc39a02a5e3b899ff8385d8e6f053b186383b2e16cf10",
+        "assessment_sha256": "3a63f68aca8f7ff700bfa9689058c31eff3d0531e3bc72a044c35b00cd257bc9"
+      }
+    },
+    {
+      "doi": "10.1103/wlyc-rtgs",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/wlyc-rtgs",
+      "title": "Promotion of cooperation in deme-structured populations with growth-merging dynamics",
+      "authors": [
+        "Damien Ribiére",
+        "Alia Abbara",
+        "Anne-Florence Bitbol"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e8ee29324038f180110cc7c593c8d31e8e87c0003cb54b3c83cec82cf000ac8c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fwlyc-rtgs",
+      "author_retrieved_at": "2026-10-15T00:49:54.065618+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-14",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-14",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "b45b0bced09e97a2289072243625872037ca71b59cb3f7d44946927d691e33a4",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/wlyc-rtgs"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Derives conditions for hard selection to promote cooperation and fixation in deme-structured populations undergoing growth, merging and dilution.",
+      "note_zh": "解析生长、合并与稀释的团体结构种群中，硬选择促进合作和固定的条件。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "2e86e9235a88e9a0b52a92cc924672574aaedac0a2d11b7b784e96c3724b18d7",
+      "input_sha256": "0cbd0b6d3f725f72f5e4e287cbda32458dd9e4afb0704cdb90510f0ecd4b1595",
+      "material_sha256": "b45b0bced09e97a2289072243625872037ca71b59cb3f7d44946927d691e33a4",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "b45b0bced09e97a2289072243625872037ca71b59cb3f7d44946927d691e33a4",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": null,
+      "evidence": [
+        "Hard-selection growth-merging cycles on fully connected demes yield analytical cooperation and fixation criteria under weak selection."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fwlyc-rtgs",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/wlyc-rtgs",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/w3lf-h7nt",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt",
+      "title": "Density-selected topological pathways in the melting of single-particle-thick stripes",
+      "authors": [
+        "José Rafael Bordin"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "93f340f0111a5b0f1fc9eb6955fd84ba0d713b66b16499426ec029d3d164b701",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fw3lf-h7nt",
+      "author_retrieved_at": "2026-10-15T00:49:52.283233+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-14",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-14",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Graph observables reveal connectivity reorganization during stripe melting, distinguishing finite filament clusters from spanning fluid networks.",
+      "note_zh": "以图观测量揭示条纹熔化的连接重组，区分有限丝状团簇与贯通流体网络。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "17fb3583538c3218bcfc79d83f5783a9c680cc97abe1e5a186ac34093c6f02c8",
+      "input_sha256": "c903e7fdeaf108ffe0aee1a340aff87c7995f2f7715630654d5102a726a6efd3",
+      "material_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": null,
+      "evidence": [
+        "Graph observables distinguish fragmented filament clusters from system-spanning fluid networks during density-dependent stripe melting."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fw3lf-h7nt",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/tr4w-yrs1",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/tr4w-yrs1",
+      "title": "Noise color shapes power grid stochastic responses",
+      "authors": [
+        "Longxin Yang",
+        "Xiaozhu Zhang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "1f5ac8b1d836976d70ef26ab6275c3ddf6371f934abc14487ae30c94436f2712",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Ftr4w-yrs1",
+      "author_retrieved_at": "2026-10-15T00:49:48.563533+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-14",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-14",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "c8642f6edf909e74f8bdc169d31ff4e31cd7810ada36756fb513f750296a39c3",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/tr4w-yrs1"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Tests how noise spectral color changes stationarity and distribution of collective power-grid frequency responses, including topology robustness.",
+      "note_zh": "检验噪声谱色怎样改变电网集体频率响应的平稳性与分布，并核验拓扑稳健性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "217051dc786a60bbfb34803551f6a1f6c160df71a7569fddd989d8776d072b09",
+      "input_sha256": "5ca0c19822deffe63744b2841621b70e7b7475a22c2b84ac7210726b365b2784",
+      "material_sha256": "c8642f6edf909e74f8bdc169d31ff4e31cd7810ada36756fb513f750296a39c3",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c8642f6edf909e74f8bdc169d31ff4e31cd7810ada36756fb513f750296a39c3",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": null,
+      "evidence": [
+        "Tunable colored noise produces topology-robust transitions in collective power-grid frequency statistics near spectral exponent one."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Ftr4w-yrs1",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/tr4w-yrs1",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/rvlj-fmf9",
+      "url": "https://doi.org/10.1103/rvlj-fmf9",
+      "title": "Nested Hyperedges Promote the Onset of Collective Transitions but Suppress Explosive Behavior",
+      "authors": [
+        "Federico Malizia",
+        "Andrés Guzmán",
+        "Federico Battiston",
+        "István Z. Kiss"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c50df2f56f623917361a35a726278462a6c8d18177762f634908ce94b1070eef",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Frvlj-fmf9",
+      "author_retrieved_at": "2026-10-15T00:50:01.719325+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "2dee20c817b99c79137657a72b68b9397a115ebde70e9ad6579893faf3fdf800",
+        "sources": [
+          "https://api.crossref.org/works/10.1103%2Frvlj-fmf9"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Nested hyperedges advance collective onset while internal pathway redundancy suppresses bistability and explosive transitions.",
+      "note_zh": "嵌套超边使集体行为更早启动，但内部通路冗余削弱双稳态和爆炸式转变。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "c074f9dd1dbdcebc8d5d727b20162ab436d9ae07e1f135cea72cf2bdb65aefb1",
+      "input_sha256": "c83c42034768c330b7e6eb35488d965f1fdf7dd49fd1c9a9f4e88d8164a216f8",
+      "material_sha256": "2dee20c817b99c79137657a72b68b9397a115ebde70e9ad6579893faf3fdf800",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "2dee20c817b99c79137657a72b68b9397a115ebde70e9ad6579893faf3fdf800",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": "PRL",
+      "evidence": [
+        "Nested hyperedges redirect contagion internally, lowering onset while making dyadic and triadic pathways redundant and smoothing collective transitions."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Frvlj-fmf9",
+      "evidence_url": "https://api.crossref.org/works/10.1103%2Frvlj-fmf9",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0356660",
+      "url": "https://doi.org/10.1063/5.0356660",
+      "title": "Competitive spreading dynamics under sentinel intervention in higher-order community networks",
+      "authors": [
+        "Hao Peng",
+        "Zidi Wang",
+        "Yanggang Cheng",
+        "Bo Zhang",
+        "Ming Zhong",
+        "Shenghong Li",
+        "Dandan Zhao",
+        "Wei Wang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "22dad3e0c126c59318bf05dabec9dff29a8821f075d5118c9e0647fd46816d5a",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0356660",
+      "author_retrieved_at": "2026-10-15T00:49:46.764127+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "c1751572a492764a708e8532b71841f0b9681935061f20bd42de76acea8360db",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0356660"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Competitive SIS spreading on a two-community simplicial complex links higher-order reinforcement and sentinel intervention to persistence, invasion and hysteresis.",
+      "note_zh": "两社区单纯复形中的竞争SIS传播，揭示高阶强化与哨兵干预如何改变局域持续、侵入和滞回。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "0ca615ed9a71cc1b88fc9cf0b4361cebc416f4ff6ce3cf5cfc018e47d498c7ba",
+      "input_sha256": "b63511f5e2043d69efc6fb22446db423ded63c7c418fde5124e771555cf684cc",
+      "material_sha256": "c1751572a492764a708e8532b71841f0b9681935061f20bd42de76acea8360db",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c1751572a492764a708e8532b71841f0b9681935061f20bd42de76acea8360db",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": null,
+      "evidence": [
+        "Sentinel-triggered competitive spreading on a two-community simplicial complex produces localized persistence, network-wide invasion and intervention-dependent hysteresis."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0356660",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0356660",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0332769",
+      "url": "https://doi.org/10.1063/5.0332769",
+      "title": "Evolving scale-free networks and node-based random edge deletion",
+      "authors": [
+        "Everton R. Constantino",
+        "Alberto Saa"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c9fabc5329770f2489e4be41a672fbf49d064033da7042ea36b84b2bc92a5e9c",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0332769",
+      "author_retrieved_at": "2026-10-15T00:49:42.873504+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "58bd0f2cc8eac414cf49c8b7e0751a2f4721fb187bbd72d53a84a5275e35900b",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0332769"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Contrasts uniform edge deletion with node-based deletion to derive stationary degree distributions and tail regimes in growing networks.",
+      "note_zh": "比较均匀边删除与节点驱动边删除，解析生长网络稳态度分布及尾部形态转变。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "d54b8ad680f1ff60bd33206830a1af490cffc8b3fd4307c3676e20f16d9bf23f",
+      "input_sha256": "368f3529f96192d0f32ef6dc1ad0371258af8ad34bb13a341ef211268cc0ded5",
+      "material_sha256": "58bd0f2cc8eac414cf49c8b7e0751a2f4721fb187bbd72d53a84a5275e35900b",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "58bd0f2cc8eac414cf49c8b7e0751a2f4721fb187bbd72d53a84a5275e35900b",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": null,
+      "evidence": [
+        "Node-based deletion preserves scale-free degrees more readily than uniform edge deletion; stationary solutions reveal power-law, exponential and critical stretched-exponential regimes."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0332769",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0332769",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41586-026-11154-7",
+      "url": "https://doi.org/10.1038/s41586-026-11154-7",
+      "title": "Educational intervention can rewire village social networks",
+      "authors": [
+        "Papamichalis, Marios",
+        "Forastiere, Laura",
+        "Airoldi, Edoardo M.",
+        "Christakis, Nicholas A."
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "2b647044f2b526cc5b1240a4c006042018fff9166011aca82503c7a53f589e6b",
+      "author_source_url": "https://www.nature.com/articles/s41586-026-11154-7",
+      "author_retrieved_at": "2026-10-15T00:50:59.878Z",
+      "author_basis": "Actual explicit official citation_author; primary h1, DOI and whitelist ISSN matched",
+      "journal": "Nature",
+      "journal_short": "Nature",
+      "issns": [
+        "1476-4687"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.directory_item_date",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Actual specific official type or reviewed journal-specific heading mapping",
+        "sources": [
+          "https://www.nature.com/articles/s41586-026-11154-7"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Randomized health education reveals dosage-dependent formation, persistence and dissolution of village ties despite stable aggregate degree distributions.",
+      "note_zh": "随机健康教育干预揭示覆盖剂量如何改变村落关系的形成、维持与断裂；总体度分布稳定仍可掩盖重连。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "341f712c0ac1005ff00f18a6040e1b7125cb97a9ded673d101f9fbb457f4a234",
+      "input_sha256": "eb0b3dfd7c6433379cd5446111f0efec8cb57366d66192889d4f5aa30233aa8a",
+      "material_sha256": "4d4627ddc44766b1195a6350b1fe743cdcf70e468a3009383d31234accc2b6b2",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "4d4627ddc44766b1195a6350b1fe743cdcf70e468a3009383d31234accc2b6b2",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": "Nature",
+      "evidence": [
+        "Randomized health education rewires advice, friendship and financial ties for years, with dosage-dependent effects despite stable aggregate degree distributions."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41586-026-11154-7",
+      "evidence_url": "https://www.nature.com/articles/s41586-026-11154-7",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-78449-1",
+      "url": "https://doi.org/10.1038/s41467-026-78449-1",
+      "title": "Whole-genome sequencing reveals inter-household networks of gut-colonising ESBL-producing Escherichia coli in two rural Malawian districts",
+      "authors": [
+        "O’Ferrall, Angus M.",
+        "Lally, David",
+        "Makaula, Peter",
+        "Namacha, Gladys",
+        "Lewis, Joseph M.",
+        "Musicha, Patrick",
+        "Goodman, Richard N.",
+        "Allman, Ellie",
+        "Moyo, Sabrina J.",
+        "Waddington, Claire S.",
+        "Kayuni, Sekeleghe A.",
+        "Feasey, Nicholas A.",
+        "Musaya, Janelisa",
+        "Stothard, J. Russell",
+        "Roberts, Adam P."
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "57c948250b1f9e947e22c11fa68bca162199505699129af4d3597710e0008081",
+      "author_source_url": "https://www.nature.com/articles/s41467-026-78449-1",
+      "author_retrieved_at": "2026-10-15T00:50:59.949Z",
+      "author_basis": "Actual explicit official citation_author; primary h1, DOI and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-10-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-14",
+        "basis": "publisher.directory_item_date",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-14",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Actual specific official type or reviewed journal-specific heading mapping",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-78449-1"
+        ]
+      },
+      "categories": [
+        "network_inference",
+        "network_spreading"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Combines longitudinal strain genomes and household locations to infer community and rural–urban transmission links, without treating similarity as proven directional transmission.",
+      "note_zh": "结合纵向菌株基因组与住户位置推断社区及城乡传播联系；不将相近菌株视为已证实的方向性传播。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "69ebad16be76575c449f1df5dc86a48116eb9be9d3e443b126be2a60e991a851",
+      "input_sha256": "39f949685d7efd4d3ca953633f70b80ac3da8b5a555210ebb35b10d59d4a3080",
+      "material_sha256": "9a783d792b4264a197c925335a78688204b28dc37d688bea53c9bd0fa3f56900",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "9a783d792b4264a197c925335a78688204b28dc37d688bea53c9bd0fa3f56900",
+      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
+      "featured": "NC",
+      "evidence": [
+        "Longitudinal genomes and household maps infer short-distance multi-household transmission links and rural-urban lineage connections."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78449-1",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-78449-1",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/ys6r-4mbf",
       "url": "https://doi.org/10.1103/ys6r-4mbf",
@@ -7906,88 +9043,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs42005-026-02894-z",
       "evidence_url": "https://www.nature.com/articles/s42005-026-02894-z",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/zrk4-g7fj",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/zrk4-g7fj",
-      "title": "Emergent dilemma and periodic oscillation in behavioral epidemics with nonlinear feedback",
-      "authors": [
-        "Longzhao Liu",
-        "Hongwei Zheng",
-        "Yajing Hao",
-        "Qun Wang",
-        "Xin Wang",
-        "Shaoting Tang"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "feb2f1bf00610d7f0e59c9c3dda540998165b25c3e1b99d0cd49344ee9c674d1",
-      "author_source_url": "https://journals.aps.org/prresearch/accepted/10.1103/zrk4-g7fj",
-      "author_retrieved_at": "2026-10-05T06:48:47.792679+00:00",
-      "author_basis": "publisher visible full accepted-paper byline; normal browser; DOI/title/whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-10-02",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-02",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "publisher_dates": [
-          "2026-10-02"
-        ],
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/zrk4-g7fj"
-        ]
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-02",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "5a1ef8121d707b17866afbca82ad5e8f8ef084c41a98e76ce40156e1a6af40d1",
-        "basis": "明确摘要提出行为传播模型、临界阈值及Hopf分析，并验证网络人群结果；无特殊类型线索。",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/zrk4-g7fj"
-        ]
-      },
-      "categories": [
-        "network_spreading",
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Nonlinear behavioral feedback and social influence produce abrupt intervention abandonment and epidemic oscillations, with robustness tested in networked populations.",
-      "note_zh": "非线性行为反馈和社会影响可导致干预行为突降与疫情周期波动，并在网络化群体中检验其稳健性。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "5a07f677445510c0125dc39a02a5e3b899ff8385d8e6f053b186383b2e16cf10",
-      "input_sha256": "22784b0660e95b4c406c73462becad7a4b2af2ac75e667bbf04ee4b826fae044",
-      "material_sha256": "5a1ef8121d707b17866afbca82ad5e8f8ef084c41a98e76ce40156e1a6af40d1",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "5a1ef8121d707b17866afbca82ad5e8f8ef084c41a98e76ce40156e1a6af40d1",
-      "rule_sha256": "e73b62366608c44854fc4d8a1abb2c55b762ef9baafaa6c3520b0ce1c6185c18",
-      "featured": null,
-      "evidence": [
-        "Nonlinear behavioral feedback and social influence create epidemic thresholds, intervention-abandonment dilemmas and oscillations, tested in networked populations."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fzrk4-g7fj",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/zrk4-g7fj",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -19461,9 +20516,122 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "cc87e2f2fc9ba762fe96ff278c79f061d6ce1b9350292f1c37a5f72b07858ed9"
+    },
+    {
+      "current_run": "reports/runs/2026-10-14-to-15-01",
+      "candidate_sha256": "1eadfe49b39c47c12d7d7fefcc56dc8e3d93c8a7a4ed71e6c832a97b002e48db",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5"
+      },
+      "counts": {
+        "in_window": 231,
+        "newly_reviewed": 191,
+        "historically_reviewed": 78,
+        "state_updates": 27,
+        "categories": {
+          "excluded": 218,
+          "core": 11,
+          "transferable_application": 2
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "318d504636a5c2817c74f282e2541a7af76082dce8cad14f9fc6ebf7944ae88a"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41586-026-11154-7",
+      "recommended_on": "2026-10-15",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-14-to-15-01",
+      "publication_sha256": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+      "assessment_sha256": "341f712c0ac1005ff00f18a6040e1b7125cb97a9ded673d101f9fbb457f4a234",
+      "input_sha256": "eb0b3dfd7c6433379cd5446111f0efec8cb57366d66192889d4f5aa30233aa8a",
+      "evidence_sha256": "4d4627ddc44766b1195a6350b1fe743cdcf70e468a3009383d31234accc2b6b2",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-15T00:59:28.794970+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41586-026-11154-7",
+        "title": "Educational intervention can rewire village social networks",
+        "sha256": "033288cf9068b511ce554623b3a8c59467ff55f7ba8af395be3b5639e88cc35e",
+        "version": "Publisher-provided online PDF; article page Published 14 October 2026. PDF front matter retains an unfilled online-date placeholder.",
+        "source_url": "https://www.nature.com/articles/s41586-026-11154-7.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 28,
+        "read_scope": "Complete 28-page publisher PDF: main text, Figures 1–4 and captions, references, Methods, Extended Data Figures 1–4 and Tables 1–6, and the embedded seven-page Reporting Summary. Rendered pages 3, 10 and 12–28 visually inspected, including tables and form fields missing from text extraction. Separate Supplementary Information and peer-review file not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-15T00:59:28.794970+00:00"
+      },
+      "question": {
+        "zh": "干预改变行为，也会改变传播的网络吗？",
+        "en": "Does an intervention also rewire its network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络从干预的固定背景变成了需要测量的结果：在110个村落的随机健康教育试验中，总体度分布稳定，关系却随干预覆盖程度选择性地形成与断裂。",
+          "可借鉴的是分析顺序：先跟踪哪些边改变，再区分自己与邻居的干预暴露，最后检验变化是否跨关系类型、跨时间持续。只报告平均度，可能错过最有意义的变化。"
+        ],
+        "en": [
+          "Today’s pick treats the network as an intervention outcome. In a randomized health-education trial across 110 villages, aggregate degree distributions remained stable while ties selectively formed and dissolved with treatment coverage.",
+          "Borrow the analysis sequence: track changing edges, distinguish personal and neighboring exposure, then test persistence across relationship layers and time. Mean degree alone can miss the informative changes."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从统计量走到边",
+            "en": "Move from summaries to edges"
+          },
+          "text": {
+            "zh": "分别检查关系形成、维持和断裂，辨认被总体平均掩盖的连接重组。",
+            "en": "Separate tie formation, persistence and dissolution to reveal rewiring hidden by aggregate averages."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把干扰纳入设计",
+            "en": "Design for interference"
+          },
+          "text": {
+            "zh": "两阶段随机化配合网络暴露分组，区分直接与溢出效应，并明确村间无干扰假设。",
+            "en": "Pair two-stage randomization with exposure groups to distinguish direct and spillover effects, stating the no-between-village-interference assumption."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检验持续与稳健性",
+            "en": "Check persistence and robustness"
+          },
+          "text": {
+            "zh": "比较健康咨询、友谊和财务关系及后续随访，结合多重检验约束机制解释。",
+            "en": "Compare advice, friendship and financial ties over follow-up, using multiple-testing checks to constrain mechanistic interpretations."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "社会网络、网络干预、传播与因果推断研究者。",
+        "en": "Researchers in social networks, interventions, spreading and causal inference."
+      },
+      "reading_caveat": {
+        "zh": "已读28页出版社PDF，含方法、扩展图表和内附报告摘要；未读独立SI，未复现。网络结果是原试验二次分析，剂量分组带探索性；自报关系及单地区样本限制外推。AI编辑荐读。",
+        "en": "Read all 28 PDF pages, including Methods, Extended Data and embedded Reporting Summary; separate SI not read, no reproduction. Network outcomes are secondary analysis with exploratory dose grouping; self-reported ties and one regional setting limit generalization. AI editorial guidance."
+      }
+    },
     {
       "doi": "10.1103/g8rc-615y",
       "recommended_on": "2026-10-14",
@@ -20850,6 +22018,84 @@
       }
     },
     {
+      "doi": "10.1038/s41586-026-11154-7",
+      "recommended_on": "2026-10-15",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-14-to-15-01",
+      "publication_sha256": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+      "assessment_sha256": "341f712c0ac1005ff00f18a6040e1b7125cb97a9ded673d101f9fbb457f4a234",
+      "input_sha256": "eb0b3dfd7c6433379cd5446111f0efec8cb57366d66192889d4f5aa30233aa8a",
+      "evidence_sha256": "4d4627ddc44766b1195a6350b1fe743cdcf70e468a3009383d31234accc2b6b2",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-15T00:59:28.794970+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41586-026-11154-7",
+        "title": "Educational intervention can rewire village social networks",
+        "sha256": "033288cf9068b511ce554623b3a8c59467ff55f7ba8af395be3b5639e88cc35e",
+        "version": "Publisher-provided online PDF; article page Published 14 October 2026. PDF front matter retains an unfilled online-date placeholder.",
+        "source_url": "https://www.nature.com/articles/s41586-026-11154-7.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 28,
+        "read_scope": "Complete 28-page publisher PDF: main text, Figures 1–4 and captions, references, Methods, Extended Data Figures 1–4 and Tables 1–6, and the embedded seven-page Reporting Summary. Rendered pages 3, 10 and 12–28 visually inspected, including tables and form fields missing from text extraction. Separate Supplementary Information and peer-review file not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-15T00:59:28.794970+00:00"
+      },
+      "question": {
+        "zh": "干预改变行为，也会改变传播的网络吗？",
+        "en": "Does an intervention also rewire its network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络从干预的固定背景变成了需要测量的结果：在110个村落的随机健康教育试验中，总体度分布稳定，关系却随干预覆盖程度选择性地形成与断裂。",
+          "可借鉴的是分析顺序：先跟踪哪些边改变，再区分自己与邻居的干预暴露，最后检验变化是否跨关系类型、跨时间持续。只报告平均度，可能错过最有意义的变化。"
+        ],
+        "en": [
+          "Today’s pick treats the network as an intervention outcome. In a randomized health-education trial across 110 villages, aggregate degree distributions remained stable while ties selectively formed and dissolved with treatment coverage.",
+          "Borrow the analysis sequence: track changing edges, distinguish personal and neighboring exposure, then test persistence across relationship layers and time. Mean degree alone can miss the informative changes."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从统计量走到边",
+            "en": "Move from summaries to edges"
+          },
+          "text": {
+            "zh": "分别检查关系形成、维持和断裂，辨认被总体平均掩盖的连接重组。",
+            "en": "Separate tie formation, persistence and dissolution to reveal rewiring hidden by aggregate averages."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把干扰纳入设计",
+            "en": "Design for interference"
+          },
+          "text": {
+            "zh": "两阶段随机化配合网络暴露分组，区分直接与溢出效应，并明确村间无干扰假设。",
+            "en": "Pair two-stage randomization with exposure groups to distinguish direct and spillover effects, stating the no-between-village-interference assumption."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检验持续与稳健性",
+            "en": "Check persistence and robustness"
+          },
+          "text": {
+            "zh": "比较健康咨询、友谊和财务关系及后续随访，结合多重检验约束机制解释。",
+            "en": "Compare advice, friendship and financial ties over follow-up, using multiple-testing checks to constrain mechanistic interpretations."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "社会网络、网络干预、传播与因果推断研究者。",
+        "en": "Researchers in social networks, interventions, spreading and causal inference."
+      },
+      "reading_caveat": {
+        "zh": "已读28页出版社PDF，含方法、扩展图表和内附报告摘要；未读独立SI，未复现。网络结果是原试验二次分析，剂量分组带探索性；自报关系及单地区样本限制外推。AI编辑荐读。",
+        "en": "Read all 28 PDF pages, including Methods, Extended Data and embedded Reporting Summary; separate SI not read, no reproduction. Network outcomes are secondary analysis with exploratory dose grouping; self-reported ties and one regional setting limit generalization. AI editorial guidance."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -20929,5 +22175,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "5a8b4128224e2c485697f03009f4910614f6b30f0bed9915e9db0566949d182a"
+  "daily_suggestions_sha256": "9ff10e1caf7634f393a12e11281cbbdefa6408fc81ec3f8f81aef5b5fe3c176c"
 }

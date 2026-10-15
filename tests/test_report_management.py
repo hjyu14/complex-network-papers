@@ -121,6 +121,27 @@ class FlatTests(unittest.TestCase):
         self.assertEqual(reconstructed,previous)
         self.assertEqual(digest(reconstructed),change['previous_metadata_sha256'])
 
+    def test_author_collection_handles_official_candidate_without_crossref(self):
+        import collect_authors
+        from urllib.error import HTTPError
+        w=screen.Workflow(self.child)
+        w.records['10.1/a']['crossref']=None
+        path=self.child/'author-metadata.json'
+        captured=[]
+        with patch('collect_authors.publication_workflow',return_value=w), \
+             patch('collect_authors.run_directory',return_value=self.child), \
+             patch('collect_authors.ROOT',self.f.root), \
+             patch('collect_authors.request',side_effect=HTTPError('fixture',403,'blocked',None,None)) as request, \
+             patch('collect_authors.time.sleep'), \
+             patch('collect_authors.save_metadata',side_effect=lambda w,p,r,old:captured.append(r)), \
+             patch.object(Path,'exists',lambda p:False if p==path else True), \
+             patch('sys.argv',['collect_authors','--run',str(self.child)]):
+            collect_authors.main()
+        self.assertEqual(request.call_count,2)
+        row=captured[0]['records']['10.1/a']
+        self.assertEqual(row['status'],'unresolved')
+        self.assertEqual([x['channel'] for x in row['attempts']],['crossref','publisher'])
+
     def test_pending_mode_cannot_replace_resolved_verdict(self):
         self.manifest['revisions'][0]['mode']='resolve_pending';self.save()
         with self.assertRaisesRegex(ValueError,'unresolved set'):publication_workflow(self.parent)

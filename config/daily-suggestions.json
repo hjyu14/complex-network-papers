@@ -680,6 +680,84 @@
         "zh": "已读7页正式全文，未读独立补充材料，未复现。框架针对长时稳态Markov跃迁网络；稠密图无普遍效率优势，形式对称性不意味着一般参数下的互易关系。AI编辑荐读。",
         "en": "Read the seven-page version of record, not separate supplements; no reproduction. The framework concerns long-time stationary Markov jump networks. Dense graphs have no general efficiency advantage, and formal symmetry does not imply reciprocity for arbitrary parameters. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1038/s41586-026-11154-7",
+      "recommended_on": "2026-10-15",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-14-to-15-01",
+      "publication_sha256": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+      "assessment_sha256": "341f712c0ac1005ff00f18a6040e1b7125cb97a9ded673d101f9fbb457f4a234",
+      "input_sha256": "eb0b3dfd7c6433379cd5446111f0efec8cb57366d66192889d4f5aa30233aa8a",
+      "evidence_sha256": "4d4627ddc44766b1195a6350b1fe743cdcf70e468a3009383d31234accc2b6b2",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-15T00:59:28.794970+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41586-026-11154-7",
+        "title": "Educational intervention can rewire village social networks",
+        "sha256": "033288cf9068b511ce554623b3a8c59467ff55f7ba8af395be3b5639e88cc35e",
+        "version": "Publisher-provided online PDF; article page Published 14 October 2026. PDF front matter retains an unfilled online-date placeholder.",
+        "source_url": "https://www.nature.com/articles/s41586-026-11154-7.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 28,
+        "read_scope": "Complete 28-page publisher PDF: main text, Figures 1–4 and captions, references, Methods, Extended Data Figures 1–4 and Tables 1–6, and the embedded seven-page Reporting Summary. Rendered pages 3, 10 and 12–28 visually inspected, including tables and form fields missing from text extraction. Separate Supplementary Information and peer-review file not read; no code execution or independent reproduction.",
+        "reviewed_at": "2026-10-15T00:59:28.794970+00:00"
+      },
+      "question": {
+        "zh": "干预改变行为，也会改变传播的网络吗？",
+        "en": "Does an intervention also rewire its network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络从干预的固定背景变成了需要测量的结果：在110个村落的随机健康教育试验中，总体度分布稳定，关系却随干预覆盖程度选择性地形成与断裂。",
+          "可借鉴的是分析顺序：先跟踪哪些边改变，再区分自己与邻居的干预暴露，最后检验变化是否跨关系类型、跨时间持续。只报告平均度，可能错过最有意义的变化。"
+        ],
+        "en": [
+          "Today’s pick treats the network as an intervention outcome. In a randomized health-education trial across 110 villages, aggregate degree distributions remained stable while ties selectively formed and dissolved with treatment coverage.",
+          "Borrow the analysis sequence: track changing edges, distinguish personal and neighboring exposure, then test persistence across relationship layers and time. Mean degree alone can miss the informative changes."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从统计量走到边",
+            "en": "Move from summaries to edges"
+          },
+          "text": {
+            "zh": "分别检查关系形成、维持和断裂，辨认被总体平均掩盖的连接重组。",
+            "en": "Separate tie formation, persistence and dissolution to reveal rewiring hidden by aggregate averages."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把干扰纳入设计",
+            "en": "Design for interference"
+          },
+          "text": {
+            "zh": "两阶段随机化配合网络暴露分组，区分直接与溢出效应，并明确村间无干扰假设。",
+            "en": "Pair two-stage randomization with exposure groups to distinguish direct and spillover effects, stating the no-between-village-interference assumption."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检验持续与稳健性",
+            "en": "Check persistence and robustness"
+          },
+          "text": {
+            "zh": "比较健康咨询、友谊和财务关系及后续随访，结合多重检验约束机制解释。",
+            "en": "Compare advice, friendship and financial ties over follow-up, using multiple-testing checks to constrain mechanistic interpretations."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "社会网络、网络干预、传播与因果推断研究者。",
+        "en": "Researchers in social networks, interventions, spreading and causal inference."
+      },
+      "reading_caveat": {
+        "zh": "已读28页出版社PDF，含方法、扩展图表和内附报告摘要；未读独立SI，未复现。网络结果是原试验二次分析，剂量分组带探索性；自报关系及单地区样本限制外推。AI编辑荐读。",
+        "en": "Read all 28 PDF pages, including Methods, Extended Data and embedded Reporting Summary; separate SI not read, no reproduction. Network outcomes are secondary analysis with exploratory dose grouping; self-reported ties and one regional setting limit generalization. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
