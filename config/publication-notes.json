@@ -574,12 +574,11 @@
     },
     "10.1103/92jk-cj5x": {
       "categories": [
-        "network_spreading",
-        "network_structure"
+        "network_spreading"
       ],
-      "note_en": "Correlated Ising spin clusters exhibit dimension-dependent percolation transitions and distinct fractal connectivity in embedded layers.",
-      "note_zh": "关联 Ising 自旋团簇呈现依赖维度的渗流转变及嵌入层中不同的分形连通性质。",
-      "assessment_sha256": "01a2cd12233edd4cf5120c7366e90397e6b05e73799541a20c07e2459e9cb49e"
+      "note_zh": "比较三维Ising、完整图及嵌入二维层的相关渗流，揭示连通簇转变与普适性的维度依赖。",
+      "note_en": "Comparing correlated percolation in the three-dimensional Ising model, complete graphs and embedded layers reveals dimension-dependent connectivity transitions and universality.",
+      "assessment_sha256": "b7067b2249bbd86a0653221b455a0feb88acce4bc0a5c827d92dc5f0b6d8bf49"
     },
     "10.1103/996v-4djr": {
       "categories": [
@@ -1121,9 +1120,9 @@
         "network_resilience",
         "network_spreading"
       ],
-      "note_en": "A tunable hyperedge failure threshold unifies limiting resilience models and determines how cumulative node failures change hypernetwork percolation.",
-      "note_zh": "以可调超边失效阈值统一高阶网络韧性模型，分析累积节点失效如何改变渗流和稳定性。",
-      "assessment_sha256": "b2adf3197e415ec8c9528baa6286adc08aa1a2763ccca6fe3c2be8270482bff8"
+      "note_zh": "以超边对节点失效比例的容忍阈值描述渐进解体，连接消息传递渗流理论与实证超网络韧性。",
+      "note_en": "A tolerance threshold for failed-node fractions controls hyperedge failure, linking message-passing percolation theory to empirical hypernetwork resilience.",
+      "assessment_sha256": "ec534d6b061dd6c80d7dba62aee7da991b193505b214a23e8164000af6d32fd8"
     },
     "10.1103/t3zw-cs6c": {
       "categories": [
@@ -1267,12 +1266,11 @@
     },
     "10.1103/m6s5-r1cq": {
       "categories": [
-        "network_spreading",
         "network_resilience"
       ],
-      "note_en": "Local two-queue gate control smooths jamming transitions under periodic inflow, with proposed applications to transport networks and packet routing.",
-      "note_zh": "周期性流入下，局域双队列门控使拥堵跃迁趋于连续；作者提出向交通网络和数据包路由迁移。",
-      "assessment_sha256": "bde9557416c23499e2ec34461981f2e368c348e4471a544d20321dc3e4b5a388"
+      "note_zh": "局部双队列闸控改善周期流入下的路由和拥堵转变，具有向运输网络与数据包队列迁移的价值。",
+      "note_en": "Local two-queue gate control improves routing and smooths jamming transitions under periodic inflow, with transferable use in transport and packet-routing systems.",
+      "assessment_sha256": "d30e8f87ea10d6f08221470d9a90d747da4afa9d12e5ecfa3c73b468c9ff17ad"
     },
     "10.1073/pnas.2601203123": {
       "categories": [
@@ -1430,9 +1428,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Internal population coherence controls remote synchronization and its abrupt breakdown in a star of oscillator populations.",
-      "note_zh": "振子群内部相干性控制星形网络中的远程同步及其突发失稳。",
-      "assessment_sha256": "1f64472aaa0521e6413802ce6da9c74d08eaeb6d2bf83ed7feaf05246f17cdb9"
+      "note_zh": "群体节点星网络中，适中内部同步支持叶节点远程同步，过强内部耦合反而触发突变瓦解。",
+      "note_en": "In star networks of oscillator populations, intermediate internal coherence supports remote leaf synchronization, whereas stronger internal coupling triggers abrupt breakdown.",
+      "assessment_sha256": "588aed3113f2ef4410fab4f304ad89e099cda9d3634ee8f9404e50bcaf11c8fa"
     },
     "10.1103/kj33-q69c": {
       "categories": [
@@ -1780,6 +1778,80 @@
       "note_en": "Combines longitudinal strain genomes and household locations to infer community and rural–urban transmission links, without treating similarity as proven directional transmission.",
       "note_zh": "结合纵向菌株基因组与住户位置推断社区及城乡传播联系；不将相近菌株视为已证实的方向性传播。",
       "assessment_sha256": "69ebad16be76575c449f1df5dc86a48116eb9be9d3e443b126be2a60e991a851"
+    },
+    "10.1063/5.0315156": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "排斥耦合与频率失配使四振子网络出现稳定或切换同步簇，并产生慢快节律与双稳态。",
+      "note_en": "Repulsive coupling and frequency mismatch produce stationary or switching clusters, slow–fast rhythms and bistability in a four-oscillator network.",
+      "assessment_sha256": "388cc20a14155d838a3bb31d6d0bde8ae2befd5d6d14f63480dcf890d2445a6b"
+    },
+    "10.1063/5.0333267": {
+      "categories": [
+        "network_resilience"
+      ],
+      "note_zh": "用不变分布刻画随机电网的相角与电压波动，识别稳定性权衡并优化安全集保持概率。",
+      "note_en": "An invariant distribution characterizes phase and voltage fluctuations in stochastic power grids, exposing stability trade-offs and supporting safe-set optimization.",
+      "assessment_sha256": "2023923a2a966c04d958bc1fba69c752cc961a9c211faf4e6aeba2f178faaa60"
+    },
+    "10.1103/n87d-5krk": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "连接组耦合使局部与全局脑临界性相互影响却不直接对齐，并组织异质时间尺度与临界性梯度。",
+      "note_en": "Connectome coupling links local and global critical brain dynamics while organizing heterogeneous timescales and criticality gradients.",
+      "assessment_sha256": "dcb699ce597b13f0d38b821d46a046f2a135f9222d3b7c703d96f66b2eff9d8b"
+    },
+    "10.1103/ssn3-44gk": {
+      "categories": [
+        "other"
+      ],
+      "note_zh": "时间尺度与丰度分离使有限闭合化学反应网络涌现开放网络热力学，并限定该近似的适用时间。",
+      "note_en": "Timescale and abundance separation make open-network thermodynamics emerge within finite closed reaction networks, with a bounded approximation timescale.",
+      "assessment_sha256": "c63c225ec0bf06229723adc81bada499df986d734c1b3bd510d10cd008ae6f9b"
+    },
+    "10.1063/5.0355934": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "这篇Perspective将序模式转移网络联系到符号储备池，借兼容历史状态、遍历性与谱隙解释记忆及一步预测。",
+      "note_en": "This Perspective connects ordinal-pattern transition networks to symbolic reservoirs through compatibility-history states, ergodicity, spectral gaps and illustrative one-step predictions.",
+      "assessment_sha256": "d919049eb4eb280fb7f373c10598ac72c2da5c4cdd14b91410fe15d009d78a3a"
+    },
+    "10.1103/s1kf-3dvn": {
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "note_zh": "推导二部网络自洽指标的迭代收敛判据，并借助问题节点处理及非均匀正则化改善收敛。",
+      "note_en": "An explicit convergence criterion for self-consistent bipartite-network measures guides problematic-node treatment and nonhomogeneous regularization.",
+      "assessment_sha256": "72b453cf107a649312d38f75fd3d79953f747c7da7d909d931647afeb04a2e0e"
+    },
+    "10.1073/pnas.2617358123": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "多站点横断面数据揭示ASD功能连接的两类年龄差异模式及其皮层层级组织，不代表个体纵向变化。",
+      "note_en": "Multisite cross-sectional data reveal two age-related functional-connectivity profiles in autism and their cortical hierarchy, without establishing individual longitudinal change.",
+      "assessment_sha256": "557d83070e7cc89053028866078faa2ec4c35b4db6353e4c7cd14ceb33cb4d30"
+    },
+    "10.1073/pnas.2618402123": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "可疑论文的偏向互引与阅读量差异揭示潜在引文指标扭曲；互引信号本身不等同于已证实的造假。",
+      "note_en": "Preferential mutual citations and readership differences among suspected paper-mill articles reveal potential metric distortion; citation signals alone do not prove fraud.",
+      "assessment_sha256": "18595bb63cdf42cb2aaed7e492e565cd3ecfdc1def4b2570c6f7a68ad0d88a3f"
+    },
+    "10.1038/s41467-026-78597-4": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "全脑同步记录揭示由主动搜索和被动感知策略主导的交替功能子网络，提示解释任务网络时须控制内部策略。",
+      "note_en": "Brain-wide recordings reveal alternating functional subnetworks dominated by active-search and passive-sensation strategies, highlighting internal strategy as a task-network confound.",
+      "assessment_sha256": "ce86e7295a28f77ef11aa237f6f85b68a9110d24a3ca4fade7d489b9b2d1b3e7"
     }
   }
 }

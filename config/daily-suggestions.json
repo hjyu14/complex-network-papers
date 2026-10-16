@@ -758,6 +758,84 @@
         "zh": "已读28页出版社PDF，含方法、扩展图表和内附报告摘要；未读独立SI，未复现。网络结果是原试验二次分析，剂量分组带探索性；自报关系及单地区样本限制外推。AI编辑荐读。",
         "en": "Read all 28 PDF pages, including Methods, Extended Data and embedded Reporting Summary; separate SI not read, no reproduction. Network outcomes are secondary analysis with exploratory dose grouping; self-reported ties and one regional setting limit generalization. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1063/5.0355934",
+      "recommended_on": "2026-10-16",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-15-to-16-01",
+      "assessment_sha256": "d919049eb4eb280fb7f373c10598ac72c2da5c4cdd14b91410fe15d009d78a3a",
+      "input_sha256": "ea356836a3c3a65abff2fc295593b2d46d5e6d56e9ebe555821f56f7c813b654",
+      "evidence_sha256": "6baac5d967a399f52062cbf272fb70fcd5ad6435aa4a69b8c1d9695391f7a5cb",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-16T00:56:26.989651+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0355934",
+        "title": "Ordinal-pattern transition networks as a symbolic substrate for reservoir computing",
+        "sha256": "6d6b972e759323a78c24700e4ecb77ce9247b63100156b9c9e1a71245d20b602",
+        "version": "Publisher Version of Record, Chaos 36, 101501 (2026), Perspective; Published Online 15 October 2026.",
+        "source_url": "https://pubs.aip.org/aip/cha/article/36/10/101501/3406607/Ordinal-pattern-transition-networks-as-a-symbolic",
+        "source_kind": "publisher_fulltext",
+        "pages": 14,
+        "read_scope": "Complete 14-page publisher PDF: cover plus 13 article pages, main text, Lemma/Proposition/Corollary, four figures, two tables, discussion, declarations and references. Rendered PDF pages 3, 5, 7, 8, 12 and 13 visually inspected for network construction, equations, tables and results. Separate supplementary files not read; no code execution, reproduction or independent proof verification.",
+        "reviewed_at": "2026-10-16T00:56:26.989651+00:00"
+      },
+      "question": {
+        "zh": "从时间序列生成的网络，怎样才算具有记忆？",
+        "en": "When does a network built from time series have memory?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把序模式转移网络与储备池计算联系起来，并追问“记忆”究竟对应哪个状态、怎样测量。对用网络表示时间序列的研究者，这比再增加一个预测精度指标更有启发。",
+          "可复用的是三步检查：先把必要历史纳入状态，再用经验混合时间检查遗忘速度，最后按合法后继集合设随机基线。结构约束带来的高准确率，不能直接当成学习能力。"
+        ],
+        "en": [
+          "Today’s pick connects ordinal-pattern transition networks with reservoir computing and asks which state carries memory and how to measure it. This offers a useful framework for researchers who represent time series as networks.",
+          "Borrow three checks: include the necessary history in the state, measure empirical mixing, and set chance performance using legal successors. High accuracy created by structural constraints should not be mistaken for learned predictive skill."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先定义完整状态",
+            "en": "Define the complete state"
+          },
+          "text": {
+            "zh": "延迟嵌入需要保留兼容历史；单个序模式不足以描述完整记忆。",
+            "en": "Delay embedding requires a compatibility history; one ordinal pattern is not the complete memory state."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用可测诊断约束解释",
+            "en": "Use measurable diagnostics"
+          },
+          "text": {
+            "zh": "结合谱隙与直接迭代的混合时间，警惕理论上界在有限样本下过松。",
+            "en": "Pair the spectral gap with directly measured mixing time; theoretical bounds can be loose for finite samples."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让随机基线尊重约束",
+            "en": "Make chance respect constraints"
+          },
+          "text": {
+            "zh": "用每步合法后继集合计算机会水平，避免把编码限制误判为预测优势。",
+            "en": "Compute chance from each step’s legal successors to separate coding constraints from predictive gains."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "时间序列网络、符号动力学、储备池计算与网络推断研究者。",
+        "en": "Researchers in time-series networks, symbolic dynamics, reservoir computing and network inference."
+      },
+      "reading_caveat": {
+        "zh": "已读14页正式PDF，含图表与推导；未读独立补充文件，未复现或独立验算。本文为Perspective，一步序模式预测用于说明概念，不是优于优化储备池的性能证明；遗忘结论有遍历性条件。AI编辑荐读。",
+        "en": "Read the complete 14-page publisher PDF, including figures, tables and derivations; separate supplements not read, no reproduction or independent proof verification. This Perspective uses one-step ordinal prediction as illustration, not a superiority benchmark against optimized reservoirs. Fading memory requires ergodicity conditions. AI editorial guidance."
+      },
+      "publication_sha256": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81"
     }
   ],
   "revisions": [
