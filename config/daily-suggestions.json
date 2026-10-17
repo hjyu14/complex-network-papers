@@ -836,6 +836,84 @@
         "en": "Read the complete 14-page publisher PDF, including figures, tables and derivations; separate supplements not read, no reproduction or independent proof verification. This Perspective uses one-step ordinal prediction as illustration, not a superiority benchmark against optimized reservoirs. Fading memory requires ergodicity conditions. AI editorial guidance."
       },
       "publication_sha256": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81"
+    },
+    {
+      "doi": "10.1073/pnas.2532180123",
+      "recommended_on": "2026-10-17",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-16-to-17-01",
+      "assessment_sha256": "f29631619b62671483eae6b2db78eb9f0c6208a1dd49edb061dd9b63d2215b38",
+      "input_sha256": "35e392488e6c75655e12a23b841ecb011ca87c3b9db6c4b81cdfb344be528eaf",
+      "evidence_sha256": "7cda9b4ab902baff7d553e72b466e0090c45ed5e235676b64c7781fd110653cf",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-17T00:31:02.195754+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2532180123",
+        "title": "Systemic collapse emergence from climate-induced perturbations in transportation networks",
+        "sha256": "60decadd75da1ffbcc2b1f59820cab5c86ceabc9890198e7342ad7900b3a41cd",
+        "version": "Publisher Version of Record, PNAS 123(42), e2532180123; published October 16, 2026.",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2532180123",
+        "source_kind": "publisher_fulltext",
+        "pages": 9,
+        "read_scope": "Complete nine-page publisher PDF: main text, equations 1–5, five figures, two tables, Materials and Methods, declarations and reference list. All nine rendered pages visually inspected, including model diagrams, validation plots, phase diagram and risk maps. Separate SI Appendix not read; cited works not independently read, no code execution, reproduction or independent derivation verification.",
+        "reviewed_at": "2026-10-17T00:31:02.195754+00:00"
+      },
+      "question": {
+        "zh": "一场局部暴雨，怎样演变成全网延误？",
+        "en": "How can local rainfall become network-wide delay?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把降雨这个外部空间场接入网络动力学，让“哪里下雨”和“延误怎样传播、被吸收”在同一模型里相遇。它为气候风险与基础设施韧性研究提供了一条可复用的建模路径。",
+          "值得带走的是：拆分扰动生成、传播和吸收，按时间留出数据检验，再区分动态脆弱性与人口加权风险。模型的崩溃相不能当成真实铁路已被验证的崩溃阈值。"
+        ],
+        "en": [
+          "Today’s pick couples a spatial rainfall field to network dynamics, connecting where disruption originates with how delays spread and dissipate. It offers a reusable modeling route for climate risk and infrastructure resilience.",
+          "Borrow the separation of generation, propagation and absorption; validate on later data; and distinguish dynamic vulnerability from population-weighted risk. A model collapse regime is not an empirically established threshold for real railways."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "让外场进入动力学",
+            "en": "Put the external field into dynamics"
+          },
+          "text": {
+            "zh": "沿线路累计降雨影响，把局部冲击与网络传播、容量吸收明确分开。",
+            "en": "Integrate rainfall along links and separate local forcing from network propagation and capacity-driven absorption."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留验证中的弱点",
+            "en": "Keep validation failures visible"
+          },
+          "text": {
+            "zh": "用后续年份测试，并报告少雨日和不同铁路系统上预测失效的边界。",
+            "en": "Test on later data and report limits on low-rain days and across different railway systems."
+          }
+        },
+        {
+          "heading": {
+            "zh": "从中心性走向风险",
+            "en": "Move from centrality to risk"
+          },
+          "text": {
+            "zh": "局部扰动后的全网延误，再乘人口暴露，可得到不同于中心性的治理优先序。",
+            "en": "Combine network-wide delay after local shocks with population exposure to obtain priorities beyond centrality."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络韧性、级联传播、交通网络与气候风险研究者。",
+        "en": "Researchers in network resilience, cascades, transportation and climate risk."
+      },
+      "reading_caveat": {
+        "zh": "已读9页正式PDF及全部图表；未读独立补充材料，未复现或独立验算。简化模型忽略调度、取消与改道；真实数据未达到模型无界崩溃条件。AI编辑荐读。",
+        "en": "Read all nine publisher-PDF pages and figures/tables; separate supplements not read, no reproduction or independent derivation checks. The simplified model omits dispatching, cancellations and rerouting; observed data do not reach its divergent-collapse condition. AI editorial guidance."
+      },
+      "publication_sha256": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604"
     }
   ],
   "revisions": [

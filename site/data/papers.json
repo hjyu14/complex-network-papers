@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-16T01:16:10.319359+00:00",
+  "generated_at": "2026-10-17T00:33:34.083105+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-16",
-  "window_days": 46,
+  "window_end": "2026-10-17",
+  "window_days": 47,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "66010d53ebb4ab387f2c21fef0e398d33261968df553aad61111735a0665275b",
-  "author_metadata_sha256": "1e51fd052845b8078983dee89d83c2d2e8adb5f7f6a27642fb7e57fbc9e489aa",
+  "reading_notes_sha256": "3190969665933f034670f48836d882649a79a87f088c5e85b78ea940c947ed01",
+  "author_metadata_sha256": "841f710ac43a29e3fc27f5d7c6c6bf4544ebe8adbac00366e903cc3c05c5b21c",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1819,9 +1819,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-16-to-17-01",
+      "config_sha256": "52acb6768fb6b6ea8bfc385efab2ca922e7d0e14b75276e2f1504560b0c5d8df",
+      "window_start": "2026-10-16",
+      "window_end": "2026-10-17",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "screening_log_sha256": "bad63326337184f06ea293b2dfdc408c0415f5c816023a8ef044fee1aa6cef70",
+      "candidate_sha256": "ff0a85541f489140794b103a70399a9338156a84ff5d11945f81eed86e0e6c4f",
+      "author_metadata_sha256": "38804607df16e48a9861c7c3964a9ade727baaf13e6aac9c1db6459e73b3e05f",
+      "run_manifest_sha256": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-16-to-17-01",
+          "files": {
+            "candidates.json": "ff0a85541f489140794b103a70399a9338156a84ff5d11945f81eed86e0e6c4f",
+            "coverage.json": "90d188e5fae75009bd0379dee1c5b170e92413767a414cf178e08d183376254d",
+            "collection-log.jsonl": "6650b9c11c69e5f11e0f5a5fc2714706edfeca21ea09069358d9e00b24b709e3",
+            "screening-log.jsonl": "faf08f2e460f0b0a75d103b81ee9e3b17f0455a9cdfa7eb35a487494e08221d9",
+            "inputs/manifest.json": "afba838444e27ca57e9cb721948ce1809aef7db0f218ca8b191ba90d02e7f775",
+            "inputs/sources.json": "9cedd0a00b1cf42880d8956427276140eec110e934a2818cd77bafd5274d52c0",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "ff0a85541f489140794b103a70399a9338156a84ff5d11945f81eed86e0e6c4f",
+          "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+          "screening_log_sha256": "bad63326337184f06ea293b2dfdc408c0415f5c816023a8ef044fee1aa6cef70"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "38804607df16e48a9861c7c3964a9ade727baaf13e6aac9c1db6459e73b3e05f",
+          "audit": {
+            "path": "reports/runs/2026-10-16-to-17-01/screening-log.jsonl",
+            "sha256": "faf08f2e460f0b0a75d103b81ee9e3b17f0455a9cdfa7eb35a487494e08221d9"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "ab0f0561f0e632e3c6a8bb704e6f668cdf8f13336264d00ac1b51bc556c368ae"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 218,
+  "author_available_count": 221,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -1971,8 +2015,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 598,
-      "publisher_verified_inventory_count": 598,
+      "candidate_count": 605,
+      "publisher_verified_inventory_count": 605,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2096,6 +2140,15 @@
         {
           "window_start": "2026-10-15",
           "window_end": "2026-10-16",
+          "journal": "Nature",
+          "candidate_count": 7,
+          "publisher_verified_inventory_count": 7,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
           "journal": "Nature",
           "candidate_count": 7,
           "publisher_verified_inventory_count": 7,
@@ -2236,13 +2289,22 @@
           "publisher_verified_inventory_count": 40,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1322,
-      "publisher_verified_inventory_count": 1320,
+      "candidate_count": 1362,
+      "publisher_verified_inventory_count": 1360,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2371,13 +2433,22 @@
           "publisher_verified_inventory_count": 46,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "NC",
+          "candidate_count": 40,
+          "publisher_verified_inventory_count": 40,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 18,
-      "publisher_verified_inventory_count": 18,
+      "candidate_count": 19,
+      "publisher_verified_inventory_count": 19,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -2504,6 +2575,15 @@
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "NMI",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -2641,13 +2721,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 72,
-      "publisher_verified_inventory_count": 72,
+      "candidate_count": 73,
+      "publisher_verified_inventory_count": 73,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2776,13 +2865,22 @@
           "publisher_verified_inventory_count": 5,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "PRX",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 586,
-      "publisher_verified_inventory_count": 586,
+      "candidate_count": 596,
+      "publisher_verified_inventory_count": 596,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2911,13 +3009,22 @@
           "publisher_verified_inventory_count": 14,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "PRL",
+          "candidate_count": 17,
+          "publisher_verified_inventory_count": 17,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "SA",
-      "candidate_count": 576,
-      "publisher_verified_inventory_count": 576,
+      "candidate_count": 619,
+      "publisher_verified_inventory_count": 619,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3046,13 +3153,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "SA",
+          "candidate_count": 43,
+          "publisher_verified_inventory_count": 43,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 606,
-      "publisher_verified_inventory_count": 606,
+      "candidate_count": 638,
+      "publisher_verified_inventory_count": 638,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3181,13 +3297,22 @@
           "publisher_verified_inventory_count": 28,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "PNAS",
+          "candidate_count": 32,
+          "publisher_verified_inventory_count": 32,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 86,
-      "publisher_verified_inventory_count": 86,
+      "candidate_count": 88,
+      "publisher_verified_inventory_count": 88,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3316,13 +3441,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "CP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 317,
-      "publisher_verified_inventory_count": 317,
+      "candidate_count": 323,
+      "publisher_verified_inventory_count": 323,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3451,13 +3585,22 @@
           "publisher_verified_inventory_count": 6,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "PRResearch",
+          "candidate_count": 13,
+          "publisher_verified_inventory_count": 13,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 405,
-      "publisher_verified_inventory_count": 405,
+      "candidate_count": 408,
+      "publisher_verified_inventory_count": 408,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3586,13 +3729,22 @@
           "publisher_verified_inventory_count": 17,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "PRE",
+          "candidate_count": 11,
+          "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 91,
-      "publisher_verified_inventory_count": 91,
+      "candidate_count": 92,
+      "publisher_verified_inventory_count": 92,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3721,13 +3873,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "Chaos",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 62,
-      "publisher_verified_inventory_count": 62,
+      "candidate_count": 65,
+      "publisher_verified_inventory_count": 65,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3811,42 +3972,45 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-16",
+          "window_end": "2026-10-17",
+          "journal": "NP",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 5047,
+  "candidate_count": 5196,
   "screening_counts": {
-    "excluded": 4829,
-    "core": 195,
+    "excluded": 4975,
+    "core": 198,
     "transferable_application": 23,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 218
+    "included": 221
   },
-  "published_count": 178,
-  "accepted_count": 40,
+  "published_count": 184,
+  "accepted_count": 37,
   "latest_update": {
-    "run": "reports/runs/2026-10-15-to-16-01",
-    "reviewed_at": "2026-10-16T01:11:41.102582+00:00",
-    "newly_included_count": 9,
+    "run": "reports/runs/2026-10-16-to-17-01",
+    "reviewed_at": "2026-10-17T00:27:34.491338+00:00",
+    "newly_included_count": 3,
     "newly_included_dois": [
-      "10.1038/s41467-026-78597-4",
-      "10.1063/5.0315156",
-      "10.1063/5.0333267",
-      "10.1063/5.0355934",
-      "10.1073/pnas.2617358123",
-      "10.1073/pnas.2618402123",
-      "10.1103/n87d-5krk",
-      "10.1103/s1kf-3dvn",
-      "10.1103/ssn3-44gk"
+      "10.1063/5.0356075",
+      "10.1073/pnas.2532180123",
+      "10.1103/mzgk-nx4w"
     ],
     "accepted_to_published_count": 4,
     "accepted_to_published_dois": [
-      "10.1103/92jk-cj5x",
-      "10.1103/k5hq-js7c",
-      "10.1103/m6s5-r1cq",
-      "10.1103/y4cy-9l8m"
+      "10.1103/996v-4djr",
+      "10.1103/9y9m-q7qj",
+      "10.1103/c9vq-tclt",
+      "10.1103/nl4b-7sfq"
     ]
   },
   "candidate_inventory_complete": false,
@@ -3857,6 +4021,555 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/nl4b-7sfq",
+      "url": "https://doi.org/10.1103/nl4b-7sfq",
+      "title": "Analytical solution for mean-field theories for homo- and heterogeneous populations of parabolic bursting systems",
+      "authors": [
+        "Maria V. Ageeva",
+        "Denis S. Goldobin"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "bd776a05fd67a18d1d6300dad98f064679589d19eb5979bf9ade5c600786bcd6",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fnl4b-7sfq",
+      "author_retrieved_at": "2026-10-17T00:23:46.097420+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-16",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-16",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-02",
+      "published_date": "2026-10-16",
+      "article_type": "Letter",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Letter",
+        "basis": "Actual primary article heading LETTER, title, DOI and PRE ISSN footer read in browser; exact subtype supersedes research-nature inference.",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/nl4b-7sfq"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "First-passage-based analysis of noisy QIF populations connects macroscopic states with interacting electrical and chemical synapses.",
+      "note_zh": "以首达时间方法解析有噪声QIF神经元群体，连接宏观状态与电、化学突触的相互作用。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "df7c4afc29a42a267fb7ed5c4921daad9901ebc0c5beace40c4942866812bc36",
+      "input_sha256": "282443d6ccb2f49948b205a6b8d1bbb648568d0e618de30d8fbb849e919b1dc9",
+      "material_sha256": "bbca276dd097ede8e2d8a6423b596181949ba0a73362f64cce30abb4e9e38551",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "bbca276dd097ede8e2d8a6423b596181949ba0a73362f64cce30abb4e9e38551",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "featured": null,
+      "evidence": [
+        "First-passage-based mean-field solutions describe noisy bursting populations and electrical–chemical synaptic interplay in QIF networks."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fnl4b-7sfq",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/nl4b-7sfq",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-02",
+        "published_date": "2026-10-16",
+        "previous_run": "reports/runs/2026-10-01-to-05-01",
+        "source_run": "reports/runs/2026-10-16-to-17-01",
+        "audit_sha256": "df69eb3cf70e7f6b7dbb3fd2a101bfd2f2c41390533cc5ebdb13d0d22279a8ad",
+        "previous_assessment_sha256": "30ea35f8c3d1f44cf25cff26a57d2c216d1a5e61d36bad46683fd5fd6c10148d",
+        "assessment_sha256": "df7c4afc29a42a267fb7ed5c4921daad9901ebc0c5beace40c4942866812bc36"
+      }
+    },
+    {
+      "doi": "10.1103/mzgk-nx4w",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/mzgk-nx4w",
+      "title": "How interaction radius shapes vortex states in mobile phase oscillators",
+      "authors": [
+        "Jingtian Shang",
+        "Yingshan Guo",
+        "Zhigang Zheng",
+        "Changgui Gu"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "023f5deddee088f6aec8f5c99779a1aaba129d1f12d815e8dab678e19f52a8e5",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fmzgk-nx4w",
+      "author_retrieved_at": "2026-10-17T00:23:47.901573+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-16",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-16",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-16",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "b3204ee98a9639ef9f40a068f067f1deb8406e70d10e79a93382a519dd209e06",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/mzgk-nx4w"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Local interaction radius controls vortex states, polarization and instability thresholds in mobile phase oscillators, linking spatial coupling range to collective order.",
+      "note_zh": "局部交互半径调控移动相位振子的涡旋、极化和失稳阈值，揭示空间耦合范围对集体态的影响。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "925a7a2a686d3ffbba46cc36dedf92ec68b603a28a87097c136ac196bee880a0",
+      "input_sha256": "7e0dbfaf48a9105d859851de2f4707c93b13011fdf07cded37701100d53273d9",
+      "material_sha256": "b3204ee98a9639ef9f40a068f067f1deb8406e70d10e79a93382a519dd209e06",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "b3204ee98a9639ef9f40a068f067f1deb8406e70d10e79a93382a519dd209e06",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "featured": null,
+      "evidence": [
+        "Interaction radius separates instability thresholds and controls persistent vortex states, polar order and hysteresis in mobile phase oscillators."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fmzgk-nx4w",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/mzgk-nx4w",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/c9vq-tclt",
+      "url": "https://doi.org/10.1103/c9vq-tclt",
+      "title": "Evolution of mutating pathogens in networked populations",
+      "authors": [
+        "Aviel Ivry",
+        "Reuven Cohen",
+        "Amikam Patron"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "a8b73e8dd839b226c5013da97599564340126ad4e8fc98c2d000fa89913d0557",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fc9vq-tclt",
+      "author_retrieved_at": "2026-10-17T00:23:44.487346+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-16",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-16",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-05",
+      "published_date": "2026-10-16",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "50b91b24efceab5ca9ce9a974dc6667dd319abe00b208c9328cc97865035a572",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/c9vq-tclt"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Couples continuous pathogen mutation to network spreading to analyze how population topology affects transmission conditions and virulence selection.",
+      "note_zh": "将病原体连续变异与网络传播耦合，分析群体拓扑如何影响传播条件及毒性选择。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "31627004dbb66332e8d98c175ac6856b7a2d0cbecfa4d3aa55ba49e2ce71b8a3",
+      "input_sha256": "e51d0356c98e4b8d084e3ab3c32fb40bbd5eb4f69519d7b9c7c2361e00b2a7fd",
+      "material_sha256": "50b91b24efceab5ca9ce9a974dc6667dd319abe00b208c9328cc97865035a572",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "50b91b24efceab5ca9ce9a974dc6667dd319abe00b208c9328cc97865035a572",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "featured": null,
+      "evidence": [
+        "Analytical and numerical epidemic models link continuous pathogen mutation and selection to spreading conditions across population-network structures."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fc9vq-tclt",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/c9vq-tclt",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-05",
+        "published_date": "2026-10-16",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-16-to-17-01",
+        "audit_sha256": "df69eb3cf70e7f6b7dbb3fd2a101bfd2f2c41390533cc5ebdb13d0d22279a8ad",
+        "previous_assessment_sha256": "cb88e62e2d573f685229a8ef2a5cb096e975ab5a82473071936b6bb60f7ea4c1",
+        "assessment_sha256": "31627004dbb66332e8d98c175ac6856b7a2d0cbecfa4d3aa55ba49e2ce71b8a3"
+      }
+    },
+    {
+      "doi": "10.1103/9y9m-q7qj",
+      "url": "https://doi.org/10.1103/9y9m-q7qj",
+      "title": "Preferential Attachment with Local Flexibility",
+      "authors": [
+        "Tingyu Zhao",
+        "Balázs Maga",
+        "Pierfrancesco Dionigi",
+        "Gergely Ódor",
+        "Kyle Soni",
+        "Anastasiya Salova",
+        "Bingjie Hao",
+        "Miklós Abért",
+        "István A. Kovács"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "23e724fdaec32a6231e67516664304103a42ae11a26b894edd2d88370c0490ae",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F9y9m-q7qj",
+      "author_retrieved_at": "2026-10-17T00:23:42.918216+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-10-16",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-16",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-21",
+      "published_date": "2026-10-16",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "593da86f12d8807b3f0081cd141df23c2581b60c61160f43821c287c46b19111",
+        "sources": [
+          "https://journals.aps.org/prl/abstract/10.1103/9y9m-q7qj"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Local redirection changes hierarchy and degree distributions under nonlinear preferential attachment, revealing how network growth depends on local flexibility.",
+      "note_zh": "局部连接重定向改变非线性优先连接网络的层级结构与度分布，揭示网络增长对局部灵活性的依赖。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "3fca3a3a0b95d5b7a5805197f11363d4b95a830047e5b6f1f8e34f43cc1fb65d",
+      "input_sha256": "33069d75ef7a944e73dc5d162f1e89159045efdc79ab09c7840eb534b2817832",
+      "material_sha256": "593da86f12d8807b3f0081cd141df23c2581b60c61160f43821c287c46b19111",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "593da86f12d8807b3f0081cd141df23c2581b60c61160f43821c287c46b19111",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "featured": "PRL",
+      "evidence": [
+        "Local redirection changes preferential-attachment growth into hierarchical or stationary degree-distribution regimes, characterized through stochastic analysis and a phase diagram."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F9y9m-q7qj",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/9y9m-q7qj",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-21",
+        "published_date": "2026-10-16",
+        "previous_run": "reports/runs/2026-09",
+        "source_run": "reports/runs/2026-10-16-to-17-01",
+        "audit_sha256": "df69eb3cf70e7f6b7dbb3fd2a101bfd2f2c41390533cc5ebdb13d0d22279a8ad",
+        "previous_assessment_sha256": "e728e4a7e511435d4e91e42eafd3a2248a88df497a17b512aa7b9c68b66dff3b",
+        "assessment_sha256": "3fca3a3a0b95d5b7a5805197f11363d4b95a830047e5b6f1f8e34f43cc1fb65d"
+      }
+    },
+    {
+      "doi": "10.1103/996v-4djr",
+      "url": "https://doi.org/10.1103/996v-4djr",
+      "title": "Learning and encoding temporally structured sensory inputs via superburst dynamics",
+      "authors": [
+        "Inhoi Jeong",
+        "Kyoung J. Lee",
+        "Jongmu Kim"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "ad66a6a611c6a73a6d2171b7fa05371e5c21fcd16b0384d3847c30c38fbdd481",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F996v-4djr",
+      "author_retrieved_at": "2026-10-17T00:23:37.723628+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-16",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-16",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-29",
+      "published_date": "2026-10-16",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "f3da68264d7c307def76b6562eebcd13fb8fd430965a43b6c1be9b12f2a0866f",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/996v-4djr"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Plasticity reorganizes a recurrent spiking network into a feedforward backbone with sparse recurrent links, enabling temporal input encoding through superbursts.",
+      "note_zh": "可塑性将随机递归脉冲网络重组为前馈骨架与稀疏递归连接，使superburst编码时序刺激。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "15399de39a6fbde24c2aaafb6b64319040e3f045e69f04858f49d61ce6f6e47d",
+      "input_sha256": "3b1bca8f240a62dd868e449c1f6c40ec0a5eae5169d289e7be8f1ae44a6d637d",
+      "material_sha256": "f3da68264d7c307def76b6562eebcd13fb8fd430965a43b6c1be9b12f2a0866f",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "f3da68264d7c307def76b6562eebcd13fb8fd430965a43b6c1be9b12f2a0866f",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "featured": null,
+      "evidence": [
+        "Plasticity reorganizes a recurrent spiking network into a feedforward backbone with recurrent links, enabling stimulus-specific and noise-tolerant superbursts."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F996v-4djr",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/996v-4djr",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-29",
+        "published_date": "2026-10-16",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-10-16-to-17-01",
+        "audit_sha256": "df69eb3cf70e7f6b7dbb3fd2a101bfd2f2c41390533cc5ebdb13d0d22279a8ad",
+        "previous_assessment_sha256": "fc4a6ef14df506256e55292e35be2b1b4ba7056f31312b5f9d0d7254514b03e4",
+        "assessment_sha256": "15399de39a6fbde24c2aaafb6b64319040e3f045e69f04858f49d61ce6f6e47d"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2532180123",
+      "url": "https://doi.org/10.1073/pnas.2532180123",
+      "title": "Systemic collapse emergence from climate-induced perturbations in transportation networks",
+      "authors": [
+        "Mauro Faccin",
+        "Tomas Scagliarini",
+        "Manlio De Domenico"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3562edb45da0edfaa937cbdf7af1aac89ecf1a9349266a9d79fa13c160a65691",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2532180123",
+      "author_retrieved_at": "2026-10-17T00:23:41.096664+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-16",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-16",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-16",
+      "article_type": "Research Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Research Article",
+        "basis": "Identity-bound official full-type directory",
+        "sources": [
+          "https://www.pnas.org/toc/pnas/123/42",
+          "https://www.pnas.org/latest",
+          "https://www.pnas.org/action/doSearch?field1=AllField&text1=&publication%5B%5D=pnas&publication=&Ppub=&access=on&startPage=0&sortBy=Earliest"
+        ]
+      },
+      "categories": [
+        "network_resilience",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Couples rainfall to delay generation, propagation and absorption on railway networks, studying model critical regimes and local-shock risk; observed data do not reach model collapse.",
+      "note_zh": "将降雨场耦合铁路网络的延误生成、传播与吸收，研究模型临界态和局部扰动风险；真实数据未达到模型崩溃条件。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "f29631619b62671483eae6b2db78eb9f0c6208a1dd49edb061dd9b63d2215b38",
+      "input_sha256": "35e392488e6c75655e12a23b841ecb011ca87c3b9db6c4b81cdfb344be528eaf",
+      "material_sha256": "7cda9b4ab902baff7d553e72b466e0090c45ed5e235676b64c7781fd110653cf",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "7cda9b4ab902baff7d553e72b466e0090c45ed5e235676b64c7781fd110653cf",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "featured": "PNAS",
+      "evidence": [
+        "Coupled field and transportation-network dynamics reveal rainfall-driven collapse thresholds and localized infrastructure vulnerabilities."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2532180123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2532180123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0356075",
+      "url": "https://doi.org/10.1063/5.0356075",
+      "title": "Emergence of cooperation in reactive strategy space through similarity-based interactions",
+      "authors": [
+        "Jiancheng Zhao",
+        "Jing Zhang",
+        "Zhihai Rong",
+        "Xiuli Du",
+        "Wen Yang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "e80973e08e2c95f0d347a25857e0a337beeddc6ec283605c00e2a39b1e824508",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0356075",
+      "author_retrieved_at": "2026-10-17T00:23:39.375476+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-10-16",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-16",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-16",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "5d56d93a2db52fa75476f01133db8bfa7c4b13d4426620d281a4cdf0aa4ef018",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0356075"
+        ],
+        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Similarity-dependent interactions form a dynamic structure that, together with moderate exploration, supports cooperation in an evolving population.",
+      "note_zh": "策略相似性形成动态交互结构，与适度探索共同维持合作，为自适应网络上的演化博弈提供机制解释。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "1111d6cce39e7c80b7311b4c6e8e54e531e993431584c22f282596a1e42d7bfa",
+      "input_sha256": "a6cf78b766d77d0c5619f0872b8772b0ca0f4b6e1022fd59206137a9c127b424",
+      "material_sha256": "5d56d93a2db52fa75476f01133db8bfa7c4b13d4426620d281a4cdf0aa4ef018",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "5d56d93a2db52fa75476f01133db8bfa7c4b13d4426620d281a4cdf0aa4ef018",
+      "rule_sha256": "4ee04a9b115825bd07126f0b32bcc4a82f29159045efd99418dbb311b267b43c",
+      "featured": null,
+      "evidence": [
+        "Similarity-dependent partner selection creates a dynamic interaction structure that protects cooperative strategies; moderate exploration supports their persistence."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0356075",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0356075",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/y4cy-9l8m",
       "url": "https://doi.org/10.1103/y4cy-9l8m",
@@ -10300,84 +11013,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/nl4b-7sfq",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/nl4b-7sfq",
-      "title": "Analytical solution for mean-field theories for homo- and heterogeneous populations of parabolic bursting systems",
-      "authors": [
-        "Maria V. Ageeva",
-        "Denis S. Goldobin"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "f3f030213ee5038eb5dc18b86d30358e8a5106489714de0818d1645718c7e36e",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/nl4b-7sfq",
-      "author_retrieved_at": "2026-10-05T06:48:47.792679+00:00",
-      "author_basis": "publisher visible full accepted-paper byline; normal browser; DOI/title/whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-02",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-02",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "publisher_dates": [
-          "2026-10-02"
-        ],
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/nl4b-7sfq"
-        ]
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-02",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "6d3e2d15e724bbad3c16cddc1df9f07d5be6feba4f44f2cb923d9c2185d1e127",
-        "basis": "摘要明确神经元网络宏观态、首达时间理论和突触相互作用结果；无特殊类型线索。",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/nl4b-7sfq"
-        ]
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Analytical mean-field solutions characterize noisy quadratic integrate-and-fire populations and the interplay of electrical and chemical coupling in neuronal networks.",
-      "note_zh": "推导含噪二次积分发放神经元群体的平均场解析解，分析神经网络中电与化学突触耦合的共同作用。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "30ea35f8c3d1f44cf25cff26a57d2c216d1a5e61d36bad46683fd5fd6c10148d",
-      "input_sha256": "cc1f73e2024ceaf4791325d20f7ad2ab7b996d27580777946e6566c0fcdcda44",
-      "material_sha256": "6d3e2d15e724bbad3c16cddc1df9f07d5be6feba4f44f2cb923d9c2185d1e127",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "6d3e2d15e724bbad3c16cddc1df9f07d5be6feba4f44f2cb923d9c2185d1e127",
-      "rule_sha256": "e73b62366608c44854fc4d8a1abb2c55b762ef9baafaa6c3520b0ce1c6185c18",
-      "featured": null,
-      "evidence": [
-        "Analytical mean-field solutions characterize noisy QIF populations and interactions between electrical and chemical network synapses."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fnl4b-7sfq",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/nl4b-7sfq",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/m57p-97jv",
       "url": "https://journals.aps.org/pre/accepted/10.1103/m57p-97jv",
       "title": "Chladni states in Ising spin lattices",
@@ -12230,94 +12865,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fnl7d-16n8",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/nl7d-16n8",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/996v-4djr",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/996v-4djr",
-      "title": "Learning and encoding temporally structured sensory inputs via superburst dynamics",
-      "authors": [
-        "Inhoi Jeong",
-        "Kyoung J. Lee",
-        "Jongmu Kim"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "831212c1da467a24e24fbd184f2559cb280f0f93a3f30a4600bd45306dc90701",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/996v-4djr",
-      "author_retrieved_at": "2026-10-04T05:40:43.553Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-29",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-29",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/996v-4djr"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-29",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要建立循环脉冲神经模型并通过塑性条件化解释混合架构和 superburst 编码，无特殊类型冲突。",
-        "material_sha256": "a646a11bb1256802177914702b1d0a5fcdfcbfc811b73cc2af497ece7f4afd26",
-        "abstract_sha256": "93a5b6f9d3d9bb27ba854fdd43c4e49d7929aa39eb066d49c4077dec4baed846",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/996v-4djr"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/996v-4djr"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Synaptic plasticity organizes recurrent spiking networks into hybrid architectures whose collective superbursts encode temporally structured inputs.",
-      "note_zh": "突触可塑性将递归脉冲网络组织为混合架构，其集体超爆发编码时间结构化输入。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "fc4a6ef14df506256e55292e35be2b1b4ba7056f31312b5f9d0d7254514b03e4",
-      "assessment_sha256": "fc4a6ef14df506256e55292e35be2b1b4ba7056f31312b5f9d0d7254514b03e4",
-      "input_sha256": "acec53c5a7f2a5233d85d4ee321f5c115a0f35206258b718758ebd8f4a6e488f",
-      "material_sha256": "a646a11bb1256802177914702b1d0a5fcdfcbfc811b73cc2af497ece7f4afd26",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "a646a11bb1256802177914702b1d0a5fcdfcbfc811b73cc2af497ece7f4afd26",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Plasticity reorganizes recurrent spiking networks into hybrid architectures whose collective superbursts encode learned temporal input sequences."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F996v-4djr",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/996v-4djr",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -15166,94 +15713,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fv3jy-fh5p",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/v3jy-fh5p",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/9y9m-q7qj",
-      "url": "https://journals.aps.org/prl/accepted/10.1103/9y9m-q7qj",
-      "title": "Preferential attachment with local flexibility",
-      "authors": [
-        "Tingyu Zhao",
-        "Balázs Maga",
-        "Pierfrancesco Dionigi",
-        "Gergely Ódor",
-        "Kyle Soni",
-        "Anastasiya Salova",
-        "Bingjie Hao",
-        "Miklós Abért",
-        "István A. Kovács"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "2ebd4489cebab80a9febf4c350d6c8f0efaaf5549e13f3b8f88947c47eed0f6a",
-      "author_source_url": "https://journals.aps.org/prl/accepted/10.1103/9y9m-q7qj",
-      "author_retrieved_at": "2026-10-03T11:41:40.241532+00:00",
-      "author_basis": "APS official accepted paper byline; explicit DOI/title/journal matched; list cross-checked with linked official accepted directory",
-      "journal": "Physical Review Letters",
-      "journal_short": "PRL",
-      "issns": [
-        "0031-9007",
-        "1079-7114"
-      ],
-      "date": "2026-09-21",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-21",
-        "basis": "publisher.accepted",
-        "source_url": "https://journals.aps.org/prl/accepted/10.1103/9y9m-q7qj",
-        "publication_status": "accepted",
-        "accepted_date": "2026-09-21",
-        "published_date": null,
-        "display_label": "接收",
-        "publication_status_label": "已接收，待正式发表",
-        "previous_check": {
-          "status": "verified",
-          "value": "2026-09-21",
-          "basis": "publisher.accepted"
-        }
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-21",
-      "published_date": null,
-      "article_type": "original research",
-      "type_provenance": {
-        "status": "verified",
-        "value": "original research",
-        "basis_kind": "official_accepted_abstract_inference",
-        "basis": "Target research nature confirmed by reviewer under user-authorized PRL accepted-paper exception using official page and complete abstract; not an explicit publisher subtype label.",
-        "source_url": "https://journals.aps.org/prl/accepted/10.1103/9y9m-q7qj",
-        "support": "A new local-flexibility preferential-attachment model, simulations and rigorous stochastic analysis with architecture and degree-distribution results.",
-        "material_sha256": "c303c6845be74378af97b6b0aaf1741491a76e80b9bc58256b2d9cc86df3ee69",
-        "metadata_evidence_sha256": "bf3e58c00f72a91956414bd3a2ae243c7f4c199109f5879437f2fab7887ff533",
-        "specific_subtype": null,
-        "subtype_status": "unresolved",
-        "display_label": "根据官方摘要判断，具体子类型待确认"
-      },
-      "categories": [
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "How does allowing local flexibility in preferential attachment change degree distributions and network hierarchy?",
-      "note_zh": "优先连接允许局部灵活性后，网络的度分布与层级结构会怎样改变？",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "e728e4a7e511435d4e91e42eafd3a2248a88df497a17b512aa7b9c68b66dff3b",
-      "input_sha256": "2b976bb34aa85679e7f55bf969a53f40c7276d865214c43694e392c08ca8a524",
-      "material_sha256": "c303c6845be74378af97b6b0aaf1741491a76e80b9bc58256b2d9cc86df3ee69",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "c303c6845be74378af97b6b0aaf1741491a76e80b9bc58256b2d9cc86df3ee69",
-      "rule_sha256": "ab605bd58dca588fb6a8b47161456d3c7c59405f1ce6192c358bbd8deacc7ecf",
-      "featured": "PRL",
-      "evidence": [
-        "Derives how local attachment flexibility changes hierarchy and degree distributions in growing networks."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F9y9m-q7qj",
-      "evidence_url": "https://journals.aps.org/prl/accepted/10.1103/9y9m-q7qj",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -19160,92 +19619,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/c9vq-tclt",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/c9vq-tclt",
-      "title": "Evolution of mutating pathogens in networked populations",
-      "authors": [
-        "Aviel Ivry",
-        "Reuven Cohen",
-        "Amikam Patron"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "09d56cb6896eefce4d47fba1ff1c77ef66c64b71b906de1a551d8858b6ffc590",
-      "author_source_url": "https://journals.aps.org/prresearch/accepted/10.1103/c9vq-tclt",
-      "author_retrieved_at": "2026-10-04T05:36:48.278Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-09-05",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-05",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/c9vq-tclt"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-05",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要解析和模拟连续变异病原体的网络传播条件并比较结构，无特殊类型冲突。",
-        "material_sha256": "4d4e976e0156b0bdd94b2cbea385f573dafc3af23a8ab48d0353739bbd947270",
-        "abstract_sha256": "e2afb42354348bb4fbbdf005cb5d659daac9fc014894099867fdfd00bc7874ae",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/c9vq-tclt"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/prresearch/accepted/10.1103/c9vq-tclt"
-          ]
-        }
-      },
-      "categories": [
-        "network_spreading"
-      ],
-      "scope_class": "core",
-      "note_en": "Analytical and simulated epidemic dynamics connect continuous pathogen mutation and selection to spreading conditions across population network structures.",
-      "note_zh": "解析及模拟疫情动力学将病原体连续变异与选择联系到不同种群网络上的传播条件。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "cb88e62e2d573f685229a8ef2a5cb096e975ab5a82473071936b6bb60f7ea4c1",
-      "assessment_sha256": "cb88e62e2d573f685229a8ef2a5cb096e975ab5a82473071936b6bb60f7ea4c1",
-      "input_sha256": "8171ad5f4ca3efe44d3ba6fc4acd18b6efdf37c9edc7a37d11001ae83c637fab",
-      "material_sha256": "4d4e976e0156b0bdd94b2cbea385f573dafc3af23a8ab48d0353739bbd947270",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "4d4e976e0156b0bdd94b2cbea385f573dafc3af23a8ab48d0353739bbd947270",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Analytical and simulated mutating-pathogen dynamics connect spreading conditions and evolutionary selection to population network structure."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fc9vq-tclt",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/c9vq-tclt",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/xzdr-sh34",
       "url": "https://doi.org/10.1103/xzdr-sh34",
       "title": "Unraveling network dynamics via Riemannian filtering of network interactions",
@@ -21414,9 +21787,123 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "cd638b137e02a3ae9737da5c1b71cd42e160b8fb8b253967cc5fa6fc12ec10b3"
+    },
+    {
+      "current_run": "reports/runs/2026-10-16-to-17-01",
+      "candidate_sha256": "ff0a85541f489140794b103a70399a9338156a84ff5d11945f81eed86e0e6c4f",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81"
+      },
+      "counts": {
+        "in_window": 171,
+        "newly_reviewed": 149,
+        "historically_reviewed": 68,
+        "state_updates": 21,
+        "categories": {
+          "excluded": 164,
+          "core": 7
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "df69eb3cf70e7f6b7dbb3fd2a101bfd2f2c41390533cc5ebdb13d0d22279a8ad"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1073/pnas.2532180123",
+      "recommended_on": "2026-10-17",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-16-to-17-01",
+      "assessment_sha256": "f29631619b62671483eae6b2db78eb9f0c6208a1dd49edb061dd9b63d2215b38",
+      "input_sha256": "35e392488e6c75655e12a23b841ecb011ca87c3b9db6c4b81cdfb344be528eaf",
+      "evidence_sha256": "7cda9b4ab902baff7d553e72b466e0090c45ed5e235676b64c7781fd110653cf",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-17T00:31:02.195754+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2532180123",
+        "title": "Systemic collapse emergence from climate-induced perturbations in transportation networks",
+        "sha256": "60decadd75da1ffbcc2b1f59820cab5c86ceabc9890198e7342ad7900b3a41cd",
+        "version": "Publisher Version of Record, PNAS 123(42), e2532180123; published October 16, 2026.",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2532180123",
+        "source_kind": "publisher_fulltext",
+        "pages": 9,
+        "read_scope": "Complete nine-page publisher PDF: main text, equations 1–5, five figures, two tables, Materials and Methods, declarations and reference list. All nine rendered pages visually inspected, including model diagrams, validation plots, phase diagram and risk maps. Separate SI Appendix not read; cited works not independently read, no code execution, reproduction or independent derivation verification.",
+        "reviewed_at": "2026-10-17T00:31:02.195754+00:00"
+      },
+      "question": {
+        "zh": "一场局部暴雨，怎样演变成全网延误？",
+        "en": "How can local rainfall become network-wide delay?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把降雨这个外部空间场接入网络动力学，让“哪里下雨”和“延误怎样传播、被吸收”在同一模型里相遇。它为气候风险与基础设施韧性研究提供了一条可复用的建模路径。",
+          "值得带走的是：拆分扰动生成、传播和吸收，按时间留出数据检验，再区分动态脆弱性与人口加权风险。模型的崩溃相不能当成真实铁路已被验证的崩溃阈值。"
+        ],
+        "en": [
+          "Today’s pick couples a spatial rainfall field to network dynamics, connecting where disruption originates with how delays spread and dissipate. It offers a reusable modeling route for climate risk and infrastructure resilience.",
+          "Borrow the separation of generation, propagation and absorption; validate on later data; and distinguish dynamic vulnerability from population-weighted risk. A model collapse regime is not an empirically established threshold for real railways."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "让外场进入动力学",
+            "en": "Put the external field into dynamics"
+          },
+          "text": {
+            "zh": "沿线路累计降雨影响，把局部冲击与网络传播、容量吸收明确分开。",
+            "en": "Integrate rainfall along links and separate local forcing from network propagation and capacity-driven absorption."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留验证中的弱点",
+            "en": "Keep validation failures visible"
+          },
+          "text": {
+            "zh": "用后续年份测试，并报告少雨日和不同铁路系统上预测失效的边界。",
+            "en": "Test on later data and report limits on low-rain days and across different railway systems."
+          }
+        },
+        {
+          "heading": {
+            "zh": "从中心性走向风险",
+            "en": "Move from centrality to risk"
+          },
+          "text": {
+            "zh": "局部扰动后的全网延误，再乘人口暴露，可得到不同于中心性的治理优先序。",
+            "en": "Combine network-wide delay after local shocks with population exposure to obtain priorities beyond centrality."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络韧性、级联传播、交通网络与气候风险研究者。",
+        "en": "Researchers in network resilience, cascades, transportation and climate risk."
+      },
+      "reading_caveat": {
+        "zh": "已读9页正式PDF及全部图表；未读独立补充材料，未复现或独立验算。简化模型忽略调度、取消与改道；真实数据未达到模型无界崩溃条件。AI编辑荐读。",
+        "en": "Read all nine publisher-PDF pages and figures/tables; separate supplements not read, no reproduction or independent derivation checks. The simplified model omits dispatching, cancellations and rerouting; observed data do not reach its divergent-collapse condition. AI editorial guidance."
+      },
+      "publication_sha256": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604"
+    },
     {
       "doi": "10.1063/5.0355934",
       "recommended_on": "2026-10-16",
@@ -23115,6 +23602,84 @@
       "publication_sha256": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81"
     },
     {
+      "doi": "10.1073/pnas.2532180123",
+      "recommended_on": "2026-10-17",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-16-to-17-01",
+      "assessment_sha256": "f29631619b62671483eae6b2db78eb9f0c6208a1dd49edb061dd9b63d2215b38",
+      "input_sha256": "35e392488e6c75655e12a23b841ecb011ca87c3b9db6c4b81cdfb344be528eaf",
+      "evidence_sha256": "7cda9b4ab902baff7d553e72b466e0090c45ed5e235676b64c7781fd110653cf",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-17T00:31:02.195754+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2532180123",
+        "title": "Systemic collapse emergence from climate-induced perturbations in transportation networks",
+        "sha256": "60decadd75da1ffbcc2b1f59820cab5c86ceabc9890198e7342ad7900b3a41cd",
+        "version": "Publisher Version of Record, PNAS 123(42), e2532180123; published October 16, 2026.",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2532180123",
+        "source_kind": "publisher_fulltext",
+        "pages": 9,
+        "read_scope": "Complete nine-page publisher PDF: main text, equations 1–5, five figures, two tables, Materials and Methods, declarations and reference list. All nine rendered pages visually inspected, including model diagrams, validation plots, phase diagram and risk maps. Separate SI Appendix not read; cited works not independently read, no code execution, reproduction or independent derivation verification.",
+        "reviewed_at": "2026-10-17T00:31:02.195754+00:00"
+      },
+      "question": {
+        "zh": "一场局部暴雨，怎样演变成全网延误？",
+        "en": "How can local rainfall become network-wide delay?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把降雨这个外部空间场接入网络动力学，让“哪里下雨”和“延误怎样传播、被吸收”在同一模型里相遇。它为气候风险与基础设施韧性研究提供了一条可复用的建模路径。",
+          "值得带走的是：拆分扰动生成、传播和吸收，按时间留出数据检验，再区分动态脆弱性与人口加权风险。模型的崩溃相不能当成真实铁路已被验证的崩溃阈值。"
+        ],
+        "en": [
+          "Today’s pick couples a spatial rainfall field to network dynamics, connecting where disruption originates with how delays spread and dissipate. It offers a reusable modeling route for climate risk and infrastructure resilience.",
+          "Borrow the separation of generation, propagation and absorption; validate on later data; and distinguish dynamic vulnerability from population-weighted risk. A model collapse regime is not an empirically established threshold for real railways."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "让外场进入动力学",
+            "en": "Put the external field into dynamics"
+          },
+          "text": {
+            "zh": "沿线路累计降雨影响，把局部冲击与网络传播、容量吸收明确分开。",
+            "en": "Integrate rainfall along links and separate local forcing from network propagation and capacity-driven absorption."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留验证中的弱点",
+            "en": "Keep validation failures visible"
+          },
+          "text": {
+            "zh": "用后续年份测试，并报告少雨日和不同铁路系统上预测失效的边界。",
+            "en": "Test on later data and report limits on low-rain days and across different railway systems."
+          }
+        },
+        {
+          "heading": {
+            "zh": "从中心性走向风险",
+            "en": "Move from centrality to risk"
+          },
+          "text": {
+            "zh": "局部扰动后的全网延误，再乘人口暴露，可得到不同于中心性的治理优先序。",
+            "en": "Combine network-wide delay after local shocks with population exposure to obtain priorities beyond centrality."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络韧性、级联传播、交通网络与气候风险研究者。",
+        "en": "Researchers in network resilience, cascades, transportation and climate risk."
+      },
+      "reading_caveat": {
+        "zh": "已读9页正式PDF及全部图表；未读独立补充材料，未复现或独立验算。简化模型忽略调度、取消与改道；真实数据未达到模型无界崩溃条件。AI编辑荐读。",
+        "en": "Read all nine publisher-PDF pages and figures/tables; separate supplements not read, no reproduction or independent derivation checks. The simplified model omits dispatching, cancellations and rerouting; observed data do not reach its divergent-collapse condition. AI editorial guidance."
+      },
+      "publication_sha256": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -23194,5 +23759,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "d75b76e8b2b5082d2b40950f4a1d17f92d2968ed283db51bc973a657797e59a1"
+  "daily_suggestions_sha256": "18ec88f3008b49d672734b3d66258b87b5ac88afdb496519cc2017cc27779ed4"
 }

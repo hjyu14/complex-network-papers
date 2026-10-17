@@ -132,9 +132,9 @@
       "categories": [
         "network_structure"
       ],
-      "note_en": "How does allowing local flexibility in preferential attachment change degree distributions and network hierarchy?",
-      "note_zh": "优先连接允许局部灵活性后，网络的度分布与层级结构会怎样改变？",
-      "assessment_sha256": "e728e4a7e511435d4e91e42eafd3a2248a88df497a17b512aa7b9c68b66dff3b"
+      "note_zh": "局部连接重定向改变非线性优先连接网络的层级结构与度分布，揭示网络增长对局部灵活性的依赖。",
+      "note_en": "Local redirection changes hierarchy and degree distributions under nonlinear preferential attachment, revealing how network growth depends on local flexibility.",
+      "assessment_sha256": "3fca3a3a0b95d5b7a5805197f11363d4b95a830047e5b6f1f8e34f43cc1fb65d"
     },
     "10.1073/pnas.2613908123": {
       "categories": [
@@ -582,12 +582,12 @@
     },
     "10.1103/996v-4djr": {
       "categories": [
-        "network_collective",
-        "network_structure"
+        "network_structure",
+        "network_collective"
       ],
-      "note_en": "Synaptic plasticity organizes recurrent spiking networks into hybrid architectures whose collective superbursts encode temporally structured inputs.",
-      "note_zh": "突触可塑性将递归脉冲网络组织为混合架构，其集体超爆发编码时间结构化输入。",
-      "assessment_sha256": "fc4a6ef14df506256e55292e35be2b1b4ba7056f31312b5f9d0d7254514b03e4"
+      "note_zh": "可塑性将随机递归脉冲网络重组为前馈骨架与稀疏递归连接，使superburst编码时序刺激。",
+      "note_en": "Plasticity reorganizes a recurrent spiking network into a feedforward backbone with sparse recurrent links, enabling temporal input encoding through superbursts.",
+      "assessment_sha256": "15399de39a6fbde24c2aaafb6b64319040e3f045e69f04858f49d61ce6f6e47d"
     },
     "10.1103/9lmp-pydp": {
       "categories": [
@@ -670,9 +670,9 @@
       "categories": [
         "network_spreading"
       ],
-      "note_en": "Analytical and simulated epidemic dynamics connect continuous pathogen mutation and selection to spreading conditions across population network structures.",
-      "note_zh": "解析及模拟疫情动力学将病原体连续变异与选择联系到不同种群网络上的传播条件。",
-      "assessment_sha256": "cb88e62e2d573f685229a8ef2a5cb096e975ab5a82473071936b6bb60f7ea4c1"
+      "note_zh": "将病原体连续变异与网络传播耦合，分析群体拓扑如何影响传播条件及毒性选择。",
+      "note_en": "Couples continuous pathogen mutation to network spreading to analyze how population topology affects transmission conditions and virulence selection.",
+      "assessment_sha256": "31627004dbb66332e8d98c175ac6856b7a2d0cbecfa4d3aa55ba49e2ce71b8a3"
     },
     "10.1103/d26r-r4gp": {
       "categories": [
@@ -1200,9 +1200,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Analytical mean-field solutions characterize noisy quadratic integrate-and-fire populations and the interplay of electrical and chemical coupling in neuronal networks.",
-      "note_zh": "推导含噪二次积分发放神经元群体的平均场解析解，分析神经网络中电与化学突触耦合的共同作用。",
-      "assessment_sha256": "30ea35f8c3d1f44cf25cff26a57d2c216d1a5e61d36bad46683fd5fd6c10148d"
+      "note_zh": "以首达时间方法解析有噪声QIF神经元群体，连接宏观状态与电、化学突触的相互作用。",
+      "note_en": "First-passage-based analysis of noisy QIF populations connects macroscopic states with interacting electrical and chemical synapses.",
+      "assessment_sha256": "df7c4afc29a42a267fb7ed5c4921daad9901ebc0c5beace40c4942866812bc36"
     },
     "10.1103/zrk4-g7fj": {
       "categories": [
@@ -1852,6 +1852,31 @@
       "note_zh": "全脑同步记录揭示由主动搜索和被动感知策略主导的交替功能子网络，提示解释任务网络时须控制内部策略。",
       "note_en": "Brain-wide recordings reveal alternating functional subnetworks dominated by active-search and passive-sensation strategies, highlighting internal strategy as a task-network confound.",
       "assessment_sha256": "ce86e7295a28f77ef11aa237f6f85b68a9110d24a3ca4fade7d489b9b2d1b3e7"
+    },
+    "10.1063/5.0356075": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "策略相似性形成动态交互结构，与适度探索共同维持合作，为自适应网络上的演化博弈提供机制解释。",
+      "note_en": "Similarity-dependent interactions form a dynamic structure that, together with moderate exploration, supports cooperation in an evolving population.",
+      "assessment_sha256": "1111d6cce39e7c80b7311b4c6e8e54e531e993431584c22f282596a1e42d7bfa"
+    },
+    "10.1073/pnas.2532180123": {
+      "categories": [
+        "network_resilience",
+        "network_spreading"
+      ],
+      "note_zh": "将降雨场耦合铁路网络的延误生成、传播与吸收，研究模型临界态和局部扰动风险；真实数据未达到模型崩溃条件。",
+      "note_en": "Couples rainfall to delay generation, propagation and absorption on railway networks, studying model critical regimes and local-shock risk; observed data do not reach model collapse.",
+      "assessment_sha256": "f29631619b62671483eae6b2db78eb9f0c6208a1dd49edb061dd9b63d2215b38"
+    },
+    "10.1103/mzgk-nx4w": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "局部交互半径调控移动相位振子的涡旋、极化和失稳阈值，揭示空间耦合范围对集体态的影响。",
+      "note_en": "Local interaction radius controls vortex states, polarization and instability thresholds in mobile phase oscillators, linking spatial coupling range to collective order.",
+      "assessment_sha256": "925a7a2a686d3ffbba46cc36dedf92ec68b603a28a87097c136ac196bee880a0"
     }
   }
 }
