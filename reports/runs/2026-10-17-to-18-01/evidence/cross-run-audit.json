@@ -1,0 +1,1267 @@
+{
+  "version": "daily-carryover-audit-1",
+  "current_run": "reports/runs/2026-10-17-to-18-01",
+  "candidate_sha256": "59e77d9620bf1aa193a1615654fac66b5451708814db47136350c83e2be09fc0",
+  "rule_sha256": "f56f2933e4ca169665e5f9760140d3f9fd0120379a5f73e945d4509fb3f28437",
+  "previous_publications": {
+    "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+    "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+    "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+    "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+    "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+    "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+    "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+    "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+    "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+    "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+    "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+    "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+    "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+    "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+    "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+    "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+    "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604"
+  },
+  "previous_windows": {
+    "Nature": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "Science": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "NC": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "NMI": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "NCS": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "PRX": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "PRL": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "SA": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "PNAS": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "CP": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "PRResearch": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "PRE": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "Chaos": [
+      [
+        "2026-09-01",
+        "2026-09-30"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-05"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-05",
+        "2026-10-06"
+      ],
+      [
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      [
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ],
+    "NP": [
+      [
+        "2026-09-01",
+        "2026-10-08"
+      ],
+      [
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      [
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      [
+        "2026-10-11",
+        "2026-10-12"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      [
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      [
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      [
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    ]
+  },
+  "window_start": "2026-10-17",
+  "window_end": "2026-10-18",
+  "records": [
+    {
+      "doi": "10.1038/s41467-026-78207-3",
+      "window_membership": "in_window",
+      "record_sha256": "99a8d45d6e6c70b62c7a17aeb5e31dbf4f802cb158e9ab525f56e284f0099813",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "1b54bc546602ffe1737ecb2283f9ddb74bffa1c3330898c8d5d8c24993f4dc25",
+      "input_sha256": "611ad725f1e2528d712063bbb318f4a485dbc6951994669439da0bb049dcfc57",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78210-8",
+      "window_membership": "in_window",
+      "record_sha256": "f2dae77535c7b084aa78471fa65a5de22223d3bcdcf7ddcf2971644d84c762d3",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "1a2b4dd9b032e47173dd48c3cd3df01aa0a3eb7b2cafdbc8b3da3db15ebe0293",
+      "input_sha256": "02765272bac3189d8577009212622763383518b414004d6f87e953352929458b",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78311-4",
+      "window_membership": "in_window",
+      "record_sha256": "ef4e40acb582f59f6183bc269faf42234ef5f1b36c6a6849cf5dbe543e28912c",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "4d4e75c36a47708b6b00b0cb114d110627951249ab7597e6f1eec795dbfabd3d",
+      "input_sha256": "8006d607bb14eb8d50e933e13a9e5f324a8e3802b225b302b6369cfb6dff8eba",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78319-w",
+      "window_membership": "in_window",
+      "record_sha256": "eca4fbee7a837346aa8e24f2ce8168f9294ee7822390a1ed6fcf0b5356cd3f05",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "bd58963511e9e0d9ad0d6f013e05e227e5dd5df71d561dc36228051f237a51bc",
+      "input_sha256": "f24c67d0ebdbc2fa2f33bf8cef83e260a58321ad2d4e3bfdde48536350c70d06",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78353-8",
+      "window_membership": "in_window",
+      "record_sha256": "85cc7985052e3f22b9f2526f9521396c80a469b7f5f6f027e6c93dbebe76cd5e",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "32c543f8a7bae330f6afe369878ae5e2cf63440af0ea7b6ad7e69cefd599c34d",
+      "input_sha256": "0c549bd16ced8a60473691f8fe70a6eb9a9be38bba4c20ef73e56b197798291c",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78408-w",
+      "window_membership": "in_window",
+      "record_sha256": "262ac293e4d0ccd3b6929034a0d4a9d970d00a03f668ab1d107a91cc7e3f32b8",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "71cb31f48532bdac3771e08b3b28b96177a74a19ca33baafd47fe06308f94511",
+      "input_sha256": "b3fbb206d9f853dcd35f91d30760d6aa3bada3e19592a93195b194f447fbabfc",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78426-8",
+      "window_membership": "in_window",
+      "record_sha256": "f8127befc7004b18603414d11f93be9d87f72f8003e3759cc4a9f957f2141166",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "748edcf25186f05ed4f7d643e06ebe84177a442945496ebc2c1adc7a3f9e5358",
+      "input_sha256": "4a1d153b620a952d1b60509e67237a02038dc88dbe4e8cb3a53b2209fde68ffb",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78429-5",
+      "window_membership": "in_window",
+      "record_sha256": "17eff3e5572f57830d8db3e60630f7031cbcace1725688273fdfba09992d3283",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "e7f9cf01c019540aab5e80b93ba90f924796194e205477bb732207f77dd13f26",
+      "input_sha256": "edf1c0c786cfd3e28938a013fd4acf71d66008e50f543fccc0782eb6aae67790",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78438-4",
+      "window_membership": "in_window",
+      "record_sha256": "d547b34f8a1d258d63c4cae0a4a3df6783cb2a31e578cb1a08425cbd694a45ea",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "24d48f7f47c149e1078e2801c89bdc2b7f72fa89f035a2931901cce44d4c9559",
+      "input_sha256": "b3c3e900f2af5050a5f1588bfe508d60e8c82635693e25ebb518ae845488f7d8",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78441-9",
+      "window_membership": "in_window",
+      "record_sha256": "1abba6bd6e174345bd2863994cc8aebd8e2c6844ec5f8edcd09b76c6bce67580",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "b3ab375d8ff8d256e7d2aefecb5556100f41ec0fac3a08b13aafef4fbf14ec81",
+      "input_sha256": "c7fc52a98f0ba30ca76f2e81d08011f295f839c2bf00ed80479d4054b67f6b41",
+      "category": "core",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78450-8",
+      "window_membership": "in_window",
+      "record_sha256": "6602d6a0b06d220cf88ef3968a7ca78c00acdb4f16ed97550ee61e6ccd329402",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "0db43996d043699327774b01d4181570d7d0bc230bdcfb6cbd0882b85fcc5242",
+      "input_sha256": "cf1734eef39aa5e2b1aa51e81e85cb3837627ec58484d034525d300215f7ba85",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78524-7",
+      "window_membership": "in_window",
+      "record_sha256": "e526c734ac5e6135f17d4b78609c59ed30e45da7bbe2f679961de0e9f81ecc54",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "9dabc5a73bef946eb84c0b8b9c194c4a7bc52eab24f7828bec3df4ea2ebae4d8",
+      "input_sha256": "ccadcc16bc987f4ecdde488e92f3c3cefe0f1857286968457e46fd281195c6f9",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78591-w",
+      "window_membership": "in_window",
+      "record_sha256": "e46151575c6850da9110ffc8a704e061eaab7ed22e0621726cd168b2ffcb1a78",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "9fe8ffa09ed3bf7e0f695ebd678b30b52048087a71a7e09d8c63a5290c2594d7",
+      "input_sha256": "3bc6050b0d2028b77e3f707fae11d23d1ab9aa2fb6cdd80267d6cef53a473b8e",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78604-8",
+      "window_membership": "in_window",
+      "record_sha256": "ae3405206d3c970943d99cddc597765021e354cc1721e24e5085870282699f62",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "62543c18b4fb9a11ac153fe0ff86dfa3c8e92028351e2416e387824eb3e46827",
+      "input_sha256": "b73fb552f993edcbfd4a2db8ef74474043a7cc3ae15883938c45d0500896393b",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78618-2",
+      "window_membership": "in_window",
+      "record_sha256": "aa91c36d81754c14f046c27319277208b2e341e6aa6f1f130ef884e14d207f98",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "bb20c707acbb808cfeb631e383b19f2e5648e759570268bbefb7df76585ad1cb",
+      "input_sha256": "164829a1464c8399f88977cb44ab5c0f3a371c1a610a98439205915b4d78ca5b",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78631-5",
+      "window_membership": "in_window",
+      "record_sha256": "f165267bfe086405755a5ab0161fc520adabe8914cf1c4b75da2aeb1766b83fa",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "37f8d68628ff441641b193a7b2f6519a1e4b9f198deea3fa9bb37d245bcad409",
+      "input_sha256": "605d42439769632fbbfd0dccd51b2666183e0062d05c3350a55525f78524a45f",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78649-9",
+      "window_membership": "in_window",
+      "record_sha256": "53d41d42953814982cf88026bdcbd429c31b0efe3628b69b979dca3de7632c12",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "4d560f4527c0b45515f2ca2e0de003fd69e795579a9e522a382828ebc0fe99c4",
+      "input_sha256": "ce65876213667fe59c249c99a233586d557020ffe21496972e555099bd32d442",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78683-7",
+      "window_membership": "in_window",
+      "record_sha256": "cef5720f063a81c11d8583ca437bbf604cbcb13610380509f7d2fb844cc94794",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "f91d4b5546d307cdfa8f4a06fb4668dae21d4a276102355ab90e00d7868ceee2",
+      "input_sha256": "f33b8f423db3fd1aec3b45bf0fdc81db308864155b3657c1a095c7b767cec446",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78686-4",
+      "window_membership": "in_window",
+      "record_sha256": "d4f409b0657f419083556973cacf401c8c968b487ff8d44e1930120d3c32b970",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "c629ebcf41aec332794bc10e8487610102169d7867ddb07c9ee2a6a3efdc30de",
+      "input_sha256": "1a9c04da6c1a0c4e696ee3d008d27c644b9b5d22afed6536ac934c615b85e55a",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78698-0",
+      "window_membership": "in_window",
+      "record_sha256": "71e1256e77385e4132faa86e3b23e84efaff75f5cd2667750418046dada2ccbe",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "22368719e07166e62c48419431f6fd10bb2f27ff5faeb7689ff31b8b3c94b64d",
+      "input_sha256": "e54aa9e6b29d7d9b771ece34037fa2e705d92e24ee943aeb8f1cf98e4ea782ab",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78700-9",
+      "window_membership": "in_window",
+      "record_sha256": "86ebeda01c61dd8b723772f37e4d6eb8a0db0edadddb23a69060807f860bcd84",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "076fde6add3691c2407a3031d7a0ebfc06e227c97932e81ce06dba8ece079c9f",
+      "input_sha256": "15d599f34c7ed568e76b8090727121b1803c5a5ec2091f9a4edf6a8ec21ad09b",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78701-8",
+      "window_membership": "in_window",
+      "record_sha256": "2122fe90d8485909a6d8c8f9bd44e5bace7949af6031bee174e3c6fb5ef0cb6f",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "23994697781223f18e11eacfcad173f5dc88abcf7afe380a1f97d48ae90f4538",
+      "input_sha256": "ae93ba2f60de7e49e6ca972334ae41435416a97c12eb98980a293cff74ec2748",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78723-2",
+      "window_membership": "in_window",
+      "record_sha256": "7d9dec82d08219f8d0d149dc15c9a02b6d60dda30f53ddde89e4d6699ac92ae9",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "c2ac597fda056aacdbb6a8b67808b26e10ae2e581bc6d0f88af9c3446aa042e0",
+      "input_sha256": "3566fcd0bb193cbc13e7d0d7e807c503a02a63922a073b5da06ad94a9d857424",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78763-8",
+      "window_membership": "in_window",
+      "record_sha256": "2643afb7cfe4a1321fadc4f6dc092c3eafa1e1e783a0fc958a6d64e522a1fcd8",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "4bdeec66a1bcc89a6510d3456a96669d2a736b33aff4ec0a886813230e17be5d",
+      "input_sha256": "873ab074a4af948680665cd4f6a15d207166b06e2474ef738f8239cc1aac9a5c",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78765-6",
+      "window_membership": "in_window",
+      "record_sha256": "807ab426cbaba2512b84ff40ee9660ebc14ec3d59dc89c3e9edcfedd67ff1b74",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "17504f2025dfa0a5010e3b0b7a38efa81bb695e9beffcb63a442d682f2c3b0a1",
+      "input_sha256": "b456b6bfd1ffb9caa67ae9bf0d47ee0e32c43cef0bc17efda57a64c187f69a51",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78813-1",
+      "window_membership": "in_window",
+      "record_sha256": "35c1add6e1e82f619ca9787e7f9e7b88935d81cd0cbe16c29336da5a8a208238",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "0ba912ec017d5775caf988a3e76ca4e4d043e8bc2fec6c202f46439658d4fd95",
+      "input_sha256": "693e24c082880f3ebadc3bf6e786a475f601034d41ad5ea14fe1536d847e1950",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78818-w",
+      "window_membership": "in_window",
+      "record_sha256": "a9213be32682e72d3c9106ab78b9143fe57e159c6a462b36f1bf6268d364f81b",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "1a14edf466d1fc57e0e311f58ddbebe3686c97b2669bb10882e45e7eaa2ac9da",
+      "input_sha256": "db8e466dab7a308746bdcaf5e0e16aaeeb92704584e4e86f2ae9b334d04bf280",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78834-w",
+      "window_membership": "in_window",
+      "record_sha256": "3793402d60d54202e132429a21dbc933e74f4551106396d0648ade81c8bab542",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "449fe2eefc086c876bc4e28c656563571a219b32c6e314a715a1bfe5a8940c4a",
+      "input_sha256": "3501faa08ce948bd19030e6e89f58e7c342d8d2b2cae4d31436e279b45ceaeb9",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78837-7",
+      "window_membership": "in_window",
+      "record_sha256": "738fe07812ecdd88e916b2f4cf73beedfa71846798ad5fe3d496b040aefcfb95",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "b26ba0593cdd6c4f61573390556588ad8ada1d6277c461f34441cd52f3fa477d",
+      "input_sha256": "daefec0669e7eb025a441afdae5e420ba670cf73c80d297a4d32aa39c7a4cc65",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78873-3",
+      "window_membership": "in_window",
+      "record_sha256": "1a116680058e2d655fa6ebb1f3b1b3367f1aa8963d71054f35991f137c05d4fc",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "e519a0b89076f3b1fe706ea188129f5bf775f612c6472b398c50a95ea1d4aff3",
+      "input_sha256": "78b6d0cf8a32c2d589ce1a2ed95a589941fb5a5d126c33c314d103adf0fb3b54",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78906-x",
+      "window_membership": "in_window",
+      "record_sha256": "59a3c517d18786641f938558069e205c01576706d4d83353b2e9400057223ec3",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "ef8db0fee44d0ce1072978b5e1551cc3bcaa92cc2d8e1472af9555673c609eea",
+      "input_sha256": "fde8af1356639741ae2ea6702d8cb20da259d382e966657349bca0e48a45d43c",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78907-w",
+      "window_membership": "in_window",
+      "record_sha256": "003afae06d498cf3aa5fad565b83a128c06c38cd8ac31047e5eab03eeb426e11",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "0cfd3522632d3e56c5a10308080ec1c4595940942043b704703010e0eeddabad",
+      "input_sha256": "4c456de144e3d54f76e8cab03b45207b44c93db08b7d92d52170e9b69421dff7",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78943-6",
+      "window_membership": "in_window",
+      "record_sha256": "276d6983b985fc43d11a0dac9b2b8ff9f172fdb3dc62bc5d24a1d3ba5d03fe67",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "cafc9de80277ddf60f3ab8c102bfa013608f801861aa71c4ca30160fd8f37b8f",
+      "input_sha256": "5f4891ac711245dbb171bcf742d2e61c8359e61c1096ec67db733d33340bcb04",
+      "category": "excluded",
+      "publication_status": "published"
+    },
+    {
+      "doi": "10.1038/s41467-026-78949-0",
+      "window_membership": "in_window",
+      "record_sha256": "195b8581c91bc8ad4073c831a723eca1e401fcc213bda197c4e3dd900f26d5a8",
+      "date": "2026-10-17",
+      "history_status": "missing_history",
+      "assessment_sha256": "4a6e4380119a06358726067b4ba09ac1acd5835c666d468f82d9c7cdc2c98b5d",
+      "input_sha256": "f621194bc198c5feffd90ea48fceaf52bb52f9c2c19da635aa914a9cc8f4e666",
+      "category": "excluded",
+      "publication_status": "published"
+    }
+  ],
+  "blockers": [],
+  "counts": {
+    "in_window": 34,
+    "newly_reviewed": 34,
+    "historically_reviewed": 0,
+    "state_updates": 0,
+    "categories": {
+      "excluded": 33,
+      "core": 1
+    }
+  },
+  "limitations": [
+    "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+  ]
+}

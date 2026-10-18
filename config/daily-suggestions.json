@@ -914,6 +914,84 @@
         "en": "Read all nine publisher-PDF pages and figures/tables; separate supplements not read, no reproduction or independent derivation checks. The simplified model omits dispatching, cancellations and rerouting; observed data do not reach its divergent-collapse condition. AI editorial guidance."
       },
       "publication_sha256": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604"
+    },
+    {
+      "doi": "10.1038/s41467-026-78441-9",
+      "recommended_on": "2026-10-18",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-17-to-18-01",
+      "assessment_sha256": "b3ab375d8ff8d256e7d2aefecb5556100f41ec0fac3a08b13aafef4fbf14ec81",
+      "input_sha256": "c7fc52a98f0ba30ca76f2e81d08011f295f839c2bf00ed80479d4054b67f6b41",
+      "evidence_sha256": "0cadcd04ec46d0f4316ea103a102ba3291084e133b9cfc180c9da3d136c4c124",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-18T01:21:46.489028+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78441-9",
+        "title": "Decomposing multi-scale dynamic regulation from single-cell multiomics with scMagnify",
+        "sha256": "a710b3ea4eef6d7f22663752b55e43791ca79932d32a498839502363ece441fe",
+        "version": "Publisher Article in Press: peer-reviewed accepted research, published online October 17, 2026; not the final edited Version of Record.",
+        "source_url": "https://www.nature.com/articles/s41467-026-78441-9_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 20,
+        "read_scope": "Complete 20-page publisher PDF: main text, six figures and captions, Methods, equations 1–24, data/code availability, reference list and declarations; all 20 rendered pages visually inspected. Separate supplementary files, source datasets and cited papers not read; no code execution, reproduction or independent derivation verification.",
+        "reviewed_at": "2026-10-18T01:21:46.489028+00:00"
+      },
+      "question": {
+        "zh": "重构出调控网络后，怎样找出协同工作的模块？",
+        "en": "After reconstructing a regulatory network, how do we find cooperating modules?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络重构与模块解释接起来：保留不同伪时间滞后的调控信息，再识别共同作用的转录因子与靶基因，而不只交付一张静态连边图。",
+          "可复用的思路是先用生物先验约束候选边，再以张量表达多尺度关系，并分别检验边恢复、关键节点和稳定性。推断关联仍需实验验证。"
+        ],
+        "en": [
+          "Today’s pick connects network reconstruction to module interpretation: retain regulation across pseudotime lags, then identify cooperating transcription factors and target programs instead of stopping at a static edge map.",
+          "Borrow its sequence of prior-constrained inference, tensor representation and separate checks of edge recovery, key regulators and stability. Inferred associations still require experimental validation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "保留尺度，再找模块",
+            "en": "Retain scales before finding modules"
+          },
+          "text": {
+            "zh": "将因子、靶基因与伪时间滞后组成张量，用Tucker分解识别协同调控程序。",
+            "en": "Represent factors, targets and pseudotime lags as a tensor; use Tucker decomposition to identify regulatory programs."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让先验约束网络重构",
+            "en": "Constrain inference with priors"
+          },
+          "text": {
+            "zh": "用染色质可及性与结合基序限定候选边，并检查移除先验后的表现。",
+            "en": "Restrict candidate edges with chromatin accessibility and binding motifs, and compare inference without this prior."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分层评估，保留局限",
+            "en": "Evaluate at several levels"
+          },
+          "text": {
+            "zh": "同时考察连边、关键因子与稳定性；AUPR优势不等于所有F1比较都显著。",
+            "en": "Check edges, key regulators and stability separately; favorable AUPR does not imply significant gains in every F1 comparison."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络重构、动态网络、模块发现及单细胞多组学研究者。",
+        "en": "Researchers in network inference, dynamic networks, module discovery and single-cell multiomics."
+      },
+      "reading_caveat": {
+        "zh": "已读20页出版社提前在线PDF及6幅主图；尚非最终编辑版。未读独立补充材料，未复现或独立验算；伪时间滞后不是实际时间延迟，推断边不是确证因果。AI编辑荐读。",
+        "en": "Read all 20 pages and six main figures of the publisher’s Article in Press, not the final edited version. Separate supplements not read; no reproduction or independent derivation checks. Pseudotime lags are not chronological delays; inferred edges are not established causal effects. AI editorial guidance."
+      },
+      "publication_sha256": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d"
     }
   ],
   "revisions": [

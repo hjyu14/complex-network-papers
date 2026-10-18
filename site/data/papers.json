@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T00:33:34.083105+00:00",
+  "generated_at": "2026-10-18T01:31:51.520431+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-17",
-  "window_days": 47,
+  "window_end": "2026-10-18",
+  "window_days": 48,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "3190969665933f034670f48836d882649a79a87f088c5e85b78ea940c947ed01",
-  "author_metadata_sha256": "841f710ac43a29e3fc27f5d7c6c6bf4544ebe8adbac00366e903cc3c05c5b21c",
+  "reading_notes_sha256": "01372566a1a19e0de37e8c8ef8de1c9f3b81fe23b2652666b19e256ba893bff0",
+  "author_metadata_sha256": "21151fc2d8a520a63e38c3eae142f96dfe64a999bdc2f8bd07094190db6b5d20",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -1863,9 +1863,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-17-to-18-01",
+      "config_sha256": "12be73249ab760c6f65967091a1743e80e11f88ce6114efb60b5138c615e17de",
+      "window_start": "2026-10-17",
+      "window_end": "2026-10-18",
+      "rule_sha256": "f56f2933e4ca169665e5f9760140d3f9fd0120379a5f73e945d4509fb3f28437",
+      "screening_log_sha256": "dc6c518cd2282a1d422412e036169b615cf5a75d8a43f072c660529f2de8a9f2",
+      "candidate_sha256": "59e77d9620bf1aa193a1615654fac66b5451708814db47136350c83e2be09fc0",
+      "author_metadata_sha256": "6ea9b4f45b802e508974ff4f665b7584d46b10909b8572ee98ddf43587ac44b5",
+      "run_manifest_sha256": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-17-to-18-01",
+          "files": {
+            "candidates.json": "59e77d9620bf1aa193a1615654fac66b5451708814db47136350c83e2be09fc0",
+            "coverage.json": "486327a1f6429aea40762468df3097101d985a12905b7fab51d51ed264c640c3",
+            "collection-log.jsonl": "01e988e50395493afda766063a73d14684efb696287343485543dd4ed848b940",
+            "screening-log.jsonl": "3813383135d14576b1ed00e234f18db40c6cd50778febbc4ce4e5eadd242b3a6",
+            "inputs/manifest.json": "19570543af9184f7a22ff0608bfbfce653fbdf5f5a744d5fd422841e346459f3",
+            "inputs/sources.json": "78cb0f2cdd4b2beb8e511861907f301a9c17b5b893fa1b91f29d93a8b5caf75d",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "59e77d9620bf1aa193a1615654fac66b5451708814db47136350c83e2be09fc0",
+          "rule_sha256": "f56f2933e4ca169665e5f9760140d3f9fd0120379a5f73e945d4509fb3f28437",
+          "screening_log_sha256": "dc6c518cd2282a1d422412e036169b615cf5a75d8a43f072c660529f2de8a9f2"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "6ea9b4f45b802e508974ff4f665b7584d46b10909b8572ee98ddf43587ac44b5",
+          "audit": {
+            "path": "reports/runs/2026-10-17-to-18-01/screening-log.jsonl",
+            "sha256": "3813383135d14576b1ed00e234f18db40c6cd50778febbc4ce4e5eadd242b3a6"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "37347c79037d8b1d8299b712ec2969f39cae6999a6a7ab0086d12c0d96f426ca"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 221,
+  "author_available_count": 222,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -2154,6 +2198,15 @@
           "publisher_verified_inventory_count": 7,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "Nature",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -2298,13 +2351,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1362,
-      "publisher_verified_inventory_count": 1360,
+      "candidate_count": 1396,
+      "publisher_verified_inventory_count": 1394,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2442,6 +2504,15 @@
           "publisher_verified_inventory_count": 40,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "NC",
+          "candidate_count": 34,
+          "publisher_verified_inventory_count": 34,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -2586,6 +2657,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -2725,6 +2805,15 @@
         {
           "window_start": "2026-10-16",
           "window_end": "2026-10-17",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
           "journal": "NCS",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -2874,6 +2963,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3018,6 +3116,15 @@
           "publisher_verified_inventory_count": 17,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3162,6 +3269,15 @@
           "publisher_verified_inventory_count": 43,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3306,6 +3422,15 @@
           "publisher_verified_inventory_count": 32,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3450,6 +3575,15 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3594,6 +3728,15 @@
           "publisher_verified_inventory_count": 13,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "PRResearch",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3736,6 +3879,15 @@
           "journal": "PRE",
           "candidate_count": 11,
           "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -3882,6 +4034,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3981,37 +4142,39 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-17",
+          "window_end": "2026-10-18",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 5196,
+  "candidate_count": 5230,
   "screening_counts": {
-    "excluded": 4975,
-    "core": 198,
+    "excluded": 5008,
+    "core": 199,
     "transferable_application": 23,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 221
+    "included": 222
   },
-  "published_count": 184,
+  "published_count": 185,
   "accepted_count": 37,
   "latest_update": {
-    "run": "reports/runs/2026-10-16-to-17-01",
-    "reviewed_at": "2026-10-17T00:27:34.491338+00:00",
-    "newly_included_count": 3,
+    "run": "reports/runs/2026-10-17-to-18-01",
+    "reviewed_at": "2026-10-18T01:16:38.675417+00:00",
+    "newly_included_count": 1,
     "newly_included_dois": [
-      "10.1063/5.0356075",
-      "10.1073/pnas.2532180123",
-      "10.1103/mzgk-nx4w"
+      "10.1038/s41467-026-78441-9"
     ],
-    "accepted_to_published_count": 4,
-    "accepted_to_published_dois": [
-      "10.1103/996v-4djr",
-      "10.1103/9y9m-q7qj",
-      "10.1103/c9vq-tclt",
-      "10.1103/nl4b-7sfq"
-    ]
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": []
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -4021,6 +4184,80 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1038/s41467-026-78441-9",
+      "url": "https://doi.org/10.1038/s41467-026-78441-9",
+      "title": "Decomposing multi-scale dynamic regulation from single-cell multiomics with scMagnify",
+      "authors": [
+        "Xufeng Chen",
+        "Xi Yan",
+        "Bihan Shen",
+        "Heqi Wang",
+        "Zhixuan Tang",
+        "Yan Zang",
+        "Ping Lin",
+        "Haibing Zhang",
+        "Yu Li",
+        "Hong Li"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b837734ca07883b59903b0cf7790fc1e03818f4f8965c872992864a81add347e",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78441-9",
+      "author_retrieved_at": "2026-10-18T01:15:26.991577+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-10-17",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-17",
+        "basis": "published-online",
+        "publication_status": "published"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-17",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Identity-bound official full-type directory",
+        "sources": [
+          "https://www.nature.com/ncomms/articles?year=2026&page=2&sort=PubDate&searchType=journalSearch"
+        ]
+      },
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Constrains multiscale gene regulatory network inference with multiomic priors and decomposes pseudotime-lag tensors into cooperative modules; inferred edges and lags do not establish causal effects or chronological delays.",
+      "note_zh": "以多组学先验约束伪时间上的多尺度基因调控网络重构，再用张量分解识别协同调控模块；推断边与滞后不等同于确证因果或真实时间延迟。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b3ab375d8ff8d256e7d2aefecb5556100f41ec0fac3a08b13aafef4fbf14ec81",
+      "input_sha256": "c7fc52a98f0ba30ca76f2e81d08011f295f839c2bf00ed80479d4054b67f6b41",
+      "material_sha256": "0cadcd04ec46d0f4316ea103a102ba3291084e133b9cfc180c9da3d136c4c124",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "0cadcd04ec46d0f4316ea103a102ba3291084e133b9cfc180c9da3d136c4c124",
+      "rule_sha256": "f56f2933e4ca169665e5f9760140d3f9fd0120379a5f73e945d4509fb3f28437",
+      "featured": "NC",
+      "evidence": [
+        "scMagnify reconstructs multi-scale gene regulatory networks using chromatin accessibility, expression and Granger causality, then decomposes combinatorial TF modules across time lags."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78441-9",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-78441-9",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/nl4b-7sfq",
       "url": "https://doi.org/10.1103/nl4b-7sfq",
@@ -21823,9 +22060,124 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "df69eb3cf70e7f6b7dbb3fd2a101bfd2f2c41390533cc5ebdb13d0d22279a8ad"
+    },
+    {
+      "current_run": "reports/runs/2026-10-17-to-18-01",
+      "candidate_sha256": "59e77d9620bf1aa193a1615654fac66b5451708814db47136350c83e2be09fc0",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604"
+      },
+      "counts": {
+        "in_window": 34,
+        "newly_reviewed": 34,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 33,
+          "core": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "f242a5109302fde3b4df5d65daa9a77c3327d913fbcbec170a8a9969d1ff2d9e"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41467-026-78441-9",
+      "recommended_on": "2026-10-18",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-17-to-18-01",
+      "assessment_sha256": "b3ab375d8ff8d256e7d2aefecb5556100f41ec0fac3a08b13aafef4fbf14ec81",
+      "input_sha256": "c7fc52a98f0ba30ca76f2e81d08011f295f839c2bf00ed80479d4054b67f6b41",
+      "evidence_sha256": "0cadcd04ec46d0f4316ea103a102ba3291084e133b9cfc180c9da3d136c4c124",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-18T01:21:46.489028+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78441-9",
+        "title": "Decomposing multi-scale dynamic regulation from single-cell multiomics with scMagnify",
+        "sha256": "a710b3ea4eef6d7f22663752b55e43791ca79932d32a498839502363ece441fe",
+        "version": "Publisher Article in Press: peer-reviewed accepted research, published online October 17, 2026; not the final edited Version of Record.",
+        "source_url": "https://www.nature.com/articles/s41467-026-78441-9_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 20,
+        "read_scope": "Complete 20-page publisher PDF: main text, six figures and captions, Methods, equations 1–24, data/code availability, reference list and declarations; all 20 rendered pages visually inspected. Separate supplementary files, source datasets and cited papers not read; no code execution, reproduction or independent derivation verification.",
+        "reviewed_at": "2026-10-18T01:21:46.489028+00:00"
+      },
+      "question": {
+        "zh": "重构出调控网络后，怎样找出协同工作的模块？",
+        "en": "After reconstructing a regulatory network, how do we find cooperating modules?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络重构与模块解释接起来：保留不同伪时间滞后的调控信息，再识别共同作用的转录因子与靶基因，而不只交付一张静态连边图。",
+          "可复用的思路是先用生物先验约束候选边，再以张量表达多尺度关系，并分别检验边恢复、关键节点和稳定性。推断关联仍需实验验证。"
+        ],
+        "en": [
+          "Today’s pick connects network reconstruction to module interpretation: retain regulation across pseudotime lags, then identify cooperating transcription factors and target programs instead of stopping at a static edge map.",
+          "Borrow its sequence of prior-constrained inference, tensor representation and separate checks of edge recovery, key regulators and stability. Inferred associations still require experimental validation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "保留尺度，再找模块",
+            "en": "Retain scales before finding modules"
+          },
+          "text": {
+            "zh": "将因子、靶基因与伪时间滞后组成张量，用Tucker分解识别协同调控程序。",
+            "en": "Represent factors, targets and pseudotime lags as a tensor; use Tucker decomposition to identify regulatory programs."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让先验约束网络重构",
+            "en": "Constrain inference with priors"
+          },
+          "text": {
+            "zh": "用染色质可及性与结合基序限定候选边，并检查移除先验后的表现。",
+            "en": "Restrict candidate edges with chromatin accessibility and binding motifs, and compare inference without this prior."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分层评估，保留局限",
+            "en": "Evaluate at several levels"
+          },
+          "text": {
+            "zh": "同时考察连边、关键因子与稳定性；AUPR优势不等于所有F1比较都显著。",
+            "en": "Check edges, key regulators and stability separately; favorable AUPR does not imply significant gains in every F1 comparison."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络重构、动态网络、模块发现及单细胞多组学研究者。",
+        "en": "Researchers in network inference, dynamic networks, module discovery and single-cell multiomics."
+      },
+      "reading_caveat": {
+        "zh": "已读20页出版社提前在线PDF及6幅主图；尚非最终编辑版。未读独立补充材料，未复现或独立验算；伪时间滞后不是实际时间延迟，推断边不是确证因果。AI编辑荐读。",
+        "en": "Read all 20 pages and six main figures of the publisher’s Article in Press, not the final edited version. Separate supplements not read; no reproduction or independent derivation checks. Pseudotime lags are not chronological delays; inferred edges are not established causal effects. AI editorial guidance."
+      },
+      "publication_sha256": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d"
+    },
     {
       "doi": "10.1073/pnas.2532180123",
       "recommended_on": "2026-10-17",
@@ -23680,6 +24032,84 @@
       "publication_sha256": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604"
     },
     {
+      "doi": "10.1038/s41467-026-78441-9",
+      "recommended_on": "2026-10-18",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-17-to-18-01",
+      "assessment_sha256": "b3ab375d8ff8d256e7d2aefecb5556100f41ec0fac3a08b13aafef4fbf14ec81",
+      "input_sha256": "c7fc52a98f0ba30ca76f2e81d08011f295f839c2bf00ed80479d4054b67f6b41",
+      "evidence_sha256": "0cadcd04ec46d0f4316ea103a102ba3291084e133b9cfc180c9da3d136c4c124",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-18T01:21:46.489028+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78441-9",
+        "title": "Decomposing multi-scale dynamic regulation from single-cell multiomics with scMagnify",
+        "sha256": "a710b3ea4eef6d7f22663752b55e43791ca79932d32a498839502363ece441fe",
+        "version": "Publisher Article in Press: peer-reviewed accepted research, published online October 17, 2026; not the final edited Version of Record.",
+        "source_url": "https://www.nature.com/articles/s41467-026-78441-9_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 20,
+        "read_scope": "Complete 20-page publisher PDF: main text, six figures and captions, Methods, equations 1–24, data/code availability, reference list and declarations; all 20 rendered pages visually inspected. Separate supplementary files, source datasets and cited papers not read; no code execution, reproduction or independent derivation verification.",
+        "reviewed_at": "2026-10-18T01:21:46.489028+00:00"
+      },
+      "question": {
+        "zh": "重构出调控网络后，怎样找出协同工作的模块？",
+        "en": "After reconstructing a regulatory network, how do we find cooperating modules?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络重构与模块解释接起来：保留不同伪时间滞后的调控信息，再识别共同作用的转录因子与靶基因，而不只交付一张静态连边图。",
+          "可复用的思路是先用生物先验约束候选边，再以张量表达多尺度关系，并分别检验边恢复、关键节点和稳定性。推断关联仍需实验验证。"
+        ],
+        "en": [
+          "Today’s pick connects network reconstruction to module interpretation: retain regulation across pseudotime lags, then identify cooperating transcription factors and target programs instead of stopping at a static edge map.",
+          "Borrow its sequence of prior-constrained inference, tensor representation and separate checks of edge recovery, key regulators and stability. Inferred associations still require experimental validation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "保留尺度，再找模块",
+            "en": "Retain scales before finding modules"
+          },
+          "text": {
+            "zh": "将因子、靶基因与伪时间滞后组成张量，用Tucker分解识别协同调控程序。",
+            "en": "Represent factors, targets and pseudotime lags as a tensor; use Tucker decomposition to identify regulatory programs."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让先验约束网络重构",
+            "en": "Constrain inference with priors"
+          },
+          "text": {
+            "zh": "用染色质可及性与结合基序限定候选边，并检查移除先验后的表现。",
+            "en": "Restrict candidate edges with chromatin accessibility and binding motifs, and compare inference without this prior."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分层评估，保留局限",
+            "en": "Evaluate at several levels"
+          },
+          "text": {
+            "zh": "同时考察连边、关键因子与稳定性；AUPR优势不等于所有F1比较都显著。",
+            "en": "Check edges, key regulators and stability separately; favorable AUPR does not imply significant gains in every F1 comparison."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络重构、动态网络、模块发现及单细胞多组学研究者。",
+        "en": "Researchers in network inference, dynamic networks, module discovery and single-cell multiomics."
+      },
+      "reading_caveat": {
+        "zh": "已读20页出版社提前在线PDF及6幅主图；尚非最终编辑版。未读独立补充材料，未复现或独立验算；伪时间滞后不是实际时间延迟，推断边不是确证因果。AI编辑荐读。",
+        "en": "Read all 20 pages and six main figures of the publisher’s Article in Press, not the final edited version. Separate supplements not read; no reproduction or independent derivation checks. Pseudotime lags are not chronological delays; inferred edges are not established causal effects. AI editorial guidance."
+      },
+      "publication_sha256": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -23759,5 +24189,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "18ec88f3008b49d672734b3d66258b87b5ac88afdb496519cc2017cc27779ed4"
+  "daily_suggestions_sha256": "e79aae389a61f1db6abb3b1151835b0f88eabcdee757539270484dfef230ec96"
 }
