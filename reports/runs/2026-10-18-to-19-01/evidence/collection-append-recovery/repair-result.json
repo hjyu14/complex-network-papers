@@ -1,0 +1,14 @@
+{
+  "version": "authorized-exact-prefix-restoration-1",
+  "authorization_source": "user_message",
+  "authorization": "批准按上述方案修复",
+  "before_sha256": "a0b900752bc71c54bd3541490527e45ff2cdc381aca5a88696a76fb423f5dcb6",
+  "restored_sha256": "3c839a1299721e60d63b550377313c784bc4fbfa2ba9953f3ace03f39a75b622",
+  "suffix_event_sha256": "9c20e1ce91ecb36c49572f9ef7900641e81efad556ea1465635621beef009587",
+  "preserved_backup": "evidence/collection-append-recovery/collection-log-before-repair.jsonl",
+  "preserved_prefix": "evidence/collection-append-recovery/original-frozen-prefix.jsonl",
+  "original_event_hashes_recomputed": false,
+  "assessment_inputs_changed": false,
+  "superseded_guard_trace": "evidence/directory-guard-history.json",
+  "note": "Prior guard trace binds preserved pre-repair collection log; rerun on restored frozen original, preserving both records."
+}

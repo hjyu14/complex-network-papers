@@ -992,6 +992,84 @@
         "en": "Read all 20 pages and six main figures of the publisher’s Article in Press, not the final edited version. Separate supplements not read; no reproduction or independent derivation checks. Pseudotime lags are not chronological delays; inferred edges are not established causal effects. AI editorial guidance."
       },
       "publication_sha256": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d"
+    },
+    {
+      "doi": "10.1103/9y9m-q7qj",
+      "recommended_on": "2026-10-19",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-10-16-to-17-01",
+      "publication_sha256": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+      "assessment_sha256": "3fca3a3a0b95d5b7a5805197f11363d4b95a830047e5b6f1f8e34f43cc1fb65d",
+      "input_sha256": "33069d75ef7a944e73dc5d162f1e89159045efdc79ab09c7840eb534b2817832",
+      "evidence_sha256": "593da86f12d8807b3f0081cd141df23c2581b60c61160f43821c287c46b19111",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-19T00:28:11.746456+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/9y9m-q7qj",
+        "title": "Preferential Attachment with Local Flexibility",
+        "sha256": "9188db4949bcec9f8817c3a04f75feba9675da969a01f3a83775ab102bcd855a",
+        "version": "Version of Record, Physical Review Letters 137, 167403 (2026), published 16 October 2026.",
+        "source_url": "https://journals.aps.org/prl/pdf/10.1103/9y9m-q7qj",
+        "source_kind": "publisher_fulltext",
+        "pages": 9,
+        "read_scope": "Complete nine-page publisher PDF: main text, four figures and captions, Table I, Appendices A/B with twelve theorem statements and proof sketches, references and availability statement. Rendered overview and figure/table pages inspected. Separate Supplemental Material not read; no code execution, reproduction or independent proof verification.",
+        "reviewed_at": "2026-10-19T00:28:11.746456+00:00"
+      },
+      "question": {
+        "zh": "优先连接允许落点偏移后，经典网络结构还稳健吗？",
+        "en": "Does preferential attachment remain robust when the final endpoint can shift?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选它，因为一个很小的机制改变，就能检验经典模型里常被忽略的假设：新节点选中的目标，是否必须就是最终的连接端点。",
+          "值得借鉴的是把选择与落边分开建模，用固定重定向作对照，再检查有限尺寸效应。读者也能学习如何区分严格结果、数值证据与猜想。"
+        ],
+        "en": [
+          "Today’s archive pick uses a small mechanism change to test an overlooked assumption: must the initially selected node also be the final attachment endpoint?",
+          "Borrow its separation of target selection from edge placement, constant-redirection controls and finite-size checks. Its explicit distinction between rigorous results, numerical evidence and conjectures is equally useful."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "拆开两个建模步骤",
+            "en": "Separate selection from attachment"
+          },
+          "text": {
+            "zh": "先选目标，再允许局部重定向；微观规则的细节可能改变宏观拓扑。",
+            "en": "Select a target, then allow local redirection: details of microscopic rules can change macroscopic topology."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用机制对照检验解释",
+            "en": "Test mechanisms with controls"
+          },
+          "text": {
+            "zh": "固定与度依赖重定向并列比较，帮助辨认结构变化来自哪项假设。",
+            "en": "Compare constant and degree-dependent redirection to identify which assumption drives structural changes."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分清证据强度",
+            "en": "Distinguish levels of evidence"
+          },
+          "text": {
+            "zh": "将定理、模拟与猜想分别标明；临界附近的有限尺寸偏差尤其值得留意。",
+            "en": "Label theorems, simulations and conjectures separately, with particular care near finite-size crossovers."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络增长、生成模型、优先连接及理论与模拟结合的研究者。",
+        "en": "Researchers in network growth, generative models, preferential attachment and theory–simulation comparisons."
+      },
+      "reading_caveat": {
+        "zh": "已读9页出版社正式版，含4幅主图、结果表和附录。未读独立补充材料，未复现或独立验算；结论限于文中增长模型，部分相图关系仍为猜想。AI编辑荐读。",
+        "en": "Read the complete nine-page publisher Version of Record, including four main figures, the results table and appendices. Separate supplements not read; no reproduction or independent proof checks. Findings concern the studied growth models; some phase relations remain conjectural. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
