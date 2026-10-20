@@ -694,12 +694,11 @@
     },
     "10.1103/fltc-hfvt": {
       "categories": [
-        "network_collective",
-        "network_resilience"
+        "network_collective"
       ],
-      "note_en": "Order-parameter precursors assess solitary desynchronization predictability across forcing and fragility regimes in a coupled Kuramoto chain.",
-      "note_zh": "序参量前兆评估耦合 Kuramoto 链在不同强迫及脆弱性区间中的孤立失同步可预测性。",
-      "assessment_sha256": "27e6cc813951290a517d2ab804681e3c679cc2e640494dc6dd7d73af38e944cc"
+      "note_zh": "比较受驱Kuramoto振子链中局域失同步的多种前兆及其参数适用区域。",
+      "note_en": "Compares precursors of solitary decoherence in a driven Kuramoto chain and identifies their parameter-dependent predictive regimes.",
+      "assessment_sha256": "b97f82adc96a26d7d8b62dfaa33628291a7617809a7a3d337c01e7630862e703"
     },
     "10.1103/fsdp-667s": {
       "categories": [
@@ -914,9 +913,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Directed oscillator rings undergo discontinuous frequency ordering and hysteresis, with network size changing the hysteresis width.",
-      "note_zh": "有向振子环发生不连续频率有序转变及滞后，网络规模改变滞后宽度。",
-      "assessment_sha256": "86b6a2dde0a9b17227cd74fb1ad73cd876728d21791d29147918f44d77ddd439"
+      "note_zh": "研究有向环网络异质振子的锁频转变、滞后和网络尺寸效应。",
+      "note_en": "Studies frequency-locking transitions, hysteresis and network-size effects in directed rings of heterogeneous oscillators.",
+      "assessment_sha256": "f3ca4b203526f9348c0e44858f84b0a0afe3865099c7af6d9263b87442b0bef8"
     },
     "10.1103/v1vq-skr1": {
       "categories": [
@@ -1190,11 +1189,12 @@
     },
     "10.1103/m57p-97jv": {
       "categories": [
+        "network_structure",
         "network_collective"
       ],
-      "note_en": "Signed Laplacian modes reconstruct frozen Ising configurations and provide a low-dimensional search for low-energy spin-glass states.",
-      "note_zh": "用图拉普拉斯模态的符号构型重建冻结 Ising 状态，并在低维模态空间搜索自旋玻璃低能态。",
-      "assessment_sha256": "4788e58728f6aa902eedae2a4c1f86c3cdfac149cb8070108e164c3ddccf403f"
+      "note_zh": "用相互作用图的Laplacian本征模重建冻结自旋构型，联系谱几何、中尺度有序和初态记忆。",
+      "note_en": "Uses interaction-graph Laplacian eigenmodes to reconstruct frozen spin configurations and relate spectral geometry to mesoscopic order and initial-state memory.",
+      "assessment_sha256": "fb5b57468e2f25f4c28248558a1fae88ff3c70168957068a31385f278a026477"
     },
     "10.1103/nl4b-7sfq": {
       "categories": [
@@ -1886,6 +1886,39 @@
       "note_zh": "以多组学先验约束伪时间上的多尺度基因调控网络重构，再用张量分解识别协同调控模块；推断边与滞后不等同于确证因果或真实时间延迟。",
       "note_en": "Constrains multiscale gene regulatory network inference with multiomic priors and decomposes pseudotime-lag tensors into cooperative modules; inferred edges and lags do not establish causal effects or chronological delays.",
       "assessment_sha256": "b3ab375d8ff8d256e7d2aefecb5556100f41ec0fac3a08b13aafef4fbf14ec81"
+    },
+    "10.1038/s42256-026-01311-y": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "研究多样本约束网络推断的稳健性，比较先验、样本和正则化的影响；结构稳定不等于生物因果真值。",
+      "note_en": "Studies robustness in multi-sample constrained network inference under changing priors, samples and regularization; structural stability does not establish biological causal truth.",
+      "assessment_sha256": "7ddbe5dd19b84f54f9f4002c04778f9097bb8eb9080cf51e33d89450673d6afc"
+    },
+    "10.1103/1fr3-bbxr": {
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "note_zh": "考察乘积规则加边如何影响三维格点网络的连通和刚性；区分有限尺寸跃变与作者讨论的连续极限。",
+      "note_en": "Examines product-rule connectivity and rigidity in cubic lattice networks, distinguishing finite-size jumps from the continuous limit discussed by the authors.",
+      "assessment_sha256": "8853e31cb38e41cd1dba208393bff5f96b245bae895641ba24960143aeee482a"
+    },
+    "10.1038/s41467-026-78269-3": {
+      "categories": [
+        "network_resilience"
+      ],
+      "note_zh": "将强化学习拆解策略符号化，提炼结合拓扑与节点动力学状态的韧性公式。",
+      "note_en": "Symbolizes reinforcement-learning dismantling policies to derive resilience formulas combining topology and node dynamical states.",
+      "assessment_sha256": "7403c7d28425551ca864b98d35a18e88af9a0beba6087b319d2579146de44cdb"
+    },
+    "10.1073/pnas.2611539123": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "比较野外与实验室转录网络的模块保守和重组，考察环境复杂度下生物响应网络的组织。",
+      "note_en": "Compares conserved and reorganized transcriptomic modules in wild and laboratory plants to examine biotic-response network organization.",
+      "assessment_sha256": "347a2abeafc3438401ab11f9654c48301385b779408249e7bb2a695e0db94d8b"
     }
   }
 }

@@ -1070,6 +1070,84 @@
         "zh": "已读9页出版社正式版，含4幅主图、结果表和附录。未读独立补充材料，未复现或独立验算；结论限于文中增长模型，部分相图关系仍为猜想。AI编辑荐读。",
         "en": "Read the complete nine-page publisher Version of Record, including four main figures, the results table and appendices. Separate supplements not read; no reproduction or independent proof checks. Findings concern the studied growth models; some phase relations remain conjectural. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1038/s42256-026-01311-y",
+      "recommended_on": "2026-10-20",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-19-to-20-01",
+      "publication_sha256": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+      "assessment_sha256": "7ddbe5dd19b84f54f9f4002c04778f9097bb8eb9080cf51e33d89450673d6afc",
+      "input_sha256": "b201459bd26da380e1fadb26238b0b89bd3600e8d3385f8e4611475000562fe5",
+      "evidence_sha256": "911741878efdbaf1a212b25778bc5f2d7ade8fb3793625574a09f843554e3a8c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-20T00:31:56.791348+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s42256-026-01311-y",
+        "title": "Reusability report: multi-sample omics network inference operates in distinct robustness regimes defined by prior knowledge and data availability",
+        "sha256": "ce6396d17f193ff949e2a98aebbdf5d60a66142f92b1bf059f5cd0bd01b69257",
+        "version": "Publisher Version of Record, Nature Machine Intelligence 8, 1616–1631 (2026), published online 19 October 2026.",
+        "source_url": "https://www.nature.com/articles/s42256-026-01311-y.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 19,
+        "reviewed_at": "2026-10-20T00:31:56.791348+00:00",
+        "read_scope": "Complete 19-page publisher PDF: 16-page article including main text, four figures/captions, methods, references, availability, declarations and affiliations; appended three-page image-based Reporting Summary inspected. Figures 1–4 visually checked in rendered pages. Separate Supplementary Information and peer-review files not read; no code execution, reproduction or independent validation."
+      },
+      "question": {
+        "zh": "预测得准，推断出的网络就可靠吗？",
+        "en": "Does accurate prediction make an inferred network reliable?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为网络推断很容易只报告一个漂亮的预测分数。这份复用研究把注意力转向：换一批样本、删去部分先验后，哪些结构仍然站得住？",
+          "可以借用它的验证思路：分别测量预测表现与结构稳定性，再用先验扰动、重复求解和聚合对照定位脆弱环节。稳定的结果仍不等于真实的因果网络。"
+        ],
+        "en": [
+          "Today’s pick tackles a common blind spot in network inference: a strong prediction score can hide fragile structure. What remains when samples change or prior edges are missing?",
+          "Borrow its separation of prediction from structural stability, then use prior perturbations, repeated solves and aggregation controls to locate weaknesses. Stable outputs still do not establish a true causal network."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把评估目标分开",
+            "en": "Separate evaluation targets"
+          },
+          "text": {
+            "zh": "区分预测、结构一致性和生物真实性，避免把同一种分数当成全部证据。",
+            "en": "Distinguish prediction, structural consistency and biological truth rather than relying on one score."
+          }
+        },
+        {
+          "heading": {
+            "zh": "主动扰动输入",
+            "en": "Perturb the inputs"
+          },
+          "text": {
+            "zh": "改变先验完整性与样本组合，检查结论对数据和约束有多敏感。",
+            "en": "Vary prior completeness and sample composition to expose sensitivity to data and constraints."
+          }
+        },
+        {
+          "heading": {
+            "zh": "对准失败环节改进",
+            "en": "Match refinements to failures"
+          },
+          "text": {
+            "zh": "用聚合降低求解波动，用选择性回补检查过度剪枝的信息损失。",
+            "en": "Use aggregation against solver variability and selective re-expansion to probe pruning losses."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络重构、生物网络及关心模型稳健性和可复现性的研究者。",
+        "en": "Researchers in network reconstruction, biological networks and model robustness."
+      },
+      "reading_caveat": {
+        "zh": "已读19页出版社PDF：16页论文及3页报告摘要，未读独立补充材料、未复现。两种生物情境各仅一个数据集；先验不是因果真值，条件数的构造仍需结合代码核实。AI编辑荐读。",
+        "en": "Read the 19-page publisher PDF: 16-page article and three-page Reporting Summary. Separate supplements not read; no reproduction. Each biological setting has one dataset; priors are not causal truth, and condition-count construction needs code-level clarification. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
