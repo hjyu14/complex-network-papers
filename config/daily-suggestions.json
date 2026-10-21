@@ -1148,6 +1148,84 @@
         "zh": "已读19页出版社PDF：16页论文及3页报告摘要，未读独立补充材料、未复现。两种生物情境各仅一个数据集；先验不是因果真值，条件数的构造仍需结合代码核实。AI编辑荐读。",
         "en": "Read the 19-page publisher PDF: 16-page article and three-page Reporting Summary. Separate supplements not read; no reproduction. Each biological setting has one dataset; priors are not causal truth, and condition-count construction needs code-level clarification. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1038/s42005-026-02864-5",
+      "recommended_on": "2026-10-21",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-20-to-21-01",
+      "publication_sha256": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+      "assessment_sha256": "f7fed1772c7eb09589ffdd145d062a3a45a9847dd38f62a998dd23977758fe08",
+      "input_sha256": "22fd3845bfcf0af11606dba9af0f81e3318022b40e167baa60243902644315f1",
+      "evidence_sha256": "799f2f119b763dc272702f48a698b4c7aefc6c2ece250a5fbeb400bc67110cec",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-21T00:49:02.248378+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s42005-026-02864-5",
+        "title": "Multi-scale higher-order contagion dynamics in complex networks",
+        "sha256": "37e7b39067e32dafabe16d6b860a9d21f555a1d752acbfde39627b7261942fc4",
+        "version": "Publisher Article in Press, published online 20 October 2026; peer-reviewed and citable, subject to further editing and replacement by the Version of Record",
+        "source_url": "https://www.nature.com/articles/s42005-026-02864-5_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "read_scope": "Complete 11-page publisher Article in Press: abstract, main text, Methods, equations, Figures 1–7 and captions, references and declarations. All pages visually inspected. Separate supplementary information and peer-review file not read; code and simulations not independently reproduced.",
+        "reviewed_at": "2026-10-21T00:49:02.248378+00:00"
+      },
+      "question": {
+        "zh": "圈内协同与跨圈确认并存时，结构多样性会怎样改变传播相变？",
+        "en": "How does structural diversity reshape contagion when reinforcement acts within and across social circles?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把常被分开处理的两类高阶强化放进同一模型：圈内多人协同与跨圈多源确认。两者竞争使结构多样性的作用呈U形，而非简单的单调促进或抑制。",
+          "最值得复用的是它的机制拆分和验证链：固定度序列只重排邻域结构，用消息传递推导阈值，再以双初值滞后、Monte Carlo和有限尺寸标度交叉检查。"
+        ],
+        "en": [
+          "Today's pick combines two higher-order mechanisms that are often studied separately: synergy within a circle and confirmation across circles. Their competition makes structural diversity produce a U-shaped response instead of a simple monotonic effect.",
+          "Its reusable lesson is the validation chain: alter neighborhood structure while preserving degree, derive thresholds by message passing, then cross-check with two-initial-condition hysteresis, Monte Carlo simulations and finite-size scaling."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "分开两个尺度",
+            "en": "Separate the scales"
+          },
+          "text": {
+            "zh": "把圈内协同与跨圈确认写成独立机制，避免用一个高阶参数混合不同社会强化。",
+            "en": "Model within-circle synergy and cross-circle confirmation separately instead of blending distinct reinforcement mechanisms."
+          }
+        },
+        {
+          "heading": {
+            "zh": "控制拓扑扰动",
+            "en": "Control topology changes"
+          },
+          "text": {
+            "zh": "保持度序列和全局连通，只调节邻域连通分量，用于隔离结构多样性的作用。",
+            "en": "Preserve degree and global connectivity while tuning neighborhood components to isolate structural diversity."
+          }
+        },
+        {
+          "heading": {
+            "zh": "交叉验证相变",
+            "en": "Cross-check phase claims"
+          },
+          "text": {
+            "zh": "结合理论阈值、双初值滞后、模拟和有限尺寸标度，区分真实突变与数值假象。",
+            "en": "Combine thresholds, two-initial-condition hysteresis, simulation and finite-size scaling to test abrupt transitions."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "高阶网络、社会传播、消息传递方法及相变研究者。",
+        "en": "Researchers in higher-order networks, social contagion, message passing and phase transitions."
+      },
+      "reading_caveat": {
+        "zh": "已读11页出版社Article in Press，含正文、方法、公式及图1–7；未读独立补充材料和同行评审文件，未运行代码或复现模拟。主要验证使用度为20的随机正则网络，经验网络推广仍待检验。AI编辑荐读。",
+        "en": "Read the complete 11-page publisher Article in Press, including Methods, equations and Figures 1–7. Separate supplements and peer-review files were not read; code and simulations were not reproduced. Main tests use degree-20 random regular networks, so transfer to empirical topologies remains open. AI editorial guidance."
+      }
     }
   ],
   "revisions": [

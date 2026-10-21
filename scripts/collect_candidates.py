@@ -39,7 +39,11 @@ def plain(value):
 
 
 def normalized_title(value):
-    return unicodedata.normalize('NFKC', plain(value)).casefold()
+    # Publisher HTML often renders subscripts as adjacent glyphs while Crossref
+    # inserts spaces around the same MathML tokens.  This comparison runs only
+    # between records already joined by DOI or an exact publisher URL, so word
+    # spacing is presentation rather than identity evidence here.
+    return re.sub(r'\s+', '', unicodedata.normalize('NFKC', plain(value))).casefold()
 
 
 def url_key(value):
@@ -664,6 +668,15 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
             issues.append('crossref_metadata_changed_between_queries')
         published = [r for r in c['publisher_records'] if r.get('publication_status') != 'accepted']
         accepted = [r for r in c['publisher_records'] if r.get('publication_status') == 'accepted']
+        identity_fields = c.get('publisher_identity', {}).get('metadata', {})
+        official_identity_complete = (
+            identity_fields.get('citation_doi', '').lower() == (c['doi'] or '')
+            and identity_fields.get('citation_issn') in journal['issns']
+            and normalized_title(identity_fields.get('citation_title')) == normalized_title(c['title'])
+        )
+        if (error == 'crossref_metadata_unavailable' and official_identity_complete
+                and len({r.get('date') for r in published if r.get('date')}) == 1):
+            issues = c['issues'] = [x for x in issues if x != error]
         if published:
             c['publication_status'] = 'published'
         if any(r.get('title_identity_conflict') for r in c['publisher_records']):

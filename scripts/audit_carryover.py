@@ -36,13 +36,20 @@ def compare_history(records, decisions, history, authorized_start, authorized_en
                 blockers.append({'doi':doi,'reason':'Historical assessment unresolved'})
             if record['journal'] != old_record['journal'] or not set(record['issns']) & set(old_record['issns']):
                 blockers.append({'doi':doi,'reason':'Historical journal identity mismatch'})
+            note = identity_notes.get(doi)
             if normalized_title(record['title']) != normalized_title(old_record['title']):
-                note = identity_notes.get(doi)
                 if (not note or note.get('record_sha256') != digest(record)
                         or note.get('previous_record_sha256') != digest(old_record) or not note.get('reason')):
                     blockers.append({'doi':doi,'reason':'Title change needs explicit identity review'})
                 else:
                     row['identity_review'] = note
+            elif (note and note.get('record_sha256') == digest(record)
+                    and note.get('previous_record_sha256') == digest(old_record)
+                    and note.get('reason')):
+                # Preserve a previously recorded identity review when a later,
+                # presentation-only title normalizer recognizes the same pair.
+                # Published carryover audits are immutable evidence.
+                row['identity_review'] = note
         if inside:
             if not current or current['category'] == 'review':
                 blockers.append({'doi':doi,'reason':'Current candidate needs actual resolved review'})
