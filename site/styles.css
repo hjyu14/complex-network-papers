@@ -58,6 +58,7 @@ body{background:#f5f7fa}
 @media(prefers-contrast:more),(prefers-reduced-transparency:reduce){.feature-card,.paper-card,.category-button,.suggestion-card,.feature-card:nth-child(n),.paper-card:nth-child(n),.category-button:nth-child(n){background:#fff;border-color:#8494a5;box-shadow:none;backdrop-filter:none}.category-button[aria-pressed=true]{background:#deebf2;border-color:#54798c;color:#15566b}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+.social-links{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}.social-links a{white-space:nowrap}.social-links a:hover{text-decoration:underline;text-underline-offset:4px}
 /* Public release notes share the site's palette and language controls. */
 .collection-update{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 23px;margin-top:28px;background:#edf1f6;border:1px solid #d4dce8;border-left:3px solid var(--night);border-radius:10px}
 .collection-update h2{font-size:16px;letter-spacing:0;color:#334661}.collection-update p{font-size:13px;color:#52647c;margin:5px 0 0}
