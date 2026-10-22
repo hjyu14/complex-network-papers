@@ -1226,6 +1226,84 @@
         "zh": "已读11页出版社Article in Press，含正文、方法、公式及图1–7；未读独立补充材料和同行评审文件，未运行代码或复现模拟。主要验证使用度为20的随机正则网络，经验网络推广仍待检验。AI编辑荐读。",
         "en": "Read the complete 11-page publisher Article in Press, including Methods, equations and Figures 1–7. Separate supplements and peer-review files were not read; code and simulations were not reproduced. Main tests use degree-20 random regular networks, so transfer to empirical topologies remains open. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1038/s42005-026-02885-0",
+      "recommended_on": "2026-10-22",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-21-to-22-01",
+      "publication_sha256": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+      "assessment_sha256": "dc61be4ef2d9d938b874708b7d8704e0f92dc1e841301df894fb5e33b0ed1575",
+      "input_sha256": "e34e9e4d067c996679c8a203af6fc436508b8a9cd3c2410eac46891e7c79b0af",
+      "evidence_sha256": "15c00adc29eb939ae570fee5d8198d0d65c6886d187941cfd858d5f87a470bad",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-22T00:53:51.794693+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s42005-026-02885-0",
+        "title": "Modeling non-Poissonian temporal hypergraphs by Markovian node dynamics",
+        "sha256": "d05cd9c4dde574be33bd11cc3277677787112597cc0e151d95467642db0017eb",
+        "version": "Publisher Article in Press; citable early article, explicitly awaiting final edited version. Official online date 21 October 2026; not claimed to be final edited Version of Record.",
+        "source_url": "https://www.nature.com/articles/s42005-026-02885-0_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "reviewed_at": "2026-10-22T00:53:51.794693+00:00",
+        "read_scope": "Complete 11-page Article in Press PDF: introduction, model, results, discussion, methods, table 1, references, author contributions, funding, declarations and license. All six figures and captions visually checked in rendered pages 2-7; equations inspected with page renders. Separate Supplementary Notes 1-11, Supplementary Table 1, Supplementary Data and external code/data not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "简单的节点状态，怎样产生不均匀的群体互动？",
+        "en": "How can simple node states generate uneven group interactions?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为复杂时间统计未必需要先假定复杂记忆：节点只在高、低活跃间切换，群体层面就能出现更长的事件间隔尾部和缓慢自相关。这个从微观机制推到可观测量的过程很适合作为建模起点。",
+          "可借用的思路是先建立可解析的最小基线，再同时检查事件率、间隔变异系数和自相关，并按群体规模分层。多项趋势相似仍不意味着已经识别真实生成规则。"
+        ],
+        "en": [
+          "This paper makes a useful modeling point: complex event statistics need not begin with complex memory. Nodes switching between high and low activity can already yield longer event-time tails and slowly decaying autocorrelation at group level.",
+          "Borrow its minimal analytic baseline, then check event rates, interval variability and autocorrelation together across group sizes. Similar trends do not identify the true generating rule."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从节点推到群体",
+            "en": "Connect nodes to groups"
+          },
+          "text": {
+            "zh": "比较全员高活跃的 AND 规则与按活跃比例变化的 LIN 规则，明确群体事件如何产生。",
+            "en": "Compare an all-members-high AND rule with a high-state-fraction LIN rule to make event generation explicit."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多个统计量约束模型",
+            "en": "Constrain models with several statistics"
+          },
+          "text": {
+            "zh": "联合看事件率、间隔变异系数和自相关，减少单一长尾图带来的机制误判。",
+            "en": "Combine event rates, interval variability and autocorrelation instead of inferring mechanisms from one tail plot."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留机制不可辨识性",
+            "en": "Retain mechanism ambiguity"
+          },
+          "text": {
+            "zh": "实证比较是定性检验；允许参数随群体规模变化时，不同规则可给出相似趋势。",
+            "en": "Empirical checks are qualitative; different rules can resemble each other when rates vary with group size."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "时间网络、高阶互动、事件序列建模及传播动力学研究者。",
+        "en": "Researchers in temporal networks, higher-order interactions, event sequences and spreading dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读11页出版社 Article in Press，含图1–6和表1；独立补充材料未读。节点独立同分布，实证仅比较6/17数据集且未统计拟合；LIN大群体极限文字与一般稳态公式存在待核对之处。AI编辑荐读。",
+        "en": "Read the 11-page publisher Article in Press, including Figs.1–6 and Table1; separate supplements not read. Nodes are iid; empirical checks use6/17 datasets without statistical fitting. The LIN large-group-limit prose needs checking against the general stationary formula. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
