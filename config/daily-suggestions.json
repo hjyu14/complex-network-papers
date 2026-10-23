@@ -1304,6 +1304,84 @@
         "zh": "已读11页出版社 Article in Press，含图1–6和表1；独立补充材料未读。节点独立同分布，实证仅比较6/17数据集且未统计拟合；LIN大群体极限文字与一般稳态公式存在待核对之处。AI编辑荐读。",
         "en": "Read the 11-page publisher Article in Press, including Figs.1–6 and Table1; separate supplements not read. Nodes are iid; empirical checks use6/17 datasets without statistical fitting. The LIN large-group-limit prose needs checking against the general stationary formula. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1038/s43588-026-01068-9",
+      "recommended_on": "2026-10-23",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-22-to-23-01",
+      "publication_sha256": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+      "assessment_sha256": "a2f0fc1c2c9b385814b7ae0c879364c20b2aa5e8c26f3f049f1f9332983c33d8",
+      "input_sha256": "93353272465d4b5e48e3c44361d40360fbea4a4b896aa506f2079e9c5bc8b416",
+      "evidence_sha256": "305e64d3392569db8963bc61fef345aeec02edd053ff904a43b7361616cfab8b",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-23T02:38:33.910519+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s43588-026-01068-9",
+        "title": "Structure-coefficient theorem for evolutionary games on dynamic networks",
+        "sha256": "91346386a5b9846214863808e5e20565c428dd1ec2728d2ee03a4f884b78bbfa",
+        "version": "Publisher typeset Article PDF; Published online date remains a placeholder in this supplied file. Official article page confirms 22 October 2026. Final edited Version of Record status not independently established from the PDF.",
+        "source_url": "https://www.nature.com/articles/s43588-026-01068-9",
+        "source_kind": "publisher_fulltext",
+        "pages": 24,
+        "reviewed_at": "2026-10-23T02:38:33.910519+00:00",
+        "read_scope": "Complete 24-page publisher PDF: main text, Methods, equations, Figs.1–5, references, contributions, declarations, Extended Data Figs.1–7 and reporting summary. Main figures on pages4–8, theorem on page3 and coefficient formulas on page10 visually checked; all extended figures on pages14 and16–21 visually checked; raster reporting summary on pages22–24 read visually. Separate Supplementary Information1–7, source data and external code were not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "关系不断切换时，什么结构能让合作更容易演化？",
+        "en": "Which changing network structures make cooperation easier to evolve?"
+      },
+      "reading_comment": {
+        "zh": [
+          "选它是因为它提供了一个可复用的拆解方式：先固定网络切换、更新规则和突变设置，把它们的影响写成三个结构系数，再比较不同收益矩阵。对要扫描多种博弈的研究，这比每次重新展开整套模型更有启发。",
+          "另一点值得借用的是对照设计：用同构静态网络的不同节点配置隔离时间变化的作用，再扫描切换速度。动态核周结构提示，结构优势在人之间轮换也能影响合作；不能只看静态中心性或一张聚合图。"
+        ],
+        "en": [
+          "This paper offers a reusable decomposition: fix network switching, updating and mutation, encode their effects in three structure coefficients, then compare payoff matrices. That separation is especially useful when studying several games under one temporal-network mechanism.",
+          "Borrow its control design as well: compare isomorphic static configurations to isolate temporality, then scan switching rates. Rotating access to core positions can change cooperation, so static centrality or one aggregate graph may miss the mechanism."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "分开结构与收益",
+            "en": "Separate structure from payoffs"
+          },
+          "text": {
+            "zh": "弱选择下以三个系数组织网络、更新与突变影响，便于比较多种博弈。",
+            "en": "Under weak selection, three coefficients organize network, update and mutation effects for comparisons across games."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让时间对照更明确",
+            "en": "Control temporal comparisons"
+          },
+          "text": {
+            "zh": "用同构静态配置和切换速度扫描，区分结构本身与结构轮换的贡献。",
+            "en": "Use isomorphic static controls and switching-rate scans to separate structure from its temporal rotation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把计算成本算清楚",
+            "en": "Keep computation explicit"
+          },
+          "text": {
+            "zh": "系数来自中性两、三节点概率等线性系统，模型压缩不等于常数计算成本。",
+            "en": "Coefficients require neutral two- and three-node probability systems; a compact theorem does not imply constant computational cost."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "演化博弈、时间网络、合作演化与随机过程建模研究者。",
+        "en": "Researchers in evolutionary games, temporal networks, cooperation and stochastic-process modeling."
+      },
+      "reading_caveat": {
+        "zh": "已读24页出版社排版PDF，含主图1–5、扩展图1–7和报告摘要；独立补充材料与外部代码未读。定理限于弱选择、与策略无关的外生马尔可夫网络切换及对称突变；采样网络的趋势不是普遍结论。PDF在线日期仍为占位，以官方网页2026-10-22为准。AI编辑荐读。",
+        "en": "Read all24 pages of the publisher typeset PDF, including Figs.1–5, Extended Data1–7 and reporting summary; separate supplements and external code not read. The theorem assumes weak selection, exogenous strategy-independent Markov switching and symmetric mutation. Sampled-network trends are not universal. PDF online-date placeholder is resolved using the official page date,22 October2026. AI editorial guidance."
+      }
     }
   ],
   "revisions": [

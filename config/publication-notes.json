@@ -773,9 +773,9 @@
         "network_structure",
         "network_spreading"
       ],
-      "note_en": "Linker-mediated colloidal networks separate connectivity percolation, rigidity and gelation through coordination patterns and persistent effective bonds.",
-      "note_zh": "连接剂介导胶体网络通过配位模式及有效键持续性区分连通渗流、刚性与凝胶化。",
-      "assessment_sha256": "6bf7c2d01b99e8d55f07071c3f43c07799289d050baca7a9204987b486e00814"
+      "note_zh": "区分可逆胶体网络中的连通渗流、刚性渗流与流变凝胶点，分析连边持久性和观测时标。",
+      "note_en": "Distinguishes connectivity percolation, rigidity percolation and rheological gelation in reversible colloidal networks across bond lifetimes and observation timescales.",
+      "assessment_sha256": "7ab3bf5c6856f7822505ef02aa4d58a5fce0a2404d94d6290f5fd2c600935467"
     },
     "10.1103/n4ps-wmd7": {
       "categories": [
@@ -946,9 +946,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Exact pair-coordinate Langevin equations express memory kernels and restoring forces through matrices of arbitrary connected elastic networks.",
-      "note_zh": "精确双节点坐标 Langevin 方程通过任意连通弹性网络矩阵表达记忆核及恢复力。",
-      "assessment_sha256": "9979ef54de53a18c39fff29e811562d5404dae83d034e3fc2eaf7bc6bcbcdba4"
+      "note_zh": "精确推导弹性网络双节点相对坐标的记忆核与回复力；距离坐标约化限于小位移。",
+      "note_en": "Derives exact pair-coordinate memory kernels and restoring forces for elastic networks; distance-coordinate reduction assumes small displacements.",
+      "assessment_sha256": "6b3e60389a6a76c15ef11e4880f189db59bf42f9c8f42c1b589de6ac2c24d67d"
     },
     "10.1103/v94v-3p18": {
       "categories": [
@@ -1435,11 +1435,11 @@
     "10.1103/kj33-q69c": {
       "categories": [
         "network_collective",
-        "network_spreading"
+        "network_resilience"
       ],
-      "note_en": "Adaptive shared-task queues yield an absorbing activity transition and mean-field degree thresholds for persistent social ties.",
-      "note_zh": "自适应共享任务队列产生吸收态活动转变，并给出维持社会联系的平均场度阈值。",
-      "assessment_sha256": "20e1e84697f351d7075f18e36e011f1ffcd29ef44d97b75f7588ad717da13b2b"
+      "note_zh": "耦合代理排队模型出现吸收转变，有限注意力的网络扩展预测临界度与枢纽失效。",
+      "note_en": "Coupled-agent queues exhibit an absorbing transition; limited-attention network extensions predict critical degree and hub failure.",
+      "assessment_sha256": "ad2ae233c2141e1dcc6e3d90c1459e6e653547573af861f30e880edb28beb3cb"
     },
     "10.1103/m3bb-1nhk": {
       "categories": [
@@ -1672,12 +1672,11 @@
     },
     "10.1103/g7f3-85bn": {
       "categories": [
-        "network_collective",
-        "network_structure"
+        "network_collective"
       ],
-      "note_en": "Noise controls memory-retrieval transitions and attractor switching in connectome-informed modular spiking networks, with topology-randomization checks.",
-      "note_zh": "连接组启发的模块脉冲网络中，噪声控制记忆检索相变和吸引子切换，并检验拓扑随机化的稳健性。",
-      "assessment_sha256": "37cbf7775a2ff8abd0bec9071e8c2bb24bb1db0476b4e0d8045b4b897ada2b3f"
+      "note_zh": "研究模块化脉冲网络中噪声与耦合控制的记忆检索、滞后和临界样切换。",
+      "note_en": "Studies noise- and coupling-controlled retrieval, hysteresis and critical-like memory switching in modular spiking networks.",
+      "assessment_sha256": "c1157cefe11e3775f6496762fb0935b187672639e5a7aaafa529169a8e1cdc57"
     },
     "10.1063/5.0332769": {
       "categories": [
@@ -2072,6 +2071,64 @@
       "note_zh": "以节点马尔可夫活跃切换解释时间超图事件间隔与自相关，较长尾不等于渐近幂律。",
       "note_en": "Links Markovian node activity to temporal-hypergraph waiting times and autocorrelation; longer tails do not establish asymptotic power laws.",
       "assessment_sha256": "dc61be4ef2d9d938b874708b7d8704e0f92dc1e841301df894fb5e33b0ed1575"
+    },
+    "10.1038/s43588-026-01068-9": {
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "note_zh": "以三个结构系数分离动态网络演化博弈中的收益与结构影响；定理限于弱选择及外生马尔可夫切换。",
+      "note_en": "Separates payoff and structural effects in dynamic-network games through three coefficients under weak selection and exogenous Markov switching.",
+      "assessment_sha256": "a2f0fc1c2c9b385814b7ae0c879364c20b2aa5e8c26f3f049f1f9332983c33d8"
+    },
+    "10.1103/29cy-4r99": {
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "note_zh": "以删边渗流模型连接 dropout 下的输入输出可达性、网络拓扑与训练失效。",
+      "note_en": "Links dropout-induced bond percolation, input-output reachability and network topology to training breakdown.",
+      "assessment_sha256": "d20306144a7623c16173a6aea48ae220b76201b355f3eef6e955e1c55c0c64a2"
+    },
+    "10.1103/29r6-v42s": {
+      "categories": [
+        "network_spreading"
+      ],
+      "note_zh": "比较有限维晶格与完全图的强连通簇渗流，刻画分形维数、临界指数与双标度。",
+      "note_en": "Characterizes strongly connected cluster percolation on finite-dimensional lattices and complete graphs through fractal dimensions, exponents and double scaling.",
+      "assessment_sha256": "1bee7d06171e0cf4e2d59508a6aa9b27b50a8b0f1ae6dd723f360600ce9dd5bd"
+    },
+    "10.1038/s41467-026-78154-z": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "分析肺炎克雷伯菌转录调控网络的层级、跨生长阶段组织与跨菌株保守和演化格局。",
+      "note_en": "Analyzes hierarchy, growth-stage organization and cross-strain conservation and evolution in Klebsiella pneumoniae regulatory networks.",
+      "assessment_sha256": "2da18cac8057d785855fc3790f2fe3a9c614197958fbc46a2cbe6cc4640b3961"
+    },
+    "10.1103/64b7-qb8p": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "以分层平均场近似分析抑制神经网络的相变、稳定性及准临界响应。",
+      "note_en": "Uses a hierarchy of mean-field approximations to study phases, stability and quasicritical responses in inhibitory neural networks.",
+      "assessment_sha256": "1e4e8ef3bbdeeea350d777971f5be8d495cf5a178f3d4fd643c4c7495528877d"
+    },
+    "10.1103/8sqq-6mym": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "以保度随机网络为基线，将同配性扩展至长程、非标量属性和非线性相似关系。",
+      "note_en": "Extends assortativity to long-range, non-scalar and nonlinear similarity using degree-preserving null networks.",
+      "assessment_sha256": "cf6e6bf8035f41adfc956baf92d2966c1e6bad206a5754d09bc7080618fe12cc"
+    },
+    "10.1073/pnas.2623939123": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "研究蜜蜂行为成熟中有符号基因相关网络的全局协调与模块分离；相关结构不等同因果调控。",
+      "note_en": "Studies global coordination and modular segregation of signed gene-correlation networks during honeybee maturation; correlations do not establish causal regulation.",
+      "assessment_sha256": "9f5b3411e86f29cf0ba81c6983aaac90df35374a2bacd88d4a084d8b50f435a9"
     }
   }
 }
