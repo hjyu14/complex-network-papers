@@ -1382,6 +1382,84 @@
         "zh": "已读24页出版社排版PDF，含主图1–5、扩展图1–7和报告摘要；独立补充材料与外部代码未读。定理限于弱选择、与策略无关的外生马尔可夫网络切换及对称突变；采样网络的趋势不是普遍结论。PDF在线日期仍为占位，以官方网页2026-10-22为准。AI编辑荐读。",
         "en": "Read all24 pages of the publisher typeset PDF, including Figs.1–5, Extended Data1–7 and reporting summary; separate supplements and external code not read. The theorem assumes weak selection, exogenous strategy-independent Markov switching and symmetric mutation. Sampled-network trends are not universal. PDF online-date placeholder is resolved using the official page date,22 October2026. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1103/9q1j-dlw8",
+      "recommended_on": "2026-10-24",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-23-to-24-01",
+      "publication_sha256": "7adb2366797ac6fb8212175644da770d626cb47f74886528514d8315a2f1e456",
+      "assessment_sha256": "89ff7faac4f44497652af434303f0551258a0c46d998288348399f6e47140b3e",
+      "input_sha256": "052bccd9d41d106274844627062936d9708dc73eed89a6353e0ac603893e0936",
+      "evidence_sha256": "1d82d8253dbe3bcfcc88aeae6a824cb6766ead3fc7f9af18869dc71917f08742",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-24T10:30:00+08:00",
+      "fulltext_review": {
+        "doi": "10.1103/9q1j-dlw8",
+        "title": "Emergence and coexistence of periodic and unstructured motion in future-avoiding random walks",
+        "sha256": "fb7931859ba7224932463885f15027c3c70d6bde973eb070bac47d4ddeba9330",
+        "version": "Physical Review E 114, 044219 (2026), publisher version published online 2026-10-23",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/9q1j-dlw8",
+        "source_kind": "publisher_fulltext",
+        "pages": 7,
+        "read_scope": "Complete 7-page publisher article: abstract, Introduction, Methods, Figs. 1–5 and captions, equations, Discussion and Conclusion, Acknowledgments, Data Availability, references; rendered visual checks of pages 1 and 7. No independent code or numerical reproduction.",
+        "reviewed_at": "2026-10-24T10:30:00+08:00"
+      },
+      "question": {
+        "zh": "未来驱动的路径互动，怎样自发形成周期与无序共存？",
+        "en": "How can future-driven path interactions self-organize periodic and unstructured motion?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为论文把网络上的路径互动与共享出行联系起来：车辆不是回避走过的历史，而是在分配请求时相互避让计划中的未来轨迹。周期路线和无序路线因此可以在同一系统中共存。",
+          "可借用的分析顺序是先用边使用率检验单路线结构，再用加权复现图识别周期性，最后用环网络上的方向改变概率建立近似。这样能把“看起来有规律”拆成结构指标、动力学状态和机制解释。"
+        ],
+        "en": [
+          "I recommend this paper because it connects network path interactions with shared mobility: routes avoid one another’s planned futures during request assignment, allowing periodic and unstructured routes to coexist in one system.",
+          "A reusable workflow is to test single-route structure with link usage, detect periodicity with value-weighted recurrence plots, and then build a direction-change approximation on a ring. It separates visual regularity, dynamical state and mechanism."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把路径互动写成网络动力学",
+            "en": "Model path interactions as network dynamics"
+          },
+          "text": {
+            "zh": "未来轨迹的相互避让把请求分配、路线记忆和网络拓扑连在一起，适合研究非振荡个体如何出现集体结构。",
+            "en": "Future-trajectory avoidance links request assignment, route memory and topology, offering a way to study collective structure without intrinsically oscillatory units."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用复现图区分周期与无序",
+            "en": "Separate periodic and unstructured routes"
+          },
+          "text": {
+            "zh": "加权复现矩阵保留重复节点的身份，平均对角线长度再给出路线周期性比例，比只看时间序列更容易定位结构。",
+            "en": "A value-weighted recurrence matrix keeps recurring node identities, while mean diagonal length quantifies periodicity more directly than a time series alone."
+          }
+        },
+        {
+          "heading": {
+            "zh": "先做可解释的近似",
+            "en": "Start with an interpretable approximation"
+          },
+          "text": {
+            "zh": "环网络上的方向改变概率准确抓住转变位置，但高估转变陡峭度，提醒我们把近似的趋势和精确预测分开报告。",
+            "en": "The ring approximation captures the transition location but overestimates its sharpness, a useful reminder to report trends separately from exact prediction."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "网络动力学、路径规划、时间网络与共享出行建模研究者。",
+        "en": "Researchers in network dynamics, routing, temporal networks and shared-mobility modeling."
+      },
+      "reading_caveat": {
+        "zh": "已读7页出版社正式版本，含图1–5与公式；补充材料和外部代码未读，模拟结论仍限于文中六类拓扑、两种调度器与参数范围。AI编辑荐读。",
+        "en": "Read the 7-page publisher version, including Figs. 1–5 and equations; supplemental material and external code were not read. Simulation conclusions remain limited to the six topologies, two dispatchers and parameter ranges studied. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
