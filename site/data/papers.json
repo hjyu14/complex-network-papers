@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-25T03:43:57.264731+00:00",
+  "generated_at": "2026-10-25T23:42:30.660748+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-25",
-  "window_days": 55,
+  "window_end": "2026-10-26",
+  "window_days": 56,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "774f956169e8dcc53846a19ee665e09c336ce2ec4c9036e67827fec09e590771",
-  "author_metadata_sha256": "b47127eb5a801fffb4e7b362d99eec468def4998736b2c258109cb7f88c66ae4",
+  "reading_notes_sha256": "29041c358adf4a91f9249b0dcd0a7c637bb0c2781464d7335b92f27453ba6596",
+  "author_metadata_sha256": "e50c8d5bc83443a5baf562059a73918a1904f314879a5b3c3fdac59669b4c615",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2215,9 +2215,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-10-25-to-26-01",
+      "config_sha256": "bc8ba48a66fc8477a98b5a2f1b324e2c1bb465527d51aaac4691909f1cad6986",
+      "window_start": "2026-10-25",
+      "window_end": "2026-10-26",
+      "rule_sha256": "b1af6513b9b55171854951b7e98a46de3f0a8ee13186c7c33418438e3c371bcf",
+      "screening_log_sha256": "4701e5f1ce9ebb5d4a9a19b15d0b140105484cc0af6091ebe96456734130ea18",
+      "candidate_sha256": "bc4a3c550cd2d0f29bac76ccd3c5e3fa992dcbb0727b4b65bd889ddd6f0419db",
+      "author_metadata_sha256": "a9fc0799cfa7139715941b74383e2a698e95e079514beff5bcfc96ac8da5153a",
+      "run_manifest_sha256": "a83409a3452609994ccce06c6b9d3636e45671ecd12ae74c16d77c0df2afc7c3",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-25-to-26-01",
+          "files": {
+            "candidates.json": "bc4a3c550cd2d0f29bac76ccd3c5e3fa992dcbb0727b4b65bd889ddd6f0419db",
+            "coverage.json": "ccd668147c4e63fe1f7bf68603bb8e27978585b913912b80fc5879b29529f6e5",
+            "collection-log.jsonl": "b23e67503a1554c5a8570788a353ac9c7bf79d561f8badba281b01a62c502579",
+            "screening-log.jsonl": "2ad5c908350cd40265459a4015fa35105811c05cb2cf7aa2a7dc02e7b939014f",
+            "inputs/manifest.json": "2e3d950a3e5912b7d62ba3bc8b2921dc8f6757cf2c3e0f924bca9e0c91554367",
+            "inputs/sources.json": "24d32b3c6a96b2eeff2447ff5d1366d18ef53fbed5c2244931f5aa63ca1f8dd9",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "bc4a3c550cd2d0f29bac76ccd3c5e3fa992dcbb0727b4b65bd889ddd6f0419db",
+          "rule_sha256": "b1af6513b9b55171854951b7e98a46de3f0a8ee13186c7c33418438e3c371bcf",
+          "screening_log_sha256": "4701e5f1ce9ebb5d4a9a19b15d0b140105484cc0af6091ebe96456734130ea18"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "a9fc0799cfa7139715941b74383e2a698e95e079514beff5bcfc96ac8da5153a",
+          "audit": {
+            "path": "reports/runs/2026-10-25-to-26-01/screening-log.jsonl",
+            "sha256": "2ad5c908350cd40265459a4015fa35105811c05cb2cf7aa2a7dc02e7b939014f"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "b40aba4c093acc6b364d7d36d08a35c1028a4874bce1462f4d31b5e0b32a5b8e"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 257,
+  "author_available_count": 260,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -2367,8 +2411,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 690,
-      "publisher_verified_inventory_count": 690,
+      "candidate_count": 691,
+      "publisher_verified_inventory_count": 691,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2576,6 +2620,15 @@
           "journal": "Nature",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "Nature",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -2794,13 +2847,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1594,
-      "publisher_verified_inventory_count": 1592,
+      "candidate_count": 1611,
+      "publisher_verified_inventory_count": 1609,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3008,6 +3070,15 @@
           "journal": "NC",
           "candidate_count": 34,
           "publisher_verified_inventory_count": 34,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "NC",
+          "candidate_count": 17,
+          "publisher_verified_inventory_count": 17,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -3221,6 +3292,15 @@
         {
           "window_start": "2026-10-24",
           "window_end": "2026-10-25",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -3442,6 +3522,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3653,6 +3742,15 @@
         {
           "window_start": "2026-10-24",
           "window_end": "2026-10-25",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
           "journal": "PRX",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -3874,6 +3972,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4085,6 +4192,15 @@
         {
           "window_start": "2026-10-24",
           "window_end": "2026-10-25",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
           "journal": "SA",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -4306,13 +4422,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 100,
-      "publisher_verified_inventory_count": 100,
+      "candidate_count": 101,
+      "publisher_verified_inventory_count": 101,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4520,6 +4645,15 @@
           "journal": "CP",
           "candidate_count": 3,
           "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "CP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4733,6 +4867,15 @@
         {
           "window_start": "2026-10-24",
           "window_end": "2026-10-25",
+          "journal": "PRResearch",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
           "journal": "PRResearch",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -4954,6 +5097,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5170,6 +5322,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5341,27 +5502,38 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-25",
+          "window_end": "2026-10-26",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 5977,
+  "candidate_count": 5996,
   "screening_counts": {
-    "excluded": 5720,
-    "core": 233,
-    "transferable_application": 24,
+    "excluded": 5736,
+    "core": 234,
+    "transferable_application": 26,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 257
+    "included": 260
   },
-  "published_count": 213,
+  "published_count": 216,
   "accepted_count": 44,
   "latest_update": {
-    "run": "reports/runs/2026-10-24-to-25-01",
-    "reviewed_at": "2026-10-25T03:31:50.945518+00:00",
-    "newly_included_count": 1,
+    "run": "reports/runs/2026-10-25-to-26-01",
+    "reviewed_at": "2026-10-25T23:24:26.543612+00:00",
+    "newly_included_count": 3,
     "newly_included_dois": [
-      "10.1038/s41467-026-78646-y"
+      "10.1038/s41467-026-78727-y",
+      "10.1038/s41467-026-79018-2",
+      "10.1038/s41467-026-79031-5"
     ],
     "accepted_to_published_count": 0,
     "accepted_to_published_dois": []
@@ -5374,6 +5546,239 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1038/s41467-026-79031-5",
+      "url": "https://doi.org/10.1038/s41467-026-79031-5",
+      "title": "Active locomotion predictively rescues head direction attractor dynamics in head-fixed mice",
+      "authors": [
+        "Alexandr Pak",
+        "Janna Aarse",
+        "Heng Wei Zhu",
+        "Jean-Paul Noel",
+        "Simón Carrillo Segura",
+        "André A. Fenton",
+        "Dora Angelaki"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "f48ba5c2cec92e1c7623c2b3cac92dd58e24d26e800659ca6c1efbc6de590fb3",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79031-5",
+      "author_retrieved_at": "2026-10-25T23:24:26.291519+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-10-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-25"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "The identity-matched explicit abstract states the network object, network-science question and result summarized in screening_summary.",
+        "material_sha256": "62277c5a6cff4cfd8a5691b0175c386f811635daaee06b471d6a19d10fca5bae",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-79031-5"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_inference"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Head-direction attractor dynamics recover before locomotion in head-fixed mice; lateral connectivity helps explain context-dependent neural coding.",
+      "note_zh": "头固定小鼠的头向吸引子动力学在运动前恢复；横向连接有助于解释情境依赖的神经编码。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "9d6a9c02c87b83e5c0c0684910c6e3bda926f6069f78d5a0c7e34ad7c59981f7",
+      "input_sha256": "49d11e4f2edf3015618d7f98b8f5701c49c52c6e50860db330d5f169098f059c",
+      "material_sha256": "62277c5a6cff4cfd8a5691b0175c386f811635daaee06b471d6a19d10fca5bae",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "62277c5a6cff4cfd8a5691b0175c386f811635daaee06b471d6a19d10fca5bae",
+      "rule_sha256": "b1af6513b9b55171854951b7e98a46de3f0a8ee13186c7c33418438e3c371bcf",
+      "featured": "NC",
+      "evidence": [
+        "Head-direction population attractor dynamics and lateral connectivity explain context-dependent neural coding under head restraint."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79031-5",
+      "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79031-5",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-79018-2",
+      "url": "https://doi.org/10.1038/s41467-026-79018-2",
+      "title": "Complementary axes of functional system integrity and integration with divergent clinical correlates characterize focal epilepsy",
+      "authors": [
+        "Qirui Zhang",
+        "Arielle Dascal",
+        "Sam S. Javidi",
+        "Ankeeta Ankeeta",
+        "Michael R. Sperling",
+        "Zhiqiang Zhang",
+        "Joseph I. Tracy"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0b4affc9bf035ba2a08932e230c946b65681cc400205c222f40d4ac087e820c9",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79018-2",
+      "author_retrieved_at": "2026-10-25T23:24:24.636713+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-10-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-25"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "The identity-matched explicit abstract states the network object, network-science question and result summarized in screening_summary.",
+        "material_sha256": "ebf00e0907fb35ed82a6415b7e843318d18e9a54abc0881fb9089896fee69a9b",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-79018-2"
+        ]
+      },
+      "categories": [
+        "network_inference",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Individualized functional brain networks reveal complementary integrity and integration axes in focal epilepsy, with syndrome-specific clinical associations.",
+      "note_zh": "个体化功能脑网络的完整性与整合性轴，在局灶性癫痫中呈现互补且与临床表型相关的变化。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "77325728d93c3a4b16ab04f083dc9e3bc544bea4e9dc0710349fd9066684aaf9",
+      "input_sha256": "b639bf5ba9e8705652a53343576aa37b59483e9ba50a6f6363548eefc285fb30",
+      "material_sha256": "ebf00e0907fb35ed82a6415b7e843318d18e9a54abc0881fb9089896fee69a9b",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "ebf00e0907fb35ed82a6415b7e843318d18e9a54abc0881fb9089896fee69a9b",
+      "rule_sha256": "b1af6513b9b55171854951b7e98a46de3f0a8ee13186c7c33418438e3c371bcf",
+      "featured": "NC",
+      "evidence": [
+        "Individualized brain-network correspondence and k-hubness quantify topology and integration across epilepsy cohorts with clinical associations."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79018-2",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-79018-2",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-78727-y",
+      "url": "https://doi.org/10.1038/s41467-026-78727-y",
+      "title": "Emergence of diffusion models from associative memory through memorization and generalization",
+      "authors": [
+        "Bao Pham",
+        "Gabriel Raya",
+        "Matteo Negri",
+        "Mohammed J. Zaki",
+        "Luca Ambrogioni",
+        "Dmitry Krotov"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c50e6dca1addccc367cdc63ce34f7d168bf68ad97ae93943318200d978d79eb1",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78727-y",
+      "author_retrieved_at": "2026-10-25T23:24:23.009481+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-10-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-25"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "The identity-matched explicit abstract states the network object, network-science question and result summarized in screening_summary.",
+        "material_sha256": "3ca6736d14244b1e47290d2f9bbb3bb4be668e29e5e5f55892baae0db26f1fd4",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-78727-y"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Dense associative-memory and Hopfield energy landscapes connect memorization, spurious attractors and diffusion-model generalization; the causal role of spurious states remains unproven.",
+      "note_zh": "将稠密联想记忆与 Hopfield 能量景观联系到扩散模型的记忆化、伪吸引态和泛化；伪状态是否因果驱动泛化仍未证明。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "eb709f53909070a8fc979a9de47978fc0245a408e36b716dfbae44b3b4473303",
+      "input_sha256": "ac2b605e4ba9d54a6c794375f4b24b0e7785dff02cec11bcb2108328ca1ec68f",
+      "material_sha256": "3ca6736d14244b1e47290d2f9bbb3bb4be668e29e5e5f55892baae0db26f1fd4",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3ca6736d14244b1e47290d2f9bbb3bb4be668e29e5e5f55892baae0db26f1fd4",
+      "rule_sha256": "b1af6513b9b55171854951b7e98a46de3f0a8ee13186c7c33418438e3c371bcf",
+      "featured": "NC",
+      "evidence": [
+        "Dense associative-memory and Hopfield dynamics explain diffusion-model attractors, storage capacity, spurious states, and generalization transitions."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78727-y",
+      "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78727-y",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1038/s41467-026-78646-y",
       "url": "https://doi.org/10.1038/s41467-026-78646-y",
@@ -26155,9 +26560,133 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "eed60a4fea928f70897e5cf64eef16422b8fde6ddd857d8c6a70b2cdaa1a1122"
+    },
+    {
+      "current_run": "reports/runs/2026-10-25-to-26-01",
+      "candidate_sha256": "bc4a3c550cd2d0f29bac76ccd3c5e3fa992dcbb0727b4b65bd889ddd6f0419db",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c"
+      },
+      "counts": {
+        "in_window": 19,
+        "newly_reviewed": 19,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 16,
+          "core": 1,
+          "transferable_application": 2
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "537a613b45ec29d1bc86c2dd8b890319a8088548912ef08a8611fdbd6e6f4e91"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41467-026-78727-y",
+      "recommended_on": "2026-10-26",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-25-to-26-01",
+      "publication_sha256": "a83409a3452609994ccce06c6b9d3636e45671ecd12ae74c16d77c0df2afc7c3",
+      "assessment_sha256": "eb709f53909070a8fc979a9de47978fc0245a408e36b716dfbae44b3b4473303",
+      "input_sha256": "ac2b605e4ba9d54a6c794375f4b24b0e7785dff02cec11bcb2108328ca1ec68f",
+      "evidence_sha256": "3ca6736d14244b1e47290d2f9bbb3bb4be668e29e5e5f55892baae0db26f1fd4",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-26T07:00:00+08:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78727-y",
+        "title": "Emergence of diffusion models from associative memory through memorization and generalization",
+        "sha256": "f28b30c09684032e670fecf506badd248cd744f391c7be1451fc77347786e028",
+        "version": "Nature Communications Article in Press, published online 2026-10-25; publisher reference PDF",
+        "source_url": "https://www.nature.com/articles/s41467-026-78727-y_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "reviewed_at": "2026-10-26T07:00:00+08:00",
+        "read_scope": "Read all 11 pages: abstract, Introduction, DenseAM and diffusion-model theory, four natural-data experiments, 2D toy model, Stable Diffusion case, Discussion, Methods, Data and Code availability, references; visually checked representative Figs. 1–7. Supplementary materials and external code were not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "扩散模型从记忆到泛化的转变，能否用联想记忆网络的能量景观解释？",
+        "en": "Can associative-memory energy landscapes explain how diffusion models move from memorization to generalization?"
+      },
+      "reading_comment": {
+        "zh": [
+          "我推荐它，因为文章把 Dense Associative Memory、Hopfield 能量景观与扩散模型放进同一个网络动力学框架，直接追踪记忆化、伪状态和生成式泛化之间的关系。",
+          "可复用的阅读路径是先看能量景观和容量预测，再对照 MNIST、Fashion-MNIST、CIFAR-10、LSUN-CHURCH 与 Stable Diffusion 案例，最后检查理想化 score 学习假设是否限制解释范围。"
+        ],
+        "en": [
+          "I recommend this paper because it places Dense Associative Memory, Hopfield energy landscapes and diffusion models in one network-dynamics framework, tracing memorization, spurious states and generative generalization together.",
+          "A reusable reading path is to start with the energy landscape and capacity predictions, compare the MNIST, Fashion-MNIST, CIFAR-10, LSUN-CHURCH and Stable Diffusion cases, then check how the idealized score-learning assumptions limit the interpretation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把扩散过程写成吸引子动力学",
+            "en": "Read diffusion as attractor dynamics"
+          },
+          "text": {
+            "zh": "DenseAM/Hopfield 能量景观提供了连接记忆检索、伪状态和生成过程的统一语言。",
+            "en": "DenseAM and Hopfield energy landscapes provide one language for memory retrieval, spurious states and generation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多层数据检验相变图景",
+            "en": "Test the picture across scales"
+          },
+          "text": {
+            "zh": "从二维 toy model 到四个自然数据集再到 Stable Diffusion，逐层检查理论现象是否出现。",
+            "en": "The paper checks the proposed picture from a 2D toy model through four natural datasets to Stable Diffusion."
+          }
+        },
+        {
+          "heading": {
+            "zh": "明确理论边界",
+            "en": "Keep the theory boundary visible"
+          },
+          "text": {
+            "zh": "作者指出理论依赖理想化 score 学习条件，也没有证明伪状态是泛化的因果驱动。",
+            "en": "The authors state that the theory relies on idealized score learning and does not establish spurious states as a causal driver of generalization."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "扩散模型、联想记忆、网络动力学与生成模型理论研究者。",
+        "en": "Researchers in diffusion models, associative memory, network dynamics and generative-model theory."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社 11 页 Article in Press 参考 PDF，覆盖正文、方法、图 1–7、数据与代码说明及参考文献；补充材料与外部代码未读或执行，也未独立复现。理论依赖理想化 score 学习条件，伪状态与泛化的因果关系仍未被证明；后续 Version of Record 可能替换当前版本。AI 编辑荐读。",
+        "en": "Read all 11 pages of the publisher Article in Press reference PDF, including the main text, Methods, Figs. 1–7, data and code statements, and references; supplements and external code were not read or executed, and no independent reproduction was performed. The theory relies on idealized score learning, and a causal role for spurious states in generalization is not established; a later Version of Record may replace this version. AI editorial guidance."
+      }
+    },
     {
       "doi": "10.1038/s41467-026-78646-y",
       "recommended_on": "2026-10-25",
@@ -29260,6 +29789,84 @@
       }
     },
     {
+      "doi": "10.1038/s41467-026-78727-y",
+      "recommended_on": "2026-10-26",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-25-to-26-01",
+      "publication_sha256": "a83409a3452609994ccce06c6b9d3636e45671ecd12ae74c16d77c0df2afc7c3",
+      "assessment_sha256": "eb709f53909070a8fc979a9de47978fc0245a408e36b716dfbae44b3b4473303",
+      "input_sha256": "ac2b605e4ba9d54a6c794375f4b24b0e7785dff02cec11bcb2108328ca1ec68f",
+      "evidence_sha256": "3ca6736d14244b1e47290d2f9bbb3bb4be668e29e5e5f55892baae0db26f1fd4",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-26T07:00:00+08:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78727-y",
+        "title": "Emergence of diffusion models from associative memory through memorization and generalization",
+        "sha256": "f28b30c09684032e670fecf506badd248cd744f391c7be1451fc77347786e028",
+        "version": "Nature Communications Article in Press, published online 2026-10-25; publisher reference PDF",
+        "source_url": "https://www.nature.com/articles/s41467-026-78727-y_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "reviewed_at": "2026-10-26T07:00:00+08:00",
+        "read_scope": "Read all 11 pages: abstract, Introduction, DenseAM and diffusion-model theory, four natural-data experiments, 2D toy model, Stable Diffusion case, Discussion, Methods, Data and Code availability, references; visually checked representative Figs. 1–7. Supplementary materials and external code were not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "扩散模型从记忆到泛化的转变，能否用联想记忆网络的能量景观解释？",
+        "en": "Can associative-memory energy landscapes explain how diffusion models move from memorization to generalization?"
+      },
+      "reading_comment": {
+        "zh": [
+          "我推荐它，因为文章把 Dense Associative Memory、Hopfield 能量景观与扩散模型放进同一个网络动力学框架，直接追踪记忆化、伪状态和生成式泛化之间的关系。",
+          "可复用的阅读路径是先看能量景观和容量预测，再对照 MNIST、Fashion-MNIST、CIFAR-10、LSUN-CHURCH 与 Stable Diffusion 案例，最后检查理想化 score 学习假设是否限制解释范围。"
+        ],
+        "en": [
+          "I recommend this paper because it places Dense Associative Memory, Hopfield energy landscapes and diffusion models in one network-dynamics framework, tracing memorization, spurious states and generative generalization together.",
+          "A reusable reading path is to start with the energy landscape and capacity predictions, compare the MNIST, Fashion-MNIST, CIFAR-10, LSUN-CHURCH and Stable Diffusion cases, then check how the idealized score-learning assumptions limit the interpretation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把扩散过程写成吸引子动力学",
+            "en": "Read diffusion as attractor dynamics"
+          },
+          "text": {
+            "zh": "DenseAM/Hopfield 能量景观提供了连接记忆检索、伪状态和生成过程的统一语言。",
+            "en": "DenseAM and Hopfield energy landscapes provide one language for memory retrieval, spurious states and generation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多层数据检验相变图景",
+            "en": "Test the picture across scales"
+          },
+          "text": {
+            "zh": "从二维 toy model 到四个自然数据集再到 Stable Diffusion，逐层检查理论现象是否出现。",
+            "en": "The paper checks the proposed picture from a 2D toy model through four natural datasets to Stable Diffusion."
+          }
+        },
+        {
+          "heading": {
+            "zh": "明确理论边界",
+            "en": "Keep the theory boundary visible"
+          },
+          "text": {
+            "zh": "作者指出理论依赖理想化 score 学习条件，也没有证明伪状态是泛化的因果驱动。",
+            "en": "The authors state that the theory relies on idealized score learning and does not establish spurious states as a causal driver of generalization."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "扩散模型、联想记忆、网络动力学与生成模型理论研究者。",
+        "en": "Researchers in diffusion models, associative memory, network dynamics and generative-model theory."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社 11 页 Article in Press 参考 PDF，覆盖正文、方法、图 1–7、数据与代码说明及参考文献；补充材料与外部代码未读或执行，也未独立复现。理论依赖理想化 score 学习条件，伪状态与泛化的因果关系仍未被证明；后续 Version of Record 可能替换当前版本。AI 编辑荐读。",
+        "en": "Read all 11 pages of the publisher Article in Press reference PDF, including the main text, Methods, Figs. 1–7, data and code statements, and references; supplements and external code were not read or executed, and no independent reproduction was performed. The theory relies on idealized score learning, and a causal role for spurious states in generalization is not established; a later Version of Record may replace this version. AI editorial guidance."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -29339,5 +29946,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "02d6d748e7e5520dce5a80a3c0dfda27acc67f079df057c3c75f61d38980fcc9"
+  "daily_suggestions_sha256": "6bdc3c0bcabbdf19830fbb59b501749c4fe2654f7097ce5ad89f6b656195fdcb"
 }

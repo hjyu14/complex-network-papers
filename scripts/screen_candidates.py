@@ -732,6 +732,9 @@ class Workflow:
                 raise ValueError('Included papers require a screening summary')
             if any(decision['hard_checks'][k]['status'] != 'verified' for k in ['identity', 'type', 'date']):
                 raise ValueError('Inclusion requires resolved hard checks')
+            from online_date import validate_online_check
+            journal = next(j for j in self.config['journals'] if j['short'] == r['journal'])
+            validate_online_check(r, journal, decision['hard_checks']['date'])
         allowed = {'doi', 'category', 'reason', 'evidence_summary', 'reviewer', 'hard_checks',
                    'exclusion_basis', 'screening_summary', 'sources', 'needs', 'editorial_basis'}
         if set(decision)-allowed:

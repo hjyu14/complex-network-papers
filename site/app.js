@@ -2,7 +2,7 @@
 const $ = (selector) => document.querySelector(selector);
 const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", query: "", days: 30, updatesOnly: false, page: 1, pageSize: 10 };
 const scopeLabel = (id) => ({ all: tr("All journals", "全部期刊"), featured: tr("Spotlight journals", "Spotlight 期刊"), other: tr("Other journals", "其他期刊") })[id];
-const dateLabel = (id) => ({ "publisher.accepted": tr("Accepted date — not publication", "接收日期，非发表日期"), "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print publication", "纸刊发表"), published: tr("Publication date", "发表日期"), issued: tr("Issue date", "出版日期") })[id] || id;
+const dateLabel = (id) => ({ "publisher.accepted": tr("Accepted date — not publication", "接收日期，非发表日期"), "publisher.available_online": tr("First available online", "首次在线发表"), "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print publication", "纸刊发表"), published: tr("Publication date", "发表日期"), issued: tr("Issue date", "出版日期") })[id] || id;
 const englishCategories = { network_structure: "Structure & formation", network_inference: "Community detection, inference & reconstruction", network_spreading: "Spreading, diffusion & percolation", network_collective: "Synchronization, games & collective behavior", network_resilience: "Robustness, cascades & control", other: "Other" };
 
 function element(tag, className, text) {
@@ -168,6 +168,7 @@ function paperCard(paper) {
   details.append(element("summary", "", tr("Details", "详细信息")));
   if (authors.length) details.append(element("p", "full-authors", tr("All authors: ", "全部作者：") + authors.join(" · ")));
   if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
+  if (paper.publication_version) details.append(element("p", "", tr("Publication version: ", "出版版本：") + paper.publication_version));
   if (paper.type_provenance?.basis_kind === "explicit_abstract_research_inference") details.append(element("p", "", tr("Original research supported by the abstract; exact publisher subtype not specified.", "摘要支持其研究性质；未指定出版方的精确文章子类型。")));
   if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date and available publisher subtype will be rechecked after publication.", "已接收，待正式发表；届时补核发表日期及可获得的出版方文章子类型。")));
   if (paper.publication_status === "published" && paper.publication_transition?.kind === "accepted_to_published") details.append(element("p", "", tr(

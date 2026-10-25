@@ -1538,6 +1538,84 @@
         "zh": "已读出版社 25 页 Article in Press PDF，含正文、方法、图 1–8 和公式；补充材料、源数据与代码未读或执行，也未独立复现实验。文章页面说明该版本可能被最终版本替换。AI 编辑荐读。",
         "en": "Read all 25 pages of the publisher Article in Press PDF, including main text, Methods, Figs. 1-8 and equations; supplements, source data and code were not read or executed, and no independent reproduction was performed. The article page says this version may be replaced by the final Version of Record. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1038/s41467-026-78727-y",
+      "recommended_on": "2026-10-26",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-25-to-26-01",
+      "publication_sha256": "a83409a3452609994ccce06c6b9d3636e45671ecd12ae74c16d77c0df2afc7c3",
+      "assessment_sha256": "eb709f53909070a8fc979a9de47978fc0245a408e36b716dfbae44b3b4473303",
+      "input_sha256": "ac2b605e4ba9d54a6c794375f4b24b0e7785dff02cec11bcb2108328ca1ec68f",
+      "evidence_sha256": "3ca6736d14244b1e47290d2f9bbb3bb4be668e29e5e5f55892baae0db26f1fd4",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-26T07:00:00+08:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78727-y",
+        "title": "Emergence of diffusion models from associative memory through memorization and generalization",
+        "sha256": "f28b30c09684032e670fecf506badd248cd744f391c7be1451fc77347786e028",
+        "version": "Nature Communications Article in Press, published online 2026-10-25; publisher reference PDF",
+        "source_url": "https://www.nature.com/articles/s41467-026-78727-y_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "reviewed_at": "2026-10-26T07:00:00+08:00",
+        "read_scope": "Read all 11 pages: abstract, Introduction, DenseAM and diffusion-model theory, four natural-data experiments, 2D toy model, Stable Diffusion case, Discussion, Methods, Data and Code availability, references; visually checked representative Figs. 1–7. Supplementary materials and external code were not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "扩散模型从记忆到泛化的转变，能否用联想记忆网络的能量景观解释？",
+        "en": "Can associative-memory energy landscapes explain how diffusion models move from memorization to generalization?"
+      },
+      "reading_comment": {
+        "zh": [
+          "我推荐它，因为文章把 Dense Associative Memory、Hopfield 能量景观与扩散模型放进同一个网络动力学框架，直接追踪记忆化、伪状态和生成式泛化之间的关系。",
+          "可复用的阅读路径是先看能量景观和容量预测，再对照 MNIST、Fashion-MNIST、CIFAR-10、LSUN-CHURCH 与 Stable Diffusion 案例，最后检查理想化 score 学习假设是否限制解释范围。"
+        ],
+        "en": [
+          "I recommend this paper because it places Dense Associative Memory, Hopfield energy landscapes and diffusion models in one network-dynamics framework, tracing memorization, spurious states and generative generalization together.",
+          "A reusable reading path is to start with the energy landscape and capacity predictions, compare the MNIST, Fashion-MNIST, CIFAR-10, LSUN-CHURCH and Stable Diffusion cases, then check how the idealized score-learning assumptions limit the interpretation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把扩散过程写成吸引子动力学",
+            "en": "Read diffusion as attractor dynamics"
+          },
+          "text": {
+            "zh": "DenseAM/Hopfield 能量景观提供了连接记忆检索、伪状态和生成过程的统一语言。",
+            "en": "DenseAM and Hopfield energy landscapes provide one language for memory retrieval, spurious states and generation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多层数据检验相变图景",
+            "en": "Test the picture across scales"
+          },
+          "text": {
+            "zh": "从二维 toy model 到四个自然数据集再到 Stable Diffusion，逐层检查理论现象是否出现。",
+            "en": "The paper checks the proposed picture from a 2D toy model through four natural datasets to Stable Diffusion."
+          }
+        },
+        {
+          "heading": {
+            "zh": "明确理论边界",
+            "en": "Keep the theory boundary visible"
+          },
+          "text": {
+            "zh": "作者指出理论依赖理想化 score 学习条件，也没有证明伪状态是泛化的因果驱动。",
+            "en": "The authors state that the theory relies on idealized score learning and does not establish spurious states as a causal driver of generalization."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "扩散模型、联想记忆、网络动力学与生成模型理论研究者。",
+        "en": "Researchers in diffusion models, associative memory, network dynamics and generative-model theory."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社 11 页 Article in Press 参考 PDF，覆盖正文、方法、图 1–7、数据与代码说明及参考文献；补充材料与外部代码未读或执行，也未独立复现。理论依赖理想化 score 学习条件，伪状态与泛化的因果关系仍未被证明；后续 Version of Record 可能替换当前版本。AI 编辑荐读。",
+        "en": "Read all 11 pages of the publisher Article in Press reference PDF, including the main text, Methods, Figs. 1–7, data and code statements, and references; supplements and external code were not read or executed, and no independent reproduction was performed. The theory relies on idealized score learning, and a causal role for spurious states in generalization is not established; a later Version of Record may replace this version. AI editorial guidance."
+      }
     }
   ],
   "revisions": [

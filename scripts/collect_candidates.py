@@ -398,9 +398,9 @@ def parse_aps(text, journal, channel):
 def collect_official(client, journal, start, end, log, channel=None):
     family = journal['collection']['family']
     browser = log.latest('browser_directory', journal['short'])
-    if family in {'science','pnas','aip'} and browser:
+    if family in {'science','pnas','aip','elsevier'} and browser:
         return browser['result']
-    if family == 'aip':
+    if family in {'aip','elsevier'}:
         result = {'channel':'directory', 'complete':False,
                   'completion_basis':None, 'error':'browser_directory_not_imported',
                   'pages':[], 'reported_totals':[], 'records':[],
@@ -600,7 +600,9 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
     for source in official:
         for row in source['records']:
             # Preserve guard-page evidence in the log, not in the candidate pool.
-            if row['date'] and not start <= row['date'] <= end:
+            if (row['date'] and not start <= row['date'] <= end
+                    and not (journal['collection'].get('date_policy') == 'publisher.available_online'
+                             and row.get('doi') in crossref)):
                 continue
             doi = row.get('doi') or by_url.get(url_key(row['article_url']))
             identity = None
@@ -697,6 +699,28 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
             c['date_resolution'] = resolution['reason']
             if item:
                 issues = c['issues'] = [x for x in issues if x not in {'crossref_date_unavailable'}]
+        if journal['collection'].get('date_policy') == 'publisher.available_online':
+            # Issue-month metadata and even Crossref's online field are discovery
+            # clues only for these journals. Require the official first online day.
+            evidence = [r.get('publisher_date_observation') for r in c['publisher_records']
+                        if r.get('date_basis') == 'publisher.available_online']
+            evidence = [e for e in evidence if e and e.get('available_online')]
+            days = {e['available_online'] for e in evidence}
+            if len(days) == 1:
+                chosen, basis = next(iter(days)), 'publisher.available_online'
+                c['publisher_online_observations'] = evidence
+                if not c['issns']:
+                    c['issns'] = sorted({e['issn'] for e in evidence
+                                         if e.get('issn') in journal['issns']})
+                c['publication_version'] = evidence[-1].get('publication_version')
+                c['publication_status'] = 'published'
+                issues = c['issues'] = [x for x in issues if x not in {
+                    'incomplete_preferred_date', 'invalid_preferred_date', 'missing_date',
+                    'crossref_date_unavailable', 'crossref_metadata_unavailable'}]
+            else:
+                chosen, basis = None, 'publisher.available_online'
+                issues.append('official_first_online_date_conflict' if days else
+                              'official_first_online_date_missing')
         if journal['collection']['family'] == 'aps' and item and ((not published and not accepted) or any(r['date'] != chosen for r in published)):
             try:
                 if getattr(client, 'stopped', False):
@@ -747,7 +771,8 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
         membership = {start <= day <= end for day in days}
         date_errors = {'incomplete_preferred_date', 'invalid_preferred_date', 'missing_date',
                        'future_date', 'unresolved_APS_date_conflict', 'APS_history_unverified',
-                       'accepted_list_publication_status_conflict', 'accepted_date_unresolved'}
+                       'accepted_list_publication_status_conflict', 'accepted_date_unresolved',
+                       'official_first_online_date_missing', 'official_first_online_date_conflict'}
         c['window_membership'] = ('unresolved' if not c['doi'] or not days or len(membership) != 1
                                   or date_errors & set(issues)
                                   else 'in_window' if True in membership else 'out_of_window')

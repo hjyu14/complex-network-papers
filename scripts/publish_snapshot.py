@@ -179,6 +179,8 @@ def build_snapshot(out, notes=None, *, _superseded_dois=()):
             raise ValueError('Invalid inclusion date')
         accepted = check.get('publication_status') == 'accepted' or check.get('basis', '').startswith('publisher.accepted')
         journal = journals[r['journal']]
+        from online_date import validate_online_check
+        online_observation = validate_online_check(r, journal, check)
         if not set(r['issns']) & set(journal['issns']):
             raise ValueError('Whitelist ISSN mismatch')
         authority = d.get('scope_authority', 'assistant_online_short_comment_screening' if short_review else 'assistant_abstract_screening')
@@ -224,6 +226,9 @@ def build_snapshot(out, notes=None, *, _superseded_dois=()):
             'evidence_url': evidence_url, 'source': 'Crossref and verified publisher/user evidence',
             'retrieved_by': [('Fixed September journal inventory; DOI-bound ' if legacy else 'Explicit journal inventory run; DOI-bound ')+('authorized online short-comment review' if short_review else 'explicit abstract excerpt review' if evidence_kind=='abstract_excerpt' else 'abstract review')],
             'screening_version': VERSION})
+        if online_observation:
+            papers[-1].update(date_source='publisher.available_online',
+                             publication_version=online_observation['publication_version'])
         if d.get('editorial_basis', {}).get('scope_exception'):
             papers[-1].update(scope_exception=True, entry_kind='editorial_related_reading',
                 scope_class_semantics=d['editorial_basis']['category_semantics'])

@@ -1,0 +1,74 @@
+{
+  "version": "collection-workflow-2",
+  "status": "bibliographic_collection",
+  "window_days": 90,
+  "initial_trial": {
+    "start": "2026-09-01",
+    "end": "2026-10-08",
+    "backfill_before_start": false
+  },
+  "screening_protocol": "docs/screening-protocol.md",
+  "featured_journals": [
+    "Nature",
+    "NP",
+    "Science",
+    "NC",
+    "NMI",
+    "NCS",
+    "PRX",
+    "PRL",
+    "SA",
+    "PNAS"
+  ],
+  "journals": [
+    {
+      "name": "Nature Physics",
+      "short": "NP",
+      "issns": [
+        "1745-2481",
+        "1745-2473"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/nphys/articles",
+        "max_pages": 24
+      }
+    },
+    {
+      "name": "Chaos, Solitons & Fractals",
+      "short": "CSF",
+      "issns": [
+        "0960-0779",
+        "1873-2887"
+      ],
+      "collection": {
+        "family": "elsevier",
+        "url": "https://www.sciencedirect.com/journal/chaos-solitons-and-fractals",
+        "rss": "https://rss.sciencedirect.com/publication/science/09600779",
+        "pii_prefix": "S09600779",
+        "date_policy": "publisher.available_online",
+        "max_pages": 100,
+        "article_lookups": 1000,
+        "access": "browser_directory"
+      }
+    },
+    {
+      "name": "Physica A: Statistical Mechanics and its Applications",
+      "short": "PhysicaA",
+      "issns": [
+        "0378-4371",
+        "1873-2119"
+      ],
+      "collection": {
+        "family": "elsevier",
+        "url": "https://www.sciencedirect.com/journal/physica-a-statistical-mechanics-and-its-applications",
+        "rss": "https://rss.sciencedirect.com/publication/science/03784371",
+        "pii_prefix": "S03784371",
+        "date_policy": "publisher.available_online",
+        "max_pages": 100,
+        "article_lookups": 1000,
+        "access": "browser_directory"
+      }
+    }
+  ]
+}
