@@ -1460,6 +1460,84 @@
         "zh": "已读7页出版社正式版本，含图1–5与公式；补充材料和外部代码未读，模拟结论仍限于文中六类拓扑、两种调度器与参数范围。AI编辑荐读。",
         "en": "Read the 7-page publisher version, including Figs. 1–5 and equations; supplemental material and external code were not read. Simulation conclusions remain limited to the six topologies, two dispatchers and parameter ranges studied. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1038/s41467-026-78646-y",
+      "recommended_on": "2026-10-25",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-24-to-25-01",
+      "publication_sha256": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+      "assessment_sha256": "438f6338a3bc93014fd540217351761c0a6a86852e0d3443cd6c3e41ce16bc43",
+      "input_sha256": "7587ffe0be534ff48ac08cdca40145a096bf9ca569de808e17700195ad254d54",
+      "evidence_sha256": "86b5fbaeccba4cdf86629b88f5623f0aafe3e4f2476149b3a1051eaac61eed9f",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-25T11:35:00+08:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78646-y",
+        "title": "Recommendation system-inspired learning of crossmodal interaction patterns between chromatin accessibility and gene expression",
+        "sha256": "ef0fdc2efd0397cb1541297616253abe97f3549d90c175ecdbbe4151f83df6d2",
+        "version": "Publisher Article in Press PDF (25 pages); open-access reference PDF, accepted research subject to replacement by the final Version of Record.",
+        "source_url": "https://www.nature.com/articles/s41467-026-78646-y_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 25,
+        "read_scope": "Read all 25 pages of the publisher Article in Press: abstract, Introduction, Results, Figs. 1-8 and captions, Discussion, Methods, equations, references, Data availability, Code availability and reporting information. Visually checked rendered pages and figures. Supplementary Information, Supplementary Data files, source-data archive and external code were not read or executed; no independent reproduction.",
+        "reviewed_at": "2026-10-25T11:35:00+08:00"
+      },
+      "question": {
+        "zh": "推荐系统的稀疏交互思想，怎样帮助我们学习细粒度的基因调控图？",
+        "en": "How can sparse interaction ideas from recommender systems help learn fine-grained gene-regulatory graphs?"
+      },
+      "reading_comment": {
+        "zh": [
+          "我推荐它，因为文章把每个细胞的染色质可及性与基因表达重写成二部交互图，再用带生物属性的图 Transformer 学习 peak–gene 关系；这让“图模型如何服务具体机制问题”变得很清楚。",
+          "可复用的建模经验是把节点属性、先验边和稀疏监督分开做消融，并用跨细胞类型、跨数据集的零样本测试检查迁移。文中结果仍是计算基准与生物学解释，不能替代实验验证。"
+        ],
+        "en": [
+          "I recommend this paper because it recasts each cell’s chromatin accessibility and gene expression as a bipartite interaction graph, then uses a biology-aware graph transformer to learn peak–gene links. It makes the path from graph modeling to a concrete mechanism question unusually clear.",
+          "A reusable design is to ablate node attributes, prior edges and sparse supervision separately, then test transfer across unseen cell types and datasets. The evidence is computational benchmarking plus biological interpretation; it does not replace experimental validation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把跨模态关系显式成图",
+            "en": "Make crossmodal links explicit"
+          },
+          "text": {
+            "zh": "RNA 节点与 ATAC 节点组成二部图，边和属性分别承载先验与生物信息。",
+            "en": "Represent RNA and ATAC nodes in a bipartite graph, keeping prior edges and biological attributes distinct."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用消融检验信息来源",
+            "en": "Test where the signal comes from"
+          },
+          "text": {
+            "zh": "分别移除属性、先验边、方向注意力和剪枝模块，观察性能与可解释性如何变化。",
+            "en": "Remove attributes, prior edges, directional attention and pruning separately to track their effects on performance and interpretation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用零样本检验迁移",
+            "en": "Probe transfer with zero-shot tests"
+          },
+          "text": {
+            "zh": "跨未见细胞类型和跨数据集直接测试，检验模型是否学到可迁移的调控模式。",
+            "en": "Test unseen cell types and cross-dataset transfer without fine-tuning to ask whether learned regulatory patterns travel."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "图机器学习、网络推断、单细胞多组学与调控网络建模研究者。",
+        "en": "Researchers in graph learning, network inference, single-cell multi-omics and regulatory-network modeling."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社 25 页 Article in Press PDF，含正文、方法、图 1–8 和公式；补充材料、源数据与代码未读或执行，也未独立复现实验。文章页面说明该版本可能被最终版本替换。AI 编辑荐读。",
+        "en": "Read all 25 pages of the publisher Article in Press PDF, including main text, Methods, Figs. 1-8 and equations; supplements, source data and code were not read or executed, and no independent reproduction was performed. The article page says this version may be replaced by the final Version of Record. AI editorial guidance."
+      }
     }
   ],
   "revisions": [
