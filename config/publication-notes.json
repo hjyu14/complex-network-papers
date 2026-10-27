@@ -46,11 +46,12 @@
     },
     "10.1103/g875-ldn5": {
       "categories": [
+        "network_collective",
         "network_inference"
       ],
-      "note_en": "Thermodynamic bounds on steady states and reaction affinities constrain candidate network topologies and hidden pathways.",
-      "note_zh": "稳态与反应亲和力的热力学界，为检验反应网络拓扑和隐藏路径提供约束。",
-      "assessment_sha256": "014049cbb58e8a24dfe218ca7f021968f68f8f7733789df66e45ec61bf30465f"
+      "note_zh": "热力学空间约束受驱动化学反应网络的稳态浓度与亲和力，并支持拓扑及隐藏通路检验。",
+      "note_en": "Thermodynamic space bounds stationary concentrations and affinities of driven chemical reaction networks and supports tests of topology and hidden pathways.",
+      "assessment_sha256": "d77586d1d5c662da15b5bc245883a56eab75331d5dd77393e3fe01507edfc7bd"
     },
     "10.1103/6m2z-wlmb": {
       "categories": [
@@ -1242,9 +1243,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Connection delays govern single-step or multistep synchronization transitions in adaptive networks, with analytical conditions for two-cluster states.",
-      "note_zh": "连接时延控制自适应网络中的单步或多步同步相变，并可推导双簇状态存在的解析条件。",
-      "assessment_sha256": "af3eb30e9751326e80b09b17b9b7d1a263b56ca9cc1574165fa5af8acd552dbb"
+      "note_zh": "连接时延和频率分布共同控制自适应振子网络的成核同步，集体坐标理论刻画双簇态边界。",
+      "note_en": "Connection delays and frequency distributions govern nucleation of synchronization in adaptive oscillator networks; collective coordinates bound two-cluster states.",
+      "assessment_sha256": "1dc2575c9f21418811e8f3a25bfb9d434789c0d7f486028b1c78dcfe362957ce"
     },
     "10.1073/pnas.2620995123": {
       "categories": [
@@ -1444,11 +1445,11 @@
     "10.1103/m3bb-1nhk": {
       "categories": [
         "network_spreading",
-        "network_resilience"
+        "network_collective"
       ],
-      "note_en": "Dissipative branching approximations explain topology-dependent avalanche cutoffs and their limits on clustered or leaf-rich networks.",
-      "note_zh": "含耗散的分枝近似解释拓扑相关的雪崩截断，并检验其在聚类及多叶节点网络上的局限。",
-      "assessment_sha256": "5295acbfc5b610bb915aa7e75b4d91bf203bf31f6f450d06daa1a648624de899"
+      "note_zh": "含耗散的分枝过程刻画网络沙堆雪崩；强聚类和树结构揭示独立分枝近似的适用边界。",
+      "note_en": "Dissipative branching processes describe network sandpile avalanches, while strong clustering and tree structure expose limits of independent branching.",
+      "assessment_sha256": "608ea66308678400772b23684cd6b11c8e274202536425f28f5005b7f036c683"
     },
     "10.1038/s41467-026-78293-3": {
       "categories": [
@@ -1536,11 +1537,12 @@
     },
     "10.1103/hs2n-6rsn": {
       "categories": [
-        "network_spreading"
+        "network_spreading",
+        "network_structure"
       ],
-      "note_en": "Message passing shows how directionality suppresses backtracking and changes extended-range percolation thresholds and critical behavior.",
-      "note_zh": "消息传递揭示方向性如何抑制回溯，并改变扩展范围渗流的阈值与临界行为。",
-      "assessment_sha256": "8f394f10c9374ec643ee311c478b5084e4e0c913f4d48631e8379010f1979b71"
+      "note_zh": "有向扩展范围渗流中，非互惠方向抑制回溯并简化消息传递；临界行为依赖度关联。",
+      "note_en": "Nonreciprocal directionality suppresses backtracking and simplifies message passing in directed extended-range percolation, with correlation-dependent critical behavior.",
+      "assessment_sha256": "d5adb7ddd7e63b40c6a3cd1589879fdbf4086fb54674e9f82554725feb34bba8"
     },
     "10.1073/pnas.2619598123": {
       "categories": [
@@ -2209,6 +2211,33 @@
       "note_en": "Head-direction attractor dynamics recover before locomotion in head-fixed mice; lateral connectivity helps explain context-dependent neural coding.",
       "note_zh": "头固定小鼠的头向吸引子动力学在运动前恢复；横向连接有助于解释情境依赖的神经编码。",
       "assessment_sha256": "9d6a9c02c87b83e5c0c0684910c6e3bda926f6069f78d5a0c7e34ad7c59981f7"
+    },
+    "10.1103/5lnm-slgg": {
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "note_zh": "以配位团簇的贯通和临界标度描述受压玻璃的非晶转变；高配位网络的刚性渗流解释仍属暂定。",
+      "note_en": "Coordination-cluster connectivity and critical scaling describe transitions in compressed glasses; a rigidity-percolation explanation at high coordination remains tentative.",
+      "assessment_sha256": "e612ab700791e41f4916a8ae53053c948cd3aaa597196c9a991c1c0b7b8b1c00"
+    },
+    "10.1103/ydgr-vs2w": {
+      "categories": [
+        "network_resilience",
+        "network_collective"
+      ],
+      "note_zh": "热力学响应约束与图论 coherence 判据给出复杂反应网络中简单局部反馈的稳定控制条件。",
+      "note_en": "Thermodynamic response constraints and graph coherence identify stable-control conditions for simple local feedback in complex reaction networks.",
+      "assessment_sha256": "d308673d3a50e51837d194ce6fac90c9b28cb6b8d9eef9f9886531fc7239b80d"
+    },
+    "10.1073/pnas.2321155123": {
+      "categories": [
+        "network_resilience",
+        "network_spreading"
+      ],
+      "note_zh": "多参与者微观经济模型追踪食物系统的跨区域冲击传播与分配效应；适于情景理解，非精确政策预测。",
+      "note_en": "A multiplayer microeconomic model traces regional shock propagation and distributional effects in food systems; it supports scenario understanding rather than precise policy prediction.",
+      "assessment_sha256": "3ae1384450c9da36f876b568049bfca169f9bda56f918992ebf2f8813cad58a2"
     }
   }
 }
