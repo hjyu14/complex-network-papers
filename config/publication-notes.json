@@ -1359,11 +1359,12 @@
     },
     "10.1103/nlkq-191r": {
       "categories": [
-        "network_structure"
+        "network_structure",
+        "network_inference"
       ],
-      "note_en": "Edge qudits on line graphs improve structural distinguishability in quantum graph models beyond the node-based expressivity limit.",
-      "note_zh": "边 qudit 与线图构造提升量子图模型的结构可区分性，突破节点模型的表达限制。",
-      "assessment_sha256": "2c6aff6cbd6bf0f5f68be2044e4c08a765876fd04eb0b723bedcf5db95c3c47f"
+      "note_zh": "边 qudit 量子图架构以线图表示提升图结构可区分性，并给出超越节点 1-WL 上限的表达能力条件。",
+      "note_en": "An edge-qudit quantum graph architecture improves structural distinguishability via line-graph representations beyond node-based 1-WL limits.",
+      "assessment_sha256": "7f81fdae4e174b2391fb7e8bc6d4553ec089ecd52c4fa92dea1200d6e90fab6d"
     },
     "10.1103/ycf8-4sz5": {
       "categories": [
@@ -1726,9 +1727,9 @@
         "network_structure",
         "network_spreading"
       ],
-      "note_en": "Graph observables reveal connectivity reorganization during stripe melting, distinguishing finite filament clusters from spanning fluid networks.",
-      "note_zh": "以图观测量揭示条纹熔化的连接重组，区分有限丝状团簇与贯通流体网络。",
-      "assessment_sha256": "17fb3583538c3218bcfc79d83f5783a9c680cc97abe1e5a186ac34093c6f02c8"
+      "note_zh": "条纹熔化中的细丝连接网络经历有限簇与贯通网络的密度选择，图观测量揭示连接重组。",
+      "note_en": "Graph observables reveal density-selected transitions between finite clusters and spanning networks as single-particle-thick stripes melt.",
+      "assessment_sha256": "2161eb5d744d6a3c7da05bc97638a3bd15af78bf2336062d4b6d54a4e4c5a8e3"
     },
     "10.1103/wlyc-rtgs": {
       "categories": [
@@ -2238,6 +2239,42 @@
       "note_zh": "多参与者微观经济模型追踪食物系统的跨区域冲击传播与分配效应；适于情景理解，非精确政策预测。",
       "note_en": "A multiplayer microeconomic model traces regional shock propagation and distributional effects in food systems; it supports scenario understanding rather than precise policy prediction.",
       "assessment_sha256": "3ae1384450c9da36f876b568049bfca169f9bda56f918992ebf2f8813cad58a2"
+    },
+    "10.1103/4tf9-n1zn": {
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "note_zh": "稠密无序网络上的非平衡稳态占据呈现 Boltzmann-like 分布，低 rattling 渐近规律连接状态逃逸与稳态概率。",
+      "note_en": "Dense disordered networks show Boltzmann-like occupations in nonequilibrium steady states, linking slow escape and steady-state probability.",
+      "assessment_sha256": "6870b73d936d44d05154143be5be6860c990d27d307b120f4018cec678ba90ee"
+    },
+    "10.1073/pnas.2607559123": {
+      "categories": [
+        "network_collective",
+        "network_inference"
+      ],
+      "note_zh": "活动依赖的乘性门控重组联想记忆网络的吸引子，使过载区仍可保持检索并产生连续多稳态。",
+      "note_en": "Activity-dependent multiplicative gating reorganizes associative-memory attractors, extending retrieval beyond the classical capacity transition and creating continuous multistability.",
+      "assessment_sha256": "6a9149bfb19a1736869331143f956201129ec33d4167ce1ee046f9d2ee821296"
+    },
+    "10.1103/y1tc-4ms4": {
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "note_zh": "GC-KAN 从多变量时间序列稀疏推断预测父节点与滞后响应；这里的 Granger 关系是预测关系，不等同干预因果。",
+      "note_en": "GC-KAN sparsely infers predictive parents and lag responses from multivariate time series; Granger relations here are predictive, not intervention causal.",
+      "assessment_sha256": "dd7deffb0d79dc6c9e1f2ac76919d8e126758b12e2e713c1afa3d60a25558949"
+    },
+    "10.1073/pnas.2610672123": {
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "note_zh": "病毒共享网络显示哺乳动物宿主跨目的异质组织，并联系生态因素与传播中心性。",
+      "note_en": "A viral-sharing network reveals heterogeneous cross-order host structure and links ecological factors to transmission centrality.",
+      "assessment_sha256": "b63dfdc4732333f935618e2869ba0648f012c816f955143800a44f867dd7185b"
     }
   }
 }

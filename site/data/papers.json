@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-27T02:28:21.131532+00:00",
+  "generated_at": "2026-10-28T02:21:44.000651+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-27",
-  "window_days": 57,
+  "window_end": "2026-10-28",
+  "window_days": 58,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "1ce5b2b54c8fcbaa8e927517087e5571c5db0479927874c486ea489947375779",
-  "author_metadata_sha256": "e651c78e71d7718fdc92fc229c0ba09c32cc0b8bda04df465263f62598838efc",
+  "reading_notes_sha256": "ccb6aff1f36354ed69c4b435d8b3a53f21cd8c94bcb11104b8769e2f91e7fb05",
+  "author_metadata_sha256": "3f6060a711e0de124e0aefcad8db2b1ca06a9e18284cad6b158de192dca47b23",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2303,9 +2303,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-10-27-to-28-02",
+      "config_sha256": "84560aa36eb15e62c7198c0196db1b1114b807f992b1caaee10ce297955163e0",
+      "window_start": "2026-10-27",
+      "window_end": "2026-10-28",
+      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+      "screening_log_sha256": "2b2ed0a93b4c1ccd363060050607700d2fdb4811e8c6f918ff6ddae2bff6f119",
+      "candidate_sha256": "b2306d4788d1d9e8c8219dddf3e547cafde5da453536cd03e52336a6ca35c50b",
+      "author_metadata_sha256": "264542244f9b77a68078e518199443494c94caa6e98a6f3f9f397fec2560adf8",
+      "run_manifest_sha256": "31b2b536f9547e56fbc035f5af197e608454749cea8bc8a6fe0c20e55d59e4c7",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-27-to-28-02",
+          "files": {
+            "candidates.json": "b2306d4788d1d9e8c8219dddf3e547cafde5da453536cd03e52336a6ca35c50b",
+            "coverage.json": "a2b874c4201470ee0f1a683694de49bb48e6fa37e7346921cf44d83a97343279",
+            "collection-log.jsonl": "9e451b7a483bd278877a73311b62036a2171e8a9b5b357e83f28585f0df10bd3",
+            "screening-log.jsonl": "b483ad28dc6977e4309178a638bc4a544b44fe1314ed713bb2f212376f0386c5",
+            "inputs/manifest.json": "83d41838b5260df6b3719b23fd9325fa752426500f9ecef2cbd8d782e86515ee",
+            "inputs/sources.json": "7f34f5ced78ab5ae9afeef222af1b2e809b7c4b915508f319aa3473abe074549",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "b2306d4788d1d9e8c8219dddf3e547cafde5da453536cd03e52336a6ca35c50b",
+          "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+          "screening_log_sha256": "2b2ed0a93b4c1ccd363060050607700d2fdb4811e8c6f918ff6ddae2bff6f119"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "264542244f9b77a68078e518199443494c94caa6e98a6f3f9f397fec2560adf8",
+          "audit": {
+            "path": "reports/runs/2026-10-27-to-28-02/screening-log.jsonl",
+            "sha256": "b483ad28dc6977e4309178a638bc4a544b44fe1314ed713bb2f212376f0386c5"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "f0de3a169ad32fab938197e73a4a8591c20b4ce80ecc2fb65271482cc92d7a19"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 263,
+  "author_available_count": 267,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -2455,8 +2499,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 700,
-      "publisher_verified_inventory_count": 700,
+      "candidate_count": 716,
+      "publisher_verified_inventory_count": 716,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2682,6 +2726,15 @@
           "journal": "Nature",
           "candidate_count": 9,
           "publisher_verified_inventory_count": 9,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "Nature",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -2918,13 +2971,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1637,
-      "publisher_verified_inventory_count": 1635,
+      "candidate_count": 1667,
+      "publisher_verified_inventory_count": 1665,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3150,6 +3212,15 @@
           "journal": "NC",
           "candidate_count": 26,
           "publisher_verified_inventory_count": 26,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "NC",
+          "candidate_count": 30,
+          "publisher_verified_inventory_count": 30,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -3381,6 +3452,15 @@
         {
           "window_start": "2026-10-26",
           "window_end": "2026-10-27",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -3620,13 +3700,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 87,
-      "publisher_verified_inventory_count": 87,
+      "candidate_count": 88,
+      "publisher_verified_inventory_count": 88,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3854,13 +3943,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "PRX",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 685,
-      "publisher_verified_inventory_count": 685,
+      "candidate_count": 701,
+      "publisher_verified_inventory_count": 701,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4088,6 +4186,15 @@
           "publisher_verified_inventory_count": 29,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "PRL",
+          "candidate_count": 24,
+          "publisher_verified_inventory_count": 24,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4322,13 +4429,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 778,
-      "publisher_verified_inventory_count": 778,
+      "candidate_count": 805,
+      "publisher_verified_inventory_count": 805,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4556,13 +4672,22 @@
           "publisher_verified_inventory_count": 35,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "PNAS",
+          "candidate_count": 27,
+          "publisher_verified_inventory_count": 27,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 101,
-      "publisher_verified_inventory_count": 101,
+      "candidate_count": 102,
+      "publisher_verified_inventory_count": 102,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4790,13 +4915,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "CP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 368,
-      "publisher_verified_inventory_count": 368,
+      "candidate_count": 378,
+      "publisher_verified_inventory_count": 378,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5024,13 +5158,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "PRResearch",
+          "candidate_count": 13,
+          "publisher_verified_inventory_count": 13,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 481,
-      "publisher_verified_inventory_count": 481,
+      "candidate_count": 490,
+      "publisher_verified_inventory_count": 490,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5256,6 +5399,15 @@
           "journal": "PRE",
           "candidate_count": 15,
           "publisher_verified_inventory_count": 15,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "PRE",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5492,13 +5644,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 79,
-      "publisher_verified_inventory_count": 79,
+      "candidate_count": 80,
+      "publisher_verified_inventory_count": 80,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5681,36 +5842,44 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-27",
+          "window_end": "2026-10-28",
+          "journal": "NP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 6097,
+  "candidate_count": 6208,
   "screening_counts": {
-    "excluded": 5834,
-    "core": 236,
+    "excluded": 5941,
+    "core": 240,
     "transferable_application": 27,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 263
+    "included": 267
   },
-  "published_count": 221,
+  "published_count": 225,
   "accepted_count": 42,
   "latest_update": {
-    "run": "reports/runs/2026-10-26-to-27-01",
-    "reviewed_at": "2026-10-27T02:24:36.257119+00:00",
-    "newly_included_count": 3,
+    "run": "reports/runs/2026-10-27-to-28-02",
+    "reviewed_at": "2026-10-28T02:09:46.426678+00:00",
+    "newly_included_count": 4,
     "newly_included_dois": [
-      "10.1073/pnas.2321155123",
-      "10.1103/5lnm-slgg",
-      "10.1103/ydgr-vs2w"
+      "10.1073/pnas.2607559123",
+      "10.1073/pnas.2610672123",
+      "10.1103/4tf9-n1zn",
+      "10.1103/y1tc-4ms4"
     ],
-    "accepted_to_published_count": 4,
+    "accepted_to_published_count": 2,
     "accepted_to_published_dois": [
-      "10.1103/3cct-tlk7",
-      "10.1103/g875-ldn5",
-      "10.1103/hs2n-6rsn",
-      "10.1103/m3bb-1nhk"
+      "10.1103/nlkq-191r",
+      "10.1103/w3lf-h7nt"
     ]
   },
   "candidate_inventory_complete": false,
@@ -5721,6 +5890,481 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/y1tc-4ms4",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/y1tc-4ms4",
+      "title": "Granger causality detection with Kolmogorov-Arnold networks",
+      "authors": [
+        "Hongyu Lin",
+        "Mohan Ren",
+        "Paolo Barucca",
+        "Tomaso Aste"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5d5425be80c64c246e2bf9b6a85ba86274e74ad44c0ee1f469b11e1fad7d0f5c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fy1tc-4ms4",
+      "author_retrieved_at": "2026-10-28T02:09:42.286618+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-27",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-27",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-10-27"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-27",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "3f85fde046ad8e7ab5dd3aedb430eeaf6f938442e08e33103f744da8d380887c",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "The abstract introduces a sparse inference framework and evaluates parent recovery on controlled systems and observational data; explicit methods and results establish original research.",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/y1tc-4ms4"
+        ]
+      },
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "GC-KAN sparsely infers predictive parents and lag responses from multivariate time series; Granger relations here are predictive, not intervention causal.",
+      "note_zh": "GC-KAN 从多变量时间序列稀疏推断预测父节点与滞后响应；这里的 Granger 关系是预测关系，不等同干预因果。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "dd7deffb0d79dc6c9e1f2ac76919d8e126758b12e2e713c1afa3d60a25558949",
+      "input_sha256": "04cce09de61d006dda4435b4f961826375a9fa7b4c426b1828337c334b9c9398",
+      "material_sha256": "3f85fde046ad8e7ab5dd3aedb430eeaf6f938442e08e33103f744da8d380887c",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3f85fde046ad8e7ab5dd3aedb430eeaf6f938442e08e33103f744da8d380887c",
+      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+      "featured": null,
+      "evidence": [
+        "GC-KAN infers sparse predictive parents and nonlinear lag-specific responses from multivariate time series."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fy1tc-4ms4",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/y1tc-4ms4",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/w3lf-h7nt",
+      "url": "https://doi.org/10.1103/w3lf-h7nt",
+      "title": "Density-selected topological pathways in the melting of single-particle-thick stripes",
+      "authors": [
+        "José Rafael Bordin"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "fc5d8a9cccc9e6087bf2dd48e0c43c41457ced357cb9dba88f6a26e96eb7746c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fw3lf-h7nt",
+      "author_retrieved_at": "2026-10-28T02:09:46.174697+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-27",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-27",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-27"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-14",
+      "published_date": "2026-10-27",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "The abstract reports a molecular-dynamics study across seven isochores with graph observables and explicit connectivity results, supporting original research.",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Graph observables reveal density-selected transitions between finite clusters and spanning networks as single-particle-thick stripes melt.",
+      "note_zh": "条纹熔化中的细丝连接网络经历有限簇与贯通网络的密度选择，图观测量揭示连接重组。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "2161eb5d744d6a3c7da05bc97638a3bd15af78bf2336062d4b6d54a4e4c5a8e3",
+      "input_sha256": "3c2907706b27cc264333f6534d926ac36c8352416dd7502575ba3613d58a32fb",
+      "material_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
+      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+      "featured": null,
+      "evidence": [
+        "Density selects fragmented clusters or spanning fluid networks during stripe melting; graph observables separate their topologies."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fw3lf-h7nt",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-14",
+        "published_date": "2026-10-27",
+        "previous_run": "reports/runs/2026-10-14-to-15-01",
+        "source_run": "reports/runs/2026-10-27-to-28-02",
+        "audit_sha256": "7078722fae6be735b8a1eeba9ac574b54506a7d4bde13b1429a3a3499e3545d4",
+        "previous_assessment_sha256": "17fb3583538c3218bcfc79d83f5783a9c680cc97abe1e5a186ac34093c6f02c8",
+        "assessment_sha256": "2161eb5d744d6a3c7da05bc97638a3bd15af78bf2336062d4b6d54a4e4c5a8e3"
+      }
+    },
+    {
+      "doi": "10.1103/nlkq-191r",
+      "url": "https://doi.org/10.1103/nlkq-191r",
+      "title": "Expressivity of quantum graph neural networks with variable-dimension edge qudits",
+      "authors": [
+        "Piero Araujo R."
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "63d16f7f44b99e422d945003fd26c9ac1e7c0d1dbce7066095d20e36d0161c0e",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fnlkq-191r",
+      "author_retrieved_at": "2026-10-28T02:09:38.841687+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-27",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-27",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-27"
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-06",
+      "published_date": "2026-10-27",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "4f566e4d03a5f06e302ee1c1a86642e8087245ca8106e696816e078900550993",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "The matching abstract presents a new architecture, three formal properties and three validation experiments; no special non-research type is indicated.",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/nlkq-191r"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "An edge-qudit quantum graph architecture improves structural distinguishability via line-graph representations beyond node-based 1-WL limits.",
+      "note_zh": "边 qudit 量子图架构以线图表示提升图结构可区分性，并给出超越节点 1-WL 上限的表达能力条件。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "7f81fdae4e174b2391fb7e8bc6d4553ec089ecd52c4fa92dea1200d6e90fab6d",
+      "input_sha256": "22eaced6130974e35d30b8fc63258545b81dd67b96bca19c0abff7bcb4fbaa43",
+      "material_sha256": "4f566e4d03a5f06e302ee1c1a86642e8087245ca8106e696816e078900550993",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "4f566e4d03a5f06e302ee1c1a86642e8087245ca8106e696816e078900550993",
+      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+      "featured": null,
+      "evidence": [
+        "Edge-qudit quantum architectures distinguish graph structures beyond node-based 1-WL limits, with formal universality and dimension criteria."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fnlkq-191r",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/nlkq-191r",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-06",
+        "published_date": "2026-10-27",
+        "previous_run": "reports/runs/2026-10-06-to-07-01",
+        "source_run": "reports/runs/2026-10-27-to-28-02",
+        "audit_sha256": "7078722fae6be735b8a1eeba9ac574b54506a7d4bde13b1429a3a3499e3545d4",
+        "previous_assessment_sha256": "2c6aff6cbd6bf0f5f68be2044e4c08a765876fd04eb0b723bedcf5db95c3c47f",
+        "assessment_sha256": "7f81fdae4e174b2391fb7e8bc6d4553ec089ecd52c4fa92dea1200d6e90fab6d"
+      }
+    },
+    {
+      "doi": "10.1103/4tf9-n1zn",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/4tf9-n1zn",
+      "title": "Boltzmann-like occupation of nonequilibrium steady states on dense disordered networks",
+      "authors": [
+        "Jacob Calvert"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5c0fb8f4f5c1b57c1dc75ddeb2fa49fd34a3f48f202f6b8264bf174af05856b6",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F4tf9-n1zn",
+      "author_retrieved_at": "2026-10-28T02:09:37.209085+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-27",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-27",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-10-27"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-27",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "e2c7345a9d7e8a32582399217ad4d0f26baa6b959bfd27c8f8e52253c7501b9b",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "The matching official abstract states new proofs for network steady-state occupations and asymptotic low-rattling behavior; no special-type evidence conflicts with original research.",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/4tf9-n1zn"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Dense disordered networks show Boltzmann-like occupations in nonequilibrium steady states, linking slow escape and steady-state probability.",
+      "note_zh": "稠密无序网络上的非平衡稳态占据呈现 Boltzmann-like 分布，低 rattling 渐近规律连接状态逃逸与稳态概率。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "6870b73d936d44d05154143be5be6860c990d27d307b120f4018cec678ba90ee",
+      "input_sha256": "669f83eea0e23eaa414a184429f956fbee605fc5b3db89877e97c7ef087582aa",
+      "material_sha256": "e2c7345a9d7e8a32582399217ad4d0f26baa6b959bfd27c8f8e52253c7501b9b",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e2c7345a9d7e8a32582399217ad4d0f26baa6b959bfd27c8f8e52253c7501b9b",
+      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+      "featured": null,
+      "evidence": [
+        "Dense disordered networks support nonequilibrium steady states with Boltzmann-like occupations and asymptotically exact low-rattling behavior."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F4tf9-n1zn",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/4tf9-n1zn",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2610672123",
+      "url": "https://doi.org/10.1073/pnas.2610672123",
+      "title": "Viral metagenomics reveals heterogeneity in mammalian virus hosting, sharing, and spillover",
+      "authors": [
+        "Yuhao Wang",
+        "Guanyu Qu",
+        "Zheng Y. X. Huang",
+        "Xinyu Zhang",
+        "Hongfeng Li",
+        "Xuemin Wei",
+        "Li Hu",
+        "Shixia Xu",
+        "Daniel J. Becker",
+        "Fuwen Wei",
+        "Yifei Xu"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "855802e0585ce493167201cd1ba0ddf625f3776f83f2f037ac90ce30cd077089",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2610672123",
+      "author_retrieved_at": "2026-10-28T02:09:44.089955+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-27",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-27",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-27"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-27",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "60b1e95500a83844877b0a6e82daaa12d4f278a8f0edc7a0a0dded147b2428ce",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "The matching abstract reports a defined metagenomic dataset, viral-sharing network analysis and phylogenetic comparative results; it is explicit original research without a non-target-type indication.",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2610672123"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "A viral-sharing network reveals heterogeneous cross-order host structure and links ecological factors to transmission centrality.",
+      "note_zh": "病毒共享网络显示哺乳动物宿主跨目的异质组织，并联系生态因素与传播中心性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b63dfdc4732333f935618e2869ba0648f012c816f955143800a44f867dd7185b",
+      "input_sha256": "db5a00bcca6796e0a05a4f1a11c01d592cdcfc081e40c6f8274fabb4546335f9",
+      "material_sha256": "60b1e95500a83844877b0a6e82daaa12d4f278a8f0edc7a0a0dded147b2428ce",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "60b1e95500a83844877b0a6e82daaa12d4f278a8f0edc7a0a0dded147b2428ce",
+      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+      "featured": "PNAS",
+      "evidence": [
+        "Metagenomics reveals heterogeneous cross-order viral-sharing structure and ecological correlates of transmission centrality."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2610672123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2610672123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2607559123",
+      "url": "https://doi.org/10.1073/pnas.2607559123",
+      "title": "Neuromodulation-inspired gated associative memory networks: Extended memory retrieval and emergent multistability",
+      "authors": [
+        "Daiki Goto",
+        "Hector Manuel Lopez Rios",
+        "Monika Scholz",
+        "Suriyanarayanan Vaikuntanathan"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "a8d323c6952223b5e9caa3958fa856632d3fd3de4befe71b68d60c0a4c63ef3a",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2607559123",
+      "author_retrieved_at": "2026-10-28T02:09:40.668055+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-27",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-27",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-27"
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-27",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "f71c500d40174f84a52156ef216da8a2abd64ce740534edaf3495b8d66dcfd54",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "basis": "The explicit abstract introduces a minimal recurrent-memory model and reports simulation and dynamical mean-field results, establishing original research without a special-type conflict.",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2607559123"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "Activity-dependent multiplicative gating reorganizes associative-memory attractors, extending retrieval beyond the classical capacity transition and creating continuous multistability.",
+      "note_zh": "活动依赖的乘性门控重组联想记忆网络的吸引子，使过载区仍可保持检索并产生连续多稳态。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "6a9149bfb19a1736869331143f956201129ec33d4167ce1ee046f9d2ee821296",
+      "input_sha256": "99af5c7b836090ba3f9a2e661e451a689eb575ff74b9ce551a1a241d7e2d3ae6",
+      "material_sha256": "f71c500d40174f84a52156ef216da8a2abd64ce740534edaf3495b8d66dcfd54",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "f71c500d40174f84a52156ef216da8a2abd64ce740534edaf3495b8d66dcfd54",
+      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
+      "featured": "PNAS",
+      "evidence": [
+        "Adaptive gating reorganizes associative-memory attractors and extends retrieval beyond the classical capacity transition."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2607559123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2607559123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/ydgr-vs2w",
       "url": "https://journals.aps.org/prx/accepted/10.1103/ydgr-vs2w",
@@ -11829,78 +12473,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/w3lf-h7nt",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt",
-      "title": "Density-selected topological pathways in the melting of single-particle-thick stripes",
-      "authors": [
-        "José Rafael Bordin"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "93f340f0111a5b0f1fc9eb6955fd84ba0d713b66b16499426ec029d3d164b701",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fw3lf-h7nt",
-      "author_retrieved_at": "2026-10-15T00:49:52.283233+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-14",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-14",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-14",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt"
-        ],
-        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_structure",
-        "network_spreading"
-      ],
-      "scope_class": "core",
-      "note_en": "Graph observables reveal connectivity reorganization during stripe melting, distinguishing finite filament clusters from spanning fluid networks.",
-      "note_zh": "以图观测量揭示条纹熔化的连接重组，区分有限丝状团簇与贯通流体网络。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "17fb3583538c3218bcfc79d83f5783a9c680cc97abe1e5a186ac34093c6f02c8",
-      "input_sha256": "c903e7fdeaf108ffe0aee1a340aff87c7995f2f7715630654d5102a726a6efd3",
-      "material_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "60b23bfaab829fc8769ca190ef8a3545b479304d4c0c9a3bd78b60276112c325",
-      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
-      "featured": null,
-      "evidence": [
-        "Graph observables distinguish fragmented filament clusters from system-spanning fluid networks during density-dependent stripe melting."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fw3lf-h7nt",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/w3lf-h7nt",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/tr4w-yrs1",
       "url": "https://journals.aps.org/pre/accepted/10.1103/tr4w-yrs1",
       "title": "Noise color shapes power grid stochastic responses",
@@ -15304,79 +15876,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fycf8-4sz5",
       "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/ycf8-4sz5",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/nlkq-191r",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/nlkq-191r",
-      "title": "Expressivity of quantum graph neural networks with variable-dimension edge qudits",
-      "authors": [
-        "J. P. Araujo Rodríguez"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "64644248dacb2405be03246e40217d5b972be25c720d79031c3dad64427e6673",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/nlkq-191r",
-      "author_retrieved_at": "2026-10-07T02:58:32.639Z",
-      "author_basis": "publisher visible complete byline; official title, DOI and Physical Review E identity matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-06",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-06",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "issues_retained": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-06",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "4f566e4d03a5f06e302ee1c1a86642e8087245ca8106e696816e078900550993",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "摘要明确提出架构、三项形式证明及图对区分实验；未见特殊类型冲突。",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/nlkq-191r"
-        ]
-      },
-      "categories": [
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Edge qudits on line graphs improve structural distinguishability in quantum graph models beyond the node-based expressivity limit.",
-      "note_zh": "边 qudit 与线图构造提升量子图模型的结构可区分性，突破节点模型的表达限制。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "2c6aff6cbd6bf0f5f68be2044e4c08a765876fd04eb0b723bedcf5db95c3c47f",
-      "input_sha256": "c4e44486a33943fd40efb280780aa26fe4aa358f51386e3b5a463408471e5241",
-      "material_sha256": "4f566e4d03a5f06e302ee1c1a86642e8087245ca8106e696816e078900550993",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "4f566e4d03a5f06e302ee1c1a86642e8087245ca8106e696816e078900550993",
-      "rule_sha256": "840a89fde5dd207ea7bac2c0803b908c6ad191699d6b6385adb4ec32b451a47f",
-      "featured": null,
-      "evidence": [
-        "Edge qudits on line graphs distinguish strongly regular graph pairs beyond a node model limit."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fnlkq-191r",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/nlkq-191r",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -27099,9 +27598,134 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "c82cd32fa7e78835d837846d74ad68d7ee1b644cc4c80a027c84138dde9b7afe"
+    },
+    {
+      "current_run": "reports/runs/2026-10-27-to-28-02",
+      "candidate_sha256": "b2306d4788d1d9e8c8219dddf3e547cafde5da453536cd03e52336a6ca35c50b",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057"
+      },
+      "counts": {
+        "in_window": 131,
+        "newly_reviewed": 111,
+        "historically_reviewed": 123,
+        "state_updates": 19,
+        "categories": {
+          "excluded": 125,
+          "core": 6
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "7078722fae6be735b8a1eeba9ac574b54506a7d4bde13b1429a3a3499e3545d4"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1073/pnas.2607559123",
+      "recommended_on": "2026-10-28",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-27-to-28-02",
+      "publication_sha256": "31b2b536f9547e56fbc035f5af197e608454749cea8bc8a6fe0c20e55d59e4c7",
+      "assessment_sha256": "6a9149bfb19a1736869331143f956201129ec33d4167ce1ee046f9d2ee821296",
+      "input_sha256": "99af5c7b836090ba3f9a2e661e451a689eb575ff74b9ce551a1a241d7e2d3ae6",
+      "evidence_sha256": "f71c500d40174f84a52156ef216da8a2abd64ce740534edaf3495b8d66dcfd54",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-28T02:19:15.911574+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2607559123",
+        "title": "Neuromodulation-inspired gated associative memory networks: Extended memory retrieval and emergent multistability",
+        "sha256": "f0aaffd4b813340c014c218a8616a34c094b31f560aba8302e1b8e9763158d35",
+        "version": "PNAS 123 (44) e2607559123, publisher Version of Record; published 2026-10-27",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2607559123",
+        "source_kind": "publisher_fulltext",
+        "pages": 10,
+        "reviewed_at": "2026-10-28T02:19:15.911574+00:00",
+        "read_scope": "Read all 10 pages: Model and Background, Main Results, thermodynamic-limit DMFT, emergent continuous multistable attractors, Conclusion and Outlook, Materials and Methods, Data availability, Figures 1-4, tables and references. Rendered visual checks of pages 7-8 (Figs. 3-4) and inspected figure captions. Supporting information was not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "活动依赖门控如何改变联想记忆网络的容量、稳定性与吸引子几何？",
+        "en": "How does activity-dependent gating change capacity, stability and attractor geometry in associative-memory networks?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇文章把神经调制抽象为乘性门控，展示门控如何把过载网络中的短暂高重叠状态稳定下来，并让最终检索状态连续依赖初始线索。",
+          "可复用的方法是将多体模拟与动力学平均场理论相互校验，再用固定随机实现、只改变初始状态的二维流图检查多稳态；但有限斜率门控主要是长寿命状态，二值极限才是永久稳定。"
+        ],
+        "en": [
+          "The paper models neuromodulation as multiplicative gating and shows how it stabilizes high-overlap transients in overloaded networks, with final retrieval varying continuously with the initial cue.",
+          "A useful workflow is to cross-check many-body simulations with dynamical mean-field theory, then hold disorder fixed while varying only the initial state to test multistability. At finite gate slope the states are long-lived; permanence is an idealized binary-limit result."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "门控改变网络相变",
+            "en": "Gating changes the transition"
+          },
+          "text": {
+            "zh": "门控在超过经典容量的区域保持量级为一的检索重叠，绕开无门控网络的灾难性失忆。",
+            "en": "Gating preserves order-one retrieval beyond the classical capacity where the ungated network loses memory."
+          }
+        },
+        {
+          "heading": {
+            "zh": "机制可追踪",
+            "en": "The mechanism is traceable"
+          },
+          "text": {
+            "zh": "关闭子群冻结并稳定活跃神经元，解释了短暂吸引子为何可被保留。",
+            "en": "A dynamically selected closed subpopulation stabilizes active neurons and preserves otherwise transient attractor structure."
+          }
+        },
+        {
+          "heading": {
+            "zh": "多稳态具有连续性",
+            "en": "Multistability is continuous"
+          },
+          "text": {
+            "zh": "固定网络实现并只改变初始状态的流图显示，门控网络可形成连续的稳定固定点云。",
+            "en": "Flow diagrams with fixed disorder and varied initial states show a continuous cloud of stable fixed points."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究联想记忆、递归网络、网络动力学和神经形态计算的读者。",
+        "en": "Readers studying associative memory, recurrent networks, network dynamics and neuromorphic computing."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社正式版 10 页正文、图 1–4、方法、数据声明与参考文献，并检查图 3–4 页面；未读补充信息，未运行代码或独立复现。有限门控斜率下稳定性是长寿命而非永久；模型采用全连接 Hebbian 耦合和随机门控耦合，生物适用性仍需结构化连接数据检验。",
+        "en": "Read the 10-page publisher Version of Record, Figs. 1-4, methods, data statement and references, with visual checks of the pages containing Figs. 3-4. Supplementary information was not read and code was not run or independently reproduced. Finite gate slopes yield long-lived rather than permanent states; the model uses fully connected Hebbian couplings and random gate couplings, so biological applicability still needs structured connectivity data."
+      }
+    },
     {
       "doi": "10.1073/pnas.2321155123",
       "recommended_on": "2026-10-27",
@@ -30516,6 +31140,84 @@
       }
     },
     {
+      "doi": "10.1073/pnas.2607559123",
+      "recommended_on": "2026-10-28",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-27-to-28-02",
+      "publication_sha256": "31b2b536f9547e56fbc035f5af197e608454749cea8bc8a6fe0c20e55d59e4c7",
+      "assessment_sha256": "6a9149bfb19a1736869331143f956201129ec33d4167ce1ee046f9d2ee821296",
+      "input_sha256": "99af5c7b836090ba3f9a2e661e451a689eb575ff74b9ce551a1a241d7e2d3ae6",
+      "evidence_sha256": "f71c500d40174f84a52156ef216da8a2abd64ce740534edaf3495b8d66dcfd54",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-28T02:19:15.911574+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2607559123",
+        "title": "Neuromodulation-inspired gated associative memory networks: Extended memory retrieval and emergent multistability",
+        "sha256": "f0aaffd4b813340c014c218a8616a34c094b31f560aba8302e1b8e9763158d35",
+        "version": "PNAS 123 (44) e2607559123, publisher Version of Record; published 2026-10-27",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2607559123",
+        "source_kind": "publisher_fulltext",
+        "pages": 10,
+        "reviewed_at": "2026-10-28T02:19:15.911574+00:00",
+        "read_scope": "Read all 10 pages: Model and Background, Main Results, thermodynamic-limit DMFT, emergent continuous multistable attractors, Conclusion and Outlook, Materials and Methods, Data availability, Figures 1-4, tables and references. Rendered visual checks of pages 7-8 (Figs. 3-4) and inspected figure captions. Supporting information was not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "活动依赖门控如何改变联想记忆网络的容量、稳定性与吸引子几何？",
+        "en": "How does activity-dependent gating change capacity, stability and attractor geometry in associative-memory networks?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇文章把神经调制抽象为乘性门控，展示门控如何把过载网络中的短暂高重叠状态稳定下来，并让最终检索状态连续依赖初始线索。",
+          "可复用的方法是将多体模拟与动力学平均场理论相互校验，再用固定随机实现、只改变初始状态的二维流图检查多稳态；但有限斜率门控主要是长寿命状态，二值极限才是永久稳定。"
+        ],
+        "en": [
+          "The paper models neuromodulation as multiplicative gating and shows how it stabilizes high-overlap transients in overloaded networks, with final retrieval varying continuously with the initial cue.",
+          "A useful workflow is to cross-check many-body simulations with dynamical mean-field theory, then hold disorder fixed while varying only the initial state to test multistability. At finite gate slope the states are long-lived; permanence is an idealized binary-limit result."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "门控改变网络相变",
+            "en": "Gating changes the transition"
+          },
+          "text": {
+            "zh": "门控在超过经典容量的区域保持量级为一的检索重叠，绕开无门控网络的灾难性失忆。",
+            "en": "Gating preserves order-one retrieval beyond the classical capacity where the ungated network loses memory."
+          }
+        },
+        {
+          "heading": {
+            "zh": "机制可追踪",
+            "en": "The mechanism is traceable"
+          },
+          "text": {
+            "zh": "关闭子群冻结并稳定活跃神经元，解释了短暂吸引子为何可被保留。",
+            "en": "A dynamically selected closed subpopulation stabilizes active neurons and preserves otherwise transient attractor structure."
+          }
+        },
+        {
+          "heading": {
+            "zh": "多稳态具有连续性",
+            "en": "Multistability is continuous"
+          },
+          "text": {
+            "zh": "固定网络实现并只改变初始状态的流图显示，门控网络可形成连续的稳定固定点云。",
+            "en": "Flow diagrams with fixed disorder and varied initial states show a continuous cloud of stable fixed points."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究联想记忆、递归网络、网络动力学和神经形态计算的读者。",
+        "en": "Readers studying associative memory, recurrent networks, network dynamics and neuromorphic computing."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社正式版 10 页正文、图 1–4、方法、数据声明与参考文献，并检查图 3–4 页面；未读补充信息，未运行代码或独立复现。有限门控斜率下稳定性是长寿命而非永久；模型采用全连接 Hebbian 耦合和随机门控耦合，生物适用性仍需结构化连接数据检验。",
+        "en": "Read the 10-page publisher Version of Record, Figs. 1-4, methods, data statement and references, with visual checks of the pages containing Figs. 3-4. Supplementary information was not read and code was not run or independently reproduced. Finite gate slopes yield long-lived rather than permanent states; the model uses fully connected Hebbian couplings and random gate couplings, so biological applicability still needs structured connectivity data."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -30595,5 +31297,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "7a8e6bb82d70c29e040d4366523cee01dfd3059ae8b773afb9093210209c1ae0"
+  "daily_suggestions_sha256": "767e06268e167762a748f26542b647eaf38f20b6f7b88d0d1b5deabe8d25217a"
 }

@@ -1694,6 +1694,84 @@
         "zh": "已读出版社正式版 10 页正文、表 1、图 1–4、讨论与参考文献；未读补充方程，未运行模型或独立复现。本文为 Perspective，综合既有案例；DECO 依赖区域数据、需求弹性和行为假设，结果用于反事实情景比较，不是精确政策预测。AI 编辑荐读。",
         "en": "Read the 10-page publisher Version of Record, including Table 1, Figs. 1–4, discussion and references. Supplementary equations were not read and the model was not run or independently reproduced. This Perspective synthesizes earlier cases; DECO depends on local data, demand elasticities and behavioral assumptions and supports counterfactual scenario comparison rather than precise policy prediction. AI editorial guidance."
       }
+    },
+    {
+      "doi": "10.1073/pnas.2607559123",
+      "recommended_on": "2026-10-28",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-27-to-28-02",
+      "publication_sha256": "31b2b536f9547e56fbc035f5af197e608454749cea8bc8a6fe0c20e55d59e4c7",
+      "assessment_sha256": "6a9149bfb19a1736869331143f956201129ec33d4167ce1ee046f9d2ee821296",
+      "input_sha256": "99af5c7b836090ba3f9a2e661e451a689eb575ff74b9ce551a1a241d7e2d3ae6",
+      "evidence_sha256": "f71c500d40174f84a52156ef216da8a2abd64ce740534edaf3495b8d66dcfd54",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-28T02:19:15.911574+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2607559123",
+        "title": "Neuromodulation-inspired gated associative memory networks: Extended memory retrieval and emergent multistability",
+        "sha256": "f0aaffd4b813340c014c218a8616a34c094b31f560aba8302e1b8e9763158d35",
+        "version": "PNAS 123 (44) e2607559123, publisher Version of Record; published 2026-10-27",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2607559123",
+        "source_kind": "publisher_fulltext",
+        "pages": 10,
+        "reviewed_at": "2026-10-28T02:19:15.911574+00:00",
+        "read_scope": "Read all 10 pages: Model and Background, Main Results, thermodynamic-limit DMFT, emergent continuous multistable attractors, Conclusion and Outlook, Materials and Methods, Data availability, Figures 1-4, tables and references. Rendered visual checks of pages 7-8 (Figs. 3-4) and inspected figure captions. Supporting information was not read or executed; no independent reproduction."
+      },
+      "question": {
+        "zh": "活动依赖门控如何改变联想记忆网络的容量、稳定性与吸引子几何？",
+        "en": "How does activity-dependent gating change capacity, stability and attractor geometry in associative-memory networks?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇文章把神经调制抽象为乘性门控，展示门控如何把过载网络中的短暂高重叠状态稳定下来，并让最终检索状态连续依赖初始线索。",
+          "可复用的方法是将多体模拟与动力学平均场理论相互校验，再用固定随机实现、只改变初始状态的二维流图检查多稳态；但有限斜率门控主要是长寿命状态，二值极限才是永久稳定。"
+        ],
+        "en": [
+          "The paper models neuromodulation as multiplicative gating and shows how it stabilizes high-overlap transients in overloaded networks, with final retrieval varying continuously with the initial cue.",
+          "A useful workflow is to cross-check many-body simulations with dynamical mean-field theory, then hold disorder fixed while varying only the initial state to test multistability. At finite gate slope the states are long-lived; permanence is an idealized binary-limit result."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "门控改变网络相变",
+            "en": "Gating changes the transition"
+          },
+          "text": {
+            "zh": "门控在超过经典容量的区域保持量级为一的检索重叠，绕开无门控网络的灾难性失忆。",
+            "en": "Gating preserves order-one retrieval beyond the classical capacity where the ungated network loses memory."
+          }
+        },
+        {
+          "heading": {
+            "zh": "机制可追踪",
+            "en": "The mechanism is traceable"
+          },
+          "text": {
+            "zh": "关闭子群冻结并稳定活跃神经元，解释了短暂吸引子为何可被保留。",
+            "en": "A dynamically selected closed subpopulation stabilizes active neurons and preserves otherwise transient attractor structure."
+          }
+        },
+        {
+          "heading": {
+            "zh": "多稳态具有连续性",
+            "en": "Multistability is continuous"
+          },
+          "text": {
+            "zh": "固定网络实现并只改变初始状态的流图显示，门控网络可形成连续的稳定固定点云。",
+            "en": "Flow diagrams with fixed disorder and varied initial states show a continuous cloud of stable fixed points."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究联想记忆、递归网络、网络动力学和神经形态计算的读者。",
+        "en": "Readers studying associative memory, recurrent networks, network dynamics and neuromorphic computing."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社正式版 10 页正文、图 1–4、方法、数据声明与参考文献，并检查图 3–4 页面；未读补充信息，未运行代码或独立复现。有限门控斜率下稳定性是长寿命而非永久；模型采用全连接 Hebbian 耦合和随机门控耦合，生物适用性仍需结构化连接数据检验。",
+        "en": "Read the 10-page publisher Version of Record, Figs. 1-4, methods, data statement and references, with visual checks of the pages containing Figs. 3-4. Supplementary information was not read and code was not run or independently reproduced. Finite gate slopes yield long-lived rather than permanent states; the model uses fully connected Hebbian couplings and random gate couplings, so biological applicability still needs structured connectivity data."
+      }
     }
   ],
   "revisions": [
