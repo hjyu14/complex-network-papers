@@ -396,9 +396,9 @@ def build_release(runs):
         own = {doi for doi, d in latest.items() if d['category'] in {'core', 'transferable_application'}}
         newly_included = own - previously_included
         previously_included.update(own)
-        if not own <= set(notes['papers']):
-            raise ValueError('Missing reading note for selected inclusion')
         hidden = superseded.get(relative,set())
+        if not own-hidden <= set(notes['papers']):
+            raise ValueError('Missing reading note for selected inclusion')
         scoped = {**notes, 'papers': {doi: notes['papers'][doi] for doi in sorted(own-hidden)}}
         part = build_snapshot(run, scoped, _superseded_dois=hidden)['papers.json']
         for doi, record in w.records.items():

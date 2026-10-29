@@ -126,6 +126,62 @@ class CarryoverTests(unittest.TestCase):
         result=audit.build_audit(screen.Workflow(new),[old])
         self.assertTrue(any('category change' in b['reason'] for b in result['blockers']))
 
+    def explicit_exclusion(self, old, new):
+        previous,w=screen.Workflow(old),screen.Workflow(new)
+        d={**w.assessments()[0],'category':'excluded'}
+        w.log.add('assessment_corrected',d)
+        prior=previous.assessments()[0];doi=d['doi']
+        verdict={'doi':doi,'title':w.records[doi]['title'],
+                 'record_sha256':screen.digest(w.records[doi]),'candidate_sha256':w.input_sha,
+                 'previous_run':old.relative_to(self.f.root).as_posix(),
+                 'previous_assessment_sha256':screen.digest(prior),'previous_input_sha256':prior['input_sha256'],
+                 'verdict':'exclude','authority':'human user in current conversation',
+                 'statement_kind':'explicit_individual_verdict','user_statement':'Exclude this paper'}
+        w.log.add('user_editorial_verdict',verdict)
+        revision={**{k:verdict[k] for k in ['doi','record_sha256','candidate_sha256','previous_run',
+                    'previous_assessment_sha256','previous_input_sha256']},
+                  'version':'cross-run-editorial-revision-1',
+                  'previous_record_sha256':screen.digest(previous.records[doi]),
+                  'current_run':new.relative_to(self.f.root).as_posix(),
+                  'assessment_sha256':screen.digest(d),'input_sha256':d['input_sha256'],
+                  'verdict_sha256':screen.digest(verdict),'user_verdict':verdict}
+        relative='reports/reviews/exclusion/evidence/revision.json'
+        (self.f.root/relative).parent.mkdir(parents=True)
+        self.f.write(relative,revision)
+        w.log.add('carryover_editorial_revision_selected',{'path':relative,'sha256':file_sha(self.f.root/relative)})
+        # Author metadata belongs to the current inclusion set, now empty.
+        metadata=json.loads((new/'author-metadata.json').read_text())
+        metadata['records']={}
+        self.f.write('reports/current/author-metadata.json',metadata)
+        w.log.add('author_metadata_completed',{'metadata_sha256':screen.digest(metadata)})
+        return self.f.root/relative
+
+    def test_explicit_cross_run_exclusion_preserves_sealed_history(self):
+        old,new=self.pair(True)
+        before={p:p.read_bytes() for p in old.rglob('*') if p.is_file()}
+        self.explicit_exclusion(old,new)
+        self.bind_audit(old,new)
+        self.f.write('config/publication-notes.json',{'categories':[], 'papers':{}})
+        data=publish.build_release([old,new])['papers.json']
+        self.assertEqual(data['papers'],[])
+        self.assertEqual(data['screening_counts']['excluded'],1)
+        self.assertEqual(before,{p:p.read_bytes() for p in before})
+        saved=json.loads((new/'evidence/cross-run-audit.json').read_text())
+        self.assertIn('editorial_revision',saved['records'][0])
+
+    def test_cross_run_revision_rejects_changed_file_and_wrong_verdict_identity(self):
+        old,new=self.pair(True)
+        path=self.explicit_exclusion(old,new)
+        value=json.loads(path.read_text());value['user_verdict']['title']='Wrong title'
+        self.f.write(path.relative_to(self.f.root).as_posix(),value)
+        with self.assertRaisesRegex(ValueError,'file binding mismatch'):
+            audit.build_audit(screen.Workflow(new),[old])
+        # Even repinning altered bytes cannot manufacture a matching human event.
+        w=screen.Workflow(new)
+        w.log.events[-2]['data']['sha256']=file_sha(path)
+        with self.assertRaisesRegex(ValueError,'explicit bound user verdict'):
+            audit.build_audit(w,[old])
+
     def test_accepted_transition_is_traced_without_reclassifying(self):
         record={'doi':'10.1/a','title':'Synthetic','journal':'J','issns':['0000-0001'],
                 'date':'2026-09-30','window_membership':'in_window'}

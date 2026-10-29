@@ -30,7 +30,8 @@ NON_TARGET_TYPES = {'News', 'Career Column', 'Career Feature', 'News & Views',
                     'News Q&A', 'Nature Podcast', 'Book Review', 'Obituary',
                     'Career Q&A', 'Career News', 'Retraction', 'News Explainer',
                     'Reply', 'Correction', 'Erratum', 'Muse',
-                    'Technology Feature', 'This Week In Pnas'}
+                    'Technology Feature', 'This Week In Pnas', 'Futures',
+                    'Expression of Concern'}
 
 
 class BufferedLog:

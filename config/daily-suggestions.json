@@ -1772,6 +1772,84 @@
         "zh": "已读出版社正式版 10 页正文、图 1–4、方法、数据声明与参考文献，并检查图 3–4 页面；未读补充信息，未运行代码或独立复现。有限门控斜率下稳定性是长寿命而非永久；模型采用全连接 Hebbian 耦合和随机门控耦合，生物适用性仍需结构化连接数据检验。",
         "en": "Read the 10-page publisher Version of Record, Figs. 1-4, methods, data statement and references, with visual checks of the pages containing Figs. 3-4. Supplementary information was not read and code was not run or independently reproduced. Finite gate slopes yield long-lived rather than permanent states; the model uses fully connected Hebbian couplings and random gate couplings, so biological applicability still needs structured connectivity data."
       }
+    },
+    {
+      "doi": "10.1073/pnas.2610932123",
+      "recommended_on": "2026-10-29",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-28-to-29-01",
+      "publication_sha256": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+      "assessment_sha256": "79620528b681c1db254b908c304f001dca122ee0918b1928733b6f6aea9b611f",
+      "input_sha256": "f43dcc29ce106d06dcc9809bc7d774e1a5d2b1f45471957d633d26d631afdd3e",
+      "evidence_sha256": "8ce57028fa0dd946bed7df6c37daa8aa841d1baefe4b844d91181c251f2cd496",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-29T14:21:00+08:00",
+      "question": {
+        "zh": "如何在控制活跃度与层密度后，区分多层社会网络中的主动联系分配与他人依赖？",
+        "en": "How can we distinguish outgoing social effort from incoming reliance across relationship layers while accounting for activity and layer density?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把“联系有多少”和“联系分配到哪一层”分开，让多层社会角色的估计对象更明确。",
+          "值得借鉴的是同一数据下比较出向与入向角色，再用组成坐标、人口属性和地理关联检验差异。横截面年龄组差异不能直接解释为个体生命周期变化。"
+        ],
+        "en": [
+          "This paper separates how much people interact from how they distribute interactions across layers, making the role estimand explicit.",
+          "A useful workflow compares outgoing and incoming roles on the same data, then checks compositional coordinates, demographic associations and geography. Cross-sectional age-group differences do not establish individual life-course trajectories."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先明确估计对象",
+            "en": "Make the estimand explicit"
+          },
+          "text": {
+            "zh": "发送者、接收者与层密度效应吸收联系量差异；单纯形因子刻画相对层分配，避免把活跃度当作角色。",
+            "en": "Sender, receiver and layer effects account for activity and density; simplex factors describe relative layer allocation, avoiding an activity-based interpretation of roles."
+          }
+        },
+        {
+          "heading": {
+            "zh": "对照出向与入向角色",
+            "en": "Compare outgoing and incoming roles"
+          },
+          "text": {
+            "zh": "在同一套有向多层数据中比较两种角色，并用组成坐标分析社会属性与空间组织，适合借鉴为角色分析流程。",
+            "en": "Compare both role directions on the same directed multiplex data, then use compositional coordinates to examine demographic and spatial organization."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让解释匹配采样设计",
+            "en": "Match interpretation to sampling"
+          },
+          "text": {
+            "zh": "村庄横截面样本揭示关联及方向不对称，但不能据此推断因果、个体随年龄的变化或城市网络中的普遍规律。",
+            "en": "The village cross-section reveals associations and directional asymmetries; it does not establish causality, within-person aging trajectories or generality to urban networks."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究多层网络、社会角色、网络推断与组成数据分析的读者。",
+        "en": "Readers studying multiplex networks, social roles, network inference and compositional data analysis."
+      },
+      "reading_caveat": {
+        "zh": "已读正式出版版 11 页正文、方法、讨论与参考文献，核对图 1–5 及图注；未读独立补充信息，未独立复现。数据来自洪都拉斯村庄的非概率横截面样本，并限制于聚合强连通分量；外推到城市或其他关系层尚待验证。",
+        "en": "Read the 11-page publisher version, including main text, methods, discussion, references and Figures 1–5 with captions. Separate supporting information was not read and results were not independently reproduced. The nonprobability cross-section of Honduran villages is restricted to the aggregate strongly connected component; generality to urban settings or other relationship layers remains untested."
+      },
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2610932123",
+        "title": "Multiplex mapping of social roles in isolated Honduran village networks",
+        "sha256": "200acebcc5a8c37818b84c8ffafa75086a5af8a2ef16f826793599d4f347eb3a",
+        "version": "PNAS publisher Version of Record, first published 2026-10-28",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2610932123",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "read_scope": "Complete 11-page main article, methods, discussion and references; visual checks of Figures 1-5 and captions. Separate supporting information was not read; no independent reproduction.",
+        "reviewed_at": "2026-10-29T14:21:00+08:00"
+      }
     }
   ],
   "revisions": [

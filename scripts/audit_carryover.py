@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from collect_candidates import normalized_title
 from publication_view import publication_workflow, verify_assessments
-from report_io import file_sha, run_directory
+from report_io import file_sha, run_directory, checked_path
 from screen_candidates import Workflow, digest, ROOT
 
 
@@ -14,7 +14,7 @@ def publication_status(decision):
     return check.get('publication_status') or ('accepted' if check.get('basis','').startswith('publisher.accepted') else 'published')
 
 
-def compare_history(records, decisions, history, authorized_start, authorized_end, identity_notes=None):
+def compare_history(records, decisions, history, authorized_start, authorized_end, identity_notes=None, revisions=None):
     rows, blockers = [], []
     identity_notes = identity_notes or {}
     for doi, record in sorted(records.items()):
@@ -59,11 +59,61 @@ def compare_history(records, decisions, history, authorized_start, authorized_en
                 if previous:
                     row['publication_status_changed'] = row['publication_status'] != row['previous_publication_status']
                     if previous['decision']['category'] != current['category']:
-                        blockers.append({'doi':doi,'reason':'Scientific category change needs explicit revision'})
+                        revision = (revisions or {}).get(doi)
+                        if revision:
+                            row['editorial_revision'] = revision
+                        else:
+                            blockers.append({'doi':doi,'reason':'Scientific category change needs explicit revision'})
         elif not previous:
             blockers.append({'doi':doi,'reason':'Out-of-window candidate has no effective historical assessment'})
         rows.append(row)
     return rows, blockers
+
+
+def editorial_revisions(current, history):
+    """Validate explicit cross-run adjudications without changing sealed sources."""
+    result = {}
+    decisions = {d['doi']:d for d in current.assessments()}
+    for event in current.log.events:
+        if event['kind'] != 'carryover_editorial_revision_selected':
+            continue
+        ref = event['data']
+        path = checked_path(ROOT, ref['path'])
+        if (not path.is_relative_to((ROOT/'reports/reviews').resolve())
+                or path.name != 'revision.json' or path.parent.name != 'evidence'
+                or file_sha(path) != ref['sha256']):
+            raise ValueError('Cross-run revision file binding mismatch')
+        revision = json.loads(path.read_text(encoding='utf8'))
+        doi = revision['doi']
+        if doi in result or doi not in history or doi not in decisions:
+            raise ValueError('Cross-run revision target mismatch')
+        previous, decision, record = history[doi], decisions[doi], current.records[doi]
+        expected = {
+            'version':'cross-run-editorial-revision-1', 'doi':doi,
+            'previous_run':previous['run'],
+            'previous_record_sha256':digest(previous['record']),
+            'previous_assessment_sha256':digest(previous['decision']),
+            'previous_input_sha256':previous['decision']['input_sha256'],
+            'current_run':current.out.relative_to(ROOT).as_posix(),
+            'record_sha256':digest(record), 'candidate_sha256':current.input_sha,
+            'assessment_sha256':digest(decision), 'input_sha256':decision['input_sha256']}
+        verdict = revision.get('user_verdict', {})
+        bindings = {k:expected[k] for k in ['doi','previous_run','previous_assessment_sha256',
+                    'previous_input_sha256','record_sha256','candidate_sha256']}
+        bindings.update(title=record['title'], verdict='exclude' if decision['category']=='excluded' else 'include')
+        if (any(revision.get(k)!=v for k,v in expected.items())
+                or decision['category'] not in {'core','transferable_application','excluded'}
+                or previous['decision']['category']==decision['category']
+                or record['window_membership']!='in_window'
+                or any(verdict.get(k)!=v for k,v in bindings.items())
+                or verdict.get('authority')!='human user in current conversation'
+                or verdict.get('statement_kind') not in {'explicit_individual_verdict','explicit_group_verdict'}
+                or not verdict.get('user_statement')
+                or revision.get('verdict_sha256')!=digest(verdict)
+                or not any(e['kind']=='user_editorial_verdict' and e['data']==verdict for e in current.log.events)):
+            raise ValueError('Cross-run revision lacks an explicit bound user verdict')
+        result[doi] = ref
+    return result
 
 
 def build_audit(current, previous_runs, *, _memo=None):
@@ -92,7 +142,8 @@ def build_audit(current, previous_runs, *, _memo=None):
     coverage = json.loads((current.out/'coverage.json').read_text(encoding='utf8'))
     notes = {e['data']['doi']:e['data'] for e in current.log.events if e['kind']=='carryover_identity_reviewed'}
     rows, blockers = compare_history(current.records,{d['doi']:d for d in current.assessments()},history,
-                                    min(v[0] for ws in windows.values() for v in ws),current.pool['window_end'],notes)
+                                    min(v[0] for ws in windows.values() for v in ws),current.pool['window_end'],notes,
+                                    editorial_revisions(current, history))
     selected_journals = {j['short'] for j in current.config['journals']}
     for doi, previous in history.items():
         record = previous['record']

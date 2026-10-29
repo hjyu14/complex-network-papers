@@ -501,9 +501,9 @@
       "categories": [
         "network_structure"
       ],
-      "note_en": "Equitable partitions yield minimal graph-product representations that preserve relevant spectral and topological properties of quantum-like structures.",
-      "note_zh": "等分划分给出量子类比结构的最小图积表示，保留相关谱及拓扑性质。",
-      "assessment_sha256": "42a6679b244c9e39be8c6a3c3c24a9ad6adef16d51ea730048e56311c282ebef"
+      "note_zh": "图的笛卡尔积与均衡划分可交换，给出保留相关谱与拓扑性质的精确最小图表示。",
+      "note_en": "Commuting graph Cartesian products with equitable partitions yields exact minimal representations preserving relevant spectral and topological properties.",
+      "assessment_sha256": "ad439a453bbad49d6c71a3e89df9064b012c3489455580fa8e81a6152ce89fac"
     },
     "10.1103/54zg-75zk": {
       "categories": [
@@ -1418,14 +1418,6 @@
       "note_zh": "以熵权融合局部、半局部与全局结构识别重要节点，并用 SIR 传播检验影响力。",
       "assessment_sha256": "e5732d924d1a882edd55cbf4898dca517bf7a1b2e0ddf2af4f1ffa4f7253dce3"
     },
-    "10.1103/b1qh-k8pn": {
-      "categories": [
-        "network_collective"
-      ],
-      "note_en": "Analyzes stable learning and persistent volatility in many-agent games with random pairwise payoffs, bias and optional participation.",
-      "note_zh": "分析随机成对收益、偏置与可选参与如何影响多主体博弈学习的稳定性和持续波动。",
-      "assessment_sha256": "a054b37390e2de57faaa6a7511820b5f9085c5a0f9093d97deb85591d5ec1b43"
-    },
     "10.1103/y4cy-9l8m": {
       "categories": [
         "network_collective"
@@ -2051,20 +2043,20 @@
     },
     "10.1038/s41586-026-11175-2": {
       "categories": [
-        "network_structure"
+        "network_structure",
+        "network_collective"
       ],
-      "note_zh": "结合刺激和连接映射辨识人脑岛叶四分区及区域间有向非对称电生理影响。",
-      "note_en": "Combines stimulation and connectivity mapping to identify four insular regions and directed asymmetric electrophysiological interactions.",
-      "assessment_sha256": "99759c361020033532891372cb4a97789be2a264a1c9ef5e5dc9368d68934a4a"
+      "note_zh": "颅内刺激、脑电与连接映射揭示人类岛叶的四区功能组织及非对称有向相互作用。",
+      "note_en": "Intracranial stimulation, EEG and connectivity mapping link four insular regions to asymmetric directed electrophysiological interactions.",
+      "assessment_sha256": "801df057ec719c30025b55e243adfa2b227746c4c2ff7d3bad327042ea5ecc8d"
     },
     "10.1038/s41586-026-11194-z": {
       "categories": [
-        "network_structure",
         "network_resilience"
       ],
-      "note_zh": "研究干旱与猎物疾病下顶级捕食关系重组及潜在营养级联，区分直接证据与关联提示。",
-      "note_en": "Studies rewiring of apex-predator interactions under drought and prey disease, distinguishing direct evidence from potential trophic cascades.",
-      "assessment_sha256": "a6a68efc784cdebb6a8cba3de5df4cf534ab55e0d48803b4a19ebe99f0b12434"
+      "note_zh": "干旱与猎物疾病共同触发顶级捕食者间新捕食关系，并可能向较低营养级传递影响。",
+      "note_en": "Drought and prey disease jointly trigger a new interaction between top predators, with possible effects at lower trophic levels.",
+      "assessment_sha256": "ba21511731cceb4f46853ff21929756bde72081be6a8c7bcfc0e9ab1e635cb38"
     },
     "10.1038/s42005-026-02885-0": {
       "categories": [
@@ -2275,6 +2267,50 @@
       "note_zh": "病毒共享网络显示哺乳动物宿主跨目的异质组织，并联系生态因素与传播中心性。",
       "note_en": "A viral-sharing network reveals heterogeneous cross-order host structure and links ecological factors to transmission centrality.",
       "assessment_sha256": "b63dfdc4732333f935618e2869ba0648f012c816f955143800a44f867dd7185b"
+    },
+    "10.1038/s41586-026-11195-y": {
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "note_zh": "连接组约束的模拟与网络剪枝识别果蝇步行的候选最小节律回路；三神经元必要充分性是模拟结果。",
+      "note_en": "Connectome-constrained simulations and pruning identify a putative minimal walking rhythm circuit; the three-neuron necessity and sufficiency result is computational.",
+      "assessment_sha256": "e626367bf7086b05266086dc129da43da306dcbab9d30a0a770bc874672cf82d"
+    },
+    "10.1103/4vx7-ngvv": {
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "note_zh": "以多层表示、随机块模型与 MCMC 推断时序网络的层级核心—边缘结构。",
+      "note_en": "A multilayer representation, stochastic block models and MCMC infer hierarchical core-periphery structure in temporal networks.",
+      "assessment_sha256": "1f02a6b089ad90e524b1b45ff24527f3e5ca46be3bc56d695a93bda41fe1d56f"
+    },
+    "10.1103/dgxp-yq1g": {
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "note_zh": "按结构相似性发现节点角色，为机场与合作网络提供区别于社区划分的结构分解。",
+      "note_en": "Structural-similarity node roles reveal network decompositions that complement community analysis in airport and collaboration networks.",
+      "assessment_sha256": "aab9a88af0b98310bd1ad3177ab02e8cbbd99fd1c112080fcbe22afd63d286b7"
+    },
+    "10.1073/pnas.2610932123": {
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "note_zh": "控制个体活跃度与层密度，以组成框架比较洪都拉斯村庄多层社会网络的出向与入向角色；横截面关联不代表因果。",
+      "note_en": "A compositional framework controls activity and layer density to compare outgoing and incoming roles in Honduran multiplex village networks; cross-sectional associations are not causal.",
+      "assessment_sha256": "79620528b681c1db254b908c304f001dca122ee0918b1928733b6f6aea9b611f"
+    },
+    "10.1103/wf4x-hfmj": {
+      "categories": [
+        "network_spreading"
+      ],
+      "note_zh": "模拟二维有向晶格的强连通渗流，比较不同键方向配置的临界行为及其与无向渗流的差别。",
+      "note_en": "Simulations compare strongly connected percolation across directed square-lattice bond arrangements and distinguish its critical behavior from undirected percolation.",
+      "assessment_sha256": "b15addd46256072871efdc458863bdae0495ebeee579f6f74ad45e25ba40bb17"
     }
   }
 }
