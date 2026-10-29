@@ -4,6 +4,8 @@
 
 | 入口 | 职责 |
 |---|---|
+| [PR／RMP 综述选集](reviews/pr-rmp-review-collection-2026-10-29/README.md) | 81 篇历史编辑选文的已核验登记材料；不代表整刊覆盖 |
+| [PR／RMP 漏项补核](reviews/pr-rmp-review-supplement-2026-10-29/README.md) | 补核身份／日期异常，新增3篇；与原81篇分源保存 |
 | [九月九刊](runs/2026-09/README.md) | 原始候选、覆盖、审读和直接发布清单 |
 | [九月四刊](runs/2026-09-expansion-01/README.md) | 四刊原始候选、覆盖和审读 |
 | [十月 1–5 日十三刊](runs/2026-10-01-to-05-01/README.md) | 十月采集、审读及 PRResearch 独立补证 |

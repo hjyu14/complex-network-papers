@@ -72,6 +72,8 @@ python scripts/collect_authors.py --run reports/runs/<run-id>
 
 ## 导出与验证
 
+独立历史综述选集按 [综述馆藏](review-collection.md) 的来源和校验接入；不改变每日整刊覆盖、科学规则、发布窗口、荐读及日更统计。`publish_snapshot.py` 在已有正式输入核验后同时生成／检查 `reviews.json`。
+
 ```powershell
 python scripts/manage_runs.py check-layout
 python scripts/manage_runs.py verify-archive --manifest reports/archive/legacy-2026-10-05/manifest.json

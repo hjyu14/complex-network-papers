@@ -1,5 +1,6 @@
 "use strict";
 const $ = (selector) => document.querySelector(selector);
+const isReviewPage = document.documentElement.dataset?.page === "reviews";
 const state = { data: null, papers: [], category: "all", journal: "all", scope: "all", query: "", days: 30, updatesOnly: false, page: 1, pageSize: 10 };
 const scopeLabel = (id) => ({ all: tr("All journals", "全部期刊"), featured: tr("Spotlight journals", "Spotlight 期刊"), other: tr("Other journals", "其他期刊") })[id];
 const dateLabel = (id) => ({ "publisher.accepted": tr("Accepted date — not publication", "接收日期，非发表日期"), "publisher.available_online": tr("First available online", "首次在线发表"), "published-online": tr("Online publication", "在线发表"), "published-print": tr("Print publication", "纸刊发表"), published: tr("Publication date", "发表日期"), issued: tr("Issue date", "出版日期") })[id] || id;
@@ -168,6 +169,12 @@ function paperCard(paper) {
   details.append(element("summary", "", tr("Details", "详细信息")));
   if (authors.length) details.append(element("p", "full-authors", tr("All authors: ", "全部作者：") + authors.join(" · ")));
   if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
+  if (paper.volume) details.append(element("p", "", tr("Volume: ", "卷：") + paper.volume + (paper.issue ? tr(" · Issue: ", " · 期：") + paper.issue : "") + (paper.pages ? tr(" · Pages / article: ", " · 页码／文章号：") + paper.pages : "")));
+  if (paper.entry_kind === "editorial_review_selection") {
+    details.append(element("p", "", tr("Part of the editorial review selection, including cross-field related reading. Notes are based on the abstract; the full text was not reviewed.", "编辑选录的综述，包含跨领域延伸阅读。说明依据摘要，未审读全文。")));
+    if (paper.date_basis) details.append(element("p", "", tr("Date evidence: ", "日期依据：") + paper.date_basis));
+    if (paper.type_provenance?.basis_kind === "explicit_abstract_review_inference") details.append(element("p", "", tr("Review status is supported by the explicit abstract; this is not a quoted publisher type label.", "综述性质依据明确摘要判断，此处并非引用出版方的类型标签。")));
+  }
   if (paper.publication_version) details.append(element("p", "", tr("Publication version: ", "出版版本：") + paper.publication_version));
   if (paper.type_provenance?.basis_kind === "explicit_abstract_research_inference") details.append(element("p", "", tr("Original research supported by the abstract; exact publisher subtype not specified.", "摘要支持其研究性质；未指定出版方的精确文章子类型。")));
   if (paper.publication_status === "accepted") details.append(element("p", "", tr("Accepted manuscript; publication date and available publisher subtype will be rechecked after publication.", "已接收，待正式发表；届时补核发表日期及可获得的出版方文章子类型。")));
@@ -210,6 +217,7 @@ function resetFilters(scope = "all", days = 30, updatesOnly = false) {
   renderCategories(); renderResults();
 }
 function renderResults() {
+  if (isReviewPage) return renderReviewResults();
   const end = new Date(state.data.window_end + "T00:00:00Z");
   const cutoff = state.days === 0 ? state.data.window_start : new Date(end.getTime() - (state.days - 1) * 86400000).toISOString().slice(0, 10);
   const query = state.query.trim().toLowerCase();
@@ -374,4 +382,4 @@ async function init() {
     renderUnavailable();
   }
 }
-init();
+if (!isReviewPage) init();

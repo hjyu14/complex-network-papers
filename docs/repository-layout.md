@@ -12,6 +12,7 @@
 | `docs/screening-protocol.md` | 科学范围、证据要求、纳入／排除／待裁决规则 |
 | `docs/evidence-data-features.md` | 证据字段、来源与材料处理约定 |
 | `docs/publication.md` | 作者补全、直接发布清单、快照校验及部署边界 |
+| `docs/review-collection.md` | 历史综述编辑选集的来源、生成、展示与维护 |
 | `docs/repository-layout.md` | 本文：目录、文件生命周期和历史恢复规范 |
 | `scripts/` | 可复用的采集、审读、发布和文件管理程序；不存任务输出 |
 | `tests/` | 合成测试及回归检查；不充当正式文献判断来源 |

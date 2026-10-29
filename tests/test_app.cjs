@@ -47,6 +47,70 @@ function setup(version = 'newflow-1', fixtureConfig = config) {
 }
 const ready = () => new Promise(setImmediate);
 
+function setupReviews({ unavailable = false } = {}) {
+  const nodes = new Map();
+  const node = id => { if (!nodes.has(id)) nodes.set(id, new Node()); return nodes.get(id); };
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/papers.json'), 'utf8'));
+  const reviews = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/reviews.json'), 'utf8'));
+  const errors = [];
+  const context = vm.createContext({ URL, Date, console: { error: e => errors.push(e) },
+    document: { documentElement: { dataset: { page: 'reviews' } }, querySelector: node,
+      createElement: tag => new Node(tag), querySelectorAll: () => [] },
+    fetch: async url => ({ ok: !unavailable, status: 503, json: async () => url.includes('reviews.json') ? reviews : data }) });
+  vm.runInContext(localeSource, context);
+  vm.runInContext(source, context);
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '../site/reviews.js'), 'utf8'), context);
+  return { node, context, data, reviews, errors };
+}
+
+test('historical reviews include all years and reuse current review DOI records once', async () => {
+  const { node, context, data, reviews, errors } = setupReviews(); await ready();
+  assert.equal(errors.length, 0);
+  assert.equal(vm.runInContext('state.papers.length', context), 84);
+  assert.equal(reviews.papers.length, 84);
+  assert.equal(new Set(vm.runInContext('state.papers.map(p=>p.doi)', context)).size, 84);
+  assert.equal(node('#result-count').textContent, '84 reviews');
+  assert.equal(node('#paper-list').children.length, 10);
+  assert.equal(vm.runInContext('state.days', context), 0);
+  assert.equal(vm.runInContext('state.papers.some(p=>p.date<state.data.window_start)', context), true);
+  assert.deepEqual(reviews.current_collection_dois, []);
+  assert.equal(vm.runInContext('state.papers.some(p=>p.journal_short==="Chaos")', context), false);
+  assert.equal(data.latest_update.newly_included_count, 4);
+});
+
+test('review year journal and search intersect, reset pagination, and survive language changes', async () => {
+  const { node, context, reviews } = setupReviews(); await ready();
+  const paper = reviews.papers.find(p => p.journal_short === 'RMP');
+  node('#pagination').children.find(n=>n.textContent==='Next →').events.click();
+  assert.equal(vm.runInContext('state.page', context), 2);
+  node('#journal').events.change({target:{value:'RMP'}});
+  assert.equal(node('#result-count').textContent, '12 reviews');
+  assert.equal(vm.runInContext('state.page', context), 1);
+  node('#year').events.change({target:{value:paper.date.slice(0,4)}});
+  node('#search').events.input({target:{value:paper.doi}});
+  assert.equal(node('#result-count').textContent, '1 review');
+  node('#language-toggle').events.click();
+  assert.equal(node('#result-count').textContent, '1 篇综述');
+  assert.equal(vm.runInContext('state.year', context), paper.date.slice(0,4));
+  node('#search').events.input({target:{value:'no matching review at all'}});
+  assert.equal(node('#result-count').textContent, '0 篇综述');
+  node('#clear').events.click();
+  assert.equal(node('#result-count').textContent, '84 篇综述');
+  node('#order').events.change({target:{value:'oldest'}});
+  const texts=n=>[n.textContent,...n.children.flatMap(texts)].join(' ');
+  const oldest=vm.runInContext('state.papers.map(p=>p.date).sort()[0]',context);
+  assert.ok(texts(node('#paper-list').children[0]).includes(oldest));
+});
+
+test('review load failure is explicit and bilingual', async () => {
+  const { node, errors } = setupReviews({ unavailable: true }); await ready();
+  assert.equal(errors.length, 1);
+  assert.equal(node('#status').hidden, false);
+  assert.match(node('#status').textContent, /unavailable/);
+  node('#language-toggle').events.click();
+  assert.match(node('#status').textContent, /暂不可用/);
+});
+
 test('English is the first-visit default while explicit language choices persist', () => {
   for (const stored of [null, 'en', 'zh', 'invalid', 'storage-unavailable']) {
     const toggle = new Node('button');
@@ -357,7 +421,9 @@ test('public rules article is linked and bilingual', () => {
   assert.match(home, /<html lang="en">/);
   assert.match(rules, /data-language="en"/);
   assert.match(rules, /data-language="zh" hidden/);
-  assert.equal((rules.match(/<h2>/g) || []).length,12);
+  assert.equal((rules.match(/<h2>/g) || []).length,14);
+  assert.match(rules, /<h2>Review collection<\/h2>/);
+  assert.match(rules, /<h2>综述馆藏<\/h2>/);
   assert.match(rules, /Preprints are excluded/);
   assert.match(rules, /预印本不收录/);
   assert.match(rules, /AI assistance/);

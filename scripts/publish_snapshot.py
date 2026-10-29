@@ -520,6 +520,8 @@ def main():
     from daily_suggestions import attach_suggestions
     artifacts = attach_suggestions(artifacts, ROOT/'config/daily-suggestions.json', ROOT,
                                    as_of=artifacts['papers.json']['window_end'])
+    from review_collection import attach_reviews
+    artifacts = attach_reviews(artifacts)
     target = ROOT/args.out
     if args.check:
         for name, value in artifacts.items():

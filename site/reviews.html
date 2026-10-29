@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-page="reviews">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected network-science reviews, including Physics Reports and Reviews of Modern Physics since 2000.">
+  <meta name="color-scheme" content="light">
+  <title>Reviews · NetSci Observatory</title>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg?v=1">
+  <link rel="stylesheet" href="styles.css?v=reading-list-19">
+  <script src="i18n.js?v=reading-list-7" defer></script><script src="app.js?v=reading-list-20" defer></script><script src="reviews.js?v=2" defer></script>
+</head>
+<body>
+  <a class="skip" href="#latest" data-en="Skip to reviews" data-zh="跳转至综述列表">Skip to reviews</a>
+  <div class="site-head">
+    <header class="masthead wrap">
+      <a class="brand" href="./" aria-label="NetSci Observatory home"><span class="brand-mark" aria-hidden="true">N<span>·</span></span><span>NETSCI OBSERVATORY</span></a>
+      <nav class="header-actions" aria-label="Main navigation"><a href="./#latest" data-en="Papers" data-zh="文献">Papers</a><a href="reviews.html" aria-current="page" data-en="Reviews" data-zh="综述">Reviews</a><a href="changelog.html" data-en="Changelog" data-zh="更新日志">Changelog</a><a href="rules.html" data-en="About" data-zh="选文说明">About</a><button id="language-toggle" class="language-toggle" type="button">中文</button></nav>
+    </header>
+    <section class="hero wrap reviews-hero" aria-labelledby="page-title">
+      <p class="eyebrow" id="edition">REVIEW COLLECTION</p>
+      <h1 id="page-title" data-en="Network science reviews" data-zh="网络科学综述">Network science reviews</h1>
+      <p class="intro" data-en="Explore the ideas, models and methods that connect the field, with selected cross-field reading." data-zh="从综述中梳理网络科学的概念、模型与方法，并关注相关领域的延伸阅读。">Explore the ideas, models and methods that connect the field, with selected cross-field reading.</p>
+      <a class="hero-link" href="#latest" data-en="Browse the reviews ↓" data-zh="浏览综述 ↓">Browse the reviews ↓</a>
+    </section>
+  </div>
+  <main class="wrap">
+    <div id="status" class="notice" role="status" aria-live="polite" data-en="Loading reviews…" data-zh="正在载入综述…">Loading reviews…</div>
+    <section class="review-intro" aria-label="Collection scope"><p id="review-summary"></p><p id="review-cutoff" class="rules-meta"></p></section>
+    <section id="latest" class="browse-section reviews-browse" aria-labelledby="latest-title">
+      <aside class="sidebar"><h2 data-en="Topics" data-zh="研究主题">Topics</h2><nav id="categories" aria-label="Research topics"></nav></aside>
+      <div class="results-column">
+        <div class="section-heading results-heading"><h2 id="latest-title" data-en="Review collection" data-zh="综述馆藏">Review collection</h2></div>
+        <div class="toolbar"><label class="search-field"><span class="sr-only" data-en="Search title, author, journal or DOI" data-zh="搜索标题、作者、期刊或 DOI">Search title, author, journal or DOI</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search title, author, journal or DOI" autocomplete="off"></label></div>
+        <div class="facet-controls">
+          <label><span data-en="Journal" data-zh="期刊">Journal</span><select id="journal"><option value="all" data-en="All journals" data-zh="全部期刊">All journals</option></select></label>
+          <label><span data-en="Publication year" data-zh="发表年份">Publication year</span><select id="year"><option value="all" data-en="All years" data-zh="全部年份">All years</option></select></label>
+          <label><span data-en="Sort" data-zh="排序">Sort</span><select id="order"><option value="newest" data-en="Newest first" data-zh="从新到旧">Newest first</option><option value="oldest" data-en="Oldest first" data-zh="从旧到新">Oldest first</option></select></label>
+        </div>
+        <div class="result-meta"><p id="result-count" aria-live="polite"></p><button id="clear" type="button" class="text-button" hidden data-en="Clear filters ×" data-zh="清除筛选 ×">Clear filters ×</button></div>
+        <div id="paper-list"></div><nav id="pagination" class="pagination" aria-label="Review pages"></nav>
+      </div>
+    </section>
+    <section class="methodology"><details><summary data-en="About this review collection" data-zh="关于这份综述选集">About this review collection</summary><div class="method-body">
+      <p data-en="The historical selection starts in 2000 and includes individually selected cross-field reviews. It does not establish exhaustive coverage of either journal. Publication dates are the verified original dates, not the dates added to this site." data-zh="历史选集从 2000 年起，包含逐篇选定的跨领域综述，不代表两刊的完整历史覆盖。文献日期采用核验后的原始发表日期，而非网站收录日期。">The historical selection starts in 2000 and includes individually selected cross-field reviews. It does not establish exhaustive coverage of either journal. Publication dates are the verified original dates, not the dates added to this site.</p>
+      <p data-en="Historical review notes are based on verified abstracts, not full-text reading or independent reproduction. Links lead to the DOI or publisher; this site does not provide PDFs. Reviews already in the current collection share the same bibliographic record." data-zh="历史综述说明依据已核验摘要，未进行全文审读或独立复现。链接指向 DOI 或出版方，本站不提供 PDF。现有馆藏中的综述复用同一条书目记录。">Historical review notes are based on verified abstracts, not full-text reading or independent reproduction. Links lead to the DOI or publisher; this site does not provide PDFs. Reviews already in the current collection share the same bibliographic record.</p>
+      <a href="rules.html" data-en="Selection, sources and limitations →" data-zh="选文范围、来源与局限 →">Selection, sources and limitations →</a>
+    </div></details></section>
+  </main>
+  <footer class="wrap"><span>NETSCI OBSERVATORY</span><a href="./#latest" data-en="Browse recent papers →" data-zh="浏览近期文献 →">Browse recent papers →</a><nav class="social-links" aria-label="Social media"><a href="https://x.com/NetSci_Obs" target="_blank" rel="noopener noreferrer">X · @NetSci_Obs ↗</a><a href="https://www.xiaohongshu.com/user/profile/60e08d78000000000100375e" target="_blank" rel="noopener noreferrer" data-en="Xiaohongshu ↗" data-zh="小红书 ↗">Xiaohongshu ↗</a></nav></footer>
+  <noscript><p class="wrap">JavaScript is required to browse reviews. / 浏览综述需要 JavaScript。</p></noscript>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"4948fb6be20f4793b65fcc1278d98a40"}'></script>
+</body></html>
