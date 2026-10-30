@@ -18,11 +18,14 @@ class SuggestionTests(unittest.TestCase):
         e = self.config['entries'][0]
         self.papers = {e['doi']: {'assessment_sha256': e['assessment_sha256'],
             'title': 'Cross-order induced behaviors in contagion dynamics on higher-order networks',
+            'publication_status': 'published', 'published_date': '2026-10-05',
             'input_sha256': e['input_sha256'], 'review_evidence_kind': e['review_evidence_kind'],
             'review_evidence_sha256': e['evidence_sha256']}}
         self.sources = {(e['source_run'], e['assessment_sha256']): {'publication_sha256': e['publication_sha256'],
             'decision': {'doi': e['doi'], 'category': 'core', 'input_sha256': e['input_sha256'],
-                         'material_sha256': e['evidence_sha256']}}}
+                         'material_sha256': e['evidence_sha256'],
+                         'hard_checks': {'date': {'status': 'verified', 'value': '2026-10-05',
+                             'publication_status': 'published', 'basis': 'published-online'}}}}}
 
     def check(self, config=None):
         return validate_suggestions(config or self.config, self.papers, self.sources, as_of='2026-10-06')
@@ -32,6 +35,25 @@ class SuggestionTests(unittest.TestCase):
         self.assertEqual(self.check()[0]['review_evidence_kind'], 'fulltext')
         wrong = deepcopy(self.config); wrong['entries'].append(deepcopy(wrong['entries'][0]))
         with self.assertRaisesRegex(ValueError, 'once'): self.check(wrong)
+
+    def test_accepted_unknown_and_future_publication_rejected(self):
+        source = next(iter(self.sources.values()))['decision']['hard_checks']['date']
+        original = deepcopy(source)
+        for change in [{'publication_status': 'accepted'}, {'publication_status': None},
+                       {'basis': 'publisher.accepted'}, {'status': 'unresolved'},
+                       {'value': '2026-10-07'}, {'published_date': None}]:
+            source.clear(); source.update(original); source.update(change)
+            with self.subTest(change=change), self.assertRaisesRegex(ValueError, 'formally published'):
+                self.check()
+
+    def test_current_publication_status_and_date_are_verified(self):
+        paper = next(iter(self.papers.values()))
+        for change in [{'publication_status': 'accepted'}, {'published_date': None},
+                       {'published_date': '2026-10-07'}]:
+            original = deepcopy(paper); paper.update(change)
+            with self.subTest(change=change), self.assertRaisesRegex(ValueError, 'published status and date'):
+                self.check()
+            paper.clear(); paper.update(original)
 
     def test_revision_must_bind_preserved_history(self):
         wrong = deepcopy(self.config)

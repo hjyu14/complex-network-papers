@@ -4,6 +4,7 @@
 
 - 公开、免注册的网络科学文献网站。网络结构、网络上的动力学或可迁移网络科学理论／方法须为主要贡献；一般非线性动力学单独不收录。
 - `config/sources.json` 是当前期刊 ISSN 白名单、采集窗口与 Spotlight 展示名单；科学、日期、类型及证据规则见 `docs/screening-protocol.md`。规则的实质变化须先取得用户确认。
+- 每周一（Asia/Shanghai）在日更任务中检查 `sources.json.review_journals` 中 PR／RMP 的最新网络科学综述，按 `docs/review-collection.md` 独立登记、逐篇审读并接入综述页；其他日期不要求检查，也不以未完成综述检查阻断普通日更。历史选集或普通采集器成功不代替周检。
 - 按任务阅读文档：采集用 `docs/collection-workflow.md`；取证与审读用筛选规程和 `docs/evidence-data-features.md`；发布用 `docs/publication.md`。
 
 ## 数据与目录
@@ -27,7 +28,7 @@
 - Python：`python -m unittest discover -s tests -v`；发布一致性：`python scripts/publish_snapshot.py --check`。
 - 前端：`node --check site/app.js`、`node --test tests/test_app.cjs`；界面变更还需浏览器检查。
 - `config/release.json` 明确选择完成的原始轮并钉住 `publication.json`；直接声明修订，不嵌套发布视图。重复 DOI 冲突必须解决，不以最新记录静默覆盖。执行 `manage_runs.py check-layout` 和归档核验；不保留多套 `final` 派生结果。
-- `site/` 是唯一部署目录，只含允许的元数据与短说明。用户主动请求及已授权的每日定时文献更新按 `docs/publication.md` 的条件授权收尾；其他 Git 推送、正式部署及部署配置修改须有当前任务授权。北京时间每日08:00定时更新和本轮经核验临时文件删除的持续授权见发布文档及目录规范。
+- `site/` 是唯一部署目录，只含允许的元数据与短说明。用户主动请求及已授权的每日定时文献更新按 `docs/publication.md` 的条件授权收尾；其他 Git 推送、正式部署及部署配置修改须有当前任务授权。北京时间每日07:00定时更新和本轮经核验临时文件删除的持续授权见发布文档及目录规范。
 - 常规文献更新可用项目技能 `.agents/skills/netsci-literature-update/SKILL.md`；它引用现行规程，不是另一套科学规则。
 
 ## 文档维护

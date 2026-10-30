@@ -12,7 +12,7 @@
 | `docs/screening-protocol.md` | 科学范围、证据要求、纳入／排除／待裁决规则 |
 | `docs/evidence-data-features.md` | 证据字段、来源与材料处理约定 |
 | `docs/publication.md` | 作者补全、直接发布清单、快照校验及部署边界 |
-| `docs/review-collection.md` | 历史综述编辑选集的来源、生成、展示与维护 |
+| `docs/review-collection.md` | 历史综述选集及 PR／RMP 每周增量的检查、审读、来源和发布 |
 | `docs/repository-layout.md` | 本文：目录、文件生命周期和历史恢复规范 |
 | `scripts/` | 可复用的采集、审读、发布和文件管理程序；不存任务输出 |
 | `tests/` | 合成测试及回归检查；不充当正式文献判断来源 |
@@ -28,6 +28,8 @@
 - `docs/screening-protocol.md`：当前科学与证据规则，不以当前文字重新解释历史判断。
 - `reports/runs/<run-id>/`：一次采集及审读；重试、补证和中断恢复不另建 `final` 或 `retry` 结果树。
 - `reports/reviews/<review-id>/`：封存后或跨轮的明确复议，绑定旧判断与输入。不是新整刊覆盖。
+- `reports/reviews/pr-rmp-weekly-<date>-<id>/`：独立综述馆藏的每周一检查及审读（既有 `pr-rmp-daily-*` 记录保留原路径），保存冻结输入、目录／审核日志、`evidence/check.json` 和有新增时的 `evidence/collection.json`；不替代普通馆藏的整刊覆盖。格式和恢复入口见 `docs/review-collection.md`。
+- `config/review-collection.json`：钉住历史、补充及每周增量综述选集；`weekly_review_policy` 指向 `sources.json.review_journals` 白名单。零新增检查也保留正式记录，不伪造增量来源。
 - `config/release.json`：直接选定原始轮，并钉住各轮 `publication.json`。该文件列出有序修订及作者、补证来源；不嵌套发布视图。
 - `config/publication-notes.json`：当前中英文短说明与主题，按 DOI 绑定正式判断。
 - `config/daily-suggestions.json`：按日期保存原创双语荐读及历史，绑定原始发布清单、判断与材料；与摘要缓存分离，执行约定见发布文档。

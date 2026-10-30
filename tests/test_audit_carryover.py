@@ -1,5 +1,5 @@
 """Synthetic daily handoff failures and explicit overlapping release tests."""
-from copy import deepcopy
+from copy import copy, deepcopy
 import json
 import unittest
 from unittest.mock import patch
@@ -192,6 +192,51 @@ class CarryoverTests(unittest.TestCase):
         self.assertFalse(blockers)
         self.assertTrue(rows[0]['publication_status_changed'])
         self.assertEqual(rows[0]['previous_assessment_sha256'],screen.digest(old))
+
+    def test_delegated_revision_requires_scoped_authorization_and_abstract(self):
+        old,new=self.pair(True)
+        path=self.explicit_exclusion(old,new)
+        w=screen.Workflow(new)
+        decision={**w.assessments()[0],'abstract_sha256':'reviewed-abstract'}
+        w.log.add('assessment_corrected',decision)
+        authorization={'authority':'human user in current conversation',
+            'statement_kind':'explicit_delegation_to_primary_agent',
+            'user_statement':'Decide this paper yourself; ask only if unresolved',
+            'scope':[decision['doi']]}
+        w.log.add('user_delegated_adjudication',authorization)
+        value=json.loads(path.read_text())
+        value.update(version='cross-run-delegated-revision-1',
+            assessment_sha256=screen.digest(decision),
+            authorization_sha256=screen.digest(authorization))
+        value.pop('user_verdict');value.pop('verdict_sha256')
+        review={k:value[k] for k in ['doi','record_sha256','candidate_sha256',
+            'assessment_sha256','input_sha256','authorization_sha256']}
+        review.update(title=w.records[decision['doi']]['title'],category='excluded',
+            material_sha256=decision['material_sha256'],rule_sha256=decision['rule_sha256'],
+            reviewer='Actual primary reviewer',reason='Actual abstract establishes non-network scope')
+        w.log.add('delegated_scientific_decision',review)
+        value['delegated_decision_sha256']=screen.digest(review)
+        self.f.write(path.relative_to(self.f.root).as_posix(),value)
+        w.log.add('carryover_editorial_revision_selected',{
+            'path':path.relative_to(self.f.root).as_posix(),'sha256':file_sha(path)})
+        # Exercise the new revision alone; retain the earlier historical fixture event.
+        w.log.events=[e for e in w.log.events if e['kind']!='carryover_editorial_revision_selected']+[w.log.events[-1]]
+        history={decision['doi']:{'run':old.relative_to(self.f.root).as_posix(),
+            'record':screen.Workflow(old).records[decision['doi']],
+            'decision':screen.Workflow(old).assessments()[0]}}
+        self.assertIn(decision['doi'],audit.editorial_revisions(w,history))
+        for change in ['scope','statement_kind','material']:
+            with self.subTest(change=change):
+                altered=copy(w);altered.log=copy(w.log)
+                altered.log.events=deepcopy(w.log.events)
+                if change=='material':
+                    event=next(e for e in altered.log.events if e['kind']=='delegated_scientific_decision')
+                    event['data']['material_sha256']='wrong-material'
+                else:
+                    event=next(e for e in altered.log.events if e['kind']=='user_delegated_adjudication')
+                    event['data'][change]=[] if change=='scope' else 'implicit_permission'
+                with self.assertRaisesRegex(ValueError,'scoped user authorization'):
+                    audit.editorial_revisions(altered,history)
 
     def test_gap_or_missing_overlap_does_not_become_complete(self):
         old,new = self.pair()

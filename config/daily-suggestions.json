@@ -1850,6 +1850,84 @@
         "read_scope": "Complete 11-page main article, methods, discussion and references; visual checks of Figures 1-5 and captions. Separate supporting information was not read; no independent reproduction.",
         "reviewed_at": "2026-10-29T14:21:00+08:00"
       }
+    },
+    {
+      "doi": "10.1073/pnas.2602186123",
+      "recommended_on": "2026-10-30",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-29-to-30-01",
+      "publication_sha256": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+      "assessment_sha256": "1f32b1d0e1335b9c4d3644729e9b5921598a90842c59218e9cc22d8afb287655",
+      "input_sha256": "ec73fcdbe1fd0cf7b4b717a9702f6a754cebfeb6a94e4e34a95dac3072241bd4",
+      "evidence_sha256": "7406067ae57e86c0d5e28e317d50c00ca1c0a2cace98c482403d87bd5b0c0422",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-30T06:51:40.087699+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2602186123",
+        "title": "Potential energy landscape networks of confined vortex matter",
+        "sha256": "50b9cf86b6d99cb3fab2c62e69b5da69d821dfb1a98cfacc55831f61455d598e",
+        "version": "PNAS publisher Version of Record, published 2026-10-29",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2602186123",
+        "source_kind": "user_provided_pdf",
+        "pages": 7,
+        "read_scope": "Complete seven-page main article, Results, Methods 2.1-2.4, conclusion, references and Figures 1-4 with captions; rendered checks of pages 1, 3-6. Separate SI not read; no independent reproduction.",
+        "reviewed_at": "2026-10-30T06:51:40.087699+00:00"
+      },
+      "question": {
+        "zh": "能量景观如何变成网络，帮助理解受限粒子系统的稳定性？",
+        "en": "How can energy-landscape networks help explain stability in confined particle systems?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为网络的节点是完整的亚稳态构型，而非单个涡旋；先选对状态空间，才谈结构与稳定性的联系。",
+          "可借鉴的是把 k-core 分层、度信息量和升温模拟放在一起对照。深核包含基态是文中系统的经验结果，不能当作任意能量景观的定理。"
+        ],
+        "en": [
+          "The useful move is to make entire metastable configurations the nodes, rather than individual vortices. Choosing the state space makes the structural question precise.",
+          "Compare k-core shells and degree information with heating simulations. Ground-state membership in the deepest core is an observation in the studied systems, not a theorem for arbitrary landscapes."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "选对网络对象",
+            "en": "Choose the network object"
+          },
+          "text": {
+            "zh": "局部能量极小值作节点，一级鞍点连接状态；这种映射把高维构型问题转为可分析的状态网络。",
+            "en": "Local energy minima become nodes and first-order saddles connect states, turning a high-dimensional configuration problem into an analyzable state network."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较结构与物理稳定性",
+            "en": "Compare structure with stability"
+          },
+          "text": {
+            "zh": "将 k-core、度信息量与熔化模拟并置，检查几何、粒子数和约束强度如何共同改变稳定构型。",
+            "en": "Juxtapose k-core structure, degree information and melting simulations to examine how geometry, particle number and confinement jointly change stable configurations."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留模型边界",
+            "en": "Keep the model boundary"
+          },
+          "text": {
+            "zh": "固定粒子数的 London 点涡旋与硬壁约束给出具体适用条件；强约束下的稳定序列不能只从对称性猜测。",
+            "en": "Fixed-number London point vortices and hard walls define the model scope; under strong confinement, symmetry alone cannot identify the stable sequence."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究状态空间网络、网络结构与动力学、能量景观及受限多体系统的读者。",
+        "en": "Readers studying state-space networks, network structure and dynamics, energy landscapes and confined many-body systems."
+      },
+      "reading_caveat": {
+        "zh": "已读用户提供的正式出版版 7 页全文、结果、方法 2.1–2.4、结论、参考文献及图 1–4，并查看渲染页。独立补充材料未读，未独立复现。结果限于文中点涡旋与约束模型；深核与基态的联系不是普适保证。",
+        "en": "Read the user-provided seven-page publisher article, including Results, Methods 2.1-2.4, conclusion, references and Figures 1-4, with rendered-page checks. Separate supporting information was not read and results were not independently reproduced. Findings concern the studied point-vortex confinement models; deep-core membership does not universally guarantee the ground state."
+      }
     }
   ],
   "revisions": [

@@ -20,6 +20,48 @@
     "SA",
     "PNAS"
   ],
+  "review_journals": [
+    {
+      "name": "Physics Reports",
+      "short": "PR",
+      "issns": [
+        "0370-1573",
+        "1873-6270"
+      ],
+      "review_policy": {
+        "official_type_labels": ["Review article", "Review"],
+        "history_start": "2000-01-01",
+        "collection_mode": "latest_official_directory_and_article_pages"
+      },
+      "collection": {
+        "family": "elsevier",
+        "url": "https://www.sciencedirect.com/journal/physics-reports",
+        "access": "browser_directory",
+        "max_pages": 12,
+        "article_lookups": 120
+      }
+    },
+    {
+      "name": "Reviews of Modern Physics",
+      "short": "RMP",
+      "issns": [
+        "0034-6861",
+        "1539-0756"
+      ],
+      "review_policy": {
+        "official_type_labels": ["Review", "Article", "Colloquium"],
+        "type_mapping_basis": "https://journals.aps.org/rmp/authors#types",
+        "history_start": "2000-01-01",
+        "collection_mode": "latest_official_directory_and_article_pages"
+      },
+      "collection": {
+        "family": "aps",
+        "slug": "rmp",
+        "url": "https://journals.aps.org/rmp/recent",
+        "max_pages": 12
+      }
+    }
+  ],
   "journals": [
     {
       "name": "Nature",

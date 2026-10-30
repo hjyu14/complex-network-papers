@@ -88,8 +88,9 @@ def editorial_revisions(current, history):
         if doi in result or doi not in history or doi not in decisions:
             raise ValueError('Cross-run revision target mismatch')
         previous, decision, record = history[doi], decisions[doi], current.records[doi]
+        delegated = revision.get('version') == 'cross-run-delegated-revision-1'
         expected = {
-            'version':'cross-run-editorial-revision-1', 'doi':doi,
+            'version':'cross-run-delegated-revision-1' if delegated else 'cross-run-editorial-revision-1', 'doi':doi,
             'previous_run':previous['run'],
             'previous_record_sha256':digest(previous['record']),
             'previous_assessment_sha256':digest(previous['decision']),
@@ -104,8 +105,29 @@ def editorial_revisions(current, history):
         if (any(revision.get(k)!=v for k,v in expected.items())
                 or decision['category'] not in {'core','transferable_application','excluded'}
                 or previous['decision']['category']==decision['category']
-                or record['window_membership']!='in_window'
-                or any(verdict.get(k)!=v for k,v in bindings.items())
+                or record['window_membership']!='in_window'):
+            raise ValueError('Cross-run revision identity/assessment binding mismatch')
+        if delegated:
+            authorization = next((e['data'] for e in current.log.events
+                if e['kind']=='user_delegated_adjudication'
+                and digest(e['data'])==revision.get('authorization_sha256')), None)
+            review = next((e['data'] for e in current.log.events
+                if e['kind']=='delegated_scientific_decision'
+                and digest(e['data'])==revision.get('delegated_decision_sha256')), None)
+            review_bindings = {k:expected[k] for k in
+                ['doi','record_sha256','candidate_sha256','assessment_sha256','input_sha256']}
+            review_bindings.update(title=record['title'],category=decision['category'],
+                material_sha256=decision.get('material_sha256'),rule_sha256=decision['rule_sha256'],
+                authorization_sha256=revision.get('authorization_sha256'))
+            if (not authorization or authorization.get('authority')!='human user in current conversation'
+                    or authorization.get('statement_kind')!='explicit_delegation_to_primary_agent'
+                    or not authorization.get('user_statement') or doi not in authorization.get('scope',[])
+                    or not review or any(review.get(k)!=v for k,v in review_bindings.items())
+                    or not review.get('reason') or not review.get('reviewer')
+                    or not decision.get('material_sha256') or not decision.get('abstract_sha256')
+                    or decision.get('exclusion_basis')=='user_editorial_decision'):
+                raise ValueError('Cross-run delegated revision needs scoped user authorization and bound abstract assessment')
+        elif (any(verdict.get(k)!=v for k,v in bindings.items())
                 or verdict.get('authority')!='human user in current conversation'
                 or verdict.get('statement_kind') not in {'explicit_individual_verdict','explicit_group_verdict'}
                 or not verdict.get('user_statement')

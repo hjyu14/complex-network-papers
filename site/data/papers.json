@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T06:57:52.538709+00:00",
+  "generated_at": "2026-10-30T07:05:12.283641+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-10-29",
-  "window_days": 59,
+  "window_end": "2026-10-30",
+  "window_days": 60,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
-  "config_sha256": "01403cadd107937df8a9c9fcd2501a4ac948bf09de839f151dd1a99896d4f17d",
+  "config_sha256": "9f4dda256d69a10ac86eeabbbaa7deac1f0cde28e58837cd530c22d4e33c8649",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "3d418b76b049d34033df60e54047a79bae0cd0eb46f4eadf5429a6bc9f2accd2",
-  "author_metadata_sha256": "8f1daeb2a04bc18119a52e8880ee1066ca08b0739d66234bd913492b6a2bcb7a",
+  "reading_notes_sha256": "4fe1b185962bc31641bdb020874774002c886c435345cfc60daf34fc0f79b49d",
+  "author_metadata_sha256": "e2f222f6e52f65fee8f839035aaa1812ac7a967b707a7e3efde2c05cb78fde8c",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2435,9 +2435,70 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-10-29-to-30-01",
+      "config_sha256": "eeaab1aea4ba3d014adc9f7dbea4200798f3ad1841e18e2f9357f4a981f70c93",
+      "window_start": "2026-10-29",
+      "window_end": "2026-10-30",
+      "rule_sha256": "bbb9114a657a83d74009c51042f0dc6d94e72749e67e43655d832d4aa2107f5f",
+      "screening_log_sha256": "7eec09e47dcb797dc83f41bfd5f50f4ec76f18ef27be596668beaae5f78cfada",
+      "candidate_sha256": "d7d0359aa1ad8b27b7da34a7c1a7f8e3a130fc4f9afafd5561d4fd1bbbc53879",
+      "author_metadata_sha256": "6da5064fb0e6febd3bcf0634d1c83bc4eefdc15399dc6cc62bcc1f29ad11270c",
+      "run_manifest_sha256": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-29-to-30-01",
+          "files": {
+            "candidates.json": "d7d0359aa1ad8b27b7da34a7c1a7f8e3a130fc4f9afafd5561d4fd1bbbc53879",
+            "coverage.json": "432ca7b2f9b454d249bbb0485074f1c0678c55917e84305c7ebc8c610c5508a6",
+            "collection-log.jsonl": "51df97aee271f0bbb7754986fbc80880b286dfef94fc3868e8096b7b4ef2f5b6",
+            "screening-log.jsonl": "e74a64c016257fa0fe892540a7abb9f4832f91ed73ce23f6d1325e7a86c055ca",
+            "inputs/manifest.json": "1b98eccb83e4cea4f5c04d854a94933171ba7e6c4d7af35d166edd5648f1c658",
+            "inputs/sources.json": "6157cc13056429bf9ed799c3b0fceb4a0f24c0fd2e607c0c97f210f483bb700f",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "d7d0359aa1ad8b27b7da34a7c1a7f8e3a130fc4f9afafd5561d4fd1bbbc53879",
+          "rule_sha256": "bbb9114a657a83d74009c51042f0dc6d94e72749e67e43655d832d4aa2107f5f",
+          "screening_log_sha256": "7eec09e47dcb797dc83f41bfd5f50f4ec76f18ef27be596668beaae5f78cfada"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "6da5064fb0e6febd3bcf0634d1c83bc4eefdc15399dc6cc62bcc1f29ad11270c",
+          "audit": {
+            "path": "reports/runs/2026-10-29-to-30-01/screening-log.jsonl",
+            "sha256": "e74a64c016257fa0fe892540a7abb9f4832f91ed73ce23f6d1325e7a86c055ca"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "160f840eb04ba350eddba38accc6d52624bdb4921f226519f8581f05d0879ebe"
+        }
+      },
+      "publication_evidence": {
+        "version": "publication-evidence-1",
+        "candidate_sha256": "d7d0359aa1ad8b27b7da34a7c1a7f8e3a130fc4f9afafd5561d4fd1bbbc53879",
+        "files": [
+          {
+            "path": "evidence/science-title-reconciliation.json",
+            "sha256": "963d646cfe172f36af26955672d4b203716723f5a5ffd8b222bd94ed083b9cfd"
+          }
+        ],
+        "conclusion": "Science title-format discrepancies resolved by the actual official-directory comparison and explicit type exclusions; original coverage remains unchanged.",
+        "storage_files": [
+          {
+            "path": "evidence/science-title-reconciliation.json",
+            "sha256": "963d646cfe172f36af26955672d4b203716723f5a5ffd8b222bd94ed083b9cfd"
+          }
+        ]
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 271,
+  "author_available_count": 274,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -2587,8 +2648,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 768,
-      "publisher_verified_inventory_count": 768,
+      "candidate_count": 770,
+      "publisher_verified_inventory_count": 770,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -2843,13 +2904,22 @@
           "publisher_verified_inventory_count": 48,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "Nature",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Science",
-      "candidate_count": 321,
-      "publisher_verified_inventory_count": 321,
+      "candidate_count": 365,
+      "publisher_verified_inventory_count": 365,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3095,13 +3165,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "Science",
+          "candidate_count": 44,
+          "publisher_verified_inventory_count": 44,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1694,
-      "publisher_verified_inventory_count": 1692,
+      "candidate_count": 1724,
+      "publisher_verified_inventory_count": 1722,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3347,13 +3426,22 @@
           "publisher_verified_inventory_count": 30,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "NC",
+          "candidate_count": 30,
+          "publisher_verified_inventory_count": 30,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 26,
-      "publisher_verified_inventory_count": 26,
+      "candidate_count": 27,
+      "publisher_verified_inventory_count": 27,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -3597,6 +3685,15 @@
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "NMI",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -3851,13 +3948,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 88,
-      "publisher_verified_inventory_count": 88,
+      "candidate_count": 89,
+      "publisher_verified_inventory_count": 89,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4103,13 +4209,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "PRX",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 717,
-      "publisher_verified_inventory_count": 717,
+      "candidate_count": 727,
+      "publisher_verified_inventory_count": 727,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4353,6 +4468,15 @@
           "journal": "PRL",
           "candidate_count": 26,
           "publisher_verified_inventory_count": 26,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "PRL",
+          "candidate_count": 15,
+          "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4607,13 +4731,22 @@
           "publisher_verified_inventory_count": 39,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 834,
-      "publisher_verified_inventory_count": 834,
+      "candidate_count": 850,
+      "publisher_verified_inventory_count": 850,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4857,6 +4990,15 @@
           "journal": "PNAS",
           "candidate_count": 29,
           "publisher_verified_inventory_count": 29,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "PNAS",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5111,13 +5253,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 386,
-      "publisher_verified_inventory_count": 386,
+      "candidate_count": 388,
+      "publisher_verified_inventory_count": 388,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5363,13 +5514,22 @@
           "publisher_verified_inventory_count": 11,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "PRResearch",
+          "candidate_count": 8,
+          "publisher_verified_inventory_count": 8,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 497,
-      "publisher_verified_inventory_count": 497,
+      "candidate_count": 502,
+      "publisher_verified_inventory_count": 502,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5615,13 +5775,22 @@
           "publisher_verified_inventory_count": 14,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "PRE",
+          "candidate_count": 11,
+          "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 101,
-      "publisher_verified_inventory_count": 101,
+      "candidate_count": 102,
+      "publisher_verified_inventory_count": 102,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5867,13 +6036,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "Chaos",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 80,
-      "publisher_verified_inventory_count": 80,
+      "candidate_count": 81,
+      "publisher_verified_inventory_count": 81,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6074,34 +6252,43 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-29",
+          "window_end": "2026-10-30",
+          "journal": "NP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 6387,
+  "candidate_count": 6500,
   "screening_counts": {
-    "excluded": 6116,
-    "core": 244,
+    "excluded": 6226,
+    "core": 247,
     "transferable_application": 27,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 271
+    "included": 274
   },
-  "published_count": 228,
-  "accepted_count": 43,
+  "published_count": 232,
+  "accepted_count": 42,
   "latest_update": {
-    "run": "reports/runs/2026-10-28-to-29-01",
-    "reviewed_at": "2026-10-29T06:53:48.144651+00:00",
+    "run": "reports/runs/2026-10-29-to-30-01",
+    "reviewed_at": "2026-10-30T06:57:58.885028+00:00",
     "newly_included_count": 4,
     "newly_included_dois": [
-      "10.1073/pnas.2610932123",
-      "10.1103/4vx7-ngvv",
-      "10.1103/dgxp-yq1g",
-      "10.1103/wf4x-hfmj"
+      "10.1038/s41467-026-79034-2",
+      "10.1073/pnas.2602186123",
+      "10.1103/j6ms-bh2v",
+      "10.1126/science.ael6230"
     ],
     "accepted_to_published_count": 1,
     "accepted_to_published_dois": [
-      "10.1103/4kcg-z9v2"
+      "10.1103/c8kc-rklj"
     ]
   },
   "candidate_inventory_complete": false,
@@ -6112,6 +6299,381 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1126/science.ael6230",
+      "url": "https://doi.org/10.1126/science.ael6230",
+      "title": "Darwin’s atom split",
+      "authors": [
+        "Alexander Bates"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "612e60aac63f518de2fd02e847427540139a257ab36ea55550f825fac7af52a4",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fscience.ael6230",
+      "author_retrieved_at": "2026-10-30T03:02:58.651200+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science",
+      "journal_short": "Science",
+      "issns": [
+        "0036-8075",
+        "1095-9203"
+      ],
+      "date": "2026-10-29",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-29",
+        "basis": "published-print",
+        "publication_status": "published",
+        "published_date": "2026-10-29",
+        "sources": [
+          "https://www.science.org/doi/10.1126/science.ael6230"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-29",
+      "article_type": "Essay",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Essay",
+        "basis": "Official article header and actual short-comment reading."
+      },
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "A scientific essay discusses local feedback, propagation influence and distributed sensorimotor modules in the fly connectome.",
+      "note_zh": "科学短评讨论果蝇连接组的局部反馈、传播影响与分布式感觉运动模块。",
+      "scope_authority": "assistant_online_short_comment_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "eee5c775725c028da8071664cb3f4b219ff83cef6d4fc4c410b233ba2d65c962",
+      "input_sha256": "d9961e25450781a00123371e507ce54600d0953c1c0e43c4610ba226fde4fb64",
+      "material_sha256": null,
+      "review_evidence_kind": "online_short_comment",
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "review_evidence_sha256": "834ddd867f5bedb503e75bb7a6350fbdb31e2625f02e6436d1ddf146a6c42ab1",
+      "rule_sha256": "bbb9114a657a83d74009c51042f0dc6d94e72749e67e43655d832d4aa2107f5f",
+      "featured": "Science",
+      "evidence": [
+        "Actual individual material/type reading supports the recorded scope judgment; see reason and bound evidence."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fscience.ael6230",
+      "evidence_url": "https://www.science.org/doi/10.1126/science.ael6230",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/j6ms-bh2v",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/j6ms-bh2v",
+      "title": "Robustness of synchronized topological signals in higher-order Kuramoto dynamics",
+      "authors": [
+        "Palash Kumar Pal",
+        "Dibakar Ghosh"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "073a3ef7d1136cd377f5ceff251051f89262f32cf5563f21686f113a019ec31c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fj6ms-bh2v",
+      "author_retrieved_at": "2026-10-30T03:02:55.104041+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-10-29",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-29",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/j6ms-bh2v"
+        ],
+        "accepted_date": "2026-10-29"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-10-29",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "Actually read explicit matching abstract establishes an original research problem, model/method, analysis and results; no special-type cue or conflict in official target evidence.",
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "8b22875703cb23ea37c35962dfe91bbeba8310da56b71a631c9b3731d74a13b7",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/j6ms-bh2v"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Studies robustness and projected responses of synchronized topological signals in higher-order Kuramoto dynamics; currently accepted.",
+      "note_zh": "研究高阶 Kuramoto 动力学中拓扑信号同步的鲁棒性及投影响应；当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8db143ff31b639464a14694f30a332583ffb583e462fcbe76ec0fc53f0d4dc32",
+      "input_sha256": "366b80d04a08d73c5caf211417de52fb3aa021013a8f54ff6ddc56074dffcaa4",
+      "material_sha256": "8b22875703cb23ea37c35962dfe91bbeba8310da56b71a631c9b3731d74a13b7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "8b22875703cb23ea37c35962dfe91bbeba8310da56b71a631c9b3731d74a13b7",
+      "rule_sha256": "bbb9114a657a83d74009c51042f0dc6d94e72749e67e43655d832d4aa2107f5f",
+      "featured": null,
+      "evidence": [
+        "Actual individual material/type reading supports the recorded scope judgment; see reason and bound evidence."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fj6ms-bh2v",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/j6ms-bh2v",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/c8kc-rklj",
+      "url": "https://doi.org/10.1103/c8kc-rklj",
+      "title": "Nonequilibrium theory for molecular machine design",
+      "authors": [
+        "Ying-Jen Yang",
+        "Ken A. Dill"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0f13ff119bd091d3efca3ef9dab82a70703bb293c9b514b21fe1a83b5e94277d",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fc8kc-rklj",
+      "author_retrieved_at": "2026-10-30T03:02:51.665647+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-10-29",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-29",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-29",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/c8kc-rklj"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-02",
+      "published_date": "2026-10-29",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "Actually read explicit matching abstract establishes an original research problem, model/method, analysis and results; no special-type cue or conflict in official target evidence.",
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "3c06d5569035b2f2c49e8296877f61d3a855b283c4670b31aab1442c1c9ea587",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/c8kc-rklj"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Designs molecular machines through steady flows on Markov networks and analyzes nonequilibrium performance trade-offs; updated from accepted to published.",
+      "note_zh": "用 Markov 网络的稳态流设计分子机器，分析非平衡驱动与性能权衡；本轮由接收稿更新为正式发表。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "bbade67b122a8db2b8eb5e28e92468d77123206dfea894a04df4d21f165c4110",
+      "input_sha256": "d5d6055d13eacd86670dfdc9cc19c573e984ae9e05302d6c00221289580c93d4",
+      "material_sha256": "3c06d5569035b2f2c49e8296877f61d3a855b283c4670b31aab1442c1c9ea587",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3c06d5569035b2f2c49e8296877f61d3a855b283c4670b31aab1442c1c9ea587",
+      "rule_sha256": "bbb9114a657a83d74009c51042f0dc6d94e72749e67e43655d832d4aa2107f5f",
+      "featured": null,
+      "evidence": [
+        "Actual individual material/type reading supports the recorded scope judgment; see reason and bound evidence."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fc8kc-rklj",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/c8kc-rklj",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-02",
+        "published_date": "2026-10-29",
+        "previous_run": "reports/runs/2026-10-01-to-05-01",
+        "source_run": "reports/runs/2026-10-29-to-30-01",
+        "audit_sha256": "58f97e44056b56befd2b7022f391ddd33808455c826aabf99803949c6e54c9c4",
+        "previous_assessment_sha256": "0ff02c742759247a82c1f46dab352b7d592c25f16c1eac2237c71b8d299350b6",
+        "assessment_sha256": "bbade67b122a8db2b8eb5e28e92468d77123206dfea894a04df4d21f165c4110"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2602186123",
+      "url": "https://doi.org/10.1073/pnas.2602186123",
+      "title": "Potential energy landscape networks of confined vortex matter",
+      "authors": [
+        "Xiaoyu Ma",
+        "Wenzhao Li",
+        "Dipanjan Ray",
+        "Zoltán Toroczkai",
+        "Boldizsár Jankó"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "a826bac6de300d6f5ba5fa2bfb9173df08e0f800cfdef02f1c2e6a30e64a1177",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2602186123",
+      "author_retrieved_at": "2026-10-30T03:02:53.336191+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-10-29",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-29",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-29",
+        "sources": [
+          "https://www.pnas.org/doi/10.1073/pnas.2602186123"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-29",
+      "article_type": "RESEARCH ARTICLE",
+      "type_provenance": {
+        "status": "verified",
+        "value": "RESEARCH ARTICLE",
+        "basis": "Observed official directory type; subtype not independently claimed when absent."
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Maps confined-vortex minima and transition states to energy-landscape networks, linking deep cores, geometric confinement and stable configurations.",
+      "note_zh": "把受限涡旋的亚稳态与过渡态映射为能量景观网络，连接深核、几何约束和稳定构型。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "1f32b1d0e1335b9c4d3644729e9b5921598a90842c59218e9cc22d8afb287655",
+      "input_sha256": "ec73fcdbe1fd0cf7b4b717a9702f6a754cebfeb6a94e4e34a95dac3072241bd4",
+      "material_sha256": "7406067ae57e86c0d5e28e317d50c00ca1c0a2cace98c482403d87bd5b0c0422",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "7406067ae57e86c0d5e28e317d50c00ca1c0a2cace98c482403d87bd5b0c0422",
+      "rule_sha256": "bbb9114a657a83d74009c51042f0dc6d94e72749e67e43655d832d4aa2107f5f",
+      "featured": "PNAS",
+      "evidence": [
+        "Actual individual material/type reading supports the recorded scope judgment; see reason and bound evidence."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2602186123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2602186123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-79034-2",
+      "url": "https://doi.org/10.1038/s41467-026-79034-2",
+      "title": "Exaiptasia diaphana core microbiome members are lost under climate change conditions despite host thermal tolerance",
+      "authors": [
+        "Kaden Muffett",
+        "Stephen Williams",
+        "Sophia MacVittie",
+        "Mara JW Schwiesow",
+        "Susan Arechiga Mendoza",
+        "Salma Arechiga Mendoza",
+        "Hailey Hatch-West",
+        "E. Maggie Sogin"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "6f7c09ec5fbf1efdc75ca3d4b0667b276518a4a5305d4d0c5f9fa26e58fb86e3",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79034-2",
+      "author_retrieved_at": "2026-10-30T03:02:56.915021+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-10-29",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-10-29",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-10-29",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-79034-2"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-10-29",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Observed official directory type; subtype not independently claimed when absent."
+      },
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Examines microbial association-network reorganization and hub shifts under heat stress in sea anemones; associations do not establish causality.",
+      "note_zh": "分析热应激下海葵微生物关联网络的重组与枢纽变化；关联结构不构成因果证据。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "4058da3ae77e699f3cf458d7daf92c1cfc051a3896bdde4ea0955bcd4a490c4d",
+      "input_sha256": "5c199895dc1571650117cfbcda2b45a534b953a88103612179c0ee6f3d4901cc",
+      "material_sha256": "5463ec588126a49c5bf4a2a029e58e88e8921c42a91adb940a41262c2480a5c4",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "5463ec588126a49c5bf4a2a029e58e88e8921c42a91adb940a41262c2480a5c4",
+      "rule_sha256": "bbb9114a657a83d74009c51042f0dc6d94e72749e67e43655d832d4aa2107f5f",
+      "featured": "NC",
+      "evidence": [
+        "Actual individual material/type reading supports the recorded scope judgment; see reason and bound evidence."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79034-2",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-79034-2",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/wf4x-hfmj",
       "url": "https://journals.aps.org/pre/accepted/10.1103/wf4x-hfmj",
@@ -16404,81 +16966,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/ycf8-4sz5",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/ycf8-4sz5",
-      "title": "Evaluating criteria for bubbling in coupled chaotic oscillators",
-      "authors": [
-        "Giulio Tirabassi",
-        "Raul de Palma Aristides",
-        "Cristina Masoller",
-        "Daniel J. Gauthier"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "82437134db0ce750cd8c44fcb973b02c32d2d7915e09f6f49ec1ef290ee1c475",
-      "author_source_url": "https://journals.aps.org/prresearch/accepted/10.1103/ycf8-4sz5",
-      "author_retrieved_at": "2026-10-07T02:58:56.807Z",
-      "author_basis": "publisher visible complete byline; title, DOI and journal ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-10-06",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-06",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "issues_retained": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-06",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "93c10ddd3873dea033c44754faa378ce3c6825b36d1753a870b95fee398f8e27",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "摘要明确提出同步稳定问题、多个判据及有限时间模拟比较，为原创研究；未见特殊类型线索。",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/ycf8-4sz5"
-        ]
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Bubbling criteria compare synchronization thresholds for coupled chaotic oscillators under small heterogeneity and noise.",
-      "note_zh": "比较小异质性和噪声引发 bubbling 时，耦合混沌振子的同步阈值判据。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "2370dce81cbd28d016a45dc027dc43b14e577782ae98d83a314893565e8f7e47",
-      "input_sha256": "ef43d4f34f4f50f1452aa596ada24346848043196a631648116eb1e427fd523b",
-      "material_sha256": "93c10ddd3873dea033c44754faa378ce3c6825b36d1753a870b95fee398f8e27",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "93c10ddd3873dea033c44754faa378ce3c6825b36d1753a870b95fee398f8e27",
-      "rule_sha256": "840a89fde5dd207ea7bac2c0803b908c6ad191699d6b6385adb4ec32b451a47f",
-      "featured": null,
-      "evidence": [
-        "Bubbling criteria predict finite time synchronization thresholds in coupled Rossler and Lorenz oscillators."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fycf8-4sz5",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/ycf8-4sz5",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1073/pnas.2612387123",
       "url": "https://doi.org/10.1073/pnas.2612387123",
       "title": "Selective sparsity–enhanced synchronization in disordered semiconductor laser networks",
@@ -17793,83 +18280,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fcbwg-5nw6",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/cbwg-5nw6",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/c8kc-rklj",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/c8kc-rklj",
-      "title": "Nonequilibrium theory for molecular machine design",
-      "authors": [
-        "Ying-Jen Yang",
-        "Ken A. Dill"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "619f2dafce51a5fa85b3e00c8b8d65c7a99d5c62d857fa97cf8e3523c52551f9",
-      "author_source_url": "https://journals.aps.org/prresearch/accepted/10.1103/c8kc-rklj",
-      "author_retrieved_at": "2026-10-05T06:48:47.792679+00:00",
-      "author_basis": "publisher visible full accepted-paper byline; normal browser; DOI/title/whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-10-02",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-02",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "publisher_dates": [
-          "2026-10-02"
-        ],
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/c8kc-rklj"
-        ]
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-02",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "eb6c5298fab5cdc87fb43c2cd56491124b6b7b5f6b76877a9653ef3d45916820",
-        "basis": "明确摘要提出CFT Design并给出多系统设计优化结果，主要贡献为网络非平衡流理论；无特殊类型线索。",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/c8kc-rklj"
-        ]
-      },
-      "categories": [
-        "network_resilience"
-      ],
-      "scope_class": "core",
-      "note_en": "A nonequilibrium flow-design framework incorporates Markov-network topology and cost–benefit trade-offs to optimize molecular motors, proofreading and enzyme inhibition.",
-      "note_zh": "将 Markov 网络拓扑和成本收益权衡纳入非平衡流设计，用于分子马达、校对机制和酶抑制优化。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "0ff02c742759247a82c1f46dab352b7d592c25f16c1eac2237c71b8d299350b6",
-      "input_sha256": "af808d1ef65d993236ffbe8b8364bdce23bfb92bf808a246fc45503e17c33573",
-      "material_sha256": "eb6c5298fab5cdc87fb43c2cd56491124b6b7b5f6b76877a9653ef3d45916820",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "eb6c5298fab5cdc87fb43c2cd56491124b6b7b5f6b76877a9653ef3d45916820",
-      "rule_sha256": "e73b62366608c44854fc4d8a1abb2c55b762ef9baafaa6c3520b0ce1c6185c18",
-      "featured": null,
-      "evidence": [
-        "A general Markov-network flow-design framework accounts for topology, misflows and cost-benefit tradeoffs in molecular machines."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fc8kc-rklj",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/c8kc-rklj",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -28250,9 +28660,137 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "a5983deaaaa19950e7410783650d6abcd5e3d8c8877299d37b587a42ecc9dff0"
+    },
+    {
+      "current_run": "reports/runs/2026-10-29-to-30-01",
+      "candidate_sha256": "d7d0359aa1ad8b27b7da34a7c1a7f8e3a130fc4f9afafd5561d4fd1bbbc53879",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd"
+      },
+      "counts": {
+        "in_window": 130,
+        "newly_reviewed": 113,
+        "historically_reviewed": 116,
+        "state_updates": 16,
+        "categories": {
+          "excluded": 125,
+          "core": 5
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "58f97e44056b56befd2b7022f391ddd33808455c826aabf99803949c6e54c9c4"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1073/pnas.2602186123",
+      "recommended_on": "2026-10-30",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-29-to-30-01",
+      "publication_sha256": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+      "assessment_sha256": "1f32b1d0e1335b9c4d3644729e9b5921598a90842c59218e9cc22d8afb287655",
+      "input_sha256": "ec73fcdbe1fd0cf7b4b717a9702f6a754cebfeb6a94e4e34a95dac3072241bd4",
+      "evidence_sha256": "7406067ae57e86c0d5e28e317d50c00ca1c0a2cace98c482403d87bd5b0c0422",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-30T06:51:40.087699+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2602186123",
+        "title": "Potential energy landscape networks of confined vortex matter",
+        "sha256": "50b9cf86b6d99cb3fab2c62e69b5da69d821dfb1a98cfacc55831f61455d598e",
+        "version": "PNAS publisher Version of Record, published 2026-10-29",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2602186123",
+        "source_kind": "user_provided_pdf",
+        "pages": 7,
+        "read_scope": "Complete seven-page main article, Results, Methods 2.1-2.4, conclusion, references and Figures 1-4 with captions; rendered checks of pages 1, 3-6. Separate SI not read; no independent reproduction.",
+        "reviewed_at": "2026-10-30T06:51:40.087699+00:00"
+      },
+      "question": {
+        "zh": "能量景观如何变成网络，帮助理解受限粒子系统的稳定性？",
+        "en": "How can energy-landscape networks help explain stability in confined particle systems?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为网络的节点是完整的亚稳态构型，而非单个涡旋；先选对状态空间，才谈结构与稳定性的联系。",
+          "可借鉴的是把 k-core 分层、度信息量和升温模拟放在一起对照。深核包含基态是文中系统的经验结果，不能当作任意能量景观的定理。"
+        ],
+        "en": [
+          "The useful move is to make entire metastable configurations the nodes, rather than individual vortices. Choosing the state space makes the structural question precise.",
+          "Compare k-core shells and degree information with heating simulations. Ground-state membership in the deepest core is an observation in the studied systems, not a theorem for arbitrary landscapes."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "选对网络对象",
+            "en": "Choose the network object"
+          },
+          "text": {
+            "zh": "局部能量极小值作节点，一级鞍点连接状态；这种映射把高维构型问题转为可分析的状态网络。",
+            "en": "Local energy minima become nodes and first-order saddles connect states, turning a high-dimensional configuration problem into an analyzable state network."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较结构与物理稳定性",
+            "en": "Compare structure with stability"
+          },
+          "text": {
+            "zh": "将 k-core、度信息量与熔化模拟并置，检查几何、粒子数和约束强度如何共同改变稳定构型。",
+            "en": "Juxtapose k-core structure, degree information and melting simulations to examine how geometry, particle number and confinement jointly change stable configurations."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留模型边界",
+            "en": "Keep the model boundary"
+          },
+          "text": {
+            "zh": "固定粒子数的 London 点涡旋与硬壁约束给出具体适用条件；强约束下的稳定序列不能只从对称性猜测。",
+            "en": "Fixed-number London point vortices and hard walls define the model scope; under strong confinement, symmetry alone cannot identify the stable sequence."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究状态空间网络、网络结构与动力学、能量景观及受限多体系统的读者。",
+        "en": "Readers studying state-space networks, network structure and dynamics, energy landscapes and confined many-body systems."
+      },
+      "reading_caveat": {
+        "zh": "已读用户提供的正式出版版 7 页全文、结果、方法 2.1–2.4、结论、参考文献及图 1–4，并查看渲染页。独立补充材料未读，未独立复现。结果限于文中点涡旋与约束模型；深核与基态的联系不是普适保证。",
+        "en": "Read the user-provided seven-page publisher article, including Results, Methods 2.1-2.4, conclusion, references and Figures 1-4, with rendered-page checks. Separate supporting information was not read and results were not independently reproduced. Findings concern the studied point-vortex confinement models; deep-core membership does not universally guarantee the ground state."
+      }
+    },
     {
       "doi": "10.1073/pnas.2610932123",
       "recommended_on": "2026-10-29",
@@ -31979,6 +32517,84 @@
       }
     },
     {
+      "doi": "10.1073/pnas.2602186123",
+      "recommended_on": "2026-10-30",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-10-29-to-30-01",
+      "publication_sha256": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+      "assessment_sha256": "1f32b1d0e1335b9c4d3644729e9b5921598a90842c59218e9cc22d8afb287655",
+      "input_sha256": "ec73fcdbe1fd0cf7b4b717a9702f6a754cebfeb6a94e4e34a95dac3072241bd4",
+      "evidence_sha256": "7406067ae57e86c0d5e28e317d50c00ca1c0a2cace98c482403d87bd5b0c0422",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-10-30T06:51:40.087699+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2602186123",
+        "title": "Potential energy landscape networks of confined vortex matter",
+        "sha256": "50b9cf86b6d99cb3fab2c62e69b5da69d821dfb1a98cfacc55831f61455d598e",
+        "version": "PNAS publisher Version of Record, published 2026-10-29",
+        "source_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2602186123",
+        "source_kind": "user_provided_pdf",
+        "pages": 7,
+        "read_scope": "Complete seven-page main article, Results, Methods 2.1-2.4, conclusion, references and Figures 1-4 with captions; rendered checks of pages 1, 3-6. Separate SI not read; no independent reproduction.",
+        "reviewed_at": "2026-10-30T06:51:40.087699+00:00"
+      },
+      "question": {
+        "zh": "能量景观如何变成网络，帮助理解受限粒子系统的稳定性？",
+        "en": "How can energy-landscape networks help explain stability in confined particle systems?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为网络的节点是完整的亚稳态构型，而非单个涡旋；先选对状态空间，才谈结构与稳定性的联系。",
+          "可借鉴的是把 k-core 分层、度信息量和升温模拟放在一起对照。深核包含基态是文中系统的经验结果，不能当作任意能量景观的定理。"
+        ],
+        "en": [
+          "The useful move is to make entire metastable configurations the nodes, rather than individual vortices. Choosing the state space makes the structural question precise.",
+          "Compare k-core shells and degree information with heating simulations. Ground-state membership in the deepest core is an observation in the studied systems, not a theorem for arbitrary landscapes."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "选对网络对象",
+            "en": "Choose the network object"
+          },
+          "text": {
+            "zh": "局部能量极小值作节点，一级鞍点连接状态；这种映射把高维构型问题转为可分析的状态网络。",
+            "en": "Local energy minima become nodes and first-order saddles connect states, turning a high-dimensional configuration problem into an analyzable state network."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较结构与物理稳定性",
+            "en": "Compare structure with stability"
+          },
+          "text": {
+            "zh": "将 k-core、度信息量与熔化模拟并置，检查几何、粒子数和约束强度如何共同改变稳定构型。",
+            "en": "Juxtapose k-core structure, degree information and melting simulations to examine how geometry, particle number and confinement jointly change stable configurations."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留模型边界",
+            "en": "Keep the model boundary"
+          },
+          "text": {
+            "zh": "固定粒子数的 London 点涡旋与硬壁约束给出具体适用条件；强约束下的稳定序列不能只从对称性猜测。",
+            "en": "Fixed-number London point vortices and hard walls define the model scope; under strong confinement, symmetry alone cannot identify the stable sequence."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究状态空间网络、网络结构与动力学、能量景观及受限多体系统的读者。",
+        "en": "Readers studying state-space networks, network structure and dynamics, energy landscapes and confined many-body systems."
+      },
+      "reading_caveat": {
+        "zh": "已读用户提供的正式出版版 7 页全文、结果、方法 2.1–2.4、结论、参考文献及图 1–4，并查看渲染页。独立补充材料未读，未独立复现。结果限于文中点涡旋与约束模型；深核与基态的联系不是普适保证。",
+        "en": "Read the user-provided seven-page publisher article, including Results, Methods 2.1-2.4, conclusion, references and Figures 1-4, with rendered-page checks. Separate supporting information was not read and results were not independently reproduced. Findings concern the studied point-vortex confinement models; deep-core membership does not universally guarantee the ground state."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -32058,5 +32674,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "650e768608b113031747be0f3df1bb5ed2a242010070d18486ca66f3579f11a2"
+  "daily_suggestions_sha256": "5760ec6801a9a3e9755277d62cf59d9ed681bebacb66c5caf7cc896fc3cb98f7"
 }

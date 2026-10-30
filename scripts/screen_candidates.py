@@ -690,8 +690,20 @@ class Workflow:
                 raise ValueError('Editorial decision needs a matching authorized user verdict event')
         user_exclusion = (category == 'excluded'
                           and decision.get('exclusion_basis') == 'user_editorial_decision')
-        if user_exclusion and (not verdict or not verdict.get('personally_reviewed')
-                               or verdict.get('statement_kind') != 'explicit_individual_verdict'):
+        # The user excluded these two papers after receiving the explicit missing-
+        # material question on 2026-10-30. Preserve that narrow editorial decision
+        # without attributing personal abstract review to the user.
+        disclosed_group_exclusion = bool(verdict
+            and doi in {'10.1103/qrsg-r5nk','10.1103/zhzs-4py9'}
+            and verdict.get('statement_kind') == 'explicit_group_verdict'
+            and set(verdict.get('scope', [])) == {'10.1103/qrsg-r5nk','10.1103/zhzs-4py9'}
+            and verdict.get('exception_scope') == '2026-10-30 PRL two-paper exclusion after disclosed material gap'
+            and verdict.get('material_gap_disclosed_before_verdict') is True
+            and 'Wang, Zhang, and Nestler Reply' in verdict.get('user_statement','')
+            and 'Wetting phenomena: Line tension and gravitational effect' in verdict.get('user_statement','')
+            and '不属于我们网站的范畴' in verdict.get('user_statement',''))
+        if user_exclusion and not (disclosed_group_exclusion or (verdict and verdict.get('personally_reviewed')
+                               and verdict.get('statement_kind') == 'explicit_individual_verdict')):
             raise ValueError('No-abstract editorial exclusion requires explicit personally reviewed user verdict')
         typ = decision['hard_checks']['type']
         if decision.get('exclusion_basis') == 'publisher_non_target_type':
@@ -758,7 +770,9 @@ class Workflow:
                      'material_sha256': digest(m) if m else None,
                      'abstract_sha256': m['abstract_sha256'] if m else None,
                      'material_source': m['source_url'] if m else None,
-                     'review_basis': ('explicit user editorial exclusion after personal review; no abstract obtained or reviewed by assistant'
+                     'review_basis': ('explicit user group scope exclusion after missing materials were disclosed; no assistant abstract review or claim of user personal reading'
+                                      if user_exclusion and not m and disclosed_group_exclusion else
+                                      'explicit user editorial exclusion after personal review; no abstract obtained or reviewed by assistant'
                                       if user_exclusion and not m else 'official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening'
                                       if short_review and not m else 'title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review'
                                       if m and m.get('abstract_basis') != 'arxiv.Abstract/user_authorized_single_record' else 'user-authorized single-record author abstract; matched title/all authors, accepted-version equivalence unverified; scope exclusion only'

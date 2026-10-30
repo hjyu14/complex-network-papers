@@ -90,6 +90,45 @@ class ReviewCollectionTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'duplicate DOI'):
                 attach_reviews(self.artifacts, root)
 
+    def test_daily_increment_requires_pinned_source_count_and_checked_cutoff(self):
+        config = json.loads((ROOT/'config/review-collection.json').read_text(encoding='utf8'))
+        record = copy.deepcopy(json.loads((ROOT/config['source']['path']).read_text(encoding='utf8'))['records'][0])
+        # Synthetic bibliography, never a real screening decision or release input.
+        record['paper'].update(doi='10.1000/synthetic-daily-review',
+                               doi_url='https://doi.org/10.1000/synthetic-daily-review',
+                               date='2026-10-29', published_date='2026-10-29')
+        from run_inputs import digest
+        record['sha256'] = digest({k:v for k,v in record.items() if k != 'sha256'})
+        daily = {'version':'editorial-review-collection-1', 'records':[record],
+                 'limitations':['Synthetic daily increment for a test.']}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); (root/'config').mkdir()
+            for source in [config['source'], *config['supplemental_sources']]:
+                target = root/source['path']; target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes((ROOT/source['path']).read_bytes())
+            path = 'reports/reviews/pr-rmp-daily-synthetic/evidence/collection.json'
+            target = root/path; target.parent.mkdir(parents=True)
+            target.write_text(json.dumps(daily), encoding='utf8')
+            pin = {'path':path, 'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
+            config['incremental_sources'] = [pin]
+            cfg = root/'config/review-collection.json'
+            cfg.write_text(json.dumps(config), encoding='utf8')
+            with self.assertRaisesRegex(ValueError, 'count or duplicate DOI'):
+                attach_reviews(self.artifacts, root)
+            config['count'] += 1
+            cfg.write_text(json.dumps(config), encoding='utf8')
+            with self.assertRaisesRegex(ValueError, 'date outside'):
+                attach_reviews(self.artifacts, root)
+            config['cutoff_date'] = '2026-10-29'
+            cfg.write_text(json.dumps(config), encoding='utf8')
+            result = attach_reviews(self.artifacts, root)['reviews.json']
+            self.assertEqual(result['total_count'], 85)
+            self.assertEqual(result['incremental_sources'], [pin])
+            self.assertIn(record['paper']['doi'], {p['doi'] for p in result['papers']})
+            target.write_bytes(target.read_bytes()+b' ')
+            with self.assertRaisesRegex(ValueError, 'source changed'):
+                attach_reviews(self.artifacts, root)
+
 
 if __name__ == '__main__':
     unittest.main()

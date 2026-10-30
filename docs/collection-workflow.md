@@ -4,6 +4,8 @@
 
 每次采集单独使用 `reports/runs/<run-id>/`。日期窗口（含首尾）、ISSN、官方目录和请求预算取自 `config/sources.json`；`--journals` 指定本轮期刊子集，不把未选期刊算成缺口。新轮保存 `inputs/sources.json`、`inputs/screening-protocol.md` 和哈希清单，后续恢复读取这些冻结输入。
 
+日常更新范围包括 `journals` 普通文献白名单和 `review_journals` 的 PR（Physics Reports）／RMP（Reviews of Modern Physics）综述白名单。两刊仅在每周一（Asia/Shanghai）按 [综述馆藏的周检流程](review-collection.md#每周一-prrmp-综述增量) 独立检查官方最新目录、分页边界和在线文章，实际逐篇审读符合现行网络科学定义的综述并接入综述页；普通采集器不会自动读取 `review_journals`，不能用普通轮已完成或历史选集已补齐代替周检；其他日期不要求两刊检查，也不以未完成综述检查阻断普通日更。恢复旧轮继续使用冻结输入，另立本次综述检查记录，不回写旧轮扩充白名单。
+
 
 ```powershell
 python scripts/collect_candidates.py --out reports/runs/example-run --as-of 2026-10-05 --window-start 2026-10-01 --window-end 2026-10-05

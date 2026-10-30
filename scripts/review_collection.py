@@ -1,4 +1,4 @@
-"""Build the explicitly selected historical review collection, without network access."""
+"""Build pinned historical and daily review selections, without network access."""
 import hashlib
 import json
 from datetime import date
@@ -15,7 +15,8 @@ def attach_reviews(artifacts, root=ROOT):
     if not config_path.exists():
         return artifacts
     config = json.loads(config_path.read_text(encoding='utf8'))
-    sources = [config['source'], *config.get('supplemental_sources', [])]
+    sources = [config['source'], *config.get('supplemental_sources', []),
+               *config.get('incremental_sources', [])]
     rows, limitations = [], []
     for source in sources:
         path = (root/Path(source['path'])).resolve()
@@ -73,6 +74,8 @@ def attach_reviews(artifacts, root=ROOT):
     result = {**artifacts, 'reviews.json': {
         'version': 'review-collection-1', 'source': config['source'],
         'supplemental_sources': config.get('supplemental_sources', []),
+        **({'incremental_sources': config['incremental_sources']}
+           if config.get('incremental_sources') else {}),
         'selection_count': len(rows), 'start_date': config['start_date'],
         'cutoff_date': config['cutoff_date'], 'papers': papers,
         'current_collection_dois': current_dois,

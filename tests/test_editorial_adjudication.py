@@ -116,6 +116,25 @@ class EditorialAdjudicationTests(unittest.TestCase):
         d=self.exclusion(v);d['editorial_basis']['verdict_sha256']='wrong'
         with self.assertRaisesRegex(ValueError,'matching authorized'):self.w.decide(d)
 
+    def test_disclosed_prl_group_exclusion_is_narrow_and_does_not_claim_reading(self):
+        scope=['10.1103/qrsg-r5nk','10.1103/zhzs-4py9']
+        def group_verdict():
+            return self.verdict(personally_reviewed=False,statement_kind='explicit_group_verdict',
+                scope=scope,material_gap_disclosed_before_verdict=True,
+                exception_scope='2026-10-30 PRL two-paper exclusion after disclosed material gap',
+                user_statement='PRL《Wang, Zhang, and Nestler Reply》及《Comment on “Wetting phenomena: Line tension and gravitational effect”》不属于我们网站的范畴。')
+        v=group_verdict();self.w.log.add('user_editorial_verdict',v)
+        with self.assertRaisesRegex(ValueError,'personally reviewed'):
+            self.w.decide(self.exclusion(v))
+        # Retarget this synthetic fixture only; no production candidate is changed.
+        self.r['doi']=scope[0];self.w.records={scope[0]:self.r}
+        self.w.log.events[0]['data']['batch_dois']=[scope[0]]
+        self.w.log.events[1]['data']['doi']=scope[0]
+        v=group_verdict();self.w.log.add('user_editorial_verdict',v)
+        self.w.decide(self.exclusion(v));d=self.w.assessments()[0]
+        self.assertIsNone(d['material_sha256'])
+        self.assertIn('no assistant abstract review or claim of user personal reading',d['review_basis'])
+
     def test_user_inclusion_does_not_bypass_abstract_or_date_checks(self):
         v=self.verdict(verdict='include');self.w.log.add('user_editorial_verdict',v)
         d=self.decision();d['editorial_basis']={'verdict_sha256':s.digest(v)}

@@ -70,6 +70,14 @@ def validate_suggestions(config, papers, sources, *, as_of):
                 or source['decision']['input_sha256'] != entry['input_sha256']
                 or source['decision']['material_sha256'] != entry['evidence_sha256']):
             raise ValueError('Recommendation lacks matching published assessment/evidence')
+        publication = source['decision'].get('hard_checks', {}).get('date', {})
+        published = publication.get('published_date', publication.get('value'))
+        if (publication.get('status') != 'verified'
+                or publication.get('publication_status') != 'published'
+                or publication.get('basis', '').startswith('publisher.accepted')
+                or not published or date.fromisoformat(published).isoformat() != published
+                or published > day):
+            raise ValueError('Recommendation requires a verified formally published paper by its recommendation date')
         # Screening retains its original abstract binding; full-text reading is separate.
         screening_kind = entry['screening_evidence_kind'] if fulltext else entry['review_evidence_kind']
         if screening_kind not in {'abstract', 'abstract_excerpt'} or not entry['evidence_sha256']:
@@ -80,6 +88,10 @@ def validate_suggestions(config, papers, sources, *, as_of):
         current = entry is active[doi] and day == latest_date
         if current and doi not in papers:
             raise ValueError('The current suggestion must be in the reviewed public paper list')
+        if current and (papers[doi].get('publication_status') != 'published'
+                        or not papers[doi].get('published_date')
+                        or papers[doi]['published_date'] != published):
+            raise ValueError('Current recommendation must retain its verified published status and date')
         if current and (any(papers[doi].get(key) != entry[key] for key in
                             ('assessment_sha256', 'input_sha256'))
                         or papers[doi].get('review_evidence_kind') != screening_kind):
