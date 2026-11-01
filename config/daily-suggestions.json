@@ -1928,6 +1928,84 @@
         "zh": "已读用户提供的正式出版版 7 页全文、结果、方法 2.1–2.4、结论、参考文献及图 1–4，并查看渲染页。独立补充材料未读，未独立复现。结果限于文中点涡旋与约束模型；深核与基态的联系不是普适保证。",
         "en": "Read the user-provided seven-page publisher article, including Results, Methods 2.1-2.4, conclusion, references and Figures 1-4, with rendered-page checks. Separate supporting information was not read and results were not independently reproduced. Findings concern the studied point-vortex confinement models; deep-core membership does not universally guarantee the ground state."
       }
+    },
+    {
+      "doi": "10.1103/y353-z8sb",
+      "recommended_on": "2026-11-01",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-10-30-to-31-02",
+      "publication_sha256": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+      "assessment_sha256": "643567ec16b5e344baa85ee1e9ac167141090836a7a7197ebd4771a931fd0406",
+      "input_sha256": "58d19b6f8241bf50e5423580d2a40d6002bd0018bd2191b7a9728c9f79922861",
+      "evidence_sha256": "b7b02a15f9b766e7eefcb6235a2c0a2965c8c5fb34ce5b43adc570ac04f6ba72",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-01T02:00:42.813930+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/y353-z8sb",
+        "title": "Phase lags induce chaos in oscillator communities with higher-order interactions",
+        "sha256": "1fd272c0e8061e088d5975854167b306c1f7c73b33246e1310c6d47a666bd768",
+        "version": "Physical Review E publisher Version of Record, published 2026-10-30",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/y353-z8sb",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "read_scope": "Complete 11-page article: model, results, discussion, Appendix A1-A8, all 11 figure captions and references; rendered visual checks of pages 3, 6, 7 and 9. Separate supplements not read; no independent reproduction.",
+        "reviewed_at": "2026-11-01T02:00:42.813930+00:00"
+      },
+      "question": {
+        "zh": "高阶相互作用与社区结构如何让同步序参量出现混沌？",
+        "en": "How do higher-order interactions and community structure make synchronization order parameters chaotic?"
+      },
+      "reading_comment": {
+        "zh": [
+          "选择它，是因为相位滞后不仅改变同步程度，还能使两社区的宏观序参量在周期与混沌之间切换。",
+          "方法上值得借鉴的是：低维约化对照全系统，并用非对称扰动、双向扫参和 Lyapunov 谱检查稳定性，避免只看对称轨道。"
+        ],
+        "en": [
+          "Phase lags do more than change synchronization strength: they can move macroscopic two-community order parameters between periodic and chaotic behavior.",
+          "The useful workflow compares reduced and full systems, then checks stability with asymmetric perturbations, bidirectional parameter sweeps and Lyapunov spectra instead of relying on symmetric trajectories."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从微观耦合到宏观混沌",
+            "en": "From coupling to macroscopic chaos"
+          },
+          "text": {
+            "zh": "二体和三体耦合共享相位滞后，两社区的序参量产生周期、混沌与共存吸引子，明确区分个体振荡和集体动力学。",
+            "en": "Pairwise and triadic interactions share a phase lag; community order parameters exhibit periodicity, chaos and coexisting attractors, distinguishing individual oscillations from collective dynamics."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检查对称流形之外的稳定性",
+            "en": "Check stability beyond symmetry"
+          },
+          "text": {
+            "zh": "对称约化中的稳定轨道可能横向不稳定。加入非对称扰动、对照完整模型，为同步研究提供实用的稳定性核验思路。",
+            "en": "A trajectory stable within the symmetric reduction can be transversely unstable. Asymmetric perturbations and full-model comparisons offer a practical stability check."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把混沌和多稳态分开验证",
+            "en": "Test chaos and multistability separately"
+          },
+          "text": {
+            "zh": "Lyapunov 谱识别混沌和周期窗口，升降扫参与初值切片揭示共存；固定初值相图不能视为穷尽的吸引盆分类。",
+            "en": "Lyapunov spectra identify chaos and periodic windows; sweep direction and initial-condition slices expose coexistence. A fixed-initial-condition map does not exhaust all attraction basins."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究高阶网络同步、社区动力学、低维约化、分岔及多稳态的读者。",
+        "en": "Readers studying higher-order network synchronization, community dynamics, reduction, bifurcations and multistability."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版 11 页全文、附录 A1–A8、全部 11 幅图注和参考文献，并检查渲染页。未读独立补充材料，未独立复现。模型限于全连接两社区超图、共同相位滞后及 Lorentzian 频率分布；不能直接推广到任意稀疏网络。",
+        "en": "Read all 11 publisher pages, Appendix A1-A8, all 11 figure captions and references, with rendered-page checks. Separate supplements were not read and results were not independently reproduced. The model uses complete two-community hypergraphs, a shared phase lag and Lorentzian frequencies; arbitrary sparse networks are outside the demonstrated scope."
+      }
     }
   ],
   "revisions": [
