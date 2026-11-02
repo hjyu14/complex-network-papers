@@ -2006,6 +2006,84 @@
         "zh": "已读正式版 11 页全文、附录 A1–A8、全部 11 幅图注和参考文献，并检查渲染页。未读独立补充材料，未独立复现。模型限于全连接两社区超图、共同相位滞后及 Lorentzian 频率分布；不能直接推广到任意稀疏网络。",
         "en": "Read all 11 publisher pages, Appendix A1-A8, all 11 figure captions and references, with rendered-page checks. Separate supplements were not read and results were not independently reproduced. The model uses complete two-community hypergraphs, a shared phase lag and Lorentzian frequencies; arbitrary sparse networks are outside the demonstrated scope."
       }
+    },
+    {
+      "doi": "10.1038/s41586-026-11195-y",
+      "recommended_on": "2026-11-02",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-10-28-to-29-01",
+      "publication_sha256": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+      "assessment_sha256": "e626367bf7086b05266086dc129da43da306dcbab9d30a0a770bc874672cf82d",
+      "input_sha256": "8a1fc8d445d275667b854095619cce14822c92357a6e678c59ea4b0a6adc92d0",
+      "evidence_sha256": "8f0b531e125ebf8835e74f414c4d07346456b99d7c85640c4ccd1920c0d565ec",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-02T02:03:18.401621+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41586-026-11195-y",
+        "title": "Connectome simulations identify a central pattern generator for fly walking",
+        "sha256": "c05fa01a2060db60862c4bba0eaa7c4c2f0880bf2a9fd75a7a77cc7353bd99ec",
+        "version": "Nature current publisher PDF, early typesetting with placeholder online-date line; official article page verifies Published 2026-10-28",
+        "source_url": "https://www.nature.com/articles/s41586-026-11195-y.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 29,
+        "read_scope": "Complete 29-page publisher PDF: main text, Methods, references, all main and Extended Data figure captions, and Reporting Summary. Visually inspected rendered Fig.3/page5. Separate supplementary files, videos and code not examined; no independent reproduction. Text/caption pruning thresholds differ (0.05/0.5); not resolved here.",
+        "reviewed_at": "2026-11-02T02:03:18.401621+00:00"
+      },
+      "question": {
+        "zh": "如何从连接组网络中定位能产生行走节律的候选回路？",
+        "en": "How can connectome networks reveal candidate circuits that generate walking rhythms?"
+      },
+      "reading_comment": {
+        "zh": [
+          "值得读的不是静态连接图本身，而是把连接组变成有符号加权动力系统，再用随机删点找出维持节律的小回路。",
+          "跨连接组和参数扰动检验了模型结果的稳健性，下行神经元的实验激活进一步检验行为预测。核心回路的必要性与充分性仍是模型内结论。"
+        ],
+        "en": [
+          "The value lies in turning a connectome into a signed, weighted dynamical system, then using stochastic pruning to isolate small rhythm-generating circuits.",
+          "Cross-connectome and parameter checks probe model robustness; descending-neuron activation tests behavioral predictions. Necessity and sufficiency of the core circuit remain computational results."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从结构走向功能机制",
+            "en": "From structure to mechanism"
+          },
+          "text": {
+            "zh": "连接组约束率模型，用随机删点隔离兴奋—兴奋—抑制反馈核心，再核验隔离回路与全网络沉默的动力学。",
+            "en": "A connectome-constrained rate model and stochastic pruning isolate an excitatory–excitatory–inhibitory feedback core; isolated-circuit simulations and silencing in the full model test its dynamical role."
+          }
+        },
+        {
+          "heading": {
+            "zh": "稳健性不只看一张图",
+            "en": "Robustness beyond one graph"
+          },
+          "text": {
+            "zh": "比较四套连接组及参数扰动，显示核心组织的重复出现，也暴露增益、尺度归一化和个别通路预测的敏感性。",
+            "en": "Four connectomes and parameter perturbations reveal recurring core organization while exposing sensitivity to gain, size normalization and particular pathway predictions."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分开模型与实验的证据",
+            "en": "Separate model and experimental evidence"
+          },
+          "text": {
+            "zh": "下行神经元光遗传激活检验节律和行为预测；核心神经元的生物学必要性尚待直接实验，模型也未产生真实腿间相位协调。",
+            "en": "Optogenetic activation tests descending-neuron rhythm and behavioral predictions. Biological necessity of the core neurons awaits direct experiments, and the model does not reproduce realistic interleg phase coordination."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络动力学、连接组、功能模体、机制可解释性与神经运动控制的读者。",
+        "en": "Readers studying network dynamics, connectomics, functional motifs, mechanistic interpretability and neural motor control."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社当前 PDF 全部29页，含方法、扩展数据图注及报告摘要，并检查核心图。PDF 日期行仍为占位，发表日依官网2026-10-28。未读独立补充材料、视频或代码，未独立复现。最小回路结论限于模型；增益与归一化影响结果，真实腿间协调尚未重现。",
+        "en": "Read all 29 pages of the current publisher PDF, including Methods, Extended Data captions and Reporting Summary; inspected the core figure. The PDF date line remains a placeholder; the official page verifies 2026-10-28. Separate supplements, videos and code were not examined; no independent reproduction. Minimal-circuit claims are computational; gain and normalization matter, and realistic interleg coordination remains unexplained."
+      }
     }
   ],
   "revisions": [

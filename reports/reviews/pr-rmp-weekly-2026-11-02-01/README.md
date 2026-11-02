@@ -1,0 +1,3 @@
+# PR/RMP weekly check — 2026-11-02
+
+Window: 2026-10-27 through 2026-11-02, Asia/Shanghai; coverage only through recorded actual retrieval times. Both journals complete. PR: 100 all-type official search cards registered, in-press empty, related issues and online-date guards verified; two in-window review abstracts read and excluded for particle-physics scope, one editorial excluded by official type. RMP: recent/accepted and issue checks closed, no in-window Published candidate. Newly included reviews: 0; retained collection: 84. No unread/undecided items or human queues. Initial failures and subsequent browser recovery retained in append-only logs. Frozen inputs and formal evidence/check.json bind sources and log hashes.

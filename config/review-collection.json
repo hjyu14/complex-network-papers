@@ -10,7 +10,7 @@
     "RMP"
   ],
   "start_date": "2000-01-01",
-  "cutoff_date": "2026-10-27",
+  "cutoff_date": "2026-11-02",
   "supplemental_sources": [
     {
       "path": "reports/reviews/pr-rmp-review-supplement-2026-10-29/evidence/collection.json",
@@ -25,7 +25,10 @@
     "timezone": "Asia/Shanghai",
     "run_with_daily_update_at": "07:00",
     "source_config_key": "review_journals",
-    "journals": ["PR", "RMP"],
+    "journals": [
+      "PR",
+      "RMP"
+    ],
     "lookback_from": "previous_successful_review_check",
     "history_start": "2000-01-01",
     "official_type_required": true,

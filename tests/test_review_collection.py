@@ -92,6 +92,7 @@ class ReviewCollectionTests(unittest.TestCase):
 
     def test_daily_increment_requires_pinned_source_count_and_checked_cutoff(self):
         config = json.loads((ROOT/'config/review-collection.json').read_text(encoding='utf8'))
+        config['cutoff_date'] = '2026-10-27'  # Keep this boundary test independent of the live weekly cutoff.
         record = copy.deepcopy(json.loads((ROOT/config['source']['path']).read_text(encoding='utf8'))['records'][0])
         # Synthetic bibliography, never a real screening decision or release input.
         record['paper'].update(doi='10.1000/synthetic-daily-review',
