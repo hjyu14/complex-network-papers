@@ -1294,9 +1294,9 @@
       "categories": [
         "network_spreading"
       ],
-      "note_en": "Editor-selected reading: a multilayer rumor model examines media interventions and social reinforcement; its abstract does not specify contact topology or establish intervention causality.",
-      "note_zh": "编辑选定相关阅读：多层谣言模型分析媒体干预与社会强化；摘要未明确接触拓扑，也未证明干预因果效果。",
-      "assessment_sha256": "26a54b3c44bee4fa0b5d8797eeaca97395d1b48aa5ef12d8d03a176f585bbb86"
+      "note_zh": "编辑选入的相关阅读：多层谣言模型讨论媒体干预与社会强化；摘要未明确接触拓扑，预测拟合不等于因果验证。",
+      "note_en": "Editor-selected related reading on media interventions and reinforcement in a multilayer rumor model; contact topology is unspecified and predictive fit is not causal validation.",
+      "assessment_sha256": "01c3feb89c07bcb4a8f5cd48e5adb074c514f08d8bb0502224c33b078939d531"
     },
     "10.1063/5.0340752": {
       "categories": [
@@ -1694,9 +1694,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Tests how noise spectral color changes stationarity and distribution of collective power-grid frequency responses, including topology robustness.",
-      "note_zh": "检验噪声谱色怎样改变电网集体频率响应的平稳性与分布，并核验拓扑稳健性。",
-      "assessment_sha256": "217051dc786a60bbfb34803551f6a1f6c160df71a7569fddd989d8776d072b09"
+      "note_zh": "Kuramoto 类电网模型显示噪声频谱颜色影响集体频率响应的平稳性与高斯性；所测试拓扑中出现相近的转变。",
+      "note_en": "In a Kuramoto-like grid model, noise color changes frequency-response stationarity and Gaussianity, with similar transitions across the tested topologies.",
+      "assessment_sha256": "47dd8ed1f9199b8d668da022c24783e6644d4166ecab3de765d5726ad6499f16"
     },
     "10.1126/sciadv.aed2474": {
       "categories": [
@@ -2349,6 +2349,39 @@
       "note_zh": "以缠结为节点、传力路径为边，将聚合物模拟压缩为能够保留小应变应力的离散网络。",
       "note_en": "Entanglements become vertices and force-transmitting paths become edges, coarse-graining polymer simulations into discrete networks that retain small-strain stresses.",
       "assessment_sha256": "741f3e63885ed2025a381f705d7fdeb835a5c36723611935874594c0d7b76d84"
+    },
+    "10.1063/5.0354134": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "随机超图及全局耦合 Kuramoto 模型中，高阶作用对同步呈非单调影响；固定作用预算下，混合两体与高阶耦合优于单一配置。",
+      "note_en": "Higher-order Kuramoto interactions affect synchronization nonmonotonically; mixed pairwise and higher-order couplings outperform single-type allocations under the tested interaction budget.",
+      "assessment_sha256": "dad8b30ed19ef2676dfd8f0bb9ff521d72cf86487773ac0e4631574c985dd9c8"
+    },
+    "10.1063/5.0355277": {
+      "categories": [
+        "network_spreading",
+        "network_resilience"
+      ],
+      "note_zh": "从群体内顺序激活推导相关后代分布，以边际概率匹配对照区分超图级联的起始阈值、存活概率与最终规模。",
+      "note_en": "A sequential activation rule yields correlated offspring laws; marginal-matched controls distinguish random-hypergraph cascade onset, survival and final size.",
+      "assessment_sha256": "b68328ce87b255dad8216ef6a6fb373f9b5ad356d3ede0ec9ac9ea87cba89209"
+    },
+    "10.1103/lv5x-mvvh": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "以少量输出测量检验空间与时间量子网络中的相干传输，容许中间检查节点的验证能力未知，并用多光子网络实验检验。",
+      "note_en": "A nonlinear criterion tests coherence transfer with minimal output measurements and uncharacterized checkpoints, demonstrated in multiphoton entanglement networks.",
+      "assessment_sha256": "4d14836cbeddf715177466df7587c860c6c0ec21e5c77aa5303a0dec894b8933"
+    },
+    "10.1073/pnas.2612667123": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "结合共进化信息、Gaussian Network Model 与转移熵，构建蛋白质变构信息流网络，识别结合位点枢纽与模态依赖的定向通信。",
+      "note_en": "Sequence-based GNM-TE maps coevolution constraints to allosteric information-flow networks, identifying binding-site hubs and mode-dependent directional communication.",
+      "assessment_sha256": "adc6bb541980acb3ec35258ee2b31325d465f56658cf72954ef73464d2524a84"
     }
   }
 }

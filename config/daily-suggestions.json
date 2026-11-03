@@ -2084,6 +2084,84 @@
         "zh": "已读出版社当前 PDF 全部29页，含方法、扩展数据图注及报告摘要，并检查核心图。PDF 日期行仍为占位，发表日依官网2026-10-28。未读独立补充材料、视频或代码，未独立复现。最小回路结论限于模型；增益与归一化影响结果，真实腿间协调尚未重现。",
         "en": "Read all 29 pages of the current publisher PDF, including Methods, Extended Data captions and Reporting Summary; inspected the core figure. The PDF date line remains a placeholder; the official page verifies 2026-10-28. Separate supplements, videos and code were not examined; no independent reproduction. Minimal-circuit claims are computational; gain and normalization matter, and realistic interleg coordination remains unexplained."
       }
+    },
+    {
+      "doi": "10.1063/5.0355277",
+      "recommended_on": "2026-11-03",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-02-to-03-01",
+      "publication_sha256": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+      "assessment_sha256": "b68328ce87b255dad8216ef6a6fb373f9b5ad356d3ede0ec9ac9ea87cba89209",
+      "input_sha256": "91682cf072796e9f872a8fee095d08405afddc2e171cea2573a3accbf997e058",
+      "evidence_sha256": "eb5a592408a542ef606e35fed909b70dc1c001fb20694174c5154338da84f55c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-03T02:37:58.885625+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0355277",
+        "title": "Sequential cascades on random hypergraphs",
+        "sha256": "c5cf8e72287a2e44f38286c464263b7b896cd3eabe379d87adb7e579aaa9ee46",
+        "version": "publisher version of record",
+        "source_url": "https://pubs.aip.org/aip/cha/article/36/11/113101/3407886/Sequential-cascades-on-random-hypergraphs",
+        "source_kind": "user_provided_pdf",
+        "pages": 17,
+        "read_scope": "Complete 17-page publisher PDF: cover, main text, equations, Appendices A-E, all figure/table captions and references. Rendered figures/tables checked; interrupted reading notes reconciled with actual PDF and official page. No independent code or numerical reproduction.",
+        "reviewed_at": "2026-11-03T02:37:58.885625+00:00"
+      },
+      "question": {
+        "zh": "群体内决策相关性如何改变超图级联，而不改变起始阈值？",
+        "en": "How can within-group decision correlations alter hypergraph cascades without changing their onset?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇值得读的是对照设计：保留每种群体规模的平均激活概率，改变个体结果间的相关性，由此检验相同阈值为何仍对应不同的存活概率。",
+          "转移矩阵给出完整后代分布，有限网络再用碰撞匹配、规模与截止比例检验误差。起始、存活与最终规模须分别解释，不能拿同一条曲线代替。"
+        ],
+        "en": [
+          "The useful lesson is the control: hold each group size's mean target activation fixed while changing outcome correlations, then test why identical onset can coexist with different survival.",
+          "A transfer matrix supplies the full offspring law; collision-matched, size and cutoff checks probe finite-network effects. Treat onset, survival and final size as separate observables."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "匹配边际的机制对照",
+            "en": "Match marginals in mechanism controls"
+          },
+          "text": {
+            "zh": "独立对照与顺序规则保持各群体规模的目标边际及平均后代数一致。三均匀超图的生成函数比较证明存活率排序，更大群体仅有数值扫描支持。",
+            "en": "Independent and sequential rules share size-specific target marginals and mean offspring. A generating-function comparison proves survival ordering for three-uniform hypergraphs; larger groups have numerical support."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把三个宏观量分开",
+            "en": "Separate three macroscopic quantities"
+          },
+          "text": {
+            "zh": "后代均值决定分枝起始，完整生成函数决定灭绝概率。独立对照的平均最终规模还需前向存活与反向可达性之积；顺序规则未给出相应精确闭合。",
+            "en": "The offspring mean sets branching onset; the full generating function sets extinction. Null mean final size requires forward survival times backward reachability; no analogous exact closure is derived for the sequential rule."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检验有限网络代理",
+            "en": "Test finite-network proxies"
+          },
+          "text": {
+            "zh": "碰撞后按实际剩余目标重配独立对照，并改变网络规模及级联比例 cutoff，区分有限网络的5%事件概率与无限分枝存活。",
+            "en": "Rematch the independent control to remaining targets after collisions, and vary system size and cascade cutoffs to distinguish the finite-network 5% event probability from infinite branching survival."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究高阶传播、超图渗流、级联模型及机制对照设计的读者。",
+        "en": "Readers studying higher-order contagion, hypergraph percolation, cascades and mechanism controls."
+      },
+      "reading_caveat": {
+        "zh": "已读用户提供的正式版17页全文、附录A–E、图表说明及参考文献，并核对渲染图。结论限于单次触发、无穷小种子及局部树状无关联超图；顺序规则的最终规模没有精确闭合。未独立复现。",
+        "en": "Read the user-provided 17-page publisher PDF, Appendices A-E, captions and references, with rendered checks. Claims assume one-shot triggering, vanishing seeds and locally tree-like uncorrelated hypergraphs. Sequential final size has no exact closure. No independent reproduction."
+      }
     }
   ],
   "revisions": [
