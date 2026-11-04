@@ -1489,12 +1489,11 @@
     },
     "10.1103/366d-8m6s": {
       "categories": [
-        "network_collective",
-        "network_inference"
+        "network_collective"
       ],
-      "note_en": "Static maximum-entropy signatures distinguish subcritical activity but can confuse avalanche criticality with supercritical neural dynamics.",
-      "note_zh": "静态最大熵信号能识别亚临界活动，但可能混淆神经雪崩的临界与超临界动力学。",
-      "assessment_sha256": "f2f6a5b41597d61ddaafa008195ce3549433646cf5549fc1a0dfe95cdb6765d4"
+      "note_zh": "神经群体实验和可调网络模型表明，静态最大熵模型的热力学信号难以区分雪崩临界与超临界动力学。",
+      "note_en": "Neuronal experiments and a tunable network model show that static maximum-entropy thermodynamic signatures may not distinguish avalanche-critical from supercritical dynamics.",
+      "assessment_sha256": "970276979bbb15d8d4a42820557d40db4c6ec556b3b8e655b09e3b09221f65aa"
     },
     "10.1073/pnas.2602244123": {
       "categories": [
@@ -1937,9 +1936,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_zh": "自适应相位挫折的反馈把连续同步转变改造成伴随双稳态与滞后的突变。",
-      "note_en": "Adaptive phase-frustration feedback turns continuous synchronization into a bistable, hysteretic transition.",
-      "assessment_sha256": "d503cfb7812af0b5b70c08480f20696caf04b439609f0b91c715e011b5e9b6d4"
+      "note_zh": "群体相干性对相位挫折的自适应反馈可产生双稳态与滞后同步，全局耦合情形给出低维解析解释。",
+      "note_en": "Collective-state feedback on phase frustration generates bistability and hysteretic synchronization, with a low-dimensional analytical explanation for global coupling.",
+      "assessment_sha256": "baf33d97d06e72adc6c208b9ca513ed419eda43235bc8d3372b7bc8a7fdc791a"
     },
     "10.1103/n8xm-bm44": {
       "categories": [
@@ -2080,11 +2079,11 @@
     },
     "10.1103/29r6-v42s": {
       "categories": [
-        "network_spreading"
+        "network_resilience"
       ],
-      "note_zh": "比较有限维晶格与完全图的强连通簇渗流，刻画分形维数、临界指数与双标度。",
-      "note_en": "Characterizes strongly connected cluster percolation on finite-dimensional lattices and complete graphs through fractal dimensions, exponents and double scaling.",
-      "assessment_sha256": "1bee7d06171e0cf4e2d59508a6aa9b27b50a8b0f1ae6dd723f360600ce9dd5bd"
+      "note_zh": "随机有向键模型中，强连通簇的分形尺度随维数非单调变化；完全图与高维晶格仍具有不同的小簇统计。",
+      "note_en": "Random directed-bond systems exhibit nonmonotonic dimensional dependence of SCC fractal geometry; complete graphs and high-dimensional lattices retain different small-cluster statistics.",
+      "assessment_sha256": "70c0e21f8101d34522dd0d274453f30d293c74afb17e94912aa733a1686d8c4c"
     },
     "10.1038/s41467-026-78154-z": {
       "categories": [
@@ -2382,6 +2381,39 @@
       "note_zh": "结合共进化信息、Gaussian Network Model 与转移熵，构建蛋白质变构信息流网络，识别结合位点枢纽与模态依赖的定向通信。",
       "note_en": "Sequence-based GNM-TE maps coevolution constraints to allosteric information-flow networks, identifying binding-site hubs and mode-dependent directional communication.",
       "assessment_sha256": "adc6bb541980acb3ec35258ee2b31325d465f56658cf72954ef73464d2524a84"
+    },
+    "10.1103/n24h-kkc6": {
+      "categories": [
+        "network_inference",
+        "network_spreading"
+      ],
+      "note_zh": "通过事件似然、打乱对照和传播模拟，区分时序接触网络中节点自激与边强化的可识别性及解释限制。",
+      "note_en": "Likelihoods, shuffled controls and spreading simulations expose attribution and interpretation limits for node self-excitation versus tie reinforcement in temporal contact networks.",
+      "assessment_sha256": "9094e9879b62c6317d4f867d44ab7e5451206f4783103d2ef4172dbeb9be3e31"
+    },
+    "10.1103/ywrq-rpzh": {
+      "categories": [
+        "network_resilience"
+      ],
+      "note_zh": "以目标扩散时间反求最小新增边权，揭示边重要性与边间结构相关共同决定的最优分配和权重反转。",
+      "note_en": "Time-Weight Matching minimizes added edge weight for a target diffusion time, balancing edge importance and structural correlations and predicting target-dependent weight reversal.",
+      "assessment_sha256": "9e6a347716544060e4ca897b7eca9518c0649c291e1c8626890985190b3a080e"
+    },
+    "10.1103/hy6f-3l9c": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "一维 swarmalator 模型的均匀耦合无序形成正负耦合分裂簇，并改变不同集体态的稳定边界与持续振荡。",
+      "note_en": "Uniform phase-coupling disorder produces coupling-split clusters and changes stability boundaries and persistent oscillations in a one-dimensional swarmalator model.",
+      "assessment_sha256": "161b7ea4ad44306d10b730e73052308c6480ae51c6eec8b6534d046a80935813"
+    },
+    "10.1103/v3ns-4m1d": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "在三角形、四面体与 kagome 网络上，排斥相位耦合将神经时序挫折关联到简并能景和亚稳弛豫。",
+      "note_en": "Repulsive phase coupling on triangle, tetrahedral and kagome geometries links frustrated neural timing to degenerate energy landscapes and metastable relaxation.",
+      "assessment_sha256": "55afca5515b95f6a96ea1aca05bb7eed693bf47ee70cc4451342009e86733615"
     }
   }
 }

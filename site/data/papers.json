@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-03T02:41:36.685377+00:00",
+  "generated_at": "2026-11-04T02:09:36.463994+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-03",
-  "window_days": 64,
+  "window_end": "2026-11-04",
+  "window_days": 65,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "9f4dda256d69a10ac86eeabbbaa7deac1f0cde28e58837cd530c22d4e33c8649",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "0b0feba381bfae78c303f731e83a1e0dcf23256bc962ac7691b1df2984b4a34a",
-  "author_metadata_sha256": "f9bc95fc89d6b96804cd45756e54d6f6cffbd9d51e2b2662f6a6bcd4f45d57cc",
+  "reading_notes_sha256": "e83a7b678f374cd24b0a7ea933ca4a481771745a81b7fcb95ac7e6e2f3a7c884",
+  "author_metadata_sha256": "81ccebcdd4560b6b2f086d15060c6a8f9c4f216790073ac68728c73ba751620b",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2716,9 +2716,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-03-to-04-01",
+      "config_sha256": "0ee53d721e2e2fc430e174e32cae63a2ba191f2a9ac9e9183d38932d0fcf6ed0",
+      "window_start": "2026-11-03",
+      "window_end": "2026-11-04",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "screening_log_sha256": "f733d427db4e7f621d490de9580bd1a148268e946a36d914456f6f1ba3b758a8",
+      "candidate_sha256": "0ed85938bf32aef2ffa307d8358ea206a4df659e32ae4ad759fa6f2c98d6cc7d",
+      "author_metadata_sha256": "c613646b53104c7a2c1adcc01a8319f491d138df6568ad0f08965e8fb39d6fd2",
+      "run_manifest_sha256": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-03-to-04-01",
+          "files": {
+            "candidates.json": "0ed85938bf32aef2ffa307d8358ea206a4df659e32ae4ad759fa6f2c98d6cc7d",
+            "coverage.json": "2da5b70d5720b2835c51b9884228ff917983fde2a07421e56b080789e04a813a",
+            "collection-log.jsonl": "e74fdcc38f9c88b1168e0c0239c4a20d626a248de1a4817abf6c5d8618906b30",
+            "screening-log.jsonl": "467e07a1cf5baac34c9842d8f67049497e127624d1658a8f1d96b9e4a09d9d88",
+            "inputs/manifest.json": "2e0a345e417889f80353e8ff272c653c86e725203334da44b596038ad6ba90a2",
+            "inputs/sources.json": "0587ccbdc6bf23a3bbd638452b7d844dce57e4450e2060ace7b58bb0e0f289f9",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "0ed85938bf32aef2ffa307d8358ea206a4df659e32ae4ad759fa6f2c98d6cc7d",
+          "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+          "screening_log_sha256": "f733d427db4e7f621d490de9580bd1a148268e946a36d914456f6f1ba3b758a8"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "c613646b53104c7a2c1adcc01a8319f491d138df6568ad0f08965e8fb39d6fd2",
+          "audit": {
+            "path": "reports/runs/2026-11-03-to-04-01/screening-log.jsonl",
+            "sha256": "467e07a1cf5baac34c9842d8f67049497e127624d1658a8f1d96b9e4a09d9d88"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "68abf0b22bdd3815da49878d403829de669fceb61a40b7818c2229fd5ac07e28"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 279,
+  "author_available_count": 283,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -2868,8 +2912,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 786,
-      "publisher_verified_inventory_count": 786,
+      "candidate_count": 802,
+      "publisher_verified_inventory_count": 802,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3169,6 +3213,15 @@
           "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "Nature",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3466,13 +3519,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1844,
-      "publisher_verified_inventory_count": 1842,
+      "candidate_count": 1879,
+      "publisher_verified_inventory_count": 1877,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3761,6 +3823,15 @@
           "journal": "NC",
           "candidate_count": 39,
           "publisher_verified_inventory_count": 39,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "NC",
+          "candidate_count": 35,
+          "publisher_verified_inventory_count": 35,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4060,6 +4131,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4357,13 +4437,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 92,
-      "publisher_verified_inventory_count": 92,
+      "candidate_count": 93,
+      "publisher_verified_inventory_count": 93,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4654,13 +4743,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "PRX",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 752,
-      "publisher_verified_inventory_count": 752,
+      "candidate_count": 759,
+      "publisher_verified_inventory_count": 759,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4949,6 +5047,15 @@
           "journal": "PRL",
           "candidate_count": 18,
           "publisher_verified_inventory_count": 18,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "PRL",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5248,13 +5355,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 899,
-      "publisher_verified_inventory_count": 899,
+      "candidate_count": 920,
+      "publisher_verified_inventory_count": 920,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5545,13 +5661,22 @@
           "publisher_verified_inventory_count": 31,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "PNAS",
+          "candidate_count": 21,
+          "publisher_verified_inventory_count": 21,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 111,
-      "publisher_verified_inventory_count": 111,
+      "candidate_count": 114,
+      "publisher_verified_inventory_count": 114,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5842,13 +5967,22 @@
           "publisher_verified_inventory_count": 6,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "CP",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 403,
-      "publisher_verified_inventory_count": 403,
+      "candidate_count": 407,
+      "publisher_verified_inventory_count": 407,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6139,13 +6273,22 @@
           "publisher_verified_inventory_count": 14,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "PRResearch",
+          "candidate_count": 5,
+          "publisher_verified_inventory_count": 5,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 511,
-      "publisher_verified_inventory_count": 511,
+      "candidate_count": 526,
+      "publisher_verified_inventory_count": 526,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6436,6 +6579,15 @@
           "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "PRE",
+          "candidate_count": 27,
+          "publisher_verified_inventory_count": 27,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6733,6 +6885,15 @@
           "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6985,35 +7146,45 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-03",
+          "window_end": "2026-11-04",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 6807,
+  "candidate_count": 6909,
   "screening_counts": {
-    "excluded": 6528,
-    "core": 250,
+    "excluded": 6626,
+    "core": 254,
     "transferable_application": 29,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 279
+    "included": 283
   },
-  "published_count": 238,
-  "accepted_count": 41,
+  "published_count": 241,
+  "accepted_count": 42,
   "latest_update": {
-    "run": "reports/runs/2026-11-02-to-03-01",
-    "reviewed_at": "2026-11-03T02:34:38.267528+00:00",
+    "run": "reports/runs/2026-11-03-to-04-01",
+    "reviewed_at": "2026-11-04T01:59:04.628721+00:00",
     "newly_included_count": 4,
     "newly_included_dois": [
-      "10.1063/5.0354134",
-      "10.1063/5.0355277",
-      "10.1073/pnas.2612667123",
-      "10.1103/lv5x-mvvh"
+      "10.1103/hy6f-3l9c",
+      "10.1103/n24h-kkc6",
+      "10.1103/v3ns-4m1d",
+      "10.1103/ywrq-rpzh"
     ],
-    "accepted_to_published_count": 2,
+    "accepted_to_published_count": 3,
     "accepted_to_published_dois": [
-      "10.1103/tr4w-yrs1",
-      "10.1103/vxkg-41kp"
+      "10.1103/29r6-v42s",
+      "10.1103/366d-8m6s",
+      "10.1103/8nxh-kpt8"
     ]
   },
   "candidate_inventory_complete": false,
@@ -7024,6 +7195,594 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/ywrq-rpzh",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/ywrq-rpzh",
+      "title": "Optimal weight allocation for steering network dynamics to a target time scale",
+      "authors": [
+        "Siyang Jiang",
+        "Jerry Zhijian Yang",
+        "Jin Zhou",
+        "Weiqiang Li",
+        "Jun-an Lu",
+        "Michael Small"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c45255660b7c7deac655f4f15e903e3725a2ebe617997843b1f77c4d516ff0fd",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fywrq-rpzh",
+      "author_retrieved_at": "2026-11-04T01:55:09.518756+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-03",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-03",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-03",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/ywrq-rpzh"
+        ],
+        "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/ywrq-rpzh",
+        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-03",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Time-Weight Matching minimizes added edge weight for a target network diffusion time, deriving allocations from edge importance and edge-edge structural correlation and predicting weight reversal as the target changes.",
+        "material_sha256": "61ef031f3ccdb02a2c36be26de88f41529ad15ce918c7d508b459d801531b341",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/ywrq-rpzh"
+        ]
+      },
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Time-Weight Matching minimizes added edge weight for a target diffusion time, balancing edge importance and structural correlations and predicting target-dependent weight reversal.",
+      "note_zh": "以目标扩散时间反求最小新增边权，揭示边重要性与边间结构相关共同决定的最优分配和权重反转。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "9e6a347716544060e4ca897b7eca9518c0649c291e1c8626890985190b3a080e",
+      "input_sha256": "90991c4e22b3fb87a023b5edd1c96b517ead261baa8f03cb90f4e756aa7834ed",
+      "material_sha256": "61ef031f3ccdb02a2c36be26de88f41529ad15ce918c7d508b459d801531b341",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "61ef031f3ccdb02a2c36be26de88f41529ad15ce918c7d508b459d801531b341",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "featured": null,
+      "evidence": [
+        "Time-Weight Matching minimizes added edge weight for a target network diffusion time, deriving allocations from edge importance and edge-edge structural correlation and predicting weight reversal as the target changes."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fywrq-rpzh",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/ywrq-rpzh",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/v3ns-4m1d",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/v3ns-4m1d",
+      "title": "Frustrated neurons: Energy landscapes and relaxation dynamics in repulsive phase oscillators",
+      "authors": [
+        "Brandon B. Le"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "d42ef7fcaaceda2ee8057dc1913dc4842adf7a15a667bdfa6f89302ff9efd847",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fv3ns-4m1d",
+      "author_retrieved_at": "2026-11-04T01:55:15.249513+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-03",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-03",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-03",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/v3ns-4m1d"
+        ],
+        "source_url": "https://journals.aps.org/pre/accepted/10.1103/v3ns-4m1d",
+        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-03",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Repulsively coupled neural phase units on triangles, tetrahedra and kagome motifs connect incompatible timing constraints to degeneracy and metastable relaxation, distinguishing local network order from weak global synchrony.",
+        "material_sha256": "c33501bc9dd81144ab27994e37d893035a28a2c7ad6aea28b790540184fb65bd",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/v3ns-4m1d"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Repulsive phase coupling on triangle, tetrahedral and kagome geometries links frustrated neural timing to degenerate energy landscapes and metastable relaxation.",
+      "note_zh": "在三角形、四面体与 kagome 网络上，排斥相位耦合将神经时序挫折关联到简并能景和亚稳弛豫。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "55afca5515b95f6a96ea1aca05bb7eed693bf47ee70cc4451342009e86733615",
+      "input_sha256": "3aeba15a5dfae56c7e75717f45cafcac4efb5159ee024fce7c9a1349ed18405b",
+      "material_sha256": "c33501bc9dd81144ab27994e37d893035a28a2c7ad6aea28b790540184fb65bd",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c33501bc9dd81144ab27994e37d893035a28a2c7ad6aea28b790540184fb65bd",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "featured": null,
+      "evidence": [
+        "Repulsively coupled neural phase units on triangles, tetrahedra and kagome motifs connect incompatible timing constraints to degeneracy and metastable relaxation, distinguishing local network order from weak global synchrony."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fv3ns-4m1d",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/v3ns-4m1d",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/n24h-kkc6",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/n24h-kkc6",
+      "title": "Fundamental limits to identifying node and tie memory in temporal networks: marginal artefacts and spreading dynamics",
+      "authors": [
+        "Michele Tizzani"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "270750548b94cdab14acd9a6b21390959882600b07ece46f26c579fd6bf0d172",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fn24h-kkc6",
+      "author_retrieved_at": "2026-11-04T01:55:03.935800+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-03",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-03",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-03",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/n24h-kkc6"
+        ],
+        "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/n24h-kkc6",
+        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-03",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Temporal-contact likelihoods expose attribution and interpretation limits for node self-excitation versus tie reinforcement; shuffled benchmarks and outbreak simulations connect network-memory identifiability to spreading errors.",
+        "material_sha256": "e6add3f64740ddc20bd3d60a4f15ddb3880b2535b7912b8fc3d825cae5d056c7",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/n24h-kkc6"
+        ]
+      },
+      "categories": [
+        "network_inference",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Likelihoods, shuffled controls and spreading simulations expose attribution and interpretation limits for node self-excitation versus tie reinforcement in temporal contact networks.",
+      "note_zh": "通过事件似然、打乱对照和传播模拟，区分时序接触网络中节点自激与边强化的可识别性及解释限制。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "9094e9879b62c6317d4f867d44ab7e5451206f4783103d2ef4172dbeb9be3e31",
+      "input_sha256": "1029218005136af848e3db8b94cc4abf792eb84eb59431b6ddf24ae30c2670d0",
+      "material_sha256": "e6add3f64740ddc20bd3d60a4f15ddb3880b2535b7912b8fc3d825cae5d056c7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e6add3f64740ddc20bd3d60a4f15ddb3880b2535b7912b8fc3d825cae5d056c7",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "featured": null,
+      "evidence": [
+        "Temporal-contact likelihoods expose attribution and interpretation limits for node self-excitation versus tie reinforcement; shuffled benchmarks and outbreak simulations connect network-memory identifiability to spreading errors."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fn24h-kkc6",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/n24h-kkc6",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/hy6f-3l9c",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c",
+      "title": "Coupling-split clusters in a swarmalator model with uniform coupling disorder",
+      "authors": [
+        "K. P. O’’Keeffe"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "ec01cd87b981d4caf5a844f4fb9d241e6014b3ce7db75b9ca7a913e0bb54180c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fhy6f-3l9c",
+      "author_retrieved_at": "2026-11-04T01:55:13.334479+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-03",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-03",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-03",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c"
+        ],
+        "source_url": "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c",
+        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-03",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Disordered phase coupling partitions a swarmalator population into coupling-split clusters and changes state-dependent stability boundaries, linking interaction heterogeneity to collective phase-space organization and oscillations.",
+        "material_sha256": "d974aaff0c233848122bd8dcb62f9b2a4f4433cac59ac6fe7991699664f26868",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Uniform phase-coupling disorder produces coupling-split clusters and changes stability boundaries and persistent oscillations in a one-dimensional swarmalator model.",
+      "note_zh": "一维 swarmalator 模型的均匀耦合无序形成正负耦合分裂簇，并改变不同集体态的稳定边界与持续振荡。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "161b7ea4ad44306d10b730e73052308c6480ae51c6eec8b6534d046a80935813",
+      "input_sha256": "0b87394a36f944bbc7a5d0f7273eb16e720330211149e4fd2030c29015b92428",
+      "material_sha256": "d974aaff0c233848122bd8dcb62f9b2a4f4433cac59ac6fe7991699664f26868",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d974aaff0c233848122bd8dcb62f9b2a4f4433cac59ac6fe7991699664f26868",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "featured": null,
+      "evidence": [
+        "Disordered phase coupling partitions a swarmalator population into coupling-split clusters and changes state-dependent stability boundaries, linking interaction heterogeneity to collective phase-space organization and oscillations."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhy6f-3l9c",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/8nxh-kpt8",
+      "url": "https://doi.org/10.1103/8nxh-kpt8",
+      "title": "Hysteretic synchronization transitions induced by adaptive phase frustration",
+      "authors": [
+        "Junyi Zheng",
+        "Changgui Gu",
+        "Jiangsheng Wang",
+        "Yuxuan Song"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "caa169c81fd4f8de826361b30eb51f00e25515200cfe58a10aeafb5831f84715",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F8nxh-kpt8",
+      "author_retrieved_at": "2026-11-04T01:55:11.437653+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-03",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-03",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-03",
+        "accepted_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/8nxh-kpt8"
+        ],
+        "source_url": "https://journals.aps.org/pre/abstract/10.1103/8nxh-kpt8",
+        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-20",
+      "published_date": "2026-11-03",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Collective-state-dependent phase frustration produces positive feedback, bistability and hysteretic synchronization in coupled oscillator populations and networks, with a reduced analytical explanation for the globally coupled case.",
+        "material_sha256": "d8509dc1af5c2b36c010203e6b0ab92a34aaf4bffa309260315bdd46ad382688",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/8nxh-kpt8"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Collective-state feedback on phase frustration generates bistability and hysteretic synchronization, with a low-dimensional analytical explanation for global coupling.",
+      "note_zh": "群体相干性对相位挫折的自适应反馈可产生双稳态与滞后同步，全局耦合情形给出低维解析解释。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "baf33d97d06e72adc6c208b9ca513ed419eda43235bc8d3372b7bc8a7fdc791a",
+      "input_sha256": "ef392853d1c103587706eb4c2ab362332c688314d1b062f0e0429094a9e60efd",
+      "material_sha256": "d8509dc1af5c2b36c010203e6b0ab92a34aaf4bffa309260315bdd46ad382688",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "d8509dc1af5c2b36c010203e6b0ab92a34aaf4bffa309260315bdd46ad382688",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "featured": null,
+      "evidence": [
+        "Collective-state-dependent phase frustration produces positive feedback, bistability and hysteretic synchronization in coupled oscillator populations and networks, with a reduced analytical explanation for the globally coupled case."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F8nxh-kpt8",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/8nxh-kpt8",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-20",
+        "published_date": "2026-11-03",
+        "previous_run": "reports/runs/2026-10-20-to-21-01",
+        "source_run": "reports/runs/2026-11-03-to-04-01",
+        "audit_sha256": "9ff4af2756a594d4396e814b4d955e2c656a86968f23f8d82c123e8b2435b81c",
+        "previous_assessment_sha256": "d503cfb7812af0b5b70c08480f20696caf04b439609f0b91c715e011b5e9b6d4",
+        "assessment_sha256": "baf33d97d06e72adc6c208b9ca513ed419eda43235bc8d3372b7bc8a7fdc791a"
+      }
+    },
+    {
+      "doi": "10.1103/366d-8m6s",
+      "url": "https://doi.org/10.1103/366d-8m6s",
+      "title": "Maximum entropy models of neuronal populations at and off criticality",
+      "authors": [
+        "T. S. A. N. Simões",
+        "F. Lombardi",
+        "D. Plenz",
+        "H. J. Herrmann",
+        "L. de Arcangelis"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "6026feaa3890b5a783e0b078c6ec0027b50d70cd7d56faaa6a7301ff5956f5fb",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F366d-8m6s",
+      "author_retrieved_at": "2026-11-04T01:55:07.648728+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-03",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-03",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-03",
+        "accepted_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/366d-8m6s"
+        ],
+        "source_url": "https://journals.aps.org/pre/abstract/10.1103/366d-8m6s",
+        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-08",
+      "published_date": "2026-11-03",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Neuronal-population experiments and a tunable neural-network model compare avalanche dynamics with static maximum-entropy thermodynamic signatures, identifying limits in distinguishing critical from supercritical collective network activity.",
+        "material_sha256": "312358f44a6f448277e953a6c765daa244fa499ec6f6488f03f48d4714e56887",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/366d-8m6s"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Neuronal experiments and a tunable network model show that static maximum-entropy thermodynamic signatures may not distinguish avalanche-critical from supercritical dynamics.",
+      "note_zh": "神经群体实验和可调网络模型表明，静态最大熵模型的热力学信号难以区分雪崩临界与超临界动力学。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "970276979bbb15d8d4a42820557d40db4c6ec556b3b8e655b09e3b09221f65aa",
+      "input_sha256": "14190c0abb422ff5ec737bf1c145f5fd8b8d6ee01526f462ec4611dd189c7f94",
+      "material_sha256": "312358f44a6f448277e953a6c765daa244fa499ec6f6488f03f48d4714e56887",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "312358f44a6f448277e953a6c765daa244fa499ec6f6488f03f48d4714e56887",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "featured": null,
+      "evidence": [
+        "Neuronal-population experiments and a tunable neural-network model compare avalanche dynamics with static maximum-entropy thermodynamic signatures, identifying limits in distinguishing critical from supercritical collective network activity."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F366d-8m6s",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/366d-8m6s",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-08",
+        "published_date": "2026-11-03",
+        "previous_run": "reports/runs/2026-10-08-to-09-02",
+        "source_run": "reports/runs/2026-11-03-to-04-01",
+        "audit_sha256": "9ff4af2756a594d4396e814b4d955e2c656a86968f23f8d82c123e8b2435b81c",
+        "previous_assessment_sha256": "f2f6a5b41597d61ddaafa008195ce3549433646cf5549fc1a0dfe95cdb6765d4",
+        "assessment_sha256": "970276979bbb15d8d4a42820557d40db4c6ec556b3b8e655b09e3b09221f65aa"
+      }
+    },
+    {
+      "doi": "10.1103/29r6-v42s",
+      "url": "https://doi.org/10.1103/29r6-v42s",
+      "title": "Percolation transition of strongly connected clusters in finite dimensions and on complete graphs",
+      "authors": [
+        "Qi Wang",
+        "Ming Li"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "f3a516681ce126aecc730bee0d19f9575680712113c84da7ab95028c9585fbaf",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F29r6-v42s",
+      "author_retrieved_at": "2026-11-04T01:55:05.715987+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-03",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-03",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-03",
+        "accepted_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/29r6-v42s"
+        ],
+        "source_url": "https://journals.aps.org/pre/abstract/10.1103/29r6-v42s",
+        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-22",
+      "published_date": "2026-11-03",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Directed-bond strongly connected clusters show dimension-dependent fractal scaling, an upper critical dimension of six and a distinct double-scaling distribution on complete graphs; directed connectivity percolation is the main contribution.",
+        "material_sha256": "f2a88308d1e3af4a94b6218bfbc53000d073ca7f92b7c7668dec0fcbffa547b8",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/29r6-v42s"
+        ]
+      },
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Random directed-bond systems exhibit nonmonotonic dimensional dependence of SCC fractal geometry; complete graphs and high-dimensional lattices retain different small-cluster statistics.",
+      "note_zh": "随机有向键模型中，强连通簇的分形尺度随维数非单调变化；完全图与高维晶格仍具有不同的小簇统计。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "70c0e21f8101d34522dd0d274453f30d293c74afb17e94912aa733a1686d8c4c",
+      "input_sha256": "7e38ee618cb563d8d1c63c5524fa709ae9d92da8bd7aa929d1ab0768cae28e81",
+      "material_sha256": "f2a88308d1e3af4a94b6218bfbc53000d073ca7f92b7c7668dec0fcbffa547b8",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "f2a88308d1e3af4a94b6218bfbc53000d073ca7f92b7c7668dec0fcbffa547b8",
+      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
+      "featured": null,
+      "evidence": [
+        "Directed-bond strongly connected clusters show dimension-dependent fractal scaling, an upper critical dimension of six and a distinct double-scaling distribution on complete graphs; directed connectivity percolation is the main contribution."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F29r6-v42s",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/29r6-v42s",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-22",
+        "published_date": "2026-11-03",
+        "previous_run": "reports/runs/2026-10-22-to-23-01",
+        "source_run": "reports/runs/2026-11-03-to-04-01",
+        "audit_sha256": "9ff4af2756a594d4396e814b4d955e2c656a86968f23f8d82c123e8b2435b81c",
+        "previous_assessment_sha256": "1bee7d06171e0cf4e2d59508a6aa9b27b50a8b0f1ae6dd723f360600ce9dd5bd",
+        "assessment_sha256": "70c0e21f8101d34522dd0d274453f30d293c74afb17e94912aa733a1686d8c4c"
+      }
+    },
     {
       "doi": "10.1103/vxkg-41kp",
       "url": "https://doi.org/10.1103/vxkg-41kp",
@@ -10815,78 +11574,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/29r6-v42s",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/29r6-v42s",
-      "title": "Percolation transition of strongly connected clusters in finite dimensions and on complete graphs",
-      "authors": [
-        "Qi Wang",
-        "Ming Li"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "220baf38e56ee7a896a3cd26f3524171d436f5e34e7e1464d02a05bf6619c8a3",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2F29r6-v42s",
-      "author_retrieved_at": "2026-10-23T02:28:36.417125+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-22",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-22",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-22",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "c8a1c5f80381c8492ece1feb9f089693df8a099f180ccede0ccf26cf7a15dadb",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/29r6-v42s"
-        ],
-        "basis": "研究随机定向键网络中的强连通簇渗流，比较有限维晶格与完全图的分形维数、Fisher指数及双标度分布，直接贡献为有向可达性与网络临界理论。",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_spreading"
-      ],
-      "scope_class": "core",
-      "note_en": "Characterizes strongly connected cluster percolation on finite-dimensional lattices and complete graphs through fractal dimensions, exponents and double scaling.",
-      "note_zh": "比较有限维晶格与完全图的强连通簇渗流，刻画分形维数、临界指数与双标度。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "1bee7d06171e0cf4e2d59508a6aa9b27b50a8b0f1ae6dd723f360600ce9dd5bd",
-      "input_sha256": "55bac5b9f0470966ddc4fd6908445d3cc0e32aeec9b9b820c6efade615337865",
-      "material_sha256": "c8a1c5f80381c8492ece1feb9f089693df8a099f180ccede0ccf26cf7a15dadb",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "c8a1c5f80381c8492ece1feb9f089693df8a099f180ccede0ccf26cf7a15dadb",
-      "rule_sha256": "0c4a29dda1fb5dcef9134ffa49fb295cbacdf03710b03c5ea2d921e47a8071eb",
-      "featured": null,
-      "evidence": [
-        "Strongly connected cluster percolation exhibits nonmonotonic fractal dimensions and complete-graph double scaling."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F29r6-v42s",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/29r6-v42s",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/29cy-4r99",
       "url": "https://journals.aps.org/pre/accepted/10.1103/29cy-4r99",
       "title": "Dropout neural network training viewed from a percolation perspective",
@@ -12179,82 +12866,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fmk9z-q1m3",
       "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/mk9z-q1m3",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/8nxh-kpt8",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/8nxh-kpt8",
-      "title": "Hysteretic synchronization transitions induced by adaptive phase frustration",
-      "authors": [
-        "Junyi Zheng",
-        "Changgui Gu",
-        "Jiangsheng Wang",
-        "Yuxuan Song"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "ac51039fb1595f875ef6e7999cea6d8af5a9261c69c8163c1771658bff63502b",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2F8nxh-kpt8",
-      "author_retrieved_at": "2026-10-21T00:45:51.764745+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-20",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-20",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "accepted_date": "2026-10-20",
-        "published_date": null
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-20",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "c48aadf59ff1d5ff368b91c6dfe303c54286ff95041665eda633e095a4b79e00",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "Matching explicit abstract states an original research question, method or analysis and results; title and publisher metadata show no special-type conflict.",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/8nxh-kpt8"
-        ]
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Adaptive phase-frustration feedback turns continuous synchronization into a bistable, hysteretic transition.",
-      "note_zh": "自适应相位挫折的反馈把连续同步转变改造成伴随双稳态与滞后的突变。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "d503cfb7812af0b5b70c08480f20696caf04b439609f0b91c715e011b5e9b6d4",
-      "input_sha256": "cb7fea802ef44c9c61c6146a6c669811c4a6f598ed8abafe3abf9526b47374be",
-      "material_sha256": "c48aadf59ff1d5ff368b91c6dfe303c54286ff95041665eda633e095a4b79e00",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "c48aadf59ff1d5ff368b91c6dfe303c54286ff95041665eda633e095a4b79e00",
-      "rule_sha256": "fb4769628acd51d94d7fefcb7ac6a8dbc22ea3c44063cfc1bae6c32e1c285314",
-      "featured": null,
-      "evidence": [
-        "Adaptive phase frustration creates bistable and hysteretic synchronization transitions in coupled oscillator populations."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F8nxh-kpt8",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/8nxh-kpt8",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -17247,84 +17858,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fhyp9-zngr",
       "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/hyp9-zngr",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/366d-8m6s",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/366d-8m6s",
-      "title": "Maximum entropy models of neuronal populations at and off criticality",
-      "authors": [
-        "T. S. A. N. Simões",
-        "F. Lombardi",
-        "D. Plenz",
-        "H. J. Herrmann",
-        "L. de Arcangelis"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "e1437e4c68f0a71a1dd7a6bada6c7f72ec9fd90b6aaf711a1302b9cf43981cd3",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/366d-8m6s",
-      "author_retrieved_at": "2026-10-09T01:59:51.946Z",
-      "author_basis": "Official visible author line; DOI, title including MathML q, journal and whitelist ISSN individually matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-08",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-08",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "issues_retained": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-08",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "b4535e658bae13377611d0faf8a2b9b1a593bb09323126b00245a36af12f899a",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "明确摘要提出神经群体临界性问题，报告切片实验与可调网络模型的比较结果；目标题名及官方记录无特殊类型线索。",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/366d-8m6s"
-        ]
-      },
-      "categories": [
-        "network_collective",
-        "network_inference"
-      ],
-      "scope_class": "core",
-      "note_en": "Static maximum-entropy signatures distinguish subcritical activity but can confuse avalanche criticality with supercritical neural dynamics.",
-      "note_zh": "静态最大熵信号能识别亚临界活动，但可能混淆神经雪崩的临界与超临界动力学。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "f2f6a5b41597d61ddaafa008195ce3549433646cf5549fc1a0dfe95cdb6765d4",
-      "input_sha256": "e164a193c3d1776c1d2a7e0108df6fd7bdda2c4785c5252effc18f8988d7dc70",
-      "material_sha256": "b4535e658bae13377611d0faf8a2b9b1a593bb09323126b00245a36af12f899a",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "b4535e658bae13377611d0faf8a2b9b1a593bb09323126b00245a36af12f899a",
-      "rule_sha256": "909f0df8ba6a419facb0b127626864d2f7a63cd468ee1ab1a18f93ad31f34d04",
-      "featured": null,
-      "evidence": [
-        "Static maximum entropy signatures cannot separate critical from supercritical neuronal dynamics"
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F366d-8m6s",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/366d-8m6s",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -30078,9 +30611,142 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "1da004c8b831597bcf4d7664412a998d89b57923629e98f2a677f3e654f57bcd"
+    },
+    {
+      "current_run": "reports/runs/2026-11-03-to-04-01",
+      "candidate_sha256": "0ed85938bf32aef2ffa307d8358ea206a4df659e32ae4ad759fa6f2c98d6cc7d",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49"
+      },
+      "counts": {
+        "in_window": 125,
+        "newly_reviewed": 102,
+        "historically_reviewed": 141,
+        "state_updates": 21,
+        "categories": {
+          "excluded": 118,
+          "core": 7
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "9ff4af2756a594d4396e814b4d955e2c656a86968f23f8d82c123e8b2435b81c"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/29r6-v42s",
+      "recommended_on": "2026-11-04",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-03-to-04-01",
+      "publication_sha256": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+      "assessment_sha256": "70c0e21f8101d34522dd0d274453f30d293c74afb17e94912aa733a1686d8c4c",
+      "input_sha256": "7e38ee618cb563d8d1c63c5524fa709ae9d92da8bd7aa929d1ab0768cae28e81",
+      "evidence_sha256": "f2a88308d1e3af4a94b6218bfbc53000d073ca7f92b7c7668dec0fcbffa547b8",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-04T02:00:51.398306+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/29r6-v42s",
+        "title": "Percolation transition of strongly connected clusters in finite dimensions and on complete graphs",
+        "sha256": "05eae7eea0cd760fa984210babcbc043cbaa9075890879a8ce014cc029bde1f7",
+        "version": "Physical Review E 114, 054304 (2026), publisher version, published 2026-11-03",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/29r6-v42s",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "read_scope": "Complete 11-page publisher PDF: Sections I-IV, equations, Table I, Figures 1-11 and reference list. Visually checked publisher renderings; cited works and simulations not independently reproduced.",
+        "reviewed_at": "2026-11-04T02:00:51.398306+00:00"
+      },
+      "question": {
+        "zh": "最大簇具有相同标度，是否意味着整张有向网络的簇统计也相同？",
+        "en": "Does matching the largest-cluster scaling imply matching cluster statistics across directed networks?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为相同的最大簇标度仍可能对应不同的小簇分布。论文把高维晶格与完全图并列，展示只看一个临界指数会漏掉的结构差异。",
+          "值得借鉴的是验证顺序：先分清线尺度与体积尺度，再联合检查最大簇、全分布和簇总数，并检验有限尺度修正。"
+        ],
+        "en": [
+          "This pick shows how matching the largest-cluster scaling can conceal different small-cluster statistics. Comparing high-dimensional lattices with complete graphs reveals what a single critical exponent can miss.",
+          "Borrow the validation sequence: distinguish length from volume scaling, then compare the largest cluster, full distribution and total count while checking finite-size corrections."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "用多种统计量检验类比",
+            "en": "Test analogies with several observables"
+          },
+          "text": {
+            "zh": "图10–11中，完全图最大簇按体积的1/3次方增长，但小簇分布与簇总数不同于七维晶格。研究网络鲁棒性时可同时检查局部与整体统计。",
+            "en": "Figures 10-11 pair the largest SCC with its full size distribution and total count. The complete graph shares the volume exponent 1/3 yet differs from the seven-dimensional lattice in small clusters."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分清维数与归一化指数",
+            "en": "Distinguish dimensional and volume exponents"
+          },
+          "text": {
+            "zh": "比较 d_SCC 与 d_SCC/d：前者在低维区间呈非单调变化，后者单调下降。跨维度或拓扑比较前应明确归一化方式。",
+            "en": "Compare d_SCC with d_SCC/d: the former varies nonmonotonically in the low-dimensional regime, while the latter decreases monotonically. State the normalization before comparing dimensions or topologies."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把有限尺度修正纳入拟合",
+            "en": "Include finite-size corrections"
+          },
+          "text": {
+            "zh": "拟合改变最小系统尺寸并检查参数稳定性；六维还需对数修正。可借此区分渐近指数与有限尺寸漂移，文中的修正指数属于数值估计。",
+            "en": "Vary the minimum fitted size and check parameter stability; six dimensions also require logarithmic corrections. These checks help separate asymptotic behavior from finite-size drift; correction exponents here are numerical estimates."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究有向网络连通性、渗流、鲁棒性与有限尺度标度的读者。",
+        "en": "Readers studying directed connectivity, percolation, network robustness and finite-size scaling."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版11页全文、表I与图1–11，核对出版社渲染图。结论针对对称独立随机有向键、周期边界晶格及完全图；不直接推广至任意有向网络。四维峰值的理论解释仍开放，未独立复现。",
+        "en": "Read the complete 11-page publisher PDF, Table I and Figures 1-11, with publisher render checks. Findings concern symmetric independently occupied directed bonds, periodic lattices and complete graphs; arbitrary directed networks are not established. The four-dimensional peak remains theoretically unexplained. No independent reproduction."
+      }
+    },
     {
       "doi": "10.1063/5.0355277",
       "recommended_on": "2026-11-03",
@@ -34431,6 +35097,84 @@
       }
     },
     {
+      "doi": "10.1103/29r6-v42s",
+      "recommended_on": "2026-11-04",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-03-to-04-01",
+      "publication_sha256": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+      "assessment_sha256": "70c0e21f8101d34522dd0d274453f30d293c74afb17e94912aa733a1686d8c4c",
+      "input_sha256": "7e38ee618cb563d8d1c63c5524fa709ae9d92da8bd7aa929d1ab0768cae28e81",
+      "evidence_sha256": "f2a88308d1e3af4a94b6218bfbc53000d073ca7f92b7c7668dec0fcbffa547b8",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-04T02:00:51.398306+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/29r6-v42s",
+        "title": "Percolation transition of strongly connected clusters in finite dimensions and on complete graphs",
+        "sha256": "05eae7eea0cd760fa984210babcbc043cbaa9075890879a8ce014cc029bde1f7",
+        "version": "Physical Review E 114, 054304 (2026), publisher version, published 2026-11-03",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/29r6-v42s",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "read_scope": "Complete 11-page publisher PDF: Sections I-IV, equations, Table I, Figures 1-11 and reference list. Visually checked publisher renderings; cited works and simulations not independently reproduced.",
+        "reviewed_at": "2026-11-04T02:00:51.398306+00:00"
+      },
+      "question": {
+        "zh": "最大簇具有相同标度，是否意味着整张有向网络的簇统计也相同？",
+        "en": "Does matching the largest-cluster scaling imply matching cluster statistics across directed networks?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为相同的最大簇标度仍可能对应不同的小簇分布。论文把高维晶格与完全图并列，展示只看一个临界指数会漏掉的结构差异。",
+          "值得借鉴的是验证顺序：先分清线尺度与体积尺度，再联合检查最大簇、全分布和簇总数，并检验有限尺度修正。"
+        ],
+        "en": [
+          "This pick shows how matching the largest-cluster scaling can conceal different small-cluster statistics. Comparing high-dimensional lattices with complete graphs reveals what a single critical exponent can miss.",
+          "Borrow the validation sequence: distinguish length from volume scaling, then compare the largest cluster, full distribution and total count while checking finite-size corrections."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "用多种统计量检验类比",
+            "en": "Test analogies with several observables"
+          },
+          "text": {
+            "zh": "图10–11中，完全图最大簇按体积的1/3次方增长，但小簇分布与簇总数不同于七维晶格。研究网络鲁棒性时可同时检查局部与整体统计。",
+            "en": "Figures 10-11 pair the largest SCC with its full size distribution and total count. The complete graph shares the volume exponent 1/3 yet differs from the seven-dimensional lattice in small clusters."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分清维数与归一化指数",
+            "en": "Distinguish dimensional and volume exponents"
+          },
+          "text": {
+            "zh": "比较 d_SCC 与 d_SCC/d：前者在低维区间呈非单调变化，后者单调下降。跨维度或拓扑比较前应明确归一化方式。",
+            "en": "Compare d_SCC with d_SCC/d: the former varies nonmonotonically in the low-dimensional regime, while the latter decreases monotonically. State the normalization before comparing dimensions or topologies."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把有限尺度修正纳入拟合",
+            "en": "Include finite-size corrections"
+          },
+          "text": {
+            "zh": "拟合改变最小系统尺寸并检查参数稳定性；六维还需对数修正。可借此区分渐近指数与有限尺寸漂移，文中的修正指数属于数值估计。",
+            "en": "Vary the minimum fitted size and check parameter stability; six dimensions also require logarithmic corrections. These checks help separate asymptotic behavior from finite-size drift; correction exponents here are numerical estimates."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究有向网络连通性、渗流、鲁棒性与有限尺度标度的读者。",
+        "en": "Readers studying directed connectivity, percolation, network robustness and finite-size scaling."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版11页全文、表I与图1–11，核对出版社渲染图。结论针对对称独立随机有向键、周期边界晶格及完全图；不直接推广至任意有向网络。四维峰值的理论解释仍开放，未独立复现。",
+        "en": "Read the complete 11-page publisher PDF, Table I and Figures 1-11, with publisher render checks. Findings concern symmetric independently occupied directed bonds, periodic lattices and complete graphs; arbitrary directed networks are not established. The four-dimensional peak remains theoretically unexplained. No independent reproduction."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -34510,5 +35254,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "33f5a34cca55f20816514734b2fe65c3b8a204d84036f4f0b9bf1ff923e7a7de"
+  "daily_suggestions_sha256": "e6cb0ac07350a2a1319061ac17150378bd1ac2b7b0197e769aae2179cb155fbb"
 }

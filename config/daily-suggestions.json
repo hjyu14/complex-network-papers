@@ -2162,6 +2162,84 @@
         "zh": "已读用户提供的正式版17页全文、附录A–E、图表说明及参考文献，并核对渲染图。结论限于单次触发、无穷小种子及局部树状无关联超图；顺序规则的最终规模没有精确闭合。未独立复现。",
         "en": "Read the user-provided 17-page publisher PDF, Appendices A-E, captions and references, with rendered checks. Claims assume one-shot triggering, vanishing seeds and locally tree-like uncorrelated hypergraphs. Sequential final size has no exact closure. No independent reproduction."
       }
+    },
+    {
+      "doi": "10.1103/29r6-v42s",
+      "recommended_on": "2026-11-04",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-03-to-04-01",
+      "publication_sha256": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+      "assessment_sha256": "70c0e21f8101d34522dd0d274453f30d293c74afb17e94912aa733a1686d8c4c",
+      "input_sha256": "7e38ee618cb563d8d1c63c5524fa709ae9d92da8bd7aa929d1ab0768cae28e81",
+      "evidence_sha256": "f2a88308d1e3af4a94b6218bfbc53000d073ca7f92b7c7668dec0fcbffa547b8",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-04T02:00:51.398306+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/29r6-v42s",
+        "title": "Percolation transition of strongly connected clusters in finite dimensions and on complete graphs",
+        "sha256": "05eae7eea0cd760fa984210babcbc043cbaa9075890879a8ce014cc029bde1f7",
+        "version": "Physical Review E 114, 054304 (2026), publisher version, published 2026-11-03",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/29r6-v42s",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "read_scope": "Complete 11-page publisher PDF: Sections I-IV, equations, Table I, Figures 1-11 and reference list. Visually checked publisher renderings; cited works and simulations not independently reproduced.",
+        "reviewed_at": "2026-11-04T02:00:51.398306+00:00"
+      },
+      "question": {
+        "zh": "最大簇具有相同标度，是否意味着整张有向网络的簇统计也相同？",
+        "en": "Does matching the largest-cluster scaling imply matching cluster statistics across directed networks?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为相同的最大簇标度仍可能对应不同的小簇分布。论文把高维晶格与完全图并列，展示只看一个临界指数会漏掉的结构差异。",
+          "值得借鉴的是验证顺序：先分清线尺度与体积尺度，再联合检查最大簇、全分布和簇总数，并检验有限尺度修正。"
+        ],
+        "en": [
+          "This pick shows how matching the largest-cluster scaling can conceal different small-cluster statistics. Comparing high-dimensional lattices with complete graphs reveals what a single critical exponent can miss.",
+          "Borrow the validation sequence: distinguish length from volume scaling, then compare the largest cluster, full distribution and total count while checking finite-size corrections."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "用多种统计量检验类比",
+            "en": "Test analogies with several observables"
+          },
+          "text": {
+            "zh": "图10–11中，完全图最大簇按体积的1/3次方增长，但小簇分布与簇总数不同于七维晶格。研究网络鲁棒性时可同时检查局部与整体统计。",
+            "en": "Figures 10-11 pair the largest SCC with its full size distribution and total count. The complete graph shares the volume exponent 1/3 yet differs from the seven-dimensional lattice in small clusters."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分清维数与归一化指数",
+            "en": "Distinguish dimensional and volume exponents"
+          },
+          "text": {
+            "zh": "比较 d_SCC 与 d_SCC/d：前者在低维区间呈非单调变化，后者单调下降。跨维度或拓扑比较前应明确归一化方式。",
+            "en": "Compare d_SCC with d_SCC/d: the former varies nonmonotonically in the low-dimensional regime, while the latter decreases monotonically. State the normalization before comparing dimensions or topologies."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把有限尺度修正纳入拟合",
+            "en": "Include finite-size corrections"
+          },
+          "text": {
+            "zh": "拟合改变最小系统尺寸并检查参数稳定性；六维还需对数修正。可借此区分渐近指数与有限尺寸漂移，文中的修正指数属于数值估计。",
+            "en": "Vary the minimum fitted size and check parameter stability; six dimensions also require logarithmic corrections. These checks help separate asymptotic behavior from finite-size drift; correction exponents here are numerical estimates."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究有向网络连通性、渗流、鲁棒性与有限尺度标度的读者。",
+        "en": "Readers studying directed connectivity, percolation, network robustness and finite-size scaling."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版11页全文、表I与图1–11，核对出版社渲染图。结论针对对称独立随机有向键、周期边界晶格及完全图；不直接推广至任意有向网络。四维峰值的理论解释仍开放，未独立复现。",
+        "en": "Read the complete 11-page publisher PDF, Table I and Figures 1-11, with publisher render checks. Findings concern symmetric independently occupied directed bonds, periodic lattices and complete graphs; arbitrary directed networks are not established. The four-dimensional peak remains theoretically unexplained. No independent reproduction."
+      }
     }
   ],
   "revisions": [

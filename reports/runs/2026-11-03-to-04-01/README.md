@@ -1,0 +1,15 @@
+# 2026-11-03–04 overlapping daily update
+
+The frozen window includes both dates, with 2026-11-04 as the collection as-of date. All 14 ordinary whitelist journals have complete current inventories at their timestamped source observations in `collection-log.jsonl`; this is not a claim of complete-calendar-day coverage. Chaos article dates and the November issue DOI set were cross-checked; PNAS search pagination and issues 44–46 were reconciled through the in-app browser. Automatic security pages were allowed to finish without bypassing access controls.
+
+The primary agent completed all 125 in-window assessments: seven core inclusions and 118 exclusions. No unassessed, deferred, active or unresolved items remain. Human scientific-decision and missing-material queues are empty. The serial screening log, original candidates and frozen inputs remain authoritative.
+
+Four new website DOIs are accepted manuscripts, each accepted 2026-11-03: `10.1103/n24h-kkc6`, `10.1103/ywrq-rpzh`, `10.1103/hy6f-3l9c` and `10.1103/v3ns-4m1d`. Three previously included accepted manuscripts became formally published on 2026-11-03: `10.1103/29r6-v42s`, `10.1103/366d-8m6s` and `10.1103/8nxh-kpt8`. These transitions do not add duplicate website entries. The unusual apostrophes in the official author spelling for `hy6f-3l9c` were checked against its APS accepted page and preserved.
+
+The bound `evidence/cross-run-audit.json` has no blockers: 125 in-window records, 102 newly reviewed, 141 historically reviewed and 21 state updates across included and excluded records. The last figure is not the website transition count. The changed title of `10.1103/ctvj-t6s7` was individually checked against the official DOI, authors and abstract; its exclusion remains unchanged.
+
+The 2026-11-04 archive recommendation is *Percolation transition of strongly connected clusters in finite dimensions and on complete graphs* by Qi Wang and Ming Li, DOI `10.1103/29r6-v42s`, formally published 2026-11-03. The primary agent read the complete 11-page publisher PDF, Sections I–IV, equations, Table I, Figures 1–11 and references, and checked publisher renderings. The recommendation distinguishes dimensional and volume exponents and largest-cluster scaling from the full size distribution. It states the symmetric independent directed-bond, periodic-lattice/complete-graph assumptions, finite-size limitations and unresolved theoretical interpretation. It does not claim independent reproduction.
+
+Monday PR/RMP checking is already recorded in `reports/reviews/pr-rmp-weekly-2026-11-02-01/`. Wednesday requires no new check; no Wednesday zero-addition claim is made. The existing review snapshot is retained.
+
+`publication.json` seals the inventory, author audit and carryover audit; `config/release.json` pins its byte hash. Full abstracts and PDFs remain exclusively in ignored private storage. Deployment and social-delivery verification are recorded privately during closeout. Ordinary daily updates do not add a website changelog entry.
