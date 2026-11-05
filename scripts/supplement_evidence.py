@@ -71,11 +71,13 @@ def begin(w,phase,size):
     print(json.dumps({'batch_id':ident,'phase':phase,'count':len(chosen)}))
 
 def collect(w):
-    b,boundary=batch(w);snapshot=list(w.log.events);stop=threading.Event()
+    b,boundary=batch(w);stop=threading.Event()
+    w.prepare_openalex(stop)
+    snapshot=list(w.log.events)
     def job(doi):
         j=object.__new__(Supplement);j.__dict__={**w.__dict__,'log':BufferedLog(snapshot),'collection_doi':doi,'request_stop':stop,'material_boundary':boundary}
         attempts=[e['data'] for e in snapshot if e['kind']=='source_attempt' and e['data']['doi']==doi]
-        previous={a['channel'] for a in attempts}
+        previous={a['channel'] for a in attempts if a.get('request_made',True)}
         current_attempts={a['channel'] for a in attempts if a.get('supplement_batch_id')==b['batch_id']}
         if j.current_material():return doi,[],True
         if b['phase']=='incomplete':route=[c for c in ['cache','crossref','publisher','openalex'] if c not in previous]
@@ -94,6 +96,7 @@ def collect(w):
     with ThreadPoolExecutor(max_workers=4) as pool:
         pending={}
         def submit_one():
+            if stop.is_set():return
             doi=next(remaining,None)
             if doi is not None:pending[pool.submit(job,doi)]=doi
         for _ in range(4):submit_one()

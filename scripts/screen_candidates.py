@@ -3,14 +3,16 @@ import argparse
 from collections import Counter
 from contextlib import nullcontext
 from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
-from datetime import date
+from datetime import date, datetime
 import hashlib
 from html.parser import HTMLParser
 import json
+import os
 from pathlib import Path
 import re
 import threading
 import time
+from zoneinfo import ZoneInfo
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlsplit
 from urllib.request import Request, urlopen
@@ -24,6 +26,9 @@ VERSION = 'screening-workflow-1'
 PRIVATE = ROOT / '.private/abstract-cache/v9'
 OLD_PRIVATE = ROOT.parent / 'papers_of_complex_networks/.private/abstract-cache/v9'
 MAX_BYTES = 4 * 1024 * 1024
+LIMIT_HEADERS = ['x-api-pool', 'x-rate-limit-limit', 'x-rate-limit-interval',
+                 'x-concurrency-limit', 'retry-after', 'x-ratelimit-limit',
+                 'x-ratelimit-remaining', 'x-ratelimit-credits-used', 'x-ratelimit-reset']
 NON_TARGET_TYPES = {'News', 'Career Column', 'Career Feature', 'News & Views',
                     'News Feature', 'Research Highlight', 'Nature Briefing',
                     'Author Correction', 'Publisher Correction', 'Editorial',
@@ -55,6 +60,157 @@ def safe_url(url):
     if p.scheme != 'https' or not p.hostname or p.username or p.password or p.query or p.fragment:
         raise ValueError('Expected a public HTTPS URL without query or credentials')
     return url
+
+
+def openalex_api_key():
+    """Read only this credential; never execute/interpolate dotenv contents."""
+    key = os.environ.get('OPENALEX_API_KEY')
+    if key is None:
+        path = ROOT / '.env'
+        if not path.exists():
+            return None
+        try:
+            lines = path.read_text(encoding='utf-8-sig').splitlines()
+        except (OSError, UnicodeError):
+            raise ValueError('Cannot read OpenAlex credential configuration') from None
+        values = []
+        for line in lines:
+            match = re.match(r'^\s*(?:export\s+)?OPENALEX_API_KEY\s*=(.*)$', line)
+            if not match:
+                continue
+            value = match[1].strip()
+            if value.startswith(('"', "'")):
+                quoted = re.fullmatch(r'''(["'])(.*?)\1\s*(?:#.*)?''', value)
+                if not quoted:
+                    raise ValueError('Invalid OPENALEX_API_KEY configuration')
+                value = quoted[2]
+            else:
+                value = re.split(r'\s+#', value, maxsplit=1)[0].strip()
+            values.append(value)
+        if not values:
+            return None
+        if len(values) != 1:
+            raise ValueError('Duplicate OPENALEX_API_KEY configuration')
+        key = values[0]
+    if not re.fullmatch(r'[\x21-\x7e]+', key):
+        raise ValueError('Invalid or empty OPENALEX_API_KEY configuration')
+    return key
+
+
+def evidence_request(url, channel):
+    request = Request(url, headers={'User-Agent': 'ComplexNetworkPapers/1.0 (bounded scholarly screening)'})
+    if channel == 'openalex':
+        if urlsplit(url).netloc != 'api.openalex.org' or urlsplit(url).scheme != 'https':
+            raise ValueError('Unexpected OpenAlex API origin')
+        key = openalex_api_key()
+        if key is not None:
+            # urllib does not copy unredirected headers to redirected requests.
+            request.add_unredirected_header('Authorization', 'Bearer ' + key)
+    return request
+
+
+class OpenAlexUnavailable(Exception):
+    """The run-level gate prevented a request, not a missing article/abstract."""
+
+
+class OpenAlexAccess:
+    """One daily preflight, persisted privately and shared by paper workers."""
+    def __init__(self, path=None):
+        self.path = path
+        self.lock = threading.RLock()
+        self.result = None
+
+    def save(self, result):
+        self.result = result
+        if self.path is not None:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            temp = self.path.with_suffix('.tmp')
+            temp.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
+            temp.replace(self.path)
+        return result
+
+    def check(self, log=None, stop=None, *, refresh=False):
+        with self.lock:
+            day = datetime.fromisoformat(now()).astimezone(ZoneInfo('Asia/Shanghai')).date().isoformat()
+            if self.result is None and self.path is not None and self.path.exists():
+                saved = json.loads(self.path.read_text(encoding='utf8'))
+                allowed = {'version','day','checked_at','source_url','status','authentication','quota','request_limits','http_status'}
+                if (not isinstance(saved, dict) or set(saved)-allowed
+                        or saved.get('version') != 'openalex-preflight-1'
+                        or saved.get('status') not in {'ready','auth_failed','rate_limited','quota_exhausted','quota_unknown','invalid_configuration','unavailable'}
+                        or not isinstance(saved.get('quota'), dict)
+                        or set(saved['quota'])-{'daily_budget_usd','daily_used_usd','daily_remaining_usd','credits_limit','credits_used','credits_remaining','resets_in_seconds'}
+                        or not isinstance(saved.get('request_limits'), dict)
+                        or set(saved['request_limits'])-set(LIMIT_HEADERS)):
+                    raise ValueError('Invalid private OpenAlex preflight state; no request made')
+                self.result = saved
+            if refresh and self.result and self.result.get('day')==day and self.result.get('status')=='rate_limited':
+                raise ValueError('HTTP 429 stop remains in force for this run/day; do not force a retry')
+            if refresh or not self.result or self.result.get('day') != day:
+                result = dict(version='openalex-preflight-1', day=day, checked_at=now(),
+                              source_url='https://api.openalex.org/rate-limit', status='unavailable',
+                              authentication='unknown', quota={}, request_limits={})
+                try:
+                    request = evidence_request(result['source_url'], 'openalex')
+                    result['authentication'] = 'api_key' if request.get_header('Authorization') else 'anonymous'
+                    with urlopen(request, timeout=30) as response:
+                        body = response.read(MAX_BYTES+1)
+                        result['http_status'] = response.status
+                        result['request_limits'] = {k:str(response.headers[k])[:100] for k in LIMIT_HEADERS if response.headers.get(k)}
+                    if len(body) > MAX_BYTES:
+                        raise ValueError('Response exceeds preflight size limit')
+                    # /rate-limit also returns api_key. Never save or log the raw response.
+                    payload = json.loads(body)
+                    quota = payload.get('rate_limit') if isinstance(payload, dict) else None
+                    if not isinstance(quota, dict):
+                        raise ValueError('Missing quota object')
+                    fields = ['daily_budget_usd','daily_used_usd','daily_remaining_usd',
+                              'credits_limit','credits_used','credits_remaining','resets_in_seconds']
+                    for field in fields:
+                        value = quota.get(field)
+                        if type(value) in {int,float} and value >= 0 and value < float('inf'):
+                            result['quota'][field] = value
+                    remaining = result['quota'].get('daily_remaining_usd', result['quota'].get('credits_remaining'))
+                    result['status'] = ('quota_unknown' if remaining is None else
+                                        'quota_exhausted' if remaining <= 0 else 'ready')
+                except HTTPError as exc:
+                    result.update(http_status=exc.code, status='auth_failed' if exc.code in {401,403} else
+                                  'rate_limited' if exc.code == 429 else 'unavailable')
+                    result['request_limits'] = {k:str(exc.headers[k])[:100] for k in LIMIT_HEADERS if exc.headers and exc.headers.get(k)}
+                except (URLError, TimeoutError, ValueError, KeyError, UnicodeError, TypeError):
+                    # Fixed error category only; credentials and response bodies stay private in memory.
+                    result['status'] = 'invalid_configuration' if result['authentication']=='unknown' else 'unavailable'
+                self.save(result)
+            result = self.result
+            if log is not None and not any(e['kind']=='openalex_preflight_checked' and e['data']==result for e in log.events):
+                log.add('openalex_preflight_checked', result.copy())
+            if result['status']=='rate_limited' and stop is not None:
+                stop.set()
+            return result
+
+    def read(self, request, log, stop=None):
+        # Serialize OpenAlex requests so a runtime authentication failure is latched
+        # before another worker can issue the next request.
+        with self.lock:
+            if self.result['status'] != 'ready':
+                raise OpenAlexUnavailable()
+            try:
+                with urlopen(request, timeout=30) as response:
+                    body = response.read(MAX_BYTES+1)
+                    headers = {k:str(response.headers[k])[:100] for k in LIMIT_HEADERS if response.headers.get(k)}
+                    result = (body, response.status, urlsplit(response.url).hostname, headers)
+            except HTTPError as exc:
+                if exc.code in {401,403,429}:
+                    self.save({**self.result, 'checked_at':now(), 'status':'rate_limited' if exc.code==429 else 'auth_failed',
+                               'http_status':exc.code, 'source_url':request.full_url, 'request_limits':{k:str(exc.headers[k])[:100] for k in LIMIT_HEADERS if exc.headers and exc.headers.get(k)}})
+                    log.add('openalex_channel_disabled', self.result.copy())
+                    if exc.code==429 and stop is not None:
+                        stop.set()
+                raise
+            if headers.get('x-ratelimit-remaining') == '0':
+                self.save({**self.result, 'checked_at':now(), 'status':'quota_exhausted', 'source_url':request.full_url, 'request_limits':headers})
+                log.add('openalex_channel_disabled', self.result.copy())
+            return result
 
 
 def validate_identity(m, r):
@@ -364,6 +520,13 @@ class Workflow:
         self.log.add('batch_selected', {'batch_dois': picked, 'selection': basis})
         return {'batch_dois': picked, 'selection': basis}
 
+    def prepare_openalex(self, stop=None, *, refresh=False):
+        if not hasattr(self, 'openalex_access'):
+            path = ROOT/'.private/work'/self.out.name/'openalex-preflight.json' if hasattr(self, 'out') else None
+            self.openalex_access = OpenAlexAccess(path)
+        self.openalex_access.check(self.log, stop, refresh=refresh)
+        return self.openalex_access
+
     def collect_batch(self, workers=4):
         if self.active() or not 1 <= workers <= 4:
             raise ValueError('No active single paper; use 1–4 collection workers')
@@ -373,11 +536,13 @@ class Workflow:
                 {'assessment', 'material_deferred', 'automatic_material_complete'}}
         pending = [d for d in batch if d not in done]
         start = time.monotonic()
+        stop = threading.Event()
+        if pending:
+            self.prepare_openalex(stop)
         self.log.add('automatic_batch_started', {'batch_dois': pending, 'workers': workers,
                      'channels': ['cache', 'crossref', 'publisher', 'openalex'],
                      'browser_policy': 'Deferred; no browser in automatic detection'})
         snapshot = list(self.log.events)
-        stop = threading.Event()
 
         def collect(doi):
             w = object.__new__(Workflow)
@@ -519,7 +684,8 @@ class Workflow:
         if self.current_material():
             raise ValueError('Material ready: assess before continuing channels')
         previous = [e['data']['channel'] for e in self.log.events
-                    if e['kind'] == 'source_attempt' and e['data']['doi'] == r['doi']]
+                    if e['kind'] == 'source_attempt' and e['data']['doi'] == r['doi']
+                    and e['data'].get('request_made', True)]
         order = ['cache', 'crossref', 'publisher', 'openalex']
         if not getattr(self, 'authorized_supplement_route', False) and (channel in previous or previous != order[:order.index(channel)]):
             raise ValueError('Use each channel once in cache, crossref, publisher, openalex order')
@@ -553,6 +719,11 @@ class Workflow:
                 return {'result': 'missing_url'}
         safe_url(url)
         response_limits = {}
+        access = self.prepare_openalex(getattr(self, 'request_stop', None)) if channel=='openalex' else None
+        if access is not None and access.result['status'] != 'ready':
+            self.attempt(channel, url, 'skipped_openalex_preflight', request_made=False,
+                         preflight_status=access.result['status'], next_reason='Resolve the run-level OpenAlex preflight; no article availability claim')
+            return {'result':'failed'}
         try:
             with self.crossref_gate if channel == 'crossref' and hasattr(self, 'crossref_gate') else nullcontext():
                 stop = getattr(self, 'request_stop', None)
@@ -569,13 +740,15 @@ class Workflow:
                     if delay and stop is None:
                         time.sleep(delay)
                     self.crossref_schedule['last_started'] = time.monotonic()
-                with urlopen(Request(url, headers={'User-Agent': 'ComplexNetworkPapers/1.0 (bounded scholarly screening)'}), timeout=30) as response:
-                    body = response.read(MAX_BYTES+1)
-                    code = response.status
-                    final_host = urlsplit(response.url).hostname
-                    response_limits = {k: str(response.headers[k])[:100] for k in
-                        ['x-api-pool', 'x-rate-limit-limit', 'x-rate-limit-interval', 'x-concurrency-limit', 'retry-after']
-                        if response.headers.get(k)}
+                if access is not None:
+                    body, code, final_host, response_limits = access.read(evidence_request(url, channel), self.log, stop)
+                else:
+                    with urlopen(evidence_request(url, channel), timeout=30) as response:
+                        body = response.read(MAX_BYTES+1)
+                        code = response.status
+                        final_host = urlsplit(response.url).hostname
+                        response_limits = {k: str(response.headers[k])[:100] for k in
+                            LIMIT_HEADERS if response.headers.get(k)}
             if len(body) > MAX_BYTES:
                 raise ValueError('Response exceeded 4 MB budget')
             if channel == 'crossref':
@@ -616,12 +789,15 @@ class Workflow:
                          abstract_sha256=m['abstract_sha256'], abstract_basis=m['abstract_basis'],
                          stop_reason='Identity-matched explicit abstract cached; assess now')
             return self.next()
+        except OpenAlexUnavailable:
+            self.attempt(channel, url, 'skipped_openalex_preflight', request_made=False,
+                         preflight_status=access.result['status'], next_reason='OpenAlex disabled for this run/day; use independent allowed evidence or explicitly recheck after resolution')
         except HTTPError as e:
             if e.code == 429 and getattr(self, 'request_stop', None) is not None:
                 self.request_stop.set()
             self.attempt(channel, url, 'http_error', http_status=e.code,
                          request_limits={k: str(e.headers[k])[:100] for k in
-                            ['x-api-pool', 'x-rate-limit-limit', 'x-rate-limit-interval', 'x-concurrency-limit', 'retry-after']
+                            LIMIT_HEADERS
                             if e.headers and e.headers.get(k)},
                          next_reason=('HTTP 429: stop batch submissions and subsequent channels'
                                       if e.code == 429 and getattr(self, 'request_stop', None) is not None
@@ -650,7 +826,8 @@ class Workflow:
         if not self.active():
             raise ValueError('Run next first')
         previous = {e['data']['channel'] for e in self.log.events
-                    if e['kind'] == 'source_attempt' and e['data']['doi'] == self.active()}
+                    if e['kind'] == 'source_attempt' and e['data']['doi'] == self.active()
+                    and e['data'].get('request_made', True)}
         for channel in ['cache', 'crossref', 'publisher', 'openalex']:
             if getattr(self, 'request_stop', None) is not None and self.request_stop.is_set():
                 break
@@ -825,6 +1002,8 @@ def main():
     sub = ap.add_subparsers(dest='command', required=True)
     for cmd in ['init', 'next', 'status', 'export', 'fetch-active']:
         sub.add_parser(cmd)
+    p = sub.add_parser('preflight')
+    p.add_argument('--refresh', action='store_true', help='Explicit recheck after resolving credentials/service failure; never use to bypass 429')
     p = sub.add_parser('batch')
     p.add_argument('--size', type=int, default=10)
     p.add_argument('--doi', action='append')
@@ -843,7 +1022,16 @@ def main():
     args = ap.parse_args()
     from report_io import run_directory
     args.out = run_directory(args.out, ROOT, writable=args.command not in {'status','export','review-pack'})
+    if args.command == 'preflight':
+        from report_io import work_directory
+        access = OpenAlexAccess(work_directory(args.out, ROOT)/'openalex-preflight.json')
+        result = access.check(refresh=args.refresh)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
     w = Workflow(args.out)
+    if args.command == 'fetch-active' or (args.command == 'fetch' and args.channel != 'cache'):
+        w.request_stop = threading.Event()
+        w.prepare_openalex(w.request_stop)
     if args.command == 'init':
         w.init()
         result = w.status()

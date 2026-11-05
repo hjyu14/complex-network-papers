@@ -264,7 +264,7 @@ class EvidenceTests(unittest.TestCase):
                 w = s.Workflow(out)
                 w.log.add('run_started', {'candidate_sha256': w.input_sha, 'rule_sha256': w.rule_sha,
                           'batch_dois': [r['doi'] for r in rs]})
-                with patch.object(s.Workflow, 'fetch_active', collect):
+                with patch.object(s.Workflow, 'fetch_active', collect), patch.object(s.Workflow, 'prepare_openalex'):
                     result = w.collect_batch(2)
                 self.assertEqual(result['results'], {'abstract_ready': 1, 'deferred': 1, 'type_evidence_ready': 1})
                 self.assertEqual(w.status()['assessed'], 0)
@@ -318,7 +318,7 @@ class EvidenceTests(unittest.TestCase):
         def limited(job):
             called.append(job.active())
             job.request_stop.set()
-        with patch.object(s.Workflow, 'fetch_active', limited):
+        with patch.object(s.Workflow, 'fetch_active', limited), patch.object(s.Workflow, 'prepare_openalex'):
             result = w.collect_batch(1)
         self.assertEqual(called, [records[0]['doi']])
         self.assertEqual(result['results'], {'deferred_rate_limit': 1, 'not_started_rate_limit': 2})

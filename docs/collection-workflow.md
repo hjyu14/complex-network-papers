@@ -71,6 +71,31 @@ Crossref 的 online／print／pub 查询和 RSS 仅用于发现线索，不能�
 
 出版社文章页明确的 `citation_online_date` 可作为首次在线书目观察，用于窗口登记，保存实际字段名，不伪称已经展开文章历史。正式纳入前仍须核对可见历史中的 `Available online` 并绑定该观察；元数据与历史不同则保留冲突。版本标签未显示时保留空值，不推造 Version of Record。明确的 Corrected Proof／Uncorrected Proof 同样如实记录，目标文章类型另行审核。
 
+## OpenAlex 摘要 API 认证
+
+`screen_candidates.py` 及复用该取证入口的 `supplement_evidence.py` 自动读取进程环境变量 `OPENALEX_API_KEY`；未设置时读取项目根目录 `.env` 中的同名值。环境变量优先，支持 `.env` 的单行裸值、单／双引号值、可选 `export` 和行尾注释，不执行变量展开或加载其他变量。没有配置时保留匿名请求；空值、重复配置或非法值明确失败。不要将真实 key 写入代码、命令、公开目录或聊天，`.env` 保持 Git 忽略。
+
+认证仅通过发往 `https://api.openalex.org` 的 `Authorization: Bearer` 请求头发送，重定向不转发此头；来源 URL、缓存和报告不包含 key。安全额度头可进入请求记录。401／403 保留失败，不自动退回匿名重试；429 沿用既有停止规则。此配置只认证现有精确 DOI 摘要请求，不改变渠道顺序、筛选规则或全文获取。
+
+日更选定／恢复轮次后、整刊采集和逐篇取证前，先执行一次认证和额度预检（允许候选尚未生成）：
+
+```powershell
+python scripts/screen_candidates.py --out reports/runs/<run-id> preflight
+```
+
+命令只读官方 `/rate-limit`，结果保存到 `.private/work/<run-id>/openalex-preflight.json`，不初始化或改写正式候选／审读日志。默认同一轮、同一北京时间日期复用结果；次日恢复时自动重新预检。普通 `collect-batch`、单篇 OpenAlex 获取和 `supplement_evidence.py collect` 也有自动保护，正式取证日志只绑定安全预检结论及额度白名单，不保存端点返回的 `api_key`、账户信息或原始响应。
+
+- `ready`：认证／匿名入口可访问且核验到正的日余额，继续既有渠道顺序。未配置 key 保留匿名模式；配置错误不静默切回匿名。
+- `auth_failed`（401／403）、`invalid_configuration`：本轮当天停用 OpenAlex，继续缓存、Crossref、出版社及合规浏览器等不依赖该渠道的工作，不逐篇重复认证请求。补齐凭据后可明确执行 `preflight --refresh`，再继续尚未完成的取证；此前失败和判断不改写。
+- `quota_exhausted`、`quota_unknown`、`unavailable`：额度用尽、无法核验额度或预检暂不可达时，保守停用 OpenAlex 并保存原因，不将跳过记为无摘要。解决后可有据重新预检，不提高请求预算或并发。
+- `rate_limited`（429）：触发原有全局停止规则，停止本批新任务及后续渠道；同轮当天 `--refresh` 也拒绝强制重试，不改用匿名或浏览器绕过。次日的新一次运行可重新预检。
+
+OpenAlex 网络请求在共享锁内串行执行：运行中首个401／403会持久化停用状态，后续工作线程和CLI恢复不再发该渠道请求；429同时传播共享停止信号。成功响应耗尽剩余额度时，已取得且核验通过的材料仍保留，后续OpenAlex请求停止。普通DOI的404仅表示该条未找到，不停用其他DOI。其余科学、身份、缓存和发布门槛不变。
+
+预检状态只服务于运行调度，不能证明整刊覆盖或科学审读完成，也不会改写已经封存的轮次和网站快照。私有状态损坏时明确失败，不用未核验状态继续请求。密钥轮换后须明确重新预检；不得用强制重试规避429。
+
+官方参考：[认证](https://help.openalex.org/api/authentication/)。
+
 ## 浏览器补证
 
 Science、Science Advances、PNAS 等可能拒绝普通 HTTP。允许正常浏览器访问公开目录，不登录、不解验证码、不绕过访问控制；只读取允许书目，不保存 HTML、正文或 PDF。将目录来源、分页／守卫依据、重复条目及允许书目追加为 `browser_directory` 事件，再恢复程序。
