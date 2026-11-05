@@ -753,13 +753,12 @@
     },
     "10.1103/l51k-63y5": {
       "categories": [
-        "network_collective",
-        "network_resilience",
-        "network_inference"
+        "network_inference",
+        "network_collective"
       ],
-      "note_en": "Parameter-aware reservoirs predict abrupt oscillator-network death transitions and hysteresis, with connectivity inference available when topology is unknown.",
-      "note_zh": "参数感知储备池预测振子网络的突变死亡及滞后，并可在拓扑未知时进行连接推断。",
-      "assessment_sha256": "d73404f507e76c83b5d59a6620de4a9ce56bca0e37f56f360e7d11202e0de6b2"
+      "note_zh": "参数感知的逐节点储备池预测振子网络的爆发死亡、滞后与时空模式，并支持从动力学数据推断连接结构。",
+      "note_en": "Parameter-aware nodewise reservoirs predict explosive death, hysteresis and spatiotemporal patterns in oscillator networks and support data-driven topology inference.",
+      "assessment_sha256": "bd48576f8ead839604bf6568681d54b330488b737777eb92ba3f556b1f14186e"
     },
     "10.1103/m8bw-9fzg": {
       "categories": [
@@ -1372,9 +1371,9 @@
         "network_collective",
         "network_spreading"
       ],
-      "note_en": "Long-range vigilance cascades and layer alignment change cooperation thresholds in multiplex networks with different topologies.",
-      "note_zh": "长程警觉传播与层间对齐改变不同拓扑多层网络中的合作阈值。",
-      "assessment_sha256": "bff00b5cd75fc1105c5cbe863d78d0911b068bd08d1cecef321b85b01f0e33fc"
+      "note_zh": "多层网络中警觉级联与囚徒困境相互耦合，图距离、拓扑及层间对齐共同影响合作出现的阈值。",
+      "note_en": "Coupled vigilance cascades and Prisoner’s Dilemma dynamics show how graph distance, topology and layer alignment influence cooperation thresholds in multiplex networks.",
+      "assessment_sha256": "c923edd36ce8874cb5d1104e3df8599e6818ee60d35ef7615add81d8914d7df0"
     },
     "10.1073/pnas.2612387123": {
       "categories": [
@@ -1591,12 +1590,11 @@
     },
     "10.1103/52n3-kwdj": {
       "categories": [
-        "network_resilience",
-        "network_collective"
+        "network_resilience"
       ],
-      "note_en": "A throughput-based proto-immunity framework analyzes defense motifs and invasion stability in open chemical reaction networks.",
-      "note_zh": "以通量保护定义开放化学反应网络的原免疫能力，分析防御模体与入侵稳定性。",
-      "assessment_sha256": "c32a03239112d8811b0dc92673cb764c267bb9f47a8dd770aa5770a96c856c80"
+      "note_zh": "在开放化学反应网络中，以入侵下的通量保持定义原始免疫，并用稳定性和分岔分析检验防御模体。",
+      "note_en": "Throughput preservation under invasion defines proto-immunity in open chemical reaction networks; stability and bifurcation analysis test a defensive network motif.",
+      "assessment_sha256": "1e8babc3fb3d2c44a10977c7a8dbbce060e756fa66ba411a18cba3794cc9ba77"
     },
     "10.1126/sciadv.aee5886": {
       "categories": [
@@ -1860,9 +1858,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_zh": "局部交互半径调控移动相位振子的涡旋、极化和失稳阈值，揭示空间耦合范围对集体态的影响。",
-      "note_en": "Local interaction radius controls vortex states, polarization and instability thresholds in mobile phase oscillators, linking spatial coupling range to collective order.",
-      "assessment_sha256": "925a7a2a686d3ffbba46cc36dedf92ec68b603a28a87097c136ac196bee880a0"
+      "note_zh": "移动相位振子的相互作用半径改变涡旋与极化态、滞后及不同波数的失稳阈值，揭示耦合范围对集体组织的影响。",
+      "note_en": "Interaction radius reshapes vortex and polar states, hysteresis and wavenumber-dependent instability thresholds in mobile phase oscillators.",
+      "assessment_sha256": "50d804655b723ea83bf18addbfcdd0b9a175ecb4a576bec7417aadf2b86c564a"
     },
     "10.1038/s41467-026-78441-9": {
       "categories": [
@@ -1959,11 +1957,12 @@
     },
     "10.1103/rghw-4dhl": {
       "categories": [
-        "network_structure"
+        "network_structure",
+        "network_collective"
       ],
-      "note_zh": "将分层梳状聚合物的连接图谱与构象、松弛及流变标度联系起来，给出拓扑控制的普适关系。",
-      "note_en": "Connects hierarchical comb topology to polymer conformation, relaxation and rheological scaling through graph spectra.",
-      "assessment_sha256": "c2142b9b320eedcc86a9e03e438a34908366558126bd3bdbf74f0f995bc98495"
+      "note_zh": "以图算子和谱方法结合刚性、排斥体积及流体动力耦合，解释层级梳状聚合物的拓扑依赖构象与弛豫。",
+      "note_en": "Graph operators and spectral methods combine stiffness, excluded volume and hydrodynamic coupling to explain topology-dependent conformations and relaxation in hierarchical comb polymers.",
+      "assessment_sha256": "535db9fdb77dd9be709cb13f4cb9d5e879e60ee78a2406996025d5ee8a0bac62"
     },
     "10.1038/s42005-026-02908-w": {
       "categories": [
@@ -2414,6 +2413,73 @@
       "note_zh": "在三角形、四面体与 kagome 网络上，排斥相位耦合将神经时序挫折关联到简并能景和亚稳弛豫。",
       "note_en": "Repulsive phase coupling on triangle, tetrahedral and kagome geometries links frustrated neural timing to degenerate energy landscapes and metastable relaxation.",
       "assessment_sha256": "55afca5515b95f6a96ea1aca05bb7eed693bf47ee70cc4451342009e86733615"
+    },
+    "10.1063/5.0344204": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "稠密神经群体中，随机子群的有限尺寸噪声谱由整群谱与自由散粒噪声谱混合，子群比例改变谱形而非仅缩放强度。",
+      "note_en": "Random subpopulations of densely coupled neurons mix the full-population and free shot-noise spectra, changing spectral shape as well as fluctuation intensity.",
+      "assessment_sha256": "69a7bc138789cd0c23900efb9adf4652b6ce7f8d66f79918c6d7b563dbf9dc6b"
+    },
+    "10.1126/sciadv.aeb4683": {
+      "categories": [
+        "network_spreading"
+      ],
+      "note_zh": "结合流行病学与基因组推断识别撒哈拉以南非洲的跨国霍乱传播单元，比较不同来源位置的跨境传播风险与速度。",
+      "note_en": "Epidemiological and genomic inference identifies cross-border cholera transmission units in sub-Saharan Africa and compares location-dependent international spread risk and speed.",
+      "assessment_sha256": "b6ac8268d1bc7ca19976d00c4789debe8636070ccff7713f87b93872805ab8ab"
+    },
+    "10.1103/655g-h9xq": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "多分支层级三元相互作用增强湍流壳模型的间歇性，父子与兄弟分支的通量乘子呈现尺度无关统计。",
+      "note_en": "Hierarchical branching triadic interactions enhance intermittency in turbulent shell models, with scale-independent flux-multiplier statistics across parent-child and sibling branches.",
+      "assessment_sha256": "c76da308a05239b3c2b84a540b5f05e10d54b5f8311ea3edf67cab0057bdbf39"
+    },
+    "10.1103/spjq-78dd": {
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "note_zh": "各向异性残基网络模型解释膜蛋白中无标度相关的方向重组，并以方向机械易感性刻画扰动响应。",
+      "note_en": "Anisotropic residue-network models explain directional reorganization of scale-free correlations in membrane proteins and quantify perturbation responses through directional mechanical susceptibility.",
+      "assessment_sha256": "3999d5e2a6bee7b4f7411e426ec523b32b877479f49108aa52d82bd94acb5d91"
+    },
+    "10.1038/s41586-026-11177-0": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "scDORI 推断增强子驱动的单细胞基因调控网络，结合扰动揭示胶质母细胞瘤状态转换和抑制性调控架构。",
+      "note_en": "scDORI infers enhancer-driven single-cell gene regulatory networks; perturbations connect regulatory architecture with glioblastoma cell-state transitions.",
+      "assessment_sha256": "10270577cf63db376ce4cb2b3a4960068d8cbcc4dd412e3aeadf8e8138ab079d"
+    },
+    "10.1038/s41586-026-11212-0": {
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "note_zh": "双基因扰动与稳健交互统计刻画结核分枝杆菌必需基因网络，将遗传相互作用联系到物理关联和协同靶点。",
+      "note_en": "Dual-gene perturbations and robust interaction statistics map essential-gene network architecture in M. tuberculosis, connecting genetic interactions with physical associations and synergistic targets.",
+      "assessment_sha256": "d1b7abe104bccac2ff458db3f129a3c14233ff69ca68b4a1655bbbefe63b8961"
+    },
+    "10.1038/s41586-026-11217-9": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "多脑区记录与建模揭示攻击经历和观察后的共同网络重组，检验抑制耦合变化对适应性行为的作用。",
+      "note_en": "Multiregion recordings and modelling reveal shared aggression-network reorganization after experience and observation and test the role of altered inhibitory coupling in adaptive behaviour.",
+      "assessment_sha256": "814dc4b5f4576e3a1c2ff36f7c9fa0565480de38c10b2830832b9f455470525e"
+    },
+    "10.1038/s41586-026-11236-6": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "重建基因调控网络解释不同孤独症基因扰动的转录汇聚，并将共同调控失衡联系到 ZFX 介导的缓冲作用。",
+      "note_en": "Reconstructed gene regulatory networks explain transcriptomic convergence across autism-gene perturbations and link shared dysregulation with ZFX-mediated buffering.",
+      "assessment_sha256": "4fc2a072cf6e104b9e16ade6f227e72a9ab82f270e2dc81de9226a13dd89f380"
     }
   }
 }

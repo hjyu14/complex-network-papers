@@ -780,8 +780,20 @@ def reconcile(crossref, official, journal, start, end, as_of, client, log):
     return sorted(candidates.values(),key=lambda c:(c['date'] or '',c['doi'] or c['title']))
 
 
-def inventory_summary(rows, enumeration_complete):
-    """A source-relative inventory gate, distinct from strict field reconciliation."""
+def inventory_summary(rows, enumeration_complete, scope_verdicts=()):
+    """Keep explicit personal scope exclusions separate from publisher verification."""
+    latest_verdicts = {v.get('doi'): v for v in scope_verdicts}
+    scope_excluded = {}
+    for c in rows:
+        v = latest_verdicts.get(c['doi'], {})
+        if (c['window_membership'] == 'in_window' and c['identity_verified']
+                and v.get('verdict') == 'exclude'
+                and v.get('statement_kind') == 'explicit_individual_verdict'
+                and v.get('authority') == 'human user in current conversation'
+                and v.get('personally_reviewed') is True and v.get('user_statement')
+                and normalized_title(v.get('title')) == normalized_title(c['title'])
+                and v.get('original_record_sha256') == digest(c)):
+            scope_excluded[c['doi']] = digest(v)
     counts = dict(Counter(c['window_membership'] for c in rows))
     pending = [c['doi'] for c in rows if c['window_membership'] == 'unresolved' or not c['identity_verified']]
     human_confirmed = {c['doi'] for c in rows if c['window_membership']=='in_window' and c['identity_verified']
@@ -790,13 +802,17 @@ def inventory_summary(rows, enumeration_complete):
     publisher_confirmed = {c['doi'] for c in rows if c['window_membership']=='in_window'
                            and c['identity_verified'] and (c['publisher_records'] or c.get('publisher_article_check'))}
     unexplained = [c['doi'] for c in rows if c['window_membership'] == 'in_window'
-                   and not c['publisher_records'] and not c.get('publisher_article_check') and c['doi'] not in human_confirmed]
+                   and not c['publisher_records'] and not c.get('publisher_article_check') and c['doi'] not in human_confirmed and c['doi'] not in scope_excluded]
     return {'window_membership_counts': counts, 'window_inventory_count': counts.get('in_window', 0),
             'publication_status_counts':dict(Counter(c.get('publication_status','unconfirmed')
                                                     for c in rows if c['window_membership']=='in_window')),
             'publisher_verified_inventory_count':len(publisher_confirmed),
             'user_confirmed_inventory_count':len(human_confirmed),
             'confirmed_inventory_count':len(publisher_confirmed | human_confirmed),
+            'scope_excluded_inventory_count':len(scope_excluded),
+            'scope_excluded_dois':sorted(scope_excluded),
+            'scope_exclusion_evidence_sha256':scope_excluded,
+            'accounted_inventory_count':len(publisher_confirmed | human_confirmed | set(scope_excluded)),
             'inventory_pending_dois': pending, 'unexplained_crossref_only_dois': unexplained,
             'candidate_inventory_complete': enumeration_complete and not pending and not unexplained,
             'metadata_reconciliation_complete': not any(c.get('issues') for c in rows)}
@@ -931,7 +947,8 @@ def main():
                        'crossref_only_dois':[c['doi'] for c in rows if c['crossref'] and not c['publisher_records']],
                        'window_status_counts':counts,'source_enumeration_complete':complete,
                        'window_reconciliation_complete':complete and not counts.get('needs_check',0)}
-        summary.update(inventory_summary(rows, summary['source_enumeration_complete']))
+        summary.update(inventory_summary(rows, summary['source_enumeration_complete'],
+            [e['data'] for e in log.events if e['kind'] == 'user_editorial_verdict']))
         result = {'key':short,'records':rows,'summary':summary}
         previous_result = log.latest('journal_result',short)
         if previous_result == result:

@@ -1,0 +1,31 @@
+{
+  "version": "flat-publication-1",
+  "inventory": {
+    "run": "reports/runs/2026-11-04-to-05-01",
+    "files": {
+      "candidates.json": "2a187c009bb8ccf5d3ab0c46849a505607dd1140e1595b0d49f288fd66b26916",
+      "coverage.json": "3d38b9d5377455f9abcc4ce624ddd63c824765e0aa52012ca047123cc9aeb16e",
+      "collection-log.jsonl": "e6c999d51dc7eb350d7e0fcb628b033793ed20511481fde4e720010d65a36f2b",
+      "screening-log.jsonl": "e5418fd2219177152fbe54c90e0c3b68cabfef71ca0347f86846a7d500838f73",
+      "inputs/manifest.json": "c60bc649c96a1a3b32235c86ead824e0ff496e56de5f8682a82782c5552182cb",
+      "inputs/sources.json": "5233c6c33a1037ab212771d4152e1b065b0e80a9cd961dd59c7bf77d54317188",
+      "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+    },
+    "candidate_sha256": "2a187c009bb8ccf5d3ab0c46849a505607dd1140e1595b0d49f288fd66b26916",
+    "rule_sha256": "22aa811fa39ae418b7388baf2c2ad8e5cdcfaa1abc70d2962248fe2a7e53391a",
+    "screening_log_sha256": "acd9b581075caae1a888157967632e3158a5838f83b8e637d6d1eddf252668d4"
+  },
+  "revisions": [],
+  "authors": {
+    "file": "author-metadata.json",
+    "metadata_sha256": "306c2b2035ab392d684c28fd020925746bdc806e1ef613b6aeb29bb90233bcbd",
+    "audit": {
+      "path": "reports/runs/2026-11-04-to-05-01/screening-log.jsonl",
+      "sha256": "e5418fd2219177152fbe54c90e0c3b68cabfef71ca0347f86846a7d500838f73"
+    }
+  },
+  "carryover_audit": {
+    "file": "evidence/cross-run-audit.json",
+    "sha256": "aaefd88c4632366021dbfc33e9fd96e236a24ba114306fa62a276555bb994ceb"
+  }
+}

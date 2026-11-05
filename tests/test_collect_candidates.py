@@ -194,6 +194,37 @@ class CollectorTests(unittest.TestCase):
         self.assertFalse(summary['metadata_reconciliation_complete'])
         self.assertIn('publisher_crossref_title_conflict',rows[0]['issues'])
 
+    def test_personal_scope_exclusion_is_not_publisher_verification(self):
+        row = {'doi':'10.1234/scope', 'title':'Synthetic scope record',
+               'window_membership':'in_window', 'identity_verified':True,
+               'publisher_records':[], 'issues':['not_found_in_official_target_window']}
+        verdict = {'doi':row['doi'], 'title':row['title'], 'verdict':'exclude',
+                   'authority':'human user in current conversation', 'personally_reviewed':True,
+                   'statement_kind':'explicit_individual_verdict', 'user_statement':'Personally checked; exclude.',
+                   'original_record_sha256':digest(row)}
+        self.assertFalse(inventory_summary([row],True)['candidate_inventory_complete'])
+        result = inventory_summary([row],True,[verdict])
+        self.assertTrue(result['candidate_inventory_complete'])
+        self.assertEqual(result['publisher_verified_inventory_count'],0)
+        self.assertEqual(result['confirmed_inventory_count'],0)
+        self.assertEqual(result['scope_excluded_dois'],[row['doi']])
+        self.assertEqual(result['accounted_inventory_count'],1)
+        self.assertFalse(result['metadata_reconciliation_complete'])
+        self.assertFalse(inventory_summary([row],False,[verdict])['candidate_inventory_complete'])
+        for changes in [{'personally_reviewed':False}, {'verdict':'include'},
+                        {'statement_kind':'editorial_direction'}, {'authority':'assistant'},
+                        {'title':'Wrong paper'}, {'original_record_sha256':'wrong'},
+                        {'user_statement':''}]:
+            with self.subTest(changes=changes):
+                result = inventory_summary([row],True,[{**verdict,**changes}])
+                self.assertFalse(result['candidate_inventory_complete'])
+        # A later contrary verdict, changed identity or uncertain date cannot be hidden.
+        self.assertFalse(inventory_summary([row],True,[verdict,{**verdict,'verdict':'include'}])['candidate_inventory_complete'])
+        for changes in [{'identity_verified':False}, {'window_membership':'unresolved'}]:
+            changed = {**row,**changes}
+            matching = {**verdict,'original_record_sha256':digest(changed)}
+            self.assertFalse(inventory_summary([changed],True,[matching])['candidate_inventory_complete'])
+
     def test_in_month_date_conflict_vs_cross_month_membership(self):
         record = item()
         official = {'records':[{'doi':record['DOI'],'title':'Synthetic title','date':'2026-09-29','article_url':record['URL']}]}
