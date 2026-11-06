@@ -2318,6 +2318,84 @@
         "zh": "已读正式PDF全部20页（含封面）、正文I–VIII、附录A–D、图1–9和参考文献表；核对关键图表渲染。分析针对稠密规则抑制耦合、瞬时突触、唯一稳定平衡态及具有相同参数分布的随机大子群；未建立任意稀疏网络或完整多群体随机模型，输入相关性仍待处理。未独立复现。",
         "en": "Read all 20 publisher PDF pages including the cover, Sections I-VIII, Appendices A-D, Figures 1-9 and reference list; checked key rendered figures. Analysis assumes dense regular inhibitory coupling, instantaneous synapses, a unique stable equilibrium and random large subpopulations sharing a parameter distribution. Arbitrary sparse networks and a complete stochastic multi-population model are not established; input correlations remain open. No independent reproduction."
       }
+    },
+    {
+      "doi": "10.1063/5.0358827",
+      "recommended_on": "2026-11-06",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-05-to-06-01",
+      "publication_sha256": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+      "assessment_sha256": "af073e37571ae3dbd315fa29dd50a4463c8020bc536df1acd7fec900f0c8d46e",
+      "input_sha256": "c8d8aefc16096bce459896b9c3735772f50af050d03116e97d68d6ba26c4bb8d",
+      "evidence_sha256": "8e0dc29af5d6d937b3443a6b3d8fc2443aa13d9b2969b38fd4193a3283e7dfd3",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-06T02:08:20.208581+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0358827",
+        "title": "Environmental feedback sign shapes cooperation and collapse in eco-evolutionary networks",
+        "sha256": "14264695637ba514bc071a12d5ce38830970f7863a5c9cfa75372ec9a1dab7c5",
+        "version": "publisher version of record",
+        "source_url": "https://pubs.aip.org/aip/cha/article/36/11/113111/3408185/Environmental-feedback-sign-shapes-cooperation-and",
+        "source_kind": "user_provided_pdf",
+        "pages": 16,
+        "read_scope": "Complete 16-page publisher PDF including cover and 15 article pages: Sections I-VI, Table I, Figures 1-8 and captions, Appendices A-D, declarations and reference list. Visually checked PDF pages 7, 9, 12 and 13 (local equations and Figures 2, 6-8). Supplementary material and cited papers not independently read in full; code and simulations not independently reproduced.",
+        "reviewed_at": "2026-11-06T02:08:20.208581+00:00"
+      },
+      "question": {
+        "zh": "同样的资源交换，何时救援受损网络，何时传递崩溃？",
+        "en": "When does resource exchange rescue a damaged network, and when does it spread collapse?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为同一套空间随机博弈把局部反馈稳定性、有限尺寸波动、崩溃前沿与层间失效联系起来。读者可以沿着局部判据、可观测量和扰动对照三个层次，检查机制解释是否超出了证据。",
+          "方法上值得借鉴的是分开检验：用系统尺寸标度区分准周期与确定性振荡，用无交换及无主要损伤对照识别损伤传播，并把资源守恒关系作为机制参照，而非精确的级联阈值。"
+        ],
+        "en": [
+          "This pick connects local feedback stability, finite-size fluctuations, collapse fronts and interlayer failure within one spatial stochastic game. Follow local criteria, observables and perturbation controls to check whether a mechanistic interpretation exceeds its evidence.",
+          "Borrow its separate tests: system-size scaling distinguishes quasi-cycles from deterministic oscillations; no-exchange and no-major-damage controls identify damage propagation; resource conservation supplies a mechanistic reference rather than an exact cascade threshold."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "局部判据保留适用条件",
+            "en": "Keep the conditions on a local criterion"
+          },
+          "text": {
+            "zh": "行列式符号关系只针对无突变、未截断且可微分支上的孤立内部平衡点。它帮助解释空间结果，但不决定完整随机相图。",
+            "en": "The determinant-sign relation applies to an isolated interior equilibrium on a differentiable, unclipped, mutation-free branch. It interprets spatial results without determining the full stochastic phase diagram."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用尺寸变化辨认振荡来源",
+            "en": "Use size variation to identify oscillations"
+          },
+          "text": {
+            "zh": "振幅随系统规模衰减、重标度谱塌缩、频率和相位差近似不变共同支持噪声驱动准周期；局部线性参考并未精确预测全部频率。",
+            "en": "Decaying amplitude, collapsed rescaled spectra and nearly size-independent frequency and phase jointly support noise-driven quasi-cycles. The local linear reference does not predict every frequency quantitatively."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把救援和风险传播放在同一守恒关系中",
+            "en": "Put rescue and risk propagation in one balance"
+          },
+          "text": {
+            "zh": "层间交换补充受损层，也降低完好层资源。配对损伤与无损伤对照帮助区分损伤引发的级联和系统自身失稳；前沿及级联边界依赖具体协议。",
+            "en": "Exchange replenishes a damaged layer while lowering resources in an intact one. Paired damage controls distinguish a damage-led cascade from intrinsic instability; front and cascade boundaries depend on the protocol."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究演化博弈、生态—社会反馈、多层网络韧性、噪声与空间传播的读者。",
+        "en": "Readers studying evolutionary games, eco-social feedback, multilayer resilience, noise and spatial propagation."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部16页（含封面），正文I–VI、表I、图1–8、附录A–D和参考文献表，并核对关键图表。未完整审读补充材料。判据限于无突变的可微未截断内部平衡点；空间阈值依赖种子、截断、参数与观察窗，累积收益使拓扑效应与度依赖选择混合。未独立复现。",
+        "en": "Read all 16 publisher PDF pages including cover, Sections I-VI, Table I, Figures 1-8, Appendices A-D and reference list; checked key rendered figures. Supplementary material was not fully reviewed. The criterion concerns mutation-free differentiable unclipped interior equilibria; spatial thresholds depend on seeds, cutoffs, parameters and observation windows, while cumulative payoffs mix topology with degree-dependent selection. No independent reproduction."
+      }
     }
   ],
   "revisions": [

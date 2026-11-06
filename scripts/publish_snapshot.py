@@ -37,6 +37,42 @@ def editorial_reference(decision, record, candidate_sha, events):
     return verdict
 
 
+def continued_editorial_reference(decision, record, candidate_sha, events, proof=None):
+    """Carry unchanged editorial authority through a verified overlap audit."""
+    if proof is None:
+        return editorial_reference(decision, record, candidate_sha, events), decision.get('editorial_basis', {})
+    try:
+        return editorial_reference(decision, record, candidate_sha, events), decision.get('editorial_basis', {})
+    except ValueError:
+        pass  # Only the independently audited historical path below may recover it.
+    row, source = proof['audit'], proof['source']
+    old_record = source.records[record['doi']]
+    old = next(d for d in source.assessments() if d['doi'] == record['doi'])
+    old_basis, basis = old.get('editorial_basis', {}), decision.get('editorial_basis', {})
+    # A newly assessed paper, changed classification or different user verdict
+    # cannot inherit authority merely by sharing a DOI.
+    if (decision.get('doi') != record['doi'] or row.get('doi') != record['doi'] or row.get('record_sha256') != digest(record)
+            or row.get('assessment_sha256') != digest(decision)
+            or row.get('previous_record_sha256') != digest(old_record)
+            or row.get('previous_assessment_sha256') != digest(old)
+            or row.get('previous_input_sha256') != old['input_sha256']
+            or source.out.relative_to(ROOT).as_posix() != row.get('previous_run')
+            or decision['category'] != old['category']
+            or record['journal'] != old_record['journal']
+            or not set(record['issns']) & set(old_record['issns'])
+            or not old_basis.get('verdict_sha256')
+            or basis.get('verdict_sha256') != old_basis['verdict_sha256']):
+        raise ValueError('Editorial continuation does not match audited historical identity and classification')
+    old_binding = source.candidate_binding(old) if isinstance(source, PublicationView) else source.input_sha
+    old_events = [e for part in source.sources for e in part.log.events] if isinstance(source, PublicationView) else source.log.events
+    verdict, inherited_basis = continued_editorial_reference(old, old_record, old_binding, old_events, proof.get('previous'))
+    if not verdict or not any(e['kind'] == 'user_editorial_verdict' and e['data'] == verdict for e in events):
+        raise ValueError('Editorial continuation lacks the exact historical user statement')
+    if (decision.get('candidate_sha256') != candidate_sha or decision.get('record_sha256') != digest(record)):
+        raise ValueError('Editorial continuation has a different current inventory')
+    return verdict, inherited_basis
+
+
 def publication_evidence(w):
     """Read explicitly audited supplemental references; never rewrite frozen coverage flags."""
     path = w.out/'publication-evidence.json'
@@ -110,7 +146,7 @@ def author_record(row, record):
 
 
 
-def build_snapshot(out, notes=None, *, _superseded_dois=()):
+def build_snapshot(out, notes=None, *, _superseded_dois=(), _editorial_history=None):
     w = publication_workflow(out)
     legacy = w.out == (ROOT/'reports/2026-09').resolve()
     if w.active():
@@ -186,11 +222,13 @@ def build_snapshot(out, notes=None, *, _superseded_dois=()):
         authority = d.get('scope_authority', 'assistant_online_short_comment_screening' if short_review else 'assistant_abstract_screening')
         authority_hash = None
         lineage = d
+        scope_basis = d.get('editorial_basis', {})
         visited = set()
         while lineage and digest(lineage) not in visited:
             visited.add(digest(lineage))
             binding = w.candidate_binding(lineage) if isinstance(w, PublicationView) else w.input_sha
-            verdict = editorial_reference(lineage, r, binding, evidence_events)
+            proof = (_editorial_history or {}).get(d['doi']) if lineage is d and scope_basis else None
+            verdict, inherited_basis = continued_editorial_reference(lineage, r, binding, evidence_events, proof)
             if lineage.get('user_verdict') == 'include' or lineage.get('scope_authority') == 'human user in current conversation':
                 authority = 'human user in current conversation'
                 authority_hash = digest(lineage)
@@ -198,6 +236,7 @@ def build_snapshot(out, notes=None, *, _superseded_dois=()):
             if verdict:
                 authority = verdict['authority']
                 authority_hash = digest(verdict)
+                scope_basis = inherited_basis
                 break
             previous = history.get(lineage.get('previous_assessment_sha256'))
             if not previous or previous['category'] != d['category'] or previous['material_sha256'] != d['material_sha256']:
@@ -229,9 +268,9 @@ def build_snapshot(out, notes=None, *, _superseded_dois=()):
         if online_observation:
             papers[-1].update(date_source='publisher.available_online',
                              publication_version=online_observation['publication_version'])
-        if d.get('editorial_basis', {}).get('scope_exception'):
+        if scope_basis.get('scope_exception'):
             papers[-1].update(scope_exception=True, entry_kind='editorial_related_reading',
-                scope_class_semantics=d['editorial_basis']['category_semantics'])
+                scope_class_semantics=scope_basis['category_semantics'])
     papers.sort(key=lambda p: (p['date'], p['doi']), reverse=True)
     inventory = w
     while isinstance(inventory, PublicationView):
@@ -366,9 +405,10 @@ def build_release(runs):
     windows = []
     from audit_carryover import load_audit
     overlap_audits, replacements, superseded, allowed_overlaps, verified_dois = [], {}, {}, set(), {}
-    audit_memo, histories = {}, {}
+    audit_memo, histories, views, editorial_histories = {}, {}, {}, {}
     for index, run in enumerate(runs):
         view = publication_workflow(run)
+        views[view.out.relative_to(ROOT).as_posix()] = view
         histories[view.out.relative_to(ROOT).as_posix()] = {d['doi']: d for d in view.assessments()}
         audit = load_audit(view, runs[:index], _memo=audit_memo) if isinstance(view, PublicationView) else None
         if not audit:
@@ -379,6 +419,9 @@ def build_release(runs):
             if row.get('assessment_sha256') and row['history_status']=='assessed':
                 replacements[(current_run,row['doi'])] = row
                 superseded.setdefault(row['previous_run'],set()).add(row['doi'])
+                editorial_histories.setdefault(current_run, {})[row['doi']] = {
+                    'audit': row, 'source': views[row['previous_run']],
+                    'previous': editorial_histories.get(row['previous_run'], {}).get(row['doi'])}
         current_window = (audit['window_start'],audit['window_end'])
         for journal, previous in audit['previous_windows'].items():
             for start,end in previous:
@@ -400,7 +443,8 @@ def build_release(runs):
         if not own-hidden <= set(notes['papers']):
             raise ValueError('Missing reading note for selected inclusion')
         scoped = {**notes, 'papers': {doi: notes['papers'][doi] for doi in sorted(own-hidden)}}
-        part = build_snapshot(run, scoped, _superseded_dois=hidden)['papers.json']
+        part = build_snapshot(run, scoped, _superseded_dois=hidden,
+                              _editorial_history=editorial_histories.get(relative))['papers.json']
         for doi, record in w.records.items():
             if record['window_membership'] != 'in_window':
                 continue

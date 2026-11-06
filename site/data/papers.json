@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-05T03:18:12.716240+00:00",
+  "generated_at": "2026-11-06T02:22:37.148072+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-05",
-  "window_days": 66,
+  "window_end": "2026-11-06",
+  "window_days": 67,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "9f4dda256d69a10ac86eeabbbaa7deac1f0cde28e58837cd530c22d4e33c8649",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "91a0ee30fdabca86ea23fa115aca944ec5d6f9d331d6ef78538f42c28bf8664a",
-  "author_metadata_sha256": "a08f606c80a20ea543fefbacdafeb0862c8e9f728ed34086df854741d9adf931",
+  "reading_notes_sha256": "2dbe88ac7c1916ada7cc6f81bd89709f113bba0054f6ce46e7f38e640c9668c3",
+  "author_metadata_sha256": "e1c5770dc46d8578c42065809a396fa161d0d3157532d2ebccb04ab4a73c6245",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2804,9 +2804,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-05-to-06-01",
+      "config_sha256": "fc9364c80a01e20e708edf3ce03d43e23d7ced376fbee2d9886bfa3b13af2fe1",
+      "window_start": "2026-11-05",
+      "window_end": "2026-11-06",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "screening_log_sha256": "89392fe9b62e8748f0c6042ee5ce233446fe8cf83ae327f073766276aed7c5f2",
+      "candidate_sha256": "f15ac73cdaad4258f96c18622ffe3b3fe391b982b2aa3d6706be8762871f4305",
+      "author_metadata_sha256": "cc75fbf33e54ef9ef710c86db2daabd1edfb3df64b102917affea6e61e828c1c",
+      "run_manifest_sha256": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-05-to-06-01",
+          "files": {
+            "candidates.json": "f15ac73cdaad4258f96c18622ffe3b3fe391b982b2aa3d6706be8762871f4305",
+            "coverage.json": "8b33bbc34a40857a0d6d9f44538f8e75af408cddea4aae4c7d7d3971df5b6c2a",
+            "collection-log.jsonl": "0ae4576389e4e1d7781de21f3f3927d8b8dd51b318131ca22f4d5818a231a545",
+            "screening-log.jsonl": "2110567d6b1b8a5f5c39b21df29aa12f25a615f47fea52bf40591a1f9850c263",
+            "inputs/manifest.json": "5decd964a9a1dcd2392eb1bc533f60a310d9bb3d36fa7819341f0a4bd886b5bf",
+            "inputs/sources.json": "af896e108814bf8c6e6832abf83149297f66d13d566dc37a368d5011fdbfea2a",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "f15ac73cdaad4258f96c18622ffe3b3fe391b982b2aa3d6706be8762871f4305",
+          "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+          "screening_log_sha256": "89392fe9b62e8748f0c6042ee5ce233446fe8cf83ae327f073766276aed7c5f2"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "cc75fbf33e54ef9ef710c86db2daabd1edfb3df64b102917affea6e61e828c1c",
+          "audit": {
+            "path": "reports/runs/2026-11-05-to-06-01/screening-log.jsonl",
+            "sha256": "2110567d6b1b8a5f5c39b21df29aa12f25a615f47fea52bf40591a1f9850c263"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "6b1a3179d78a2963161dc9cf9ceac78cfb42ad7bdff07e10a1deb2da16a2a3c6"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 291,
+  "author_available_count": 296,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -2956,8 +3000,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 864,
-      "publisher_verified_inventory_count": 864,
+      "candidate_count": 867,
+      "publisher_verified_inventory_count": 867,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3275,13 +3319,22 @@
           "publisher_verified_inventory_count": 62,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "Nature",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Science",
-      "candidate_count": 365,
-      "publisher_verified_inventory_count": 365,
+      "candidate_count": 411,
+      "publisher_verified_inventory_count": 411,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3590,13 +3643,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "Science",
+          "candidate_count": 46,
+          "publisher_verified_inventory_count": 46,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1915,
-      "publisher_verified_inventory_count": 1908,
+      "candidate_count": 1947,
+      "publisher_verified_inventory_count": 1940,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3905,13 +3967,22 @@
           "publisher_verified_inventory_count": 31,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "NC",
+          "candidate_count": 32,
+          "publisher_verified_inventory_count": 32,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 28,
-      "publisher_verified_inventory_count": 28,
+      "candidate_count": 29,
+      "publisher_verified_inventory_count": 29,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -4220,13 +4291,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "NMI",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 29,
-      "publisher_verified_inventory_count": 29,
+      "candidate_count": 30,
+      "publisher_verified_inventory_count": 30,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -4535,13 +4615,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "NCS",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 93,
-      "publisher_verified_inventory_count": 93,
+      "candidate_count": 96,
+      "publisher_verified_inventory_count": 96,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4850,13 +4939,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "PRX",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 765,
-      "publisher_verified_inventory_count": 765,
+      "candidate_count": 774,
+      "publisher_verified_inventory_count": 774,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5165,6 +5263,15 @@
           "publisher_verified_inventory_count": 11,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "PRL",
+          "candidate_count": 28,
+          "publisher_verified_inventory_count": 28,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
@@ -5480,13 +5587,22 @@
           "publisher_verified_inventory_count": 41,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 940,
-      "publisher_verified_inventory_count": 940,
+      "candidate_count": 949,
+      "publisher_verified_inventory_count": 949,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5793,6 +5909,15 @@
           "journal": "PNAS",
           "candidate_count": 20,
           "publisher_verified_inventory_count": 20,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "PNAS",
+          "candidate_count": 9,
+          "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6110,13 +6235,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 419,
-      "publisher_verified_inventory_count": 419,
+      "candidate_count": 424,
+      "publisher_verified_inventory_count": 424,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6425,13 +6559,22 @@
           "publisher_verified_inventory_count": 18,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "PRResearch",
+          "candidate_count": 8,
+          "publisher_verified_inventory_count": 8,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 540,
-      "publisher_verified_inventory_count": 540,
+      "candidate_count": 549,
+      "publisher_verified_inventory_count": 549,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6740,13 +6883,22 @@
           "publisher_verified_inventory_count": 22,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "PRE",
+          "candidate_count": 19,
+          "publisher_verified_inventory_count": 19,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 116,
-      "publisher_verified_inventory_count": 116,
+      "candidate_count": 119,
+      "publisher_verified_inventory_count": 119,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7055,6 +7207,15 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "Chaos",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7325,42 +7486,45 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-05",
+          "window_end": "2026-11-06",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7104,
+  "candidate_count": 7225,
   "screening_counts": {
-    "excluded": 6813,
-    "core": 261,
+    "excluded": 6929,
+    "core": 266,
     "transferable_application": 30,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 291
+    "included": 296
   },
-  "published_count": 252,
+  "published_count": 257,
   "accepted_count": 39,
   "latest_update": {
-    "run": "reports/runs/2026-11-04-to-05-01",
-    "reviewed_at": "2026-11-05T03:12:23.859434+00:00",
-    "newly_included_count": 8,
+    "run": "reports/runs/2026-11-05-to-06-01",
+    "reviewed_at": "2026-11-06T00:53:33.329743+00:00",
+    "newly_included_count": 5,
     "newly_included_dois": [
-      "10.1038/s41586-026-11177-0",
-      "10.1038/s41586-026-11212-0",
-      "10.1038/s41586-026-11217-9",
-      "10.1038/s41586-026-11236-6",
-      "10.1063/5.0344204",
-      "10.1103/655g-h9xq",
-      "10.1103/spjq-78dd",
-      "10.1126/sciadv.aeb4683"
+      "10.1038/s41467-026-79266-2",
+      "10.1063/5.0358827",
+      "10.1073/pnas.2612721123",
+      "10.1103/4kgw-pk94",
+      "10.1103/r397-cxtl"
     ],
-    "accepted_to_published_count": 5,
+    "accepted_to_published_count": 2,
     "accepted_to_published_dois": [
-      "10.1103/52n3-kwdj",
-      "10.1103/l51k-63y5",
-      "10.1103/mzgk-nx4w",
-      "10.1103/rghw-4dhl",
-      "10.1103/yvh4-8yxx"
+      "10.1103/ckx2-zbrb",
+      "10.1103/qnhv-yp69"
     ]
   },
   "candidate_inventory_complete": false,
@@ -7371,6 +7535,596 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/r397-cxtl",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
+      "title": "Embedding stochastic dynamics in latent manifolds of recurrent neural networks",
+      "authors": [
+        "Ramón Nartallo-Kaluarachchi",
+        "Renaud Lambiotte",
+        "Alain Goriely"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "2664dc0e7a5d2341bada11e873449f5ba17f12124c6d9e9353b77326e2899ed5",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fr397-cxtl",
+      "author_retrieved_at": "2026-11-06T00:42:48.237050+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-05",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-05",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-05",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl"
+        ],
+        "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
+        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-05",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Low-rank recurrent connectivity embeds prescribed nonlinear stochastic drift and diffusion in latent neural manifolds; asymmetric-connectivity and irreversibility decompositions explain associative/sequential network dynamics.",
+        "material_sha256": "29a76bb1c1a2a2e5eb35f4915ae709186a52f522c26ffdb340541aaa3e9e2d74",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Low-rank recurrent connectivity embeds stochastic differential-equation drift and diffusion in latent manifolds, connecting asymmetric coupling, irreversible dynamics and memory organization.",
+      "note_zh": "低秩循环神经网络连接将随机微分方程的漂移与扩散嵌入潜在流形，联系非对称耦合、不可逆动力学与记忆组织。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "af8c6350c734077ed8f77fd04cbe077a50abcd0df940b7965e30f3020f020521",
+      "input_sha256": "f8442097ad24964bdef5b2fdfdeb4fa822dfef52ed1cd8ac02197cf0b1173c18",
+      "material_sha256": "29a76bb1c1a2a2e5eb35f4915ae709186a52f522c26ffdb340541aaa3e9e2d74",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "29a76bb1c1a2a2e5eb35f4915ae709186a52f522c26ffdb340541aaa3e9e2d74",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "featured": null,
+      "evidence": [
+        "Low-rank recurrent connectivity embeds prescribed nonlinear stochastic drift and diffusion in latent neural manifolds; asymmetric-connectivity and irreversibility decompositions explain associative/sequential network dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fr397-cxtl",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/qnhv-yp69",
+      "url": "https://doi.org/10.1103/qnhv-yp69",
+      "title": "Scaling of long-range loop-erased random walks",
+      "authors": [
+        "Tianning Xiao",
+        "Xianzhi Pan",
+        "Zhijie Fan",
+        "Youjin Deng"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5ab08b000155b14b72823f3cb632fa4390a0f9dcd9ef190d492a3c9313e20931",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fqnhv-yp69",
+      "author_retrieved_at": "2026-11-06T00:42:51.859519+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-05",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-05",
+        "accepted_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/qnhv-yp69"
+        ],
+        "source_url": "https://journals.aps.org/pre/abstract/10.1103/qnhv-yp69",
+        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-02",
+      "published_date": "2026-11-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Preserve the user's existing individual non-core related-reading selection. Current abstract rereading confirms long-range loop-erased-walk geometric scaling and logarithmic crossovers; no new claim that core network science is the main contribution.",
+        "material_sha256": "cc8a3c92537c41e9c837462b0dc694c9a89976fffa2562cd7e723032b8676473",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/qnhv-yp69"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Related reading: numerical geometry, long-to-short-range crossover and marginal logarithmic corrections in long-range loop-erased walks; retained as an individual editorial selection rather than a claim that network science is its main contribution.",
+      "note_zh": "相关阅读：数值研究长程消环随机游走的几何标度、长程至短程交叉与边界点对数修正；保留用户单篇编辑选文属性，不宣称网络科学为其主要贡献。",
+      "scope_authority": "human user in current conversation",
+      "editorial_support_sha256": "c1dec22fd3e2d236d115634dff9e4e07b4add214b35f27349df57ba6d27d774c",
+      "assessment_sha256": "509a89e07597dfb63a39409c678d692018f83f2c7821098f0287cd4f38fa546e",
+      "input_sha256": "391f21cc095b1568f9af5d239a62c18e14a80fb5da711b73ca13f15ed69e8091",
+      "material_sha256": "cc8a3c92537c41e9c837462b0dc694c9a89976fffa2562cd7e723032b8676473",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "cc8a3c92537c41e9c837462b0dc694c9a89976fffa2562cd7e723032b8676473",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "featured": null,
+      "evidence": [
+        "Preserve the user's existing individual non-core related-reading selection. Current abstract rereading confirms long-range loop-erased-walk geometric scaling and logarithmic crossovers; no new claim that core network science is the main contribution."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fqnhv-yp69",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/qnhv-yp69",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "scope_exception": true,
+      "entry_kind": "editorial_related_reading",
+      "scope_class_semantics": "Non-core inclusion compatibility bucket; not a scientific finding that transferable network-science methods are the main contribution.",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-02",
+        "published_date": "2026-11-05",
+        "previous_run": "reports/runs/2026-10-01-to-05-01",
+        "source_run": "reports/runs/2026-11-05-to-06-01",
+        "audit_sha256": "d73d2b4863a2c65dda6fef9eb41bbd428e69ad4943827869580bb2d3ece6079c",
+        "previous_assessment_sha256": "ce62069edd77b791864625f638eea958c74cd53e03ca41602e5804802770d306",
+        "assessment_sha256": "509a89e07597dfb63a39409c678d692018f83f2c7821098f0287cd4f38fa546e"
+      }
+    },
+    {
+      "doi": "10.1103/ckx2-zbrb",
+      "url": "https://doi.org/10.1103/ckx2-zbrb",
+      "title": "Ecological networks of viable species with degree-dependent interaction",
+      "authors": [
+        "Hae Seong Lee",
+        "Deok-Sun Lee",
+        "Sang Hoon Lee",
+        "Samir Suweis",
+        "Hye Jin Park"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "88fb13c8030961c31df5c0ee20c86d1dea439ef258346349c3a3dc39d6e894f0",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fckx2-zbrb",
+      "author_retrieved_at": "2026-11-06T00:42:50.034165+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-05",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-05",
+        "accepted_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/ckx2-zbrb"
+        ],
+        "source_url": "https://journals.aps.org/pre/abstract/10.1103/ckx2-zbrb",
+        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-23",
+      "published_date": "2026-11-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Degree-dependent strengths in ecological interaction networks change hub viability and survivor-network assortativity; analytical phase boundaries connect structure, interaction weights and extinction selection.",
+        "material_sha256": "b251996b543c1d9c02b51437072fd5670aa567f19795f5263df5f37e3c8e88e8",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/ckx2-zbrb"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Degree-dependent interactions in generalized Lotka–Volterra networks favour or suppress hub survival and reshape viable-network assortativity through selective extinctions.",
+      "note_zh": "广义 Lotka–Volterra 网络中，度依赖相互作用使枢纽在存活上受益或受抑，并通过选择性物种灭绝重塑存活网络的同配性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "09c01ae01bbf78618ace4342bec3397e63a1bb2b12ddc857c680c8bb5bb65d83",
+      "input_sha256": "d863fca9b4c619caaee5340b15d2a1930d9308adbd97225a9e72b6e05f4b5ad9",
+      "material_sha256": "b251996b543c1d9c02b51437072fd5670aa567f19795f5263df5f37e3c8e88e8",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "b251996b543c1d9c02b51437072fd5670aa567f19795f5263df5f37e3c8e88e8",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "featured": null,
+      "evidence": [
+        "Degree-dependent strengths in ecological interaction networks change hub viability and survivor-network assortativity; analytical phase boundaries connect structure, interaction weights and extinction selection."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fckx2-zbrb",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/ckx2-zbrb",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-23",
+        "published_date": "2026-11-05",
+        "previous_run": "reports/runs/2026-10-23-to-24-01",
+        "source_run": "reports/runs/2026-11-05-to-06-01",
+        "audit_sha256": "d73d2b4863a2c65dda6fef9eb41bbd428e69ad4943827869580bb2d3ece6079c",
+        "previous_assessment_sha256": "9f06740d7e73c8ea92a87273df4cd260fc9c97edaf11fd2b7a7b86ed2c91a79a",
+        "assessment_sha256": "09c01ae01bbf78618ace4342bec3397e63a1bb2b12ddc857c680c8bb5bb65d83"
+      }
+    },
+    {
+      "doi": "10.1103/4kgw-pk94",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/4kgw-pk94",
+      "title": "Distinct pathways to global firing in scale-free neuronal networks: Gradual versus explosive transitions",
+      "authors": [
+        "Xiaoming Liang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0cb55f09396f978cc484507b1f13d79b7eb1f3db2fece80af346fb84905b0c76",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F4kgw-pk94",
+      "author_retrieved_at": "2026-11-06T00:42:44.547572+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-05",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-05",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-05",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/4kgw-pk94"
+        ],
+        "source_url": "https://journals.aps.org/pre/accepted/10.1103/4kgw-pk94",
+        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-05",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Pacemaker location and average degree in scale-free neuronal networks determine gradual versus explosive global firing; a reduced two-node model explains onset/suppression thresholds verified against full-network simulations.",
+        "material_sha256": "12bc1d78fb72e9d1035e268299884efe7aff49ad5034cb76f5ba0a6f8e5691a1",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/4kgw-pk94"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Pacemaker position and mean degree shape gradual versus explosive global-firing onset in scale-free neuronal networks, with two-node analysis explaining threshold behaviour.",
+      "note_zh": "无标度神经网络中，起搏节点的位置与平均度决定全局放电的渐进或爆发式起始路径，并以双节点解析结果解释阈值。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "12059a330b8a498e61dc7a89e3d3eea7a1c13646b2652f7083764cafc6063856",
+      "input_sha256": "dc179e9d53210a0b0b093f28b81e2ed3caa8d94ee4e94a3183803d3ec31185e0",
+      "material_sha256": "12bc1d78fb72e9d1035e268299884efe7aff49ad5034cb76f5ba0a6f8e5691a1",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "12bc1d78fb72e9d1035e268299884efe7aff49ad5034cb76f5ba0a6f8e5691a1",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "featured": null,
+      "evidence": [
+        "Pacemaker location and average degree in scale-free neuronal networks determine gradual versus explosive global firing; a reduced two-node model explains onset/suppression thresholds verified against full-network simulations."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F4kgw-pk94",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/4kgw-pk94",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2612721123",
+      "url": "https://doi.org/10.1073/pnas.2612721123",
+      "title": "Intermittent gas–liquid rearrangement controls the mixing of gases in porous media",
+      "authors": [
+        "Samuel J. Jackson",
+        "Sharon Ellman",
+        "Gülce Kalyoncu",
+        "Tanguy Le Borgne",
+        "Tom Bultreys"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b7f3274b271641e1a53dfb93863ffa8e20287a561b483624d9eb9fc224aae389",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2612721123",
+      "author_retrieved_at": "2026-11-06T00:42:46.387879+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-11-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-05",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-05",
+        "accepted_date": null,
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2612721123",
+          "https://www.pnas.org/doi/10.1073/pnas.2612721123"
+        ],
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2612721123",
+        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Time-resolved pore-scale imaging shows how evolving gas connectivity organizes rapid mixing, confined diffusion and slow exchange in a gas network; connectivity-dependent transport regimes are the main physical contribution.",
+        "material_sha256": "c075cf9a897a7239d8eb8caed4d4f4352753c2174582155c1afd395045bb2634",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2612721123"
+        ]
+      },
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Pore-scale observations show how gas–liquid rearrangements change gas-phase connectivity, linking confined diffusion with transitions in transport and mixing.",
+      "note_zh": "孔隙尺度观测揭示气液重排改变气相连通性，连接受限扩散、输运与混合机制的转换。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "d52b023f50e82fd9b0b4c97416cd1d594372d120457d5142e95544d9d0b947e7",
+      "input_sha256": "f091455ff3c683529123bd522efba539e732c78e9132382f4505830f84aad384",
+      "material_sha256": "c075cf9a897a7239d8eb8caed4d4f4352753c2174582155c1afd395045bb2634",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c075cf9a897a7239d8eb8caed4d4f4352753c2174582155c1afd395045bb2634",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "featured": "PNAS",
+      "evidence": [
+        "Time-resolved pore-scale imaging shows how evolving gas connectivity organizes rapid mixing, confined diffusion and slow exchange in a gas network; connectivity-dependent transport regimes are the main physical contribution."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2612721123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2612721123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0358827",
+      "url": "https://doi.org/10.1063/5.0358827",
+      "title": "Environmental feedback sign shapes cooperation and collapse in eco-evolutionary networks",
+      "authors": [
+        "Bingkun Zhao",
+        "Li Xie"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "d7d608d03f376293f422369094f0aeb7fda37f325e88ff9140827c61f3871e56",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0358827",
+      "author_retrieved_at": "2026-11-06T00:42:42.930040+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-11-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-05",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-05",
+        "accepted_date": null,
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0358827",
+          "https://pubs.aip.org/aip/cha/article/36/11/113111/3408185/Environmental-feedback-sign-shapes-cooperation-and"
+        ],
+        "source_url": "https://pubs.aip.org/aip/cha/article/36/11/113111/3408185/Environmental-feedback-sign-shapes-cooperation-and",
+        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Spatial evolutionary-game dynamics on lattices, small-world and scale-free networks link signed strategy-resource feedback to fluctuations, patch invasion and multiplex exchange-induced rescue or joint collapse.",
+        "material_sha256": "8e0dc29af5d6d937b3443a6b3d8fc2443aa13d9b2969b38fd4193a3283e7dfd3",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0358827"
+        ]
+      },
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "The sign of strategy–resource feedback connects local stability, finite-size quasi-cycles, collapse fronts and a rescue-to-cascade crossover under multiplex resource exchange; network comparisons use cumulative payoffs.",
+      "note_zh": "策略—资源反馈的符号联系局部稳定性、有限尺寸准周期、空间崩溃前沿与多层资源交换的救援—级联转换；网络比较采用累积收益。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "af073e37571ae3dbd315fa29dd50a4463c8020bc536df1acd7fec900f0c8d46e",
+      "input_sha256": "c8d8aefc16096bce459896b9c3735772f50af050d03116e97d68d6ba26c4bb8d",
+      "material_sha256": "8e0dc29af5d6d937b3443a6b3d8fc2443aa13d9b2969b38fd4193a3283e7dfd3",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "8e0dc29af5d6d937b3443a6b3d8fc2443aa13d9b2969b38fd4193a3283e7dfd3",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "featured": null,
+      "evidence": [
+        "Spatial evolutionary-game dynamics on lattices, small-world and scale-free networks link signed strategy-resource feedback to fluctuations, patch invasion and multiplex exchange-induced rescue or joint collapse."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0358827",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0358827",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-79266-2",
+      "url": "https://doi.org/10.1038/s41467-026-79266-2",
+      "title": "Disrupting the semantic network shifts activity to domain-general brain regions",
+      "authors": [
+        "Anna-Lisa Schuler",
+        "Andrea Bruera",
+        "Gesa Hartwigsen"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4ebe77a2f529d9c5bfe32e600ceacae556bc90fc170e4dd235d45a8876ae3bdb",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79266-2",
+      "author_retrieved_at": "2026-11-06T00:42:53.990719+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-05",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-05",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-05",
+        "accepted_date": null,
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-79266-2",
+          "https://www.nature.com/articles/s41467-026-79266-2"
+        ],
+        "source_url": "https://www.nature.com/articles/s41467-026-79266-2",
+        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-05",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "Perturbing a semantic-network hub during TMS-fMRI reveals acute recruitment across semantic and domain-general systems, with remote upregulation linked to preserved performance: adaptive organization of interacting brain networks is the main question.",
+        "material_sha256": "98ab1eea718e86782000ef8622030a2aac3b30524986aa5b8af710ab88b1e286",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-79266-2"
+        ]
+      },
+      "categories": [
+        "network_resilience",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "TMS and fMRI test activity reorganization across semantic and domain-general brain systems after perturbation of a semantic-network hub and relate it to behaviour.",
+      "note_zh": "结合经颅磁刺激与功能磁共振，检验语义网络枢纽受扰后语义系统与领域一般脑区的活动重组及其行为关联。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "fd4df8c649b2253c6a5eb716c8212ad076b2799075b4e457e7c688c4f59b3349",
+      "input_sha256": "caf491d8de3b52b0241bc1f2ffaa352dba26e5e99f5e209be07f1ba8bbac9aef",
+      "material_sha256": "98ab1eea718e86782000ef8622030a2aac3b30524986aa5b8af710ab88b1e286",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "98ab1eea718e86782000ef8622030a2aac3b30524986aa5b8af710ab88b1e286",
+      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
+      "featured": "NC",
+      "evidence": [
+        "Perturbing a semantic-network hub during TMS-fMRI reveals acute recruitment across semantic and domain-general systems, with remote upregulation linked to preserved performance: adaptive organization of interacting brain networks is the main question."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79266-2",
+      "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79266-2",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1126/sciadv.aeb4683",
       "url": "https://doi.org/10.1126/sciadv.aeb4683",
@@ -12038,82 +12792,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fpgt1-cs46",
       "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/pgt1-cs46",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/ckx2-zbrb",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/ckx2-zbrb",
-      "title": "Ecological networks of viable species with degree-dependent interaction",
-      "authors": [
-        "Hae Seong Lee",
-        "Deok-Sun Lee",
-        "Sang Hoon Lee",
-        "Samir Suweis",
-        "Hye Jin Park"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "f1211ea1e5b3a0614619c57842ce346fa13215025aaa77253173827a15e1b3cb",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fckx2-zbrb",
-      "author_retrieved_at": "2026-10-24T01:59:18.793671+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-23",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-23",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-23",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "5b5218a631717c8163f5dd9af886e96c204d2a1ec178be6bf3c043e39a71472e",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/ckx2-zbrb"
-        ],
-        "basis": "The identity-matched abstract describes an original study centered on a network object or network protocol; no special-type conflict was observed.",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_collective",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Couples interaction strength to species degree to analyze hub-favored and hub-suppressed viability regimes in ecological networks.",
-      "note_zh": "将相互作用强度与物种度关联，分析生态网络中枢纽偏好与生存相变。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "9f06740d7e73c8ea92a87273df4cd260fc9c97edaf11fd2b7a7b86ed2c91a79a",
-      "input_sha256": "420a6e1691001ee4684c42bd47aed0954159d1ec4d8f10677f3e2132a7eee12d",
-      "material_sha256": "5b5218a631717c8163f5dd9af886e96c204d2a1ec178be6bf3c043e39a71472e",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "5b5218a631717c8163f5dd9af886e96c204d2a1ec178be6bf3c043e39a71472e",
-      "rule_sha256": "67beeb629296606336c01ab94968d137b05969bb25da3eb87bcf877e02dd582f",
-      "featured": null,
-      "evidence": [
-        "The abstract explicitly studies ecological networks of viable species and degree-dependent interactions, making network structure and dynamics the main contribution."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fckx2-zbrb",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/ckx2-zbrb",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -20850,95 +21528,6 @@
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
       ],
       "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/qnhv-yp69",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/qnhv-yp69",
-      "title": "Scaling of long-range loop-erased random walks",
-      "authors": [
-        "Tianning Xiao",
-        "Xianzhi Pan",
-        "Zhijie Fan",
-        "Youjin Deng"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "9986686f8d8c163aa49eb8dab4117e9d7cb6ef508ffd954f43c237a1ad02b422",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/qnhv-yp69",
-      "author_retrieved_at": "2026-10-05T06:48:47.792679+00:00",
-      "author_basis": "publisher visible full accepted-paper byline; normal browser; DOI/title/whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-02",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-02",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "accepted_date": "2026-10-02",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/qnhv-yp69"
-        ],
-        "basis_observations": [
-          {
-            "date": "2026-10-02",
-            "date_basis": "accepted",
-            "retrieved_at": "2026-10-05T02:40:28.086712+00:00"
-          }
-        ]
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-02",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "5b86a66559f8d7e819d14a9e26a7b2159c1387a70dc5187b1a10579ea7ac1f6a",
-        "basis": "官方明确摘要陈述Monte Carlo方法、几何指数系统数值结果及长程／短程临界交叉，无特殊类型线索。",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/qnhv-yp69"
-        ]
-      },
-      "categories": [
-        "network_spreading"
-      ],
-      "scope_class": "transferable_application",
-      "note_en": "Monte Carlo simulations map geometric scaling and logarithmic corrections in long-range loop-erased random walks across spatial dimensions.",
-      "note_zh": "通过 Monte Carlo 模拟分析长程消圈随机游走在不同空间维度中的几何标度、对数修正与长短程交叉。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "c1dec22fd3e2d236d115634dff9e4e07b4add214b35f27349df57ba6d27d774c",
-      "assessment_sha256": "ce62069edd77b791864625f638eea958c74cd53e03ca41602e5804802770d306",
-      "input_sha256": "060d5609d0345d870ef2219d1dae03f7b11949233e3243122a3978dc1ea5f97f",
-      "material_sha256": "5b86a66559f8d7e819d14a9e26a7b2159c1387a70dc5187b1a10579ea7ac1f6a",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "5b86a66559f8d7e819d14a9e26a7b2159c1387a70dc5187b1a10579ea7ac1f6a",
-      "rule_sha256": "e73b62366608c44854fc4d8a1abb2c55b762ef9baafaa6c3520b0ce1c6185c18",
-      "featured": null,
-      "evidence": [
-        "Monte Carlo calculations characterize long-range loop-erased-walk geometric exponents and dimensional crossovers. Included as individually authorized related reading rather than core network science."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fqnhv-yp69",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/qnhv-yp69",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1",
-      "scope_exception": true,
-      "entry_kind": "editorial_related_reading",
-      "scope_class_semantics": "Non-core inclusion compatibility bucket; not a scientific finding that transferable network-science methods are the main contribution."
     },
     {
       "doi": "10.1103/qftv-sbqs",
@@ -31674,9 +32263,145 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "21ddcc29563ade394bc6e1ec5721acfdc98cf21742c54191a6fcadbd95c8f857"
+    },
+    {
+      "current_run": "reports/runs/2026-11-05-to-06-01",
+      "candidate_sha256": "f15ac73cdaad4258f96c18622ffe3b3fe391b982b2aa3d6706be8762871f4305",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595"
+      },
+      "counts": {
+        "in_window": 153,
+        "newly_reviewed": 121,
+        "historically_reviewed": 142,
+        "state_updates": 31,
+        "categories": {
+          "excluded": 146,
+          "core": 6,
+          "transferable_application": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "d73d2b4863a2c65dda6fef9eb41bbd428e69ad4943827869580bb2d3ece6079c"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1063/5.0358827",
+      "recommended_on": "2026-11-06",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-05-to-06-01",
+      "publication_sha256": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+      "assessment_sha256": "af073e37571ae3dbd315fa29dd50a4463c8020bc536df1acd7fec900f0c8d46e",
+      "input_sha256": "c8d8aefc16096bce459896b9c3735772f50af050d03116e97d68d6ba26c4bb8d",
+      "evidence_sha256": "8e0dc29af5d6d937b3443a6b3d8fc2443aa13d9b2969b38fd4193a3283e7dfd3",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-06T02:08:20.208581+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0358827",
+        "title": "Environmental feedback sign shapes cooperation and collapse in eco-evolutionary networks",
+        "sha256": "14264695637ba514bc071a12d5ce38830970f7863a5c9cfa75372ec9a1dab7c5",
+        "version": "publisher version of record",
+        "source_url": "https://pubs.aip.org/aip/cha/article/36/11/113111/3408185/Environmental-feedback-sign-shapes-cooperation-and",
+        "source_kind": "user_provided_pdf",
+        "pages": 16,
+        "read_scope": "Complete 16-page publisher PDF including cover and 15 article pages: Sections I-VI, Table I, Figures 1-8 and captions, Appendices A-D, declarations and reference list. Visually checked PDF pages 7, 9, 12 and 13 (local equations and Figures 2, 6-8). Supplementary material and cited papers not independently read in full; code and simulations not independently reproduced.",
+        "reviewed_at": "2026-11-06T02:08:20.208581+00:00"
+      },
+      "question": {
+        "zh": "同样的资源交换，何时救援受损网络，何时传递崩溃？",
+        "en": "When does resource exchange rescue a damaged network, and when does it spread collapse?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为同一套空间随机博弈把局部反馈稳定性、有限尺寸波动、崩溃前沿与层间失效联系起来。读者可以沿着局部判据、可观测量和扰动对照三个层次，检查机制解释是否超出了证据。",
+          "方法上值得借鉴的是分开检验：用系统尺寸标度区分准周期与确定性振荡，用无交换及无主要损伤对照识别损伤传播，并把资源守恒关系作为机制参照，而非精确的级联阈值。"
+        ],
+        "en": [
+          "This pick connects local feedback stability, finite-size fluctuations, collapse fronts and interlayer failure within one spatial stochastic game. Follow local criteria, observables and perturbation controls to check whether a mechanistic interpretation exceeds its evidence.",
+          "Borrow its separate tests: system-size scaling distinguishes quasi-cycles from deterministic oscillations; no-exchange and no-major-damage controls identify damage propagation; resource conservation supplies a mechanistic reference rather than an exact cascade threshold."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "局部判据保留适用条件",
+            "en": "Keep the conditions on a local criterion"
+          },
+          "text": {
+            "zh": "行列式符号关系只针对无突变、未截断且可微分支上的孤立内部平衡点。它帮助解释空间结果，但不决定完整随机相图。",
+            "en": "The determinant-sign relation applies to an isolated interior equilibrium on a differentiable, unclipped, mutation-free branch. It interprets spatial results without determining the full stochastic phase diagram."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用尺寸变化辨认振荡来源",
+            "en": "Use size variation to identify oscillations"
+          },
+          "text": {
+            "zh": "振幅随系统规模衰减、重标度谱塌缩、频率和相位差近似不变共同支持噪声驱动准周期；局部线性参考并未精确预测全部频率。",
+            "en": "Decaying amplitude, collapsed rescaled spectra and nearly size-independent frequency and phase jointly support noise-driven quasi-cycles. The local linear reference does not predict every frequency quantitatively."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把救援和风险传播放在同一守恒关系中",
+            "en": "Put rescue and risk propagation in one balance"
+          },
+          "text": {
+            "zh": "层间交换补充受损层，也降低完好层资源。配对损伤与无损伤对照帮助区分损伤引发的级联和系统自身失稳；前沿及级联边界依赖具体协议。",
+            "en": "Exchange replenishes a damaged layer while lowering resources in an intact one. Paired damage controls distinguish a damage-led cascade from intrinsic instability; front and cascade boundaries depend on the protocol."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究演化博弈、生态—社会反馈、多层网络韧性、噪声与空间传播的读者。",
+        "en": "Readers studying evolutionary games, eco-social feedback, multilayer resilience, noise and spatial propagation."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部16页（含封面），正文I–VI、表I、图1–8、附录A–D和参考文献表，并核对关键图表。未完整审读补充材料。判据限于无突变的可微未截断内部平衡点；空间阈值依赖种子、截断、参数与观察窗，累积收益使拓扑效应与度依赖选择混合。未独立复现。",
+        "en": "Read all 16 publisher PDF pages including cover, Sections I-VI, Table I, Figures 1-8, Appendices A-D and reference list; checked key rendered figures. Supplementary material was not fully reviewed. The criterion concerns mutation-free differentiable unclipped interior equilibria; spatial thresholds depend on seeds, cutoffs, parameters and observation windows, while cumulative payoffs mix topology with degree-dependent selection. No independent reproduction."
+      }
+    },
     {
       "doi": "10.1063/5.0344204",
       "recommended_on": "2026-11-05",
@@ -36339,6 +37064,84 @@
       }
     },
     {
+      "doi": "10.1063/5.0358827",
+      "recommended_on": "2026-11-06",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-05-to-06-01",
+      "publication_sha256": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+      "assessment_sha256": "af073e37571ae3dbd315fa29dd50a4463c8020bc536df1acd7fec900f0c8d46e",
+      "input_sha256": "c8d8aefc16096bce459896b9c3735772f50af050d03116e97d68d6ba26c4bb8d",
+      "evidence_sha256": "8e0dc29af5d6d937b3443a6b3d8fc2443aa13d9b2969b38fd4193a3283e7dfd3",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-06T02:08:20.208581+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0358827",
+        "title": "Environmental feedback sign shapes cooperation and collapse in eco-evolutionary networks",
+        "sha256": "14264695637ba514bc071a12d5ce38830970f7863a5c9cfa75372ec9a1dab7c5",
+        "version": "publisher version of record",
+        "source_url": "https://pubs.aip.org/aip/cha/article/36/11/113111/3408185/Environmental-feedback-sign-shapes-cooperation-and",
+        "source_kind": "user_provided_pdf",
+        "pages": 16,
+        "read_scope": "Complete 16-page publisher PDF including cover and 15 article pages: Sections I-VI, Table I, Figures 1-8 and captions, Appendices A-D, declarations and reference list. Visually checked PDF pages 7, 9, 12 and 13 (local equations and Figures 2, 6-8). Supplementary material and cited papers not independently read in full; code and simulations not independently reproduced.",
+        "reviewed_at": "2026-11-06T02:08:20.208581+00:00"
+      },
+      "question": {
+        "zh": "同样的资源交换，何时救援受损网络，何时传递崩溃？",
+        "en": "When does resource exchange rescue a damaged network, and when does it spread collapse?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为同一套空间随机博弈把局部反馈稳定性、有限尺寸波动、崩溃前沿与层间失效联系起来。读者可以沿着局部判据、可观测量和扰动对照三个层次，检查机制解释是否超出了证据。",
+          "方法上值得借鉴的是分开检验：用系统尺寸标度区分准周期与确定性振荡，用无交换及无主要损伤对照识别损伤传播，并把资源守恒关系作为机制参照，而非精确的级联阈值。"
+        ],
+        "en": [
+          "This pick connects local feedback stability, finite-size fluctuations, collapse fronts and interlayer failure within one spatial stochastic game. Follow local criteria, observables and perturbation controls to check whether a mechanistic interpretation exceeds its evidence.",
+          "Borrow its separate tests: system-size scaling distinguishes quasi-cycles from deterministic oscillations; no-exchange and no-major-damage controls identify damage propagation; resource conservation supplies a mechanistic reference rather than an exact cascade threshold."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "局部判据保留适用条件",
+            "en": "Keep the conditions on a local criterion"
+          },
+          "text": {
+            "zh": "行列式符号关系只针对无突变、未截断且可微分支上的孤立内部平衡点。它帮助解释空间结果，但不决定完整随机相图。",
+            "en": "The determinant-sign relation applies to an isolated interior equilibrium on a differentiable, unclipped, mutation-free branch. It interprets spatial results without determining the full stochastic phase diagram."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用尺寸变化辨认振荡来源",
+            "en": "Use size variation to identify oscillations"
+          },
+          "text": {
+            "zh": "振幅随系统规模衰减、重标度谱塌缩、频率和相位差近似不变共同支持噪声驱动准周期；局部线性参考并未精确预测全部频率。",
+            "en": "Decaying amplitude, collapsed rescaled spectra and nearly size-independent frequency and phase jointly support noise-driven quasi-cycles. The local linear reference does not predict every frequency quantitatively."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把救援和风险传播放在同一守恒关系中",
+            "en": "Put rescue and risk propagation in one balance"
+          },
+          "text": {
+            "zh": "层间交换补充受损层，也降低完好层资源。配对损伤与无损伤对照帮助区分损伤引发的级联和系统自身失稳；前沿及级联边界依赖具体协议。",
+            "en": "Exchange replenishes a damaged layer while lowering resources in an intact one. Paired damage controls distinguish a damage-led cascade from intrinsic instability; front and cascade boundaries depend on the protocol."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究演化博弈、生态—社会反馈、多层网络韧性、噪声与空间传播的读者。",
+        "en": "Readers studying evolutionary games, eco-social feedback, multilayer resilience, noise and spatial propagation."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部16页（含封面），正文I–VI、表I、图1–8、附录A–D和参考文献表，并核对关键图表。未完整审读补充材料。判据限于无突变的可微未截断内部平衡点；空间阈值依赖种子、截断、参数与观察窗，累积收益使拓扑效应与度依赖选择混合。未独立复现。",
+        "en": "Read all 16 publisher PDF pages including cover, Sections I-VI, Table I, Figures 1-8, Appendices A-D and reference list; checked key rendered figures. Supplementary material was not fully reviewed. The criterion concerns mutation-free differentiable unclipped interior equilibria; spatial thresholds depend on seeds, cutoffs, parameters and observation windows, while cumulative payoffs mix topology with degree-dependent selection. No independent reproduction."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -36418,5 +37221,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "132fc35adeea8631588f15849e6c14da796667f923a3c5f4a87cb612fe83e362"
+  "daily_suggestions_sha256": "1cd1d662cb36be35111b37df99f489d7aecc7b894ee171763209e448fae939a3"
 }

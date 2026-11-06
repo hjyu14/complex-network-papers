@@ -8,7 +8,7 @@ import tempfile
 from types import SimpleNamespace
 import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
-from publish_snapshot import author_record, editorial_reference, publication_evidence
+from publish_snapshot import author_record, editorial_reference, continued_editorial_reference, publication_evidence, ROOT
 from screen_candidates import digest
 
 class AuthorMetadataTests(unittest.TestCase):
@@ -41,6 +41,59 @@ class AuthorMetadataTests(unittest.TestCase):
 
 
 class PublicationEvidenceTests(unittest.TestCase):
+    def editorial_continuation_fixture(self):
+        record={'doi':'10.1/test','title':'Synthetic title','journal':'PRE','issns':['0000-0001']}
+        verdict={'doi':record['doi'],'title':record['title'],'record_sha256':digest(record),
+            'candidate_sha256':'old-pool','verdict':'include','authority':'human user in current conversation',
+            'user_statement':'Keep this named paper as related reading.','scope_exception':True,
+            'entry_kind':'editorial_related_reading','not_a_global_scope_rule':True}
+        basis={'verdict_sha256':digest(verdict),'scope_exception':True,'entry_kind':'editorial_related_reading',
+            'not_a_global_scope_rule':True,'category_semantics':'Non-core individual related reading.'}
+        old={'doi':record['doi'],'category':'transferable_application','input_sha256':'old-input','editorial_basis':basis}
+        events=[{'kind':'user_editorial_verdict','data':verdict}]
+        source=SimpleNamespace(out=ROOT/'reports/synthetic-old',records={record['doi']:record},
+            input_sha='old-pool',assessments=lambda:[old],log=SimpleNamespace(events=events))
+        current_record={**record,'date':'2026-11-05'}
+        current={'doi':record['doi'],'category':old['category'],'record_sha256':digest(current_record),
+            'candidate_sha256':'new-pool','input_sha256':'new-input',
+            'editorial_basis':{'verdict_sha256':digest(verdict)}}
+        row={'doi':record['doi'],'record_sha256':digest(current_record),'assessment_sha256':digest(current),
+            'previous_record_sha256':digest(record),'previous_assessment_sha256':digest(old),
+            'previous_input_sha256':old['input_sha256'],'previous_run':'reports/synthetic-old'}
+        return current,current_record,events,{'audit':row,'source':source},verdict,basis
+
+    def test_editorial_continuation_keeps_exact_statement_and_noncore_semantics(self):
+        current,record,events,proof,verdict,basis=self.editorial_continuation_fixture()
+        before=deepcopy((current,record,events,proof['audit']))
+        self.assertEqual(continued_editorial_reference(current,record,'new-pool',events,proof),(verdict,basis))
+        self.assertEqual(before,(current,record,events,proof['audit']))
+        with self.assertRaisesRegex(ValueError,'inventory identity'):
+            editorial_reference(current,record,'new-pool',events)
+        # A later ordinary carryover follows the already verified chain.
+        source=SimpleNamespace(out=ROOT/'reports/synthetic-next',records={record['doi']:record},input_sha='new-pool',
+            assessments=lambda:[current],log=SimpleNamespace(events=events))
+        nxt={**current,'candidate_sha256':'next-pool','input_sha256':'next-input'}
+        row={**proof['audit'],'assessment_sha256':digest(nxt),'previous_run':'reports/synthetic-next',
+            'previous_record_sha256':digest(record),'previous_assessment_sha256':digest(current),
+            'previous_input_sha256':current['input_sha256']}
+        self.assertEqual(continued_editorial_reference(nxt,record,'next-pool',events,
+            {'audit':row,'source':source,'previous':proof}),(verdict,basis))
+
+    def test_editorial_continuation_rejects_changed_classification_or_unbound_history(self):
+        for key in ['record_sha256','assessment_sha256','previous_record_sha256',
+                    'previous_assessment_sha256','previous_input_sha256','previous_run']:
+            current,record,events,proof,_,_=self.editorial_continuation_fixture()
+            proof['audit'][key]='wrong'
+            with self.subTest(key=key),self.assertRaises(ValueError):
+                continued_editorial_reference(current,record,'new-pool',events,proof)
+        current,record,events,proof,_,_=self.editorial_continuation_fixture()
+        for changed in [{**current,'category':'core'},
+                        {**current,'editorial_basis':{'verdict_sha256':'other-user-decision'}}]:
+            row={**proof['audit'],'assessment_sha256':digest(changed)}
+            with self.assertRaises(ValueError):continued_editorial_reference(changed,record,'new-pool',events,{**proof,'audit':row})
+        with self.assertRaises(ValueError):continued_editorial_reference(current,record,'wrong-pool',events,proof)
+        with self.assertRaises(ValueError):continued_editorial_reference(current,record,'new-pool',[],proof)
+
     def test_editorial_exception_bound_to_verdict_and_inventory(self):
         record={'doi':'10.1/test','title':'Synthetic title'}
         verdict={'doi':record['doi'],'title':record['title'],'record_sha256':digest(record),
