@@ -2396,6 +2396,84 @@
         "zh": "已读正式PDF全部16页（含封面），正文I–VI、表I、图1–8、附录A–D和参考文献表，并核对关键图表。未完整审读补充材料。判据限于无突变的可微未截断内部平衡点；空间阈值依赖种子、截断、参数与观察窗，累积收益使拓扑效应与度依赖选择混合。未独立复现。",
         "en": "Read all 16 publisher PDF pages including cover, Sections I-VI, Table I, Figures 1-8, Appendices A-D and reference list; checked key rendered figures. Supplementary material was not fully reviewed. The criterion concerns mutation-free differentiable unclipped interior equilibria; spatial thresholds depend on seeds, cutoffs, parameters and observation windows, while cumulative payoffs mix topology with degree-dependent selection. No independent reproduction."
       }
+    },
+    {
+      "doi": "10.1038/s41467-026-78777-2",
+      "recommended_on": "2026-11-07",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-06-to-07-01",
+      "publication_sha256": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+      "assessment_sha256": "fedd024c50800ebfaf46c84d953d009918ed31baecb2a146be5e9f4a0621ae82",
+      "input_sha256": "5e43e3d792adcec686007d5c113232c7d18e803890bd16202cff7127551dd12f",
+      "evidence_sha256": "1924fb9477a595fcc8e36cd29ef3c0fdfeb836f9172dc7c6b6d8274f20852617",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-07T04:15:29.092136+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78777-2",
+        "title": "Redundancy maximization as a principle of associative memory learning in Hopfield networks",
+        "sha256": "3b96ad58acf607b0c2ddb597d7307b7e1fcb506a525533de6bf46d53308f827b",
+        "version": "Publisher Version of Record, Nature Communications 17, 11499 (2026)",
+        "source_url": "https://www.nature.com/articles/s41467-026-78777-2.pdf",
+        "pages": 8,
+        "read_scope": "All 8 publisher PDF pages, Results, Discussion, Methods, Figures 1-6/captions, equations 1-8, data/code availability and reference list/declarations. Rendered PDF pages 3-6 visually checked (PID profiles, goal landscape, capacity/stability and method equations). Supplementary Notes, cited papers, source code and simulations not independently reviewed or reproduced.",
+        "reviewed_at": "2026-11-07T04:15:29.092136+00:00",
+        "source_kind": "publisher_fulltext"
+      },
+      "question": {
+        "zh": "局部冗余信息，如何变成循环网络的联想记忆？",
+        "en": "How does local redundant information become associative memory in a recurrent network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为论文把信息分解从事后分析推进到可训练的局部目标：先问每个神经元的循环输入是否编码了目标相关信息，再观察整个网络能否维持记忆。",
+          "值得借鉴的是同时检查目标函数、测试信息边界和回忆指标。平均存储容量、完整模式回忆率与抗噪稳定性回答不同问题，不能用一个提升数字替代全部表现。"
+        ],
+        "en": [
+          "This pick turns information decomposition from a diagnostic into a trainable local goal: ask whether recurrent input carries target-relevant information, then test whether the whole network maintains memories.",
+          "Borrow its separate checks of objectives, test-time information and recall metrics. Mean storage capacity, complete-pattern recall and noise tolerance answer different questions; one improvement does not establish every form of robustness."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "教学信号与测试动力学分开",
+            "en": "Separate teaching from test dynamics"
+          },
+          "text": {
+            "zh": "目标输入只参与训练，测试依赖循环输入。局部冗余把“任务相关”与“已编码在循环连接中”联系起来，便于解释网络何时失去记忆。",
+            "en": "The target input is used for training; testing relies on recurrent input. Local redundancy links task relevance with information encoded by recurrent connections, helping interpret memory failure."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较信息目标，而非只比较算法名",
+            "en": "Compare information goals"
+          },
+          "text": {
+            "zh": "目标互信息也能获得接近的容量，但超容量后可由目标独有信息维持高值。PID揭示这一差别；纯冗余1.59与混合目标约1.70须分别说明。",
+            "en": "Target mutual information achieves similar capacity but can stay high beyond capacity through target-unique information. PID exposes that distinction; pure redundancy at 1.59 and optimized mixed goals near 1.70 must be reported separately."
+          }
+        },
+        {
+          "heading": {
+            "zh": "容量不等于吸引域稳定性",
+            "en": "Capacity is not basin robustness"
+          },
+          "text": {
+            "zh": "图6另测受损初态的回忆稳定性；负载约0.8以上，各比较方法的抗噪余量都接近零。读取平均余弦相似度、阈值回忆率和噪声曲线，才能正确理解容量提升。",
+            "en": "Figure 6 separately tests corrupted initial states: above a load near 0.8, noise tolerance approaches zero across the compared methods. Read mean cosine accuracy, threshold recall and corruption curves together to interpret capacity gains."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究循环网络、联想记忆、网络集体计算与信息论学习目标的读者。",
+        "en": "Readers studying recurrent networks, associative memory, collective computation and information-theoretic learning objectives."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部8页及图1–6、方法和参考文献表，渲染核对第3–6页。主实验为100神经元的双极性模式，20次初始化；Hebb分析另用500神经元。联合概率估计成本较高，目标权重与规模依赖尚未厘清；未完整审读补充材料或独立复现，不推及任意网络与生物学习。",
+        "en": "Read all 8 publisher PDF pages, Figures 1-6, Methods and reference list; visually checked pages 3-6. Main tests use 100 neurons and bipolar patterns across 20 initializations; Hebbian analysis also uses 500 neurons. Joint-probability estimation is costly and target-scale versus network-size effects remain open. Supplementary material was not fully reviewed; no independent reproduction or generalization to arbitrary networks and biological learning."
+      }
     }
   ],
   "revisions": [

@@ -1884,9 +1884,9 @@
         "network_structure",
         "network_spreading"
       ],
-      "note_zh": "考察乘积规则加边如何影响三维格点网络的连通和刚性；区分有限尺寸跃变与作者讨论的连续极限。",
-      "note_en": "Examines product-rule connectivity and rigidity in cubic lattice networks, distinguishing finite-size jumps from the continuous limit discussed by the authors.",
-      "assessment_sha256": "8853e31cb38e41cd1dba208393bff5f96b245bae895641ba24960143aeee482a"
+      "note_zh": "研究三维立方格点的乘积规则连通与刚化，区分有限尺寸宏观跃变和连续热力学极限，并联系局部选边与全局刚性效率。",
+      "note_en": "Studies product-rule connectivity and rigidification in cubic lattices, distinguishing finite-size macroscopic jumps from a continuous thermodynamic limit and linking local edge selection with global rigidity.",
+      "assessment_sha256": "136efee65f69483756c306687cf3d3a00f90f9218152b0867168d315608fe92c"
     },
     "10.1038/s41467-026-78269-3": {
       "categories": [
@@ -2104,9 +2104,9 @@
       "categories": [
         "network_structure"
       ],
-      "note_zh": "以保度随机网络为基线，将同配性扩展至长程、非标量属性和非线性相似关系。",
-      "note_en": "Extends assortativity to long-range, non-scalar and nonlinear similarity using degree-preserving null networks.",
-      "assessment_sha256": "cf6e6bf8035f41adfc956baf92d2966c1e6bad206a5754d09bc7080618fe12cc"
+      "note_zh": "以保度随机网络为基线，将同配性扩展至非直接相连节点、非标量属性与非线性相似关系。",
+      "note_en": "Extends assortativity to indirectly connected nodes, nonscalar attributes and nonlinear similarity against degree-preserving null networks.",
+      "assessment_sha256": "33418069d498e43e49f594c79ecaa08768f5812e085e6a3286791e1ec2b68602"
     },
     "10.1073/pnas.2623939123": {
       "categories": [
@@ -2523,6 +2523,41 @@
       "note_zh": "低秩循环神经网络连接将随机微分方程的漂移与扩散嵌入潜在流形，联系非对称耦合、不可逆动力学与记忆组织。",
       "note_en": "Low-rank recurrent connectivity embeds stochastic differential-equation drift and diffusion in latent manifolds, connecting asymmetric coupling, irreversible dynamics and memory organization.",
       "assessment_sha256": "af8c6350c734077ed8f77fd04cbe077a50abcd0df940b7965e30f3020f020521"
+    },
+    "10.1038/s41467-026-78777-2": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "将单神经元的目标输入与循环输入做部分信息分解，以局部冗余最大化学习联想记忆；区分存储容量提升与噪声下回忆稳定性。",
+      "note_en": "Partial information decomposition links target and recurrent inputs at each neuron; local redundancy maximization improves associative storage, while capacity and noise robustness remain distinct.",
+      "assessment_sha256": "fedd024c50800ebfaf46c84d953d009918ed31baecb2a146be5e9f4a0621ae82"
+    },
+    "10.1038/s41467-026-78879-x": {
+      "review_evidence_kind": "online_short_comment",
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "概念性评论：把设计、涌现与自适应交互拓扑作为多智能体集体动力学的设计和评估变量，以增广状态框架比较集体观测分布。",
+      "note_en": "Conceptual Comment: designed, emergent and adaptive interaction topologies become design and evaluation variables for collective agent dynamics within an augmented-state framework.",
+      "assessment_sha256": "340a287ba83794453bca45e94b5abab3d157b00af8e9e763ee7b6b2a375ea4b2"
+    },
+    "10.1103/8dj9-xp98": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "在无输入选择、二值输出的三角量子网络中构造Bell非局域分布，并提出网络量子分布优化方法；当前为接收稿。",
+      "note_en": "Constructs Bell-nonlocal distributions in a binary-output triangle quantum network without input choices and develops network-distribution optimization; currently accepted.",
+      "assessment_sha256": "f00703b95c119663d2c7b1d9c7f115a501cf969178eba2d0ba358fdd7f36f2c4"
+    },
+    "10.1103/5h59-b6xz": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "利用Hubbard–Stratonovich变换和边对偶网络的代数结构，解析求解边对耦合随机网络模型的配分函数，并讨论均场退化条件。",
+      "note_en": "Uses the Hubbard–Stratonovich transform and algebraic structure of an edge-dual network to solve pairwise-edge-coupled random graph partition functions and discuss mean-field reductions.",
+      "assessment_sha256": "b7fa64f81c4ab79adb785c32907717b27a762c67342487c6f8cba0bde4dbb082"
     }
   }
 }

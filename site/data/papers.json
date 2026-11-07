@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-06T02:22:37.148072+00:00",
+  "generated_at": "2026-11-07T04:33:46.768265+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-06",
-  "window_days": 67,
+  "window_end": "2026-11-07",
+  "window_days": 68,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "9f4dda256d69a10ac86eeabbbaa7deac1f0cde28e58837cd530c22d4e33c8649",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "2dbe88ac7c1916ada7cc6f81bd89709f113bba0054f6ce46e7f38e640c9668c3",
-  "author_metadata_sha256": "e1c5770dc46d8578c42065809a396fa161d0d3157532d2ebccb04ab4a73c6245",
+  "reading_notes_sha256": "98051dd6bfd26e21a48b868991e16a447cf5b4648069a018dcbc4f0fe3035961",
+  "author_metadata_sha256": "de13e05654cd732bf97f88db5416e6366e7abec28b3f23060aa6a85b18f6c7bf",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2848,9 +2848,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-06-to-07-01",
+      "config_sha256": "63edeeee2c059fa8851c665cd7a2eb18c596736ebd08d608500052b3c3378b44",
+      "window_start": "2026-11-06",
+      "window_end": "2026-11-07",
+      "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+      "screening_log_sha256": "6917508b088d5ebc7f3319c4f00db913d2cb2f4ec64a2086a5c45ff8c204d7c0",
+      "candidate_sha256": "13b1211115ca195bd2c8bd365df0a25486d7327e4db7d50b98ef14396c79c93b",
+      "author_metadata_sha256": "4cd6e837ee8f9a97454b8b837fa180f5e81e871327b09950192e5c1efc667c64",
+      "run_manifest_sha256": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-06-to-07-01",
+          "files": {
+            "candidates.json": "13b1211115ca195bd2c8bd365df0a25486d7327e4db7d50b98ef14396c79c93b",
+            "coverage.json": "d170e8f0ff981b0c7dfc28907f4c9775cbc25e7f3396c48575069e214642906f",
+            "collection-log.jsonl": "668d8fba9243636e24936f39356bab32a812dc8adcccf8ce57205b878a21eaaa",
+            "screening-log.jsonl": "2f9d1ad3a32187b64bf7c357b7829d3db97705a2731f05d85fc710f268638708",
+            "inputs/manifest.json": "4dc59139222e599c567452d3a524cba32b44a8d966725334f608aa36ae459b18",
+            "inputs/sources.json": "bb2c4113952d7a5d45aca5e6556c540e37481e68ca51d5bb59d8a929407e3d2f",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "13b1211115ca195bd2c8bd365df0a25486d7327e4db7d50b98ef14396c79c93b",
+          "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+          "screening_log_sha256": "6917508b088d5ebc7f3319c4f00db913d2cb2f4ec64a2086a5c45ff8c204d7c0"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "4cd6e837ee8f9a97454b8b837fa180f5e81e871327b09950192e5c1efc667c64",
+          "audit": {
+            "path": "reports/runs/2026-11-06-to-07-01/screening-log.jsonl",
+            "sha256": "2f9d1ad3a32187b64bf7c357b7829d3db97705a2731f05d85fc710f268638708"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "3648cc3670ba8f0ab126de7e81a94de985b390c64e78dd16cfdc24f293ee3e38"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 296,
+  "author_available_count": 300,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3000,8 +3044,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 867,
-      "publisher_verified_inventory_count": 867,
+      "candidate_count": 876,
+      "publisher_verified_inventory_count": 876,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3328,6 +3372,15 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "Nature",
+          "candidate_count": 9,
+          "publisher_verified_inventory_count": 9,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3652,13 +3705,22 @@
           "publisher_verified_inventory_count": 46,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1947,
-      "publisher_verified_inventory_count": 1940,
+      "candidate_count": 1977,
+      "publisher_verified_inventory_count": 1970,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3976,13 +4038,22 @@
           "publisher_verified_inventory_count": 32,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "NC",
+          "candidate_count": 30,
+          "publisher_verified_inventory_count": 30,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 29,
-      "publisher_verified_inventory_count": 29,
+      "candidate_count": 30,
+      "publisher_verified_inventory_count": 30,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -4300,13 +4371,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "NMI",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 30,
-      "publisher_verified_inventory_count": 30,
+      "candidate_count": 31,
+      "publisher_verified_inventory_count": 31,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -4619,6 +4699,15 @@
         {
           "window_start": "2026-11-05",
           "window_end": "2026-11-06",
+          "journal": "NCS",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
           "journal": "NCS",
           "candidate_count": 1,
           "publisher_verified_inventory_count": 1,
@@ -4948,13 +5037,22 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "PRX",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 774,
-      "publisher_verified_inventory_count": 774,
+      "candidate_count": 793,
+      "publisher_verified_inventory_count": 793,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5272,13 +5370,22 @@
           "publisher_verified_inventory_count": 28,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "PRL",
+          "candidate_count": 27,
+          "publisher_verified_inventory_count": 27,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "SA",
-      "candidate_count": 828,
-      "publisher_verified_inventory_count": 828,
+      "candidate_count": 868,
+      "publisher_verified_inventory_count": 868,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5596,13 +5703,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "SA",
+          "candidate_count": 40,
+          "publisher_verified_inventory_count": 40,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 949,
-      "publisher_verified_inventory_count": 949,
+      "candidate_count": 961,
+      "publisher_verified_inventory_count": 961,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5920,13 +6036,22 @@
           "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "PNAS",
+          "candidate_count": 12,
+          "publisher_verified_inventory_count": 12,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 115,
-      "publisher_verified_inventory_count": 115,
+      "candidate_count": 116,
+      "publisher_verified_inventory_count": 116,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6244,13 +6369,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "CP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 424,
-      "publisher_verified_inventory_count": 424,
+      "candidate_count": 433,
+      "publisher_verified_inventory_count": 433,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6568,13 +6702,22 @@
           "publisher_verified_inventory_count": 8,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "PRResearch",
+          "candidate_count": 15,
+          "publisher_verified_inventory_count": 15,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 549,
-      "publisher_verified_inventory_count": 549,
+      "candidate_count": 555,
+      "publisher_verified_inventory_count": 555,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6890,6 +7033,15 @@
           "journal": "PRE",
           "candidate_count": 19,
           "publisher_verified_inventory_count": 19,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "PRE",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -7216,13 +7368,22 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 87,
-      "publisher_verified_inventory_count": 87,
+      "candidate_count": 88,
+      "publisher_verified_inventory_count": 88,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7495,36 +7656,44 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-06",
+          "window_end": "2026-11-07",
+          "journal": "NP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7225,
+  "candidate_count": 7354,
   "screening_counts": {
-    "excluded": 6929,
-    "core": 266,
+    "excluded": 7054,
+    "core": 270,
     "transferable_application": 30,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 296
+    "included": 300
   },
-  "published_count": 257,
+  "published_count": 261,
   "accepted_count": 39,
   "latest_update": {
-    "run": "reports/runs/2026-11-05-to-06-01",
-    "reviewed_at": "2026-11-06T00:53:33.329743+00:00",
-    "newly_included_count": 5,
+    "run": "reports/runs/2026-11-06-to-07-01",
+    "reviewed_at": "2026-11-07T04:24:56.574369+00:00",
+    "newly_included_count": 4,
     "newly_included_dois": [
-      "10.1038/s41467-026-79266-2",
-      "10.1063/5.0358827",
-      "10.1073/pnas.2612721123",
-      "10.1103/4kgw-pk94",
-      "10.1103/r397-cxtl"
+      "10.1038/s41467-026-78777-2",
+      "10.1038/s41467-026-78879-x",
+      "10.1103/5h59-b6xz",
+      "10.1103/8dj9-xp98"
     ],
     "accepted_to_published_count": 2,
     "accepted_to_published_dois": [
-      "10.1103/ckx2-zbrb",
-      "10.1103/qnhv-yp69"
+      "10.1103/1fr3-bbxr",
+      "10.1103/8sqq-6mym"
     ]
   },
   "candidate_inventory_complete": false,
@@ -7535,6 +7704,506 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/8sqq-6mym",
+      "url": "https://doi.org/10.1103/8sqq-6mym",
+      "title": "Long-range assortativity",
+      "authors": [
+        "Pablo I. Fierens",
+        "Leandro Chaves Rêgo"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "6b50befad601d8d80e0498b7cf32cbf27f1114e187b6af12edd7a6dbe979140c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F8sqq-6mym",
+      "author_retrieved_at": "2026-11-07T04:15:48.493218+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-06",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-06",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-06",
+        "accepted_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/8sqq-6mym"
+        ],
+        "source_url": "https://journals.aps.org/pre/abstract/10.1103/8sqq-6mym",
+        "basis_detail": "Included papers: explicit individual Published/Accepted day in frozen official evidence. Excluded papers: independent scope/type exclusion; original date limitations retained and no claim all date checks passed."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-22",
+      "published_date": "2026-11-06",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "实际阅读明确摘要：提出非相邻节点之间的长程同质性度量，支持非标量、非类别属性及非线性相似关系，以保持节点度的随机连边为基准扩展Newman同配性，并在真实网络检验非平凡长程行为；网络结构度量为主要贡献。",
+        "material_sha256": "3a36803f4ef565b69de73c0a67fb22358eeb1a9daaaa9683559157b186c067db",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/8sqq-6mym"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Extends assortativity to indirectly connected nodes, nonscalar attributes and nonlinear similarity against degree-preserving null networks.",
+      "note_zh": "以保度随机网络为基线，将同配性扩展至非直接相连节点、非标量属性与非线性相似关系。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "33418069d498e43e49f594c79ecaa08768f5812e085e6a3286791e1ec2b68602",
+      "input_sha256": "6c725f0ccccf33adcbc999a4dfa24c13e7b49bed94e568abdf3ebca5b9a9f7f5",
+      "material_sha256": "3a36803f4ef565b69de73c0a67fb22358eeb1a9daaaa9683559157b186c067db",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3a36803f4ef565b69de73c0a67fb22358eeb1a9daaaa9683559157b186c067db",
+      "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+      "featured": null,
+      "evidence": [
+        "实际阅读明确摘要：提出非相邻节点之间的长程同质性度量，支持非标量、非类别属性及非线性相似关系，以保持节点度的随机连边为基准扩展Newman同配性，并在真实网络检验非平凡长程行为；网络结构度量为主要贡献。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F8sqq-6mym",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/8sqq-6mym",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-22",
+        "published_date": "2026-11-06",
+        "previous_run": "reports/runs/2026-10-22-to-23-01",
+        "source_run": "reports/runs/2026-11-06-to-07-01",
+        "audit_sha256": "8e3bb3352fbe2447ab3fd60d447944cbb9ac6f50b6f498c0ad7ca4a1711dc72c",
+        "previous_assessment_sha256": "cf6e6bf8035f41adfc956baf92d2966c1e6bad206a5754d09bc7080618fe12cc",
+        "assessment_sha256": "33418069d498e43e49f594c79ecaa08768f5812e085e6a3286791e1ec2b68602"
+      }
+    },
+    {
+      "doi": "10.1103/8dj9-xp98",
+      "url": "https://journals.aps.org/prl/accepted/10.1103/8dj9-xp98",
+      "title": "Minimal example of quantum network Bell nonlocality",
+      "authors": [
+        "Erwan Don",
+        "Jessica Bavaresco",
+        "Patryk Lipka-Bartosik",
+        "Nicolas Gisin",
+        "Nicolas Brunner",
+        "Alejandro Pozas-Kerstjens"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "bab74563f443f2d8cb95f260b687a2b3450e9bf2ef06fce0a6d4a2ece584f917",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F8dj9-xp98",
+      "author_retrieved_at": "2026-11-07T04:15:56.270450+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-11-06",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-06",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-06",
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/8dj9-xp98"
+        ],
+        "source_url": "https://journals.aps.org/prl/accepted/10.1103/8dj9-xp98",
+        "basis_detail": "Included papers: explicit individual Published/Accepted day in frozen official evidence. Excluded papers: independent scope/type exclusion; original date limitations retained and no claim all date checks passed."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-06",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "实际阅读官方接收版明确摘要：以三个独立源构成的三角量子网络为核心，证明无输入、二值输出的最小网络Bell非局域场景，并构建网络量子分布优化方法；网络结构约束和网络相关性生成是主要贡献，纳入核心网络科学。",
+        "material_sha256": "070de0f6a55d3cbbcb4bed46fe3cfb0ad3baa4e16e71e389b51cb420a28f34fa",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/8dj9-xp98"
+        ]
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Constructs Bell-nonlocal distributions in a binary-output triangle quantum network without input choices and develops network-distribution optimization; currently accepted.",
+      "note_zh": "在无输入选择、二值输出的三角量子网络中构造Bell非局域分布，并提出网络量子分布优化方法；当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "f00703b95c119663d2c7b1d9c7f115a501cf969178eba2d0ba358fdd7f36f2c4",
+      "input_sha256": "a159e719166652877f0f1d48c78e8c977815c79137f64bca0028189d25ac959d",
+      "material_sha256": "070de0f6a55d3cbbcb4bed46fe3cfb0ad3baa4e16e71e389b51cb420a28f34fa",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "070de0f6a55d3cbbcb4bed46fe3cfb0ad3baa4e16e71e389b51cb420a28f34fa",
+      "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+      "featured": "PRL",
+      "evidence": [
+        "实际阅读官方接收版明确摘要：以三个独立源构成的三角量子网络为核心，证明无输入、二值输出的最小网络Bell非局域场景，并构建网络量子分布优化方法；网络结构约束和网络相关性生成是主要贡献，纳入核心网络科学。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F8dj9-xp98",
+      "evidence_url": "https://journals.aps.org/prl/accepted/10.1103/8dj9-xp98",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/5h59-b6xz",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/5h59-b6xz",
+      "title": "General solution for network models with pairwise edge coupling",
+      "authors": [
+        "Alessio Catanzaro",
+        "Subodh P. Patil",
+        "Diego Garlaschelli"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "75b6c7c69c65cbba5739b1fa774f435f49e603c22a6b9d2f22db3f267ca29e73",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F5h59-b6xz",
+      "author_retrieved_at": "2026-11-07T04:15:46.401000+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-06",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-06",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "accepted_date": "2026-11-06",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/5h59-b6xz"
+        ],
+        "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/5h59-b6xz",
+        "basis_detail": "Included papers: explicit individual Published/Accepted day in frozen official evidence. Excluded papers: independent scope/type exclusion; original date limitations retained and no claim all date checks passed."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-06",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "实际阅读官方接收版明确摘要：研究边对耦合的高阶随机网络模型，利用Hubbard-Stratonovich变换及边相互作用对偶网络的代数图理论求配分函数与均场退化条件；随机网络系综、网络相互作用和热力学相是主要贡献。",
+        "material_sha256": "b11bc4b185b7f99ec822cca04424d5134e1e969aa171853ed02dfd2f0d3d0d92",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/5h59-b6xz"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Uses the Hubbard–Stratonovich transform and algebraic structure of an edge-dual network to solve pairwise-edge-coupled random graph partition functions and discuss mean-field reductions.",
+      "note_zh": "利用Hubbard–Stratonovich变换和边对偶网络的代数结构，解析求解边对耦合随机网络模型的配分函数，并讨论均场退化条件。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b7fa64f81c4ab79adb785c32907717b27a762c67342487c6f8cba0bde4dbb082",
+      "input_sha256": "72f109172b0820800e485620514501dbc2a7855c6887266fec082b6d71ebfe5a",
+      "material_sha256": "b11bc4b185b7f99ec822cca04424d5134e1e969aa171853ed02dfd2f0d3d0d92",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "b11bc4b185b7f99ec822cca04424d5134e1e969aa171853ed02dfd2f0d3d0d92",
+      "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+      "featured": null,
+      "evidence": [
+        "实际阅读官方接收版明确摘要：研究边对耦合的高阶随机网络模型，利用Hubbard-Stratonovich变换及边相互作用对偶网络的代数图理论求配分函数与均场退化条件；随机网络系综、网络相互作用和热力学相是主要贡献。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F5h59-b6xz",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/5h59-b6xz",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/1fr3-bbxr",
+      "url": "https://doi.org/10.1103/1fr3-bbxr",
+      "title": "Explosive connectivity and mechanical rigidity in cubic lattice structures",
+      "authors": [
+        "Trenton Lau",
+        "Gary P. T. Choi"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "6a2eb25b428c96af6ebb6905f496bcb1ea66d37927da51d06ae11d8b94f9e1a5",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F1fr3-bbxr",
+      "author_retrieved_at": "2026-11-07T04:15:44.622371+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-06",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-06",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-06",
+        "accepted_date": null,
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/1fr3-bbxr"
+        ],
+        "source_url": "https://journals.aps.org/prresearch/abstract/10.1103/1fr3-bbxr",
+        "basis_detail": "Included papers: explicit individual Published/Accepted day in frozen official evidence. Excluded papers: independent scope/type exclusion; original date limitations retained and no claim all date checks passed."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-19",
+      "published_date": "2026-11-06",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "实际阅读明确摘要：研究三维立方网络中Achlioptas乘积规则对全局连通与机械刚性的作用，用有限尺寸标度区分热力学连续转变和有限系统突跳，建立局部边得分与全局刚性效用关系，并解释中等选择数的最优刚性差距；网络结构、渗流和刚性为主要贡献。",
+        "material_sha256": "2f7b68fc1823b23cb1603a71eb24158bf3d832289f5a8f6541c61ce6a6a1c96a",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/1fr3-bbxr"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Studies product-rule connectivity and rigidification in cubic lattices, distinguishing finite-size macroscopic jumps from a continuous thermodynamic limit and linking local edge selection with global rigidity.",
+      "note_zh": "研究三维立方格点的乘积规则连通与刚化，区分有限尺寸宏观跃变和连续热力学极限，并联系局部选边与全局刚性效率。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "136efee65f69483756c306687cf3d3a00f90f9218152b0867168d315608fe92c",
+      "input_sha256": "437c26dc289cc09b83ad4a0a1e4ad3de7de4f83a985746dba014f6bc089cdc43",
+      "material_sha256": "2f7b68fc1823b23cb1603a71eb24158bf3d832289f5a8f6541c61ce6a6a1c96a",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "2f7b68fc1823b23cb1603a71eb24158bf3d832289f5a8f6541c61ce6a6a1c96a",
+      "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+      "featured": null,
+      "evidence": [
+        "实际阅读明确摘要：研究三维立方网络中Achlioptas乘积规则对全局连通与机械刚性的作用，用有限尺寸标度区分热力学连续转变和有限系统突跳，建立局部边得分与全局刚性效用关系，并解释中等选择数的最优刚性差距；网络结构、渗流和刚性为主要贡献。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F1fr3-bbxr",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/1fr3-bbxr",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-19",
+        "published_date": "2026-11-06",
+        "previous_run": "reports/runs/2026-10-19-to-20-01",
+        "source_run": "reports/runs/2026-11-06-to-07-01",
+        "audit_sha256": "8e3bb3352fbe2447ab3fd60d447944cbb9ac6f50b6f498c0ad7ca4a1711dc72c",
+        "previous_assessment_sha256": "8853e31cb38e41cd1dba208393bff5f96b245bae895641ba24960143aeee482a",
+        "assessment_sha256": "136efee65f69483756c306687cf3d3a00f90f9218152b0867168d315608fe92c"
+      }
+    },
+    {
+      "doi": "10.1038/s41467-026-78879-x",
+      "url": "https://doi.org/10.1038/s41467-026-78879-x",
+      "title": "Agentic AI needs a science of interaction",
+      "authors": [
+        "Manlio De Domenico"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5679d7a4235e8783070c89a4b0466cb5ce89e9883422a5f304c9386c3d4312ec",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78879-x",
+      "author_retrieved_at": "2026-11-07T04:15:54.262118+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-06",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-06",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-06",
+        "accepted_date": null,
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-78879-x_reference.pdf",
+          "https://www.nature.com/articles/s41467-026-78879-x"
+        ],
+        "source_url": "https://www.nature.com/articles/s41467-026-78879-x",
+        "basis_detail": "Included papers: explicit individual Published/Accepted day in frozen official evidence. Excluded papers: independent scope/type exclusion; original date limitations retained and no claim all date checks passed."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-06",
+      "article_type": "Comment",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Comment",
+        "basis": "Actually read permitted complete accessible official short comment; exact type and identity-bound brief observation retained.",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-78879-x_reference.pdf",
+          "https://www.nature.com/articles/s41467-026-78879-x"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Conceptual Comment: designed, emergent and adaptive interaction topologies become design and evaluation variables for collective agent dynamics within an augmented-state framework.",
+      "note_zh": "概念性评论：把设计、涌现与自适应交互拓扑作为多智能体集体动力学的设计和评估变量，以增广状态框架比较集体观测分布。",
+      "scope_authority": "assistant_online_short_comment_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "340a287ba83794453bca45e94b5abab3d157b00af8e9e763ee7b6b2a375ea4b2",
+      "input_sha256": "5be51dd73664197cf5036b3edfc16d4637ce5abc46311a561aa0da61357f66d9",
+      "material_sha256": null,
+      "review_evidence_kind": "online_short_comment",
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "review_evidence_sha256": "df2f6bd41c9569cd35036903c7cc29540a72e751dfee5e89ffb0becb71cca97a",
+      "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+      "featured": "NC",
+      "evidence": [
+        "实际在线阅读官方无摘要Comment全部5页（内存读取公开PDF，未保存正文/PDF）：交互网络拓扑及其自适应重连是主要解释/设计变量，Box 1以增广Markov状态与条件Itô动力学组织agent、环境、记忆和架构，并按匹配条件比较集体观测概率律。主要贡献为可迁移网络动力学概念与评估框架；不是已验证的新性能实验，不能把网页导语当作明确摘要。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78879-x",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-78879-x_reference.pdf",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-78777-2",
+      "url": "https://doi.org/10.1038/s41467-026-78777-2",
+      "title": "Redundancy maximization as a principle of associative memory learning in Hopfield networks",
+      "authors": [
+        "Mark Blümel",
+        "Andreas C. Schneider",
+        "Valentin Neuhaus",
+        "David A. Ehrlich",
+        "Marcel Graetz",
+        "Michael Wibral",
+        "Abdullah Makkeh",
+        "Viola Priesemann"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "69daecc39717b22debf2bd4ba08d10bacb2dc537aa59a143d5be1682dd69515a",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78777-2",
+      "author_retrieved_at": "2026-11-07T04:15:51.591109+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-06",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-06",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "published_date": "2026-11-06",
+        "accepted_date": null,
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-78777-2",
+          "https://www.nature.com/articles/s41467-026-78777-2"
+        ],
+        "source_url": "https://www.nature.com/articles/s41467-026-78777-2",
+        "basis_detail": "Included papers: explicit individual Published/Accepted day in frozen official evidence. Excluded papers: independent scope/type exclusion; original date limitations retained and no claim all date checks passed."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-06",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "basis": "实际阅读明确摘要：以Hopfield递归网络为对象，用部分信息分解区分外部模式与内部递归输入的冗余、协同和独有信息，提出逐神经元冗余最大化学习并提高联想记忆容量；网络局部信息处理及集体检索能力是主要贡献。",
+        "material_sha256": "1924fb9477a595fcc8e36cd29ef3c0fdfeb836f9172dc7c6b6d8274f20852617",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-78777-2"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Partial information decomposition links target and recurrent inputs at each neuron; local redundancy maximization improves associative storage, while capacity and noise robustness remain distinct.",
+      "note_zh": "将单神经元的目标输入与循环输入做部分信息分解，以局部冗余最大化学习联想记忆；区分存储容量提升与噪声下回忆稳定性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "fedd024c50800ebfaf46c84d953d009918ed31baecb2a146be5e9f4a0621ae82",
+      "input_sha256": "5e43e3d792adcec686007d5c113232c7d18e803890bd16202cff7127551dd12f",
+      "material_sha256": "1924fb9477a595fcc8e36cd29ef3c0fdfeb836f9172dc7c6b6d8274f20852617",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "1924fb9477a595fcc8e36cd29ef3c0fdfeb836f9172dc7c6b6d8274f20852617",
+      "rule_sha256": "af97ebb0ab5bfc9c4f4ed6b86f33976b7c589fc06afa9eb17ec5cfaddccd3828",
+      "featured": "NC",
+      "evidence": [
+        "实际阅读明确摘要：以Hopfield递归网络为对象，用部分信息分解区分外部模式与内部递归输入的冗余、协同和独有信息，提出逐神经元冗余最大化学习并提高联想记忆容量；网络局部信息处理及集体检索能力是主要贡献。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78777-2",
+      "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78777-2",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/r397-cxtl",
       "url": "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
@@ -13445,78 +14114,6 @@
       }
     },
     {
-      "doi": "10.1103/8sqq-6mym",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/8sqq-6mym",
-      "title": "Long-range assortativity",
-      "authors": [
-        "Pablo I. Fierens",
-        "Leandro Chaves Rêgo"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "be1e3f3f0b95f2e056bc0216e0b6e401295bf4c6a26e42b1d6c99bfcc6216e1f",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2F8sqq-6mym",
-      "author_retrieved_at": "2026-10-23T02:28:41.916644+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-22",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-22",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-22",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "6fc1fc87a9e2c62c58fbf3ed7315d85cd9ded0d7c6cfddabf24feda47d71a173",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/8sqq-6mym"
-        ],
-        "basis": "提出面向非直接相连节点的长程同配性度量，支持非标量属性和非线性相似关系，以保度随机连接为基线分析真实网络长程组织。",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Extends assortativity to long-range, non-scalar and nonlinear similarity using degree-preserving null networks.",
-      "note_zh": "以保度随机网络为基线，将同配性扩展至长程、非标量属性和非线性相似关系。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "cf6e6bf8035f41adfc956baf92d2966c1e6bad206a5754d09bc7080618fe12cc",
-      "input_sha256": "40352f3e6e3e55be59568a9c890a329799ecea405531d91cea524592bff3875f",
-      "material_sha256": "6fc1fc87a9e2c62c58fbf3ed7315d85cd9ded0d7c6cfddabf24feda47d71a173",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "6fc1fc87a9e2c62c58fbf3ed7315d85cd9ded0d7c6cfddabf24feda47d71a173",
-      "rule_sha256": "0c4a29dda1fb5dcef9134ffa49fb295cbacdf03710b03c5ea2d921e47a8071eb",
-      "featured": null,
-      "evidence": [
-        "A degree-preserving null model extends assortativity to nonlinear, non-scalar long-range homophily."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F8sqq-6mym",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/8sqq-6mym",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/64b7-qb8p",
       "url": "https://doi.org/10.1103/64b7-qb8p",
       "title": "Minimal network of brain dynamics: Hierarchy of approximations to quasicritical neural network dynamics",
@@ -15284,78 +15881,6 @@
         "previous_assessment_sha256": "27e6cc813951290a517d2ab804681e3c679cc2e640494dc6dd7d73af38e944cc",
         "assessment_sha256": "b97f82adc96a26d7d8b62dfaa33628291a7617809a7a3d337c01e7630862e703"
       }
-    },
-    {
-      "doi": "10.1103/1fr3-bbxr",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/1fr3-bbxr",
-      "title": "Explosive connectivity and mechanical rigidity in cubic lattice structures",
-      "authors": [
-        "Trenton Lau",
-        "Gary P. T. Choi"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "b8f1ef83eb754d05bd82b1b284b3d877c750c0a435765eced28c919c247f7b7a",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2F1fr3-bbxr",
-      "author_retrieved_at": "2026-10-20T00:28:43.688826+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-10-19",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-19",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-19",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "e02cb16ad8961406ba4098e09daf7f385a7b937c76826be3d2903f973fc703e0",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/1fr3-bbxr"
-        ],
-        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_structure",
-        "network_spreading"
-      ],
-      "scope_class": "core",
-      "note_en": "Examines product-rule connectivity and rigidity in cubic lattice networks, distinguishing finite-size jumps from the continuous limit discussed by the authors.",
-      "note_zh": "考察乘积规则加边如何影响三维格点网络的连通和刚性；区分有限尺寸跃变与作者讨论的连续极限。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "8853e31cb38e41cd1dba208393bff5f96b245bae895641ba24960143aeee482a",
-      "input_sha256": "3acdca11b87f329397be3e5a5e85eb3b23956cf9ce38b2d289d35d0311cb5670",
-      "material_sha256": "e02cb16ad8961406ba4098e09daf7f385a7b937c76826be3d2903f973fc703e0",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "e02cb16ad8961406ba4098e09daf7f385a7b937c76826be3d2903f973fc703e0",
-      "rule_sha256": "c9fccffb47b68b44b1081af4be57caae66f27b45aae400e6783b47e397d9ad02",
-      "featured": null,
-      "evidence": [
-        "Product-rule edge selection couples explosive connectivity, finite-size scaling and mechanical rigidification in cubic lattices."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F1fr3-bbxr",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/1fr3-bbxr",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
     },
     {
       "doi": "10.1073/pnas.2611539123",
@@ -32321,9 +32846,145 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "d73d2b4863a2c65dda6fef9eb41bbd428e69ad4943827869580bb2d3ece6079c"
+    },
+    {
+      "current_run": "reports/runs/2026-11-06-to-07-01",
+      "candidate_sha256": "13b1211115ca195bd2c8bd365df0a25486d7327e4db7d50b98ef14396c79c93b",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d"
+      },
+      "counts": {
+        "in_window": 154,
+        "newly_reviewed": 129,
+        "historically_reviewed": 64,
+        "state_updates": 25,
+        "categories": {
+          "excluded": 148,
+          "core": 6
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "8e3bb3352fbe2447ab3fd60d447944cbb9ac6f50b6f498c0ad7ca4a1711dc72c"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41467-026-78777-2",
+      "recommended_on": "2026-11-07",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-06-to-07-01",
+      "publication_sha256": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+      "assessment_sha256": "fedd024c50800ebfaf46c84d953d009918ed31baecb2a146be5e9f4a0621ae82",
+      "input_sha256": "5e43e3d792adcec686007d5c113232c7d18e803890bd16202cff7127551dd12f",
+      "evidence_sha256": "1924fb9477a595fcc8e36cd29ef3c0fdfeb836f9172dc7c6b6d8274f20852617",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-07T04:15:29.092136+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78777-2",
+        "title": "Redundancy maximization as a principle of associative memory learning in Hopfield networks",
+        "sha256": "3b96ad58acf607b0c2ddb597d7307b7e1fcb506a525533de6bf46d53308f827b",
+        "version": "Publisher Version of Record, Nature Communications 17, 11499 (2026)",
+        "source_url": "https://www.nature.com/articles/s41467-026-78777-2.pdf",
+        "pages": 8,
+        "read_scope": "All 8 publisher PDF pages, Results, Discussion, Methods, Figures 1-6/captions, equations 1-8, data/code availability and reference list/declarations. Rendered PDF pages 3-6 visually checked (PID profiles, goal landscape, capacity/stability and method equations). Supplementary Notes, cited papers, source code and simulations not independently reviewed or reproduced.",
+        "reviewed_at": "2026-11-07T04:15:29.092136+00:00",
+        "source_kind": "publisher_fulltext"
+      },
+      "question": {
+        "zh": "局部冗余信息，如何变成循环网络的联想记忆？",
+        "en": "How does local redundant information become associative memory in a recurrent network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为论文把信息分解从事后分析推进到可训练的局部目标：先问每个神经元的循环输入是否编码了目标相关信息，再观察整个网络能否维持记忆。",
+          "值得借鉴的是同时检查目标函数、测试信息边界和回忆指标。平均存储容量、完整模式回忆率与抗噪稳定性回答不同问题，不能用一个提升数字替代全部表现。"
+        ],
+        "en": [
+          "This pick turns information decomposition from a diagnostic into a trainable local goal: ask whether recurrent input carries target-relevant information, then test whether the whole network maintains memories.",
+          "Borrow its separate checks of objectives, test-time information and recall metrics. Mean storage capacity, complete-pattern recall and noise tolerance answer different questions; one improvement does not establish every form of robustness."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "教学信号与测试动力学分开",
+            "en": "Separate teaching from test dynamics"
+          },
+          "text": {
+            "zh": "目标输入只参与训练，测试依赖循环输入。局部冗余把“任务相关”与“已编码在循环连接中”联系起来，便于解释网络何时失去记忆。",
+            "en": "The target input is used for training; testing relies on recurrent input. Local redundancy links task relevance with information encoded by recurrent connections, helping interpret memory failure."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较信息目标，而非只比较算法名",
+            "en": "Compare information goals"
+          },
+          "text": {
+            "zh": "目标互信息也能获得接近的容量，但超容量后可由目标独有信息维持高值。PID揭示这一差别；纯冗余1.59与混合目标约1.70须分别说明。",
+            "en": "Target mutual information achieves similar capacity but can stay high beyond capacity through target-unique information. PID exposes that distinction; pure redundancy at 1.59 and optimized mixed goals near 1.70 must be reported separately."
+          }
+        },
+        {
+          "heading": {
+            "zh": "容量不等于吸引域稳定性",
+            "en": "Capacity is not basin robustness"
+          },
+          "text": {
+            "zh": "图6另测受损初态的回忆稳定性；负载约0.8以上，各比较方法的抗噪余量都接近零。读取平均余弦相似度、阈值回忆率和噪声曲线，才能正确理解容量提升。",
+            "en": "Figure 6 separately tests corrupted initial states: above a load near 0.8, noise tolerance approaches zero across the compared methods. Read mean cosine accuracy, threshold recall and corruption curves together to interpret capacity gains."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究循环网络、联想记忆、网络集体计算与信息论学习目标的读者。",
+        "en": "Readers studying recurrent networks, associative memory, collective computation and information-theoretic learning objectives."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部8页及图1–6、方法和参考文献表，渲染核对第3–6页。主实验为100神经元的双极性模式，20次初始化；Hebb分析另用500神经元。联合概率估计成本较高，目标权重与规模依赖尚未厘清；未完整审读补充材料或独立复现，不推及任意网络与生物学习。",
+        "en": "Read all 8 publisher PDF pages, Figures 1-6, Methods and reference list; visually checked pages 3-6. Main tests use 100 neurons and bipolar patterns across 20 initializations; Hebbian analysis also uses 500 neurons. Joint-probability estimation is costly and target-scale versus network-size effects remain open. Supplementary material was not fully reviewed; no independent reproduction or generalization to arbitrary networks and biological learning."
+      }
+    },
     {
       "doi": "10.1063/5.0358827",
       "recommended_on": "2026-11-06",
@@ -37142,6 +37803,84 @@
       }
     },
     {
+      "doi": "10.1038/s41467-026-78777-2",
+      "recommended_on": "2026-11-07",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-06-to-07-01",
+      "publication_sha256": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+      "assessment_sha256": "fedd024c50800ebfaf46c84d953d009918ed31baecb2a146be5e9f4a0621ae82",
+      "input_sha256": "5e43e3d792adcec686007d5c113232c7d18e803890bd16202cff7127551dd12f",
+      "evidence_sha256": "1924fb9477a595fcc8e36cd29ef3c0fdfeb836f9172dc7c6b6d8274f20852617",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-07T04:15:29.092136+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78777-2",
+        "title": "Redundancy maximization as a principle of associative memory learning in Hopfield networks",
+        "sha256": "3b96ad58acf607b0c2ddb597d7307b7e1fcb506a525533de6bf46d53308f827b",
+        "version": "Publisher Version of Record, Nature Communications 17, 11499 (2026)",
+        "source_url": "https://www.nature.com/articles/s41467-026-78777-2.pdf",
+        "pages": 8,
+        "read_scope": "All 8 publisher PDF pages, Results, Discussion, Methods, Figures 1-6/captions, equations 1-8, data/code availability and reference list/declarations. Rendered PDF pages 3-6 visually checked (PID profiles, goal landscape, capacity/stability and method equations). Supplementary Notes, cited papers, source code and simulations not independently reviewed or reproduced.",
+        "reviewed_at": "2026-11-07T04:15:29.092136+00:00",
+        "source_kind": "publisher_fulltext"
+      },
+      "question": {
+        "zh": "局部冗余信息，如何变成循环网络的联想记忆？",
+        "en": "How does local redundant information become associative memory in a recurrent network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为论文把信息分解从事后分析推进到可训练的局部目标：先问每个神经元的循环输入是否编码了目标相关信息，再观察整个网络能否维持记忆。",
+          "值得借鉴的是同时检查目标函数、测试信息边界和回忆指标。平均存储容量、完整模式回忆率与抗噪稳定性回答不同问题，不能用一个提升数字替代全部表现。"
+        ],
+        "en": [
+          "This pick turns information decomposition from a diagnostic into a trainable local goal: ask whether recurrent input carries target-relevant information, then test whether the whole network maintains memories.",
+          "Borrow its separate checks of objectives, test-time information and recall metrics. Mean storage capacity, complete-pattern recall and noise tolerance answer different questions; one improvement does not establish every form of robustness."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "教学信号与测试动力学分开",
+            "en": "Separate teaching from test dynamics"
+          },
+          "text": {
+            "zh": "目标输入只参与训练，测试依赖循环输入。局部冗余把“任务相关”与“已编码在循环连接中”联系起来，便于解释网络何时失去记忆。",
+            "en": "The target input is used for training; testing relies on recurrent input. Local redundancy links task relevance with information encoded by recurrent connections, helping interpret memory failure."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较信息目标，而非只比较算法名",
+            "en": "Compare information goals"
+          },
+          "text": {
+            "zh": "目标互信息也能获得接近的容量，但超容量后可由目标独有信息维持高值。PID揭示这一差别；纯冗余1.59与混合目标约1.70须分别说明。",
+            "en": "Target mutual information achieves similar capacity but can stay high beyond capacity through target-unique information. PID exposes that distinction; pure redundancy at 1.59 and optimized mixed goals near 1.70 must be reported separately."
+          }
+        },
+        {
+          "heading": {
+            "zh": "容量不等于吸引域稳定性",
+            "en": "Capacity is not basin robustness"
+          },
+          "text": {
+            "zh": "图6另测受损初态的回忆稳定性；负载约0.8以上，各比较方法的抗噪余量都接近零。读取平均余弦相似度、阈值回忆率和噪声曲线，才能正确理解容量提升。",
+            "en": "Figure 6 separately tests corrupted initial states: above a load near 0.8, noise tolerance approaches zero across the compared methods. Read mean cosine accuracy, threshold recall and corruption curves together to interpret capacity gains."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究循环网络、联想记忆、网络集体计算与信息论学习目标的读者。",
+        "en": "Readers studying recurrent networks, associative memory, collective computation and information-theoretic learning objectives."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部8页及图1–6、方法和参考文献表，渲染核对第3–6页。主实验为100神经元的双极性模式，20次初始化；Hebb分析另用500神经元。联合概率估计成本较高，目标权重与规模依赖尚未厘清；未完整审读补充材料或独立复现，不推及任意网络与生物学习。",
+        "en": "Read all 8 publisher PDF pages, Figures 1-6, Methods and reference list; visually checked pages 3-6. Main tests use 100 neurons and bipolar patterns across 20 initializations; Hebbian analysis also uses 500 neurons. Joint-probability estimation is costly and target-scale versus network-size effects remain open. Supplementary material was not fully reviewed; no independent reproduction or generalization to arbitrary networks and biological learning."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -37221,5 +37960,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "1cd1d662cb36be35111b37df99f489d7aecc7b894ee171763209e448fae939a3"
+  "daily_suggestions_sha256": "721521047198e76416867e4a317a717d06763cc41fff6dfe88434141797f7440"
 }
