@@ -2474,6 +2474,84 @@
         "zh": "已读正式PDF全部8页及图1–6、方法和参考文献表，渲染核对第3–6页。主实验为100神经元的双极性模式，20次初始化；Hebb分析另用500神经元。联合概率估计成本较高，目标权重与规模依赖尚未厘清；未完整审读补充材料或独立复现，不推及任意网络与生物学习。",
         "en": "Read all 8 publisher PDF pages, Figures 1-6, Methods and reference list; visually checked pages 3-6. Main tests use 100 neurons and bipolar patterns across 20 initializations; Hebbian analysis also uses 500 neurons. Joint-probability estimation is costly and target-scale versus network-size effects remain open. Supplementary material was not fully reviewed; no independent reproduction or generalization to arbitrary networks and biological learning."
       }
+    },
+    {
+      "doi": "10.1103/1fr3-bbxr",
+      "recommended_on": "2026-11-08",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-06-to-07-01",
+      "publication_sha256": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+      "assessment_sha256": "136efee65f69483756c306687cf3d3a00f90f9218152b0867168d315608fe92c",
+      "input_sha256": "437c26dc289cc09b83ad4a0a1e4ad3de7de4f83a985746dba014f6bc089cdc43",
+      "evidence_sha256": "2f7b68fc1823b23cb1603a71eb24158bf3d832289f5a8f6541c61ce6a6a1c96a",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-08T01:00:49.288203+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/1fr3-bbxr",
+        "title": "Explosive connectivity and mechanical rigidity in cubic lattice structures",
+        "sha256": "3de184341d61ed2793195bbd168440983ef78f4d59a14086996e2e7f24d619c7",
+        "version": "Publisher Version of Record, Physical Review Research 8,043134 (2026)",
+        "source_url": "https://harvest.aps.org/v2/journals/articles/10.1103/1fr3-bbxr",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "reviewed_at": "2026-11-08T01:00:49.288203+00:00",
+        "read_scope": "All 15 publisher PDF pages: Sections I-V, definitions, equations and conditional derivations, Figures 1-7/captions, discussion, declarations and full reference list. Rendered pages 7 and 10 visually checked. Supplementary proofs/tables/videos and code not independently reviewed or reproduced. Connectivity reaches L=192; rigidity uses a relaxed 3D pebble-game proxy through L=10. Theorem 1 is conditional; finite-size sharpness alone does not establish a thermodynamic discontinuity."
+      },
+      "question": {
+        "zh": "连通与刚化之间，为什么还差一段加边过程？",
+        "en": "Why does a connected lattice still need more bonds to become rigid?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天从馆藏回选这篇，因为巨型连通簇的出现与机械约束的建立是两个不同的集体过程。把两条转变曲线并排，能看到只优化连通性时容易忽略的结构余量。",
+          "值得借鉴的是把选边规则、有限尺寸现象与刚性判据分开检查。增加候选边数量并不保证全局刚化收益一直提高；还要区分条件理论、组合代理量和严格的三维刚性。"
+        ],
+        "en": [
+          "This archive pick separates the appearance of a giant connected cluster from the buildup of mechanical constraints. Reading both transition curves exposes the structural gap that connectivity alone can hide.",
+          "Borrow its separate checks of edge-selection rules, finite-size behavior and rigidity criteria. More candidate edges need not keep improving global rigidification; conditional theory, combinatorial proxies and exact 3D rigidity must remain distinct."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "连通并不等于机械稳定",
+            "en": "Connectivity is not mechanical stability"
+          },
+          "text": {
+            "zh": "比较仅含轴向边的NN格点与加入面、体对角线的Intra宿主，结合巨型簇和刚化曲线讨论两种阈值之间的加边间隔。",
+            "en": "Compare the axis-edge NN lattice with the Intra host containing face and body diagonals, then read giant-component and rigidification curves together to study the bond-density gap."
+          }
+        },
+        {
+          "heading": {
+            "zh": "选择更多，收益可能非单调",
+            "en": "More choice can have nonmonotonic benefits"
+          },
+          "text": {
+            "zh": "乘积规则延迟连通，但正文报告Intra刚化间隔在中等选择数附近达到最小，较大选择数形成更树状的柔性簇。局部选边目标与全局机械目标需要分别评估。",
+            "en": "The product rule delays connectivity, but the main text reports a minimum Intra rigidity gap at intermediate choice, with larger choice creating more treelike floppy clusters. Evaluate edge-selection and mechanical objectives separately."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让计算尺度与判据一起出现",
+            "en": "Report scale alongside the criterion"
+          },
+          "text": {
+            "zh": "连通性模拟达到L=192，刚性分析只到L=10并使用松弛三维pebble-game代理；定理1依赖尚待证明的假设。有限尺寸陡跃不能单独证明热力学极限不连续。",
+            "en": "Connectivity simulations reach L=192, while rigidity uses a relaxed 3D pebble-game proxy only through L=10. Theorem 1 depends on unproved assumptions; sharp finite-size jumps alone do not prove a discontinuous thermodynamic limit."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究渗流、网络生成、刚性转变与机械网络设计，或需要区分有限尺寸证据和理论假设的读者。",
+        "en": "Readers studying percolation, network growth, rigidity transitions and mechanical-network design, especially those separating finite-size evidence from theoretical assumptions."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部15页、图1–7、推导、讨论及参考文献表，并渲染核对第7和10页。刚性结果采用松弛组合代理，不能等同精确三维通用刚性或真实材料刚度；连通性的大尺度结果不可冒充同尺度刚性结果。局部进展定理有条件，补充证明、表格、视频与代码未独立审读或复现。",
+        "en": "Read all 15 publisher PDF pages, Figures 1-7, derivations, discussion and reference list; visually checked pages 7 and 10. Relaxed combinatorial rigidity is not exact generic 3D rigidity or material stiffness; large-scale connectivity results do not establish rigidity at that scale. The local-progress theorem is conditional. Supplementary proofs/tables/videos and code were not independently reviewed or reproduced."
+      }
     }
   ],
   "revisions": [

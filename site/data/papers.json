@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-07T04:33:46.768265+00:00",
+  "generated_at": "2026-11-08T01:07:54.955152+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-07",
-  "window_days": 68,
+  "window_end": "2026-11-08",
+  "window_days": 69,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "9f4dda256d69a10ac86eeabbbaa7deac1f0cde28e58837cd530c22d4e33c8649",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
   "reading_notes_sha256": "98051dd6bfd26e21a48b868991e16a447cf5b4648069a018dcbc4f0fe3035961",
-  "author_metadata_sha256": "de13e05654cd732bf97f88db5416e6366e7abec28b3f23060aa6a85b18f6c7bf",
+  "author_metadata_sha256": "c3d5534f0d2a8f9d0e7501b20ac9f8008489e0bab003699d48779b06e97141d4",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2892,6 +2892,50 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-07-to-08-01",
+      "config_sha256": "3b9c73608a01faeb7f71ec58dbd48cb618db6ca14544b096ad4053fe41c03f63",
+      "window_start": "2026-11-07",
+      "window_end": "2026-11-08",
+      "rule_sha256": "2cfa3c44628b88c066fb0842493142cd151819f38901d2f5b4bd62b996ae41ba",
+      "screening_log_sha256": "bacec56a79a1baf10f6bad6e0b1696cabce40563d9070df0d9521f6511e9838a",
+      "candidate_sha256": "4906034cff5243a035d99f9712b17acbc6d42cff39ee61b32eb263fdea5af003",
+      "author_metadata_sha256": "4bebb6f75059abde5bf9d50b5c2117794ddc4fa1b67a31f22d0d86c5e2f565c9",
+      "run_manifest_sha256": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-07-to-08-01",
+          "files": {
+            "candidates.json": "4906034cff5243a035d99f9712b17acbc6d42cff39ee61b32eb263fdea5af003",
+            "coverage.json": "3c6cdaf035c662db1ec45a191bb4fdbf236811ba5fae08810017e887ff6ecc9f",
+            "collection-log.jsonl": "adb5a88b2d4c702f352f82538eff49c4d0fea6d2ad96622fd0f27a0154e33840",
+            "screening-log.jsonl": "377f1e1d3de35aa6ad2f7398983cac940c2ce2f88b96872752bcf8688c508528",
+            "inputs/manifest.json": "b543f31e506bc3283a82210d06c012767935aa10b85a4e63b3b6df7581520e7c",
+            "inputs/sources.json": "e79496341a450d7cca53db37ab29224135cb2b5d7388be6f992238e199e0d051",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "4906034cff5243a035d99f9712b17acbc6d42cff39ee61b32eb263fdea5af003",
+          "rule_sha256": "2cfa3c44628b88c066fb0842493142cd151819f38901d2f5b4bd62b996ae41ba",
+          "screening_log_sha256": "bacec56a79a1baf10f6bad6e0b1696cabce40563d9070df0d9521f6511e9838a"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "4bebb6f75059abde5bf9d50b5c2117794ddc4fa1b67a31f22d0d86c5e2f565c9",
+          "audit": {
+            "path": "reports/runs/2026-11-07-to-08-01/screening-log.jsonl",
+            "sha256": "377f1e1d3de35aa6ad2f7398983cac940c2ce2f88b96872752bcf8688c508528"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "891776520fc564c4a3d32f9057ae0db4ca4bdd0e8745c3bff0c1b459bb2b92ec"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
   "author_available_count": 300,
@@ -3381,6 +3425,15 @@
           "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "Nature",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3714,13 +3767,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1977,
-      "publisher_verified_inventory_count": 1970,
+      "candidate_count": 1995,
+      "publisher_verified_inventory_count": 1988,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4045,6 +4107,15 @@
           "journal": "NC",
           "candidate_count": 30,
           "publisher_verified_inventory_count": 30,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "NC",
+          "candidate_count": 18,
+          "publisher_verified_inventory_count": 18,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4380,6 +4451,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4711,6 +4791,15 @@
           "journal": "NCS",
           "candidate_count": 1,
           "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5046,6 +5135,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5379,6 +5477,15 @@
           "publisher_verified_inventory_count": 27,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5710,6 +5817,15 @@
           "journal": "SA",
           "candidate_count": 40,
           "publisher_verified_inventory_count": 40,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6045,6 +6161,15 @@
           "publisher_verified_inventory_count": 12,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6376,6 +6501,15 @@
           "journal": "CP",
           "candidate_count": 1,
           "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6711,6 +6845,15 @@
           "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "PRResearch",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7042,6 +7185,15 @@
           "journal": "PRE",
           "candidate_count": 16,
           "publisher_verified_inventory_count": 16,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -7377,6 +7529,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7665,13 +7826,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-07",
+          "window_end": "2026-11-08",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7354,
+  "candidate_count": 7372,
   "screening_counts": {
-    "excluded": 7054,
+    "excluded": 7072,
     "core": 270,
     "transferable_application": 30,
     "review": 0,
@@ -7681,20 +7851,12 @@
   "published_count": 261,
   "accepted_count": 39,
   "latest_update": {
-    "run": "reports/runs/2026-11-06-to-07-01",
-    "reviewed_at": "2026-11-07T04:24:56.574369+00:00",
-    "newly_included_count": 4,
-    "newly_included_dois": [
-      "10.1038/s41467-026-78777-2",
-      "10.1038/s41467-026-78879-x",
-      "10.1103/5h59-b6xz",
-      "10.1103/8dj9-xp98"
-    ],
-    "accepted_to_published_count": 2,
-    "accepted_to_published_dois": [
-      "10.1103/1fr3-bbxr",
-      "10.1103/8sqq-6mym"
-    ]
+    "run": "reports/runs/2026-11-07-to-08-01",
+    "reviewed_at": "2026-11-08T01:03:17.148829+00:00",
+    "newly_included_count": 0,
+    "newly_included_dois": [],
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": []
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -32904,9 +33066,145 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "8e3bb3352fbe2447ab3fd60d447944cbb9ac6f50b6f498c0ad7ca4a1711dc72c"
+    },
+    {
+      "current_run": "reports/runs/2026-11-07-to-08-01",
+      "candidate_sha256": "4906034cff5243a035d99f9712b17acbc6d42cff39ee61b32eb263fdea5af003",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba"
+      },
+      "counts": {
+        "in_window": 18,
+        "newly_reviewed": 18,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 18
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "a2b9809de7b7f1fcc9b999373a11f28ab4d4efaf5350569378702456c240f0d9"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/1fr3-bbxr",
+      "recommended_on": "2026-11-08",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-06-to-07-01",
+      "publication_sha256": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+      "assessment_sha256": "136efee65f69483756c306687cf3d3a00f90f9218152b0867168d315608fe92c",
+      "input_sha256": "437c26dc289cc09b83ad4a0a1e4ad3de7de4f83a985746dba014f6bc089cdc43",
+      "evidence_sha256": "2f7b68fc1823b23cb1603a71eb24158bf3d832289f5a8f6541c61ce6a6a1c96a",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-08T01:00:49.288203+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/1fr3-bbxr",
+        "title": "Explosive connectivity and mechanical rigidity in cubic lattice structures",
+        "sha256": "3de184341d61ed2793195bbd168440983ef78f4d59a14086996e2e7f24d619c7",
+        "version": "Publisher Version of Record, Physical Review Research 8,043134 (2026)",
+        "source_url": "https://harvest.aps.org/v2/journals/articles/10.1103/1fr3-bbxr",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "reviewed_at": "2026-11-08T01:00:49.288203+00:00",
+        "read_scope": "All 15 publisher PDF pages: Sections I-V, definitions, equations and conditional derivations, Figures 1-7/captions, discussion, declarations and full reference list. Rendered pages 7 and 10 visually checked. Supplementary proofs/tables/videos and code not independently reviewed or reproduced. Connectivity reaches L=192; rigidity uses a relaxed 3D pebble-game proxy through L=10. Theorem 1 is conditional; finite-size sharpness alone does not establish a thermodynamic discontinuity."
+      },
+      "question": {
+        "zh": "连通与刚化之间，为什么还差一段加边过程？",
+        "en": "Why does a connected lattice still need more bonds to become rigid?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天从馆藏回选这篇，因为巨型连通簇的出现与机械约束的建立是两个不同的集体过程。把两条转变曲线并排，能看到只优化连通性时容易忽略的结构余量。",
+          "值得借鉴的是把选边规则、有限尺寸现象与刚性判据分开检查。增加候选边数量并不保证全局刚化收益一直提高；还要区分条件理论、组合代理量和严格的三维刚性。"
+        ],
+        "en": [
+          "This archive pick separates the appearance of a giant connected cluster from the buildup of mechanical constraints. Reading both transition curves exposes the structural gap that connectivity alone can hide.",
+          "Borrow its separate checks of edge-selection rules, finite-size behavior and rigidity criteria. More candidate edges need not keep improving global rigidification; conditional theory, combinatorial proxies and exact 3D rigidity must remain distinct."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "连通并不等于机械稳定",
+            "en": "Connectivity is not mechanical stability"
+          },
+          "text": {
+            "zh": "比较仅含轴向边的NN格点与加入面、体对角线的Intra宿主，结合巨型簇和刚化曲线讨论两种阈值之间的加边间隔。",
+            "en": "Compare the axis-edge NN lattice with the Intra host containing face and body diagonals, then read giant-component and rigidification curves together to study the bond-density gap."
+          }
+        },
+        {
+          "heading": {
+            "zh": "选择更多，收益可能非单调",
+            "en": "More choice can have nonmonotonic benefits"
+          },
+          "text": {
+            "zh": "乘积规则延迟连通，但正文报告Intra刚化间隔在中等选择数附近达到最小，较大选择数形成更树状的柔性簇。局部选边目标与全局机械目标需要分别评估。",
+            "en": "The product rule delays connectivity, but the main text reports a minimum Intra rigidity gap at intermediate choice, with larger choice creating more treelike floppy clusters. Evaluate edge-selection and mechanical objectives separately."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让计算尺度与判据一起出现",
+            "en": "Report scale alongside the criterion"
+          },
+          "text": {
+            "zh": "连通性模拟达到L=192，刚性分析只到L=10并使用松弛三维pebble-game代理；定理1依赖尚待证明的假设。有限尺寸陡跃不能单独证明热力学极限不连续。",
+            "en": "Connectivity simulations reach L=192, while rigidity uses a relaxed 3D pebble-game proxy only through L=10. Theorem 1 depends on unproved assumptions; sharp finite-size jumps alone do not prove a discontinuous thermodynamic limit."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究渗流、网络生成、刚性转变与机械网络设计，或需要区分有限尺寸证据和理论假设的读者。",
+        "en": "Readers studying percolation, network growth, rigidity transitions and mechanical-network design, especially those separating finite-size evidence from theoretical assumptions."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部15页、图1–7、推导、讨论及参考文献表，并渲染核对第7和10页。刚性结果采用松弛组合代理，不能等同精确三维通用刚性或真实材料刚度；连通性的大尺度结果不可冒充同尺度刚性结果。局部进展定理有条件，补充证明、表格、视频与代码未独立审读或复现。",
+        "en": "Read all 15 publisher PDF pages, Figures 1-7, derivations, discussion and reference list; visually checked pages 7 and 10. Relaxed combinatorial rigidity is not exact generic 3D rigidity or material stiffness; large-scale connectivity results do not establish rigidity at that scale. The local-progress theorem is conditional. Supplementary proofs/tables/videos and code were not independently reviewed or reproduced."
+      }
+    },
     {
       "doi": "10.1038/s41467-026-78777-2",
       "recommended_on": "2026-11-07",
@@ -37881,6 +38179,84 @@
       }
     },
     {
+      "doi": "10.1103/1fr3-bbxr",
+      "recommended_on": "2026-11-08",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-06-to-07-01",
+      "publication_sha256": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+      "assessment_sha256": "136efee65f69483756c306687cf3d3a00f90f9218152b0867168d315608fe92c",
+      "input_sha256": "437c26dc289cc09b83ad4a0a1e4ad3de7de4f83a985746dba014f6bc089cdc43",
+      "evidence_sha256": "2f7b68fc1823b23cb1603a71eb24158bf3d832289f5a8f6541c61ce6a6a1c96a",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-08T01:00:49.288203+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/1fr3-bbxr",
+        "title": "Explosive connectivity and mechanical rigidity in cubic lattice structures",
+        "sha256": "3de184341d61ed2793195bbd168440983ef78f4d59a14086996e2e7f24d619c7",
+        "version": "Publisher Version of Record, Physical Review Research 8,043134 (2026)",
+        "source_url": "https://harvest.aps.org/v2/journals/articles/10.1103/1fr3-bbxr",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "reviewed_at": "2026-11-08T01:00:49.288203+00:00",
+        "read_scope": "All 15 publisher PDF pages: Sections I-V, definitions, equations and conditional derivations, Figures 1-7/captions, discussion, declarations and full reference list. Rendered pages 7 and 10 visually checked. Supplementary proofs/tables/videos and code not independently reviewed or reproduced. Connectivity reaches L=192; rigidity uses a relaxed 3D pebble-game proxy through L=10. Theorem 1 is conditional; finite-size sharpness alone does not establish a thermodynamic discontinuity."
+      },
+      "question": {
+        "zh": "连通与刚化之间，为什么还差一段加边过程？",
+        "en": "Why does a connected lattice still need more bonds to become rigid?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天从馆藏回选这篇，因为巨型连通簇的出现与机械约束的建立是两个不同的集体过程。把两条转变曲线并排，能看到只优化连通性时容易忽略的结构余量。",
+          "值得借鉴的是把选边规则、有限尺寸现象与刚性判据分开检查。增加候选边数量并不保证全局刚化收益一直提高；还要区分条件理论、组合代理量和严格的三维刚性。"
+        ],
+        "en": [
+          "This archive pick separates the appearance of a giant connected cluster from the buildup of mechanical constraints. Reading both transition curves exposes the structural gap that connectivity alone can hide.",
+          "Borrow its separate checks of edge-selection rules, finite-size behavior and rigidity criteria. More candidate edges need not keep improving global rigidification; conditional theory, combinatorial proxies and exact 3D rigidity must remain distinct."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "连通并不等于机械稳定",
+            "en": "Connectivity is not mechanical stability"
+          },
+          "text": {
+            "zh": "比较仅含轴向边的NN格点与加入面、体对角线的Intra宿主，结合巨型簇和刚化曲线讨论两种阈值之间的加边间隔。",
+            "en": "Compare the axis-edge NN lattice with the Intra host containing face and body diagonals, then read giant-component and rigidification curves together to study the bond-density gap."
+          }
+        },
+        {
+          "heading": {
+            "zh": "选择更多，收益可能非单调",
+            "en": "More choice can have nonmonotonic benefits"
+          },
+          "text": {
+            "zh": "乘积规则延迟连通，但正文报告Intra刚化间隔在中等选择数附近达到最小，较大选择数形成更树状的柔性簇。局部选边目标与全局机械目标需要分别评估。",
+            "en": "The product rule delays connectivity, but the main text reports a minimum Intra rigidity gap at intermediate choice, with larger choice creating more treelike floppy clusters. Evaluate edge-selection and mechanical objectives separately."
+          }
+        },
+        {
+          "heading": {
+            "zh": "让计算尺度与判据一起出现",
+            "en": "Report scale alongside the criterion"
+          },
+          "text": {
+            "zh": "连通性模拟达到L=192，刚性分析只到L=10并使用松弛三维pebble-game代理；定理1依赖尚待证明的假设。有限尺寸陡跃不能单独证明热力学极限不连续。",
+            "en": "Connectivity simulations reach L=192, while rigidity uses a relaxed 3D pebble-game proxy only through L=10. Theorem 1 depends on unproved assumptions; sharp finite-size jumps alone do not prove a discontinuous thermodynamic limit."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究渗流、网络生成、刚性转变与机械网络设计，或需要区分有限尺寸证据和理论假设的读者。",
+        "en": "Readers studying percolation, network growth, rigidity transitions and mechanical-network design, especially those separating finite-size evidence from theoretical assumptions."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部15页、图1–7、推导、讨论及参考文献表，并渲染核对第7和10页。刚性结果采用松弛组合代理，不能等同精确三维通用刚性或真实材料刚度；连通性的大尺度结果不可冒充同尺度刚性结果。局部进展定理有条件，补充证明、表格、视频与代码未独立审读或复现。",
+        "en": "Read all 15 publisher PDF pages, Figures 1-7, derivations, discussion and reference list; visually checked pages 7 and 10. Relaxed combinatorial rigidity is not exact generic 3D rigidity or material stiffness; large-scale connectivity results do not establish rigidity at that scale. The local-progress theorem is conditional. Supplementary proofs/tables/videos and code were not independently reviewed or reproduced."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -37960,5 +38336,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "721521047198e76416867e4a317a717d06763cc41fff6dfe88434141797f7440"
+  "daily_suggestions_sha256": "5145a384ef224c5a200574d18ba1f6b7d38cb2dd71a65d3b7543b9931de6c490"
 }
