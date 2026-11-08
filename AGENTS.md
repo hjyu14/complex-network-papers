@@ -30,6 +30,7 @@
 - `config/release.json` 明确选择完成的原始轮并钉住 `publication.json`；直接声明修订，不嵌套发布视图。重复 DOI 冲突必须解决，不以最新记录静默覆盖。执行 `manage_runs.py check-layout` 和归档核验；不保留多套 `final` 派生结果。
 - `site/` 是唯一部署目录，只含允许的元数据与短说明。用户主动请求及已授权的每日定时文献更新按 `docs/publication.md` 的条件授权收尾；其他 Git 推送、正式部署及部署配置修改须有当前任务授权。北京时间每日07:00定时更新和本轮经核验临时文件删除的持续授权见发布文档及目录规范。
 - 常规文献更新可用项目技能 `.agents/skills/netsci-literature-update/SKILL.md`；它引用现行规程，不是另一套科学规则。
+- 社交材料按 `docs/social-media.md` 仅在有新增文献时默认生成；无新增时完成网站更新与上线核验即可，跳过文案和配图，网站荐读仍按发布规则执行。
 
 ## 文档维护
 
