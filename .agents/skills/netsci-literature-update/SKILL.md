@@ -11,7 +11,7 @@ description: 为 NetSci Observatory 按指定日期范围采集白名单期刊�
 
 开始时读取仓库 `docs/repository-layout.md`、`docs/collection-workflow.md`、`docs/screening-protocol.md` 和 `config/sources.json`。取证前读取 `docs/evidence-data-features.md`；准备收尾时读取本技能 [收尾与发布](references/closeout.md) 及仓库 `docs/publication.md`。规则与白名单只从这些现行文件读取；恢复旧轮使用其冻结 `inputs/`，不能静默套用新规则。
 
-每周一（Asia/Shanghai）日更还须读取 `docs/review-collection.md` 与 `config/review-collection.json`，检查 `sources.json.review_journals` 的 PR／RMP 最新综述；按该文档恢复独立检查记录、重叠回扫官方目录、逐篇摘要审读及 DOI 去重，符合现行网络科学定义的已发表综述加入网站综述页。普通采集器只处理 `journals`，不会自动执行这两刊；不得将历史选集、普通轮成功或零新增当作本次周检完成。零新增保留覆盖／审读记录，新增按 `incremental_sources` 钉住正式来源；两刊覆盖、未审读和未决项仅在周一及补跑周检时纳入发布门槛；其他日期或用户明确取消的综述检查不阻断普通日更，不推进综述截止日，收尾及社交材料单列综述新增和 DOI，不重复计数。
+每周一（Asia/Shanghai）日更还须读取 `docs/review-collection.md` 与 `config/review-collection.json`，检查 `sources.json.review_journals` 的全部期刊（PR／RMP／NRP）最新综述；按该文档恢复独立检查记录、逐刊重叠回扫官方目录、逐篇摘要审读及 DOI 去重，符合现行网络科学定义的已发表综述加入网站综述页。普通采集器只处理 `journals`，不会自动执行综述白名单；不得将历史选集、普通轮成功或零新增当作本次周检完成。零新增保留覆盖／审读记录，新增按 `incremental_sources` 钉住正式来源；综述白名单覆盖、未审读和未决项仅在周一及补跑周检时纳入发布门槛；其他日期或用户明确取消的综述检查不阻断普通日更，不推进综述截止日，收尾及社交材料单列综述新增和 DOI，不重复计数。各刊成功截止日独立维护，单刊补采不推进其他期刊。
 
 明确起止日期（含首尾）、采集截止日、期刊范围及本次是否仅预览。默认选当前白名单全部期刊；日期未指定且无法唯一确定时询问，不擅自把“更新”解释成某一天。“今天”按用户时区，报告实际读取时刻，不承诺当天尚未结束时的全天覆盖。单日窗口令起止相同；历史月份显式传入窗口，不修改全局日期来完成补采。现有采集器要求同年窗口，跨年拆成连续子窗口；长窗口按来源预算拆分，不放宽请求上限。
 

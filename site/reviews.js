@@ -27,11 +27,15 @@ function renderReviewResults() {
   renderPagination(pages);
 }
 function renderReviewSnapshot() {
+  const journalNames = [...new Set(state.papers.map(p => p.journal))].sort().join(" · ");
   $("#edition").textContent = tr(`${state.papers.length} selected reviews · 2000 onwards`, `${state.papers.length} 篇精选综述 · 2000 年起`);
   $("#review-summary").textContent = tr(
-    `${state.reviewData.selection_count} selected reviews from Physics Reports and Reviews of Modern Physics. This is a selected reading collection, not an exhaustive bibliography.`,
-    `收录 Physics Reports 与 Reviews of Modern Physics 的 ${state.reviewData.selection_count} 篇精选综述。这是一份综述选集，不代表完整历史目录。`);
-  $("#review-cutoff").textContent = tr(`Selection through ${state.reviewData.cutoff_date}. Original publication dates are shown.`, `选集截至 ${state.reviewData.cutoff_date}，文献显示原始发表日期。`);
+    `${state.reviewData.selection_count} selected reviews from ${journalNames}. This is a selected reading collection, not an exhaustive bibliography.`,
+    `收录 ${journalNames} 的 ${state.reviewData.selection_count} 篇精选综述。这是一份综述选集，不代表完整历史目录。`);
+  const cutoffs = Object.entries(state.reviewData.journal_cutoffs || {}).map(([journal, date]) => `${journal}: ${date}`).join(" · ");
+  $("#review-cutoff").textContent = cutoffs
+    ? tr(`Checked through ${cutoffs}. Original publication dates are shown.`, `逐刊核查截至 ${cutoffs}，文献显示原始发表日期。`)
+    : tr(`Selection through ${state.reviewData.cutoff_date}. Original publication dates are shown.`, `选集截至 ${state.reviewData.cutoff_date}，文献显示原始发表日期。`);
   renderCategories(); renderReviewResults();
 }
 async function initReviews() {

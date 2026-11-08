@@ -46,7 +46,7 @@
 
 1. 审查两个人工队列、未审读／活跃状态和整刊覆盖；核对冻结输入与候选／判断链。队列为空不能代替覆盖检查。
 2. 先按 `docs/publication.md` 导出私有 release-preview；核对新增、保留和移除 DOI，检查作者、接收稿状态、主题、短说明、Spotlight 与覆盖限制。禁止将意外丢失旧文献当作正常更新。
-3. 按 `docs/review-collection.md` 仅在周一及补跑周检时核对 PR／RMP 独立综述检查已闭合，包含零新增记录；其他日期或用户明确取消的综述检查不阻断普通日更，保留上次有效综述快照和截止日；有新增时核验 `incremental_sources`、总数、截止日及去重。验证通过后更新唯一 `site/data/` 快照（含 `reviews.json`），执行 `python scripts/publish_snapshot.py --check`、`python scripts/manage_runs.py check-layout`、适用的归档核验、`python -m unittest discover -s tests -v`、`node --check site/app.js`、`node --test tests/test_app.cjs`。失败即停，不跳过校验。抽查网页显示和链接；收尾单列综述新增数量及 DOI。
+3. 按 `docs/review-collection.md` 仅在周一及补跑周检时核对 `sources.json.review_journals`（PR／RMP／NRP）独立综述检查已闭合，包含零新增记录；其他日期或用户明确取消的综述检查不阻断普通日更，保留上次有效综述快照和逐刊截止日；有新增时核验 `incremental_sources`、总数、逐刊截止日及去重。验证通过后更新唯一 `site/data/` 快照（含 `reviews.json`），执行 `python scripts/publish_snapshot.py --check`、`python scripts/manage_runs.py check-layout`、适用的归档核验、`python -m unittest discover -s tests -v`、`node --check site/app.js`、`node --test tests/test_app.cjs`。失败即停，不跳过校验。抽查网页显示和链接；收尾单列综述新增数量及 DOI。
 4. 暂存前检查全部拟提交文件（包括压缩／归档内容），不得含完整摘要、正文、凭据或私有中转。不提交无关工作区改动。核对远端分支，冲突不能强推或静默合并其他人的工作。
 5. 提交推送后跟踪本次 commit 对应的构建和部署，不把上一轮成功当本轮结果。读取正式 HTTPS 页面和数据，与本次产物核对；最终报告提交、部署链接及真实状态。部署失败则报告失败，不能称上线成功。
 

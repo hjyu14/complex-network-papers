@@ -46,6 +46,8 @@ The complete list also includes papers from:
 
 ## Current coverage and limitations
 
+The separate **[Reviews collection](https://netsciobs.com/reviews.html)** brings together selected network-science reviews from Physics Reports, Reviews of Modern Physics and Nature Reviews Physics. Browse all collected years with journal, year, topic and keyword filters. Bibliography, abstract-based notes and publisher links are provided; PDFs are not hosted. Maintenance procedures are documented in [Review collection](docs/review-collection.md).
+
 The website displays the current collection window and paper counts. See the [live list](https://netsciobs.com/) for the latest reviewed snapshot.
 
 Date filters are relative to the displayed data cutoff, not today's date. Choose “All collected dates” to browse the entire collection. Updates are currently published in reviewed batches, not automatically every day. Publication dates prioritize first online publication; accepted manuscripts awaiting publication are marked separately and shown by acceptance date. Preprints are excluded.

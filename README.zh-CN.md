@@ -46,6 +46,8 @@ Spotlight 展示来自以下十本期刊的收录文献。首页显示最新六�
 
 ## 当前覆盖与局限
 
+独立的**[综述馆藏](https://netsciobs.com/reviews.html)**收录 Physics Reports、Reviews of Modern Physics 与 Nature Reviews Physics 的精选网络科学综述，支持全部收录年份的期刊、年份、主题及关键词筛选。提供书目信息、依据摘要撰写的说明与出版方链接，不提供 PDF。维护流程见[综述馆藏规程](docs/review-collection.md)。
+
 网站显示当前收录窗口与文献数量，最新审核快照请查看[在线列表](https://netsciobs.com/)。
 
 日期筛选以页面注明的数据截止日为基准，而不是当天日期；选择“全部收录日期”可浏览完整列表。目前按完成审核的批次更新，尚未自动日更。发表日期优先采用首次在线发表日；已接收但尚未正式发表的稿件单独标注，并以接收日期显示。不收录预印本。

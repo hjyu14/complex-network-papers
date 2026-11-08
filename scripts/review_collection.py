@@ -51,7 +51,8 @@ def attach_reviews(artifacts, root=ROOT):
                 or not evidence['selection_basis']):
             raise ValueError('Incomplete review metadata: '+p['doi'])
         date.fromisoformat(p['date'])
-        if not config['start_date'] <= p['date'] <= config['cutoff_date']:
+        cutoff = config.get('journal_cutoffs', {}).get(p['journal_short'], config['cutoff_date'])
+        if not config['start_date'] <= p['date'] <= cutoff:
             raise ValueError('Review date outside selected collection')
         for url in [p['url'], p['doi_url']]:
             if urlparse(url).scheme != 'https':
@@ -78,6 +79,7 @@ def attach_reviews(artifacts, root=ROOT):
            if config.get('incremental_sources') else {}),
         'selection_count': len(rows), 'start_date': config['start_date'],
         'cutoff_date': config['cutoff_date'], 'papers': papers,
+        **({'journal_cutoffs': config['journal_cutoffs']} if config.get('journal_cutoffs') else {}),
         'current_collection_dois': current_dois,
         'total_count': len(papers) + len(current_dois),
         'limitations': limitations}}

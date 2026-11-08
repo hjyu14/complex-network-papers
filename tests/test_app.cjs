@@ -66,10 +66,13 @@ function setupReviews({ unavailable = false } = {}) {
 test('historical reviews include all years and reuse current review DOI records once', async () => {
   const { node, context, data, reviews, errors } = setupReviews(); await ready();
   assert.equal(errors.length, 0);
-  assert.equal(vm.runInContext('state.papers.length', context), 84);
-  assert.equal(reviews.papers.length, 84);
-  assert.equal(new Set(vm.runInContext('state.papers.map(p=>p.doi)', context)).size, 84);
-  assert.equal(node('#result-count').textContent, '84 reviews');
+  assert.equal(vm.runInContext('state.papers.length', context), reviews.total_count);
+  assert.equal(reviews.papers.length, reviews.total_count);
+  assert.equal(new Set(vm.runInContext('state.papers.map(p=>p.doi)', context)).size, reviews.total_count);
+  assert.equal(node('#result-count').textContent, `${reviews.total_count} reviews`);
+  assert.ok(node('#review-summary').textContent.includes('Nature Reviews Physics'));
+  assert.ok(node('#review-cutoff').textContent.includes(`NRP: ${reviews.journal_cutoffs.NRP}`));
+  assert.ok(vm.runInContext('state.papers.filter(p=>p.journal_short==="NRP").length', context) >= 12);
   assert.equal(node('#paper-list').children.length, 10);
   assert.equal(vm.runInContext('state.days', context), 0);
   assert.equal(vm.runInContext('state.papers.some(p=>p.date<state.data.window_start)', context), true);
@@ -95,7 +98,7 @@ test('review year journal and search intersect, reset pagination, and survive la
   node('#search').events.input({target:{value:'no matching review at all'}});
   assert.equal(node('#result-count').textContent, '0 篇综述');
   node('#clear').events.click();
-  assert.equal(node('#result-count').textContent, '84 篇综述');
+  assert.equal(node('#result-count').textContent, `${reviews.total_count} 篇综述`);
   node('#order').events.change({target:{value:'oldest'}});
   const texts=n=>[n.textContent,...n.children.flatMap(texts)].join(' ');
   const oldest=vm.runInContext('state.papers.map(p=>p.date).sort()[0]',context);

@@ -169,6 +169,7 @@ function paperCard(paper) {
   details.append(element("summary", "", tr("Details", "详细信息")));
   if (authors.length) details.append(element("p", "full-authors", tr("All authors: ", "全部作者：") + authors.join(" · ")));
   if (paper.article_type) details.append(element("p", "", tr("Article type: ", "文章类型：") + paper.article_type));
+  if (paper.type_provenance?.label) details.append(element("p", "", tr("Publisher article type: ", "出版方文章类型：") + paper.type_provenance.label));
   if (paper.volume) details.append(element("p", "", tr("Volume: ", "卷：") + paper.volume + (paper.issue ? tr(" · Issue: ", " · 期：") + paper.issue : "") + (paper.pages ? tr(" · Pages / article: ", " · 页码／文章号：") + paper.pages : "")));
   if (paper.entry_kind === "editorial_review_selection") {
     details.append(element("p", "", tr("Part of the editorial review selection, including cross-field related reading. Notes are based on the abstract; the full text was not reviewed.", "编辑选录的综述，包含跨领域延伸阅读。说明依据摘要，未审读全文。")));

@@ -22,6 +22,24 @@
   ],
   "review_journals": [
     {
+      "name": "Nature Reviews Physics",
+      "short": "NRP",
+      "issns": ["2522-5820"],
+      "review_policy": {
+        "official_type_labels": ["Review Article", "Technical Review", "Perspective", "Roadmap", "Expert Recommendation"],
+        "type_mapping_basis": "https://www.nature.com/natrevphys/content",
+        "history_start": "2018-01-01",
+        "collection_mode": "latest_official_directory_and_article_pages",
+        "scope_note": "Review and technical review articles are screened individually; Perspective, Roadmap and Expert Recommendation require substantive review/synthesis and the existing network-science scope."
+      },
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/natrevphys/articles",
+        "max_pages": 12,
+        "article_lookups": 120
+      }
+    },
+    {
       "name": "Physics Reports",
       "short": "PR",
       "issns": [

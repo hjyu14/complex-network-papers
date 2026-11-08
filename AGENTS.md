@@ -4,7 +4,7 @@
 
 - 公开、免注册的网络科学文献网站。网络结构、网络上的动力学或可迁移网络科学理论／方法须为主要贡献；一般非线性动力学单独不收录。
 - `config/sources.json` 是当前期刊 ISSN 白名单、采集窗口与 Spotlight 展示名单；科学、日期、类型及证据规则见 `docs/screening-protocol.md`。规则的实质变化须先取得用户确认。
-- 每周一（Asia/Shanghai）在日更任务中检查 `sources.json.review_journals` 中 PR／RMP 的最新网络科学综述，按 `docs/review-collection.md` 独立登记、逐篇审读并接入综述页；其他日期不要求检查，也不以未完成综述检查阻断普通日更。历史选集或普通采集器成功不代替周检。
+- 每周一（Asia/Shanghai）在日更任务中检查 `sources.json.review_journals` 的最新网络科学综述，按 `docs/review-collection.md` 独立登记、逐篇审读并接入综述页；其他日期不要求检查，也不以未完成综述检查阻断普通日更。历史选集或普通采集器成功不代替周检。
 - 按任务阅读文档：采集用 `docs/collection-workflow.md`；取证与审读用筛选规程和 `docs/evidence-data-features.md`；发布用 `docs/publication.md`。
 
 ## 数据与目录

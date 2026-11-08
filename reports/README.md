@@ -4,6 +4,7 @@
 
 | 入口 | 职责 |
 |---|---|
+| [NRP 历史综述](reviews/nrp-history-2026-11-08/README.md) | 核对1,002条官网记录，审查354篇综述候选，新增12篇；独立保存来源与逐刊截止日 |
 | [PR／RMP 综述选集](reviews/pr-rmp-review-collection-2026-10-29/README.md) | 81 篇历史编辑选文的已核验登记材料；不代表整刊覆盖 |
 | [PR／RMP 漏项补核](reviews/pr-rmp-review-supplement-2026-10-29/README.md) | 补核身份／日期异常，新增3篇；与原81篇分源保存 |
 | [九月九刊](runs/2026-09/README.md) | 原始候选、覆盖、审读和直接发布清单 |
