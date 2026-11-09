@@ -1,0 +1,3 @@
+# NRP weekly check — 2026-11-09
+
+Inclusive window2026-11-08 through2026-11-09, Asia/Shanghai, through the actual recorded retrieval time. Official all-type annual date-sorted first20 entries: latest2026-11-02, oldest2026-10-01, lower boundary closed; all Crossref date queries complete and empty. Current title/URL/type/date entries match retained historical inventory after whitespace normalization. No in-window candidate, unread/undecided item or new inclusion. No empty collection source created. Evidence/check.json binds frozen inputs and logs. All three review journals and ordinary source coverage are now closed; individual and common review cutoffs advance to2026-11-09. Joint publication remains subject to validation and production verification.

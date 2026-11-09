@@ -2552,6 +2552,84 @@
         "zh": "已读正式PDF全部15页、图1–7、推导、讨论及参考文献表，并渲染核对第7和10页。刚性结果采用松弛组合代理，不能等同精确三维通用刚性或真实材料刚度；连通性的大尺度结果不可冒充同尺度刚性结果。局部进展定理有条件，补充证明、表格、视频与代码未独立审读或复现。",
         "en": "Read all 15 publisher PDF pages, Figures 1-7, derivations, discussion and reference list; visually checked pages 7 and 10. Relaxed combinatorial rigidity is not exact generic 3D rigidity or material stiffness; large-scale connectivity results do not establish rigidity at that scale. The local-progress theorem is conditional. Supplementary proofs/tables/videos and code were not independently reviewed or reproduced."
       }
+    },
+    {
+      "doi": "10.1103/mzgk-nx4w",
+      "recommended_on": "2026-11-09",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-04-to-05-01",
+      "publication_sha256": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+      "assessment_sha256": "50d804655b723ea83bf18addbfcdd0b9a175ecb4a576bec7417aadf2b86c564a",
+      "input_sha256": "d4165a42838deb86808cc318a0ae5ab98038bd3da6bc5242335017954f6c395a",
+      "evidence_sha256": "a3fd268e823ba9bc5bf126c230641bb7ea5b2f5f87ff7707eceaf34ed3f4e33c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-09T02:18:02.464720+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/mzgk-nx4w",
+        "title": "How interaction radius shapes vortex states in mobile phase oscillators",
+        "sha256": "f396ba26e8c6780cd3268a338d1f6ee405eb03de2f0fa2412ab5022a8fc1bfcf",
+        "version": "Physical Review Research 8, 043126 (2026), published 2026-11-04",
+        "source_url": "https://harvest.aps.org/v2/journals/articles/10.1103/mzgk-nx4w",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-09T02:18:02.464720+00:00",
+        "read_scope": "Complete publisher main text Sections I–VII, Eqs. 1–43, captions and reference list; Figures 1–4 visually checked from rendered pages 4,5,6,10. Supplemental figures/data and code not read or reproduced."
+      },
+      "question": {
+        "zh": "同样的同步阈值，为何会出现不同的集体图案？",
+        "en": "Why can the same onset threshold lead to different collective patterns?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选这篇，是因为移动会不断改变谁与谁相连。相互作用半径既决定即时邻域，也影响局部旋转如何转成全局同向运动；把它作为控制变量，比只看平均同步强度更能揭示集体组织的差别。",
+          "建议把图案、时序和邻接矩阵一起读，再比较正反向扫参。文章也明确区分了线性失稳与非线性吸引子：前者的阈值相同，并不意味着后者的选择、稳定性和滞后也相同。"
+        ],
+        "en": [
+          "This archive pick treats motion as a process that continually changes who interacts with whom. Interaction radius shapes both instantaneous neighborhoods and the balance between local rotation and global alignment, making it useful beyond a single coherence statistic.",
+          "Read spatial patterns, order-parameter traces and adjacency matrices together, then compare forward and backward scans. The paper distinguishes linear onset from nonlinear attractors: an unchanged onset threshold does not determine state selection, vortex stability or hysteresis."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "观察图案，也观察相互作用网络",
+            "en": "Read the pattern and its interaction network"
+          },
+          "text": {
+            "zh": "有限半径内的相位耦合随粒子位置演化。图1把空间快照、全局序参量与频率排序的邻接矩阵并列，显示涡旋与极化态对应的组织差别。",
+            "en": "Finite-radius phase coupling evolves with particle positions. Figure 1 juxtaposes spatial snapshots, coherence traces and frequency-ordered adjacency matrices to distinguish vortex and polar organization."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分均匀模态与空间模态",
+            "en": "Separate uniform and spatial modes"
+          },
+          "text": {
+            "zh": "在文中的连续体与低阶谐波近似下，归一化邻域平均保留均匀失稳阈值Kc(0)=2Δ；有限波数的阈值则依赖相互作用核和半径。这是理解局部耦合不能简单等同全局平均场的切入点。",
+            "en": "Within the stated continuum and low-harmonic approximation, normalized neighborhood averaging preserves Kc(0)=2Δ, while finite-wave-number thresholds depend on interaction range. This separates local coupling from a global mean-field description."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把线性解释停在适用边界内",
+            "en": "Keep the linear explanation within its scope"
+          },
+          "text": {
+            "zh": "正反向扫描提供涡旋与极化态共存的数值证据。作者明确指出：无序态附近的线性谱与涡旋持存区间之间仍是启发性联系，定量稳定边界和滞后需要非线性分析。",
+            "en": "Forward and backward scans provide numerical evidence of coexisting states. The authors explicitly keep the link between the incoherent-state spectrum and vortex persistence heuristic; quantitative stability and hysteresis require nonlinear analysis."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究移动相互作用网络、同步、手性活性物质及局部耦合建模的读者。",
+        "en": "Readers studying mobile interaction networks, synchronization, chiral active matter and local-coupling models."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版13页正文、公式、图1–4及参考文献表，并渲染核对全部4张主图。适用范围是无噪声二维周期边界模型、洛伦兹频率分布及所测参数；线性分析使用均匀密度与低阶谐波截断。补充材料未独立审读，正文报告的尺寸检验不能冒充已复核的补充证据；未复现数值实验。线性失稳阈值不等同涡旋的非线性稳定边界。",
+        "en": "Read all 13 publisher pages, equations, Figures 1–4 and the reference list; visually checked all four main figures. Scope: noiseless 2D periodic model, Lorentzian frequencies and tested parameters; linear analysis assumes homogeneous density and truncates angular harmonics. The supplement was not independently read and simulations were not reproduced. Main-text reports of supplemental size scans are not independent verification. Linear onset is not a nonlinear vortex-stability boundary."
+      }
     }
   ],
   "revisions": [

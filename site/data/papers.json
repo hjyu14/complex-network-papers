@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-08T01:07:54.955152+00:00",
+  "generated_at": "2026-11-09T03:04:04.950090+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-08",
-  "window_days": 69,
+  "window_end": "2026-11-09",
+  "window_days": 70,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
   "reading_notes_sha256": "98051dd6bfd26e21a48b868991e16a447cf5b4648069a018dcbc4f0fe3035961",
-  "author_metadata_sha256": "c3d5534f0d2a8f9d0e7501b20ac9f8008489e0bab003699d48779b06e97141d4",
+  "author_metadata_sha256": "8f2ca6490d5489eab500b499e0e8f2b5cc0054c935dcf18ee8b4c6cfe8deec06",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2936,6 +2936,50 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-08-to-09-02",
+      "config_sha256": "6b2a02b83b338d2c8e38b82f6881f6f48903c9b083638fe303a45e7c593e1e72",
+      "window_start": "2026-11-08",
+      "window_end": "2026-11-09",
+      "rule_sha256": "fdb2d890194dad753988149063d105226889e97125bfd86646b539329ba1d126",
+      "screening_log_sha256": "54135b54fbfa42bcd6b1963bc56533ddc01321279f473eebdb839816a1cebb55",
+      "candidate_sha256": "bccc92e5bd954aeedfa29733c393651d6c947898620e0b7b48d1b35134d26b23",
+      "author_metadata_sha256": "3dc55449ea23ff1bf2d424aba63fda5a2d66deb46ec927c7e547890f0ef6b73f",
+      "run_manifest_sha256": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-08-to-09-02",
+          "files": {
+            "candidates.json": "bccc92e5bd954aeedfa29733c393651d6c947898620e0b7b48d1b35134d26b23",
+            "coverage.json": "8c7beaa26c7813af19f6bff85662cf403b91f05f7384b92c88d2634bd878f2e2",
+            "collection-log.jsonl": "ac3b1a6a0fdbcfe286d0cd6d834e47096a2dce354c2c2a7d63d6aa8a115dc9e2",
+            "screening-log.jsonl": "39a8d93fbb11e3d7a5a92bb390d30b01cffdceb262722794ac268aae66b07648",
+            "inputs/manifest.json": "5d391d38c5341c60979fb98daab437a75f8e6d3ba13ee593da87760ad160e531",
+            "inputs/sources.json": "3b2fdd521355852db8cfc5d39df833e8256e3405d5573ceae925f0903b915b6e",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "bccc92e5bd954aeedfa29733c393651d6c947898620e0b7b48d1b35134d26b23",
+          "rule_sha256": "fdb2d890194dad753988149063d105226889e97125bfd86646b539329ba1d126",
+          "screening_log_sha256": "54135b54fbfa42bcd6b1963bc56533ddc01321279f473eebdb839816a1cebb55"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "3dc55449ea23ff1bf2d424aba63fda5a2d66deb46ec927c7e547890f0ef6b73f",
+          "audit": {
+            "path": "reports/runs/2026-11-08-to-09-02/screening-log.jsonl",
+            "sha256": "39a8d93fbb11e3d7a5a92bb390d30b01cffdceb262722794ac268aae66b07648"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "333de554268f217bde46cdc5feb5506a13a3d7396a409fb01d8106de2512d880"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
   "author_available_count": 300,
@@ -3434,6 +3478,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "Nature",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -3771,6 +3824,15 @@
         {
           "window_start": "2026-11-07",
           "window_end": "2026-11-08",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
           "journal": "Science",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -4118,6 +4180,15 @@
           "publisher_verified_inventory_count": 18,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "NC",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4455,6 +4526,15 @@
         {
           "window_start": "2026-11-07",
           "window_end": "2026-11-08",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -4802,6 +4882,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5139,6 +5228,15 @@
         {
           "window_start": "2026-11-07",
           "window_end": "2026-11-08",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
           "journal": "PRX",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -5486,6 +5584,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5823,6 +5930,15 @@
         {
           "window_start": "2026-11-07",
           "window_end": "2026-11-08",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
           "journal": "SA",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -6170,6 +6286,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6512,13 +6637,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 433,
-      "publisher_verified_inventory_count": 433,
+      "candidate_count": 437,
+      "publisher_verified_inventory_count": 437,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6852,6 +6986,15 @@
           "journal": "PRResearch",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "PRResearch",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -7191,6 +7334,15 @@
         {
           "window_start": "2026-11-07",
           "window_end": "2026-11-08",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
           "journal": "PRE",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -7538,6 +7690,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7835,13 +7996,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-09",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7372,
+  "candidate_count": 7376,
   "screening_counts": {
-    "excluded": 7072,
+    "excluded": 7076,
     "core": 270,
     "transferable_application": 30,
     "review": 0,
@@ -7851,8 +8021,8 @@
   "published_count": 261,
   "accepted_count": 39,
   "latest_update": {
-    "run": "reports/runs/2026-11-07-to-08-01",
-    "reviewed_at": "2026-11-08T01:03:17.148829+00:00",
+    "run": "reports/runs/2026-11-08-to-09-02",
+    "reviewed_at": "2026-11-09T02:41:07.043974+00:00",
     "newly_included_count": 0,
     "newly_included_dois": [],
     "accepted_to_published_count": 0,
@@ -33124,9 +33294,146 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "a2b9809de7b7f1fcc9b999373a11f28ab4d4efaf5350569378702456c240f0d9"
+    },
+    {
+      "current_run": "reports/runs/2026-11-08-to-09-02",
+      "candidate_sha256": "bccc92e5bd954aeedfa29733c393651d6c947898620e0b7b48d1b35134d26b23",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1"
+      },
+      "counts": {
+        "in_window": 4,
+        "newly_reviewed": 4,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 4
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "7f63e5d4baed3ffd1b836c1058d890e8c2719d323a68c1151fb9e02c94dec174"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/mzgk-nx4w",
+      "recommended_on": "2026-11-09",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-04-to-05-01",
+      "publication_sha256": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+      "assessment_sha256": "50d804655b723ea83bf18addbfcdd0b9a175ecb4a576bec7417aadf2b86c564a",
+      "input_sha256": "d4165a42838deb86808cc318a0ae5ab98038bd3da6bc5242335017954f6c395a",
+      "evidence_sha256": "a3fd268e823ba9bc5bf126c230641bb7ea5b2f5f87ff7707eceaf34ed3f4e33c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-09T02:18:02.464720+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/mzgk-nx4w",
+        "title": "How interaction radius shapes vortex states in mobile phase oscillators",
+        "sha256": "f396ba26e8c6780cd3268a338d1f6ee405eb03de2f0fa2412ab5022a8fc1bfcf",
+        "version": "Physical Review Research 8, 043126 (2026), published 2026-11-04",
+        "source_url": "https://harvest.aps.org/v2/journals/articles/10.1103/mzgk-nx4w",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-09T02:18:02.464720+00:00",
+        "read_scope": "Complete publisher main text Sections I–VII, Eqs. 1–43, captions and reference list; Figures 1–4 visually checked from rendered pages 4,5,6,10. Supplemental figures/data and code not read or reproduced."
+      },
+      "question": {
+        "zh": "同样的同步阈值，为何会出现不同的集体图案？",
+        "en": "Why can the same onset threshold lead to different collective patterns?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选这篇，是因为移动会不断改变谁与谁相连。相互作用半径既决定即时邻域，也影响局部旋转如何转成全局同向运动；把它作为控制变量，比只看平均同步强度更能揭示集体组织的差别。",
+          "建议把图案、时序和邻接矩阵一起读，再比较正反向扫参。文章也明确区分了线性失稳与非线性吸引子：前者的阈值相同，并不意味着后者的选择、稳定性和滞后也相同。"
+        ],
+        "en": [
+          "This archive pick treats motion as a process that continually changes who interacts with whom. Interaction radius shapes both instantaneous neighborhoods and the balance between local rotation and global alignment, making it useful beyond a single coherence statistic.",
+          "Read spatial patterns, order-parameter traces and adjacency matrices together, then compare forward and backward scans. The paper distinguishes linear onset from nonlinear attractors: an unchanged onset threshold does not determine state selection, vortex stability or hysteresis."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "观察图案，也观察相互作用网络",
+            "en": "Read the pattern and its interaction network"
+          },
+          "text": {
+            "zh": "有限半径内的相位耦合随粒子位置演化。图1把空间快照、全局序参量与频率排序的邻接矩阵并列，显示涡旋与极化态对应的组织差别。",
+            "en": "Finite-radius phase coupling evolves with particle positions. Figure 1 juxtaposes spatial snapshots, coherence traces and frequency-ordered adjacency matrices to distinguish vortex and polar organization."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分均匀模态与空间模态",
+            "en": "Separate uniform and spatial modes"
+          },
+          "text": {
+            "zh": "在文中的连续体与低阶谐波近似下，归一化邻域平均保留均匀失稳阈值Kc(0)=2Δ；有限波数的阈值则依赖相互作用核和半径。这是理解局部耦合不能简单等同全局平均场的切入点。",
+            "en": "Within the stated continuum and low-harmonic approximation, normalized neighborhood averaging preserves Kc(0)=2Δ, while finite-wave-number thresholds depend on interaction range. This separates local coupling from a global mean-field description."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把线性解释停在适用边界内",
+            "en": "Keep the linear explanation within its scope"
+          },
+          "text": {
+            "zh": "正反向扫描提供涡旋与极化态共存的数值证据。作者明确指出：无序态附近的线性谱与涡旋持存区间之间仍是启发性联系，定量稳定边界和滞后需要非线性分析。",
+            "en": "Forward and backward scans provide numerical evidence of coexisting states. The authors explicitly keep the link between the incoherent-state spectrum and vortex persistence heuristic; quantitative stability and hysteresis require nonlinear analysis."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究移动相互作用网络、同步、手性活性物质及局部耦合建模的读者。",
+        "en": "Readers studying mobile interaction networks, synchronization, chiral active matter and local-coupling models."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版13页正文、公式、图1–4及参考文献表，并渲染核对全部4张主图。适用范围是无噪声二维周期边界模型、洛伦兹频率分布及所测参数；线性分析使用均匀密度与低阶谐波截断。补充材料未独立审读，正文报告的尺寸检验不能冒充已复核的补充证据；未复现数值实验。线性失稳阈值不等同涡旋的非线性稳定边界。",
+        "en": "Read all 13 publisher pages, equations, Figures 1–4 and the reference list; visually checked all four main figures. Scope: noiseless 2D periodic model, Lorentzian frequencies and tested parameters; linear analysis assumes homogeneous density and truncates angular harmonics. The supplement was not independently read and simulations were not reproduced. Main-text reports of supplemental size scans are not independent verification. Linear onset is not a nonlinear vortex-stability boundary."
+      }
+    },
     {
       "doi": "10.1103/1fr3-bbxr",
       "recommended_on": "2026-11-08",
@@ -38257,6 +38564,84 @@
       }
     },
     {
+      "doi": "10.1103/mzgk-nx4w",
+      "recommended_on": "2026-11-09",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-04-to-05-01",
+      "publication_sha256": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+      "assessment_sha256": "50d804655b723ea83bf18addbfcdd0b9a175ecb4a576bec7417aadf2b86c564a",
+      "input_sha256": "d4165a42838deb86808cc318a0ae5ab98038bd3da6bc5242335017954f6c395a",
+      "evidence_sha256": "a3fd268e823ba9bc5bf126c230641bb7ea5b2f5f87ff7707eceaf34ed3f4e33c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-09T02:18:02.464720+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/mzgk-nx4w",
+        "title": "How interaction radius shapes vortex states in mobile phase oscillators",
+        "sha256": "f396ba26e8c6780cd3268a338d1f6ee405eb03de2f0fa2412ab5022a8fc1bfcf",
+        "version": "Physical Review Research 8, 043126 (2026), published 2026-11-04",
+        "source_url": "https://harvest.aps.org/v2/journals/articles/10.1103/mzgk-nx4w",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-09T02:18:02.464720+00:00",
+        "read_scope": "Complete publisher main text Sections I–VII, Eqs. 1–43, captions and reference list; Figures 1–4 visually checked from rendered pages 4,5,6,10. Supplemental figures/data and code not read or reproduced."
+      },
+      "question": {
+        "zh": "同样的同步阈值，为何会出现不同的集体图案？",
+        "en": "Why can the same onset threshold lead to different collective patterns?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选这篇，是因为移动会不断改变谁与谁相连。相互作用半径既决定即时邻域，也影响局部旋转如何转成全局同向运动；把它作为控制变量，比只看平均同步强度更能揭示集体组织的差别。",
+          "建议把图案、时序和邻接矩阵一起读，再比较正反向扫参。文章也明确区分了线性失稳与非线性吸引子：前者的阈值相同，并不意味着后者的选择、稳定性和滞后也相同。"
+        ],
+        "en": [
+          "This archive pick treats motion as a process that continually changes who interacts with whom. Interaction radius shapes both instantaneous neighborhoods and the balance between local rotation and global alignment, making it useful beyond a single coherence statistic.",
+          "Read spatial patterns, order-parameter traces and adjacency matrices together, then compare forward and backward scans. The paper distinguishes linear onset from nonlinear attractors: an unchanged onset threshold does not determine state selection, vortex stability or hysteresis."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "观察图案，也观察相互作用网络",
+            "en": "Read the pattern and its interaction network"
+          },
+          "text": {
+            "zh": "有限半径内的相位耦合随粒子位置演化。图1把空间快照、全局序参量与频率排序的邻接矩阵并列，显示涡旋与极化态对应的组织差别。",
+            "en": "Finite-radius phase coupling evolves with particle positions. Figure 1 juxtaposes spatial snapshots, coherence traces and frequency-ordered adjacency matrices to distinguish vortex and polar organization."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分均匀模态与空间模态",
+            "en": "Separate uniform and spatial modes"
+          },
+          "text": {
+            "zh": "在文中的连续体与低阶谐波近似下，归一化邻域平均保留均匀失稳阈值Kc(0)=2Δ；有限波数的阈值则依赖相互作用核和半径。这是理解局部耦合不能简单等同全局平均场的切入点。",
+            "en": "Within the stated continuum and low-harmonic approximation, normalized neighborhood averaging preserves Kc(0)=2Δ, while finite-wave-number thresholds depend on interaction range. This separates local coupling from a global mean-field description."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把线性解释停在适用边界内",
+            "en": "Keep the linear explanation within its scope"
+          },
+          "text": {
+            "zh": "正反向扫描提供涡旋与极化态共存的数值证据。作者明确指出：无序态附近的线性谱与涡旋持存区间之间仍是启发性联系，定量稳定边界和滞后需要非线性分析。",
+            "en": "Forward and backward scans provide numerical evidence of coexisting states. The authors explicitly keep the link between the incoherent-state spectrum and vortex persistence heuristic; quantitative stability and hysteresis require nonlinear analysis."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究移动相互作用网络、同步、手性活性物质及局部耦合建模的读者。",
+        "en": "Readers studying mobile interaction networks, synchronization, chiral active matter and local-coupling models."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版13页正文、公式、图1–4及参考文献表，并渲染核对全部4张主图。适用范围是无噪声二维周期边界模型、洛伦兹频率分布及所测参数；线性分析使用均匀密度与低阶谐波截断。补充材料未独立审读，正文报告的尺寸检验不能冒充已复核的补充证据；未复现数值实验。线性失稳阈值不等同涡旋的非线性稳定边界。",
+        "en": "Read all 13 publisher pages, equations, Figures 1–4 and the reference list; visually checked all four main figures. Scope: noiseless 2D periodic model, Lorentzian frequencies and tested parameters; linear analysis assumes homogeneous density and truncates angular harmonics. The supplement was not independently read and simulations were not reproduced. Main-text reports of supplemental size scans are not independent verification. Linear onset is not a nonlinear vortex-stability boundary."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -38336,5 +38721,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "5145a384ef224c5a200574d18ba1f6b7d38cb2dd71a65d3b7543b9931de6c490"
+  "daily_suggestions_sha256": "ddc73f8cf70b336369b82bff9d377d224123ce8d9bb5567f762078db6e25eeba"
 }
