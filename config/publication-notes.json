@@ -434,9 +434,9 @@
         "network_collective",
         "network_resilience"
       ],
-      "note_en": "Adaptive directed springs enable mechanical networks to learn input patterns, with stability depending on network architecture.",
-      "note_zh": "自适应有向弹簧使机械网络学习输入模式，其稳定性依赖网络架构。",
-      "assessment_sha256": "02bf28050822664fff7015091edccdcc5d497efe1071109aa453027945e2bf7a"
+      "note_zh": "自适应有向弹簧在机械网络中实现无监督学习，联系相互作用刚度、稳定性与输入模式的自主提取。",
+      "note_en": "Adaptive directed springs implement unsupervised mechanical learning, linking interaction stiffness, network stability and autonomous extraction of input patterns.",
+      "assessment_sha256": "edf7a1a2c1d2645e7a78cb923433f23a53276bca0c43beda6e5fb842028e60a0"
     },
     "10.1103/23zn-lzx2": {
       "categories": [
@@ -485,9 +485,9 @@
         "network_structure",
         "network_spreading"
       ],
-      "note_en": "Duplication-divergence graph growth links largest-component transitions to Euler characteristics and scaling of degree-distribution moments.",
-      "note_zh": "复制—分化图增长将最大连通分量转变与欧拉示性数及度分布矩标度联系起来。",
-      "assessment_sha256": "fb9049832b5a49f5f43291f616885655f7764467982eaf47b30d58811ce666bc"
+      "note_zh": "复制—分化生长网络的最大连通分量转变与度矩标度及欧拉示性数过零相联系。",
+      "note_en": "A largest-component transition in duplication–divergence growth networks connects degree-moment scaling with the zero of the Euler characteristic.",
+      "assessment_sha256": "9c96c8b4a2bf4ae0e5d52bde6cfb3c868bb46466e3ecfff703993baa9c0904c0"
     },
     "10.1103/48xl-kkq1": {
       "categories": [
@@ -1717,9 +1717,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Derives conditions for hard selection to promote cooperation and fixation in deme-structured populations undergoing growth, merging and dilution.",
-      "note_zh": "解析生长、合并与稀释的团体结构种群中，硬选择促进合作和固定的条件。",
-      "assessment_sha256": "2e86e9235a88e9a0b52a92cc924672574aaedac0a2d11b7b784e96c3724b18d7"
+      "note_zh": "在团簇型分群种群的生长—合并—稀释动力学中，解析研究空间结构与硬选择促进合作的条件。",
+      "note_en": "Analyzes when spatial population structure and hard selection promote cooperation in deme-structured clique populations under growth–merging–dilution dynamics.",
+      "assessment_sha256": "3aa89fb6e66b78318d8dfee1777d72a3b11aba22cce8a6d95fd6580173622b03"
     },
     "10.1126/sciadv.aed7447": {
       "categories": [
@@ -2148,9 +2148,9 @@
         "network_resilience",
         "network_collective"
       ],
-      "note_zh": "在网络 gossip 动力学中加入指定节点重置，给出信息分配的渐近量、收敛速度和置信界。",
-      "note_en": "Adds resetting to network gossip dynamics and derives asymptotic allocation, convergence speed and confidence bounds.",
-      "assessment_sha256": "a5d2bf1cfea7b5e72244f324ad46b59cd69fbcfd11a89a17a2e1ecfe48c9f1d0"
+      "note_zh": "通过重置选定节点引导网络信息分配，给出收敛与有限时间置信界，并提出分布式控制协议。",
+      "note_en": "Resetting selected nodes steers network information allocation, with convergence analysis, finite-time confidence bounds and a distributed control protocol.",
+      "assessment_sha256": "ae772a84379adc8f6d2dc8f6a71838684c038c473d0f5d88eb2ba7375a1cda61"
     },
     "10.1038/s41467-026-78839-5": {
       "categories": [
@@ -2228,9 +2228,9 @@
         "network_collective",
         "network_structure"
       ],
-      "note_zh": "稠密无序网络上的非平衡稳态占据呈现 Boltzmann-like 分布，低 rattling 渐近规律连接状态逃逸与稳态概率。",
-      "note_en": "Dense disordered networks show Boltzmann-like occupations in nonequilibrium steady states, linking slow escape and steady-state probability.",
-      "assessment_sha256": "6870b73d936d44d05154143be5be6860c990d27d307b120f4018cec678ba90ee"
+      "note_zh": "大规模稠密无序转移网络即使产生熵，稳态占据仍呈玻尔兹曼式结构，联系低扰动与等可达性理论。",
+      "note_en": "Large dense disordered transition networks exhibit Boltzmann-like stationary occupations despite entropy production, connecting low-rattling and equiaccessibility theories.",
+      "assessment_sha256": "2d3bb1ede811991c683fd8dba10f962b5d864189e0e39670746124747f42e5c9"
     },
     "10.1073/pnas.2607559123": {
       "categories": [
@@ -2558,6 +2558,59 @@
       "note_zh": "利用Hubbard–Stratonovich变换和边对偶网络的代数结构，解析求解边对耦合随机网络模型的配分函数，并讨论均场退化条件。",
       "note_en": "Uses the Hubbard–Stratonovich transform and algebraic structure of an edge-dual network to solve pairwise-edge-coupled random graph partition functions and discuss mean-field reductions.",
       "assessment_sha256": "b7fa64f81c4ab79adb785c32907717b27a762c67342487c6f8cba0bde4dbb082"
+    },
+    "10.1073/pnas.2631011123": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "比较23种齿鲸的社交网络模块度与关系分化，检验其系统发育信号及与寿命、体长、性别体型差异的关联；演化方向推断仍属初步。",
+      "note_en": "Compares modularity and relationship differentiation across 23 toothed-whale species, testing phylogenetic signal and life-history associations; evolutionary direction remains preliminary.",
+      "assessment_sha256": "daee9edf3e78b6e0fc0d6b9deb57ed1261c60f44c250c6a0ced02a9d04fac250"
+    },
+    "10.1103/2hcb-wyvc": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "纳米多孔金属网络中的配位与高连接度结点控制晶体各向异性的传递及弯曲到轴向载荷传递的转换；当前为接收稿。",
+      "note_en": "Coordination and high-valence junctions in nanoporous-metal networks control anisotropy transmission and the crossover from bending to axial load transfer; currently accepted.",
+      "assessment_sha256": "8b335dffe7ee950c3435a8a62a26fe2471bf4f59671bb1df4f671da7f5056b92"
+    },
+    "10.1103/nck7-lpc7": {
+      "categories": [
+        "network_resilience",
+        "network_collective"
+      ],
+      "note_zh": "双聚合物网络通过耦合屏蔽断键引起的应力，抑制相关断裂并分散损伤，联系网络架构与力学韧性；当前为接收稿。",
+      "note_en": "Coupled polymer networks screen rupture-induced stress, suppress correlated failures and delocalize damage, linking network architecture to mechanical robustness; currently accepted.",
+      "assessment_sha256": "e481b1c97f66bb9e19fbb8e266e03ec236cac1e40d0b7c98fdaa0a47c586b7b2"
+    },
+    "10.1103/dm26-5l3l": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "人工自旋冰中的动力学约束分离畴壁状态类别，使转移网络拓扑而非仅能量决定可达性与非玻尔兹曼弛豫；当前为接收稿。",
+      "note_en": "Kinetic constraints in artificial spin ice disconnect domain-wall classes, making transition-network topology govern reachability and non-Boltzmann relaxation; currently accepted.",
+      "assessment_sha256": "34dd188cc11ffee69bfcf33d660a1f4835242b657fdbb2f129de24ece285ab93"
+    },
+    "10.1038/s41467-026-77954-7": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "科学评论重新分析忆阻纳米线网络电导，指出非马尔可夫弛豫、相关跳跃等待时间及噪声—跳跃补偿，质疑独立跳扩散近似。",
+      "note_en": "A scientific Comment reanalyzes memristive nanowire conductance, identifying non-Markovian relaxation, correlated jump intervals and noise–jump compensation that challenge independent jump-diffusion assumptions.",
+      "assessment_sha256": "42ea87a31a6b3329c57eda67a98b121d986b485315cf0c8a7c0cfbd240676c4a",
+      "review_evidence_kind": "online_short_comment"
+    },
+    "10.1103/scdp-4dsj": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "自适应2-单纯形耦合与噪声竞争，改变惯性摆振子网络的反向失同步突变，而所测正向起始保持连续；当前为接收稿。",
+      "note_en": "Adaptive 2-simplex coupling competes with noise to alter backward desynchronization in inertial pendulum networks, while the tested forward onset remains continuous; currently accepted.",
+      "assessment_sha256": "8ef8a0d3e9f54d74d51f38109c920b847100b06ccf78bee7407507f1726c2a19"
     }
   }
 }

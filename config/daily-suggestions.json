@@ -2630,6 +2630,84 @@
         "zh": "已读正式版13页正文、公式、图1–4及参考文献表，并渲染核对全部4张主图。适用范围是无噪声二维周期边界模型、洛伦兹频率分布及所测参数；线性分析使用均匀密度与低阶谐波截断。补充材料未独立审读，正文报告的尺寸检验不能冒充已复核的补充证据；未复现数值实验。线性失稳阈值不等同涡旋的非线性稳定边界。",
         "en": "Read all 13 publisher pages, equations, Figures 1–4 and the reference list; visually checked all four main figures. Scope: noiseless 2D periodic model, Lorentzian frequencies and tested parameters; linear analysis assumes homogeneous density and truncates angular harmonics. The supplement was not independently read and simulations were not reproduced. Main-text reports of supplemental size scans are not independent verification. Linear onset is not a nonlinear vortex-stability boundary."
       }
+    },
+    {
+      "doi": "10.1073/pnas.2631011123",
+      "recommended_on": "2026-11-10",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-09-to-10-02",
+      "publication_sha256": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+      "assessment_sha256": "daee9edf3e78b6e0fc0d6b9deb57ed1261c60f44c250c6a0ced02a9d04fac250",
+      "input_sha256": "666fff6db5438df2bd571b3ebc6df23df89359e3299e101207aae0d87e9273ea",
+      "evidence_sha256": "3436f16de8b55c2bb43a2d33493cd584ea0ef5c246aa668b5bedb83408806300",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-10T00:37:48.397597+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2631011123",
+        "title": "Coevolution of social network structure and life history in toothed whales",
+        "sha256": "ef674340234f4ffb3190a4a22c999d60db1050e0a791e6e3758262da93504d41",
+        "version": "PNAS 123, e2631011123 (2026), publisher version of record, published November 9 2026",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2631011123",
+        "source_kind": "publisher_fulltext",
+        "pages": 10,
+        "reviewed_at": "2026-11-10T00:37:48.397597+00:00",
+        "read_scope": "All ten publisher pages: introduction, results, discussion, methods and references. All four main figures/captions visually checked on rendered pp.3–5. Supplementary appendix and analysis repository not independently read; no replication."
+      },
+      "question": {
+        "zh": "齿鲸的社会网络，如何与寿命和体型一起演化？",
+        "en": "How do toothed-whale social networks evolve alongside lifespan and body size?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把“社会性”拆成两个可以比较的网络特征：群体是否分成稳定小群，以及个体关系的强弱有多不均。二者相关，却不能互相替代；抹香鲸的高模块度与中等关系分化就是有用的反例。",
+          "文章把文献中的网络测量放进系统发育多层模型，并单独检查网络规模、采样时长和种内差异。值得借鉴的是比较设计和不确定性的处理；动态模型给出的演化方向提示仍需谨慎理解，不能直接当作已证实的因果机制。"
+        ],
+        "en": [
+          "This pick turns sociality into two comparable network traits: division into stable units and heterogeneity of pairwise relationships. They covary but are not interchangeable; sperm whales combine exceptionally high modularity with moderate relationship differentiation.",
+          "The authors place published network measurements in phylogenetic multilevel models and separately examine network size, sampling duration and within-species variation. The reusable lesson is the comparison design and treatment of uncertainty; evolutionary direction from the dynamic model remains a cautious inference, not an established causal mechanism."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "分开衡量两种社会复杂性",
+            "en": "Measure two kinds of social complexity separately"
+          },
+          "text": {
+            "zh": "模块度Q衡量群体分区，关系分化S衡量成对联系的变异。图2的跨物种比较显示，仅看群体大小或单一指标会遗漏重要的组织差异。",
+            "en": "Modularity Q measures divisions, while social differentiation S measures variability in pairwise ties. Figure 2 shows why group size or a single metric can miss organizational differences."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较网络之前先处理可比性",
+            "en": "Address comparability before comparing networks"
+          },
+          "text": {
+            "zh": "作者筛查种群尺度和时空重复，保留种群、物种、系统发育与关系指数的层次差异，并用规模和采样时长作稳健性对照。这些设计比简单跨物种相关更可复用。",
+            "en": "Population-scale selection, overlap screening and varying effects for population, species, phylogeny and association index address comparability; size and sampling-duration checks probe robustness beyond a simple cross-species correlation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分相关演化与方向推断",
+            "en": "Separate correlated evolution from directional inference"
+          },
+          "text": {
+            "zh": "较长寿、体型较大的齿鲸通常有更模块化的网络；动态模型另检验时间先后。多数方向效应不确定，模块度指向体长的证据在取对数后减弱，提醒我们报告变换敏感性。",
+            "en": "Longer-lived, larger toothed whales tend to have more modular networks. Dynamic models separately test temporal direction; most effects are uncertain, and the modularity-to-body-length signal weakens after log transformation."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究动物社会网络、跨系统网络比较、网络测量与演化动力学的读者。",
+        "en": "Readers studying animal social networks, comparative network analysis, network measurement and evolutionary dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部10页正文、方法与参考文献，并渲染核对4张主图。数据覆盖23种齿鲸，受海岸近岸采样、种群边界、关系指数和观测误差影响；系统发育、祖先体长及动态演化模型含假设，多数方向效应不确定。补充材料和代码未独立审读，未复现分析；不能推广为所有动物社会的确定因果规律。",
+        "en": "Read all ten publisher pages, methods and references, with visual checks of all four main figures. The 23-species sample is affected by coastal sampling, population boundaries, association indices and measurement error. Phylogenetic, ancestral-size and dynamic-evolution assumptions matter; most directional effects remain uncertain. Supplement and code were not independently read or analyses reproduced; this is not a universal causal law for animal societies."
+      }
     }
   ],
   "revisions": [

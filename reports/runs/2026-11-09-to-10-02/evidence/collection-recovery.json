@@ -1,0 +1,42 @@
+{
+  "version": "explicit-collection-recovery-1",
+  "recovered_at": "2026-11-09T23:25:46.518198+00:00",
+  "reason": "Primary initialized screening before publisher reconciliation was stable. No materials or scientific assessments were saved. Preserve original initialized input and log unchanged; resume exact collection state with identical frozen inputs in new uninitialized run.",
+  "source_run": "reports/runs/2026-11-09-to-10-01",
+  "recovered_run": "reports/runs/2026-11-09-to-10-02",
+  "files": [
+    {
+      "source": "reports/runs/2026-11-09-to-10-01/candidates.json",
+      "destination": "reports/runs/2026-11-09-to-10-02/candidates.json",
+      "sha256": "6c8d18f5b000c1794b0646598170c74faccc39505da40928ea3a66ce6ade753f"
+    },
+    {
+      "source": "reports/runs/2026-11-09-to-10-01/coverage.json",
+      "destination": "reports/runs/2026-11-09-to-10-02/coverage.json",
+      "sha256": "b647ed2a6a069880cd3f3a9245408acc14b6a75d4e173ed04a72f25b267c1a52"
+    },
+    {
+      "source": "reports/runs/2026-11-09-to-10-01/collection-log.jsonl",
+      "destination": "reports/runs/2026-11-09-to-10-02/collection-log.jsonl",
+      "sha256": "322bb3de04e6604068668b0feff4fd2f76d5063f3c7bf834a233dc366f8be8f9"
+    },
+    {
+      "source": "reports/runs/2026-11-09-to-10-01/inputs/sources.json",
+      "destination": "reports/runs/2026-11-09-to-10-02/inputs/sources.json",
+      "sha256": "28cee22836f9bd8f6bf0314ed6476d8d0b9be456d8946c873d9d1fc892a2c6f4"
+    },
+    {
+      "source": "reports/runs/2026-11-09-to-10-01/inputs/screening-protocol.md",
+      "destination": "reports/runs/2026-11-09-to-10-02/inputs/screening-protocol.md",
+      "sha256": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+    },
+    {
+      "source": "reports/runs/2026-11-09-to-10-01/inputs/manifest.json",
+      "destination": "reports/runs/2026-11-09-to-10-02/inputs/manifest.json",
+      "sha256": "f0f654af72e17da81dae49e1e32a408f8d396f536c8e3315f8bc33531ee7c279"
+    }
+  ],
+  "source_screening_log_sha256": "e7e5752768dc9000d7f6ccf46f91c1882ab377d2245539221b07e7f77e6996dd",
+  "screening_assessments_imported": 0,
+  "original_preserved": true
+}

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-09T03:04:04.950090+00:00",
+  "generated_at": "2026-11-10T00:55:40.478724+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-09",
-  "window_days": 70,
+  "window_end": "2026-11-10",
+  "window_days": 71,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "98051dd6bfd26e21a48b868991e16a447cf5b4648069a018dcbc4f0fe3035961",
-  "author_metadata_sha256": "8f2ca6490d5489eab500b499e0e8f2b5cc0054c935dcf18ee8b4c6cfe8deec06",
+  "reading_notes_sha256": "0fee4f3deb2140781f36a3f3fedf8dada359887e51732dd06c323820d363984c",
+  "author_metadata_sha256": "8d9adc451182340ad2587cb26925af3ca655960343a04b61abff1219e5952b50",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -2980,9 +2980,97 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-08-to-10-science-backfill-01",
+      "config_sha256": "d5e1817616afa66dc4633bae737432fb786876440ddac67a6cfa7d8e8d9012dd",
+      "window_start": "2026-11-08",
+      "window_end": "2026-11-10",
+      "rule_sha256": "2ccaa573a027c440694620d785f422e5319e53d5df8af6815a9b08901df5c14f",
+      "screening_log_sha256": "86be13dc43d24c218fc048f2f53f1b68bad6b09d4a8f6f434fd6303033d5bd9f",
+      "candidate_sha256": "1076af1b965e7b6acde533fa2096f73c7b9a09c302f17c5e8c65b17b4e48fc8b",
+      "author_metadata_sha256": "f325a122baa5ea72b33616c77c3ff4b04e01323c9e72f2c1be8db9d583236b7b",
+      "run_manifest_sha256": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-08-to-10-science-backfill-01",
+          "files": {
+            "candidates.json": "1076af1b965e7b6acde533fa2096f73c7b9a09c302f17c5e8c65b17b4e48fc8b",
+            "coverage.json": "bb13c6493de7fc9048ef3b2f86a426cbcef9668acf3469826c62920da66ddee3",
+            "collection-log.jsonl": "f71dc52176d52d8ffe67cd022ce35fa4a187e2c72a77b330d142660555e099df",
+            "screening-log.jsonl": "ba28889270713160d134e2d34302f4eb0d8f18fd83ee364bc1d399b1a3f67d47",
+            "inputs/manifest.json": "0cfe941515a1716a5641933c23c44ad8bd59b96316181f75edf23df37ff26bd8",
+            "inputs/sources.json": "8d0a45b4cf8f297aac54de876356226a94a1106cd1c46036e866e555497d43fb",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "1076af1b965e7b6acde533fa2096f73c7b9a09c302f17c5e8c65b17b4e48fc8b",
+          "rule_sha256": "2ccaa573a027c440694620d785f422e5319e53d5df8af6815a9b08901df5c14f",
+          "screening_log_sha256": "86be13dc43d24c218fc048f2f53f1b68bad6b09d4a8f6f434fd6303033d5bd9f"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "f325a122baa5ea72b33616c77c3ff4b04e01323c9e72f2c1be8db9d583236b7b",
+          "audit": {
+            "path": "reports/runs/2026-11-08-to-10-science-backfill-01/screening-log.jsonl",
+            "sha256": "ba28889270713160d134e2d34302f4eb0d8f18fd83ee364bc1d399b1a3f67d47"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "362a0f615852f216d16844dbe3b25148958a94b18ca0bdab250e58f41ec1eacf"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-09-to-10-02",
+      "config_sha256": "62828946d2eebf8345438416cd6424bc39e412e3112b7a33bcc72027398021dc",
+      "window_start": "2026-11-09",
+      "window_end": "2026-11-10",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "screening_log_sha256": "165eb844fe1858cec9333c5d95e1ab7239f31a306f808b2e0fff0cf70e64fa05",
+      "candidate_sha256": "6f69509d40fcf43b97d1296d54be430af3a942b835add1960536685a0ed82348",
+      "author_metadata_sha256": "ac94b1fe5d26713a659f180c5dee4ebc3dbc13de63a4725550169cebf6d4d93a",
+      "run_manifest_sha256": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-09-to-10-02",
+          "files": {
+            "candidates.json": "6f69509d40fcf43b97d1296d54be430af3a942b835add1960536685a0ed82348",
+            "coverage.json": "9b278d4d5a04ef5570be12489914c1379cd633fc6b79398bf784c84e6fb7627b",
+            "collection-log.jsonl": "632057c7513a0db40325562301441d38bdf9591e982d06efdcdd88a867ae2f57",
+            "screening-log.jsonl": "639f3ed7fe426be23e8574cb7547712f1c53218a95d5cc1e033435bfe2b44fb4",
+            "inputs/manifest.json": "f0f654af72e17da81dae49e1e32a408f8d396f536c8e3315f8bc33531ee7c279",
+            "inputs/sources.json": "28cee22836f9bd8f6bf0314ed6476d8d0b9be456d8946c873d9d1fc892a2c6f4",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "6f69509d40fcf43b97d1296d54be430af3a942b835add1960536685a0ed82348",
+          "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+          "screening_log_sha256": "165eb844fe1858cec9333c5d95e1ab7239f31a306f808b2e0fff0cf70e64fa05"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "ac94b1fe5d26713a659f180c5dee4ebc3dbc13de63a4725550169cebf6d4d93a",
+          "audit": {
+            "path": "reports/runs/2026-11-09-to-10-02/screening-log.jsonl",
+            "sha256": "639f3ed7fe426be23e8574cb7547712f1c53218a95d5cc1e033435bfe2b44fb4"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "1f6a22c7722c6ab56c89a048a1002951ad33522a104d7e9d8182b494ce3667bc"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 300,
+  "author_available_count": 306,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3132,8 +3220,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 876,
-      "publisher_verified_inventory_count": 876,
+      "candidate_count": 885,
+      "publisher_verified_inventory_count": 885,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3487,13 +3575,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "Nature",
+          "candidate_count": 9,
+          "publisher_verified_inventory_count": 9,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Science",
-      "candidate_count": 411,
-      "publisher_verified_inventory_count": 411,
+      "candidate_count": 412,
+      "publisher_verified_inventory_count": 412,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3838,13 +3935,31 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-08",
+          "window_end": "2026-11-10",
+          "journal": "Science",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 1995,
-      "publisher_verified_inventory_count": 1988,
+      "candidate_count": 2014,
+      "publisher_verified_inventory_count": 2007,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4189,13 +4304,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "NC",
+          "candidate_count": 19,
+          "publisher_verified_inventory_count": 19,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 30,
-      "publisher_verified_inventory_count": 30,
+      "candidate_count": 31,
+      "publisher_verified_inventory_count": 31,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -4538,6 +4662,15 @@
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "NMI",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4891,13 +5024,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 96,
-      "publisher_verified_inventory_count": 96,
+      "candidate_count": 99,
+      "publisher_verified_inventory_count": 99,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5242,13 +5384,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "PRX",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 793,
-      "publisher_verified_inventory_count": 793,
+      "candidate_count": 814,
+      "publisher_verified_inventory_count": 814,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5591,6 +5742,15 @@
           "journal": "PRL",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "PRL",
+          "candidate_count": 28,
+          "publisher_verified_inventory_count": 28,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5944,13 +6104,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 961,
-      "publisher_verified_inventory_count": 961,
+      "candidate_count": 986,
+      "publisher_verified_inventory_count": 986,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6293,6 +6462,15 @@
           "journal": "PNAS",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "PNAS",
+          "candidate_count": 25,
+          "publisher_verified_inventory_count": 25,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6646,13 +6824,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 437,
-      "publisher_verified_inventory_count": 437,
+      "candidate_count": 438,
+      "publisher_verified_inventory_count": 438,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6997,13 +7184,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "PRResearch",
+          "candidate_count": 8,
+          "publisher_verified_inventory_count": 8,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 555,
-      "publisher_verified_inventory_count": 555,
+      "candidate_count": 560,
+      "publisher_verified_inventory_count": 560,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7348,13 +7544,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "PRE",
+          "candidate_count": 20,
+          "publisher_verified_inventory_count": 20,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 119,
-      "publisher_verified_inventory_count": 119,
+      "candidate_count": 121,
+      "publisher_verified_inventory_count": 121,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7699,13 +7904,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "Chaos",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 88,
-      "publisher_verified_inventory_count": 88,
+      "candidate_count": 93,
+      "publisher_verified_inventory_count": 93,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8005,28 +8219,50 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-09",
+          "window_end": "2026-11-10",
+          "journal": "NP",
+          "candidate_count": 5,
+          "publisher_verified_inventory_count": 5,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7376,
+  "candidate_count": 7468,
   "screening_counts": {
-    "excluded": 7076,
-    "core": 270,
+    "excluded": 7162,
+    "core": 276,
     "transferable_application": 30,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 300
+    "included": 306
   },
-  "published_count": 261,
-  "accepted_count": 39,
+  "published_count": 268,
+  "accepted_count": 38,
   "latest_update": {
-    "run": "reports/runs/2026-11-08-to-09-02",
-    "reviewed_at": "2026-11-09T02:41:07.043974+00:00",
-    "newly_included_count": 0,
-    "newly_included_dois": [],
-    "accepted_to_published_count": 0,
-    "accepted_to_published_dois": []
+    "run": "reports/runs/2026-11-09-to-10-02",
+    "reviewed_at": "2026-11-10T00:51:19.546610+00:00",
+    "newly_included_count": 6,
+    "newly_included_dois": [
+      "10.1038/s41467-026-77954-7",
+      "10.1073/pnas.2631011123",
+      "10.1103/2hcb-wyvc",
+      "10.1103/dm26-5l3l",
+      "10.1103/nck7-lpc7",
+      "10.1103/scdp-4dsj"
+    ],
+    "accepted_to_published_count": 5,
+    "accepted_to_published_dois": [
+      "10.1103/23wf-kb12",
+      "10.1103/3zrx-56mx",
+      "10.1103/4tf9-n1zn",
+      "10.1103/pgt1-cs46",
+      "10.1103/wlyc-rtgs"
+    ]
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -8036,6 +8272,955 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/wlyc-rtgs",
+      "url": "https://doi.org/10.1103/wlyc-rtgs",
+      "title": "Promotion of cooperation in deme-structured populations with growth-merging dynamics",
+      "authors": [
+        "Damien Ribière",
+        "Alia Abbara",
+        "Anne-Florence Bitbol"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "9d3a84ba37cf2be4440140983161a7c5f83c739e6e55baaf3cf56946dd184953",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fwlyc-rtgs",
+      "author_retrieved_at": "2026-11-10T00:35:55.162165+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-10-14",
+        "published_date": "2026-11-09",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/wlyc-rtgs"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-14",
+      "published_date": "2026-11-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "377d285afdc6f0e23beda0e79876d025864065f718089bfda1b87ed4ee4a8456",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/wlyc-rtgs"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Deme-structured clique populations under growth-merging-dilution dynamics connect evolutionary graph theory to multilevel selection. Analytical cooperation and fixation conditions identify when spatial population structure and hard selection promote cooperation."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Analyzes when spatial population structure and hard selection promote cooperation in deme-structured clique populations under growth–merging–dilution dynamics.",
+      "note_zh": "在团簇型分群种群的生长—合并—稀释动力学中，解析研究空间结构与硬选择促进合作的条件。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "3aa89fb6e66b78318d8dfee1777d72a3b11aba22cce8a6d95fd6580173622b03",
+      "input_sha256": "bdf0a295b5d85448837c13acd31cc005ae2b16826020522c5ef1a698b85ab9b1",
+      "material_sha256": "377d285afdc6f0e23beda0e79876d025864065f718089bfda1b87ed4ee4a8456",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "377d285afdc6f0e23beda0e79876d025864065f718089bfda1b87ed4ee4a8456",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": null,
+      "evidence": [
+        "Deme-structured clique populations under growth-merging-dilution dynamics connect evolutionary graph theory to multilevel selection. Analytical cooperation and fixation conditions identify when spatial population structure and hard selection promote cooperation."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fwlyc-rtgs",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/wlyc-rtgs",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-14",
+        "published_date": "2026-11-09",
+        "previous_run": "reports/runs/2026-10-14-to-15-01",
+        "source_run": "reports/runs/2026-11-09-to-10-02",
+        "audit_sha256": "0e07a870205760872ce861e4d4d61c4d58cb0bbdbae3838b7ebcf2fc40d59e3c",
+        "previous_assessment_sha256": "2e86e9235a88e9a0b52a92cc924672574aaedac0a2d11b7b784e96c3724b18d7",
+        "assessment_sha256": "3aa89fb6e66b78318d8dfee1777d72a3b11aba22cce8a6d95fd6580173622b03"
+      }
+    },
+    {
+      "doi": "10.1103/scdp-4dsj",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/scdp-4dsj",
+      "title": "Adaptive higher-order interactions induce explosive desynchronization in coupled pendulum oscillators",
+      "authors": [
+        "Xueqi Li",
+        "Palash Kumar Pal",
+        "Youming Lei",
+        "Hongye Wang",
+        "Dibakar Ghosh",
+        "Michael Small"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "96e7442788ab7f3ea24933f82dbe5e303df0a918d5e10ef182ba0d170f3bf3ac",
+      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/scdp-4dsj",
+      "author_retrieved_at": "2026-11-10T00:37:48.397597+00:00",
+      "author_basis": "Actual official accepted page visible full byline; DOI/title/PRE identity matched to frozen record; exact complete six names read in browser.",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-09",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-09",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/scdp-4dsj"
+        ],
+        "basis_detail": "Actual official dated page and frozen current publisher directory checked; accepted date is not a publication date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-09",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "910ab11fdb43d5c5b6f292e726b1dcb2b337322dbd7f1bc089017d4d8d2fa5e1",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/scdp-4dsj"
+        ],
+        "basis": "Actual explicit official Abstract verifies original research; exact official subtype is not invented.",
+        "supporting_reason": "Adaptive Hebbian-like 2-simplex couplings in noisy inertial pendulum networks alter backward desynchronization discontinuity. Linear stability and simulations separate a continuous forward onset from adaptation/noise-controlled explosive desynchronization."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Adaptive 2-simplex coupling competes with noise to alter backward desynchronization in inertial pendulum networks, while the tested forward onset remains continuous; currently accepted.",
+      "note_zh": "自适应2-单纯形耦合与噪声竞争，改变惯性摆振子网络的反向失同步突变，而所测正向起始保持连续；当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8ef8a0d3e9f54d74d51f38109c920b847100b06ccf78bee7407507f1726c2a19",
+      "input_sha256": "0c8f393138cc4e33d717aa9c8903872315e7ebe9e2e7e513f1e0b3d1a44036c3",
+      "material_sha256": "910ab11fdb43d5c5b6f292e726b1dcb2b337322dbd7f1bc089017d4d8d2fa5e1",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "910ab11fdb43d5c5b6f292e726b1dcb2b337322dbd7f1bc089017d4d8d2fa5e1",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": null,
+      "evidence": [
+        "Adaptive Hebbian-like 2-simplex couplings in noisy inertial pendulum networks alter backward desynchronization discontinuity. Linear stability and simulations separate a continuous forward onset from adaptation/noise-controlled explosive desynchronization."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fscdp-4dsj",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/scdp-4dsj",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/pgt1-cs46",
+      "url": "https://doi.org/10.1103/pgt1-cs46",
+      "title": "Resetting-based designated information distribution",
+      "authors": [
+        "Xiaojuan Ma",
+        "Yan Wang",
+        "Indranil Gupta"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "23369c6951c5b88c74bd110b770133594d3f6f9fd4367e7be9a347c83195c2b3",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fpgt1-cs46",
+      "author_retrieved_at": "2026-11-10T00:35:52.737590+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-10-23",
+        "published_date": "2026-11-09",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/pgt1-cs46"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-23",
+      "published_date": "2026-11-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "99452f54d9b971d8d388b5ccd5828ff75d18e1ef7b895c3c82fa54a9f7e9f326",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/pgt1-cs46"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Resetting selected nodes in network gossip dynamics controls asymptotic information allocation; the work derives convergence behavior and finite-time confidence bounds and proposes a distributed network-control protocol."
+      },
+      "categories": [
+        "network_resilience",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Resetting selected nodes steers network information allocation, with convergence analysis, finite-time confidence bounds and a distributed control protocol.",
+      "note_zh": "通过重置选定节点引导网络信息分配，给出收敛与有限时间置信界，并提出分布式控制协议。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "ae772a84379adc8f6d2dc8f6a71838684c038c473d0f5d88eb2ba7375a1cda61",
+      "input_sha256": "b5839e0317a5cb6601a832e761823c7c72418e45ef012882ba050e5398545562",
+      "material_sha256": "99452f54d9b971d8d388b5ccd5828ff75d18e1ef7b895c3c82fa54a9f7e9f326",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "99452f54d9b971d8d388b5ccd5828ff75d18e1ef7b895c3c82fa54a9f7e9f326",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": null,
+      "evidence": [
+        "Resetting selected nodes in network gossip dynamics controls asymptotic information allocation; the work derives convergence behavior and finite-time confidence bounds and proposes a distributed network-control protocol."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fpgt1-cs46",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/pgt1-cs46",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-23",
+        "published_date": "2026-11-09",
+        "previous_run": "reports/runs/2026-10-23-to-24-01",
+        "source_run": "reports/runs/2026-11-09-to-10-02",
+        "audit_sha256": "0e07a870205760872ce861e4d4d61c4d58cb0bbdbae3838b7ebcf2fc40d59e3c",
+        "previous_assessment_sha256": "a5d2bf1cfea7b5e72244f324ad46b59cd69fbcfd11a89a17a2e1ecfe48c9f1d0",
+        "assessment_sha256": "ae772a84379adc8f6d2dc8f6a71838684c038c473d0f5d88eb2ba7375a1cda61"
+      }
+    },
+    {
+      "doi": "10.1103/nck7-lpc7",
+      "url": "https://journals.aps.org/prx/accepted/10.1103/nck7-lpc7",
+      "title": "Mechanisms of spatiotemporal damage evolution in double polymer networks",
+      "authors": [
+        "M. Le Goff",
+        "L. Ortellado",
+        "J. Tian",
+        "M. Bouzid",
+        "J.-L. Barrat",
+        "K. Martens"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5b7f4b0c65b60ebf56db5114e76330bbb3ffac88698d609b80c6dee38d578ecd",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fnck7-lpc7",
+      "author_retrieved_at": "2026-11-10T00:36:00.566497+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review X",
+      "journal_short": "PRX",
+      "issns": [
+        "2160-3308"
+      ],
+      "date": "2026-11-09",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-09",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prx/accepted/10.1103/nck7-lpc7"
+        ],
+        "basis_detail": "Actual official dated page and frozen current publisher directory checked; accepted date is not a publication date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-09",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "b58cf7402447c357c77fb6a3f8a8309adb05dc38217844325aa4c81bdb088d2d",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prx/accepted/10.1103/nck7-lpc7"
+        ],
+        "basis": "Actual explicit official Abstract verifies original research; exact official subtype is not invented.",
+        "supporting_reason": "Single- versus double-polymer network architecture controls how bond failure redistributes stress. Coupled networks screen rupture-induced stresses, suppress correlated failures and delocalize damage, linking network coupling to mechanical robustness and failure propagation."
+      },
+      "categories": [
+        "network_resilience",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Coupled polymer networks screen rupture-induced stress, suppress correlated failures and delocalize damage, linking network architecture to mechanical robustness; currently accepted.",
+      "note_zh": "双聚合物网络通过耦合屏蔽断键引起的应力，抑制相关断裂并分散损伤，联系网络架构与力学韧性；当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "e481b1c97f66bb9e19fbb8e266e03ec236cac1e40d0b7c98fdaa0a47c586b7b2",
+      "input_sha256": "ee3f3082fb2eb3262cf72197b7d389320d1e2fbf1eabde65f4491757531fbc07",
+      "material_sha256": "b58cf7402447c357c77fb6a3f8a8309adb05dc38217844325aa4c81bdb088d2d",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "b58cf7402447c357c77fb6a3f8a8309adb05dc38217844325aa4c81bdb088d2d",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": "PRX",
+      "evidence": [
+        "Single- versus double-polymer network architecture controls how bond failure redistributes stress. Coupled networks screen rupture-induced stresses, suppress correlated failures and delocalize damage, linking network coupling to mechanical robustness and failure propagation."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fnck7-lpc7",
+      "evidence_url": "https://journals.aps.org/prx/accepted/10.1103/nck7-lpc7",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/dm26-5l3l",
+      "url": "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l",
+      "title": "Facilitated relaxation overrides energetic pathways in a multiphase square-kagome artificial spin ice",
+      "authors": [
+        "Wen-Cheng Yue",
+        "Zixiong Yuan",
+        "Peiyuan Huang",
+        "Ziao Wang",
+        "Hangyu Liu",
+        "Tianyu Li",
+        "Nuo-Zhou Yang",
+        "Jingyue Gao",
+        "Chen Ku",
+        "Shuo Song",
+        "Jiyao Shang",
+        "Yang-Yang Lyu",
+        "Yihuang Xiong",
+        "Xuecou Tu",
+        "Liang He",
+        "Xun Cao",
+        "Ying Dong",
+        "Huabing Wang",
+        "Peiheng Wu",
+        "Cristiano Nisoli",
+        "Yong-Lei Wang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b307af534788129194328eb7eca53bcb4bc1dc1b2e9d8166bd9d271f8e811f01",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fdm26-5l3l",
+      "author_retrieved_at": "2026-11-10T00:36:02.309294+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-11-09",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-09",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l"
+        ],
+        "basis_detail": "Actual official dated page and frozen current publisher directory checked; accepted date is not a publication date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-09",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "cc44adb601c5ba479baabf425a1c6ccc9fad011089bbb27ff1e9bbcd66ee7505",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l"
+        ],
+        "basis": "Actual explicit official Abstract verifies original research; exact official subtype is not invented.",
+        "supporting_reason": "Facilitator constraints in artificial spin ice disconnect classes of domain-wall states, so transition-network topology controls kinetic reachability and non-Boltzmann relaxation despite favorable energies. Experimental and Monte Carlo evidence link network organization to constrained dynamics."
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Kinetic constraints in artificial spin ice disconnect domain-wall classes, making transition-network topology govern reachability and non-Boltzmann relaxation; currently accepted.",
+      "note_zh": "人工自旋冰中的动力学约束分离畴壁状态类别，使转移网络拓扑而非仅能量决定可达性与非玻尔兹曼弛豫；当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "34dd188cc11ffee69bfcf33d660a1f4835242b657fdbb2f129de24ece285ab93",
+      "input_sha256": "5e481984d98d70b04deef201082365c680061f997d43cd08db8bf6c9494eeff5",
+      "material_sha256": "cc44adb601c5ba479baabf425a1c6ccc9fad011089bbb27ff1e9bbcd66ee7505",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "cc44adb601c5ba479baabf425a1c6ccc9fad011089bbb27ff1e9bbcd66ee7505",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": "PRL",
+      "evidence": [
+        "Facilitator constraints in artificial spin ice disconnect classes of domain-wall states, so transition-network topology controls kinetic reachability and non-Boltzmann relaxation despite favorable energies. Experimental and Monte Carlo evidence link network organization to constrained dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fdm26-5l3l",
+      "evidence_url": "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/4tf9-n1zn",
+      "url": "https://doi.org/10.1103/4tf9-n1zn",
+      "title": "Boltzmann-like occupation of nonequilibrium steady states on dense disordered networks",
+      "authors": [
+        "Jacob Calvert"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "9d017f43bc5ddf6db094c0a27408ec318fe32af42b980c827b8fae4be29ec47c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F4tf9-n1zn",
+      "author_retrieved_at": "2026-11-10T00:35:50.764607+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-10-27",
+        "published_date": "2026-11-09",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/4tf9-n1zn"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-27",
+      "published_date": "2026-11-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "1b1caefd4a73a507a10973fe43e13da48b3362db295c0da51c38a0acab2c0afa",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/4tf9-n1zn"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "The study proves Boltzmann-like stationary occupation on large dense disordered transition networks despite entropy production, and connects low-rattling and equiaccessible-state theory to nonequilibrium network dynamics."
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Large dense disordered transition networks exhibit Boltzmann-like stationary occupations despite entropy production, connecting low-rattling and equiaccessibility theories.",
+      "note_zh": "大规模稠密无序转移网络即使产生熵，稳态占据仍呈玻尔兹曼式结构，联系低扰动与等可达性理论。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "2d3bb1ede811991c683fd8dba10f962b5d864189e0e39670746124747f42e5c9",
+      "input_sha256": "b77c1c7d3010b5cdbc9361e969ecf233959135407559f333533822210ada1c7a",
+      "material_sha256": "1b1caefd4a73a507a10973fe43e13da48b3362db295c0da51c38a0acab2c0afa",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "1b1caefd4a73a507a10973fe43e13da48b3362db295c0da51c38a0acab2c0afa",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": null,
+      "evidence": [
+        "The study proves Boltzmann-like stationary occupation on large dense disordered transition networks despite entropy production, and connects low-rattling and equiaccessible-state theory to nonequilibrium network dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F4tf9-n1zn",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/4tf9-n1zn",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-27",
+        "published_date": "2026-11-09",
+        "previous_run": "reports/runs/2026-10-27-to-28-02",
+        "source_run": "reports/runs/2026-11-09-to-10-02",
+        "audit_sha256": "0e07a870205760872ce861e4d4d61c4d58cb0bbdbae3838b7ebcf2fc40d59e3c",
+        "previous_assessment_sha256": "6870b73d936d44d05154143be5be6860c990d27d307b120f4018cec678ba90ee",
+        "assessment_sha256": "2d3bb1ede811991c683fd8dba10f962b5d864189e0e39670746124747f42e5c9"
+      }
+    },
+    {
+      "doi": "10.1103/3zrx-56mx",
+      "url": "https://doi.org/10.1103/3zrx-56mx",
+      "title": "Largest connected component in duplication-divergence growing graphs with symmetric coupled divergence",
+      "authors": [
+        "Dario Borrelli"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "9768498f15fe8d8936f214d119831af473a316908dfb4a837e007867e174560f",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F3zrx-56mx",
+      "author_retrieved_at": "2026-11-10T00:35:48.901611+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-09-16",
+        "published_date": "2026-11-09",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/3zrx-56mx"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-16",
+      "published_date": "2026-11-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "8371c3b78b255d7a5ed386fc30607e50498a2214a432db6d0f88899b8ddd7973",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/3zrx-56mx"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Duplication-divergence growing graphs exhibit a largest-component transition linked to degree-moment scaling and the Euler-characteristic zero; the work directly studies network growth, connectivity and percolation."
+      },
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "A largest-component transition in duplication–divergence growth networks connects degree-moment scaling with the zero of the Euler characteristic.",
+      "note_zh": "复制—分化生长网络的最大连通分量转变与度矩标度及欧拉示性数过零相联系。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "9c96c8b4a2bf4ae0e5d52bde6cfb3c868bb46466e3ecfff703993baa9c0904c0",
+      "input_sha256": "815bf507afd65002d4361176b09c8d65115d5c78455cd7b7bbc74105e85401f5",
+      "material_sha256": "8371c3b78b255d7a5ed386fc30607e50498a2214a432db6d0f88899b8ddd7973",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "8371c3b78b255d7a5ed386fc30607e50498a2214a432db6d0f88899b8ddd7973",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": null,
+      "evidence": [
+        "Duplication-divergence growing graphs exhibit a largest-component transition linked to degree-moment scaling and the Euler-characteristic zero; the work directly studies network growth, connectivity and percolation."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F3zrx-56mx",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/3zrx-56mx",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-16",
+        "published_date": "2026-11-09",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-11-09-to-10-02",
+        "audit_sha256": "0e07a870205760872ce861e4d4d61c4d58cb0bbdbae3838b7ebcf2fc40d59e3c",
+        "previous_assessment_sha256": "fb9049832b5a49f5f43291f616885655f7764467982eaf47b30d58811ce666bc",
+        "assessment_sha256": "9c96c8b4a2bf4ae0e5d52bde6cfb3c868bb46466e3ecfff703993baa9c0904c0"
+      }
+    },
+    {
+      "doi": "10.1103/2hcb-wyvc",
+      "url": "https://journals.aps.org/prl/accepted/10.1103/2hcb-wyvc",
+      "title": "Topology-controlled breakdown of mechanical isotropy in nanoporous metals",
+      "authors": [
+        "Carlos J. Ruestes",
+        "Javier Segurado"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "9e3084c5c7702c5abf175b6b5194d651bf60dbe6c89835e57dc5bdb099d73650",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F2hcb-wyvc",
+      "author_retrieved_at": "2026-11-10T00:35:58.844503+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-11-09",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-09",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/2hcb-wyvc"
+        ],
+        "basis_detail": "Actual official dated page and frozen current publisher directory checked; accepted date is not a publication date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-09",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "4b29f30e1e6222d43514e446402ed20706f761dc652afa17338fbc4d3f5c4a89",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/2hcb-wyvc"
+        ],
+        "basis": "Actual explicit official Abstract verifies original research; exact official subtype is not invented.",
+        "supporting_reason": "Coordination and high-valence junctions in nanoporous-metal networks control transmission of crystallographic anisotropy and the crossover from bending to axial load transfer. Connectivity-dependent mechanical organization is the principal contribution, beyond a material-specific property measurement."
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Coordination and high-valence junctions in nanoporous-metal networks control anisotropy transmission and the crossover from bending to axial load transfer; currently accepted.",
+      "note_zh": "纳米多孔金属网络中的配位与高连接度结点控制晶体各向异性的传递及弯曲到轴向载荷传递的转换；当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8b335dffe7ee950c3435a8a62a26fe2471bf4f59671bb1df4f671da7f5056b92",
+      "input_sha256": "682dc25bda0e5638d5954a458c818eae2e10e6e168cd2a3898565ae22f3279cd",
+      "material_sha256": "4b29f30e1e6222d43514e446402ed20706f761dc652afa17338fbc4d3f5c4a89",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "4b29f30e1e6222d43514e446402ed20706f761dc652afa17338fbc4d3f5c4a89",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": "PRL",
+      "evidence": [
+        "Coordination and high-valence junctions in nanoporous-metal networks control transmission of crystallographic anisotropy and the crossover from bending to axial load transfer. Connectivity-dependent mechanical organization is the principal contribution, beyond a material-specific property measurement."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F2hcb-wyvc",
+      "evidence_url": "https://journals.aps.org/prl/accepted/10.1103/2hcb-wyvc",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/23wf-kb12",
+      "url": "https://doi.org/10.1103/23wf-kb12",
+      "title": "Self-learning mechanical circuits",
+      "authors": [
+        "Vishal P. Patil",
+        "Ian Ho",
+        "Manu Prakash"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b4386cffaa81f40b7e4bbb795745a7e112c56499776fe1ed2d8c8cb079ec8e2d",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F23wf-kb12",
+      "author_retrieved_at": "2026-11-10T00:35:47.044913+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-09-24",
+        "published_date": "2026-11-09",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/23wf-kb12"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked. For 23wf-kb12, current published header/meta and explicit Abstract were also read; old 2026-09-24 accepted date preserved from the effective existing collection."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-24",
+      "published_date": "2026-11-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "da538adad701e6a62dca0b18537b05a0111a2beb7658e52e14bfd0b9b49ea590",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/23wf-kb12"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "The explicit abstract presents adaptive directed spring networks, experimental realization and theoretical network-learning/stability results; original research with no special non-target type conflict."
+      },
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Adaptive directed springs implement unsupervised mechanical learning, linking interaction stiffness, network stability and autonomous extraction of input patterns.",
+      "note_zh": "自适应有向弹簧在机械网络中实现无监督学习，联系相互作用刚度、稳定性与输入模式的自主提取。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "edf7a1a2c1d2645e7a78cb923433f23a53276bca0c43beda6e5fb842028e60a0",
+      "input_sha256": "057cce4e6c7cd4611afe6c194d88d4ddbc0d9569b377e988a8f07c01c4001e96",
+      "material_sha256": "da538adad701e6a62dca0b18537b05a0111a2beb7658e52e14bfd0b9b49ea590",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "da538adad701e6a62dca0b18537b05a0111a2beb7658e52e14bfd0b9b49ea590",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": null,
+      "evidence": [
+        "Adaptive directed springs implement unsupervised mechanical learning; the study connects network architecture and adaptive interaction stiffness to stability and autonomous extraction of input patterns. The current published abstract was actually reread and remains consistent with the earlier accepted-paper core classification."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F23wf-kb12",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/23wf-kb12",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-24",
+        "published_date": "2026-11-09",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-11-09-to-10-02",
+        "audit_sha256": "0e07a870205760872ce861e4d4d61c4d58cb0bbdbae3838b7ebcf2fc40d59e3c",
+        "previous_assessment_sha256": "02bf28050822664fff7015091edccdcc5d497efe1071109aa453027945e2bf7a",
+        "assessment_sha256": "edf7a1a2c1d2645e7a78cb923433f23a53276bca0c43beda6e5fb842028e60a0"
+      }
+    },
+    {
+      "doi": "10.1073/pnas.2631011123",
+      "url": "https://doi.org/10.1073/pnas.2631011123",
+      "title": "Coevolution of social network structure and life history in toothed whales",
+      "authors": [
+        "Sam F. Walmsley",
+        "Erik Ringen",
+        "Shane Gero",
+        "Adrian V. Jaeggi",
+        "Hal Whitehead"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "175534fe0a1fb3a751915cd018424d58a1431bc650c3503b4451288db21d1bf4",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2631011123",
+      "author_retrieved_at": "2026-11-10T00:35:57.106285+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-11-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-09",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2631011123"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-09",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "3436f16de8b55c2bb43a2d33493cd584ea0ef5c246aa668b5bedb83408806300",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2631011123"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Comparative social-network modularity and tie differentiation across23toothed-whale species reveal phylogenetic signal and associations with lifespan, body size and sexual dimorphism. Network organization and its correlated life-history evolution are the primary empirical contribution; causal coevolutionary direction is preliminary."
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Compares modularity and relationship differentiation across 23 toothed-whale species, testing phylogenetic signal and life-history associations; evolutionary direction remains preliminary.",
+      "note_zh": "比较23种齿鲸的社交网络模块度与关系分化，检验其系统发育信号及与寿命、体长、性别体型差异的关联；演化方向推断仍属初步。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "daee9edf3e78b6e0fc0d6b9deb57ed1261c60f44c250c6a0ced02a9d04fac250",
+      "input_sha256": "666fff6db5438df2bd571b3ebc6df23df89359e3299e101207aae0d87e9273ea",
+      "material_sha256": "3436f16de8b55c2bb43a2d33493cd584ea0ef5c246aa668b5bedb83408806300",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3436f16de8b55c2bb43a2d33493cd584ea0ef5c246aa668b5bedb83408806300",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": "PNAS",
+      "evidence": [
+        "Comparative social-network modularity and tie differentiation across23toothed-whale species reveal phylogenetic signal and associations with lifespan, body size and sexual dimorphism. Network organization and its correlated life-history evolution are the primary empirical contribution; causal coevolutionary direction is preliminary."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2631011123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2631011123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-77954-7",
+      "url": "https://doi.org/10.1038/s41467-026-77954-7",
+      "title": "Comment on “Self-organizing neuromorphic nanowire networks as stochastic dynamical systems\"",
+      "authors": [
+        "Renat T. Sibatov",
+        "Polina O. Ksenofontova"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "117d25abd8f39c0778059f458595f52c05f1c3e86f36fe99b6633edf20e534bb",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77954-7",
+      "author_retrieved_at": "2026-11-10T00:36:04.059274+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-09",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-09",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-09",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-77954-7"
+        ],
+        "basis_detail": "Actual official dated page and frozen current publisher directory checked; accepted date is not a publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-09",
+      "article_type": "Matters Arising",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Matters Arising",
+        "basis": "Actual official scientific short-comment type and complete accessible body read under frozen policy exception.",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-77954-7"
+        ]
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A scientific Comment reanalyzes memristive nanowire conductance, identifying non-Markovian relaxation, correlated jump intervals and noise–jump compensation that challenge independent jump-diffusion assumptions.",
+      "note_zh": "科学评论重新分析忆阻纳米线网络电导，指出非马尔可夫弛豫、相关跳跃等待时间及噪声—跳跃补偿，质疑独立跳扩散近似。",
+      "scope_authority": "assistant_online_short_comment_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "42ea87a31a6b3329c57eda67a98b121d986b485315cf0c8a7c0cfbd240676c4a",
+      "input_sha256": "0b43201756de067af3a347173122513af719cf0d08904c49a8e00d22c5b476cd",
+      "material_sha256": null,
+      "review_evidence_kind": "online_short_comment",
+      "review_basis": "official short comment read online under user-authorized no-abstract exception; brief observation retained, no full text stored; assistant screening",
+      "review_evidence_sha256": "c111d0e47c8cb82a466bc9912197baa556365188848aa683f55bc868f32c96a6",
+      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
+      "featured": "NC",
+      "evidence": [
+        "Reanalysis of memristive nanowire-network conductance identifies non-Markovian relaxation, correlated jump waiting times and compensatory noise-jump coupling. The scientific Comment directly challenges network-dynamics modeling assumptions and motivates a fractional-memory description."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-77954-7",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-77954-7",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/8sqq-6mym",
       "url": "https://doi.org/10.1103/8sqq-6mym",
@@ -12613,80 +13798,6 @@
       }
     },
     {
-      "doi": "10.1103/4tf9-n1zn",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/4tf9-n1zn",
-      "title": "Boltzmann-like occupation of nonequilibrium steady states on dense disordered networks",
-      "authors": [
-        "Jacob Calvert"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "5c0fb8f4f5c1b57c1dc75ddeb2fa49fd34a3f48f202f6b8264bf174af05856b6",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2F4tf9-n1zn",
-      "author_retrieved_at": "2026-10-28T02:09:37.209085+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-27",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-27",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "accepted_date": "2026-10-27"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-27",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "e2c7345a9d7e8a32582399217ad4d0f26baa6b959bfd27c8f8e52253c7501b9b",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "The matching official abstract states new proofs for network steady-state occupations and asymptotic low-rattling behavior; no special-type evidence conflicts with original research.",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/4tf9-n1zn"
-        ]
-      },
-      "categories": [
-        "network_collective",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Dense disordered networks show Boltzmann-like occupations in nonequilibrium steady states, linking slow escape and steady-state probability.",
-      "note_zh": "稠密无序网络上的非平衡稳态占据呈现 Boltzmann-like 分布，低 rattling 渐近规律连接状态逃逸与稳态概率。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "6870b73d936d44d05154143be5be6860c990d27d307b120f4018cec678ba90ee",
-      "input_sha256": "669f83eea0e23eaa414a184429f956fbee605fc5b3db89877e97c7ef087582aa",
-      "material_sha256": "e2c7345a9d7e8a32582399217ad4d0f26baa6b959bfd27c8f8e52253c7501b9b",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "e2c7345a9d7e8a32582399217ad4d0f26baa6b959bfd27c8f8e52253c7501b9b",
-      "rule_sha256": "fc0d1d701d2bd24a253780757918e8b963464690b8ef0feaa7899f5d1bf35e4c",
-      "featured": null,
-      "evidence": [
-        "Dense disordered networks support nonequilibrium steady states with Boltzmann-like occupations and asymptotically exact low-rattling behavior."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F4tf9-n1zn",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/4tf9-n1zn",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1073/pnas.2610672123",
       "url": "https://doi.org/10.1073/pnas.2610672123",
       "title": "Viral metagenomics reveals heterogeneity in mammalian virus hosting, sharing, and spillover",
@@ -13719,80 +14830,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78646-y",
       "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78646-y",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/pgt1-cs46",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/pgt1-cs46",
-      "title": "Resetting-based designated information distribution",
-      "authors": [
-        "Xiaojuan Ma",
-        "Yan Wang",
-        "Indranil Gupta"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "a53c62977ae2fc6922c2df5c58e549bf278caaf305ccd562a464c21ef9fa8f1f",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fpgt1-cs46",
-      "author_retrieved_at": "2026-10-24T01:59:20.523648+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-23",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-23",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-23",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "2b5332d68d94ef8e663faf754c3c486965433c356032e90eead1d05cf6391bf4",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/pgt1-cs46"
-        ],
-        "basis": "The identity-matched abstract describes an original study centered on a network object or network protocol; no special-type conflict was observed.",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_resilience",
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Adds resetting to network gossip dynamics and derives asymptotic allocation, convergence speed and confidence bounds.",
-      "note_zh": "在网络 gossip 动力学中加入指定节点重置，给出信息分配的渐近量、收敛速度和置信界。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "a5d2bf1cfea7b5e72244f324ad46b59cd69fbcfd11a89a17a2e1ecfe48c9f1d0",
-      "input_sha256": "019ec06625d4f2c17a0b0fe3f379b3daf59dfd9ff0783150b1b5d099a7d39c55",
-      "material_sha256": "2b5332d68d94ef8e663faf754c3c486965433c356032e90eead1d05cf6391bf4",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "2b5332d68d94ef8e663faf754c3c486965433c356032e90eead1d05cf6391bf4",
-      "rule_sha256": "67beeb629296606336c01ab94968d137b05969bb25da3eb87bcf877e02dd582f",
-      "featured": null,
-      "evidence": [
-        "The abstract formulates resetting-based information distribution for network gossip dynamics and analyzes convergence and network control."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fpgt1-cs46",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/pgt1-cs46",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -18363,79 +19400,6 @@
         "previous_assessment_sha256": "5a07f677445510c0125dc39a02a5e3b899ff8385d8e6f053b186383b2e16cf10",
         "assessment_sha256": "3a63f68aca8f7ff700bfa9689058c31eff3d0531e3bc72a044c35b00cd257bc9"
       }
-    },
-    {
-      "doi": "10.1103/wlyc-rtgs",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/wlyc-rtgs",
-      "title": "Promotion of cooperation in deme-structured populations with growth-merging dynamics",
-      "authors": [
-        "Damien Ribiére",
-        "Alia Abbara",
-        "Anne-Florence Bitbol"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "e8ee29324038f180110cc7c593c8d31e8e87c0003cb54b3c83cec82cf000ac8c",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fwlyc-rtgs",
-      "author_retrieved_at": "2026-10-15T00:49:54.065618+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-14",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-14",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-14",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "b45b0bced09e97a2289072243625872037ca71b59cb3f7d44946927d691e33a4",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/wlyc-rtgs"
-        ],
-        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Derives conditions for hard selection to promote cooperation and fixation in deme-structured populations undergoing growth, merging and dilution.",
-      "note_zh": "解析生长、合并与稀释的团体结构种群中，硬选择促进合作和固定的条件。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "2e86e9235a88e9a0b52a92cc924672574aaedac0a2d11b7b784e96c3724b18d7",
-      "input_sha256": "0cbd0b6d3f725f72f5e4e287cbda32458dd9e4afb0704cdb90510f0ecd4b1595",
-      "material_sha256": "b45b0bced09e97a2289072243625872037ca71b59cb3f7d44946927d691e33a4",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "b45b0bced09e97a2289072243625872037ca71b59cb3f7d44946927d691e33a4",
-      "rule_sha256": "c097deb524a14537f9b9a702fb17f89145d368973af73030e912dd33db0f266d",
-      "featured": null,
-      "evidence": [
-        "Hard-selection growth-merging cycles on fully connected demes yield analytical cooperation and fixation criteria under weak selection."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fwlyc-rtgs",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/wlyc-rtgs",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
     },
     {
       "doi": "10.1103/rvlj-fmf9",
@@ -25312,94 +26276,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/23wf-kb12",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/23wf-kb12",
-      "title": "Self-learning mechanical circuits",
-      "authors": [
-        "Vishal P. Patil",
-        "Ian Ho",
-        "Manu Prakash"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "3504d75e3c6e425234a8aff6dae6cfe9cdaf60b610366f75272eae3a6d8d00f4",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/23wf-kb12",
-      "author_retrieved_at": "2026-10-04T05:39:23.517Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-24",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-24",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/23wf-kb12"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-24",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要提出自适应有向弹簧学习网络并结合理论与实验研究架构依赖稳定性，无特殊类型冲突。",
-        "material_sha256": "b9efd6f824dd04baafd43233fdce4964972fb17037f25d62eaffced7da328077",
-        "abstract_sha256": "7b68baec64e3d707fae74e168d5dde00e37af5cf7f081ac522b482e5efd75431",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/23wf-kb12"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/23wf-kb12"
-          ]
-        }
-      },
-      "categories": [
-        "network_collective",
-        "network_resilience"
-      ],
-      "scope_class": "core",
-      "note_en": "Adaptive directed springs enable mechanical networks to learn input patterns, with stability depending on network architecture.",
-      "note_zh": "自适应有向弹簧使机械网络学习输入模式，其稳定性依赖网络架构。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "02bf28050822664fff7015091edccdcc5d497efe1071109aa453027945e2bf7a",
-      "assessment_sha256": "02bf28050822664fff7015091edccdcc5d497efe1071109aa453027945e2bf7a",
-      "input_sha256": "a2b4fef07a0612223e072135f2894db5ed31ade42dda976852d6a7d701cf6e3a",
-      "material_sha256": "b9efd6f824dd04baafd43233fdce4964972fb17037f25d62eaffced7da328077",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "b9efd6f824dd04baafd43233fdce4964972fb17037f25d62eaffced7da328077",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Adaptive directed-spring networks update internal states, achieve architecture-dependent stability and autonomously detect patterns in external inputs."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F23wf-kb12",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/23wf-kb12",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/xsyr-d79f",
       "url": "https://doi.org/10.1103/xsyr-d79f",
       "title": "Extended-range percolation for neighborhoods of rectangular shape on square lattice",
@@ -26933,92 +27809,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-76416-4",
       "evidence_url": "https://www.nature.com/articles/s41467-026-76416-4",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/3zrx-56mx",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/3zrx-56mx",
-      "title": "Largest connected component in duplication-divergence growing graphs with symmetric coupled divergence",
-      "authors": [
-        "Dario Borrelli"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "10556bea1c683a90af8cbffbfd3d4704e8fa4151327f23adf74b97824f53983c",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/3zrx-56mx",
-      "author_retrieved_at": "2026-10-04T05:38:17.321Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-16",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-16",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/3zrx-56mx"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-16",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要分析复制—分化增长图的最大连通分量转变和有限规模标度，无特殊类型冲突。",
-        "material_sha256": "194a6c2139fd67123660f74dfafe6e993915b3f14b3f24768bf81d4587650bf1",
-        "abstract_sha256": "7d6724f84316a1dc16f6861d9235584e0ec295a6f48c3bfd2f9fdc2c4f521bfe",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/3zrx-56mx"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/3zrx-56mx"
-          ]
-        }
-      },
-      "categories": [
-        "network_structure",
-        "network_spreading"
-      ],
-      "scope_class": "core",
-      "note_en": "Duplication-divergence graph growth links largest-component transitions to Euler characteristics and scaling of degree-distribution moments.",
-      "note_zh": "复制—分化图增长将最大连通分量转变与欧拉示性数及度分布矩标度联系起来。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "fb9049832b5a49f5f43291f616885655f7764467982eaf47b30d58811ce666bc",
-      "assessment_sha256": "fb9049832b5a49f5f43291f616885655f7764467982eaf47b30d58811ce666bc",
-      "input_sha256": "b74248b49d91e3aaf601f21a98c962fa4ff23afb9dc270daa4e9c8d0a222dc66",
-      "material_sha256": "194a6c2139fd67123660f74dfafe6e993915b3f14b3f24768bf81d4587650bf1",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "194a6c2139fd67123660f74dfafe6e993915b3f14b3f24768bf81d4587650bf1",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Duplication-divergence graph growth exhibits largest-component transitions linked to Euler characteristics and degree-moment scaling."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F3zrx-56mx",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/3zrx-56mx",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -33353,9 +34143,209 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "7f63e5d4baed3ffd1b836c1058d890e8c2719d323a68c1151fb9e02c94dec174"
+    },
+    {
+      "current_run": "reports/runs/2026-11-08-to-10-science-backfill-01",
+      "candidate_sha256": "1076af1b965e7b6acde533fa2096f73c7b9a09c302f17c5e8c65b17b4e48fc8b",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df"
+      },
+      "counts": {
+        "in_window": 1,
+        "newly_reviewed": 1,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "aef46d975ebf43551b3d98463cfbb8bd814d5aefa1c2a0c493976488248a39bf"
+    },
+    {
+      "current_run": "reports/runs/2026-11-09-to-10-02",
+      "candidate_sha256": "6f69509d40fcf43b97d1296d54be430af3a942b835add1960536685a0ed82348",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c"
+      },
+      "counts": {
+        "in_window": 121,
+        "newly_reviewed": 91,
+        "historically_reviewed": 127,
+        "state_updates": 28,
+        "categories": {
+          "excluded": 110,
+          "core": 11
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "0e07a870205760872ce861e4d4d61c4d58cb0bbdbae3838b7ebcf2fc40d59e3c"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1073/pnas.2631011123",
+      "recommended_on": "2026-11-10",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-09-to-10-02",
+      "publication_sha256": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+      "assessment_sha256": "daee9edf3e78b6e0fc0d6b9deb57ed1261c60f44c250c6a0ced02a9d04fac250",
+      "input_sha256": "666fff6db5438df2bd571b3ebc6df23df89359e3299e101207aae0d87e9273ea",
+      "evidence_sha256": "3436f16de8b55c2bb43a2d33493cd584ea0ef5c246aa668b5bedb83408806300",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-10T00:37:48.397597+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2631011123",
+        "title": "Coevolution of social network structure and life history in toothed whales",
+        "sha256": "ef674340234f4ffb3190a4a22c999d60db1050e0a791e6e3758262da93504d41",
+        "version": "PNAS 123, e2631011123 (2026), publisher version of record, published November 9 2026",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2631011123",
+        "source_kind": "publisher_fulltext",
+        "pages": 10,
+        "reviewed_at": "2026-11-10T00:37:48.397597+00:00",
+        "read_scope": "All ten publisher pages: introduction, results, discussion, methods and references. All four main figures/captions visually checked on rendered pp.3–5. Supplementary appendix and analysis repository not independently read; no replication."
+      },
+      "question": {
+        "zh": "齿鲸的社会网络，如何与寿命和体型一起演化？",
+        "en": "How do toothed-whale social networks evolve alongside lifespan and body size?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把“社会性”拆成两个可以比较的网络特征：群体是否分成稳定小群，以及个体关系的强弱有多不均。二者相关，却不能互相替代；抹香鲸的高模块度与中等关系分化就是有用的反例。",
+          "文章把文献中的网络测量放进系统发育多层模型，并单独检查网络规模、采样时长和种内差异。值得借鉴的是比较设计和不确定性的处理；动态模型给出的演化方向提示仍需谨慎理解，不能直接当作已证实的因果机制。"
+        ],
+        "en": [
+          "This pick turns sociality into two comparable network traits: division into stable units and heterogeneity of pairwise relationships. They covary but are not interchangeable; sperm whales combine exceptionally high modularity with moderate relationship differentiation.",
+          "The authors place published network measurements in phylogenetic multilevel models and separately examine network size, sampling duration and within-species variation. The reusable lesson is the comparison design and treatment of uncertainty; evolutionary direction from the dynamic model remains a cautious inference, not an established causal mechanism."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "分开衡量两种社会复杂性",
+            "en": "Measure two kinds of social complexity separately"
+          },
+          "text": {
+            "zh": "模块度Q衡量群体分区，关系分化S衡量成对联系的变异。图2的跨物种比较显示，仅看群体大小或单一指标会遗漏重要的组织差异。",
+            "en": "Modularity Q measures divisions, while social differentiation S measures variability in pairwise ties. Figure 2 shows why group size or a single metric can miss organizational differences."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较网络之前先处理可比性",
+            "en": "Address comparability before comparing networks"
+          },
+          "text": {
+            "zh": "作者筛查种群尺度和时空重复，保留种群、物种、系统发育与关系指数的层次差异，并用规模和采样时长作稳健性对照。这些设计比简单跨物种相关更可复用。",
+            "en": "Population-scale selection, overlap screening and varying effects for population, species, phylogeny and association index address comparability; size and sampling-duration checks probe robustness beyond a simple cross-species correlation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分相关演化与方向推断",
+            "en": "Separate correlated evolution from directional inference"
+          },
+          "text": {
+            "zh": "较长寿、体型较大的齿鲸通常有更模块化的网络；动态模型另检验时间先后。多数方向效应不确定，模块度指向体长的证据在取对数后减弱，提醒我们报告变换敏感性。",
+            "en": "Longer-lived, larger toothed whales tend to have more modular networks. Dynamic models separately test temporal direction; most effects are uncertain, and the modularity-to-body-length signal weakens after log transformation."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究动物社会网络、跨系统网络比较、网络测量与演化动力学的读者。",
+        "en": "Readers studying animal social networks, comparative network analysis, network measurement and evolutionary dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部10页正文、方法与参考文献，并渲染核对4张主图。数据覆盖23种齿鲸，受海岸近岸采样、种群边界、关系指数和观测误差影响；系统发育、祖先体长及动态演化模型含假设，多数方向效应不确定。补充材料和代码未独立审读，未复现分析；不能推广为所有动物社会的确定因果规律。",
+        "en": "Read all ten publisher pages, methods and references, with visual checks of all four main figures. The 23-species sample is affected by coastal sampling, population boundaries, association indices and measurement error. Phylogenetic, ancestral-size and dynamic-evolution assumptions matter; most directional effects remain uncertain. Supplement and code were not independently read or analyses reproduced; this is not a universal causal law for animal societies."
+      }
+    },
     {
       "doi": "10.1103/mzgk-nx4w",
       "recommended_on": "2026-11-09",
@@ -38642,6 +39632,84 @@
       }
     },
     {
+      "doi": "10.1073/pnas.2631011123",
+      "recommended_on": "2026-11-10",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-09-to-10-02",
+      "publication_sha256": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+      "assessment_sha256": "daee9edf3e78b6e0fc0d6b9deb57ed1261c60f44c250c6a0ced02a9d04fac250",
+      "input_sha256": "666fff6db5438df2bd571b3ebc6df23df89359e3299e101207aae0d87e9273ea",
+      "evidence_sha256": "3436f16de8b55c2bb43a2d33493cd584ea0ef5c246aa668b5bedb83408806300",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-10T00:37:48.397597+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2631011123",
+        "title": "Coevolution of social network structure and life history in toothed whales",
+        "sha256": "ef674340234f4ffb3190a4a22c999d60db1050e0a791e6e3758262da93504d41",
+        "version": "PNAS 123, e2631011123 (2026), publisher version of record, published November 9 2026",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2631011123",
+        "source_kind": "publisher_fulltext",
+        "pages": 10,
+        "reviewed_at": "2026-11-10T00:37:48.397597+00:00",
+        "read_scope": "All ten publisher pages: introduction, results, discussion, methods and references. All four main figures/captions visually checked on rendered pp.3–5. Supplementary appendix and analysis repository not independently read; no replication."
+      },
+      "question": {
+        "zh": "齿鲸的社会网络，如何与寿命和体型一起演化？",
+        "en": "How do toothed-whale social networks evolve alongside lifespan and body size?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把“社会性”拆成两个可以比较的网络特征：群体是否分成稳定小群，以及个体关系的强弱有多不均。二者相关，却不能互相替代；抹香鲸的高模块度与中等关系分化就是有用的反例。",
+          "文章把文献中的网络测量放进系统发育多层模型，并单独检查网络规模、采样时长和种内差异。值得借鉴的是比较设计和不确定性的处理；动态模型给出的演化方向提示仍需谨慎理解，不能直接当作已证实的因果机制。"
+        ],
+        "en": [
+          "This pick turns sociality into two comparable network traits: division into stable units and heterogeneity of pairwise relationships. They covary but are not interchangeable; sperm whales combine exceptionally high modularity with moderate relationship differentiation.",
+          "The authors place published network measurements in phylogenetic multilevel models and separately examine network size, sampling duration and within-species variation. The reusable lesson is the comparison design and treatment of uncertainty; evolutionary direction from the dynamic model remains a cautious inference, not an established causal mechanism."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "分开衡量两种社会复杂性",
+            "en": "Measure two kinds of social complexity separately"
+          },
+          "text": {
+            "zh": "模块度Q衡量群体分区，关系分化S衡量成对联系的变异。图2的跨物种比较显示，仅看群体大小或单一指标会遗漏重要的组织差异。",
+            "en": "Modularity Q measures divisions, while social differentiation S measures variability in pairwise ties. Figure 2 shows why group size or a single metric can miss organizational differences."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较网络之前先处理可比性",
+            "en": "Address comparability before comparing networks"
+          },
+          "text": {
+            "zh": "作者筛查种群尺度和时空重复，保留种群、物种、系统发育与关系指数的层次差异，并用规模和采样时长作稳健性对照。这些设计比简单跨物种相关更可复用。",
+            "en": "Population-scale selection, overlap screening and varying effects for population, species, phylogeny and association index address comparability; size and sampling-duration checks probe robustness beyond a simple cross-species correlation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分相关演化与方向推断",
+            "en": "Separate correlated evolution from directional inference"
+          },
+          "text": {
+            "zh": "较长寿、体型较大的齿鲸通常有更模块化的网络；动态模型另检验时间先后。多数方向效应不确定，模块度指向体长的证据在取对数后减弱，提醒我们报告变换敏感性。",
+            "en": "Longer-lived, larger toothed whales tend to have more modular networks. Dynamic models separately test temporal direction; most effects are uncertain, and the modularity-to-body-length signal weakens after log transformation."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究动物社会网络、跨系统网络比较、网络测量与演化动力学的读者。",
+        "en": "Readers studying animal social networks, comparative network analysis, network measurement and evolutionary dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部10页正文、方法与参考文献，并渲染核对4张主图。数据覆盖23种齿鲸，受海岸近岸采样、种群边界、关系指数和观测误差影响；系统发育、祖先体长及动态演化模型含假设，多数方向效应不确定。补充材料和代码未独立审读，未复现分析；不能推广为所有动物社会的确定因果规律。",
+        "en": "Read all ten publisher pages, methods and references, with visual checks of all four main figures. The 23-species sample is affected by coastal sampling, population boundaries, association indices and measurement error. Phylogenetic, ancestral-size and dynamic-evolution assumptions matter; most directional effects remain uncertain. Supplement and code were not independently read or analyses reproduced; this is not a universal causal law for animal societies."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -38721,5 +39789,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "ddc73f8cf70b336369b82bff9d377d224123ce8d9bb5567f762078db6e25eeba"
+  "daily_suggestions_sha256": "16125816f9c5e14fffe036d9cfd015440005147f754376b520cda75e19a6bfc8"
 }
