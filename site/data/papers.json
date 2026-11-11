@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-10T00:55:40.478724+00:00",
+  "generated_at": "2026-11-11T00:27:38.734745+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-10",
-  "window_days": 71,
+  "window_end": "2026-11-11",
+  "window_days": 72,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "0fee4f3deb2140781f36a3f3fedf8dada359887e51732dd06c323820d363984c",
-  "author_metadata_sha256": "8d9adc451182340ad2587cb26925af3ca655960343a04b61abff1219e5952b50",
+  "reading_notes_sha256": "57ba851f3eeb01156b96683500dc2cd16ae6434b3bb483f808cb1a79bc3a43b6",
+  "author_metadata_sha256": "d73cf87618fa4a3e9c1c21210598514819a6de2f5e231dd9967f213bb34428bf",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3068,9 +3068,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-10-to-11-01",
+      "config_sha256": "3f41febd16e94cac586b5b2f14db10f98018ee530ae089aecbd3c5e7c2f078ea",
+      "window_start": "2026-11-10",
+      "window_end": "2026-11-11",
+      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+      "screening_log_sha256": "5a531d3475039f3aa60f94d621e5434e430791137477e6001e2c5fae2704001a",
+      "candidate_sha256": "d81d9e0e85603eb1558e915ff608be3d7b9b9563ec4e16e7accf1149cee1269f",
+      "author_metadata_sha256": "38f849e5aa424e18b476b0d82f07ca3e25d70d486d7166d1bb5bf37928677838",
+      "run_manifest_sha256": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-10-to-11-01",
+          "files": {
+            "candidates.json": "d81d9e0e85603eb1558e915ff608be3d7b9b9563ec4e16e7accf1149cee1269f",
+            "coverage.json": "e9af48698bbdf70d9933163de0a2fa3be8f87dadd949549c5de7dcfa584a8054",
+            "collection-log.jsonl": "bdfa1d31bdaac8fbb99916a2061b48e2757b507827a866f8d3dc6afd9f4a8713",
+            "screening-log.jsonl": "dcdcdd341940a60bc7b3a95d7f5626d8a32d4a9af3d8ec97a050870fc1d62e35",
+            "inputs/manifest.json": "84b1992d250281c5eed5c0c9f05476f18414527c67bd3435aa7855aed96c2004",
+            "inputs/sources.json": "d6b51ddaf2ca0564aa4dd8c344974bc3726f2ffa4fa425f16421f303e3371ed4",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "d81d9e0e85603eb1558e915ff608be3d7b9b9563ec4e16e7accf1149cee1269f",
+          "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+          "screening_log_sha256": "5a531d3475039f3aa60f94d621e5434e430791137477e6001e2c5fae2704001a"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "38f849e5aa424e18b476b0d82f07ca3e25d70d486d7166d1bb5bf37928677838",
+          "audit": {
+            "path": "reports/runs/2026-11-10-to-11-01/screening-log.jsonl",
+            "sha256": "dcdcdd341940a60bc7b3a95d7f5626d8a32d4a9af3d8ec97a050870fc1d62e35"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "d5b11e3938cbfdee716a78d572538792e84df7a2c6bea7d34ed51b97649e03fa"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 306,
+  "author_available_count": 311,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3220,8 +3264,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 885,
-      "publisher_verified_inventory_count": 885,
+      "candidate_count": 897,
+      "publisher_verified_inventory_count": 897,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3582,6 +3626,15 @@
           "journal": "Nature",
           "candidate_count": 9,
           "publisher_verified_inventory_count": 9,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "Nature",
+          "candidate_count": 12,
+          "publisher_verified_inventory_count": 12,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -3953,13 +4006,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2014,
-      "publisher_verified_inventory_count": 2007,
+      "candidate_count": 2026,
+      "publisher_verified_inventory_count": 2019,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4311,6 +4373,15 @@
           "journal": "NC",
           "candidate_count": 19,
           "publisher_verified_inventory_count": 19,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "NC",
+          "candidate_count": 12,
+          "publisher_verified_inventory_count": 12,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4673,6 +4744,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5033,13 +5113,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 99,
-      "publisher_verified_inventory_count": 99,
+      "candidate_count": 100,
+      "publisher_verified_inventory_count": 100,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5393,13 +5482,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "PRX",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 814,
-      "publisher_verified_inventory_count": 814,
+      "candidate_count": 824,
+      "publisher_verified_inventory_count": 824,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5751,6 +5849,15 @@
           "journal": "PRL",
           "candidate_count": 28,
           "publisher_verified_inventory_count": 28,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "PRL",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6113,13 +6220,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 986,
-      "publisher_verified_inventory_count": 986,
+      "candidate_count": 1003,
+      "publisher_verified_inventory_count": 1003,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6473,13 +6589,22 @@
           "publisher_verified_inventory_count": 25,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "PNAS",
+          "candidate_count": 17,
+          "publisher_verified_inventory_count": 17,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 116,
-      "publisher_verified_inventory_count": 116,
+      "candidate_count": 118,
+      "publisher_verified_inventory_count": 118,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6833,13 +6958,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "CP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 438,
-      "publisher_verified_inventory_count": 438,
+      "candidate_count": 443,
+      "publisher_verified_inventory_count": 443,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7193,13 +7327,22 @@
           "publisher_verified_inventory_count": 8,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "PRResearch",
+          "candidate_count": 10,
+          "publisher_verified_inventory_count": 10,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 560,
-      "publisher_verified_inventory_count": 560,
+      "candidate_count": 571,
+      "publisher_verified_inventory_count": 571,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7553,13 +7696,22 @@
           "publisher_verified_inventory_count": 20,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "PRE",
+          "candidate_count": 15,
+          "publisher_verified_inventory_count": 15,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 121,
-      "publisher_verified_inventory_count": 121,
+      "candidate_count": 124,
+      "publisher_verified_inventory_count": 124,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7913,6 +8065,15 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "Chaos",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -8228,40 +8389,44 @@
           "publisher_verified_inventory_count": 5,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-10",
+          "window_end": "2026-11-11",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7468,
+  "candidate_count": 7541,
   "screening_counts": {
-    "excluded": 7162,
-    "core": 276,
+    "excluded": 7230,
+    "core": 281,
     "transferable_application": 30,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 306
+    "included": 311
   },
-  "published_count": 268,
-  "accepted_count": 38,
+  "published_count": 269,
+  "accepted_count": 42,
   "latest_update": {
-    "run": "reports/runs/2026-11-09-to-10-02",
-    "reviewed_at": "2026-11-10T00:51:19.546610+00:00",
-    "newly_included_count": 6,
+    "run": "reports/runs/2026-11-10-to-11-01",
+    "reviewed_at": "2026-11-11T00:22:09.068280+00:00",
+    "newly_included_count": 5,
     "newly_included_dois": [
-      "10.1038/s41467-026-77954-7",
-      "10.1073/pnas.2631011123",
-      "10.1103/2hcb-wyvc",
-      "10.1103/dm26-5l3l",
-      "10.1103/nck7-lpc7",
-      "10.1103/scdp-4dsj"
+      "10.1103/67cd-tpzb",
+      "10.1103/6873-nqff",
+      "10.1103/html-hr8z",
+      "10.1103/m49t-nsyx",
+      "10.1103/zff5-ldcy"
     ],
-    "accepted_to_published_count": 5,
+    "accepted_to_published_count": 1,
     "accepted_to_published_dois": [
-      "10.1103/23wf-kb12",
-      "10.1103/3zrx-56mx",
-      "10.1103/4tf9-n1zn",
-      "10.1103/pgt1-cs46",
-      "10.1103/wlyc-rtgs"
+      "10.1103/n8xm-bm44"
     ]
   },
   "candidate_inventory_complete": false,
@@ -8272,6 +8437,500 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/zff5-ldcy",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/zff5-ldcy",
+      "title": "Unraveling the complex evolution of epistasis in the SARS-CoV-2 spike glycoprotein",
+      "authors": [
+        "Mengqi Jia",
+        "Kaicheng Zhu",
+        "Shihong Chen",
+        "Haibin Su"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "615ee01b01996154bbbd36ef86938d402a438e076161833e484b469e410fd4ce",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fzff5-ldcy",
+      "author_retrieved_at": "2026-11-11T00:11:36.911857+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-10",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-10",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-10",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/zff5-ldcy"
+        ],
+        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-10",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "241daaa33186ade5dc082b9f71d51a682bd0ef7b49a3914e27139773b6aa0408",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/zff5-ldcy"
+        ],
+        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
+        "supporting_reason": "A punctuated tensor-decomposed pair-clustering method extracts nonlocal co-mutation networks from time-resolved viral sequences, linking cross-domain epistatic connectivity and variant-sweep dynamics to adaptive fitness landscapes."
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Extracts nonlocal co-mutation networks from viral time series, connecting cross-domain epistatic connectivity, variant sweeps and adaptive fitness landscapes. Currently accepted.",
+      "note_zh": "从病毒时间序列提取非局域共突变网络，联系跨结构域上位性连接、变体更替与适应度景观，当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "c295188df9de111178bc34ee1626c2121722e4e146b4d0f608b74c430ff63361",
+      "input_sha256": "9f1f0b71584d3688fc3c614a115986465d7d6e330dda7b64675d10ed5e15fbf8",
+      "material_sha256": "241daaa33186ade5dc082b9f71d51a682bd0ef7b49a3914e27139773b6aa0408",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "241daaa33186ade5dc082b9f71d51a682bd0ef7b49a3914e27139773b6aa0408",
+      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+      "featured": null,
+      "evidence": [
+        "A punctuated tensor-decomposed pair-clustering method extracts nonlocal co-mutation networks from time-resolved viral sequences, linking cross-domain epistatic connectivity and variant-sweep dynamics to adaptive fitness landscapes."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fzff5-ldcy",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/zff5-ldcy",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/n8xm-bm44",
+      "url": "https://doi.org/10.1103/n8xm-bm44",
+      "title": "Structure of higher-order interactions controls oscillation death and multistability in excitable networks",
+      "authors": [
+        "Shenbagavalli V",
+        "Dianavinnarasi Joseph",
+        "Suresh Kumarasamy"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4efca54592f8e88eade07ef2099722770c8173ebab752d7cd6c54efae7713f6a",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fn8xm-bm44",
+      "author_retrieved_at": "2026-11-11T00:11:28.058813+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-10",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-10",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-10-20",
+        "published_date": "2026-11-10",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/n8xm-bm44"
+        ],
+        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-20",
+      "published_date": "2026-11-10",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "505dc1b17f25faf28d1a7040d8318d83efcd5369d148bd7df9fd5642aad7482c",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/n8xm-bm44"
+        ],
+        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
+        "supporting_reason": "In FitzHugh-Nagumo small-world networks, matched numbers of simplicial and random-hypergraph three-body interactions yield different partial-quenching basins; alignment with the pairwise eigenbasis, rather than the normalized higher-order spectrum alone, explains the structural effect on multistability."
+      },
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "At matched backbone and triple count, simplicial and random-hypergraph interactions affect mixed-state basins differently; alignment between higher-order and pairwise modes explains the local-stability contrast.",
+      "note_zh": "在相同小世界骨架与三体作用数量下，单纯复形与随机超图对部分静止态和多稳态吸引域的影响不同；高阶算子与成对模态的对齐解释局部稳定性差异。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "1d229ec6b3d5f4009fa54b95057e680ad73f00fb669cbc9fdef44adff430a454",
+      "input_sha256": "ca43aba5b40160a8b6792f6f75926e596adfd87d2b6cea8853bfa3e517ebab78",
+      "material_sha256": "505dc1b17f25faf28d1a7040d8318d83efcd5369d148bd7df9fd5642aad7482c",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "505dc1b17f25faf28d1a7040d8318d83efcd5369d148bd7df9fd5642aad7482c",
+      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+      "featured": null,
+      "evidence": [
+        "In FitzHugh-Nagumo small-world networks, matched numbers of simplicial and random-hypergraph three-body interactions yield different partial-quenching basins; alignment with the pairwise eigenbasis, rather than the normalized higher-order spectrum alone, explains the structural effect on multistability."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fn8xm-bm44",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/n8xm-bm44",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-20",
+        "published_date": "2026-11-10",
+        "previous_run": "reports/runs/2026-10-20-to-21-01",
+        "source_run": "reports/runs/2026-11-10-to-11-01",
+        "audit_sha256": "ee398958a1cd8b896c1a0716629adce86288f960dbb859fa7d01170edc5cc1b1",
+        "previous_assessment_sha256": "4b52ace911af2a2d88ddaed002c694a83aa4eec69e504f70870677cb54c33d32",
+        "assessment_sha256": "1d229ec6b3d5f4009fa54b95057e680ad73f00fb669cbc9fdef44adff430a454"
+      }
+    },
+    {
+      "doi": "10.1103/m49t-nsyx",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/m49t-nsyx",
+      "title": "Micromechanical statistical model links induced nematic order to mechanical response in fiber networks",
+      "authors": [
+        "Ehud Haimov",
+        "Yoni Koren",
+        "Ayelet Lesman",
+        "Jonathan V. Selinger",
+        "Yair Shokef"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "b43ef6ecc2c09b572f0d722f993b4a292eb8022b3cb1f5bdf03123aa819e9347",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fm49t-nsyx",
+      "author_retrieved_at": "2026-11-11T00:11:35.118687+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-10",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-10",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-10",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/m49t-nsyx"
+        ],
+        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-10",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "e4d242d9287593aaa0275d7aafb168749f48a51113befc2086951ebd10d6f357",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/m49t-nsyx"
+        ],
+        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
+        "supporting_reason": "A statistical micromechanical model links fiber-network reorientation and densification to nonlinear mechanical response; network orientational organization predicts elasticity and the spatial propagation of cell-induced deformation, with discrete-network simulation comparisons."
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A statistical micromechanical model links fiber-network orientational order and densification to nonlinear mechanical response, with comparisons to discrete-network simulations. Currently accepted.",
+      "note_zh": "统计微观力学模型将纤维网络的取向有序化、致密化与非线性力学响应相联系，并与离散网络模拟比较，当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "7b18cc504282254d2c12a621be7d8022dea68363bc3e8e1e62db3ac22154d3af",
+      "input_sha256": "0fd39d3e4160a60a87f909216cc45d9fd28267e62c583e9e0095381f69504898",
+      "material_sha256": "e4d242d9287593aaa0275d7aafb168749f48a51113befc2086951ebd10d6f357",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e4d242d9287593aaa0275d7aafb168749f48a51113befc2086951ebd10d6f357",
+      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+      "featured": null,
+      "evidence": [
+        "A statistical micromechanical model links fiber-network reorientation and densification to nonlinear mechanical response; network orientational organization predicts elasticity and the spatial propagation of cell-induced deformation, with discrete-network simulation comparisons."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fm49t-nsyx",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/m49t-nsyx",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/html-hr8z",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/html-hr8z",
+      "title": "Tunable elasticity and disorder-induced auxeticity in spring networks",
+      "authors": [
+        "Junchao Huang",
+        "Jiaqi Si",
+        "Hua Tong",
+        "Ning Xu"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c65c9fbde0da35f0b2e40b8a7cdb80449c3d3c635050275ffe432fe3e62cfd45",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fhtml-hr8z",
+      "author_retrieved_at": "2026-11-11T00:11:33.399505+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-10",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-10",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-10",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/html-hr8z"
+        ],
+        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-10",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "dfb8f6472794c2f7fbe0100d45b3be3b29bc38478e83fff2edae2d38c89b89b7",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/html-hr8z"
+        ],
+        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
+        "supporting_reason": "Controlled geometric and bond-flipping disorder in two-dimensional spring networks changes non-affine deformation, elasticity and Poisson ratio; disrupting Delaunay connectivity provides a structural mechanism for robust auxeticity."
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Geometric distortion and bond flipping reshape non-affine response and Poisson ratio in two-dimensional spring networks; disrupting Delaunay connectivity enables tunable elasticity and auxeticity. Currently accepted.",
+      "note_zh": "二维弹簧网络中，几何扰动与键翻转改变非仿射形变及泊松比；破坏Delaunay连接提供调节弹性与负泊松比的结构途径，当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "bac62510b1d293afd48ae2a60815d863ce9f5e7563a60d3d40e71a0ff00fa906",
+      "input_sha256": "aaa946a30f382627c0c5f095f04d07fcbedce22c0e4289cbd2b73d01a067784c",
+      "material_sha256": "dfb8f6472794c2f7fbe0100d45b3be3b29bc38478e83fff2edae2d38c89b89b7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "dfb8f6472794c2f7fbe0100d45b3be3b29bc38478e83fff2edae2d38c89b89b7",
+      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+      "featured": null,
+      "evidence": [
+        "Controlled geometric and bond-flipping disorder in two-dimensional spring networks changes non-affine deformation, elasticity and Poisson ratio; disrupting Delaunay connectivity provides a structural mechanism for robust auxeticity."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhtml-hr8z",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/html-hr8z",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/6873-nqff",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/6873-nqff",
+      "title": "Fast neural noise stabilizes associative memory against slow synaptic noise",
+      "authors": [
+        "Tomoki Kurikawa",
+        "Kunihiko Kaneko"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "29d3c53eac6140843b59b62a0a14f1a7e90cc43752aa409340266f09d9b00c19",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F6873-nqff",
+      "author_retrieved_at": "2026-11-11T00:11:29.745520+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-10",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-10",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-10",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/6873-nqff"
+        ],
+        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-10",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "f83163213785eb7ac9a22b9a1219fc3bef64b5f6ba8424c0634ecfcbf5fa99b4",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/6873-nqff"
+        ],
+        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
+        "supporting_reason": "An adiabatic mean-field treatment of associative-memory networks separates fast neural from slow synaptic noise: intermediate neural fluctuations stabilize memories against structural perturbations, while synaptic variability degrades recall."
+      },
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Fast neural noise stabilizes associative memories against slow synaptic perturbations; mean-field analysis links stability-factor distributions to recall at intermediate noise. Currently accepted.",
+      "note_zh": "联想记忆网络中，快速神经噪声可抵抗慢速突触扰动并稳定记忆；平均场分析联系稳定性分布与中等噪声下的回忆表现，当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "52ccec9e19a8628d5ab9742afa5fff6d9efe43b5b8dc19241d154583442f91f9",
+      "input_sha256": "0cfc459ff5aa30f0172966815bce9a554b560ee63c3aebe840ac04f05f9db20a",
+      "material_sha256": "f83163213785eb7ac9a22b9a1219fc3bef64b5f6ba8424c0634ecfcbf5fa99b4",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "f83163213785eb7ac9a22b9a1219fc3bef64b5f6ba8424c0634ecfcbf5fa99b4",
+      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+      "featured": null,
+      "evidence": [
+        "An adiabatic mean-field treatment of associative-memory networks separates fast neural from slow synaptic noise: intermediate neural fluctuations stabilize memories against structural perturbations, while synaptic variability degrades recall."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F6873-nqff",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/6873-nqff",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/67cd-tpzb",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/67cd-tpzb",
+      "title": "Antihyperuniformity in point processes associated with nucleation and growth",
+      "authors": [
+        "J. M. Rickman"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "c00c976cb649bec858c635fd34e980add016868b339090586adbd2d2a0799e15",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F67cd-tpzb",
+      "author_retrieved_at": "2026-11-11T00:11:31.528469+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-10",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-10",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-10",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/67cd-tpzb"
+        ],
+        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-10",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "95f59f32cd186abb8524024fd35f69b957bf59217756243ed6c3a1314bb39a1c",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/67cd-tpzb"
+        ],
+        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
+        "supporting_reason": "Nucleation-and-growth point processes connect large-scale clustering and antihyperuniformity to key Laplacian eigenvalues of the resulting microstructure networks, linking geometric organization to network spectral properties."
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Studies antihyperuniform point processes in nucleation and growth, linking large-scale clustering to Laplacian spectral properties of the resulting microstructure networks. Currently accepted.",
+      "note_zh": "研究成核与生长中的反超均匀点过程，并将大尺度聚集特征联系到所形成微结构网络的拉普拉斯谱，当前为接收稿。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "c3bfa5a2e4553a1ffbb8b8145dca200a2d8d7255b0c64b0ee02b608725dcff11",
+      "input_sha256": "43b90d382d14aea8bcf8eafcb0b42cc1ee94edad893285b59b61486307746e16",
+      "material_sha256": "95f59f32cd186abb8524024fd35f69b957bf59217756243ed6c3a1314bb39a1c",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "95f59f32cd186abb8524024fd35f69b957bf59217756243ed6c3a1314bb39a1c",
+      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
+      "featured": null,
+      "evidence": [
+        "Nucleation-and-growth point processes connect large-scale clustering and antihyperuniformity to key Laplacian eigenvalues of the resulting microstructure networks, linking geometric organization to network spectral properties."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F67cd-tpzb",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/67cd-tpzb",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/wlyc-rtgs",
       "url": "https://doi.org/10.1103/wlyc-rtgs",
@@ -16623,82 +17282,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78717-0",
       "evidence_url": "https://www.nature.com/articles/s41467-026-78717-0",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/n8xm-bm44",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/n8xm-bm44",
-      "title": "Structure of higher-order interactions controls oscillation death and multistability in excitable networks",
-      "authors": [
-        "V Shenbagavalli",
-        "Dianavinnarasi Joseph",
-        "Suresh Kumarasamy"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "23b5bbdb2b7583282e854954b5d9dd18be089a84c3aa4f5e1184bd0f20f14ab3",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fn8xm-bm44",
-      "author_retrieved_at": "2026-10-21T00:45:53.719949+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-10-20",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-20",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "accepted_date": "2026-10-20",
-        "published_date": null
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-20",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "685fe6145d808a35276e6c372d5a1998ff609fc29fa09f5ca82852c1cb7db7d0",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "Matching explicit abstract states an original research question, method or analysis and results; title and publisher metadata show no special-type conflict.",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/n8xm-bm44"
-        ]
-      },
-      "categories": [
-        "network_collective",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Higher-order organization and spectral alignment control oscillation death and multistability on a fixed pairwise backbone.",
-      "note_zh": "在相同二体骨架与三体数量下，高阶连接组织及谱对齐控制振荡死亡和多稳态吸引域。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "4b52ace911af2a2d88ddaed002c694a83aa4eec69e504f70870677cb54c33d32",
-      "input_sha256": "1a4830b23337342f81f38202e4673e4afb3b24c182c955b9da7e99841cd6a8f7",
-      "material_sha256": "685fe6145d808a35276e6c372d5a1998ff609fc29fa09f5ca82852c1cb7db7d0",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "685fe6145d808a35276e6c372d5a1998ff609fc29fa09f5ca82852c1cb7db7d0",
-      "rule_sha256": "fb4769628acd51d94d7fefcb7ac6a8dbc22ea3c44063cfc1bae6c32e1c285314",
-      "featured": null,
-      "evidence": [
-        "Matched higher-order structures produce sharply different oscillation-death and multistability basins through eigenbasis alignment."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fn8xm-bm44",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/n8xm-bm44",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -34265,9 +34848,150 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "0e07a870205760872ce861e4d4d61c4d58cb0bbdbae3838b7ebcf2fc40d59e3c"
+    },
+    {
+      "current_run": "reports/runs/2026-11-10-to-11-01",
+      "candidate_sha256": "d81d9e0e85603eb1558e915ff608be3d7b9b9563ec4e16e7accf1149cee1269f",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280"
+      },
+      "counts": {
+        "in_window": 90,
+        "newly_reviewed": 73,
+        "historically_reviewed": 114,
+        "state_updates": 17,
+        "categories": {
+          "excluded": 84,
+          "core": 6
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "ee398958a1cd8b896c1a0716629adce86288f960dbb859fa7d01170edc5cc1b1"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/n8xm-bm44",
+      "recommended_on": "2026-11-11",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-10-to-11-01",
+      "publication_sha256": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+      "assessment_sha256": "1d229ec6b3d5f4009fa54b95057e680ad73f00fb669cbc9fdef44adff430a454",
+      "input_sha256": "ca43aba5b40160a8b6792f6f75926e596adfd87d2b6cea8853bfa3e517ebab78",
+      "evidence_sha256": "505dc1b17f25faf28d1a7040d8318d83efcd5369d148bd7df9fd5642aad7482c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-11T00:14:34.060737+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/n8xm-bm44",
+        "title": "Structure of higher-order interactions controls oscillation death and multistability in excitable networks",
+        "sha256": "16a784e69c5ecdbb853f61f8429e947537ce790a9ac45073f6a0f28c4f58d184",
+        "version": "Phys. Rev. E 114, 054212 (2026), publisher version of record, published November 10, 2026",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/n8xm-bm44",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-11T00:14:34.060737+00:00",
+        "read_scope": "All 13 publisher pages, main text, methods, theory, discussion and references; all 11 figures/captions visually checked on rendered pages 2, 5, 6, 7, 8, 10 and 11. No supplementary files or independent reproduction."
+      },
+      "question": {
+        "zh": "同样数量的三体作用，为什么一种连接保留共存，另一种却将它抹去？",
+        "en": "Why can the same number of three-body interactions preserve coexistence in one structure and remove it in another?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选这篇刚正式发表的馆藏，是因为它把“高阶作用更强”拆成两个可检验的问题：有效作用强度是否相当，以及三体究竟放在哪里。相同骨架、相同三体数量和相同初值的配对比较，让结构差异更容易解释。",
+          "尤其值得读的是图10与图11：保持谱不变的算子变换检验局部稳定性，直接采样再衡量吸引域。二者互相补充，不能用同步更稳定直接推断所有静止态吸引域都更小。"
+        ],
+        "en": [
+          "This newly published collection pick separates effective coupling strength from where the triples are placed. Paired comparisons keep the backbone, triple count and initial conditions fixed, making the structural contrast interpretable.",
+          "Figures 10 and 11 are especially useful: spectrum-preserving operator transformations diagnose local stability, while direct sampling measures basins. These complement each other; stronger synchronous stability alone does not establish smaller basins for every quenched state."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把结构和强度分开比较",
+            "en": "Separate structure from effective strength"
+          },
+          "text": {
+            "zh": "主比较固定骨架和三体数量；均场与全局三体仅作对照。三次耦合还受振幅门控，名义耦合常数相同并不代表有效强度相同。",
+            "en": "The main comparison fixes backbone and triple count; mean-field and global-triadic cases are controls. Cubic coupling is amplitude-gated, so equal nominal constants need not mean equal effective strength."
+          }
+        },
+        {
+          "heading": {
+            "zh": "关注不同阶算子的相对模态",
+            "en": "Examine alignment between coupling orders"
+          },
+          "text": {
+            "zh": "归一化后两种结构的最大高阶特征值相同，区别在它们对成对网络慢模态的阻尼。完整变分系统保留非对易算子的模态混合，而非仅比较单个谱指标。",
+            "en": "The normalized structures share their largest higher-order eigenvalue but damp slow pairwise modes differently. The full variational system retains mixing between noncommuting operators instead of relying on one spectral statistic."
+          }
+        },
+        {
+          "heading": {
+            "zh": "直接测量共存态的吸引域",
+            "en": "Measure coexistence basins directly"
+          },
+          "text": {
+            "zh": "作者区分部分静止、完全死亡与同步，按多初值统计吸引域并报告采样和网络间差异。谱保持变换是局部稳定性诊断，不是一个可实现的超图，也不能独自证明吸引域变化的因果机制。",
+            "en": "Multiple initial conditions separate partial quenching, total death and synchrony, with sampling and realization uncertainty. The spectrum-preserving transformation diagnoses local stability; it is not a realizable hypergraph or a standalone causal explanation of basin changes."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究高阶网络、同步与多稳态、结构控制，以及数值比较和稳定性分析的读者。",
+        "en": "Readers studying higher-order networks, synchronization, multistability, structural control and numerical stability analysis."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部13页及11张图。主要模型为相同FitzHugh–Nagumo单元、双通道扩散和归一化三体作用，骨架为小世界网络及环，尺度检验到80节点且部分仅一个网络实例。吸引域依赖初值分布与有限观察时长；部分静止状态的持续性不等于已证明渐近稳定。未独立取得作者数据或复现计算，不能推广为任意神经系统或所有高阶耦合。",
+        "en": "Read all 13 publisher pages and 11 figures. The model uses identical FitzHugh–Nagumo units, two diffusion channels and normalized triadic coupling on small-world networks and rings. Size checks reach 80 nodes, sometimes with one realization. Basins depend on initial conditions and finite observation horizons; persistent partial quenching does not prove asymptotic stability. Data and calculations were not independently reproduced. Results need not generalize to arbitrary neural systems or higher-order couplings."
+      }
+    },
     {
       "doi": "10.1073/pnas.2631011123",
       "recommended_on": "2026-11-10",
@@ -39710,6 +40434,84 @@
       }
     },
     {
+      "doi": "10.1103/n8xm-bm44",
+      "recommended_on": "2026-11-11",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-10-to-11-01",
+      "publication_sha256": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+      "assessment_sha256": "1d229ec6b3d5f4009fa54b95057e680ad73f00fb669cbc9fdef44adff430a454",
+      "input_sha256": "ca43aba5b40160a8b6792f6f75926e596adfd87d2b6cea8853bfa3e517ebab78",
+      "evidence_sha256": "505dc1b17f25faf28d1a7040d8318d83efcd5369d148bd7df9fd5642aad7482c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-11T00:14:34.060737+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/n8xm-bm44",
+        "title": "Structure of higher-order interactions controls oscillation death and multistability in excitable networks",
+        "sha256": "16a784e69c5ecdbb853f61f8429e947537ce790a9ac45073f6a0f28c4f58d184",
+        "version": "Phys. Rev. E 114, 054212 (2026), publisher version of record, published November 10, 2026",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/n8xm-bm44",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-11T00:14:34.060737+00:00",
+        "read_scope": "All 13 publisher pages, main text, methods, theory, discussion and references; all 11 figures/captions visually checked on rendered pages 2, 5, 6, 7, 8, 10 and 11. No supplementary files or independent reproduction."
+      },
+      "question": {
+        "zh": "同样数量的三体作用，为什么一种连接保留共存，另一种却将它抹去？",
+        "en": "Why can the same number of three-body interactions preserve coexistence in one structure and remove it in another?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选这篇刚正式发表的馆藏，是因为它把“高阶作用更强”拆成两个可检验的问题：有效作用强度是否相当，以及三体究竟放在哪里。相同骨架、相同三体数量和相同初值的配对比较，让结构差异更容易解释。",
+          "尤其值得读的是图10与图11：保持谱不变的算子变换检验局部稳定性，直接采样再衡量吸引域。二者互相补充，不能用同步更稳定直接推断所有静止态吸引域都更小。"
+        ],
+        "en": [
+          "This newly published collection pick separates effective coupling strength from where the triples are placed. Paired comparisons keep the backbone, triple count and initial conditions fixed, making the structural contrast interpretable.",
+          "Figures 10 and 11 are especially useful: spectrum-preserving operator transformations diagnose local stability, while direct sampling measures basins. These complement each other; stronger synchronous stability alone does not establish smaller basins for every quenched state."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把结构和强度分开比较",
+            "en": "Separate structure from effective strength"
+          },
+          "text": {
+            "zh": "主比较固定骨架和三体数量；均场与全局三体仅作对照。三次耦合还受振幅门控，名义耦合常数相同并不代表有效强度相同。",
+            "en": "The main comparison fixes backbone and triple count; mean-field and global-triadic cases are controls. Cubic coupling is amplitude-gated, so equal nominal constants need not mean equal effective strength."
+          }
+        },
+        {
+          "heading": {
+            "zh": "关注不同阶算子的相对模态",
+            "en": "Examine alignment between coupling orders"
+          },
+          "text": {
+            "zh": "归一化后两种结构的最大高阶特征值相同，区别在它们对成对网络慢模态的阻尼。完整变分系统保留非对易算子的模态混合，而非仅比较单个谱指标。",
+            "en": "The normalized structures share their largest higher-order eigenvalue but damp slow pairwise modes differently. The full variational system retains mixing between noncommuting operators instead of relying on one spectral statistic."
+          }
+        },
+        {
+          "heading": {
+            "zh": "直接测量共存态的吸引域",
+            "en": "Measure coexistence basins directly"
+          },
+          "text": {
+            "zh": "作者区分部分静止、完全死亡与同步，按多初值统计吸引域并报告采样和网络间差异。谱保持变换是局部稳定性诊断，不是一个可实现的超图，也不能独自证明吸引域变化的因果机制。",
+            "en": "Multiple initial conditions separate partial quenching, total death and synchrony, with sampling and realization uncertainty. The spectrum-preserving transformation diagnoses local stability; it is not a realizable hypergraph or a standalone causal explanation of basin changes."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究高阶网络、同步与多稳态、结构控制，以及数值比较和稳定性分析的读者。",
+        "en": "Readers studying higher-order networks, synchronization, multistability, structural control and numerical stability analysis."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部13页及11张图。主要模型为相同FitzHugh–Nagumo单元、双通道扩散和归一化三体作用，骨架为小世界网络及环，尺度检验到80节点且部分仅一个网络实例。吸引域依赖初值分布与有限观察时长；部分静止状态的持续性不等于已证明渐近稳定。未独立取得作者数据或复现计算，不能推广为任意神经系统或所有高阶耦合。",
+        "en": "Read all 13 publisher pages and 11 figures. The model uses identical FitzHugh–Nagumo units, two diffusion channels and normalized triadic coupling on small-world networks and rings. Size checks reach 80 nodes, sometimes with one realization. Basins depend on initial conditions and finite observation horizons; persistent partial quenching does not prove asymptotic stability. Data and calculations were not independently reproduced. Results need not generalize to arbitrary neural systems or higher-order couplings."
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -39789,5 +40591,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "16125816f9c5e14fffe036d9cfd015440005147f754376b520cda75e19a6bfc8"
+  "daily_suggestions_sha256": "559558219fac04763475f61ac4e7bfa37f7b8722f6ff6ebc8c5f51fed85b8ba4"
 }

@@ -2708,6 +2708,84 @@
         "zh": "已读正式版全部10页正文、方法与参考文献，并渲染核对4张主图。数据覆盖23种齿鲸，受海岸近岸采样、种群边界、关系指数和观测误差影响；系统发育、祖先体长及动态演化模型含假设，多数方向效应不确定。补充材料和代码未独立审读，未复现分析；不能推广为所有动物社会的确定因果规律。",
         "en": "Read all ten publisher pages, methods and references, with visual checks of all four main figures. The 23-species sample is affected by coastal sampling, population boundaries, association indices and measurement error. Phylogenetic, ancestral-size and dynamic-evolution assumptions matter; most directional effects remain uncertain. Supplement and code were not independently read or analyses reproduced; this is not a universal causal law for animal societies."
       }
+    },
+    {
+      "doi": "10.1103/n8xm-bm44",
+      "recommended_on": "2026-11-11",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-10-to-11-01",
+      "publication_sha256": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+      "assessment_sha256": "1d229ec6b3d5f4009fa54b95057e680ad73f00fb669cbc9fdef44adff430a454",
+      "input_sha256": "ca43aba5b40160a8b6792f6f75926e596adfd87d2b6cea8853bfa3e517ebab78",
+      "evidence_sha256": "505dc1b17f25faf28d1a7040d8318d83efcd5369d148bd7df9fd5642aad7482c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-11T00:14:34.060737+00:00",
+      "fulltext_review": {
+        "doi": "10.1103/n8xm-bm44",
+        "title": "Structure of higher-order interactions controls oscillation death and multistability in excitable networks",
+        "sha256": "16a784e69c5ecdbb853f61f8429e947537ce790a9ac45073f6a0f28c4f58d184",
+        "version": "Phys. Rev. E 114, 054212 (2026), publisher version of record, published November 10, 2026",
+        "source_url": "https://journals.aps.org/pre/pdf/10.1103/n8xm-bm44",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-11T00:14:34.060737+00:00",
+        "read_scope": "All 13 publisher pages, main text, methods, theory, discussion and references; all 11 figures/captions visually checked on rendered pages 2, 5, 6, 7, 8, 10 and 11. No supplementary files or independent reproduction."
+      },
+      "question": {
+        "zh": "同样数量的三体作用，为什么一种连接保留共存，另一种却将它抹去？",
+        "en": "Why can the same number of three-body interactions preserve coexistence in one structure and remove it in another?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天回选这篇刚正式发表的馆藏，是因为它把“高阶作用更强”拆成两个可检验的问题：有效作用强度是否相当，以及三体究竟放在哪里。相同骨架、相同三体数量和相同初值的配对比较，让结构差异更容易解释。",
+          "尤其值得读的是图10与图11：保持谱不变的算子变换检验局部稳定性，直接采样再衡量吸引域。二者互相补充，不能用同步更稳定直接推断所有静止态吸引域都更小。"
+        ],
+        "en": [
+          "This newly published collection pick separates effective coupling strength from where the triples are placed. Paired comparisons keep the backbone, triple count and initial conditions fixed, making the structural contrast interpretable.",
+          "Figures 10 and 11 are especially useful: spectrum-preserving operator transformations diagnose local stability, while direct sampling measures basins. These complement each other; stronger synchronous stability alone does not establish smaller basins for every quenched state."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把结构和强度分开比较",
+            "en": "Separate structure from effective strength"
+          },
+          "text": {
+            "zh": "主比较固定骨架和三体数量；均场与全局三体仅作对照。三次耦合还受振幅门控，名义耦合常数相同并不代表有效强度相同。",
+            "en": "The main comparison fixes backbone and triple count; mean-field and global-triadic cases are controls. Cubic coupling is amplitude-gated, so equal nominal constants need not mean equal effective strength."
+          }
+        },
+        {
+          "heading": {
+            "zh": "关注不同阶算子的相对模态",
+            "en": "Examine alignment between coupling orders"
+          },
+          "text": {
+            "zh": "归一化后两种结构的最大高阶特征值相同，区别在它们对成对网络慢模态的阻尼。完整变分系统保留非对易算子的模态混合，而非仅比较单个谱指标。",
+            "en": "The normalized structures share their largest higher-order eigenvalue but damp slow pairwise modes differently. The full variational system retains mixing between noncommuting operators instead of relying on one spectral statistic."
+          }
+        },
+        {
+          "heading": {
+            "zh": "直接测量共存态的吸引域",
+            "en": "Measure coexistence basins directly"
+          },
+          "text": {
+            "zh": "作者区分部分静止、完全死亡与同步，按多初值统计吸引域并报告采样和网络间差异。谱保持变换是局部稳定性诊断，不是一个可实现的超图，也不能独自证明吸引域变化的因果机制。",
+            "en": "Multiple initial conditions separate partial quenching, total death and synchrony, with sampling and realization uncertainty. The spectrum-preserving transformation diagnoses local stability; it is not a realizable hypergraph or a standalone causal explanation of basin changes."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究高阶网络、同步与多稳态、结构控制，以及数值比较和稳定性分析的读者。",
+        "en": "Readers studying higher-order networks, synchronization, multistability, structural control and numerical stability analysis."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部13页及11张图。主要模型为相同FitzHugh–Nagumo单元、双通道扩散和归一化三体作用，骨架为小世界网络及环，尺度检验到80节点且部分仅一个网络实例。吸引域依赖初值分布与有限观察时长；部分静止状态的持续性不等于已证明渐近稳定。未独立取得作者数据或复现计算，不能推广为任意神经系统或所有高阶耦合。",
+        "en": "Read all 13 publisher pages and 11 figures. The model uses identical FitzHugh–Nagumo units, two diffusion channels and normalized triadic coupling on small-world networks and rings. Size checks reach 80 nodes, sometimes with one realization. Basins depend on initial conditions and finite observation horizons; persistent partial quenching does not prove asymptotic stability. Data and calculations were not independently reproduced. Results need not generalize to arbitrary neural systems or higher-order couplings."
+      }
     }
   ],
   "revisions": [
