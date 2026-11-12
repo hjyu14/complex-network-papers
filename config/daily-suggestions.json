@@ -2786,6 +2786,84 @@
         "zh": "已读正式版全部13页及11张图。主要模型为相同FitzHugh–Nagumo单元、双通道扩散和归一化三体作用，骨架为小世界网络及环，尺度检验到80节点且部分仅一个网络实例。吸引域依赖初值分布与有限观察时长；部分静止状态的持续性不等于已证明渐近稳定。未独立取得作者数据或复现计算，不能推广为任意神经系统或所有高阶耦合。",
         "en": "Read all 13 publisher pages and 11 figures. The model uses identical FitzHugh–Nagumo units, two diffusion channels and normalized triadic coupling on small-world networks and rings. Size checks reach 80 nodes, sometimes with one realization. Basins depend on initial conditions and finite observation horizons; persistent partial quenching does not prove asymptotic stability. Data and calculations were not independently reproduced. Results need not generalize to arbitrary neural systems or higher-order couplings."
       }
+    },
+    {
+      "doi": "10.1038/s41586-026-11191-2",
+      "recommended_on": "2026-11-12",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-11-to-12-01",
+      "assessment_sha256": "324a6d5068966c543e94a15e04ddf10fa5e91fdbd183fc8806d5fa5c19ee28de",
+      "input_sha256": "24ba1a0e57ddd35edb25c6c1d035539b306befba53ca56abca06bd804e7105fb",
+      "evidence_sha256": "1a718c42e1dd2aaa1f0ec0c2354a3cc3546a5a50006b429e9ed0162edf2cfaaa",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-12T02:40:21.419731+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41586-026-11191-2",
+        "title": "Scale-rich network-based metamaterials",
+        "sha256": "40b065c68dbcd0ff5a0f6c4f37576b818fc16391485766f99c3301b1f9396735",
+        "version": "Nature 659, 345–356 (2026), publisher version of record; first online 2026-11-11",
+        "source_url": "https://www.nature.com/articles/s41586-026-11191-2.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 14,
+        "reviewed_at": "2026-11-12T02:40:21.419731+00:00",
+        "read_scope": "All 14 publisher PDF pages including main text, Methods, references and all six figure captions; rendered Figures 1–6 inspected on pages 3,4,6,8,9,10. Supplementary Information, raw data and code not independently read or reproduced."
+      },
+      "question": {
+        "zh": "当杆件不再只有一个尺度，网络材料能获得哪些可设计的性能？",
+        "en": "What can a network material gain when its ligaments span multiple scales?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络生成规则接到可制造材料：同时控制杆件长度、厚度和连接分布，再分别检验刚度、局部变形、冲击与波传播。值得借鉴的是从网络统计到物理功能的整条验证链，而不是仅凭度分布判断材料性能。",
+          "读图1时先核对图的定义：本文把杆件视为节点、交叉连接视为边。这种表示与常见的“交点为节点”不同，提醒我们在比较网络统计之前先明确映射。"
+        ],
+        "en": [
+          "This paper connects network generation to manufacturable materials by jointly controlling ligament lengths, thicknesses and connectivity, then testing stiffness, deformation, impact and wave behavior separately. Its useful lesson is the chain from network statistics to physical function, rather than a degree distribution alone.",
+          "Start Figure 1 by checking the graph definition: ligaments are nodes and their intersections are edges. This differs from the familiar junction-as-node representation, so network comparisons should begin with the mapping."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先定义网络，再解释统计",
+            "en": "Define the graph before interpreting statistics"
+          },
+          "text": {
+            "zh": "杆件为节点的表示让长度、厚度与连接数可以联合分析。“无标度”结论依赖这一定义，不能直接套到交点—杆段图。",
+            "en": "The ligament-as-node representation supports joint analysis of length, thickness and degree. Scale-free claims depend on this mapping and do not automatically transfer to a junction-and-segment graph."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把生成参数接到可制造几何",
+            "en": "Connect generation parameters to geometry"
+          },
+          "text": {
+            "zh": "两个控制参数改变杆件厚度序列与初始尺度，产生宽尺度结构并调节密度和各向异性。生成机制、有限尺寸模拟与打印分辨率需要一起看。",
+            "en": "Two parameters vary the ligament-thickness sequence and initial scale, producing broad structural scales while tuning density and anisotropy. Read generation, finite-size simulations and fabrication resolution together."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分开检验不同物理目标",
+            "en": "Test physical objectives separately"
+          },
+          "text": {
+            "zh": "相对密度匹配下比较刚度、局部失稳与冲击吸能，再以数值模拟演示弹性波透镜。实验支持与设计演示的证据层次不同，不应概括为所有性能同时最优。",
+            "en": "Density-matched comparisons assess stiffness, localized instability and impact absorption; numerical simulations demonstrate an elastic-wave lens. Experimental support and design demonstrations have different evidential scope and do not establish universal simultaneous optimality."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究物理网络、网络生成、材料韧性与结构设计，以及希望把网络统计接到可测物理功能的读者。",
+        "en": "Readers studying physical networks, network generation, material resilience and structural design, or linking network statistics to measurable function."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部14页、方法和6张图。力学实验主要使用有限分辨率的打印树脂及挤出二维结构，比较限于文中密度、加载和参考架构；弹性波透镜为数值演示。正文展示三维扩展，但本次未读独立补充材料。未独立复现数据、代码或计算，不能推广为任意材料、尺度或载荷下的普遍最优。",
+        "en": "Read all 14 publisher pages, Methods and six figures. Mechanical experiments mainly use printed resins and extruded 2D structures with finite resolution; comparisons apply to the tested densities, loads and reference architectures. The elastic-wave lens is numerical. The main text presents 3D extensions, but separate supplementary files were not read. Data, code and calculations were not independently reproduced; universal optimality across materials, scales or loads is not established."
+      },
+      "publication_sha256": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d"
     }
   ],
   "revisions": [

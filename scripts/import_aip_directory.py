@@ -28,7 +28,7 @@ def official_url(url, kind):
 
 
 def normalize(bundle, journal, start, end, live_as_of=None):
-    check_keys(bundle, ['version','journal','window_start','window_end','pages','issues','articles'])
+    check_keys(bundle, ['version','journal','window_start','window_end','pages','issues','articles','issue_supplements'])
     if (bundle['version'] != 'aip-browser-bibliography-1' or bundle['journal'] != journal['short']
             or [bundle['window_start'],bundle['window_end']] != [start,end]):
         raise ValueError('Browser bibliography does not match frozen run')
@@ -84,6 +84,35 @@ def normalize(bundle, journal, start, end, live_as_of=None):
         pages.append({'page':number,'url':p['url'],'count':len(p['records']),
                       'records_sha256':digest(p['records']),'retrieved_at':p['retrieved_at'],
                       'newest_date':records[-20]['date'],'oldest_date':previous})
+    # Date ties can move old guard items between search pages. Do not accept a
+    # duplicate/truncated prefix or add unseen in-window items. Explicit whole-
+    # issue observations may account only for older-than-window guard records;
+    # the exact issue DOI comparison below still has to close the entire set.
+    supplements = bundle.get('issue_supplements', [])
+    if supplements and live_as_of is None:
+        raise ValueError('Issue guard supplements require an explicit live snapshot')
+    issue_by_url = {i['url']: i for i in bundle['issues']}
+    for r in supplements:
+        check_keys(r, ['doi','title','article_url','month','source_issue_url','retrieved_at'])
+        official_url(r['article_url'], 'article/')
+        issue = issue_by_url.get(r['source_issue_url'])
+        a = articles.get(r['doi'])
+        if (not issue or r['doi'] not in issue['dois'] or r['doi'] in seen
+                or not re.fullmatch(r'10\.1063/[^\s]+', r['doi']) or not a
+                or urlsplit(a['url']).path != urlsplit(r['article_url']).path
+                or datetime.strptime(r['month'], 'Published: %B %Y').strftime('%Y-%m') != issue['month']):
+            raise ValueError('Unmatched whole-issue guard supplement')
+        if not previous or a['date'] >= start or a['date'] > previous:
+            raise ValueError('Issue supplements cannot replace window or prefix coverage')
+        row = {k:r[k] for k in ['doi','title','article_url','month']}
+        row.update(date=a['date'], date_basis='publisher.article_date', article_type=None,
+                   publication_status='published', directory_url=issue['url'], directory_page=None,
+                   retrieved_at=r['retrieved_at'], source_kind='whole_issue_guard_supplement',
+                   publisher_date_observation=a, publisher_date_observation_sha256=digest(a))
+        if normalized_title(r['title']) != normalized_title(a['title']):
+            row['title_identity_conflict'] = True
+        records.append(row)
+        seen.add(r['doi'])
     if set(articles) != seen:
         raise ValueError('Article observations outside enumerated directory')
     if live_as_of is not None:
@@ -92,6 +121,7 @@ def normalize(bundle, journal, start, end, live_as_of=None):
         stamps = [p['retrieved_at'] for p in bundle['pages']]
         stamps += [a['retrieved_at'] for a in bundle['articles']]
         stamps += [i['retrieved_at'] for i in bundle['issues']]
+        stamps += [r['retrieved_at'] for r in supplements]
         for stamp in stamps:
             observed = datetime.fromisoformat(stamp.replace('Z','+00:00'))
             if observed.tzinfo is None or observed.astimezone(timezone(timedelta(hours=8))).date().isoformat() != live_as_of:
@@ -124,6 +154,7 @@ def normalize(bundle, journal, start, end, live_as_of=None):
             'completion_basis':'all_type_search_prefix_with_explicit_article_dates_and_earlier_guard_plus_issue_DOI_set_checks',
             'error':None,'pages':pages,'reported_totals':[], 'records':records,
             'max_pages':journal['collection']['max_pages'],'issue_checks':issue_checks,
+            'issue_guard_supplement_count':len(supplements),
             'limitations':['Source-relative browser enumeration at retrieval time; no claim about later deposits or backdated unseen records.',
                            'Issue-month citation_publication_date is preserved but never used as explicit online date.'] +
                           (['Live as-of snapshot is not complete-day coverage; latest available article may precede the window end.'] if live_as_of else [])}

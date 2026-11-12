@@ -36,6 +36,33 @@ class CarryoverTests(unittest.TestCase):
                                   window_start='2026-09-30',window_end='2026-10-01')
         return previous,current
 
+    def test_explicit_historical_window_repairs_gap_without_advancing_cutoff(self):
+        old=self.f.make_run('previous','10.1/a');self.seal(old)
+        backfill=self.f.make_run('current','10.1/b',category='excluded',
+            window_start='2026-09-15',window_end='2026-09-15')
+        w=screen.Workflow(backfill)
+        self.assertTrue(audit.build_audit(w,[old])['blockers'])
+        w.log.add('historical_backfill_requested',{'candidate_sha256':w.input_sha,
+            'window':['2026-09-15','2026-09-15'],'reason':'Synthetic late discovery',
+            'authorization_source':'Synthetic explicit historical repair request'})
+        self.assertEqual(audit.build_audit(w,[old])['blockers'],[])
+        self.bind_audit(old,backfill)
+        data=publish.build_release([old,backfill])['papers.json']
+        self.assertEqual(data['window_end'],'2026-09-30')
+        self.assertEqual(len(data['papers']),1)
+
+    def test_historical_request_does_not_cover_gaps_or_wrong_candidate_binding(self):
+        old=self.f.make_run('previous','10.1/a');self.seal(old)
+        for suffix,start,end,binding in [('wrong','2026-09-15','2026-09-15','wrong'),
+                ('outside','2026-08-15','2026-08-15',None)]:
+            backfill=self.f.make_run(suffix,'10.1/'+suffix,category='excluded',
+                window_start=start,window_end=end)
+            w=screen.Workflow(backfill)
+            w.log.add('historical_backfill_requested',{'candidate_sha256':binding or w.input_sha,
+                'window':[start,end],'reason':'Synthetic repair',
+                'authorization_source':'Synthetic request'})
+            self.assertTrue(audit.build_audit(w,[old])['blockers'])
+
     def bind_audit(self, previous, current):
         w = screen.Workflow(current); value = audit.build_audit(w,[previous])
         self.assertEqual(value['blockers'],[])

@@ -84,5 +84,46 @@ class AIPTests(unittest.TestCase):
             with self.subTest(mode=mode),self.assertRaises(ValueError):
                 normalize(b,j,'2026-09-01','2026-09-30',live_as_of=as_of)
 
+    def issue_supplement_fixture(self):
+        j,b=self.fixture()
+        b['window_start']='2026-09-29'
+        for key in ['pages','articles','issues']:
+            for r in b[key]: r['retrieved_at']='2026-09-30T01:00:00Z'
+        b['articles'][-1]['date_text']='September 02 2026'
+        b['pages'][0]['records'][-1]['month']='Published: September 2026'
+        b['issues'][0]['dois'].append(b['articles'][-1]['doi'])
+        a=copy.deepcopy(b['articles'][-1])
+        a.update(doi='10.1063/synthetic_guard', title='Guard supplement',
+                 url='https://pubs.aip.org/aip/cha/article/synthetic_guard')
+        b['articles'].append(a)
+        b['issues'][0]['dois'].append(a['doi'])
+        b['issue_supplements']=[dict(doi=a['doi'],title=a['title'],article_url=a['url'],
+            month='Published: September 2026',source_issue_url=b['issues'][0]['url'],
+            retrieved_at=a['retrieved_at'])]
+        return j,b
+
+    def test_explicit_issue_guard_closes_set_without_changing_window(self):
+        j,b=self.issue_supplement_fixture()
+        r=normalize(b,j,'2026-09-29','2026-09-30',live_as_of='2026-09-30')
+        self.assertEqual(r['issue_guard_supplement_count'],1)
+        self.assertEqual(len(r['records']),21)
+        self.assertEqual(sum(x['date']>='2026-09-29' for x in r['records']),19)
+        self.assertEqual(r['records'][-1]['source_kind'],'whole_issue_guard_supplement')
+
+    def test_issue_guard_cannot_bypass_coverage_identity_or_same_day_checks(self):
+        for mode in ['in_window','past_prefix','issue_missing','duplicate','path','month','old','extra','no_date','historical']:
+            j,b=self.issue_supplement_fixture()
+            if mode=='in_window': b['articles'][-1]['date_text']='September 29 2026'
+            if mode=='past_prefix': b['articles'][-1]['date_text']='September 03 2026'
+            if mode=='issue_missing': b['issues'][0]['dois'].pop()
+            if mode=='duplicate': b['issue_supplements'][0]['doi']=b['articles'][0]['doi']
+            if mode=='path': b['issue_supplements'][0]['article_url']+='wrong'
+            if mode=='month': b['issue_supplements'][0]['month']='Published: August 2026'
+            if mode=='old': b['issue_supplements'][0]['retrieved_at']='2026-09-29T01:00:00Z'
+            if mode=='extra': b['issue_supplements'][0]['abstract']='Forbidden'
+            if mode=='no_date': b['articles'].pop()
+            with self.subTest(mode=mode),self.assertRaises(ValueError):
+                normalize(b,j,'2026-09-29','2026-09-30',live_as_of=None if mode=='historical' else '2026-09-30')
+
 
 if __name__=='__main__': unittest.main()

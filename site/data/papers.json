@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-11T00:27:38.734745+00:00",
+  "generated_at": "2026-11-12T03:08:59.301378+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-11",
-  "window_days": 72,
+  "window_end": "2026-11-12",
+  "window_days": 73,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "57ba851f3eeb01156b96683500dc2cd16ae6434b3bb483f808cb1a79bc3a43b6",
-  "author_metadata_sha256": "d73cf87618fa4a3e9c1c21210598514819a6de2f5e231dd9967f213bb34428bf",
+  "reading_notes_sha256": "806dd261df1e92a7dea9c08f5731e5b1f62a89bbc8b2928aa60b62eaa2e5b7ec",
+  "author_metadata_sha256": "d96723162840928b4f6d08a25cdfbfff4f5f6a4b2df306ad2c1b41c246fd2d7c",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3112,9 +3112,97 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-02-nature-backfill-01",
+      "config_sha256": "9895d6988147a4b9bec964089d55301a8dfbf373e2e3be349a8ae3d53a08eb81",
+      "window_start": "2026-11-02",
+      "window_end": "2026-11-02",
+      "rule_sha256": "867bbb219e8e6b32e5030af8849e23ea0641fa533ca3140254e4b7edbdbc4e60",
+      "screening_log_sha256": "f326574675433fe2f6a74b27b6b3da56f210066e141ff5135cb029174da9d4f0",
+      "candidate_sha256": "d32749b6d6a8fbb0c4db3e4aa60644e9cf0062a51c55d03d990568ae63bfbff8",
+      "author_metadata_sha256": "863d674b1b86b87dc1472782ce563de2071b49e419c39674b2a21e4db94eb12a",
+      "run_manifest_sha256": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-02-nature-backfill-01",
+          "files": {
+            "candidates.json": "d32749b6d6a8fbb0c4db3e4aa60644e9cf0062a51c55d03d990568ae63bfbff8",
+            "coverage.json": "b82f049cc8bc23f68e446f8623d619737e7d80016f97e6ede27755f2c3b7254f",
+            "collection-log.jsonl": "86a73421ffb7974b1f202656593d7c5a3816e0f00311c33805ea13e20aa195d4",
+            "screening-log.jsonl": "6f31243347b3cf1bce94b2dc44cae33fec037c888e0309eb1cece4c1e9e63c92",
+            "inputs/manifest.json": "9118db545583f8fd94c04bc28ca3ac7e901c982a2d4db1e0747b9713db5c1233",
+            "inputs/sources.json": "db7e203beed54ce2196f7df83f1514edb3a8a4a12ad3349fa5a46671e2f5f663",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "d32749b6d6a8fbb0c4db3e4aa60644e9cf0062a51c55d03d990568ae63bfbff8",
+          "rule_sha256": "867bbb219e8e6b32e5030af8849e23ea0641fa533ca3140254e4b7edbdbc4e60",
+          "screening_log_sha256": "f326574675433fe2f6a74b27b6b3da56f210066e141ff5135cb029174da9d4f0"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "863d674b1b86b87dc1472782ce563de2071b49e419c39674b2a21e4db94eb12a",
+          "audit": {
+            "path": "reports/runs/2026-11-02-nature-backfill-01/screening-log.jsonl",
+            "sha256": "6f31243347b3cf1bce94b2dc44cae33fec037c888e0309eb1cece4c1e9e63c92"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "b233acab9ff5553c786dd2929dfd77b9db4e0d01961c9fb18dab50fab17b390f"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-11-to-12-01",
+      "config_sha256": "33ef045f50752916e561df38bec0f80316464fd0d3b42a2fde12d495499d408d",
+      "window_start": "2026-11-11",
+      "window_end": "2026-11-12",
+      "rule_sha256": "682f1909d40ba67fc5a4a9ec459fae4a3ed14e2695ec820ba8921105e626ebb0",
+      "screening_log_sha256": "adf68ef20da848af5367d8d202c1c79b65dfbb98614310e990fbc0d9d376cf74",
+      "candidate_sha256": "f1beba1dc6f2e8fce4a023708d23ad02179387e8c3e566621ce90a384552679f",
+      "author_metadata_sha256": "dfb0f514c2dbc69567688a95729e359bcee1e3fb2efb31003163ff446a443634",
+      "run_manifest_sha256": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-11-to-12-01",
+          "files": {
+            "candidates.json": "f1beba1dc6f2e8fce4a023708d23ad02179387e8c3e566621ce90a384552679f",
+            "coverage.json": "4ae3932ce7a2fbf1016f1b62da6cb7770ccdb8062729151b70cfc45c55bfb887",
+            "collection-log.jsonl": "c855a30b27f68f854c7b7e47f343ec097e170658adc514e382335e73f6d5e123",
+            "screening-log.jsonl": "79c329848a0de0a5ad3136527f8e9a579aca99c86b114a045cdde5c60ad82c76",
+            "inputs/manifest.json": "72c74e9f4b96964370def84dd6b90977b667e394f0b5dd92848f4482f3f5b9fc",
+            "inputs/sources.json": "c7e9b8913ad887b80fdfc9f35ef42fa00f15728fd9d0f81c0f229130f821bdb4",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "f1beba1dc6f2e8fce4a023708d23ad02179387e8c3e566621ce90a384552679f",
+          "rule_sha256": "682f1909d40ba67fc5a4a9ec459fae4a3ed14e2695ec820ba8921105e626ebb0",
+          "screening_log_sha256": "adf68ef20da848af5367d8d202c1c79b65dfbb98614310e990fbc0d9d376cf74"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "dfb0f514c2dbc69567688a95729e359bcee1e3fb2efb31003163ff446a443634",
+          "audit": {
+            "path": "reports/runs/2026-11-11-to-12-01/screening-log.jsonl",
+            "sha256": "79c329848a0de0a5ad3136527f8e9a579aca99c86b114a045cdde5c60ad82c76"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "0e608db00091e851c5b1b07ccfc2755244ad98ca0f76f35d78f09f2c15d571cd"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 311,
+  "author_available_count": 315,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3264,8 +3352,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 897,
-      "publisher_verified_inventory_count": 897,
+      "candidate_count": 951,
+      "publisher_verified_inventory_count": 951,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3559,6 +3647,15 @@
         },
         {
           "window_start": "2026-11-02",
+          "window_end": "2026-11-02",
+          "journal": "Nature",
+          "candidate_count": 11,
+          "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-02",
           "window_end": "2026-11-03",
           "journal": "Nature",
           "candidate_count": 9,
@@ -3637,6 +3734,15 @@
           "publisher_verified_inventory_count": 12,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "Nature",
+          "candidate_count": 52,
+          "publisher_verified_inventory_count": 52,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
@@ -4015,13 +4121,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2026,
-      "publisher_verified_inventory_count": 2019,
+      "candidate_count": 2048,
+      "publisher_verified_inventory_count": 2040,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4384,13 +4499,22 @@
           "publisher_verified_inventory_count": 12,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "NC",
+          "candidate_count": 22,
+          "publisher_verified_inventory_count": 22,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 31,
-      "publisher_verified_inventory_count": 31,
+      "candidate_count": 32,
+      "publisher_verified_inventory_count": 32,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -4751,6 +4875,15 @@
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "NMI",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5117,6 +5250,15 @@
         {
           "window_start": "2026-11-10",
           "window_end": "2026-11-11",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
           "journal": "NCS",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -5491,6 +5633,15 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5860,13 +6011,22 @@
           "publisher_verified_inventory_count": 16,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "SA",
-      "candidate_count": 868,
-      "publisher_verified_inventory_count": 868,
+      "candidate_count": 909,
+      "publisher_verified_inventory_count": 909,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6229,13 +6389,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "SA",
+          "candidate_count": 41,
+          "publisher_verified_inventory_count": 41,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 1003,
-      "publisher_verified_inventory_count": 1003,
+      "candidate_count": 1025,
+      "publisher_verified_inventory_count": 1025,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6596,6 +6765,15 @@
           "journal": "PNAS",
           "candidate_count": 17,
           "publisher_verified_inventory_count": 17,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "PNAS",
+          "candidate_count": 22,
+          "publisher_verified_inventory_count": 22,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6967,6 +7145,15 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7334,6 +7521,15 @@
           "journal": "PRResearch",
           "candidate_count": 10,
           "publisher_verified_inventory_count": 10,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "PRResearch",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -7705,13 +7901,22 @@
           "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 124,
-      "publisher_verified_inventory_count": 124,
+      "candidate_count": 127,
+      "publisher_verified_inventory_count": 127,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8074,13 +8279,22 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "Chaos",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 93,
-      "publisher_verified_inventory_count": 93,
+      "candidate_count": 94,
+      "publisher_verified_inventory_count": 94,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8398,36 +8612,42 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-11",
+          "window_end": "2026-11-12",
+          "journal": "NP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7541,
+  "candidate_count": 7685,
   "screening_counts": {
-    "excluded": 7230,
-    "core": 281,
+    "excluded": 7370,
+    "core": 285,
     "transferable_application": 30,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 311
+    "included": 315
   },
-  "published_count": 269,
+  "published_count": 273,
   "accepted_count": 42,
   "latest_update": {
-    "run": "reports/runs/2026-11-10-to-11-01",
-    "reviewed_at": "2026-11-11T00:22:09.068280+00:00",
-    "newly_included_count": 5,
+    "run": "reports/runs/2026-11-11-to-12-01",
+    "reviewed_at": "2026-11-12T03:03:54.031912+00:00",
+    "newly_included_count": 4,
     "newly_included_dois": [
-      "10.1103/67cd-tpzb",
-      "10.1103/6873-nqff",
-      "10.1103/html-hr8z",
-      "10.1103/m49t-nsyx",
-      "10.1103/zff5-ldcy"
+      "10.1038/s41586-026-11191-2",
+      "10.1073/pnas.2536565123",
+      "10.1073/pnas.2633661123",
+      "10.1126/sciadv.aeg3412"
     ],
-    "accepted_to_published_count": 1,
-    "accepted_to_published_dois": [
-      "10.1103/n8xm-bm44"
-    ]
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": []
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -8437,6 +8657,356 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1126/sciadv.aeg3412",
+      "url": "https://doi.org/10.1126/sciadv.aeg3412",
+      "title": "The role of network connectivity and transcriptomic vulnerability in shaping gray matter atrophy in multiple sclerosis",
+      "authors": [
+        "Mar Barrantes-Cepas",
+        "Mario Tranfa",
+        "David R. van Nederpelt",
+        "Ismail Koubiyr",
+        "Luigi Lorenzini",
+        "Birgit Helmlinger",
+        "Stefan Ropele",
+        "Daniela Pinter",
+        "Christian Enzinger",
+        "Tomas Uher",
+        "Manuela Vaneckova",
+        "Joep Killestein",
+        "Eva M. M. Strijbis",
+        "Martijn D. Steenwijk",
+        "Hugo Vrenken",
+        "Frederik Barkhof",
+        "Menno M. Schoonheim",
+        "Giuseppe Pontillo"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "874d02201a3e53e8b7790ddb1bbe734c84b86e719a668ac25be2d78679d20ed5",
+      "author_source_url": "https://www.science.org/doi/10.1126/sciadv.aeg3412",
+      "author_retrieved_at": "2026-11-12T02:39:32.363191+00:00",
+      "author_basis": "publisher citation_author; actual DOI/title/Science Advances journal identity verified in in-app browser; frozen whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-11-11",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-11",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-11",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aeg3412"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-11",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "dd7abef278eb5ce37f1578871edfd65f1d85d638961e675a1c50afcba6dabc4a",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aeg3412"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Using2187participant MRIs, the study tests how functional hubness and anatomical/functional connections constrain regional atrophy in multiple sclerosis. Connectivity-anchored epicenters and progression associations support nodal-stress and transneuronal-degeneration hypotheses, with subgroup differences; observational consistency is not proof of causal transmission."
+      },
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "core",
+      "note_en": "Brain-network hubs, connectivity constraints and epicenter profiles help explain spatial atrophy patterns and progression associations in multiple sclerosis.",
+      "note_zh": "脑网络枢纽、连接约束与病变中心的连接谱解释多发性硬化灰质萎缩的空间模式及进展关联。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "53961480a7c4d5a4cab54f7bd3b9d92f7a9f0b6061608a899efd13b49b4789f4",
+      "input_sha256": "cef9a07d6051ed6e01662f1142b44a374caa77370553ee4b65b111ad19cb88aa",
+      "material_sha256": "dd7abef278eb5ce37f1578871edfd65f1d85d638961e675a1c50afcba6dabc4a",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "dd7abef278eb5ce37f1578871edfd65f1d85d638961e675a1c50afcba6dabc4a",
+      "rule_sha256": "682f1909d40ba67fc5a4a9ec459fae4a3ed14e2695ec820ba8921105e626ebb0",
+      "featured": "SA",
+      "evidence": [
+        "Using2187participant MRIs, the study tests how functional hubness and anatomical/functional connections constrain regional atrophy in multiple sclerosis. Connectivity-anchored epicenters and progression associations support nodal-stress and transneuronal-degeneration hypotheses, with subgroup differences; observational consistency is not proof of causal transmission."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeg3412",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeg3412",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2633661123",
+      "url": "https://doi.org/10.1073/pnas.2633661123",
+      "title": "Dormancy stabilizes structured food webs",
+      "authors": [
+        "Zachary R. Miller",
+        "David A. Vasseur",
+        "Pincelli M. Hull"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "d6a8654fa6ee51f73efd18f4b8f03ffff9c172577f37787e49ab170542e54a9b",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2633661123",
+      "author_retrieved_at": "2026-11-12T02:31:32.306164+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-11-11",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-11",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-11",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2633661123"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-11",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "360122b65acd00b530abc0cddc715d3a1993084bcf1bc13406e5d5bc23110647",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1073%2Fpnas.2633661123"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Dormant seed banks stabilize oscillatory ecological networks by converting oscillation frequency into restoring force. The study contrasts Hopf-unstable structured food webs with unstructured and symmetric interaction networks, identifying when interaction architecture permits stabilization even with partial dormancy."
+      },
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Dormant seed banks stabilize structured food webs through a frequency-dependent restoring effect; the outcome depends on interaction structure.",
+      "note_zh": "休眠种子库通过频率相关的恢复作用稳定结构化食物网；效应依赖互作结构。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "a2420c01748a93aab06753f0dc3b3bcaccd735ceda23c45315cfff917d560893",
+      "input_sha256": "aaf641697f691025116f86ef4b9c12626d21641645b2e1614029f5ea3571f93d",
+      "material_sha256": "360122b65acd00b530abc0cddc715d3a1993084bcf1bc13406e5d5bc23110647",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "360122b65acd00b530abc0cddc715d3a1993084bcf1bc13406e5d5bc23110647",
+      "rule_sha256": "682f1909d40ba67fc5a4a9ec459fae4a3ed14e2695ec820ba8921105e626ebb0",
+      "featured": "PNAS",
+      "evidence": [
+        "Dormant seed banks stabilize oscillatory ecological networks by converting oscillation frequency into restoring force. The study contrasts Hopf-unstable structured food webs with unstructured and symmetric interaction networks, identifying when interaction architecture permits stabilization even with partial dormancy."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2633661123",
+      "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2633661123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1073/pnas.2536565123",
+      "url": "https://doi.org/10.1073/pnas.2536565123",
+      "title": "Linear scaling reveals low-dimensional structure in observable microbial dynamics",
+      "authors": [
+        "Zhengqing Zhou",
+        "Xiaoli Chen",
+        "Yasa Baig",
+        "Wendy Kehan Wang",
+        "Emrah Şimşek",
+        "Grayson S. Hamrick",
+        "Zachary A. Holmes",
+        "Zhenjiao Du",
+        "David K. Karig",
+        "Lingchong You"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3e1a7e58f241b04761cf4d67e610b2f925e8664569e8b9bb5d577ff1ce27d1da",
+      "author_source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2536565123",
+      "author_retrieved_at": "2026-11-12T02:31:36.188031+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "journal_short": "PNAS",
+      "issns": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "date": "2026-11-11",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-11",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-11",
+        "sources": [
+          "https://www.pnas.org/doi/10.1073/pnas.2536565123"
+        ],
+        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-11",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "865e7d164c499ec27041a1c71bdaa2d13e82c736939c061a3f76eb54e8473ac7",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://www.pnas.org/doi/10.1073/pnas.2536565123"
+        ],
+        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
+        "supporting_reason": "以相互作用微生物群落的部分可观测动力学为对象，跨成对相互作用、消费者–资源、耦合空间斑块和质粒转移模型及实验，提出临界表征维数随可观测量数线性增长的经验原则，可迁移至部分观测生态网络的降维与预测；不将重构阈值定义的潜在维数冒称物理吸引子维数。"
+      },
+      "categories": [
+        "network_inference",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Across microbial interaction models and experiments, the critical reconstruction dimension of partially observed dynamics scales approximately linearly with observable count.",
+      "note_zh": "跨微生物互作模型和实验，部分可观测动力学的临界重构维数随观测量数近似线性增长。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "d15baddcba7d90d531f1e972cc14700dd8a2772d943ef240b418c69944fb02a7",
+      "input_sha256": "8a11453737672b21e1af15436e1bd82999e7406347d1a5ad55f295402a502a3c",
+      "material_sha256": "865e7d164c499ec27041a1c71bdaa2d13e82c736939c061a3f76eb54e8473ac7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "865e7d164c499ec27041a1c71bdaa2d13e82c736939c061a3f76eb54e8473ac7",
+      "rule_sha256": "682f1909d40ba67fc5a4a9ec459fae4a3ed14e2695ec820ba8921105e626ebb0",
+      "featured": "PNAS",
+      "evidence": [
+        "以相互作用微生物群落的部分可观测动力学为对象，跨成对相互作用、消费者–资源、耦合空间斑块和质粒转移模型及实验，提出临界表征维数随可观测量数线性增长的经验原则，可迁移至部分观测生态网络的降维与预测；不将重构阈值定义的潜在维数冒称物理吸引子维数。"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2536565123",
+      "evidence_url": "https://www.pnas.org/doi/10.1073/pnas.2536565123",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41586-026-11191-2",
+      "url": "https://doi.org/10.1038/s41586-026-11191-2",
+      "title": "Scale-rich network-based metamaterials",
+      "authors": [
+        "Csaba Both",
+        "Andrew Yen-Jong Chen",
+        "Ting-Ting Gao",
+        "Niek Mooij",
+        "Mohammad Charara",
+        "Jayna Wadhwa",
+        "Carlos M. Portela",
+        "Albert-László Barabási"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "7990b537ea1bfa9ffb43d24e0ed1195427e39d9e76b7d72277f0426e142b3231",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41586-026-11191-2",
+      "author_retrieved_at": "2026-11-12T02:31:34.321762+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature",
+      "journal_short": "Nature",
+      "issns": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "date": "2026-11-11",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-11",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-11",
+        "sources": [
+          "https://www.nature.com/articles/s41586-026-11191-2"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-11",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "1a718c42e1dd2aaa1f0ec0c2354a3cc3546a5a50006b429e9ed0162edf2cfaaa",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://www.nature.com/articles/s41586-026-11191-2"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "A two-parameter scale-rich network framework introduces broad variability in ligament lengths, thicknesses and connectivity. Simulations and physical metamaterial experiments link this multiscale architecture to anisotropy, delocalized deformation, dissipation and wave control, making network heterogeneity a primary design variable and scientific result."
+      },
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Networks with jointly tunable ligament lengths, thicknesses and connectivity expand metamaterial design across stiffness, deformation and wave propagation.",
+      "note_zh": "联合调节杆件长度、厚度与连接分布的富尺度网络，拓展超材料刚度、变形和波传播设计。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "324a6d5068966c543e94a15e04ddf10fa5e91fdbd183fc8806d5fa5c19ee28de",
+      "input_sha256": "24ba1a0e57ddd35edb25c6c1d035539b306befba53ca56abca06bd804e7105fb",
+      "material_sha256": "1a718c42e1dd2aaa1f0ec0c2354a3cc3546a5a50006b429e9ed0162edf2cfaaa",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "1a718c42e1dd2aaa1f0ec0c2354a3cc3546a5a50006b429e9ed0162edf2cfaaa",
+      "rule_sha256": "682f1909d40ba67fc5a4a9ec459fae4a3ed14e2695ec820ba8921105e626ebb0",
+      "featured": "Nature",
+      "evidence": [
+        "A two-parameter scale-rich network framework introduces broad variability in ligament lengths, thicknesses and connectivity. Simulations and physical metamaterial experiments link this multiscale architecture to anisotropy, delocalized deformation, dissipation and wave control, making network heterogeneity a primary design variable and scientific"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41586-026-11191-2",
+      "evidence_url": "https://www.nature.com/articles/s41586-026-11191-2",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/zff5-ldcy",
       "url": "https://journals.aps.org/pre/accepted/10.1103/zff5-ldcy",
@@ -34911,9 +35481,215 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "ee398958a1cd8b896c1a0716629adce86288f960dbb859fa7d01170edc5cc1b1"
+    },
+    {
+      "current_run": "reports/runs/2026-11-02-nature-backfill-01",
+      "candidate_sha256": "d32749b6d6a8fbb0c4db3e4aa60644e9cf0062a51c55d03d990568ae63bfbff8",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0"
+      },
+      "counts": {
+        "in_window": 11,
+        "newly_reviewed": 2,
+        "historically_reviewed": 9,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 11
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "1c547af80548d8421455fc95fe913420d4da35ed50c079a0648e26ac1f046f83"
+    },
+    {
+      "current_run": "reports/runs/2026-11-11-to-12-01",
+      "candidate_sha256": "f1beba1dc6f2e8fce4a023708d23ad02179387e8c3e566621ce90a384552679f",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e"
+      },
+      "counts": {
+        "in_window": 142,
+        "newly_reviewed": 142,
+        "historically_reviewed": 51,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 138,
+          "core": 4
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "bdb1e9c0ada2eac09affa489b5724fba276b0866ab9773b7db22dfeaa01249db"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41586-026-11191-2",
+      "recommended_on": "2026-11-12",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-11-to-12-01",
+      "assessment_sha256": "324a6d5068966c543e94a15e04ddf10fa5e91fdbd183fc8806d5fa5c19ee28de",
+      "input_sha256": "24ba1a0e57ddd35edb25c6c1d035539b306befba53ca56abca06bd804e7105fb",
+      "evidence_sha256": "1a718c42e1dd2aaa1f0ec0c2354a3cc3546a5a50006b429e9ed0162edf2cfaaa",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-12T02:40:21.419731+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41586-026-11191-2",
+        "title": "Scale-rich network-based metamaterials",
+        "sha256": "40b065c68dbcd0ff5a0f6c4f37576b818fc16391485766f99c3301b1f9396735",
+        "version": "Nature 659, 345–356 (2026), publisher version of record; first online 2026-11-11",
+        "source_url": "https://www.nature.com/articles/s41586-026-11191-2.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 14,
+        "reviewed_at": "2026-11-12T02:40:21.419731+00:00",
+        "read_scope": "All 14 publisher PDF pages including main text, Methods, references and all six figure captions; rendered Figures 1–6 inspected on pages 3,4,6,8,9,10. Supplementary Information, raw data and code not independently read or reproduced."
+      },
+      "question": {
+        "zh": "当杆件不再只有一个尺度，网络材料能获得哪些可设计的性能？",
+        "en": "What can a network material gain when its ligaments span multiple scales?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络生成规则接到可制造材料：同时控制杆件长度、厚度和连接分布，再分别检验刚度、局部变形、冲击与波传播。值得借鉴的是从网络统计到物理功能的整条验证链，而不是仅凭度分布判断材料性能。",
+          "读图1时先核对图的定义：本文把杆件视为节点、交叉连接视为边。这种表示与常见的“交点为节点”不同，提醒我们在比较网络统计之前先明确映射。"
+        ],
+        "en": [
+          "This paper connects network generation to manufacturable materials by jointly controlling ligament lengths, thicknesses and connectivity, then testing stiffness, deformation, impact and wave behavior separately. Its useful lesson is the chain from network statistics to physical function, rather than a degree distribution alone.",
+          "Start Figure 1 by checking the graph definition: ligaments are nodes and their intersections are edges. This differs from the familiar junction-as-node representation, so network comparisons should begin with the mapping."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先定义网络，再解释统计",
+            "en": "Define the graph before interpreting statistics"
+          },
+          "text": {
+            "zh": "杆件为节点的表示让长度、厚度与连接数可以联合分析。“无标度”结论依赖这一定义，不能直接套到交点—杆段图。",
+            "en": "The ligament-as-node representation supports joint analysis of length, thickness and degree. Scale-free claims depend on this mapping and do not automatically transfer to a junction-and-segment graph."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把生成参数接到可制造几何",
+            "en": "Connect generation parameters to geometry"
+          },
+          "text": {
+            "zh": "两个控制参数改变杆件厚度序列与初始尺度，产生宽尺度结构并调节密度和各向异性。生成机制、有限尺寸模拟与打印分辨率需要一起看。",
+            "en": "Two parameters vary the ligament-thickness sequence and initial scale, producing broad structural scales while tuning density and anisotropy. Read generation, finite-size simulations and fabrication resolution together."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分开检验不同物理目标",
+            "en": "Test physical objectives separately"
+          },
+          "text": {
+            "zh": "相对密度匹配下比较刚度、局部失稳与冲击吸能，再以数值模拟演示弹性波透镜。实验支持与设计演示的证据层次不同，不应概括为所有性能同时最优。",
+            "en": "Density-matched comparisons assess stiffness, localized instability and impact absorption; numerical simulations demonstrate an elastic-wave lens. Experimental support and design demonstrations have different evidential scope and do not establish universal simultaneous optimality."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究物理网络、网络生成、材料韧性与结构设计，以及希望把网络统计接到可测物理功能的读者。",
+        "en": "Readers studying physical networks, network generation, material resilience and structural design, or linking network statistics to measurable function."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部14页、方法和6张图。力学实验主要使用有限分辨率的打印树脂及挤出二维结构，比较限于文中密度、加载和参考架构；弹性波透镜为数值演示。正文展示三维扩展，但本次未读独立补充材料。未独立复现数据、代码或计算，不能推广为任意材料、尺度或载荷下的普遍最优。",
+        "en": "Read all 14 publisher pages, Methods and six figures. Mechanical experiments mainly use printed resins and extruded 2D structures with finite resolution; comparisons apply to the tested densities, loads and reference architectures. The elastic-wave lens is numerical. The main text presents 3D extensions, but separate supplementary files were not read. Data, code and calculations were not independently reproduced; universal optimality across materials, scales or loads is not established."
+      },
+      "publication_sha256": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d"
+    },
     {
       "doi": "10.1103/n8xm-bm44",
       "recommended_on": "2026-11-11",
@@ -40512,6 +41288,84 @@
       }
     },
     {
+      "doi": "10.1038/s41586-026-11191-2",
+      "recommended_on": "2026-11-12",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-11-to-12-01",
+      "assessment_sha256": "324a6d5068966c543e94a15e04ddf10fa5e91fdbd183fc8806d5fa5c19ee28de",
+      "input_sha256": "24ba1a0e57ddd35edb25c6c1d035539b306befba53ca56abca06bd804e7105fb",
+      "evidence_sha256": "1a718c42e1dd2aaa1f0ec0c2354a3cc3546a5a50006b429e9ed0162edf2cfaaa",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-12T02:40:21.419731+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41586-026-11191-2",
+        "title": "Scale-rich network-based metamaterials",
+        "sha256": "40b065c68dbcd0ff5a0f6c4f37576b818fc16391485766f99c3301b1f9396735",
+        "version": "Nature 659, 345–356 (2026), publisher version of record; first online 2026-11-11",
+        "source_url": "https://www.nature.com/articles/s41586-026-11191-2.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 14,
+        "reviewed_at": "2026-11-12T02:40:21.419731+00:00",
+        "read_scope": "All 14 publisher PDF pages including main text, Methods, references and all six figure captions; rendered Figures 1–6 inspected on pages 3,4,6,8,9,10. Supplementary Information, raw data and code not independently read or reproduced."
+      },
+      "question": {
+        "zh": "当杆件不再只有一个尺度，网络材料能获得哪些可设计的性能？",
+        "en": "What can a network material gain when its ligaments span multiple scales?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把网络生成规则接到可制造材料：同时控制杆件长度、厚度和连接分布，再分别检验刚度、局部变形、冲击与波传播。值得借鉴的是从网络统计到物理功能的整条验证链，而不是仅凭度分布判断材料性能。",
+          "读图1时先核对图的定义：本文把杆件视为节点、交叉连接视为边。这种表示与常见的“交点为节点”不同，提醒我们在比较网络统计之前先明确映射。"
+        ],
+        "en": [
+          "This paper connects network generation to manufacturable materials by jointly controlling ligament lengths, thicknesses and connectivity, then testing stiffness, deformation, impact and wave behavior separately. Its useful lesson is the chain from network statistics to physical function, rather than a degree distribution alone.",
+          "Start Figure 1 by checking the graph definition: ligaments are nodes and their intersections are edges. This differs from the familiar junction-as-node representation, so network comparisons should begin with the mapping."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "先定义网络，再解释统计",
+            "en": "Define the graph before interpreting statistics"
+          },
+          "text": {
+            "zh": "杆件为节点的表示让长度、厚度与连接数可以联合分析。“无标度”结论依赖这一定义，不能直接套到交点—杆段图。",
+            "en": "The ligament-as-node representation supports joint analysis of length, thickness and degree. Scale-free claims depend on this mapping and do not automatically transfer to a junction-and-segment graph."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把生成参数接到可制造几何",
+            "en": "Connect generation parameters to geometry"
+          },
+          "text": {
+            "zh": "两个控制参数改变杆件厚度序列与初始尺度，产生宽尺度结构并调节密度和各向异性。生成机制、有限尺寸模拟与打印分辨率需要一起看。",
+            "en": "Two parameters vary the ligament-thickness sequence and initial scale, producing broad structural scales while tuning density and anisotropy. Read generation, finite-size simulations and fabrication resolution together."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分开检验不同物理目标",
+            "en": "Test physical objectives separately"
+          },
+          "text": {
+            "zh": "相对密度匹配下比较刚度、局部失稳与冲击吸能，再以数值模拟演示弹性波透镜。实验支持与设计演示的证据层次不同，不应概括为所有性能同时最优。",
+            "en": "Density-matched comparisons assess stiffness, localized instability and impact absorption; numerical simulations demonstrate an elastic-wave lens. Experimental support and design demonstrations have different evidential scope and do not establish universal simultaneous optimality."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究物理网络、网络生成、材料韧性与结构设计，以及希望把网络统计接到可测物理功能的读者。",
+        "en": "Readers studying physical networks, network generation, material resilience and structural design, or linking network statistics to measurable function."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版全部14页、方法和6张图。力学实验主要使用有限分辨率的打印树脂及挤出二维结构，比较限于文中密度、加载和参考架构；弹性波透镜为数值演示。正文展示三维扩展，但本次未读独立补充材料。未独立复现数据、代码或计算，不能推广为任意材料、尺度或载荷下的普遍最优。",
+        "en": "Read all 14 publisher pages, Methods and six figures. Mechanical experiments mainly use printed resins and extruded 2D structures with finite resolution; comparisons apply to the tested densities, loads and reference architectures. The elastic-wave lens is numerical. The main text presents 3D extensions, but separate supplementary files were not read. Data, code and calculations were not independently reproduced; universal optimality across materials, scales or loads is not established."
+      },
+      "publication_sha256": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -40591,5 +41445,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "559558219fac04763475f61ac4e7bfa37f7b8722f6ff6ebc8c5f51fed85b8ba4"
+  "daily_suggestions_sha256": "0d7a6798b00efe7bad427081357f6eeeb4b8fec9ada677c0e2529991c9a32acc"
 }

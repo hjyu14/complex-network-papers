@@ -494,7 +494,8 @@ def build_release(runs):
     merged_coverage = merge_coverage(coverage_parts,allowed_overlaps,verified_dois)
     # Every displayed journal must span the advertised range, without an uncollected gap.
     for c in merged_coverage:
-        if (c['windows'][0]['window_start'], c['windows'][-1]['window_end']) != window:
+        if (min(v['window_start'] for v in c['windows']),
+                max(v['window_end'] for v in c['windows'])) != window:
             raise ValueError('Journal coverage does not span the release window: '+c['journal'])
     coverage = {c['journal']: c for c in merged_coverage}
     if set(notes['papers']) != set(papers):

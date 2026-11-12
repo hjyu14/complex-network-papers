@@ -176,7 +176,19 @@ def build_audit(current, previous_runs, *, _memo=None):
     for journal in current.config['journals']:
         short = journal['short']
         cutoff = max((v[1] for v in windows.get(short,[])), default=None)
-        if not cutoff or not current.pool['window_start'] <= cutoff <= current.pool['window_end']:
+        start, end = current.pool['window_start'], current.pool['window_end']
+        # A separately requested historical gap repair need not pretend to be
+        # today's daily window. Require a pinned request and an interval already
+        # wholly covered by one effective historical window; all inventory,
+        # assessment, identity and duplicate checks above still apply.
+        historical = bool(cutoff and end < cutoff
+            and any(a <= start <= end <= b for a,b in windows.get(short,[]))
+            and any(e['kind']=='historical_backfill_requested'
+                and e['data'].get('candidate_sha256')==current.input_sha
+                and e['data'].get('window')==[start,end]
+                and e['data'].get('reason') and e['data'].get('authorization_source')
+                for e in current.log.events))
+        if not cutoff or not (start <= cutoff <= end or historical):
             blockers.append({'journal':short,'reason':'Overlap must scan previous cutoff through current cutoff'})
         if not coverage['journals'][short]['candidate_inventory_complete']:
             blockers.append({'journal':short,'reason':'Incomplete current journal inventory'})

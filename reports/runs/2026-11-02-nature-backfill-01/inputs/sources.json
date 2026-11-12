@@ -1,0 +1,113 @@
+{
+  "version": "collection-workflow-2",
+  "status": "bibliographic_collection",
+  "window_days": 90,
+  "initial_trial": {
+    "start": "2026-11-02",
+    "end": "2026-11-02",
+    "backfill_before_start": false
+  },
+  "screening_protocol": "docs/screening-protocol.md",
+  "featured_journals": [
+    "Nature",
+    "NP",
+    "Science",
+    "NC",
+    "NMI",
+    "NCS",
+    "PRX",
+    "PRL",
+    "SA",
+    "PNAS"
+  ],
+  "review_journals": [
+    {
+      "name": "Nature Reviews Physics",
+      "short": "NRP",
+      "issns": [
+        "2522-5820"
+      ],
+      "review_policy": {
+        "official_type_labels": [
+          "Review Article",
+          "Technical Review",
+          "Perspective",
+          "Roadmap",
+          "Expert Recommendation"
+        ],
+        "type_mapping_basis": "https://www.nature.com/natrevphys/content",
+        "history_start": "2018-01-01",
+        "collection_mode": "latest_official_directory_and_article_pages",
+        "scope_note": "Review and technical review articles are screened individually; Perspective, Roadmap and Expert Recommendation require substantive review/synthesis and the existing network-science scope."
+      },
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/natrevphys/articles",
+        "max_pages": 12,
+        "article_lookups": 120
+      }
+    },
+    {
+      "name": "Physics Reports",
+      "short": "PR",
+      "issns": [
+        "0370-1573",
+        "1873-6270"
+      ],
+      "review_policy": {
+        "official_type_labels": [
+          "Review article",
+          "Review"
+        ],
+        "history_start": "2000-01-01",
+        "collection_mode": "latest_official_directory_and_article_pages"
+      },
+      "collection": {
+        "family": "elsevier",
+        "url": "https://www.sciencedirect.com/journal/physics-reports",
+        "access": "browser_directory",
+        "max_pages": 12,
+        "article_lookups": 120
+      }
+    },
+    {
+      "name": "Reviews of Modern Physics",
+      "short": "RMP",
+      "issns": [
+        "0034-6861",
+        "1539-0756"
+      ],
+      "review_policy": {
+        "official_type_labels": [
+          "Review",
+          "Article",
+          "Colloquium"
+        ],
+        "type_mapping_basis": "https://journals.aps.org/rmp/authors#types",
+        "history_start": "2000-01-01",
+        "collection_mode": "latest_official_directory_and_article_pages"
+      },
+      "collection": {
+        "family": "aps",
+        "slug": "rmp",
+        "url": "https://journals.aps.org/rmp/recent",
+        "max_pages": 12
+      }
+    }
+  ],
+  "journals": [
+    {
+      "name": "Nature",
+      "short": "Nature",
+      "issns": [
+        "1476-4687",
+        "0028-0836"
+      ],
+      "collection": {
+        "family": "nature",
+        "url": "https://www.nature.com/nature/articles",
+        "max_pages": 48
+      }
+    }
+  ]
+}
