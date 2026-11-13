@@ -2864,6 +2864,84 @@
         "en": "Read all 14 publisher pages, Methods and six figures. Mechanical experiments mainly use printed resins and extruded 2D structures with finite resolution; comparisons apply to the tested densities, loads and reference architectures. The elastic-wave lens is numerical. The main text presents 3D extensions, but separate supplementary files were not read. Data, code and calculations were not independently reproduced; universal optimality across materials, scales or loads is not established."
       },
       "publication_sha256": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d"
+    },
+    {
+      "doi": "10.1126/science.aef6714",
+      "recommended_on": "2026-11-13",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-12-to-13-01",
+      "assessment_sha256": "9b3c9e6bc0f33087fd1987de658b2f3ee99348d64122f054ec447b7ee74ce5fb",
+      "input_sha256": "57b9cfa5c7d0675176d35a14968f4c372f5c7aa441d0c39255560ea7f6416d0e",
+      "evidence_sha256": "fd2e3921a4cc4037f40f3680c149b062509ccb52aa83e42ab2e2972dd7e3976c",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-13T00:17:39.141803+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/science.aef6714",
+        "title": "Increased demographic turnover and isolation precede social fragmentation in Asian elephants",
+        "sha256": "252574399482fa0378516ae88f9a63279b046235ec683ff96f3a3c4a52c2caa1",
+        "version": "Science 394(6825),792–798(2026), publisher version of record, first published2026-11-12",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/science.aef6714",
+        "source_kind": "publisher_fulltext",
+        "pages": 8,
+        "reviewed_at": "2026-11-13T00:17:39.141803+00:00",
+        "read_scope": "All8 main PDF pages (7 article pages plus citation page), all main figures and Table1; all28 supplement PDF pages of text, Methods, figure captions, TableS1 and references; rendered supplementary FiguresS1–S10 and TableS1 inspected. Separate MDAR checklist, raw data and code not read or independently reproduced."
+      },
+      "question": {
+        "zh": "社会网络何时开始脆弱：个体流失、关系重连与碎片化是否同步？",
+        "en": "When does a social network become vulnerable: do turnover, rewiring and fragmentation coincide?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为同一象群的12年记录把两种变化分开：谁离开网络，以及留在网络中的个体如何改变关系。固定59只常驻雌象的比较，使网络变小与网络内部重组不再混为一谈。",
+          "值得带走的是时间上的检验：逐年变化可能掩盖相对初始状态累积的损失；社区变小之前，跨社区隔离已经增加。局部紧密联系仍在，并不能单独证明整体社会结构稳定。"
+        ],
+        "en": [
+          "This 12-year study separates who leaves an elephant social network from how remaining individuals rewire their ties. Comparing the full population with a fixed set of 59 resident females helps distinguish shrinking network size from internal reorganization.",
+          "Its useful lesson is temporal: consecutive-year comparisons can hide losses accumulated relative to baseline, and increasing isolation can precede smaller communities. Persistent strong local ties alone do not establish stability of the wider social structure."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "用固定节点集区分变化来源",
+            "en": "Separate turnover from rewiring"
+          },
+          "text": {
+            "zh": "全体443只雌象与每年均出现的59只常驻雌象分别建图；同时追踪连续年份保留的个体，分开统计节点进出和关系重连。",
+            "en": "Analyze 443 observed females and 59 annual residents separately, then distinguish node entry and exit from rewiring among individuals retained across successive years."
+          }
+        },
+        {
+          "heading": {
+            "zh": "同时看相邻年份与初始基线",
+            "en": "Compare both adjacent years and baseline"
+          },
+          "text": {
+            "zh": "年度更替率和从2007年累积的变化回答不同问题。固定居民的碎片化滞后于人口转变，提示不能只用一次横截面的社区数判断韧性。",
+            "en": "Annual turnover and accumulated change from 2007 answer different questions. Delayed fragmentation among residents cautions against using a single snapshot community count as a resilience diagnosis."
+          }
+        },
+        {
+          "heading": {
+            "zh": "检查群落算法与边权阈值",
+            "en": "Check clustering and tie-weight sensitivity"
+          },
+          "text": {
+            "zh": "方法比较Louvain、Girvan–Newman、Infomap和Walktrap，并逐步过滤弱边考察多层组织；它支持趋势稳健性，不能替代因果识别。",
+            "en": "Comparisons across four community algorithms and progressive filtering of weak ties examine multilevel organization and trend robustness; they do not establish causality."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究时序网络、社区演化、节点移除与网络韧性，以及动物社会网络和保护生态学的读者。",
+        "en": "Readers studying temporal networks, community evolution, node removal and resilience, animal societies or conservation ecology."
+      },
+      "reading_caveat": {
+        "zh": "已读正式主文PDF全部8页及补充PDF全部28页文本，核对主文4图、表1及补充图S1–S10、表S1。证据来自单一保护区的观测网络；未再出现包含死亡和迁出，不能全部视为死亡。隔离指标也会随内部联系加强而上升，不能仅解释为外部联系损失。年份数少，人口更替与网络变化的关联不等于因果或普遍临界阈值；常驻群隔离与更替的回归P=0.056，并非所有指标均显著。未读独立MDAR表，未复现原始数据或代码。",
+        "en": "Read all 8 main and 28 supplementary PDF pages; inspected Figures 1–4/Table 1 and Figures S1–S10/Table S1. This single-site observational study cannot separate all deaths from dispersal. Isolation can rise through stronger internal ties as well as weaker external ties. Few annual observations and temporal correlations establish neither causality nor a universal tipping threshold; resident isolation versus turnover has P=0.056. The separate MDAR checklist was not read; data and code were not independently reproduced."
+      },
+      "publication_sha256": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54"
     }
   ],
   "revisions": [

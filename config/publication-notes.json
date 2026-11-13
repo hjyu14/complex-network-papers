@@ -1042,11 +1042,12 @@
     },
     "10.1103/znwb-71hy": {
       "categories": [
-        "network_spreading"
+        "network_spreading",
+        "network_collective"
       ],
-      "note_en": "Geometric disorder creates hierarchical spin-network couplings that separate local cluster equilibration from much slower global transport relaxation.",
-      "note_zh": "几何无序产生层次自旋网络耦合，使局部团簇平衡与更缓慢的整体传播弛豫分离。",
-      "assessment_sha256": "553bf8ad2c29d37bd3aadc148b4bcbd16eefb0e6f3ce2b08ba7d3363e96e1ba9"
+      "note_zh": "无序自旋网络的几何异质性产生分层耦合，使局部团簇与整体弛豫出现分离时间尺度。",
+      "note_en": "Geometric heterogeneity in disordered spin networks creates hierarchical couplings and separates cluster-level and global relaxation timescales.",
+      "assessment_sha256": "5617d3b1dc71030616ff23ee00845159587f37e3e7ab5a530614d59cb5a52e40"
     },
     "10.1103/43yn-sh6g": {
       "categories": [
@@ -2017,11 +2018,12 @@
     },
     "10.1103/syk9-5c24": {
       "categories": [
-        "network_collective"
+        "network_collective",
+        "network_structure"
       ],
-      "note_zh": "研究 Hebbian 学习、放电适应及抑制如何自组织吸引子连接、前瞻编码和路径积分。",
-      "note_en": "Studies self-organization of attractor connectivity, anticipation and path integration through Hebbian learning, firing-rate adaptation and inhibition.",
-      "assessment_sha256": "6b49823600c017dc9bdb65423ddce80a7ea459ad231a3f5e0187e7a9309cb09b"
+      "note_zh": "Hebb 可塑性、放电率适应与抑制共同组织神经连接，使前瞻编码和路径积分从网络学习中涌现。",
+      "note_en": "Hebbian plasticity, firing-rate adaptation and inhibition self-organize neural connectivity supporting prospective coding and path integration.",
+      "assessment_sha256": "161be7ef7b5cd6bcbb899c0324d21f2aa4edf20923d2c983879acafe5860c8d8"
     },
     "10.1038/s41467-026-78717-0": {
       "categories": [
@@ -2691,6 +2693,70 @@
       "note_zh": "跨微生物互作模型和实验，部分可观测动力学的临界重构维数随观测量数近似线性增长。",
       "note_en": "Across microbial interaction models and experiments, the critical reconstruction dimension of partially observed dynamics scales approximately linearly with observable count.",
       "assessment_sha256": "d15baddcba7d90d531f1e972cc14700dd8a2772d943ef240b418c69944fb02a7"
+    },
+    "10.1103/cbqx-frfb": {
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "note_zh": "隐身超均匀点集生成的 Delaunay 网络中，长度相关键渗流阈值随隐身程度降低，有限尺寸分析支持二维渗流普适指数。",
+      "note_en": "Length-dependent bond percolation on stealthy hyperuniform Delaunay networks lowers connectivity thresholds; finite-size scaling supports standard two-dimensional percolation exponents.",
+      "assessment_sha256": "6f805d0e7b4bc11f2d4da9338e9a5d7ffc94cb75ea6a8c3bc4322a55c99968d1"
+    },
+    "10.1103/g5ch-1hdg": {
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "note_zh": "利用有向网络的源、汇遍历集合分解及低秩输运压缩，在粗粒化中保留扩散动力学。",
+      "note_en": "Source and sink ergodic-set decompositions combine with low-rank transport compression to coarse-grain directed networks while preserving diffusive dynamics.",
+      "assessment_sha256": "5b26e6858579fee3517b152d727bdd2c6c75a71be1dbeda3c8a94f79f8964558"
+    },
+    "10.1103/jjkq-826w": {
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "note_zh": "疾病致死与免疫衰减驱动感染状态、人口更替和网络拓扑共同演化，改变地方性流行与度分布。",
+      "note_en": "Disease fatality and waning immunity couple epidemic dynamics, demographic turnover and evolving degree distributions in an adaptive network model.",
+      "assessment_sha256": "fb25ed5fc5ffd7f479f7a02b1eec06bed32240ee0904b1d3a2ed6586c8b08d8a"
+    },
+    "10.1103/kghv-ffjq": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "在 Hopfield 类吸引子网络中调整群体相关性，分析含噪样本的记忆检索、概念泛化及副本对称破缺。",
+      "note_en": "A population-correlation-adjusted learning rule changes memory retrieval, concept generalization and replica-symmetry breaking in Hopfield-like attractor networks.",
+      "assessment_sha256": "76caba491058f85a91cf338291b5764c6c1012e839883067f63b673c78ca742e"
+    },
+    "10.1126/science.aef6714": {
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "note_zh": "12 年亚洲象观测区分个体更替与存活者关系重连，揭示群落隔离增加和社会网络碎片化的时间顺序。",
+      "note_en": "Twelve years of Asian-elephant observations separate demographic turnover from survivor rewiring and track increasing community isolation before social fragmentation.",
+      "assessment_sha256": "9b3c9e6bc0f33087fd1987de658b2f3ee99348d64122f054ec447b7ee74ce5fb"
+    },
+    "10.1126/science.aem6415": {
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "note_zh": "这篇 Perspective 讨论人口更替如何削弱象群跨社区联系及社会韧性，区分观测结果与知识传递后果的解释。",
+      "note_en": "This Perspective discusses how demographic turnover erodes intercommunity elephant ties and social resilience, distinguishing observed fragmentation from proposed knowledge-transfer consequences.",
+      "assessment_sha256": "25df449b787688573883a704df99a3656b6924c42bfacd721641f7cf415609d8",
+      "review_evidence_kind": "online_short_comment"
+    },
+    "10.1103/tqrb-kjyj": {
+      "categories": [
+        "network_structure",
+        "network_spreading",
+        "network_collective"
+      ],
+      "note_zh": "薄片实验将表面能驱动的卷曲转变关联到褶皱网络贯通及褶皱密度的幂律增长。",
+      "note_en": "Thin-sheet experiments associate surface-energy-driven crumpling with fold-network percolation and power-law fold-density growth.",
+      "assessment_sha256": "9e11af61823b6528d8f559723da637a5d76f8bc7e7b51ab5a22e0bdf7bbe8adc"
     }
   }
 }
