@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-14T02:54:55.271632+00:00",
+  "generated_at": "2026-11-14T23:38:06.421404+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-14",
-  "window_days": 75,
+  "window_end": "2026-11-15",
+  "window_days": 76,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "2fcb9a21b3eec046bd51711ae3358542adfa3928d0cfeac804b944cdfcbf06de",
-  "author_metadata_sha256": "4887613616bea5084dbfdce34aa96588adaad46deb94d68f53b505814af172b6",
+  "reading_notes_sha256": "e3b9858dfae83598f080a251a472de0ebf2bfeaaecda32504b9453fb29dde146",
+  "author_metadata_sha256": "0c6c346c3f3f359d9fa121aa7f9d58d2d91fc9a66fafe3f3c7d0fd4a1c0ac56b",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3288,9 +3288,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-14-to-15-01",
+      "config_sha256": "191de794b60048fb8f58092e0233893f15b06ec6e6596d15e908f42f3add6e8b",
+      "window_start": "2026-11-14",
+      "window_end": "2026-11-15",
+      "rule_sha256": "e27f9b2dbd450526fe9ed0a85f3cf0379a1802cddeda3a94a7ed9f20b1f5ccfd",
+      "screening_log_sha256": "9540fca7b085ce5baf252ea75a793ea5868253be063f4a4143bcb5bd4e92e120",
+      "candidate_sha256": "cf56ea4493d8acbeb1fd816038f05890b453085605d115d76782d2a0a5fcd726",
+      "author_metadata_sha256": "6703d46611c7fc7b62f93cd0a4c222b8ef1af3b253c376f4cc1daf03452809c8",
+      "run_manifest_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-14-to-15-01",
+          "files": {
+            "candidates.json": "cf56ea4493d8acbeb1fd816038f05890b453085605d115d76782d2a0a5fcd726",
+            "coverage.json": "94f3ba37e9bb8755f9e907e365a835c3c68577d26bd33b32032b42202421d5a8",
+            "collection-log.jsonl": "e3f16413c831f93ca9187ba7bf8781bcafa974b011e3ec1f39436558ec9b5434",
+            "screening-log.jsonl": "94bb1ab56eab39f3108abe45cf12756967aa9d773c957096ada4a7e345943d55",
+            "inputs/manifest.json": "a0cd303d416c8eb75eabeecc92cdbc964dff02f09cba7ac60bc3cf1e67256ed6",
+            "inputs/sources.json": "ca6adbb6c17131efc74fb4f1b73bd0abef336a7bd58feaa94732755ec2dcf6c0",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "cf56ea4493d8acbeb1fd816038f05890b453085605d115d76782d2a0a5fcd726",
+          "rule_sha256": "e27f9b2dbd450526fe9ed0a85f3cf0379a1802cddeda3a94a7ed9f20b1f5ccfd",
+          "screening_log_sha256": "9540fca7b085ce5baf252ea75a793ea5868253be063f4a4143bcb5bd4e92e120"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "6703d46611c7fc7b62f93cd0a4c222b8ef1af3b253c376f4cc1daf03452809c8",
+          "audit": {
+            "path": "reports/runs/2026-11-14-to-15-01/screening-log.jsonl",
+            "sha256": "94bb1ab56eab39f3108abe45cf12756967aa9d773c957096ada4a7e345943d55"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "9f656d3fbac02dd0b62ab5578a66424a167c5e9dffa03ebb57c91ae287cf3a9b"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 326,
+  "author_available_count": 329,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3849,6 +3893,15 @@
           "publisher_verified_inventory_count": 5,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "Nature",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4254,13 +4307,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2100,
-      "publisher_verified_inventory_count": 2092,
+      "candidate_count": 2131,
+      "publisher_verified_inventory_count": 2123,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4648,6 +4710,15 @@
           "journal": "NC",
           "candidate_count": 34,
           "publisher_verified_inventory_count": 34,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "NC",
+          "candidate_count": 31,
+          "publisher_verified_inventory_count": 31,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5041,6 +5112,15 @@
         {
           "window_start": "2026-11-13",
           "window_end": "2026-11-14",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -5442,6 +5522,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5836,6 +5925,15 @@
           "journal": "PRX",
           "candidate_count": 3,
           "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6234,6 +6332,15 @@
           "publisher_verified_inventory_count": 25,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6628,6 +6735,15 @@
           "journal": "SA",
           "candidate_count": 40,
           "publisher_verified_inventory_count": 40,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -7026,13 +7142,22 @@
           "publisher_verified_inventory_count": 12,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 122,
-      "publisher_verified_inventory_count": 122,
+      "candidate_count": 124,
+      "publisher_verified_inventory_count": 124,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7417,6 +7542,15 @@
         {
           "window_start": "2026-11-13",
           "window_end": "2026-11-14",
+          "journal": "CP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
           "journal": "CP",
           "candidate_count": 2,
           "publisher_verified_inventory_count": 2,
@@ -7818,6 +7952,15 @@
           "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "PRResearch",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -8212,6 +8355,15 @@
           "journal": "PRE",
           "candidate_count": 16,
           "publisher_verified_inventory_count": 16,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -8610,6 +8762,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -8961,30 +9122,38 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-14",
+          "window_end": "2026-11-15",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7927,
+  "candidate_count": 7960,
   "screening_counts": {
-    "excluded": 7601,
-    "core": 294,
+    "excluded": 7631,
+    "core": 297,
     "transferable_application": 32,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 326
+    "included": 329
   },
-  "published_count": 281,
+  "published_count": 284,
   "accepted_count": 45,
   "latest_update": {
-    "run": "reports/runs/2026-11-13-to-14-01",
-    "reviewed_at": "2026-11-14T02:50:16.883996+00:00",
-    "newly_included_count": 4,
+    "run": "reports/runs/2026-11-14-to-15-01",
+    "reviewed_at": "2026-11-14T23:32:46.024500+00:00",
+    "newly_included_count": 3,
     "newly_included_dois": [
-      "10.1038/s41467-026-79420-w",
-      "10.1063/5.0361897",
-      "10.1103/5jrm-5zfm",
-      "10.1126/sciadv.aeh0773"
+      "10.1038/s41467-026-78707-2",
+      "10.1038/s41467-026-79000-y",
+      "10.1038/s41467-026-79602-6"
     ],
     "accepted_to_published_count": 0,
     "accepted_to_published_dois": []
@@ -8997,6 +9166,268 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1038/s41467-026-79602-6",
+      "url": "https://doi.org/10.1038/s41467-026-79602-6",
+      "title": "Enhancer-driven gene regulatory network of human forebrain development provides insights into autism",
+      "authors": [
+        "Alexandre Jourdon",
+        "Jessica Mariani",
+        "Abhiram Natu",
+        "Feinan Wu",
+        "Boxun Li",
+        "Davide Capauto",
+        "Kevin T. Hagy",
+        "Scott Norton",
+        "Livia Tomasini",
+        "Alexias Safi",
+        "Anahita Amiri",
+        "Jeremy Schreiner",
+        "Cindy Khanh Nguyen",
+        "Neal Nolan",
+        "Matthew P. Nelson",
+        "Daniel M. Ramos",
+        "Michael E. Ward",
+        "Anna Szekely",
+        "James C. McPartland",
+        "Kevin Pelphrey",
+        "Pamela Ventola",
+        "Katarzyna Chawarska",
+        "Charles A. Gersbach",
+        "Gregory E. Crawford",
+        "Alexej Abyzov",
+        "Flora M. Vaccarino"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "dbb382c62fa6aa40ff47abdfab64df83df7968c44113b4d2f0b67bb76046e7d8",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79602-6",
+      "author_retrieved_at": "2026-11-14T23:25:33.551167+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-14",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-14",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-79602-6"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "7555469b2e78520888bdd9b27357be4778ed4e77b4608ec654e3510ce32c9805",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-79602-6"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "An enhancer-driven human forebrain regulatory network reveals hierarchical layers upstream of neuronal cell-fate genes, with CRISPR validation and a transcription-factor subnetwork explaining opposite specification patterns. Regulatory-network organization is a principal empirical contribution, alongside autism interpretation."
+      },
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "An enhancer-driven forebrain regulatory network reveals hierarchical cell-fate control and a validated transcription-factor subnetwork linked to autism-associated changes.",
+      "note_zh": "构建人类前脑增强子驱动调控网络，揭示细胞命运基因上游层级及与自闭症相关改变相联系的转录因子子网络。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "0acdc0955e5057a54800fb6ce398b97481d48e67097ff78405a6509fc59daef5",
+      "input_sha256": "0246d20423ace10a79adf026fe88b4ebe21de26e098c9964fdeb0758dbba690b",
+      "material_sha256": "7555469b2e78520888bdd9b27357be4778ed4e77b4608ec654e3510ce32c9805",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "7555469b2e78520888bdd9b27357be4778ed4e77b4608ec654e3510ce32c9805",
+      "rule_sha256": "e27f9b2dbd450526fe9ed0a85f3cf0379a1802cddeda3a94a7ed9f20b1f5ccfd",
+      "featured": "NC",
+      "evidence": [
+        "An enhancer-driven human forebrain regulatory network reveals hierarchical layers upstream of neuronal cell-fate genes, with CRISPR validation and a transcription-factor subnetwork explaining opposite specification patterns. Regulatory-network organization is a principal empirical contribution, alongside autism interpretation."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79602-6",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-79602-6",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-79000-y",
+      "url": "https://doi.org/10.1038/s41467-026-79000-y",
+      "title": "Theoretical frameworks for credit assignment via behavioral timescale synaptic plasticity",
+      "authors": [
+        "Ian Cone",
+        "Claudia Clopath",
+        "Rui Ponte Costa"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "1607a4c1eef008752bba357247b01b1abcb0c5d4b6aa3e7e4cf446c4e6092e36",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79000-y",
+      "author_retrieved_at": "2026-11-14T23:25:32.337650+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-14",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-14",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-79000-y"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "eb66f43bbb4e0d35b68813307baa9bcca8b940543447af9b22ab4aa0cb58bf42",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-79000-y"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "A generalized behavioral-timescale synaptic-plasticity rule yields place-field maps and recurrent attractor memories; credit-assignment speed is constrained by network depth and recurrence. Learning-driven neural network dynamics and architecture-dependent limits are central contributions."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A generalized behavioral-timescale plasticity rule learns place fields and attractor memories, with credit-assignment speed limited by depth and recurrence.",
+      "note_zh": "广义行为时间尺度突触可塑性框架连接位置场、吸引子记忆与监督学习，并揭示深度和循环连接对信用分配速度的限制。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "420b6c5a1d7c61b896523bfa4e75c7bb72e9c8d4bb8dd40f1f0f1777452a174b",
+      "input_sha256": "84eabed92ac66729647d1ea52f0d5cc8c65008564c688a0754f55aa78162bdb0",
+      "material_sha256": "eb66f43bbb4e0d35b68813307baa9bcca8b940543447af9b22ab4aa0cb58bf42",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "eb66f43bbb4e0d35b68813307baa9bcca8b940543447af9b22ab4aa0cb58bf42",
+      "rule_sha256": "e27f9b2dbd450526fe9ed0a85f3cf0379a1802cddeda3a94a7ed9f20b1f5ccfd",
+      "featured": "NC",
+      "evidence": [
+        "A generalized behavioral-timescale synaptic-plasticity rule yields place-field maps and recurrent attractor memories; credit-assignment speed is constrained by network depth and recurrence. Learning-driven neural network dynamics and architecture-dependent limits are central contributions."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79000-y",
+      "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79000-y",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-78707-2",
+      "url": "https://doi.org/10.1038/s41467-026-78707-2",
+      "title": "Boosting reinforcement learning for critical node detection with multi-topology training strategies",
+      "authors": [
+        "Kushal Raj Bhandari",
+        "Pin-Yu Chen",
+        "Shlomo Havlin",
+        "Jianxi Gao"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "ffd640059a641e0ba619e2345e6d2f085ba85d71c925fdf1058f56ee87676cd2",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78707-2",
+      "author_retrieved_at": "2026-11-14T23:25:31.149413+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-14",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-14",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-14",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-78707-2"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-14",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "3792fbc998fd9e09232817d1b20c0041250aec0e46c63d7e213e558c00b04caf",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-78707-2"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Reinforcement learning with an attention graph neural network and multi-topology training targets critical node detection across different network structures and objective functions, directly contributing a transferable network robustness method."
+      },
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Multi-topology reinforcement learning combines local graph attention and global descriptors to identify critical nodes across network structures.",
+      "note_zh": "融合局部图注意力与全局拓扑特征，通过多拓扑强化学习训练提升关键节点识别的跨网络适应性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "84204b80d87103b44c4f2f7b8e4dc435a3da2e40961e512735fb3210dd6d68f0",
+      "input_sha256": "00f375c5d593badac6b9725050ac85ceff219226dfa65d3741d0f544a14e5c22",
+      "material_sha256": "3792fbc998fd9e09232817d1b20c0041250aec0e46c63d7e213e558c00b04caf",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "3792fbc998fd9e09232817d1b20c0041250aec0e46c63d7e213e558c00b04caf",
+      "rule_sha256": "e27f9b2dbd450526fe9ed0a85f3cf0379a1802cddeda3a94a7ed9f20b1f5ccfd",
+      "featured": "NC",
+      "evidence": [
+        "Reinforcement learning with an attention graph neural network and multi-topology training targets critical node detection across different network structures and objective functions, directly contributing a transferable network robustness method."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-78707-2",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-78707-2",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1126/sciadv.aeh0773",
       "url": "https://doi.org/10.1126/sciadv.aeh0773",
@@ -36997,9 +37428,155 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "57d4eb6feee623b7a334b2206ae70aee0ab3b62395d61d6da4e402b13e63377b"
+    },
+    {
+      "current_run": "reports/runs/2026-11-14-to-15-01",
+      "candidate_sha256": "cf56ea4493d8acbeb1fd816038f05890b453085605d115d76782d2a0a5fcd726",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc"
+      },
+      "counts": {
+        "in_window": 33,
+        "newly_reviewed": 33,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 30,
+          "core": 3
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "8cc1d08d7cb2dd8b2998800d04718e3b182043df1f14d2ab7cf582e0812cccbe"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41467-026-78707-2",
+      "recommended_on": "2026-11-15",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-14-to-15-01",
+      "assessment_sha256": "84204b80d87103b44c4f2f7b8e4dc435a3da2e40961e512735fb3210dd6d68f0",
+      "input_sha256": "00f375c5d593badac6b9725050ac85ceff219226dfa65d3741d0f544a14e5c22",
+      "evidence_sha256": "3792fbc998fd9e09232817d1b20c0041250aec0e46c63d7e213e558c00b04caf",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-14T23:32:46.026010+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78707-2",
+        "title": "Boosting reinforcement learning for critical node detection with multi-topology training strategies",
+        "sha256": "40c2cdaf0a2a17ac42a10150b3fbafd303446076381a17629676b5b572e88ff2",
+        "version": "Nature Communications Article in Press; officially published online2026-11-14; early citable publisher version, not final edited version",
+        "source_url": "https://www.nature.com/articles/s41467-026-78707-2_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-14T23:32:46.026010+00:00",
+        "read_scope": "All13 publisher Article in Press PDF pages, including main text, Methods, Figures1–8, references and publication notices; rendered pages3,6,11 inspected. Separate Supplementary Information, code and data were not read or independently reproduced. PDF first-author name omits the middle name Raj present in the official article page; DOI, title and all four author identities match."
+      },
+      "question": {
+        "zh": "关键节点识别策略怎样跨越训练网络的拓扑偏差？",
+        "en": "How can critical-node policies generalize beyond their training topology?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把关键节点识别的泛化问题拆成训练分布、局部表示和全局特征三个可检查的环节。比较不同网络家族，比只报告一个平均分数更有启发。",
+          "值得借鉴的是评估设计：先固定删除目标，再比较单拓扑与混合拓扑训练，并用特征消融和留出网络家族检验迁移。三个目标分别训练，不能把统一框架理解成同一个策略无需重训就能切换目标。"
+        ],
+        "en": [
+          "This paper separates critical-node generalization into training distributions, local representations and global descriptors. Comparing graph families is more informative than one aggregate score.",
+          "Its useful lesson is experimental: fix the removal objective, compare single- and mixed-topology training, then inspect feature and graph-family ablations. Each objective uses its own training; a common framework does not imply one policy transfers across objectives without retraining."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把拓扑分布作为实验变量",
+            "en": "Treat topology distribution as an experimental variable"
+          },
+          "text": {
+            "zh": "比较单一网络生成器与混合训练，并通过留一网络家族消融区分训练多样性和架构带来的收益。",
+            "en": "Single-generator and mixed training, with leave-one-family-out ablations, help separate distribution diversity from architectural effects."
+          }
+        },
+        {
+          "heading": {
+            "zh": "连接局部节点与全局环境",
+            "en": "Connect local nodes to global context"
+          },
+          "text": {
+            "zh": "图注意力节点表示与全局描述符结合；特征效果随网络家族改变，为跨图泛化提供具体检查点。",
+            "en": "Graph-attention node representations are combined with global descriptors; family-dependent feature effects give concrete checks on generalization."
+          }
+        },
+        {
+          "heading": {
+            "zh": "核对目标、曲线和基准训练",
+            "en": "Check objectives, trajectories and baseline training"
+          },
+          "text": {
+            "zh": "MinMax、CNP与MaxNum含义不同；基准是否按同一目标训练、AUC方向是否统一，都会影响比较解释。",
+            "en": "MinMax, CNP and MaxNum differ. Objective-matched baseline training and consistent AUC direction matter when interpreting comparisons."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络拆解、关键节点、强化学习与图模型跨分布泛化的读者。",
+        "en": "Readers studying network dismantling, critical nodes, reinforcement learning or out-of-distribution graph generalization."
+      },
+      "reading_caveat": {
+        "zh": "已读13页出版社Article in Press全文与方法、图1–8和参考文献，尚非最终编辑版；未读独立补充材料，也未复现代码。结论限于所测网络与目标，训练图30–50节点，三个目标分别训练；不证明全局最优或跨目标零样本迁移。加权、有向和时序网络仍属后续问题。基因结果是候选优先排序与富集，不能视为临床验证。",
+        "en": "Read all13 publisher Article in Press pages, including Methods, Figures1–8 and references; final editing is pending. Separate supplements were not read and code was not reproduced. Training uses30–50-node graphs and separate objective-specific models. Benchmarks do not prove optimality or zero-shot cross-objective transfer. Weighted, directed and temporal extensions remain open; gene enrichment supports hypothesis generation, not clinical validation."
+      },
+      "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
+    },
     {
       "doi": "10.1126/sciadv.aeh0773",
       "recommended_on": "2026-11-14",
@@ -43066,6 +43643,84 @@
       "publication_sha256": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc"
     },
     {
+      "doi": "10.1038/s41467-026-78707-2",
+      "recommended_on": "2026-11-15",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-14-to-15-01",
+      "assessment_sha256": "84204b80d87103b44c4f2f7b8e4dc435a3da2e40961e512735fb3210dd6d68f0",
+      "input_sha256": "00f375c5d593badac6b9725050ac85ceff219226dfa65d3741d0f544a14e5c22",
+      "evidence_sha256": "3792fbc998fd9e09232817d1b20c0041250aec0e46c63d7e213e558c00b04caf",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-14T23:32:46.026010+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-78707-2",
+        "title": "Boosting reinforcement learning for critical node detection with multi-topology training strategies",
+        "sha256": "40c2cdaf0a2a17ac42a10150b3fbafd303446076381a17629676b5b572e88ff2",
+        "version": "Nature Communications Article in Press; officially published online2026-11-14; early citable publisher version, not final edited version",
+        "source_url": "https://www.nature.com/articles/s41467-026-78707-2_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 13,
+        "reviewed_at": "2026-11-14T23:32:46.026010+00:00",
+        "read_scope": "All13 publisher Article in Press PDF pages, including main text, Methods, Figures1–8, references and publication notices; rendered pages3,6,11 inspected. Separate Supplementary Information, code and data were not read or independently reproduced. PDF first-author name omits the middle name Raj present in the official article page; DOI, title and all four author identities match."
+      },
+      "question": {
+        "zh": "关键节点识别策略怎样跨越训练网络的拓扑偏差？",
+        "en": "How can critical-node policies generalize beyond their training topology?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把关键节点识别的泛化问题拆成训练分布、局部表示和全局特征三个可检查的环节。比较不同网络家族，比只报告一个平均分数更有启发。",
+          "值得借鉴的是评估设计：先固定删除目标，再比较单拓扑与混合拓扑训练，并用特征消融和留出网络家族检验迁移。三个目标分别训练，不能把统一框架理解成同一个策略无需重训就能切换目标。"
+        ],
+        "en": [
+          "This paper separates critical-node generalization into training distributions, local representations and global descriptors. Comparing graph families is more informative than one aggregate score.",
+          "Its useful lesson is experimental: fix the removal objective, compare single- and mixed-topology training, then inspect feature and graph-family ablations. Each objective uses its own training; a common framework does not imply one policy transfers across objectives without retraining."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把拓扑分布作为实验变量",
+            "en": "Treat topology distribution as an experimental variable"
+          },
+          "text": {
+            "zh": "比较单一网络生成器与混合训练，并通过留一网络家族消融区分训练多样性和架构带来的收益。",
+            "en": "Single-generator and mixed training, with leave-one-family-out ablations, help separate distribution diversity from architectural effects."
+          }
+        },
+        {
+          "heading": {
+            "zh": "连接局部节点与全局环境",
+            "en": "Connect local nodes to global context"
+          },
+          "text": {
+            "zh": "图注意力节点表示与全局描述符结合；特征效果随网络家族改变，为跨图泛化提供具体检查点。",
+            "en": "Graph-attention node representations are combined with global descriptors; family-dependent feature effects give concrete checks on generalization."
+          }
+        },
+        {
+          "heading": {
+            "zh": "核对目标、曲线和基准训练",
+            "en": "Check objectives, trajectories and baseline training"
+          },
+          "text": {
+            "zh": "MinMax、CNP与MaxNum含义不同；基准是否按同一目标训练、AUC方向是否统一，都会影响比较解释。",
+            "en": "MinMax, CNP and MaxNum differ. Objective-matched baseline training and consistent AUC direction matter when interpreting comparisons."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络拆解、关键节点、强化学习与图模型跨分布泛化的读者。",
+        "en": "Readers studying network dismantling, critical nodes, reinforcement learning or out-of-distribution graph generalization."
+      },
+      "reading_caveat": {
+        "zh": "已读13页出版社Article in Press全文与方法、图1–8和参考文献，尚非最终编辑版；未读独立补充材料，也未复现代码。结论限于所测网络与目标，训练图30–50节点，三个目标分别训练；不证明全局最优或跨目标零样本迁移。加权、有向和时序网络仍属后续问题。基因结果是候选优先排序与富集，不能视为临床验证。",
+        "en": "Read all13 publisher Article in Press pages, including Methods, Figures1–8 and references; final editing is pending. Separate supplements were not read and code was not reproduced. Training uses30–50-node graphs and separate objective-specific models. Benchmarks do not prove optimality or zero-shot cross-objective transfer. Weighted, directed and temporal extensions remain open; gene enrichment supports hypothesis generation, not clinical validation."
+      },
+      "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -43145,5 +43800,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "5d2ec714888483a49dd403ac41e2b0bea246694ca44cc201c1c24cb6a090c690"
+  "daily_suggestions_sha256": "96e0d461bbac41897d92d1512c0aa5eddd3a0a11836394faddcbcf850312e22d"
 }
