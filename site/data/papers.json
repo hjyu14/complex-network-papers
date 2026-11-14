@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-13T01:59:04.578951+00:00",
+  "generated_at": "2026-11-14T02:54:55.271632+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-13",
-  "window_days": 74,
+  "window_end": "2026-11-14",
+  "window_days": 75,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "c36fb13e7210953895bfaee941fa90bdbf255bcc67c4eb1d37e52a49b518e55f",
-  "author_metadata_sha256": "b0ca0f77619c68d25aad8170db3c33c3593c82df60e133268ff45275bf846a11",
+  "reading_notes_sha256": "2fcb9a21b3eec046bd51711ae3358542adfa3928d0cfeac804b944cdfcbf06de",
+  "author_metadata_sha256": "4887613616bea5084dbfdce34aa96588adaad46deb94d68f53b505814af172b6",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3244,9 +3244,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-13-to-14-01",
+      "config_sha256": "de5ea1d017e997a8758ab73aaeb4d88f820ff46916bdc822bbfd2f0df061bdfa",
+      "window_start": "2026-11-13",
+      "window_end": "2026-11-14",
+      "rule_sha256": "4818ca7cbd943eaf69a513af7e3345d9a6a562aaf0408b50f3676757e874235b",
+      "screening_log_sha256": "79b1646ee1b47d3d6015e343e5f649cebb47f7335274f6652148f7407be8e96c",
+      "candidate_sha256": "a8d907fe2d91085f3544c8a4252dc5cd2dc6ec461ee59d61adb7c05ffa9a92a3",
+      "author_metadata_sha256": "b54fbe0724dfd14f58296fd5a71d7dd0e2e0683f5e0fa7f2d29a26dccd4a00c9",
+      "run_manifest_sha256": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-13-to-14-01",
+          "files": {
+            "candidates.json": "a8d907fe2d91085f3544c8a4252dc5cd2dc6ec461ee59d61adb7c05ffa9a92a3",
+            "coverage.json": "e3d3e5ebf70779fd4b91af3b51ccadff8f4e680d2df66338a04b79de17aa94bc",
+            "collection-log.jsonl": "4a6ad26ef75742c4980d6b9d8f3d5034e839ae29abf6dff80e2a4cf2f29afb61",
+            "screening-log.jsonl": "e8f2740ed9a11f7809b22a464629d3638ebb8dcfb7975a95d7bc616b38f4fe6e",
+            "inputs/manifest.json": "8732e0cdfbce1e7b1e68a98c229211899f71a45d1566991c632d2bbc4fd11805",
+            "inputs/sources.json": "d5afe09406a46f5e8b58145e8dfa5f238de68c277f02790c41bb7f8ba951a2f1",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "a8d907fe2d91085f3544c8a4252dc5cd2dc6ec461ee59d61adb7c05ffa9a92a3",
+          "rule_sha256": "4818ca7cbd943eaf69a513af7e3345d9a6a562aaf0408b50f3676757e874235b",
+          "screening_log_sha256": "79b1646ee1b47d3d6015e343e5f649cebb47f7335274f6652148f7407be8e96c"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "b54fbe0724dfd14f58296fd5a71d7dd0e2e0683f5e0fa7f2d29a26dccd4a00c9",
+          "audit": {
+            "path": "reports/runs/2026-11-13-to-14-01/screening-log.jsonl",
+            "sha256": "e8f2740ed9a11f7809b22a464629d3638ebb8dcfb7975a95d7bc616b38f4fe6e"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "1abb30bdd4f2c80b0cf1b4f11f374d1b6680b367c665102f040d9e3427c4b360"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 322,
+  "author_available_count": 326,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3396,8 +3440,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 957,
-      "publisher_verified_inventory_count": 957,
+      "candidate_count": 962,
+      "publisher_verified_inventory_count": 962,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -3796,6 +3840,15 @@
           "publisher_verified_inventory_count": 6,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "Nature",
+          "candidate_count": 5,
+          "publisher_verified_inventory_count": 5,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4192,13 +4245,22 @@
           "publisher_verified_inventory_count": 48,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2066,
-      "publisher_verified_inventory_count": 2058,
+      "candidate_count": 2100,
+      "publisher_verified_inventory_count": 2092,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4577,6 +4639,15 @@
           "journal": "NC",
           "candidate_count": 18,
           "publisher_verified_inventory_count": 18,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "NC",
+          "candidate_count": 34,
+          "publisher_verified_inventory_count": 34,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4966,13 +5037,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 32,
-      "publisher_verified_inventory_count": 32,
+      "candidate_count": 33,
+      "publisher_verified_inventory_count": 33,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -5353,13 +5433,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "NCS",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 101,
-      "publisher_verified_inventory_count": 101,
+      "candidate_count": 103,
+      "publisher_verified_inventory_count": 103,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5740,13 +5829,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "PRX",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 831,
-      "publisher_verified_inventory_count": 831,
+      "candidate_count": 848,
+      "publisher_verified_inventory_count": 848,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6127,13 +6225,22 @@
           "publisher_verified_inventory_count": 24,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "PRL",
+          "candidate_count": 25,
+          "publisher_verified_inventory_count": 25,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "SA",
-      "candidate_count": 909,
-      "publisher_verified_inventory_count": 909,
+      "candidate_count": 949,
+      "publisher_verified_inventory_count": 949,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6514,13 +6621,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "SA",
+          "candidate_count": 40,
+          "publisher_verified_inventory_count": 40,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 1030,
-      "publisher_verified_inventory_count": 1030,
+      "candidate_count": 1042,
+      "publisher_verified_inventory_count": 1042,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6901,13 +7017,22 @@
           "publisher_verified_inventory_count": 5,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "PNAS",
+          "candidate_count": 12,
+          "publisher_verified_inventory_count": 12,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "CP",
-      "candidate_count": 120,
-      "publisher_verified_inventory_count": 120,
+      "candidate_count": 122,
+      "publisher_verified_inventory_count": 122,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7288,13 +7413,22 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "CP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 446,
-      "publisher_verified_inventory_count": 446,
+      "candidate_count": 454,
+      "publisher_verified_inventory_count": 454,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7675,13 +7809,22 @@
           "publisher_verified_inventory_count": 8,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "PRResearch",
+          "candidate_count": 9,
+          "publisher_verified_inventory_count": 9,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 585,
-      "publisher_verified_inventory_count": 585,
+      "candidate_count": 594,
+      "publisher_verified_inventory_count": 594,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8062,13 +8205,22 @@
           "publisher_verified_inventory_count": 21,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "PRE",
+          "candidate_count": 16,
+          "publisher_verified_inventory_count": 16,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 131,
-      "publisher_verified_inventory_count": 131,
+      "candidate_count": 132,
+      "publisher_verified_inventory_count": 132,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8449,13 +8601,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "Chaos",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 95,
-      "publisher_verified_inventory_count": 95,
+      "candidate_count": 96,
+      "publisher_verified_inventory_count": 96,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8791,39 +8952,42 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-13",
+          "window_end": "2026-11-14",
+          "journal": "NP",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7795,
+  "candidate_count": 7927,
   "screening_counts": {
-    "excluded": 7473,
-    "core": 292,
-    "transferable_application": 30,
+    "excluded": 7601,
+    "core": 294,
+    "transferable_application": 32,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 322
+    "included": 326
   },
-  "published_count": 278,
-  "accepted_count": 44,
+  "published_count": 281,
+  "accepted_count": 45,
   "latest_update": {
-    "run": "reports/runs/2026-11-12-to-13-01",
-    "reviewed_at": "2026-11-13T01:47:55.789897+00:00",
-    "newly_included_count": 7,
+    "run": "reports/runs/2026-11-13-to-14-01",
+    "reviewed_at": "2026-11-14T02:50:16.883996+00:00",
+    "newly_included_count": 4,
     "newly_included_dois": [
-      "10.1103/cbqx-frfb",
-      "10.1103/g5ch-1hdg",
-      "10.1103/jjkq-826w",
-      "10.1103/kghv-ffjq",
-      "10.1103/tqrb-kjyj",
-      "10.1126/science.aef6714",
-      "10.1126/science.aem6415"
+      "10.1038/s41467-026-79420-w",
+      "10.1063/5.0361897",
+      "10.1103/5jrm-5zfm",
+      "10.1126/sciadv.aeh0773"
     ],
-    "accepted_to_published_count": 2,
-    "accepted_to_published_dois": [
-      "10.1103/syk9-5c24",
-      "10.1103/znwb-71hy"
-    ]
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": []
   },
   "candidate_inventory_complete": false,
   "metadata_reconciliation_complete": false,
@@ -8833,6 +8997,334 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1126/sciadv.aeh0773",
+      "url": "https://doi.org/10.1126/sciadv.aeh0773",
+      "title": "Symmetry as a common origin of hierarchical emergence and abstraction",
+      "authors": [
+        "Fernando E. Rosas"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "5b972b503de8c649ae90ee61d67c8d92fbc90a23ce461e9071e62c2d698b7c81",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh0773",
+      "author_retrieved_at": "2026-11-14T02:40:33.719510+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-11-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-13",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-13",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aeh0773"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "7ad73775d980f3595416ff8913827395c670da618d966a6cce712cadbbc4dde6",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aeh0773"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "The actual abstract derives symmetry-based hierarchical coarse descriptions and autonomously updated Bayesian beliefs, demonstrates emergence in Hopfield and Boolean regulatory networks, and applies reduced inference to epidemic models; this supplies a transferable method for reasoning about multiscale network dynamics."
+      },
+      "categories": [
+        "network_structure",
+        "network_inference",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Uses dynamical symmetries to construct self-contained hierarchical coarse-grainings and macrostate inference in neural, regulatory and epidemic models.",
+      "note_zh": "利用动力学对称性构造自洽的层级粗粒化，并在神经、调控和传播模型中展示宏观描述与贝叶斯推断。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "82bc8fca84f462f2af39eff5c41f860fe247bbf0332c4456df96de0d137e4db9",
+      "input_sha256": "259ebf05b2714a2afcebe65cf6a031b989cb59d12d0ded93df224094e8809389",
+      "material_sha256": "7ad73775d980f3595416ff8913827395c670da618d966a6cce712cadbbc4dde6",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "7ad73775d980f3595416ff8913827395c670da618d966a6cce712cadbbc4dde6",
+      "rule_sha256": "4818ca7cbd943eaf69a513af7e3345d9a6a562aaf0408b50f3676757e874235b",
+      "featured": "SA",
+      "evidence": [
+        "The actual abstract derives symmetry-based hierarchical coarse descriptions and autonomously updated Bayesian beliefs, demonstrates emergence in Hopfield and Boolean regulatory networks, and applies reduced inference to epidemic models; this supplies a transferable method for reasoning about multiscale network dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh0773",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh0773",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/5jrm-5zfm",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/5jrm-5zfm",
+      "title": "Empirical scaling laws in balanced networks with conductance-based synapses",
+      "authors": [
+        "Vicky Zhu",
+        "Gabriel Koch Ocker",
+        "Robert Rosenbaum"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "f28a0d8520b537de5aaa43e46d49336ff10151c0ae97c1f7ae4d296855d46b43",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F5jrm-5zfm",
+      "author_retrieved_at": "2026-11-14T02:40:32.299437+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-13",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-13",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-13",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/5jrm-5zfm"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-13",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "27bf9d7c38ebce614ab4ba5cf1d874bb1a2cc0fd093d9f4db1596d15a3a3d34e",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/5jrm-5zfm"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "The actual abstract simulates strongly coupled recurrent balanced neuronal networks with conductance-based synapses and spike-time correlations; it shows how their combined effects restore realistic membrane-potential variability, directly linking network interactions and collective neural dynamics."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Simulations show how conductance-based synapses and spike-time correlations jointly produce more realistic membrane-potential variability in recurrent balanced networks.",
+      "note_zh": "模拟显示，电导型突触与尖峰时间相关性共同作用，可使循环平衡神经网络的膜电位变异更接近真实水平。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "c40f4f81722281cb95612bd2048378c03fc7bbb41c3425c0eac30efd18f6630d",
+      "input_sha256": "c82d9affe5503a4a210103be84e4129e45548d1ed02a0c818a761e14b494443d",
+      "material_sha256": "27bf9d7c38ebce614ab4ba5cf1d874bb1a2cc0fd093d9f4db1596d15a3a3d34e",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "27bf9d7c38ebce614ab4ba5cf1d874bb1a2cc0fd093d9f4db1596d15a3a3d34e",
+      "rule_sha256": "4818ca7cbd943eaf69a513af7e3345d9a6a562aaf0408b50f3676757e874235b",
+      "featured": null,
+      "evidence": [
+        "The actual abstract simulates strongly coupled recurrent balanced neuronal networks with conductance-based synapses and spike-time correlations; it shows how their combined effects restore realistic membrane-potential variability, directly linking network interactions and collective neural dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F5jrm-5zfm",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/5jrm-5zfm",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0361897",
+      "url": "https://doi.org/10.1063/5.0361897",
+      "title": "Evolution of cooperation in enterprise resource-sharing networks with dynamic participation and adaptive decision-making",
+      "authors": [
+        "Pengfei Liu",
+        "Bin Pi",
+        "Qin Li",
+        "Minyu Feng",
+        "Attila Szolnoki"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "412714ca180b1d39f85d5e9c3a4e260b17db550e39723cd0176d7da8708fe1f7",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0361897",
+      "author_retrieved_at": "2026-11-14T02:40:31.082047+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-11-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-13",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-13",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0361897"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "4c3320709286a49307421327caf2e20618bf15709e085705da90e79bd04e13ef",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0361897"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "The actual abstract proposes evolutionary cooperation on enterprise resource-sharing networks with aspiration-dependent active/dormant participation, Q-learning selection of payoff-driven or conformist decisions and snowdrift interactions; simulations examine how participation and adaptive decisions shape network cooperation."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Combines dynamic participation, Q-learning decision modes and snowdrift games to study cooperation in enterprise resource-sharing networks.",
+      "note_zh": "在企业资源共享网络中结合动态参与、Q-learning决策模式与雪堆博弈，研究合作的维持条件。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "d7a5325fe0bc1dee7dc53cce88316339b2c8296a763bd9b3ef53d24e72d10f4f",
+      "input_sha256": "47d89823f7412235f0519793c7794dc9602e8cfed7b24d21bf547a7022f3b2f9",
+      "material_sha256": "4c3320709286a49307421327caf2e20618bf15709e085705da90e79bd04e13ef",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "4c3320709286a49307421327caf2e20618bf15709e085705da90e79bd04e13ef",
+      "rule_sha256": "4818ca7cbd943eaf69a513af7e3345d9a6a562aaf0408b50f3676757e874235b",
+      "featured": null,
+      "evidence": [
+        "The actual abstract proposes evolutionary cooperation on enterprise resource-sharing networks with aspiration-dependent active/dormant participation, Q-learning selection of payoff-driven or conformist decisions and snowdrift interactions; simulations examine how participation and adaptive decisions shape network cooperation."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0361897",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0361897",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1038/s41467-026-79420-w",
+      "url": "https://doi.org/10.1038/s41467-026-79420-w",
+      "title": "Percolation and site energy distribution jointly control Li+ transport in disordered rocksalt positive electrodes",
+      "authors": [
+        "Junhong Liao",
+        "Zihui Li",
+        "Hao Chen",
+        "Yaoshu Xie",
+        "Ziyi Man",
+        "Shendong Tan",
+        "Yiyang Qu",
+        "Shixi Zhao",
+        "Zhengyan Lun",
+        "Tingzheng Hou"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "41c0f9bda158923f4c73f3d51ca4159eeda4e14c9b51c6f3c1b4ba352e2ec0a5",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79420-w",
+      "author_retrieved_at": "2026-11-14T02:40:35.168850+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-13",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-13",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-13",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-79420-w"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-13",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "96f8ca90bd3406030eea4da0d5442e1257ca46af6ab96a3260b9f931687acb9f",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1038%2Fs41467-026-79420-w"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "The actual abstract quantifies how transport-network percolation connectivity and site-energy disorder jointly control lithium diffusion, introduces an energy-rectified percolation descriptor and uses it to design electrode compositions; network connectivity is a principal physical mechanism and methodological contribution."
+      },
+      "categories": [
+        "network_structure",
+        "network_spreading"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Combines lithium-pathway connectivity and site-energy disorder in an energy-rectified percolation metric for disordered electrode design.",
+      "note_zh": "联合考察锂离子通道的渗流连通性与位点能量分布，提出能量修正渗流指标指导无序电极设计。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "1f44226fb058a302c136e8b23d01e3e3f7354a6842b8fc74f81fbc53a1d741cf",
+      "input_sha256": "349dbb64aac9bdd7be19716d7f2f6ddbaf51c328d55dc41b7df3fb88db6d91b4",
+      "material_sha256": "96f8ca90bd3406030eea4da0d5442e1257ca46af6ab96a3260b9f931687acb9f",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "96f8ca90bd3406030eea4da0d5442e1257ca46af6ab96a3260b9f931687acb9f",
+      "rule_sha256": "4818ca7cbd943eaf69a513af7e3345d9a6a562aaf0408b50f3676757e874235b",
+      "featured": "NC",
+      "evidence": [
+        "The actual abstract quantifies how transport-network percolation connectivity and site-energy disorder jointly control lithium diffusion, introduces an energy-rectified percolation descriptor and uses it to design electrode compositions; network connectivity is a principal physical mechanism and methodological contribution."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79420-w",
+      "evidence_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79420-w",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1126/science.aem6415",
       "url": "https://doi.org/10.1126/science.aem6415",
@@ -36437,9 +36929,155 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "581fa2240012a440a6bac99569aa36237a8da384a6e4fb30320a71ff0bc79664"
+    },
+    {
+      "current_run": "reports/runs/2026-11-13-to-14-01",
+      "candidate_sha256": "a8d907fe2d91085f3544c8a4252dc5cd2dc6ec461ee59d61adb7c05ffa9a92a3",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54"
+      },
+      "counts": {
+        "in_window": 149,
+        "newly_reviewed": 132,
+        "historically_reviewed": 58,
+        "state_updates": 16,
+        "categories": {
+          "excluded": 145,
+          "core": 2,
+          "transferable_application": 2
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "57d4eb6feee623b7a334b2206ae70aee0ab3b62395d61d6da4e402b13e63377b"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1126/sciadv.aeh0773",
+      "recommended_on": "2026-11-14",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-13-to-14-01",
+      "assessment_sha256": "82bc8fca84f462f2af39eff5c41f860fe247bbf0332c4456df96de0d137e4db9",
+      "input_sha256": "259ebf05b2714a2afcebe65cf6a031b989cb59d12d0ded93df224094e8809389",
+      "evidence_sha256": "7ad73775d980f3595416ff8913827395c670da618d966a6cce712cadbbc4dde6",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-14T02:47:34.597106+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.aeh0773",
+        "title": "Symmetry as a common origin of hierarchical emergence and abstraction",
+        "sha256": "c261eec9e240a0b8d778fedecc9d7f90d2f52d6138a0ab9dd8600a110cb6b326",
+        "version": "Science Advances12(46),eaeh0773(2026), publisher version of record, published2026-11-13",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/sciadv.aeh0773",
+        "source_kind": "publisher_fulltext",
+        "pages": 16,
+        "reviewed_at": "2026-11-14T02:47:34.597106+00:00",
+        "read_scope": "All 16 PDF pages (15 article pages including main text, Methods, Figures1–7, Table1 and references, plus citation page); rendered pages3,7,10 inspected. Separate Supplementary Materials SectionsS1–S11 and their proofs were not read; data and code were not independently reproduced."
+      },
+      "question": {
+        "zh": "什么时候可以压缩网络动力学，而不丢掉目标宏观量的预测能力？",
+        "en": "When can network dynamics be compressed without losing predictive power for the target macrostate?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把两个常被分开讨论的问题接起来：系统何时存在自洽的宏观描述，观察者何时能只在这个层级更新判断。神经网络、布尔调控与传播模型提供了具体例子。",
+          "值得带走的是一条检查顺序：先找动力学对称性及其轨道，再检查观测是否遵守相同对称性，最后明确推断所保留的目标和信息。少用变量并不自动意味着宏观过程仍然自洽。"
+        ],
+        "en": [
+          "This paper connects two questions: when a system supports a self-contained macrodescription, and when an observer can update beliefs directly at that level. Neural, Boolean regulatory and epidemic models make the connection concrete.",
+          "Its useful workflow is to identify dynamical symmetries and their orbits, check compatible observations, then specify the target and information retained by inference. Fewer variables alone do not guarantee autonomous macrodynamics."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "区分三种对称性保证",
+            "en": "Distinguish three symmetry guarantees"
+          },
+          "text": {
+            "zh": "全局、局部与弱对称性对轨迹、层级结构和时间反向闭合的保证不同；不能把可集总性直接当作全部层级性质。",
+            "en": "Global, local and weak symmetries offer different guarantees for trajectories, hierarchies and reverse-time closure; lumpability alone does not supply them all."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把观测也纳入降维条件",
+            "en": "Include observations in reduction conditions"
+          },
+          "text": {
+            "zh": "隐状态与观测共同等变时可构造约化HMM；约化观测下的精确推断，不自动等于保留全部微观观测的信息。",
+            "en": "Equivariant latent dynamics and observations yield a quotient HMM. Exact inference from coarse observations need not retain all information in microscopic measurements."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用社区计数压缩传播状态",
+            "en": "Compress epidemic states by community counts"
+          },
+          "text": {
+            "zh": "社区内可交换的SIS示例把2的n次方个微观状态压缩为各社区计数的组合，说明何种结构能支持精确聚合过滤。",
+            "en": "An exchangeable-community SIS example replaces exponentially many microstates with combinations of community counts, showing which structure supports exact aggregate filtering."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络粗粒化、动力学对称性、神经与布尔调控网络、传播建模及部分可观测系统推断的读者。",
+        "en": "Readers studying network coarse-graining, dynamical symmetries, neural and Boolean networks, epidemics or inference in partially observed systems."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部16页，含15页主文、方法、图1–7、表1、参考文献及末页书目信息，查看理论与应用图页。结论依赖精确对称性、相容观测及相应平稳性条件；粗粒化观测可能丢失信息，与完整观测推断等价还需额外充分性条件。社区SIS示例不是任意接触网络；近似对称性和有噪数据中发现层级仍是开放问题。未读独立补充材料S1–S11及其中证明，未复现代码。",
+        "en": "Read all16 publisher PDF pages, including Methods, Figures1–7, Table1 and references. Guarantees require exact symmetries, compatible observations and relevant invariance conditions. Coarse observations can lose information; equivalence to full-observation inference needs an additional sufficiency condition. Community-SIS results do not cover arbitrary contact networks. Approximate symmetries remain open. Separate supplementary SectionsS1–S11 and proofs were not read; code was not reproduced."
+      },
+      "publication_sha256": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc"
+    },
     {
       "doi": "10.1126/science.aef6714",
       "recommended_on": "2026-11-13",
@@ -42350,6 +42988,84 @@
       "publication_sha256": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54"
     },
     {
+      "doi": "10.1126/sciadv.aeh0773",
+      "recommended_on": "2026-11-14",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-13-to-14-01",
+      "assessment_sha256": "82bc8fca84f462f2af39eff5c41f860fe247bbf0332c4456df96de0d137e4db9",
+      "input_sha256": "259ebf05b2714a2afcebe65cf6a031b989cb59d12d0ded93df224094e8809389",
+      "evidence_sha256": "7ad73775d980f3595416ff8913827395c670da618d966a6cce712cadbbc4dde6",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-14T02:47:34.597106+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.aeh0773",
+        "title": "Symmetry as a common origin of hierarchical emergence and abstraction",
+        "sha256": "c261eec9e240a0b8d778fedecc9d7f90d2f52d6138a0ab9dd8600a110cb6b326",
+        "version": "Science Advances12(46),eaeh0773(2026), publisher version of record, published2026-11-13",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/sciadv.aeh0773",
+        "source_kind": "publisher_fulltext",
+        "pages": 16,
+        "reviewed_at": "2026-11-14T02:47:34.597106+00:00",
+        "read_scope": "All 16 PDF pages (15 article pages including main text, Methods, Figures1–7, Table1 and references, plus citation page); rendered pages3,7,10 inspected. Separate Supplementary Materials SectionsS1–S11 and their proofs were not read; data and code were not independently reproduced."
+      },
+      "question": {
+        "zh": "什么时候可以压缩网络动力学，而不丢掉目标宏观量的预测能力？",
+        "en": "When can network dynamics be compressed without losing predictive power for the target macrostate?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把两个常被分开讨论的问题接起来：系统何时存在自洽的宏观描述，观察者何时能只在这个层级更新判断。神经网络、布尔调控与传播模型提供了具体例子。",
+          "值得带走的是一条检查顺序：先找动力学对称性及其轨道，再检查观测是否遵守相同对称性，最后明确推断所保留的目标和信息。少用变量并不自动意味着宏观过程仍然自洽。"
+        ],
+        "en": [
+          "This paper connects two questions: when a system supports a self-contained macrodescription, and when an observer can update beliefs directly at that level. Neural, Boolean regulatory and epidemic models make the connection concrete.",
+          "Its useful workflow is to identify dynamical symmetries and their orbits, check compatible observations, then specify the target and information retained by inference. Fewer variables alone do not guarantee autonomous macrodynamics."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "区分三种对称性保证",
+            "en": "Distinguish three symmetry guarantees"
+          },
+          "text": {
+            "zh": "全局、局部与弱对称性对轨迹、层级结构和时间反向闭合的保证不同；不能把可集总性直接当作全部层级性质。",
+            "en": "Global, local and weak symmetries offer different guarantees for trajectories, hierarchies and reverse-time closure; lumpability alone does not supply them all."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把观测也纳入降维条件",
+            "en": "Include observations in reduction conditions"
+          },
+          "text": {
+            "zh": "隐状态与观测共同等变时可构造约化HMM；约化观测下的精确推断，不自动等于保留全部微观观测的信息。",
+            "en": "Equivariant latent dynamics and observations yield a quotient HMM. Exact inference from coarse observations need not retain all information in microscopic measurements."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用社区计数压缩传播状态",
+            "en": "Compress epidemic states by community counts"
+          },
+          "text": {
+            "zh": "社区内可交换的SIS示例把2的n次方个微观状态压缩为各社区计数的组合，说明何种结构能支持精确聚合过滤。",
+            "en": "An exchangeable-community SIS example replaces exponentially many microstates with combinations of community counts, showing which structure supports exact aggregate filtering."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络粗粒化、动力学对称性、神经与布尔调控网络、传播建模及部分可观测系统推断的读者。",
+        "en": "Readers studying network coarse-graining, dynamical symmetries, neural and Boolean networks, epidemics or inference in partially observed systems."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部16页，含15页主文、方法、图1–7、表1、参考文献及末页书目信息，查看理论与应用图页。结论依赖精确对称性、相容观测及相应平稳性条件；粗粒化观测可能丢失信息，与完整观测推断等价还需额外充分性条件。社区SIS示例不是任意接触网络；近似对称性和有噪数据中发现层级仍是开放问题。未读独立补充材料S1–S11及其中证明，未复现代码。",
+        "en": "Read all16 publisher PDF pages, including Methods, Figures1–7, Table1 and references. Guarantees require exact symmetries, compatible observations and relevant invariance conditions. Coarse observations can lose information; equivalence to full-observation inference needs an additional sufficiency condition. Community-SIS results do not cover arbitrary contact networks. Approximate symmetries remain open. Separate supplementary SectionsS1–S11 and proofs were not read; code was not reproduced."
+      },
+      "publication_sha256": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -42429,5 +43145,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "fb5dd7b9d9a51381c422b0db3a9b2dd3f229c680d313b3d38d5800fa5849ce18"
+  "daily_suggestions_sha256": "5d2ec714888483a49dd403ac41e2b0bea246694ca44cc201c1c24cb6a090c690"
 }

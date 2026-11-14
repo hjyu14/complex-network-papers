@@ -2942,6 +2942,84 @@
         "en": "Read all 8 main and 28 supplementary PDF pages; inspected Figures 1–4/Table 1 and Figures S1–S10/Table S1. This single-site observational study cannot separate all deaths from dispersal. Isolation can rise through stronger internal ties as well as weaker external ties. Few annual observations and temporal correlations establish neither causality nor a universal tipping threshold; resident isolation versus turnover has P=0.056. The separate MDAR checklist was not read; data and code were not independently reproduced."
       },
       "publication_sha256": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54"
+    },
+    {
+      "doi": "10.1126/sciadv.aeh0773",
+      "recommended_on": "2026-11-14",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-13-to-14-01",
+      "assessment_sha256": "82bc8fca84f462f2af39eff5c41f860fe247bbf0332c4456df96de0d137e4db9",
+      "input_sha256": "259ebf05b2714a2afcebe65cf6a031b989cb59d12d0ded93df224094e8809389",
+      "evidence_sha256": "7ad73775d980f3595416ff8913827395c670da618d966a6cce712cadbbc4dde6",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-14T02:47:34.597106+00:00",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.aeh0773",
+        "title": "Symmetry as a common origin of hierarchical emergence and abstraction",
+        "sha256": "c261eec9e240a0b8d778fedecc9d7f90d2f52d6138a0ab9dd8600a110cb6b326",
+        "version": "Science Advances12(46),eaeh0773(2026), publisher version of record, published2026-11-13",
+        "source_url": "https://www.science.org/doi/pdf/10.1126/sciadv.aeh0773",
+        "source_kind": "publisher_fulltext",
+        "pages": 16,
+        "reviewed_at": "2026-11-14T02:47:34.597106+00:00",
+        "read_scope": "All 16 PDF pages (15 article pages including main text, Methods, Figures1–7, Table1 and references, plus citation page); rendered pages3,7,10 inspected. Separate Supplementary Materials SectionsS1–S11 and their proofs were not read; data and code were not independently reproduced."
+      },
+      "question": {
+        "zh": "什么时候可以压缩网络动力学，而不丢掉目标宏观量的预测能力？",
+        "en": "When can network dynamics be compressed without losing predictive power for the target macrostate?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，因为它把两个常被分开讨论的问题接起来：系统何时存在自洽的宏观描述，观察者何时能只在这个层级更新判断。神经网络、布尔调控与传播模型提供了具体例子。",
+          "值得带走的是一条检查顺序：先找动力学对称性及其轨道，再检查观测是否遵守相同对称性，最后明确推断所保留的目标和信息。少用变量并不自动意味着宏观过程仍然自洽。"
+        ],
+        "en": [
+          "This paper connects two questions: when a system supports a self-contained macrodescription, and when an observer can update beliefs directly at that level. Neural, Boolean regulatory and epidemic models make the connection concrete.",
+          "Its useful workflow is to identify dynamical symmetries and their orbits, check compatible observations, then specify the target and information retained by inference. Fewer variables alone do not guarantee autonomous macrodynamics."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "区分三种对称性保证",
+            "en": "Distinguish three symmetry guarantees"
+          },
+          "text": {
+            "zh": "全局、局部与弱对称性对轨迹、层级结构和时间反向闭合的保证不同；不能把可集总性直接当作全部层级性质。",
+            "en": "Global, local and weak symmetries offer different guarantees for trajectories, hierarchies and reverse-time closure; lumpability alone does not supply them all."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把观测也纳入降维条件",
+            "en": "Include observations in reduction conditions"
+          },
+          "text": {
+            "zh": "隐状态与观测共同等变时可构造约化HMM；约化观测下的精确推断，不自动等于保留全部微观观测的信息。",
+            "en": "Equivariant latent dynamics and observations yield a quotient HMM. Exact inference from coarse observations need not retain all information in microscopic measurements."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用社区计数压缩传播状态",
+            "en": "Compress epidemic states by community counts"
+          },
+          "text": {
+            "zh": "社区内可交换的SIS示例把2的n次方个微观状态压缩为各社区计数的组合，说明何种结构能支持精确聚合过滤。",
+            "en": "An exchangeable-community SIS example replaces exponentially many microstates with combinations of community counts, showing which structure supports exact aggregate filtering."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络粗粒化、动力学对称性、神经与布尔调控网络、传播建模及部分可观测系统推断的读者。",
+        "en": "Readers studying network coarse-graining, dynamical symmetries, neural and Boolean networks, epidemics or inference in partially observed systems."
+      },
+      "reading_caveat": {
+        "zh": "已读正式PDF全部16页，含15页主文、方法、图1–7、表1、参考文献及末页书目信息，查看理论与应用图页。结论依赖精确对称性、相容观测及相应平稳性条件；粗粒化观测可能丢失信息，与完整观测推断等价还需额外充分性条件。社区SIS示例不是任意接触网络；近似对称性和有噪数据中发现层级仍是开放问题。未读独立补充材料S1–S11及其中证明，未复现代码。",
+        "en": "Read all16 publisher PDF pages, including Methods, Figures1–7, Table1 and references. Guarantees require exact symmetries, compatible observations and relevant invariance conditions. Coarse observations can lose information; equivalence to full-observation inference needs an additional sufficiency condition. Community-SIS results do not cover arbitrary contact networks. Approximate symmetries remain open. Separate supplementary SectionsS1–S11 and proofs were not read; code was not reproduced."
+      },
+      "publication_sha256": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc"
     }
   ],
   "revisions": [
