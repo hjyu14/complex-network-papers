@@ -1,0 +1,3 @@
+# Weekly review check — 2026-11-16
+
+All-type official catalogs checked from each last successful cutoff, 2026-11-09 inclusive, to the actual morning observations on 2026-11-16 (Asia/Shanghai). NRP: two entries; one Perspective excluded after actual Abstract reading and one official Research Highlight excluded by type. No new eligible DOI; no empty collection source created. Existing 96 reviews retained. No unread items, undecided cases or coverage blockers. See evidence/check.json and append-only collection/screening logs for exact timestamps, bibliography, frozen inputs, hashes and API limitations.

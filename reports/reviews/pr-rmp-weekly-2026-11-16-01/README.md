@@ -1,0 +1,3 @@
+# Weekly review check — 2026-11-16
+
+All-type official catalogs checked from each last successful cutoff, 2026-11-09 inclusive, to the actual morning observations on 2026-11-16 (Asia/Shanghai). PR: two newly online reviews excluded after explicit Abstract reading; future issue dates were not used. RMP: no newly published item; 15 Accepted tracked, two new Abstracts read and excluded. No new eligible DOI; no empty collection source created. Existing 96 reviews retained. No unread items, undecided cases or coverage blockers. See evidence/check.json and append-only collection/screening logs for exact timestamps, bibliography, frozen inputs, hashes and API limitations.

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-14T23:38:06.421404+00:00",
+  "generated_at": "2026-11-15T23:52:58.190464+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-15",
-  "window_days": 76,
+  "window_end": "2026-11-16",
+  "window_days": 77,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
   "reading_notes_sha256": "e3b9858dfae83598f080a251a472de0ebf2bfeaaecda32504b9453fb29dde146",
-  "author_metadata_sha256": "0c6c346c3f3f359d9fa121aa7f9d58d2d91fc9a66fafe3f3c7d0fd4a1c0ac56b",
+  "author_metadata_sha256": "b59fe77020f6c5286e1c592199242a548e0e08cf70a704186994e06c87ea8390",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3332,6 +3332,50 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-15-to-16-01",
+      "config_sha256": "2a78864822839357cc631dea8d01c183668fcd5f30c681372fb2377661d18044",
+      "window_start": "2026-11-15",
+      "window_end": "2026-11-16",
+      "rule_sha256": "d291b172b9de9abcb62f8f3c9699a2f4aacf0e06e789b49b08e4eea1f9428971",
+      "screening_log_sha256": "456d9699e2d1783cce4845b0601f0c63c156284aa98318a7c046906ca9d5bf61",
+      "candidate_sha256": "53b7623aa4358d3597f5337b5264cef94c9831ce2dc9a10f3ca59e9a05f33eeb",
+      "author_metadata_sha256": "e363a2a5dda05984f8a7b2e6ab1391e3545e70af1efd7be3ff434c79b79797d1",
+      "run_manifest_sha256": "20b9b4dabd85722d9401a2eee31e5e8c2eea0088fb49f52070ca65047e002be8",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-15-to-16-01",
+          "files": {
+            "candidates.json": "53b7623aa4358d3597f5337b5264cef94c9831ce2dc9a10f3ca59e9a05f33eeb",
+            "coverage.json": "544f71ab30376b08612418b7cbda5193c0a4d9e7eea01ace53e8511b3c5ceef4",
+            "collection-log.jsonl": "62a3e1e50e1c0655251991dcdbb2d2409779225ea2a2d17617e1507ef70af396",
+            "screening-log.jsonl": "c61dd3c3a0a538097f46439dd83e52c155751f6984e0fecc317288b3d5843ae3",
+            "inputs/manifest.json": "23044408ee46903f0e98f3b9c30f540ab3aa8aef099d7f8608ea99c2250bbecf",
+            "inputs/sources.json": "1ce7727dac8b7471f10732b979bee830fba70feb347b647f7056d2e74c46da89",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "53b7623aa4358d3597f5337b5264cef94c9831ce2dc9a10f3ca59e9a05f33eeb",
+          "rule_sha256": "d291b172b9de9abcb62f8f3c9699a2f4aacf0e06e789b49b08e4eea1f9428971",
+          "screening_log_sha256": "456d9699e2d1783cce4845b0601f0c63c156284aa98318a7c046906ca9d5bf61"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "e363a2a5dda05984f8a7b2e6ab1391e3545e70af1efd7be3ff434c79b79797d1",
+          "audit": {
+            "path": "reports/runs/2026-11-15-to-16-01/screening-log.jsonl",
+            "sha256": "c61dd3c3a0a538097f46439dd83e52c155751f6984e0fecc317288b3d5843ae3"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "8242567c1bc193a067a1bc7392e9e50c4f6e9b6a39d928bfc690ef9103eea221"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
   "author_available_count": 329,
@@ -3902,6 +3946,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "Nature",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4316,13 +4369,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2131,
-      "publisher_verified_inventory_count": 2123,
+      "candidate_count": 2141,
+      "publisher_verified_inventory_count": 2133,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4719,6 +4781,15 @@
           "journal": "NC",
           "candidate_count": 31,
           "publisher_verified_inventory_count": 31,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "NC",
+          "candidate_count": 10,
+          "publisher_verified_inventory_count": 10,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5121,6 +5192,15 @@
         {
           "window_start": "2026-11-14",
           "window_end": "2026-11-15",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -5531,6 +5611,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -5931,6 +6020,15 @@
         {
           "window_start": "2026-11-14",
           "window_end": "2026-11-15",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
           "journal": "PRX",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -6341,6 +6439,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6741,6 +6848,15 @@
         {
           "window_start": "2026-11-14",
           "window_end": "2026-11-15",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
           "journal": "SA",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -7151,6 +7267,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7556,6 +7681,15 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7956,6 +8090,15 @@
         {
           "window_start": "2026-11-14",
           "window_end": "2026-11-15",
+          "journal": "PRResearch",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
           "journal": "PRResearch",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -8366,6 +8509,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -8771,6 +8923,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -9131,13 +9292,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-15",
+          "window_end": "2026-11-16",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 7960,
+  "candidate_count": 7970,
   "screening_counts": {
-    "excluded": 7631,
+    "excluded": 7641,
     "core": 297,
     "transferable_application": 32,
     "review": 0,
@@ -9147,14 +9317,10 @@
   "published_count": 284,
   "accepted_count": 45,
   "latest_update": {
-    "run": "reports/runs/2026-11-14-to-15-01",
-    "reviewed_at": "2026-11-14T23:32:46.024500+00:00",
-    "newly_included_count": 3,
-    "newly_included_dois": [
-      "10.1038/s41467-026-78707-2",
-      "10.1038/s41467-026-79000-y",
-      "10.1038/s41467-026-79602-6"
-    ],
+    "run": "reports/runs/2026-11-15-to-16-01",
+    "reviewed_at": "2026-11-15T23:46:35.558395+00:00",
+    "newly_included_count": 0,
+    "newly_included_dois": [],
     "accepted_to_published_count": 0,
     "accepted_to_published_dois": []
   },
@@ -37496,9 +37662,155 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "8cc1d08d7cb2dd8b2998800d04718e3b182043df1f14d2ab7cf582e0812cccbe"
+    },
+    {
+      "current_run": "reports/runs/2026-11-15-to-16-01",
+      "candidate_sha256": "53b7623aa4358d3597f5337b5264cef94c9831ce2dc9a10f3ca59e9a05f33eeb",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+        "reports/runs/2026-11-14-to-15-01": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
+      },
+      "counts": {
+        "in_window": 10,
+        "newly_reviewed": 10,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 10
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "7db99310b8f4a46735bc22feecd2b9a48791000f870e7fde730f89514f0c0325"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1038/s41467-026-79000-y",
+      "recommended_on": "2026-11-16",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-14-to-15-01",
+      "assessment_sha256": "420b6c5a1d7c61b896523bfa4e75c7bb72e9c8d4bb8dd40f1f0f1777452a174b",
+      "input_sha256": "84eabed92ac66729647d1ea52f0d5cc8c65008564c688a0754f55aa78162bdb0",
+      "evidence_sha256": "eb66f43bbb4e0d35b68813307baa9bcca8b940543447af9b22ab4aa0cb58bf42",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-15T23:47:54.627792+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-79000-y",
+        "title": "Theoretical frameworks for credit assignment via behavioral timescale synaptic plasticity",
+        "sha256": "3063f4b08e05bfcce03022952f54f8ea01be1cb4c60c53022d1efa38a006ddbd",
+        "version": "Nature Communications Article in Press; officially published online2026-11-14; early citable publisher version, final editing pending",
+        "source_url": "https://www.nature.com/articles/s41467-026-79000-y_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 17,
+        "reviewed_at": "2026-11-15T23:47:54.627792+00:00",
+        "read_scope": "All17 publisher PDF pages including main text, Methods, Table1, Figures1–6, references and notices; all main figures and Methods formulas visually inspected on rendered pages1–5,7–9,13–15. Separate Supplementary Information and reporting summary were not read; code/data not inspected or reproduced. The printed gate formula Eq14 conflicts with its adjacent zero-input limit and verbal description; no silent correction assumed."
+      },
+      "question": {
+        "zh": "单个神经元学得快，为什么整个循环网络仍可能学得慢？",
+        "en": "Why can fast single-neuron plasticity coexist with slow recurrent learning?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把“单细胞快速改变”与“整个网络学会任务”分开讨论。宽时间核的可塑性可以形成位置场，但这并不自动解决深层或循环网络的信用分配。",
+          "最值得细读的是成功例子背后的条件：吸引子构建依赖低秩、转置解码与输入门控；监督循环任务则使用反向时间信用分配和ADAM，仍需大量训练。把这些条件与曲率分析对照，比只看快速学习的结论更有价值。"
+        ],
+        "en": [
+          "This paper separates rapid single-cell change from network-level task learning. A broad plasticity kernel can build place fields without automatically solving credit assignment in deep or recurrent circuits.",
+          "Read the successful examples alongside their constraints: attractor construction uses low rank, transposed decoding and input gating; supervised recurrence uses backward credit assignment and ADAM yet remains slow. The curvature argument explains why these distinctions matter."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从局部规则走向网络功能",
+            "en": "Connect a local rule to network function"
+          },
+          "text": {
+            "zh": "用统一的gBTSP表达式讨论竞争学习、位置场与吸引子记忆，并推导平台事件应在何时、何处出现。",
+            "en": "A common gBTSP expression connects competitive learning, place fields and attractor memory to when and where plateau events occur."
+          }
+        },
+        {
+          "heading": {
+            "zh": "核对快速记忆的结构代价",
+            "en": "Inspect the architectural cost of rapid memory"
+          },
+          "text": {
+            "zh": "循环例子通过两类神经元、低秩反馈与学习／回忆门控稳定运行，不能直接推广到任意循环网络。",
+            "en": "The recurrent example uses two neuron populations, low-rank feedback and distinct learning/recall regimes; arbitrary recurrent networks are not established."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分曲率约束与梯度问题",
+            "en": "Distinguish curvature from gradient problems"
+          },
+          "text": {
+            "zh": "理想化线性分析把固定幅度活动跳变的稳定性联系到权重矩阵乘积；这是对条件的分析，而非生物脑不可能快速学习的证明。",
+            "en": "Idealized linear analysis links stability of fixed activity jumps to weight-matrix products, without proving biological rapid learning impossible."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究神经网络动力学、吸引子记忆、突触可塑性与学习稳定性的读者。",
+        "en": "Readers studying neural network dynamics, attractor memory, synaptic plasticity or learning stability."
+      },
+      "reading_caveat": {
+        "zh": "已读17页出版社Article in Press全文、方法和图1–6，尚非最终编辑版；未读独立补充材料，未复现代码。模型不证明生物机制，曲率推导采用理想化线性网络。印刷式14与邻近零输入极限及文字说明冲突，不能照抄实施门控；转置反馈与特定任务限制也须保留。",
+        "en": "Read all17 publisher Article in Press pages, Methods and Figures1–6; final editing pending. Separate supplements were not read; code not reproduced. Biological mechanisms are not established, and curvature derivations use idealized linear networks. Printed Eq14 conflicts with its adjacent zero-input limit and verbal gate description; resolve this before implementation. Transpose feedback and task-specific constraints limit generalization."
+      },
+      "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
+    },
     {
       "doi": "10.1038/s41467-026-78707-2",
       "recommended_on": "2026-11-15",
@@ -43721,6 +44033,84 @@
       "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
     },
     {
+      "doi": "10.1038/s41467-026-79000-y",
+      "recommended_on": "2026-11-16",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-14-to-15-01",
+      "assessment_sha256": "420b6c5a1d7c61b896523bfa4e75c7bb72e9c8d4bb8dd40f1f0f1777452a174b",
+      "input_sha256": "84eabed92ac66729647d1ea52f0d5cc8c65008564c688a0754f55aa78162bdb0",
+      "evidence_sha256": "eb66f43bbb4e0d35b68813307baa9bcca8b940543447af9b22ab4aa0cb58bf42",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-15T23:47:54.627792+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-79000-y",
+        "title": "Theoretical frameworks for credit assignment via behavioral timescale synaptic plasticity",
+        "sha256": "3063f4b08e05bfcce03022952f54f8ea01be1cb4c60c53022d1efa38a006ddbd",
+        "version": "Nature Communications Article in Press; officially published online2026-11-14; early citable publisher version, final editing pending",
+        "source_url": "https://www.nature.com/articles/s41467-026-79000-y_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 17,
+        "reviewed_at": "2026-11-15T23:47:54.627792+00:00",
+        "read_scope": "All17 publisher PDF pages including main text, Methods, Table1, Figures1–6, references and notices; all main figures and Methods formulas visually inspected on rendered pages1–5,7–9,13–15. Separate Supplementary Information and reporting summary were not read; code/data not inspected or reproduced. The printed gate formula Eq14 conflicts with its adjacent zero-input limit and verbal description; no silent correction assumed."
+      },
+      "question": {
+        "zh": "单个神经元学得快，为什么整个循环网络仍可能学得慢？",
+        "en": "Why can fast single-neuron plasticity coexist with slow recurrent learning?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把“单细胞快速改变”与“整个网络学会任务”分开讨论。宽时间核的可塑性可以形成位置场，但这并不自动解决深层或循环网络的信用分配。",
+          "最值得细读的是成功例子背后的条件：吸引子构建依赖低秩、转置解码与输入门控；监督循环任务则使用反向时间信用分配和ADAM，仍需大量训练。把这些条件与曲率分析对照，比只看快速学习的结论更有价值。"
+        ],
+        "en": [
+          "This paper separates rapid single-cell change from network-level task learning. A broad plasticity kernel can build place fields without automatically solving credit assignment in deep or recurrent circuits.",
+          "Read the successful examples alongside their constraints: attractor construction uses low rank, transposed decoding and input gating; supervised recurrence uses backward credit assignment and ADAM yet remains slow. The curvature argument explains why these distinctions matter."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从局部规则走向网络功能",
+            "en": "Connect a local rule to network function"
+          },
+          "text": {
+            "zh": "用统一的gBTSP表达式讨论竞争学习、位置场与吸引子记忆，并推导平台事件应在何时、何处出现。",
+            "en": "A common gBTSP expression connects competitive learning, place fields and attractor memory to when and where plateau events occur."
+          }
+        },
+        {
+          "heading": {
+            "zh": "核对快速记忆的结构代价",
+            "en": "Inspect the architectural cost of rapid memory"
+          },
+          "text": {
+            "zh": "循环例子通过两类神经元、低秩反馈与学习／回忆门控稳定运行，不能直接推广到任意循环网络。",
+            "en": "The recurrent example uses two neuron populations, low-rank feedback and distinct learning/recall regimes; arbitrary recurrent networks are not established."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分曲率约束与梯度问题",
+            "en": "Distinguish curvature from gradient problems"
+          },
+          "text": {
+            "zh": "理想化线性分析把固定幅度活动跳变的稳定性联系到权重矩阵乘积；这是对条件的分析，而非生物脑不可能快速学习的证明。",
+            "en": "Idealized linear analysis links stability of fixed activity jumps to weight-matrix products, without proving biological rapid learning impossible."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究神经网络动力学、吸引子记忆、突触可塑性与学习稳定性的读者。",
+        "en": "Readers studying neural network dynamics, attractor memory, synaptic plasticity or learning stability."
+      },
+      "reading_caveat": {
+        "zh": "已读17页出版社Article in Press全文、方法和图1–6，尚非最终编辑版；未读独立补充材料，未复现代码。模型不证明生物机制，曲率推导采用理想化线性网络。印刷式14与邻近零输入极限及文字说明冲突，不能照抄实施门控；转置反馈与特定任务限制也须保留。",
+        "en": "Read all17 publisher Article in Press pages, Methods and Figures1–6; final editing pending. Separate supplements were not read; code not reproduced. Biological mechanisms are not established, and curvature derivations use idealized linear networks. Printed Eq14 conflicts with its adjacent zero-input limit and verbal gate description; resolve this before implementation. Transpose feedback and task-specific constraints limit generalization."
+      },
+      "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -43800,5 +44190,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "96e0d461bbac41897d92d1512c0aa5eddd3a0a11836394faddcbcf850312e22d"
+  "daily_suggestions_sha256": "3c2a05ce81e4684bc8ba2deb676455e642b976f4a7db4bdb8f3506d318554c62"
 }

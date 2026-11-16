@@ -3098,6 +3098,84 @@
         "en": "Read all13 publisher Article in Press pages, including Methods, Figures1–8 and references; final editing is pending. Separate supplements were not read and code was not reproduced. Training uses30–50-node graphs and separate objective-specific models. Benchmarks do not prove optimality or zero-shot cross-objective transfer. Weighted, directed and temporal extensions remain open; gene enrichment supports hypothesis generation, not clinical validation."
       },
       "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
+    },
+    {
+      "doi": "10.1038/s41467-026-79000-y",
+      "recommended_on": "2026-11-16",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-14-to-15-01",
+      "assessment_sha256": "420b6c5a1d7c61b896523bfa4e75c7bb72e9c8d4bb8dd40f1f0f1777452a174b",
+      "input_sha256": "84eabed92ac66729647d1ea52f0d5cc8c65008564c688a0754f55aa78162bdb0",
+      "evidence_sha256": "eb66f43bbb4e0d35b68813307baa9bcca8b940543447af9b22ab4aa0cb58bf42",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-15T23:47:54.627792+00:00",
+      "fulltext_review": {
+        "doi": "10.1038/s41467-026-79000-y",
+        "title": "Theoretical frameworks for credit assignment via behavioral timescale synaptic plasticity",
+        "sha256": "3063f4b08e05bfcce03022952f54f8ea01be1cb4c60c53022d1efa38a006ddbd",
+        "version": "Nature Communications Article in Press; officially published online2026-11-14; early citable publisher version, final editing pending",
+        "source_url": "https://www.nature.com/articles/s41467-026-79000-y_reference.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 17,
+        "reviewed_at": "2026-11-15T23:47:54.627792+00:00",
+        "read_scope": "All17 publisher PDF pages including main text, Methods, Table1, Figures1–6, references and notices; all main figures and Methods formulas visually inspected on rendered pages1–5,7–9,13–15. Separate Supplementary Information and reporting summary were not read; code/data not inspected or reproduced. The printed gate formula Eq14 conflicts with its adjacent zero-input limit and verbal description; no silent correction assumed."
+      },
+      "question": {
+        "zh": "单个神经元学得快，为什么整个循环网络仍可能学得慢？",
+        "en": "Why can fast single-neuron plasticity coexist with slow recurrent learning?"
+      },
+      "reading_comment": {
+        "zh": [
+          "今天选它，是因为它把“单细胞快速改变”与“整个网络学会任务”分开讨论。宽时间核的可塑性可以形成位置场，但这并不自动解决深层或循环网络的信用分配。",
+          "最值得细读的是成功例子背后的条件：吸引子构建依赖低秩、转置解码与输入门控；监督循环任务则使用反向时间信用分配和ADAM，仍需大量训练。把这些条件与曲率分析对照，比只看快速学习的结论更有价值。"
+        ],
+        "en": [
+          "This paper separates rapid single-cell change from network-level task learning. A broad plasticity kernel can build place fields without automatically solving credit assignment in deep or recurrent circuits.",
+          "Read the successful examples alongside their constraints: attractor construction uses low rank, transposed decoding and input gating; supervised recurrence uses backward credit assignment and ADAM yet remains slow. The curvature argument explains why these distinctions matter."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从局部规则走向网络功能",
+            "en": "Connect a local rule to network function"
+          },
+          "text": {
+            "zh": "用统一的gBTSP表达式讨论竞争学习、位置场与吸引子记忆，并推导平台事件应在何时、何处出现。",
+            "en": "A common gBTSP expression connects competitive learning, place fields and attractor memory to when and where plateau events occur."
+          }
+        },
+        {
+          "heading": {
+            "zh": "核对快速记忆的结构代价",
+            "en": "Inspect the architectural cost of rapid memory"
+          },
+          "text": {
+            "zh": "循环例子通过两类神经元、低秩反馈与学习／回忆门控稳定运行，不能直接推广到任意循环网络。",
+            "en": "The recurrent example uses two neuron populations, low-rank feedback and distinct learning/recall regimes; arbitrary recurrent networks are not established."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分曲率约束与梯度问题",
+            "en": "Distinguish curvature from gradient problems"
+          },
+          "text": {
+            "zh": "理想化线性分析把固定幅度活动跳变的稳定性联系到权重矩阵乘积；这是对条件的分析，而非生物脑不可能快速学习的证明。",
+            "en": "Idealized linear analysis links stability of fixed activity jumps to weight-matrix products, without proving biological rapid learning impossible."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究神经网络动力学、吸引子记忆、突触可塑性与学习稳定性的读者。",
+        "en": "Readers studying neural network dynamics, attractor memory, synaptic plasticity or learning stability."
+      },
+      "reading_caveat": {
+        "zh": "已读17页出版社Article in Press全文、方法和图1–6，尚非最终编辑版；未读独立补充材料，未复现代码。模型不证明生物机制，曲率推导采用理想化线性网络。印刷式14与邻近零输入极限及文字说明冲突，不能照抄实施门控；转置反馈与特定任务限制也须保留。",
+        "en": "Read all17 publisher Article in Press pages, Methods and Figures1–6; final editing pending. Separate supplements were not read; code not reproduced. Biological mechanisms are not established, and curvature derivations use idealized linear networks. Printed Eq14 conflicts with its adjacent zero-input limit and verbal gate description; resolve this before implementation. Transpose feedback and task-specific constraints limit generalization."
+      },
+      "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
     }
   ],
   "revisions": [
