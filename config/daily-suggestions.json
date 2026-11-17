@@ -3176,6 +3176,84 @@
         "en": "Read all17 publisher Article in Press pages, Methods and Figures1–6; final editing pending. Separate supplements were not read; code not reproduced. Biological mechanisms are not established, and curvature derivations use idealized linear networks. Printed Eq14 conflicts with its adjacent zero-input limit and verbal gate description; resolve this before implementation. Transpose feedback and task-specific constraints limit generalization."
       },
       "publication_sha256": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301"
+    },
+    {
+      "doi": "10.1063/5.0353727",
+      "recommended_on": "2026-11-17",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-16-to-17-01",
+      "assessment_sha256": "033f15a5fe95a0ef7a5d97b684cd09ccfe7dd75f9752f6c45baa52f08f34b69e",
+      "input_sha256": "c8d6379459551bd86902548fb51d79557f776775fc49e9d69c42ed670fa1cb67",
+      "evidence_sha256": "346abb54e889e627cf5b69c6ebd7dd4dbacef96616d37d723d0ee2cd4f9f6341",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-17T01:49:48.384294+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0353727",
+        "title": "Pattern dynamics and application to Mpox epidemic data based on directed higher-order networks",
+        "sha256": "d330b009e01052cb173d9b6c2817863d52a4eaf17aa95dd4fe8c01554e0117f7",
+        "version": "Publisher Version of Record, Chaos36,113124(2026), published online2026-11-16; 34 PDF pages including cover and33 article pages",
+        "source_url": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0353727/21203134/113124_1_5.0353727.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 34,
+        "reviewed_at": "2026-11-17T01:49:48.384294+00:00",
+        "read_scope": "All34 PDF pages: cover, complete main text, equations, Figures1–39, declarations and68 references. Rendered pages8,10,17,25,28,30 visually checked for Schur reduction, analytical limits, community patterns, inferred source pairs, WLS fitting and risk stratification. No separate supplements or code examined; no independent numerical reproduction or proof audit."
+      },
+      "question": {
+        "zh": "有向高阶输入如何让稳定的地方感染状态形成空间斑图？",
+        "en": "How can directed higher-order inputs destabilize a locally stable epidemic state into spatial patterns?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇值得读，是因为它把方向性、多源协同与非线性交叉扩散放进同一个网络模型，再逐层区分线性失稳、非线性斑图与统计数据拟合。读者能看到：一个局部稳定的感染状态，如何因网络结构而出现空间差异。",
+          "建议把解析条件与实证构网一起读：不等阶耦合的简化判据依赖特定拉普拉斯关系；45国Mpox网络则来自滞后关联和协同输入筛选。拟合与贡献分解有启发，但不等于恢复了真实传播路径。"
+        ],
+        "en": [
+          "This paper connects directionality, cooperative source pairs and nonlinear cross-diffusion while separating linear instability, nonlinear patterns and empirical fitting. It shows how network structure can produce spatial differences from locally stable epidemic dynamics.",
+          "Read the analytical restrictions alongside the empirical construction: unequal-order coupling needs a proportional-Laplacian relation for the reduced criterion, while the45-country Mpox network is statistically inferred. Fitting and contribution decomposition offer useful modeling ideas without establishing actual transmission routes."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "有向谱分析须保留条件",
+            "en": "Keep the conditions behind spectral reduction"
+          },
+          "text": {
+            "zh": "复Schur分解处理非对称拉普拉斯；自然耦合允许合并算子，不等阶耦合的简化分析则要求二阶与一阶拉普拉斯成比例，一般情形须检查完整线性化算子。",
+            "en": "Complex Schur decomposition handles asymmetric Laplacians. Natural coupling permits one effective operator; the unequal-order reduction requires proportional Laplacians, while general cases require the full linearized operator."
+          }
+        },
+        {
+          "heading": {
+            "zh": "失稳、局域化与终态并不等同",
+            "en": "Separate instability, localization and the final state"
+          },
+          "text": {
+            "zh": "随机、模块与异质网络的对照连接谱增长、空间斑图和社群差异；BA例子中度数最大不意味着终态感染偏离最大。",
+            "en": "Random, modular and heterogeneous networks link spectral growth to spatial and community patterns. In the BA example, the largest degree does not imply the greatest final infection deviation."
+          }
+        },
+        {
+          "heading": {
+            "zh": "审视数据构网和贡献约束",
+            "en": "Inspect inference and contribution constraints"
+          },
+          "text": {
+            "zh": "实证部分从滞后相关筛选边和协同源对，并使用两阶段、贡献受约束的加权拟合；候选源数量会改变细节，高阶贡献应解释为模型内量。",
+            "en": "Lagged associations select edges and cooperative source pairs before two-stage contribution-constrained fitting. Candidate-source counts affect network details, and higher-order contributions remain model-dependent."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究高阶网络、反应扩散、谱稳定性与流行病网络建模的读者。",
+        "en": "Readers studying higher-order networks, reaction-diffusion dynamics, spectral stability or epidemic network modeling."
+      },
+      "reading_caveat": {
+        "zh": "已读34页出版社正式PDF及全部图注，另核对六页关键公式和图表；未检查外部代码或补充材料，未独立复现或逐式证明审查。解析降维有耦合与拓扑限制；Mpox边为统计关联，带贡献约束的拟合及相对风险分层不证明因果传播或未来预测能力。",
+        "en": "Read all34 publisher PDF pages and figure captions, with six key pages visually checked. External code and separate supplements were not examined; no independent reproduction or proof audit. Reduced criteria require coupling/topology restrictions. Mpox edges are statistical associations; contribution-constrained fits and relative risk strata do not establish causal transmission or prospective forecasting."
+      },
+      "publication_sha256": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
     }
   ],
   "revisions": [

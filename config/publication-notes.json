@@ -1185,9 +1185,9 @@
       "categories": [
         "network_inference"
       ],
-      "note_en": "Environmental responses and competition can cancel in equal-time abundance correlations, limiting ecological interaction inference without additional mechanistic information.",
-      "note_zh": "环境响应与竞争效应可在等时丰度相关中相互抵消，提示生态相互作用推断需要额外的机制信息。",
-      "assessment_sha256": "36e7dd2b64467057e8b270965afc495e114e27169a96edf3174f31afb0a92a3c"
+      "note_zh": "丰度相关的抵消与时间／资源尺度错配限制生态相互作用推断；保留用户此前指定的非核心相关阅读属性。",
+      "note_en": "Correlation cancellation and temporal/resource mismatches limit ecological interaction inference; retained as the previously user-selected non-core related reading.",
+      "assessment_sha256": "57a92df0e14dbe56ba03bd3844b77ed15836e4da74d6b02775cab328a679be9d"
     },
     "10.1103/m57p-97jv": {
       "categories": [
@@ -2200,12 +2200,11 @@
     },
     "10.1103/5lnm-slgg": {
       "categories": [
-        "network_spreading",
-        "network_structure"
+        "network_spreading"
       ],
-      "note_zh": "以配位团簇的贯通和临界标度描述受压玻璃的非晶转变；高配位网络的刚性渗流解释仍属暂定。",
-      "note_en": "Coordination-cluster connectivity and critical scaling describe transitions in compressed glasses; a rigidity-percolation explanation at high coordination remains tentative.",
-      "assessment_sha256": "e612ab700791e41f4916a8ae53053c948cd3aaa597196c9a991c1c0b7b8b1c00"
+      "note_zh": "通过配位团簇的贯通与标度分析玻璃非晶转变，区分标准渗流与可能的刚性相关偏离。",
+      "note_en": "Spanning coordination clusters and scaling organize amorphous transitions in compressed glass, distinguishing standard percolation from tentative rigidity-related departures.",
+      "assessment_sha256": "e2aa63cfe6d343ca199c63e1871d61581cee470660d62114e7ab6d46f5b0405b"
     },
     "10.1103/ydgr-vs2w": {
       "categories": [
@@ -2817,6 +2816,83 @@
       "note_en": "An enhancer-driven forebrain regulatory network reveals hierarchical cell-fate control and a validated transcription-factor subnetwork linked to autism-associated changes.",
       "note_zh": "构建人类前脑增强子驱动调控网络，揭示细胞命运基因上游层级及与自闭症相关改变相联系的转录因子子网络。",
       "assessment_sha256": "0acdc0955e5057a54800fb6ce398b97481d48e67097ff78405a6509fc59daef5"
+    },
+    "10.1038/s42256-026-01327-4": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "距离分层图通道与全局扩散整合多尺度基因协同信号，用于可解释的癌症基因优先级筛选。",
+      "note_en": "Distance-resolved graph channels and global diffusion integrate multiscale gene cooperativity for interpretable cancer-gene prioritization.",
+      "assessment_sha256": "935fd962c4c7870f400bfe2a2574a194289cb6ee04d3dd68f6a757acaa987be6"
+    },
+    "10.1063/5.0353727": {
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "note_zh": "有向高阶SIS反应扩散模型刻画网络上的图灵失稳与感染斑图；Mpox数据网络来自滞后相关，而非已证实的传播接触。",
+      "note_en": "A directed higher-order SIS reaction-diffusion model studies Turing instability and infection patterns; the Mpox data network uses lagged correlations rather than verified transmission contacts.",
+      "assessment_sha256": "033f15a5fe95a0ef7a5d97b684cd09ccfe7dd75f9752f6c45baa52f08f34b69e"
+    },
+    "10.1103/89fs-hyw5": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "从事件时间序列的显著符号模体构建超边，以贝叶斯方法推断高阶功能依赖。",
+      "note_en": "A Bayesian symbolic-motif method infers higher-order functional dependencies from event time series and represents significant motifs as hyperedges.",
+      "assessment_sha256": "01214bb6a217fecbd7b5068c60f98e8791d338de4bdea4da4e24894b4a9c0143"
+    },
+    "10.1103/5mf2-5hhn": {
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "note_zh": "在给定条件下，合作式延迟反馈使振子网络同步并稳定共同周期轨道。",
+      "note_en": "Under stated assumptions, cooperative delayed feedback synchronizes an oscillator network while stabilizing a common periodic orbit.",
+      "assessment_sha256": "2c73111d3cc4546ff0093775902abf5b9d69c5f342975c53d046677097b7293f"
+    },
+    "10.1103/9ptl-l7x2": {
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "note_zh": "相关随机矩阵的谱密度连接Marchenko–Pastur与椭圆律，并解释异联想记忆网络的非单调稳定性。",
+      "note_en": "Correlated random-matrix spectra connect Marchenko–Pastur and elliptic laws and explain nonmonotonic stability in heteroassociative memory networks.",
+      "assessment_sha256": "6fbdad6562620cd98d012bc7fdf2ae2214424f48b97e156cb852447eb25c672b"
+    },
+    "10.1073/pnas.2611874123": {
+      "categories": [
+        "network_collective",
+        "network_structure"
+      ],
+      "note_zh": "约两千个湖泊的观测揭示同步增强与区域差异减弱，讨论湖泊系统耦合、模块性和宏观监测。",
+      "note_en": "Observations from about 2,000 lakes reveal rising synchrony and diminishing regional distinctiveness, motivating joint monitoring of coupling and modularity.",
+      "assessment_sha256": "cc1d59537db9d19b2184a50b7ca24f7779335907e19b7c734772cf36156c470f"
+    },
+    "10.1103/ntf2-p2jl": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "四个化学耦合樟脑转子呈现同步、反同步和非相干模式共存，研究最小网络中的类奇美拉组织。",
+      "note_en": "Four chemically coupled camphor rotors exhibit coexisting synchronized, antisynchronized and incoherent modes in a minimal chimera-like network.",
+      "assessment_sha256": "799b7bf8166073e06edd3104d51040be25d655d751f32b384a0006e2acb7a1b6"
+    },
+    "10.1103/pc11-sxwn": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "部分延迟与耦合密度改变平均场振子系统的振幅死亡稳定边界。",
+      "note_en": "Partial delay and coupling density reshape amplitude-death stability boundaries in mean-field oscillator systems.",
+      "assessment_sha256": "2fccce4be33eb2126306aaf15704834c986ff0880c9f325ff8c033c393f2606d"
+    },
+    "10.1103/tync-3xh1": {
+      "categories": [
+        "network_collective",
+        "network_resilience"
+      ],
+      "note_zh": "通过非局部光反馈设计十九发射器激光阵列的耦合谱，选择时空同步模式。",
+      "note_en": "Engineered nonlocal optical feedback shapes coupling spectra and selects spatiotemporal synchronization modes in a 19-emitter laser array.",
+      "assessment_sha256": "e3ac46f2d7fd6423b49855faa388064c2ba8c8b2c3fb8eb3ca7192106884cd35"
     }
   }
 }
