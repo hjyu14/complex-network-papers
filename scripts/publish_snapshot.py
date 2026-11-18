@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from urllib.parse import quote, urlparse
 from screen_candidates import digest, now, validate_short_comment_review
-from publication_view import PublicationView, publication_workflow, publisher_url, verify_original
+from publication_view import awaiting_aps_publication, PublicationView, publication_workflow, publisher_url, verify_original
 from report_io import read_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -151,8 +151,9 @@ def build_snapshot(out, notes=None, *, _superseded_dois=(), _editorial_history=N
     legacy = w.out == (ROOT/'reports/2026-09').resolve()
     if w.active():
         raise ValueError('Finish the active assessment before publishing')
+    waiting = awaiting_aps_publication(w)
     status = w.status()
-    if status['not_assessed'] or any(d['category'] == 'review' for d in w.assessments()):
+    if status['not_assessed'] > len(waiting) or any(d['category'] == 'review' for d in w.assessments()):
         raise ValueError('Selected run must finish classification before publishing')
     closed = {e['data']['batch_id'] for e in w.log.events if e['kind'] == 'supplement_batch_closed'}
     if any(e['data']['batch_id'] not in closed for e in w.log.events if e['kind'] == 'supplement_batch_started'):
@@ -284,11 +285,13 @@ def build_snapshot(out, notes=None, *, _superseded_dois=(), _editorial_history=N
         'metadata_reconciliation_complete': c['metadata_reconciliation_complete']}
         for short, c in coverage['journals'].items()]
     counts = Counter(d['category'] for d in latest)
-    deferred = w.status()['deferred_unassessed']
+    deferred = w.status()['deferred_unassessed'] if not waiting else 0
     candidate_count = sum(r['window_membership'] == 'in_window' for r in w.records.values())
-    if sum(counts.values())+deferred != candidate_count:
+    if sum(counts.values()) + deferred + len(waiting) != candidate_count:
         raise ValueError('Candidate accounting incomplete')
     counts.update({'deferred_unassessed': deferred, 'review': counts['review'], 'included': len(papers)})
+    if waiting:
+        counts['aps_accepted_awaiting_publication'] = len(waiting)
     generated_at = now()
     snapshot = {'generated_at': generated_at, 'window_start': w.pool['window_start'],
         'window_end': w.pool['window_end'],
@@ -311,7 +314,8 @@ def build_snapshot(out, notes=None, *, _superseded_dois=(), _editorial_history=N
             'Nature Communications directory pagination remains unstable; complete publisher coverage is not established.']
             if legacy else ['Fixed date-window trial, not a current 90-day feed.',
                             'Coverage flags preserve source-relative enumeration limits.'])+ [
-            f'{candidate_count} fixed candidates assessed; {counts["review"]} unresolved and {deferred} unassessed.',
+            (f'{len(latest)} of {candidate_count} candidates assessed; {len(waiting)} APS accepted papers await publication.'
+             if waiting else f'{candidate_count} fixed candidates assessed; {counts["review"]} unresolved and {deferred} unassessed.'),
             'Assistant screening from explicit abstracts/excerpts or authorized online short comments, plus explicit user scope decisions; not full-text expert review.',
             'Author names are supplemented from matched Crossref metadata or explicit official accepted-page bylines; no authors inferred.'], 'papers': papers}
     if isinstance(w, PublicationView):
@@ -445,18 +449,28 @@ def build_release(runs):
         scoped = {**notes, 'papers': {doi: notes['papers'][doi] for doi in sorted(own-hidden)}}
         part = build_snapshot(run, scoped, _superseded_dois=hidden,
                               _editorial_history=editorial_histories.get(relative))['papers.json']
+        waiting = awaiting_aps_publication(w)
         for doi, record in w.records.items():
             if record['window_membership'] != 'in_window':
                 continue
-            value = {'record': record, 'decision': latest[doi]}
+            value = {'record': record, 'decision': latest.get(doi)}
+            if doi in waiting:
+                value['aps_deferral'] = waiting[doi]
             if doi in candidates and candidates[doi] != value:
-                target = replacements.get((relative,doi))
                 previous = candidates[doi]
-                if (not target or target['previous_record_sha256'] != digest(previous['record'])
-                        or target['previous_assessment_sha256'] != digest(previous['decision'])
-                        or target['record_sha256'] != digest(record)
-                        or target['assessment_sha256'] != digest(latest[doi])):
-                    raise ValueError('Conflicting candidate/assessment across runs: '+doi)
+                prior_wait = previous.get('aps_deferral')
+                if prior_wait:
+                    current_audit = next((a for a in overlap_audits if a['current_run'] == relative), {})
+                    if not any(row['doi'] == doi and row.get('previous_aps_deferral', {}).get('deferral_sha256')
+                               == prior_wait['deferral_sha256'] for row in current_audit.get('records', [])):
+                        raise ValueError('Missing APS deferral carryover: '+doi)
+                else:
+                    target = replacements.get((relative, doi))
+                    if (not target or target['previous_record_sha256'] != digest(previous['record'])
+                            or target['previous_assessment_sha256'] != digest(previous['decision'])
+                            or target['record_sha256'] != digest(record)
+                            or target['assessment_sha256'] != digest(value['decision'])):
+                        raise ValueError('Conflicting candidate/assessment across runs: '+doi)
             candidates[doi] = value
             if record.get('publisher_records'):
                 verified_dois.setdefault(record['journal'],set()).add(doi)
@@ -518,7 +532,11 @@ def build_release(runs):
                      'accepted_to_published_count': len(latest_transitions),
                      'accepted_to_published_dois': latest_transitions}
     rows = sorted(papers.values(), key=lambda p: (p['date'], p['doi']), reverse=True)
-    counts = Counter(v['decision']['category'] for v in candidates.values())
+    counts = Counter(v['decision']['category'] for v in candidates.values() if v['decision'] is not None)
+    waiting = sorted(doi for doi, value in candidates.items() if 'aps_deferral' in value)
+    if waiting:
+        counts['aps_accepted_awaiting_publication'] = len(waiting)
+        latest_update['aps_accepted_awaiting_publication_dois'] = waiting
     counts.update({'review': 0, 'deferred_unassessed': 0, 'included': len(rows)})
     generated = now()
     complete = all(i['candidate_inventory_complete'] for i in inputs)

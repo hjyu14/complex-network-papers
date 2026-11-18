@@ -4,7 +4,7 @@ from collections import Counter
 import json
 from pathlib import Path
 from collect_candidates import normalized_title
-from publication_view import publication_workflow, verify_assessments
+from publication_view import publication_workflow, verify_assessments, awaiting_aps_publication
 from report_io import file_sha, run_directory, checked_path
 from screen_candidates import Workflow, digest, ROOT
 
@@ -14,9 +14,12 @@ def publication_status(decision):
     return check.get('publication_status') or ('accepted' if check.get('basis','').startswith('publisher.accepted') else 'published')
 
 
-def compare_history(records, decisions, history, authorized_start, authorized_end, identity_notes=None, revisions=None):
+def compare_history(records, decisions, history, authorized_start, authorized_end, identity_notes=None, revisions=None,
+                    waiting=None, historical_waiting=None):
     rows, blockers = [], []
     identity_notes = identity_notes or {}
+    waiting = waiting or {}
+    historical_waiting = historical_waiting or {}
     for doi, record in sorted(records.items()):
         if not doi:
             blockers.append({'doi':doi,'reason':'Unresolved DOI identity'}); continue
@@ -50,7 +53,19 @@ def compare_history(records, decisions, history, authorized_start, authorized_en
                 # presentation-only title normalizer recognizes the same pair.
                 # Published carryover audits are immutable evidence.
                 row['identity_review'] = note
-        if inside:
+        prior_wait = historical_waiting.get(doi)
+        if prior_wait:
+            row['previous_aps_deferral'] = prior_wait
+            if record['journal'] != prior_wait['journal']:
+                blockers.append({'doi':doi,'reason':'APS deferred DOI journal identity mismatch'})
+            if current and (record.get('publication_status') != 'published'
+                            or publication_status(current) != 'published'):
+                blockers.append({'doi':doi,'reason':'APS deferred DOI must be formally published before assessment'})
+        if doi in waiting:
+            if previous:
+                blockers.append({'doi':doi,'reason':'APS deferral cannot replace a scientific assessment'})
+            row['aps_deferral'] = waiting[doi]
+        elif inside:
             if not current or current['category'] == 'review':
                 blockers.append({'doi':doi,'reason':'Current candidate needs actual resolved review'})
             else:
@@ -64,7 +79,7 @@ def compare_history(records, decisions, history, authorized_start, authorized_en
                             row['editorial_revision'] = revision
                         else:
                             blockers.append({'doi':doi,'reason':'Scientific category change needs explicit revision'})
-        elif not previous:
+        elif not previous and (not prior_wait or record.get('publication_status') != 'accepted'):
             blockers.append({'doi':doi,'reason':'Out-of-window candidate has no effective historical assessment'})
         rows.append(row)
     return rows, blockers
@@ -141,7 +156,7 @@ def editorial_revisions(current, history):
 def build_audit(current, previous_runs, *, _memo=None):
     memo = {} if _memo is None else _memo
     verify_assessments(current)
-    history, refs, windows = {}, {}, {}
+    history, refs, windows, historical_waiting = {}, {}, {}, {}
     for index, path in enumerate(previous_runs):
         old = publication_workflow(path)
         relative = old.out.relative_to(ROOT).as_posix()
@@ -152,7 +167,10 @@ def build_audit(current, previous_runs, *, _memo=None):
         replacements = {r['doi']:r for r in prior_audit['records'] if r.get('assessment_sha256') and r['history_status']=='assessed'} if prior_audit else {}
         for journal in old.config['journals']:
             windows.setdefault(journal['short'], []).append([old.pool['window_start'],old.pool['window_end']])
+        for doi, deferral in awaiting_aps_publication(old).items():
+            historical_waiting[doi] = {**deferral, 'run': relative}
         for d in old.assessments():
+            historical_waiting.pop(d['doi'], None)
             entry = {'run':relative,'record':old.records[d['doi']],'decision':d}
             if d['doi'] in history and (history[d['doi']]['record'] != entry['record'] or history[d['doi']]['decision'] != d):
                 target = replacements.get(d['doi'])
@@ -163,9 +181,10 @@ def build_audit(current, previous_runs, *, _memo=None):
             history[d['doi']] = entry
     coverage = json.loads((current.out/'coverage.json').read_text(encoding='utf8'))
     notes = {e['data']['doi']:e['data'] for e in current.log.events if e['kind']=='carryover_identity_reviewed'}
+    waiting = awaiting_aps_publication(current)
     rows, blockers = compare_history(current.records,{d['doi']:d for d in current.assessments()},history,
                                     min(v[0] for ws in windows.values() for v in ws),current.pool['window_end'],notes,
-                                    editorial_revisions(current, history))
+                                    editorial_revisions(current, history), waiting, historical_waiting)
     selected_journals = {j['short'] for j in current.config['journals']}
     for doi, previous in history.items():
         record = previous['record']
@@ -198,7 +217,9 @@ def build_audit(current, previous_runs, *, _memo=None):
             'window_start':current.pool['window_start'],'window_end':current.pool['window_end'],
             'records':rows,'blockers':blockers,
             'counts':{'in_window':sum(r.get('window_membership')=='in_window' for r in rows),
-                'newly_reviewed':sum(r.get('window_membership')=='in_window' and r['history_status']=='missing_history' for r in rows),
+                'newly_reviewed':sum(r.get('window_membership')=='in_window' and r['history_status']=='missing_history'
+                                     and 'aps_deferral' not in r for r in rows),
+                **({'aps_accepted_awaiting_publication': len(waiting)} if waiting else {}),
                 'historically_reviewed':sum(r['history_status']=='assessed' for r in rows),
                 'state_updates':sum(r.get('publication_status_changed',False) for r in rows),
                 'categories':dict(Counter(d['category'] for d in current.assessments()))},

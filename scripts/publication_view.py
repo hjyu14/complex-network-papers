@@ -216,10 +216,47 @@ def publication_workflow(out, _seen=()):
     return screen.Workflow(out)
 
 
+def awaiting_aps_publication(w):
+    """Validate editorial deferrals without treating them as assessments."""
+    if not any(e['kind'] == 'aps_accepted_awaiting_publication' for e in w.log.events):
+        return {}
+    assessed = {d['doi'] for d in w.assessments()}
+    cached = {e['data']['doi'] for e in w.log.events if e['kind'] == 'material_cached'}
+    observations, deferred = {}, {}
+    for event in w.log.events:
+        data = event['data']
+        if event['kind'] == 'source_attempt':
+            observations[event['sha256']] = data
+        if event['kind'] != 'aps_accepted_awaiting_publication':
+            continue
+        doi = data['doi']
+        if doi in assessed:
+            continue
+        record = w.records.get(doi, {})
+        evidence = observations.get(data.get('observation_sha256'), {})
+        url = f"https://journals.aps.org/{record.get('journal', '').lower()}/accepted/{doi}"
+        if (doi in cached or doi in deferred or not doi.startswith('10.1103/')
+                or record.get('window_membership') != 'in_window'
+                or record.get('publication_status') != 'accepted' or not record.get('identity_verified')
+                or not any(p.get('article_url') == url and p.get('publication_status') == 'accepted'
+                           for p in record.get('publisher_records', []))
+                or data.get('candidate_sha256') != w.input_sha
+                or data.get('record_sha256') != digest(record) or not data.get('authorization')
+                or evidence.get('doi') != doi or evidence.get('source_url') != url
+                or evidence.get('channel') != 'publisher'
+                or evidence.get('result') != 'no_explicit_abstract' or evidence.get('http_status') != 200
+                or (evidence.get('verified_metadata', {}).get('doi') or '').lower() != doi):
+            raise ValueError('Invalid APS accepted-paper deferral: '+doi)
+        deferred[doi] = {'deferral_sha256': event['sha256'], 'record_sha256': digest(record),
+                         'journal': record['journal'], 'accepted_date': record['date']}
+    return deferred
+
+
 def verify_assessments(w):
     """Check historical rule/input bindings without reinterpreting old decisions."""
     verify_original(w)
-    if w.status()['not_assessed'] or w.status()['deferred_unassessed']:
+    waiting = awaiting_aps_publication(w)
+    if w.status()['not_assessed'] != len(waiting) or w.status()['deferred_unassessed'] > len(waiting):
         raise ValueError('Source has unassessed records')
     rules = {w.rule_sha, w.log.events[0]['data']['rule_sha256']}
     for e in w.log.events:

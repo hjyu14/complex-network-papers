@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-17T01:55:02.835409+00:00",
+  "generated_at": "2026-11-18T01:23:24.168150+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-17",
-  "window_days": 78,
+  "window_end": "2026-11-18",
+  "window_days": 79,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "53d382cd32c8a3b14aba8a7e030d6919ac2e1610d00d80253e131fc7438cffd0",
-  "author_metadata_sha256": "b23bf2e9b37720c8a637405af8be51c6b9aeb221a704f8e202e27c0c5f1b63e7",
+  "reading_notes_sha256": "febf55c6b7e791eed22830b10dd52e8ce54270dbc7a0240137d8cef9be63a825",
+  "author_metadata_sha256": "46d868810a07c204e5b960c5ba2e33792af5b2992a897a21b0fcca5df788f398",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3420,9 +3420,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-17-to-18-02",
+      "config_sha256": "55c589713305bbcce68cf45e8088c0db85f7d74a711c4a5b8ec982d22b51e3a0",
+      "window_start": "2026-11-17",
+      "window_end": "2026-11-18",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "screening_log_sha256": "862effcfbaac6b80e0c06ea539682f5600a15edc68f11b438d9384afece98b07",
+      "candidate_sha256": "cc781c5856bcf83df169ea68947380189fa655262f45954ccdc7b1f29e4ef2b3",
+      "author_metadata_sha256": "847f4b5481a0095c5d15805f69d59921f11b1a3bf2fc9c952c397b8c8e29afc1",
+      "run_manifest_sha256": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-17-to-18-02",
+          "files": {
+            "candidates.json": "cc781c5856bcf83df169ea68947380189fa655262f45954ccdc7b1f29e4ef2b3",
+            "coverage.json": "582142364fc1c7ac6ea3e8d9dc18a2e1906069c64d777b4a9aba6b17640b4287",
+            "collection-log.jsonl": "61ca494c56e5609ebeaaf8e07c95bff967c281aa8290ed180198d53c0a9f6585",
+            "screening-log.jsonl": "30ff66620888bf75c6cec742c6575f3b525a40379df9f3701a5d8cacdaa0b06e",
+            "inputs/manifest.json": "0f4d2d4a052a43c1588f58ced0988d907eb99e5cb5034173a9fd758ca09cd50c",
+            "inputs/sources.json": "4c25fcf47d8950423ecd398d68978a34cfbe1a69a7f2ad345de09bb516d46bf9",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "cc781c5856bcf83df169ea68947380189fa655262f45954ccdc7b1f29e4ef2b3",
+          "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+          "screening_log_sha256": "862effcfbaac6b80e0c06ea539682f5600a15edc68f11b438d9384afece98b07"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "847f4b5481a0095c5d15805f69d59921f11b1a3bf2fc9c952c397b8c8e29afc1",
+          "audit": {
+            "path": "reports/runs/2026-11-17-to-18-02/screening-log.jsonl",
+            "sha256": "30ff66620888bf75c6cec742c6575f3b525a40379df9f3701a5d8cacdaa0b06e"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "cccb56eb8df7f556e92f9e285df34ebf1192ee35d945d9d99280e958a9520018"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
-  "author_available_count": 338,
+  "author_available_count": 342,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3572,8 +3616,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 971,
-      "publisher_verified_inventory_count": 971,
+      "candidate_count": 985,
+      "publisher_verified_inventory_count": 985,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4008,6 +4052,15 @@
           "publisher_verified_inventory_count": 9,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "Nature",
+          "candidate_count": 14,
+          "publisher_verified_inventory_count": 14,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4440,13 +4493,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2161,
-      "publisher_verified_inventory_count": 2153,
+      "candidate_count": 2194,
+      "publisher_verified_inventory_count": 2186,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4861,6 +4923,15 @@
           "journal": "NC",
           "candidate_count": 20,
           "publisher_verified_inventory_count": 20,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "NC",
+          "candidate_count": 33,
+          "publisher_verified_inventory_count": 33,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5286,13 +5357,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NCS",
-      "candidate_count": 34,
-      "publisher_verified_inventory_count": 34,
+      "candidate_count": 35,
+      "publisher_verified_inventory_count": 35,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -5709,13 +5789,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "NCS",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 106,
-      "publisher_verified_inventory_count": 106,
+      "candidate_count": 110,
+      "publisher_verified_inventory_count": 110,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6132,13 +6221,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "PRX",
+          "candidate_count": 4,
+          "publisher_verified_inventory_count": 4,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 861,
-      "publisher_verified_inventory_count": 861,
+      "candidate_count": 884,
+      "publisher_verified_inventory_count": 884,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6553,6 +6651,15 @@
           "journal": "PRL",
           "candidate_count": 22,
           "publisher_verified_inventory_count": 22,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "PRL",
+          "candidate_count": 35,
+          "publisher_verified_inventory_count": 35,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6978,13 +7085,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 1078,
-      "publisher_verified_inventory_count": 1078,
+      "candidate_count": 1105,
+      "publisher_verified_inventory_count": 1105,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7399,6 +7515,15 @@
           "journal": "PNAS",
           "candidate_count": 36,
           "publisher_verified_inventory_count": 36,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "PNAS",
+          "candidate_count": 27,
+          "publisher_verified_inventory_count": 27,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -7824,13 +7949,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 462,
-      "publisher_verified_inventory_count": 462,
+      "candidate_count": 466,
+      "publisher_verified_inventory_count": 466,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8247,13 +8381,22 @@
           "publisher_verified_inventory_count": 17,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "PRResearch",
+          "candidate_count": 12,
+          "publisher_verified_inventory_count": 12,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 613,
-      "publisher_verified_inventory_count": 613,
+      "candidate_count": 626,
+      "publisher_verified_inventory_count": 626,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8670,13 +8813,22 @@
           "publisher_verified_inventory_count": 27,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "PRE",
+          "candidate_count": 17,
+          "publisher_verified_inventory_count": 17,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Chaos",
-      "candidate_count": 134,
-      "publisher_verified_inventory_count": 134,
+      "candidate_count": 140,
+      "publisher_verified_inventory_count": 140,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -9093,6 +9245,15 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "Chaos",
+          "candidate_count": 6,
+          "publisher_verified_inventory_count": 6,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -9471,40 +9632,49 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-17",
+          "window_end": "2026-11-18",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 8086,
+  "candidate_count": 8211,
   "screening_counts": {
-    "excluded": 7748,
-    "core": 305,
-    "transferable_application": 33,
+    "excluded": 7868,
+    "core": 308,
+    "transferable_application": 34,
+    "aps_accepted_awaiting_publication": 1,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 338
+    "included": 342
   },
-  "published_count": 289,
-  "accepted_count": 49,
+  "published_count": 295,
+  "accepted_count": 47,
   "latest_update": {
-    "run": "reports/runs/2026-11-16-to-17-01",
-    "reviewed_at": "2026-11-17T01:49:48.439394+00:00",
-    "newly_included_count": 9,
+    "run": "reports/runs/2026-11-17-to-18-02",
+    "reviewed_at": "2026-11-18T01:18:15.389178+00:00",
+    "newly_included_count": 4,
     "newly_included_dois": [
-      "10.1038/s42256-026-01327-4",
-      "10.1063/5.0353727",
-      "10.1073/pnas.2611874123",
-      "10.1103/5mf2-5hhn",
-      "10.1103/89fs-hyw5",
-      "10.1103/9ptl-l7x2",
-      "10.1103/ntf2-p2jl",
-      "10.1103/pc11-sxwn",
-      "10.1103/tync-3xh1"
+      "10.1063/5.0347523",
+      "10.1063/5.0358898",
+      "10.1063/5.0359973",
+      "10.1103/xfnk-grtz"
     ],
-    "accepted_to_published_count": 2,
+    "accepted_to_published_count": 3,
     "accepted_to_published_dois": [
-      "10.1103/5lnm-slgg",
-      "10.1103/kwr4-pzn2"
+      "10.1103/c9kq-kqbv",
+      "10.1103/hy6f-3l9c",
+      "10.1103/n87d-5krk"
+    ],
+    "aps_accepted_awaiting_publication_dois": [
+      "10.1103/mv7d-n229"
     ]
   },
   "candidate_inventory_complete": false,
@@ -9515,6 +9685,598 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/xfnk-grtz",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/xfnk-grtz",
+      "title": "Replica theory for the rate functional of the empirical spectral distribution function of diluted real symmetric matrices",
+      "authors": [
+        "Edgar Guzmán-González",
+        "Isaac Pérez Castillo"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "554671acf695fb96be60b60cf4f644c002982836dbd395b818f0dc66c9b73603",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fxfnk-grtz",
+      "author_retrieved_at": "2026-11-18T00:03:20.096838+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-17",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-17",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "accepted_date": "2026-11-17",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/xfnk-grtz"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-17",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "6396a3e394846a988bc56641d1a6d6a4c18e4fd67b60aef69fbfe41f789ad4c7",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/xfnk-grtz"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Actual abstract derives a replica-based candidate large-deviation rate functional for sparse-matrix spectral observables and explicitly computes cumulants/statistic rate functions for Erdos-Renyi adjacency matrices. Random-network spectra and their fluctuations are the main network-theoretical contribution, conditional on the replica-symmetric saddle assumption."
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Under a replica-symmetric saddle assumption, a candidate rate functional describes sparse-matrix spectral fluctuations, with cumulants and numerical tests for ER adjacency spectra.",
+      "note_zh": "在副本对称鞍点假设下推导稀疏矩阵谱分布涨落的候选速率泛函，并给出ER随机图邻接谱累积量及数值检验。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "0f6373218dea476cd024831c223cefeedbb6e13b60259ebb3b1ec316539bbe72",
+      "input_sha256": "69ac303282fa8af3818b1c0cf847f393efa5cf9d78d4671c116b089c89b56522",
+      "material_sha256": "6396a3e394846a988bc56641d1a6d6a4c18e4fd67b60aef69fbfe41f789ad4c7",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "6396a3e394846a988bc56641d1a6d6a4c18e4fd67b60aef69fbfe41f789ad4c7",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "featured": null,
+      "evidence": [
+        "Actual abstract derives a replica-based candidate large-deviation rate functional for sparse-matrix spectral observables and explicitly computes cumulants/statistic rate functions for Erdos-Renyi adjacency matrices. Random-network spectra and their fluctuations are the main network-theoretical contribution, conditional on the replica-symmetric saddle assumption."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fxfnk-grtz",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/xfnk-grtz",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/n87d-5krk",
+      "url": "https://doi.org/10.1103/n87d-5krk",
+      "title": "Connectome modulates critical brain dynamics across local and global scales",
+      "authors": [
+        "Giovanni Rabuffo",
+        "Pietro Bozzo",
+        "Bach Nguyen",
+        "Damien Depannemaecker",
+        "Marco N. Pompili",
+        "Leonardo L. Gollo",
+        "Tomoki Fukai",
+        "Pierpaolo Sorrentino",
+        "Leonardo Dalla Porta"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3d84e2cd5115f7a91ec6c75ca5ee2f709aae1a8a11d83d2176ef06ab186f1a8c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fn87d-5krk",
+      "author_retrieved_at": "2026-11-18T00:03:18.376280+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-17",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-17",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-10-15",
+        "published_date": "2026-11-17",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/n87d-5krk"
+        ],
+        "basis_detail": "Visible Published17November2026 on current official journal article; accepted date retained from original verified collection."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-15",
+      "published_date": "2026-11-17",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "e99af30fec430507f0a91667552af8b9c53e3655982032e35bcba1055e5edd5c",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/n87d-5krk"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Actual published abstract couples neural masses and spiking populations through an empirical mouse connectome to explain how structural connectivity controls local/global criticality, timescale gradients and functional coordination. The main contribution is structural-network control of multiscale collective dynamics."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Neural populations coupled through an empirical mouse connectome reveal how structural connectivity modulates local/global criticality, timescale gradients and functional coordination.",
+      "note_zh": "将神经群体通过实测小鼠连接组耦合，分析结构连接如何调制局部与全局临界性、时间尺度梯度及功能协调。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "f1ce959e8e6efd5813b4225bf6977f7433cd75e4f6844c8adb7549d7d3992abc",
+      "input_sha256": "d2623aa8e0be836579becad6d5710585ff85e37db999fea835dc1e71bb063c4f",
+      "material_sha256": "e99af30fec430507f0a91667552af8b9c53e3655982032e35bcba1055e5edd5c",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e99af30fec430507f0a91667552af8b9c53e3655982032e35bcba1055e5edd5c",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "featured": null,
+      "evidence": [
+        "Actual published abstract couples neural masses and spiking populations through an empirical mouse connectome to explain how structural connectivity controls local/global criticality, timescale gradients and functional coordination. The main contribution is structural-network control of multiscale collective dynamics."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fn87d-5krk",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/n87d-5krk",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-15",
+        "published_date": "2026-11-17",
+        "previous_run": "reports/runs/2026-10-15-to-16-01",
+        "source_run": "reports/runs/2026-11-17-to-18-02",
+        "audit_sha256": "766adeb55c23ba977fad6c6cc2e4c8dd88ced4f690a7f529f83248fc92f91378",
+        "previous_assessment_sha256": "dcb699ce597b13f0d38b821d46a046f2a135f9222d3b7c703d96f66b2eff9d8b",
+        "assessment_sha256": "f1ce959e8e6efd5813b4225bf6977f7433cd75e4f6844c8adb7549d7d3992abc"
+      }
+    },
+    {
+      "doi": "10.1103/hy6f-3l9c",
+      "url": "https://doi.org/10.1103/hy6f-3l9c",
+      "title": "Coupling-split clusters in a swarmalator model with uniform coupling disorder",
+      "authors": [
+        "K. P. O'Keeffe"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0ec612d3ba6b8db38929b0bbd74bd3c1abf9c7ac5eedfe9bbef8b38aaeadb240",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fhy6f-3l9c",
+      "author_retrieved_at": "2026-11-18T00:03:16.563130+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-17",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-17",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-11-03",
+        "published_date": "2026-11-17",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/hy6f-3l9c"
+        ],
+        "basis_detail": "Visible Published17November2026 on current official journal article; accepted date retained from original verified collection."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-11-03",
+      "published_date": "2026-11-17",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "524d51831bba535be00ef191e5e77af14d4dc511caeb868361853b7ffa12516c",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/hy6f-3l9c"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Actual published abstract studies quenched coupling disorder on a swarmalator ring, derives coupling-split conformist/contrarian clusters and distribution-sensitive stability, and identifies a double-zero spectral signature and collective breathing. It retains the network-synchronization scope while materially rewriting the accepted abstract; the official published byline now uses a single apostrophe in O'Keeffe."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Uniform quenched coupling disorder creates conformist/contrarian split clusters on a swarmalator ring; distinct features of the coupling distribution govern each collective state’s stability.",
+      "note_zh": "环上swarmalator的均匀淬火耦合无序产生顺从者／反对者分裂团簇；不同集体状态由耦合分布的不同特征控制稳定性。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "2a9c9c678c2baf989ee1ab4f43e1abda861574a9ace01e3b05ade0a017aec846",
+      "input_sha256": "cd2bda13be6255025e02d6bfa7a76f56674958701b06441a0b0e51dbc89d59e9",
+      "material_sha256": "524d51831bba535be00ef191e5e77af14d4dc511caeb868361853b7ffa12516c",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "524d51831bba535be00ef191e5e77af14d4dc511caeb868361853b7ffa12516c",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "featured": null,
+      "evidence": [
+        "Actual published abstract studies quenched coupling disorder on a swarmalator ring, derives coupling-split conformist/contrarian clusters and distribution-sensitive stability, and identifies a double-zero spectral signature and collective breathing. It retains the network-synchronization scope while materially rewriting the accepted abstract; the official"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhy6f-3l9c",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/hy6f-3l9c",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-11-03",
+        "published_date": "2026-11-17",
+        "previous_run": "reports/runs/2026-11-03-to-04-01",
+        "source_run": "reports/runs/2026-11-17-to-18-02",
+        "audit_sha256": "766adeb55c23ba977fad6c6cc2e4c8dd88ced4f690a7f529f83248fc92f91378",
+        "previous_assessment_sha256": "161b7ea4ad44306d10b730e73052308c6480ae51c6eec8b6534d046a80935813",
+        "assessment_sha256": "2a9c9c678c2baf989ee1ab4f43e1abda861574a9ace01e3b05ade0a017aec846"
+      }
+    },
+    {
+      "doi": "10.1103/c9kq-kqbv",
+      "url": "https://doi.org/10.1103/c9kq-kqbv",
+      "title": "Information-thermodynamic principles unveil the response of complex networks to perturbations",
+      "authors": [
+        "Andrea Filippo Beretta",
+        "Manlio De Domenico"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0ca53feb80ad65f9fc15edcbc358795cba2d97c041b9f98cf0e57cff27f1a62b",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fc9kq-kqbv",
+      "author_retrieved_at": "2026-11-18T00:03:14.894672+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-17",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-17",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": "2026-10-21",
+        "published_date": "2026-11-17",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/c9kq-kqbv"
+        ],
+        "basis_detail": "Visible Published17November2026 on current official journal article; accepted date retained from original verified collection."
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-21",
+      "published_date": "2026-11-17",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "828e9cd623a29468c7010e3abfe541287e52ca93937bbf60c4dc8c298dc95eff",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/c9kq-kqbv"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Actual published abstract develops density-matrix information thermodynamics for complex-network perturbation responses, proving a diffusion response-entropy restriction and formulating generalized free energy along nonlinear trajectories. Network response diversity and its dynamical limits are the main contribution."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Density-matrix information thermodynamics characterizes perturbation-response diversity in complex networks, contrasting diffusion entropy constraints with generalized free energy along nonlinear trajectories.",
+      "note_zh": "用密度矩阵信息热力学刻画复杂网络受扰动后的响应多样性，比较扩散熵限制与非线性轨道的广义自由能。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b1c7a6e84441bbb44c1a9fb199055c20a2f935eca1344bccf65957e6880d7497",
+      "input_sha256": "e865c6b82fab4a04ff0c6c0a5628214a53911546b07fcc980e68a3bc4302b435",
+      "material_sha256": "828e9cd623a29468c7010e3abfe541287e52ca93937bbf60c4dc8c298dc95eff",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "828e9cd623a29468c7010e3abfe541287e52ca93937bbf60c4dc8c298dc95eff",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "featured": null,
+      "evidence": [
+        "Actual published abstract develops density-matrix information thermodynamics for complex-network perturbation responses, proving a diffusion response-entropy restriction and formulating generalized free energy along nonlinear trajectories. Network response diversity and its dynamical limits are the main contribution."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fc9kq-kqbv",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/c9kq-kqbv",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-21",
+        "published_date": "2026-11-17",
+        "previous_run": "reports/runs/2026-10-21-to-22-01",
+        "source_run": "reports/runs/2026-11-17-to-18-02",
+        "audit_sha256": "766adeb55c23ba977fad6c6cc2e4c8dd88ced4f690a7f529f83248fc92f91378",
+        "previous_assessment_sha256": "1a142f904bc768a9a8b4d6a1d2e20058601f0b7a963fbced37be9462147ccf60",
+        "assessment_sha256": "b1c7a6e84441bbb44c1a9fb199055c20a2f935eca1344bccf65957e6880d7497"
+      }
+    },
+    {
+      "doi": "10.1063/5.0359973",
+      "url": "https://doi.org/10.1063/5.0359973",
+      "title": "Resource-constrained spatial public-goods games with effective cooperation and frozen dynamics",
+      "authors": [
+        "Yong Shen",
+        "Yi Sun",
+        "Hongwei Kang",
+        "Xingping Sun",
+        "Qingyi Chen",
+        "Shaoyuan Xiao",
+        "Chenxi Luo",
+        "Houlai Yan"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "0651a7e92b550cb3ac6fbc8308c9c094687aea41bc9ccd8cf46ce3741401e1b3",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0359973",
+      "author_retrieved_at": "2026-11-18T00:03:13.225033+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-11-17",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-17",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-17",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0359973"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-17",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "685083e0af63795b25ac9fdab579db30b24a7a2a628c70aea162f6cfca622560",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0359973"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Actual abstract investigates cooperation dynamics on spatially organized public-goods interactions whose organization and strategy-update eligibility depend on local resources. It distinguishes nominal from active cooperation and explains how resource allocation sustains or freezes interacting cooperative cores, directly addressing structured collective cooperation."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Resource constraints govern interaction organization and update eligibility in spatial public-goods games, separating nominal cooperation from active cooperation and frozen cores.",
+      "note_zh": "资源约束决定空间公共品博弈的交互组织和策略更新资格，揭示名义合作与活跃合作的差距及合作核心冻结。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "ce3e8b2eea93658032902edcf56bcda879d269cb79da84543e1e7780e1e7f8b7",
+      "input_sha256": "20d1fb52ff99d7604eb3de701afc6398a3b020b24260727cb7f6a1adc759e1d6",
+      "material_sha256": "685083e0af63795b25ac9fdab579db30b24a7a2a628c70aea162f6cfca622560",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "685083e0af63795b25ac9fdab579db30b24a7a2a628c70aea162f6cfca622560",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "featured": null,
+      "evidence": [
+        "Actual abstract investigates cooperation dynamics on spatially organized public-goods interactions whose organization and strategy-update eligibility depend on local resources. It distinguishes nominal from active cooperation and explains how resource allocation sustains or freezes interacting cooperative cores, directly addressing structured collective"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0359973",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0359973",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0358898",
+      "url": "https://doi.org/10.1063/5.0358898",
+      "title": "A graph-based symbolic Bayesian framework to predict chaotic transport under uncertainty",
+      "authors": [
+        "David Canales",
+        "Seur Gi Jo"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "ff73cf07ed7c6cdaf8a7ed515e8eaf3200606a69bcfeefb285c85b78fd78114b",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0358898",
+      "author_retrieved_at": "2026-11-18T00:03:11.396954+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-11-17",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-17",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-17",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0358898"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-17",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "ac8810894b944a872e445c6f7e71c69b606b02479a07805d0ccac92d516b3f9a",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0358898"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Actual abstract builds an energy-dependent directed region-transition graph and symbolic path classes, then uses trajectory ensembles and sequential Bayesian measurements to infer competing transport histories. The Earth-Moon demonstration contributes an interpretable graph-path inference framework transferable to network representations of chaotic transport, with evidence limited to the specified dynamical partition and two numerical cases."
+      },
+      "categories": [
+        "network_inference"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "A directed region graph and symbolic paths convert trajectory ensembles into transport-history probabilities updated by sequential Bayesian observations, demonstrated in an Earth-Moon model.",
+      "note_zh": "将动力学区域表示为有向图和符号路径，利用轨道集合及序贯贝叶斯观测更新区分不确定的混沌输运历史；演示限于地月模型。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "d9dbadab1b6e6b381b6fe60f00d79b17e0f4fbb64c0937ba85240504bfb1134b",
+      "input_sha256": "86be514ae7172ea7487d09fbcf5a8dc781a2d18b42f70d7d229595b63aab36d0",
+      "material_sha256": "ac8810894b944a872e445c6f7e71c69b606b02479a07805d0ccac92d516b3f9a",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "ac8810894b944a872e445c6f7e71c69b606b02479a07805d0ccac92d516b3f9a",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "featured": null,
+      "evidence": [
+        "Actual abstract builds an energy-dependent directed region-transition graph and symbolic path classes, then uses trajectory ensembles and sequential Bayesian measurements to infer competing transport histories. The Earth-Moon demonstration contributes an interpretable graph-path inference framework transferable to network representations of chaotic"
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0358898",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0358898",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1063/5.0347523",
+      "url": "https://doi.org/10.1063/5.0347523",
+      "title": "Binary intrinsic-frequency disorder in the one-dimensional swarmalator model",
+      "authors": [
+        "Kevin P. O’Keeffe"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4a443f99d24b5cfd35c613f42116b756c9c043b374c3f59cbc2c7eaeac3c146e",
+      "author_source_url": "https://api.crossref.org/works/10.1063%2F5.0347523",
+      "author_retrieved_at": "2026-11-18T00:03:09.641678+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+      "journal_short": "Chaos",
+      "issns": [
+        "1054-1500",
+        "1089-7682"
+      ],
+      "date": "2026-11-17",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-17",
+        "basis": "publisher.published",
+        "publication_status": "published",
+        "accepted_date": null,
+        "published_date": "2026-11-17",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0347523"
+        ],
+        "basis_detail": "Actual current publisher directory date and Crossref checked; included former accepted papers additionally had their current published header/meta and explicit Abstract reread. Prior accepted dates retained from the effective earlier collection and its original bound sources, not inferred from publication date."
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-17",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "c266c43a3a291ce821bf4d9fd1ee5e5bc1a09bc147a32db6872b534c6d5bb9c1",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion",
+        "sources": [
+          "https://api.crossref.org/works/10.1063%2F5.0347523"
+        ],
+        "basis": "Primary actual explicit Abstract reading verifies original research, not a precise official subtype.",
+        "supporting_reason": "Actual abstract studies coupled spatial and phase collective dynamics in a one-dimensional swarmalator population with binary intrinsic frequencies. It derives exact locked-state stability thresholds and identifies disorder-induced standing waves, multistability and weak chaos, directly extending synchronization theory for interacting units."
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Binary intrinsic-frequency disorder reshapes collective states of ring swarmalators; stability analysis and multistart/Lyapunov diagnostics distinguish standing waves, multistability and weak chaos.",
+      "note_zh": "二元本征频率无序重塑一维swarmalator的集体状态；锁态稳定性分析与多初态、Lyapunov诊断区分驻波、多稳态和弱混沌。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "8089e59e8c9a7ee6ca907a12c0ed0f75afc6465937b9df5db23e2dfba05eb38c",
+      "input_sha256": "ac59dd96235d2205b29ceb592f6898f26966f32a10ec6226c8c72e64d2f2d03c",
+      "material_sha256": "c266c43a3a291ce821bf4d9fd1ee5e5bc1a09bc147a32db6872b534c6d5bb9c1",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "c266c43a3a291ce821bf4d9fd1ee5e5bc1a09bc147a32db6872b534c6d5bb9c1",
+      "rule_sha256": "68442767904617da0b6a6415d0140ca57adc3a9d033d71771c281793ddf94646",
+      "featured": null,
+      "evidence": [
+        "Actual abstract studies coupled spatial and phase collective dynamics in a one-dimensional swarmalator population with binary intrinsic frequencies. It derives exact locked-state stability thresholds and identifies disorder-induced standing waves, multistability and weak chaos, directly extending synchronization theory for interacting units."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1063%2F5.0347523",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F5.0347523",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/tync-3xh1",
       "url": "https://journals.aps.org/pre/accepted/10.1103/tync-3xh1",
@@ -16049,84 +16811,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/hy6f-3l9c",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c",
-      "title": "Coupling-split clusters in a swarmalator model with uniform coupling disorder",
-      "authors": [
-        "K. P. O’’Keeffe"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "ec01cd87b981d4caf5a844f4fb9d241e6014b3ce7db75b9ca7a913e0bb54180c",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fhy6f-3l9c",
-      "author_retrieved_at": "2026-11-04T01:55:13.334479+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-11-03",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-11-03",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "accepted_date": "2026-11-03",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c"
-        ],
-        "source_url": "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c",
-        "basis_detail": "Explicit official Published/online or Accepted date from frozen directory/article evidence; not issue date."
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-11-03",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "basis": "Disordered phase coupling partitions a swarmalator population into coupling-split clusters and changes state-dependent stability boundaries, linking interaction heterogeneity to collective phase-space organization and oscillations.",
-        "material_sha256": "d974aaff0c233848122bd8dcb62f9b2a4f4433cac59ac6fe7991699664f26868",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c"
-        ]
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Uniform phase-coupling disorder produces coupling-split clusters and changes stability boundaries and persistent oscillations in a one-dimensional swarmalator model.",
-      "note_zh": "一维 swarmalator 模型的均匀耦合无序形成正负耦合分裂簇，并改变不同集体态的稳定边界与持续振荡。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "161b7ea4ad44306d10b730e73052308c6480ae51c6eec8b6534d046a80935813",
-      "input_sha256": "0b87394a36f944bbc7a5d0f7273eb16e720330211149e4fd2030c29015b92428",
-      "material_sha256": "d974aaff0c233848122bd8dcb62f9b2a4f4433cac59ac6fe7991699664f26868",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "d974aaff0c233848122bd8dcb62f9b2a4f4433cac59ac6fe7991699664f26868",
-      "rule_sha256": "ff190cef209cd17017f1ab70b378fb02acbc5830e7277810285aa34150125abb",
-      "featured": null,
-      "evidence": [
-        "Disordered phase coupling partitions a swarmalator population into coupling-split clusters and changes state-dependent stability boundaries, linking interaction heterogeneity to collective phase-space organization and oscillations."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhy6f-3l9c",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/hy6f-3l9c",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/8nxh-kpt8",
       "url": "https://doi.org/10.1103/8nxh-kpt8",
       "title": "Hysteretic synchronization transitions induced by adaptive phase frustration",
@@ -20245,77 +20929,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/c9kq-kqbv",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/c9kq-kqbv",
-      "title": "Information-thermodynamic principles unveil the response of complex networks to perturbations",
-      "authors": [
-        "Andrea Filippo Beretta",
-        "Manlio De Domenico"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "4cfaad77d5860b67eeff54f614b8ce1ff687240688fc6795f5c631ef80f54172",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fc9kq-kqbv",
-      "author_retrieved_at": "2026-10-22T00:50:03.361030+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-10-21",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-21",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-21",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "671564f3e8e34581ab587c1117211beeda4148fc0d385c9aedf331015df7924f",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/c9kq-kqbv"
-        ],
-        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_resilience"
-      ],
-      "scope_class": "core",
-      "note_en": "Develops information thermodynamics of network perturbation responses and examines nonlinear response diversity beyond standard diffusion.",
-      "note_zh": "建立复杂网络扰动响应的信息热力学，分析标准扩散之外的非线性响应多样性。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "1a142f904bc768a9a8b4d6a1d2e20058601f0b7a963fbced37be9462147ccf60",
-      "input_sha256": "c237e37e7129dfda8562c569da73125392149e74c423264453c00488e8716dc1",
-      "material_sha256": "671564f3e8e34581ab587c1117211beeda4148fc0d385c9aedf331015df7924f",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "671564f3e8e34581ab587c1117211beeda4148fc0d385c9aedf331015df7924f",
-      "rule_sha256": "e510a771fb3fb4e9072f7266a2263c1033564d63dbc276b7cbd98f9160b3b896",
-      "featured": null,
-      "evidence": [
-        "Density-matrix response thermodynamics extends diffusion along arbitrary trajectories and quantifies enhanced nonlinear response diversity."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fc9kq-kqbv",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/c9kq-kqbv",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1063/5.0357283",
       "url": "https://doi.org/10.1063/5.0357283",
       "title": "Inferring stochastic dynamics from incomplete observations of network spreading processes",
@@ -22372,84 +22985,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fs1kf-3dvn",
       "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/s1kf-3dvn",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/n87d-5krk",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/n87d-5krk",
-      "title": "Connectome modulates critical brain dynamics across local and global scales",
-      "authors": [
-        "Giovanni Rabuffo",
-        "Pietro Bozzo",
-        "Bach Nguyen",
-        "Damien Depannemaecker",
-        "Marco N. Pompili",
-        "Leonardo L. Gollo",
-        "Tomoki Fukai",
-        "Pierpaolo Sorrentino",
-        "Leonardo Dalla Porta"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "885e462f870c2875082d48ed0772e4ce2cd35c1d69f51de39c2d505aea3204ca",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fn87d-5krk",
-      "author_retrieved_at": "2026-10-16T00:45:38.088881+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-10-15",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-15",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-15",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "1bb3fdffdc6d2398d047ee71b31b88da0c81a402de4b4adc1ec7b15e0a30e905",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/n87d-5krk"
-        ],
-        "basis": "Matching explicit abstract describes original methods and results; checked title and available publisher metadata, no special-type signal or conflict.",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion"
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Connectome coupling links local and global critical brain dynamics while organizing heterogeneous timescales and criticality gradients.",
-      "note_zh": "连接组耦合使局部与全局脑临界性相互影响却不直接对齐，并组织异质时间尺度与临界性梯度。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "dcb699ce597b13f0d38b821d46a046f2a135f9222d3b7c703d96f66b2eff9d8b",
-      "input_sha256": "7d6a76d4c1ea0c41fda338c90cdf1de7b6a0f69e91ba7a02a2ae1db72345a7e6",
-      "material_sha256": "1bb3fdffdc6d2398d047ee71b31b88da0c81a402de4b4adc1ec7b15e0a30e905",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "1bb3fdffdc6d2398d047ee71b31b88da0c81a402de4b4adc1ec7b15e0a30e905",
-      "rule_sha256": "db26b0f82648118235325b9fbcceb28bb3ec88b2d352e8ae8aa707efd3de7e6a",
-      "featured": null,
-      "evidence": [
-        "Empirical connectome coupling intertwines local criticality, heterogeneous timescales and global avalanches."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fn87d-5krk",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/n87d-5krk",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -38732,9 +39267,160 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "b916170e66b149014157711f2a962a42f54e68886b2056dad7edbb29da4985cd"
+    },
+    {
+      "current_run": "reports/runs/2026-11-17-to-18-02",
+      "candidate_sha256": "cc781c5856bcf83df169ea68947380189fa655262f45954ccdc7b1f29e4ef2b3",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+        "reports/runs/2026-11-14-to-15-01": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301",
+        "reports/runs/2026-11-15-to-16-01": "20b9b4dabd85722d9401a2eee31e5e8c2eea0088fb49f52070ca65047e002be8",
+        "reports/runs/2026-11-16-to-17-01": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
+      },
+      "counts": {
+        "in_window": 149,
+        "newly_reviewed": 124,
+        "aps_accepted_awaiting_publication": 1,
+        "historically_reviewed": 104,
+        "state_updates": 22,
+        "categories": {
+          "excluded": 141,
+          "core": 6,
+          "transferable_application": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "766adeb55c23ba977fad6c6cc2e4c8dd88ced4f690a7f529f83248fc92f91378"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1063/5.0347523",
+      "recommended_on": "2026-11-18",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-17-to-18-02",
+      "assessment_sha256": "8089e59e8c9a7ee6ca907a12c0ed0f75afc6465937b9df5db23e2dfba05eb38c",
+      "input_sha256": "ac59dd96235d2205b29ceb592f6898f26966f32a10ec6226c8c72e64d2f2d03c",
+      "evidence_sha256": "c266c43a3a291ce821bf4d9fd1ee5e5bc1a09bc147a32db6872b534c6d5bb9c1",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-18T00:18:12.218666+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0347523",
+        "title": "Binary intrinsic-frequency disorder in the one-dimensional swarmalator model",
+        "sha256": "5fd838418a1eb67d6fe2f1c6042a31e76a7a20e4491caa40d8ef65ce52ab8363",
+        "version": "Publisher Version of Record; Chaos36,113127(2026); Published Online17November2026;15 PDF pages including cover and14 article pages",
+        "source_url": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0347523/21203959/113127_1_5.0347523.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "reviewed_at": "2026-11-18T00:18:12.218666+00:00",
+        "read_scope": "All15 PDF pages read: cover, complete main text and equations, Figures1–7, TablesI–V, appendix, declarations and63 references. Rendered pages6,9,12,14 visually checked for phase/stability diagrams, quartic conditions, multistability/initial-condition diagnostics and convergence/limitations. No external source code or separate supplements examined; no independent simulation reproduction or full proof audit."
+      },
+      "question": {
+        "zh": "频率异质性遇上可移动振子，会怎样改变集体同步？",
+        "en": "How does binary frequency disorder reshape collective synchronization when oscillators can move?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇值得读，是因为它用一个可解析的环上模型，把频率异质性、位置自组织与集体同步放在同一张状态图里。与双峰Kuramoto模型比较时，相同的同步阈值并不意味着相同的驻波产生机制。",
+          "更可复用的是诊断思路：把状态存在性、局部稳定性和最终吸引子分开；首谐波序参量为零不等于真正无序，还要检查高次谐波、多初态、长暂态、自相关和Lyapunov指数。"
+        ],
+        "en": [
+          "A tractable ring model connects frequency heterogeneity, spatial self-organization and collective synchronization. Comparison with bimodal Kuramoto shows why the same synchronization threshold need not imply the same standing-wave mechanism.",
+          "Its most reusable lesson is diagnostic: separate branch existence, local stability and final attractors. A vanishing first-harmonic order parameter need not mean disorder; higher harmonics, multiple initial conditions, long transients, autocorrelations and Lyapunov exponents must be considered together."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "相同阈值，不同机制",
+            "en": "Same threshold, different mechanism"
+          },
+          "text": {
+            "zh": "同步要求k>2γ，但作者将swarmalator驻波的出现关联到同步态消失时的半单双零结构，而非直接套用Kuramoto的Hopf图景。",
+            "en": "Both models require k>2γ for frequency locking, yet the swarmalator standing wave is organized by a semisimple double-zero at loss of synchrony rather than a direct copy of the Kuramoto Hopf picture."
+          }
+        },
+        {
+          "heading": {
+            "zh": "零序参量可能漏掉结构",
+            "en": "Zero order can hide structure"
+          },
+          "text": {
+            "zh": "相波的存在边界与线性稳定边界不同；反足对称分布即使首谐波为零，第二谐波仍可很强，不能只凭单个序参量命名状态。",
+            "en": "Phase-wave existence and linear stability have different boundaries. Antipodal densities can have a vanishing first harmonic but a strong second harmonic, so a single order parameter cannot identify every state."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多种诊断识别多稳态",
+            "en": "Use complementary multistability diagnostics"
+          },
+          "text": {
+            "zh": "负耦合区的多初态扫描、自相关、Lyapunov指数与系统规模对照，区分规则分支、弱混沌和仍未完全解析的中间群体。",
+            "en": "Multistart scans, autocorrelations, Lyapunov exponents and size comparisons distinguish regular branches, weak chaos and an intermediate population that remains incompletely resolved."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究同步、swarmalator、集体动力学及数值吸引子诊断的读者。",
+        "en": "Readers studying synchronization, swarmalators, collective dynamics or numerical attractor diagnostics."
+      },
+      "reading_caveat": {
+        "zh": "已读15页正式PDF并核对四页关键图表；未检查外部代码或独立复现、逐式证明审查。模型为等比例二元频率、确定性全连接的一维环上首谐波理想化；现实相互作用的高次谐波未必很小，不能直接外推稀疏网络或真实化学系统。部分中间状态与吸引域边界仍开放。",
+        "en": "Read all15 publisher PDF pages and visually checked four key pages. No external code, independent reproduction or complete proof audit. Results concern a deterministic all-to-all ring with balanced binary frequencies and first-harmonic interactions; neglected harmonics need not be small, so sparse networks or realistic chemical systems require separate analysis. Parts of the intermediate-state and basin structure remain open."
+      },
+      "publication_sha256": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c"
+    },
     {
       "doi": "10.1063/5.0353727",
       "recommended_on": "2026-11-17",
@@ -45269,6 +45955,84 @@
       "publication_sha256": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
     },
     {
+      "doi": "10.1063/5.0347523",
+      "recommended_on": "2026-11-18",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-17-to-18-02",
+      "assessment_sha256": "8089e59e8c9a7ee6ca907a12c0ed0f75afc6465937b9df5db23e2dfba05eb38c",
+      "input_sha256": "ac59dd96235d2205b29ceb592f6898f26966f32a10ec6226c8c72e64d2f2d03c",
+      "evidence_sha256": "c266c43a3a291ce821bf4d9fd1ee5e5bc1a09bc147a32db6872b534c6d5bb9c1",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-18T00:18:12.218666+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0347523",
+        "title": "Binary intrinsic-frequency disorder in the one-dimensional swarmalator model",
+        "sha256": "5fd838418a1eb67d6fe2f1c6042a31e76a7a20e4491caa40d8ef65ce52ab8363",
+        "version": "Publisher Version of Record; Chaos36,113127(2026); Published Online17November2026;15 PDF pages including cover and14 article pages",
+        "source_url": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0347523/21203959/113127_1_5.0347523.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "reviewed_at": "2026-11-18T00:18:12.218666+00:00",
+        "read_scope": "All15 PDF pages read: cover, complete main text and equations, Figures1–7, TablesI–V, appendix, declarations and63 references. Rendered pages6,9,12,14 visually checked for phase/stability diagrams, quartic conditions, multistability/initial-condition diagnostics and convergence/limitations. No external source code or separate supplements examined; no independent simulation reproduction or full proof audit."
+      },
+      "question": {
+        "zh": "频率异质性遇上可移动振子，会怎样改变集体同步？",
+        "en": "How does binary frequency disorder reshape collective synchronization when oscillators can move?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇值得读，是因为它用一个可解析的环上模型，把频率异质性、位置自组织与集体同步放在同一张状态图里。与双峰Kuramoto模型比较时，相同的同步阈值并不意味着相同的驻波产生机制。",
+          "更可复用的是诊断思路：把状态存在性、局部稳定性和最终吸引子分开；首谐波序参量为零不等于真正无序，还要检查高次谐波、多初态、长暂态、自相关和Lyapunov指数。"
+        ],
+        "en": [
+          "A tractable ring model connects frequency heterogeneity, spatial self-organization and collective synchronization. Comparison with bimodal Kuramoto shows why the same synchronization threshold need not imply the same standing-wave mechanism.",
+          "Its most reusable lesson is diagnostic: separate branch existence, local stability and final attractors. A vanishing first-harmonic order parameter need not mean disorder; higher harmonics, multiple initial conditions, long transients, autocorrelations and Lyapunov exponents must be considered together."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "相同阈值，不同机制",
+            "en": "Same threshold, different mechanism"
+          },
+          "text": {
+            "zh": "同步要求k>2γ，但作者将swarmalator驻波的出现关联到同步态消失时的半单双零结构，而非直接套用Kuramoto的Hopf图景。",
+            "en": "Both models require k>2γ for frequency locking, yet the swarmalator standing wave is organized by a semisimple double-zero at loss of synchrony rather than a direct copy of the Kuramoto Hopf picture."
+          }
+        },
+        {
+          "heading": {
+            "zh": "零序参量可能漏掉结构",
+            "en": "Zero order can hide structure"
+          },
+          "text": {
+            "zh": "相波的存在边界与线性稳定边界不同；反足对称分布即使首谐波为零，第二谐波仍可很强，不能只凭单个序参量命名状态。",
+            "en": "Phase-wave existence and linear stability have different boundaries. Antipodal densities can have a vanishing first harmonic but a strong second harmonic, so a single order parameter cannot identify every state."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多种诊断识别多稳态",
+            "en": "Use complementary multistability diagnostics"
+          },
+          "text": {
+            "zh": "负耦合区的多初态扫描、自相关、Lyapunov指数与系统规模对照，区分规则分支、弱混沌和仍未完全解析的中间群体。",
+            "en": "Multistart scans, autocorrelations, Lyapunov exponents and size comparisons distinguish regular branches, weak chaos and an intermediate population that remains incompletely resolved."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究同步、swarmalator、集体动力学及数值吸引子诊断的读者。",
+        "en": "Readers studying synchronization, swarmalators, collective dynamics or numerical attractor diagnostics."
+      },
+      "reading_caveat": {
+        "zh": "已读15页正式PDF并核对四页关键图表；未检查外部代码或独立复现、逐式证明审查。模型为等比例二元频率、确定性全连接的一维环上首谐波理想化；现实相互作用的高次谐波未必很小，不能直接外推稀疏网络或真实化学系统。部分中间状态与吸引域边界仍开放。",
+        "en": "Read all15 publisher PDF pages and visually checked four key pages. No external code, independent reproduction or complete proof audit. Results concern a deterministic all-to-all ring with balanced binary frequencies and first-harmonic interactions; neglected harmonics need not be small, so sparse networks or realistic chemical systems require separate analysis. Parts of the intermediate-state and basin structure remain open."
+      },
+      "publication_sha256": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -45348,5 +46112,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "05bb5b4ed86ab3ac9006709e8e4d62b7a7fd3e9828a3ddcc0374d8dd1dc526e9"
+  "daily_suggestions_sha256": "2f94342ba3a92bec7d666edc3544a7bfec75eac497df3415fefda697095c3703"
 }

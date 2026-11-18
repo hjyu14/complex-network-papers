@@ -3254,6 +3254,84 @@
         "en": "Read all34 publisher PDF pages and figure captions, with six key pages visually checked. External code and separate supplements were not examined; no independent reproduction or proof audit. Reduced criteria require coupling/topology restrictions. Mpox edges are statistical associations; contribution-constrained fits and relative risk strata do not establish causal transmission or prospective forecasting."
       },
       "publication_sha256": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
+    },
+    {
+      "doi": "10.1063/5.0347523",
+      "recommended_on": "2026-11-18",
+      "selection": "new_in_update",
+      "source_run": "reports/runs/2026-11-17-to-18-02",
+      "assessment_sha256": "8089e59e8c9a7ee6ca907a12c0ed0f75afc6465937b9df5db23e2dfba05eb38c",
+      "input_sha256": "ac59dd96235d2205b29ceb592f6898f26966f32a10ec6226c8c72e64d2f2d03c",
+      "evidence_sha256": "c266c43a3a291ce821bf4d9fd1ee5e5bc1a09bc147a32db6872b534c6d5bb9c1",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-18T00:18:12.218666+00:00",
+      "fulltext_review": {
+        "doi": "10.1063/5.0347523",
+        "title": "Binary intrinsic-frequency disorder in the one-dimensional swarmalator model",
+        "sha256": "5fd838418a1eb67d6fe2f1c6042a31e76a7a20e4491caa40d8ef65ce52ab8363",
+        "version": "Publisher Version of Record; Chaos36,113127(2026); Published Online17November2026;15 PDF pages including cover and14 article pages",
+        "source_url": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0347523/21203959/113127_1_5.0347523.pdf",
+        "source_kind": "publisher_fulltext",
+        "pages": 15,
+        "reviewed_at": "2026-11-18T00:18:12.218666+00:00",
+        "read_scope": "All15 PDF pages read: cover, complete main text and equations, Figures1–7, TablesI–V, appendix, declarations and63 references. Rendered pages6,9,12,14 visually checked for phase/stability diagrams, quartic conditions, multistability/initial-condition diagnostics and convergence/limitations. No external source code or separate supplements examined; no independent simulation reproduction or full proof audit."
+      },
+      "question": {
+        "zh": "频率异质性遇上可移动振子，会怎样改变集体同步？",
+        "en": "How does binary frequency disorder reshape collective synchronization when oscillators can move?"
+      },
+      "reading_comment": {
+        "zh": [
+          "这篇值得读，是因为它用一个可解析的环上模型，把频率异质性、位置自组织与集体同步放在同一张状态图里。与双峰Kuramoto模型比较时，相同的同步阈值并不意味着相同的驻波产生机制。",
+          "更可复用的是诊断思路：把状态存在性、局部稳定性和最终吸引子分开；首谐波序参量为零不等于真正无序，还要检查高次谐波、多初态、长暂态、自相关和Lyapunov指数。"
+        ],
+        "en": [
+          "A tractable ring model connects frequency heterogeneity, spatial self-organization and collective synchronization. Comparison with bimodal Kuramoto shows why the same synchronization threshold need not imply the same standing-wave mechanism.",
+          "Its most reusable lesson is diagnostic: separate branch existence, local stability and final attractors. A vanishing first-harmonic order parameter need not mean disorder; higher harmonics, multiple initial conditions, long transients, autocorrelations and Lyapunov exponents must be considered together."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "相同阈值，不同机制",
+            "en": "Same threshold, different mechanism"
+          },
+          "text": {
+            "zh": "同步要求k>2γ，但作者将swarmalator驻波的出现关联到同步态消失时的半单双零结构，而非直接套用Kuramoto的Hopf图景。",
+            "en": "Both models require k>2γ for frequency locking, yet the swarmalator standing wave is organized by a semisimple double-zero at loss of synchrony rather than a direct copy of the Kuramoto Hopf picture."
+          }
+        },
+        {
+          "heading": {
+            "zh": "零序参量可能漏掉结构",
+            "en": "Zero order can hide structure"
+          },
+          "text": {
+            "zh": "相波的存在边界与线性稳定边界不同；反足对称分布即使首谐波为零，第二谐波仍可很强，不能只凭单个序参量命名状态。",
+            "en": "Phase-wave existence and linear stability have different boundaries. Antipodal densities can have a vanishing first harmonic but a strong second harmonic, so a single order parameter cannot identify every state."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用多种诊断识别多稳态",
+            "en": "Use complementary multistability diagnostics"
+          },
+          "text": {
+            "zh": "负耦合区的多初态扫描、自相关、Lyapunov指数与系统规模对照，区分规则分支、弱混沌和仍未完全解析的中间群体。",
+            "en": "Multistart scans, autocorrelations, Lyapunov exponents and size comparisons distinguish regular branches, weak chaos and an intermediate population that remains incompletely resolved."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究同步、swarmalator、集体动力学及数值吸引子诊断的读者。",
+        "en": "Readers studying synchronization, swarmalators, collective dynamics or numerical attractor diagnostics."
+      },
+      "reading_caveat": {
+        "zh": "已读15页正式PDF并核对四页关键图表；未检查外部代码或独立复现、逐式证明审查。模型为等比例二元频率、确定性全连接的一维环上首谐波理想化；现实相互作用的高次谐波未必很小，不能直接外推稀疏网络或真实化学系统。部分中间状态与吸引域边界仍开放。",
+        "en": "Read all15 publisher PDF pages and visually checked four key pages. No external code, independent reproduction or complete proof audit. Results concern a deterministic all-to-all ring with balanced binary frequencies and first-harmonic interactions; neglected harmonics need not be small, so sparse networks or realistic chemical systems require separate analysis. Parts of the intermediate-state and basin structure remain open."
+      },
+      "publication_sha256": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c"
     }
   ],
   "revisions": [

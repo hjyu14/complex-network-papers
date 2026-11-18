@@ -527,6 +527,29 @@ class Workflow:
         self.openalex_access.check(self.log, stop, refresh=refresh)
         return self.openalex_access
 
+    def defer_aps_accepted_paper(self, doi):
+        record = self.records[doi]
+        if (record.get('window_membership') != 'in_window'
+                or record.get('publication_status') != 'accepted'
+                or not record.get('identity_verified') or not doi.startswith('10.1103/')):
+            return
+        url = f"https://journals.aps.org/{record['journal'].lower()}/accepted/{doi}"
+        if not any(p.get('article_url') == url and p.get('publication_status') == 'accepted'
+                   for p in record.get('publisher_records', [])):
+            return
+        for event in reversed(self.log.events):
+            data = event['data']
+            if (event['kind'] == 'source_attempt' and data.get('doi') == doi
+                    and data.get('channel') == 'publisher' and data.get('source_url') == url
+                    and data.get('http_status') == 200 and data.get('result') == 'no_explicit_abstract'
+                    and (data.get('verified_metadata', {}).get('doi') or '').lower() == doi):
+                self.log.add('aps_accepted_awaiting_publication', {
+                    'doi': doi, 'candidate_sha256': self.input_sha, 'record_sha256': digest(record),
+                    'observation_sha256': event['sha256'],
+                    'authorization': 'User rule adopted 2026-11-18: APS accepted papers without a usable abstract await formal publication.',
+                })
+                return
+
     def collect_batch(self, workers=4):
         if self.active() or not 1 <= workers <= 4:
             raise ValueError('No active single paper; use 1–4 collection workers')
@@ -591,6 +614,8 @@ class Workflow:
                                      'reason': ('HTTP 429 stopped this batch before usable material; defer acquisition, not a claim that no abstract exists'
                                                 if result == 'deferred_rate_limit' else
                                                 'No verified abstract from automatic channels; later browser or user evidence required')})
+                    if result == 'deferred' and not stop.is_set():
+                        self.defer_aps_accepted_paper(doi)
                     counts[result] += 1
                     print(json.dumps(data, ensure_ascii=False), flush=True)
                     submit()
