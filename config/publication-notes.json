@@ -2343,11 +2343,11 @@
     },
     "10.1103/2bvb-fnrb": {
       "categories": [
-        "network_structure"
+        "network_inference"
       ],
-      "note_zh": "以缠结为节点、传力路径为边，将聚合物模拟压缩为能够保留小应变应力的离散网络。",
-      "note_en": "Entanglements become vertices and force-transmitting paths become edges, coarse-graining polymer simulations into discrete networks that retain small-strain stresses.",
-      "assessment_sha256": "741f3e63885ed2025a381f705d7fdeb835a5c36723611935874594c0d7b76d84"
+      "note_zh": "从承载应力的聚合物缠结构造机械网络，解释小变形下的应力响应。",
+      "note_en": "A mechanical network of load-bearing polymer entanglements captures stress under small strain.",
+      "assessment_sha256": "006da9e7cf0aedd583024454d1698e0c9df687156c3264f2452b53f39a2c31c9"
     },
     "10.1063/5.0354134": {
       "categories": [
@@ -2370,9 +2370,9 @@
       "categories": [
         "network_inference"
       ],
-      "note_zh": "以少量输出测量检验空间与时间量子网络中的相干传输，容许中间检查节点的验证能力未知，并用多光子网络实验检验。",
-      "note_en": "A nonlinear criterion tests coherence transfer with minimal output measurements and uncharacterized checkpoints, demonstrated in multiphoton entanglement networks.",
-      "assessment_sha256": "4d14836cbeddf715177466df7587c860c6c0ec21e5c77aa5303a0dec894b8933"
+      "note_zh": "用输出统计检验部分可访问的空间和时间量子网络是否传递相干性。",
+      "note_en": "An output-based criterion tests coherence transmission in partially accessible spatial and temporal quantum networks.",
+      "assessment_sha256": "2b91c4513266375254bf01989bb146fd56dadaaddcb3174143383ba38746fe93"
     },
     "10.1073/pnas.2612667123": {
       "categories": [
@@ -2682,7 +2682,7 @@
       ],
       "note_zh": "联合调节杆件长度、厚度与连接分布的富尺度网络，拓展超材料刚度、变形和波传播设计。",
       "note_en": "Networks with jointly tunable ligament lengths, thicknesses and connectivity expand metamaterial design across stiffness, deformation and wave propagation.",
-      "assessment_sha256": "324a6d5068966c543e94a15e04ddf10fa5e91fdbd183fc8806d5fa5c19ee28de"
+      "assessment_sha256": "2d379c14065af8cb00fe8bdf2d05a456899db87532ce244197291bc759d0377d"
     },
     "10.1073/pnas.2536565123": {
       "categories": [
@@ -2925,6 +2925,91 @@
       "note_zh": "在副本对称鞍点假设下推导稀疏矩阵谱分布涨落的候选速率泛函，并给出ER随机图邻接谱累积量及数值检验。",
       "note_en": "Under a replica-symmetric saddle assumption, a candidate rate functional describes sparse-matrix spectral fluctuations, with cumulants and numerical tests for ER adjacency spectra.",
       "assessment_sha256": "0f6373218dea476cd024831c223cefeedbb6e13b60259ebb3b1ec316539bbe72"
+    },
+    "10.1063/5.0350096": {
+      "categories": [
+        "network_collective",
+        "network_spreading"
+      ],
+      "note_zh": "在疫苗博弈中加入邻里意见反馈，考察空间簇与收益差异如何支撑高覆盖率和零接种并存。",
+      "note_en": "A vaccination game with local peer feedback ties bistability to spatial clustering and payoff differences.",
+      "assessment_sha256": "66a7224147909b9bf21935b4bad7708e8dc5d61132cca4da0dbff4b203584564"
+    },
+    "10.1038/s41467-026-77755-y": {
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "note_zh": "结合染色质占据和表达证据重构肢体外胚层调控关系，辨识 Sp8 的上游层级位置。",
+      "note_en": "Occupancy and expression profiles reconstruct regulatory links and place Sp8 upstream in a limb-ectoderm hierarchy.",
+      "assessment_sha256": "08f2b8fdbafd5d38822b9128e7826e294245e1cd188f7fbc41b580a42ac13fa1"
+    },
+    "10.1103/3wr7-t9hm": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "近对称的随机竞争产生多种稳定生态群落，群落生物量和多样性有助于预测吸引态的可达性。",
+      "note_en": "Nearly symmetric random competition produces alternative stable communities, whose accessibility is related to biomass and diversity.",
+      "assessment_sha256": "f4f8c8465347489cd91ced3a0285c25be413501e81de08af6d50680175820489"
+    },
+    "10.1103/cvwg-rnbd": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "将微生物群体视为谱系树，用祖先路径的统计权重联系群体增长与相变。",
+      "note_en": "A lineage-tree framework relates the statistics of ancestral paths to population growth and phase transitions.",
+      "assessment_sha256": "a75065b7ce58e51332119cf7bdedec1962c52e833688161a151f93fae02c32c8"
+    },
+    "10.1073/pnas.2612825123": {
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "note_zh": "用分布式计算的理论预言检验语言模型团队的扩展性，并比较集中式和分散式协调的代价。",
+      "note_en": "Tests distributed-systems predictions for scaling language model teams and compares the costs of centralized and decentralized coordination.",
+      "assessment_sha256": "bd10e6c08572c64101c6bd89173ec82f8b4f84ad532df1b454ed19288303c309"
+    },
+    "10.1038/s41586-026-11235-7": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "结合追踪与空间转录组重建视网膜到上丘的有向连接，并用扰动检验不同通路的功能。",
+      "note_en": "Tracing and spatial transcriptomics map directed retinal-to-collicular connections, with perturbations testing pathway function.",
+      "assessment_sha256": "d577c7dd7d413681190f0055cbbb1b9f4126c9930df259fe5e54d1f5bd80a7c8"
+    },
+    "10.1126/sciadv.aej5212": {
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "note_zh": "空间显式人口模型把群体间连通性与史前人群持续性联系起来，并比较气候与竞争情景。",
+      "note_en": "Spatial demographic simulations connect interband connectivity to population persistence under climate and competition scenarios.",
+      "assessment_sha256": "c2a838e286627037e5f64a76b5774c5901abcef77a46d1e051455ac5cb0e5fa1"
+    },
+    "10.1038/s41586-026-11300-1": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "受压生长将肌动蛋白网络中的暂时接触锁定为约束，解释欠连通网络如何获得刚度。",
+      "note_en": "Growth under compression traps transient contacts and stiffens underconnected branched actin networks.",
+      "assessment_sha256": "12dfde0b64dc40b768be7a36b1ecbffedb7346bc949b8f04efcfe28d3a8ea163"
+    },
+    "10.1038/s41586-026-11330-9": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "螺型位错重构成网络，其应变组织稳定极性涡旋对，并使节点和连线呈现不同电子特性。",
+      "note_en": "A reconstructed screw-dislocation network organizes strain, stabilizes polar vortex pairs, and produces distinct electronic signatures at nodes and lines.",
+      "assessment_sha256": "9d0d6425af6f45dce32a5241d70d3402df046421d3335e6acb9551b96d520c28"
+    },
+    "10.1126/sciadv.aek3182": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "环境变化切换分子信息处理网络的有效连通结构，使同一系统适应不同分类任务。",
+      "note_en": "Environmental cues switch effective connectivity in a molecular information-processing network, changing its classification task.",
+      "assessment_sha256": "bf352fef2e18b6992290717efd0d26067ce82c5487fdbe07c35fa5c80fbe33c8"
     }
   }
 }
