@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-21T04:06:33.324423+00:00",
+  "generated_at": "2026-11-21T23:53:02.178359+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-21",
-  "window_days": 82,
+  "window_end": "2026-11-22",
+  "window_days": 83,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "3adaa2aac7338e4bd05a920a52a6939010d10813de56541b3617a21d1d990fa3",
-  "author_metadata_sha256": "6fd18b55bdb1e9bb94a470624cc3bce13c30f94fce5662c3815826a4a3205054",
+  "reading_notes_sha256": "f590f676afc958c91030441f4509c48e1349fcb62955807ef49b7aa7d9954357",
+  "author_metadata_sha256": "258488a3d6b30bf67d56625a1f4d10cc11d1c9123d0f2893fd01914a4147f406",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3640,9 +3640,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-21-to-22-01",
+      "config_sha256": "320c400c26abdbbeed4a06e4a42b8ca21cd190c71ce2fea002a3e71885f42393",
+      "window_start": "2026-11-21",
+      "window_end": "2026-11-22",
+      "rule_sha256": "628a6000eac71d00ed17d035c219d58871f237fdbe0e39e16457f4d9e4ef0c94",
+      "screening_log_sha256": "5063190b493fb75af971e66534f7f95c862686082e1780f0a775ef849d035ee5",
+      "candidate_sha256": "23eb86064b900beb2ec3d122e34db7b3cfa1a7cee8792450dcb917e55b1bd6b5",
+      "author_metadata_sha256": "53643f0838a93616cd30714b9c2d3318fbbb3172a6471740acb21b66e49dbece",
+      "run_manifest_sha256": "143997f5d26feeb9be7b5978d9105bac5e18f4608426abef84f33166a60ff104",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-21-to-22-01",
+          "files": {
+            "candidates.json": "23eb86064b900beb2ec3d122e34db7b3cfa1a7cee8792450dcb917e55b1bd6b5",
+            "coverage.json": "4fe9de49ea70da427b49bf5bea14223a6b4b52121639c27bbe48a026760fbccc",
+            "collection-log.jsonl": "5532c3110a1ea6449a18c6fda3fc9d1667a3212c2f6d183c896f3effb953a162",
+            "screening-log.jsonl": "f61deb8544b6938f7e6a8b72c02996dc5b0a559b234d97b1c854a6358b2fe6d9",
+            "inputs/manifest.json": "c4628e719ecc425172edee6acb8834a9e0163e9d442ce8469ab51cd4d879fcdd",
+            "inputs/sources.json": "cef83fe7b327b831b19d6e3407db8d6ae7086b736b226a8861f60b4d1cc396f5",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "23eb86064b900beb2ec3d122e34db7b3cfa1a7cee8792450dcb917e55b1bd6b5",
+          "rule_sha256": "628a6000eac71d00ed17d035c219d58871f237fdbe0e39e16457f4d9e4ef0c94",
+          "screening_log_sha256": "5063190b493fb75af971e66534f7f95c862686082e1780f0a775ef849d035ee5"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "53643f0838a93616cd30714b9c2d3318fbbb3172a6471740acb21b66e49dbece",
+          "audit": {
+            "path": "reports/runs/2026-11-21-to-22-01/screening-log.jsonl",
+            "sha256": "f61deb8544b6938f7e6a8b72c02996dc5b0a559b234d97b1c854a6358b2fe6d9"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "2e0d95f1af4cb14816a5b2e9149270ff671bfa439fb85d4a7e8e836b7c06ec32"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 371,
+  "author_available_count": 372,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3792,8 +3836,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 1062,
-      "publisher_verified_inventory_count": 1062,
+      "candidate_count": 1063,
+      "publisher_verified_inventory_count": 1063,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4280,6 +4324,15 @@
           "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "Nature",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4748,13 +4801,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2303,
-      "publisher_verified_inventory_count": 2295,
+      "candidate_count": 2321,
+      "publisher_verified_inventory_count": 2313,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5205,6 +5267,15 @@
           "journal": "NC",
           "candidate_count": 44,
           "publisher_verified_inventory_count": 44,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "NC",
+          "candidate_count": 18,
+          "publisher_verified_inventory_count": 18,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5666,6 +5737,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6123,6 +6203,15 @@
           "journal": "NCS",
           "candidate_count": 2,
           "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6584,6 +6673,15 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7041,6 +7139,15 @@
           "journal": "PRL",
           "candidate_count": 11,
           "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -7502,6 +7609,15 @@
           "publisher_verified_inventory_count": 44,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7959,6 +8075,15 @@
           "journal": "PNAS",
           "candidate_count": 11,
           "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -8420,13 +8545,22 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 491,
-      "publisher_verified_inventory_count": 491,
+      "candidate_count": 494,
+      "publisher_verified_inventory_count": 494,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8877,6 +9011,15 @@
           "journal": "PRResearch",
           "candidate_count": 21,
           "publisher_verified_inventory_count": 21,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "PRResearch",
+          "candidate_count": 3,
+          "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
         }
@@ -9338,6 +9481,15 @@
           "publisher_verified_inventory_count": 15,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -9797,6 +9949,15 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -10211,42 +10372,40 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-21",
+          "window_end": "2026-11-22",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 8690,
+  "candidate_count": 8712,
   "screening_counts": {
-    "excluded": 8318,
+    "excluded": 8339,
     "core": 326,
-    "transferable_application": 45,
+    "transferable_application": 46,
     "aps_accepted_awaiting_publication": 1,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 371
+    "included": 372
   },
-  "published_count": 314,
+  "published_count": 315,
   "accepted_count": 57,
   "latest_update": {
-    "run": "reports/runs/2026-11-20-to-21-01",
-    "reviewed_at": "2026-11-21T03:59:38.405845+00:00",
-    "newly_included_count": 10,
+    "run": "reports/runs/2026-11-21-to-22-01",
+    "reviewed_at": "2026-11-21T23:46:35.465210+00:00",
+    "newly_included_count": 1,
     "newly_included_dois": [
-      "10.1038/s41467-026-79229-7",
-      "10.1038/s41467-026-79493-7",
-      "10.1038/s42005-026-02950-8",
-      "10.1073/pnas.2527345123",
-      "10.1103/c98q-fhbn",
-      "10.1103/fpcf-fbsg",
-      "10.1103/tcvh-ds28",
-      "10.1103/wrzg-9vr6",
-      "10.1103/yk2y-z44b",
-      "10.1126/sciadv.aec9323"
+      "10.1038/s41467-026-79817-7"
     ],
-    "accepted_to_published_count": 1,
-    "accepted_to_published_dois": [
-      "10.1103/4kgw-pk94"
-    ],
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": [],
     "aps_accepted_awaiting_publication_dois": [
       "10.1103/mv7d-n229"
     ]
@@ -10259,6 +10418,81 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1038/s41467-026-79817-7",
+      "url": "https://doi.org/10.1038/s41467-026-79817-7",
+      "title": "Plankton ecological complexity amplifies climate-driven weakening of the ocean biological pump",
+      "authors": [
+        "Fanyu Lin",
+        "Chengfeng Le",
+        "Yihui Chen",
+        "Gabriela Negrete-García",
+        "Jessica Y. Luo",
+        "Stephanie Henson",
+        "Stephanie Dutkiewicz"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "78f00b288beff3a56c59545834c5e519ef594d53d0a26dc630af8e8cbd48f7b1",
+      "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79817-7",
+      "author_retrieved_at": "2026-11-21T23:46:35.214946+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Nature Communications",
+      "journal_short": "NC",
+      "issns": [
+        "2041-1723"
+      ],
+      "date": "2026-11-21",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-21",
+        "basis": "published-online",
+        "publication_status": "published",
+        "sources": [
+          "https://www.nature.com/articles/s41467-026-79817-7",
+          "https://www.nature.com/ncomms/articles?year=2026&page=1&sort=PubDate&searchType=journalSearch"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-21",
+      "article_type": "Article",
+      "type_provenance": {
+        "status": "verified",
+        "value": "Article",
+        "basis": "Publisher directory Article label.",
+        "sources": [
+          "https://www.nature.com/ncomms/articles?year=2026&page=1&sort=PubDate&searchType=journalSearch"
+        ]
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Earth-system simulations compare three plankton food-web representations and find a stronger warming-driven decline in ocean carbon export with greater modeled trophic complexity.",
+      "note_zh": "地球系统模拟对比三种浮游生物食物网表示，发现较复杂的营养相互作用会放大模型中变暖导致的海洋碳输出减弱。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "e45499a83e32243af852bf0fe2f30264f2d87ce495c77eb1b29148a8f13e74b0",
+      "input_sha256": "01cba76acdd3a0a2d5c07e84de822ca0d17023b4e09c92037600a4e04fbdf2e2",
+      "material_sha256": "f8b6c4516bd570d80a8d528dbc24a7f417d2f948e24e4d55254825f0ec59ac1d",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "f8b6c4516bd570d80a8d528dbc24a7f417d2f948e24e4d55254825f0ec59ac1d",
+      "rule_sha256": "628a6000eac71d00ed17d035c219d58871f237fdbe0e39e16457f4d9e4ef0c94",
+      "featured": "NC",
+      "evidence": [
+        "Earth-system simulations with three plankton food-web representations relate stronger grazing and smaller phytoplankton to reduced ocean carbon export under warming."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1038%2Fs41467-026-79817-7",
+      "evidence_url": "https://www.nature.com/articles/s41467-026-79817-7",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1126/sciadv.aec9323",
       "url": "https://doi.org/10.1126/sciadv.aec9323",
@@ -42554,9 +42788,163 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "e03ebea1265833ed213cd3df24312b26fd6a2c7af4dec5d6eab429c8b22a16e9"
+    },
+    {
+      "current_run": "reports/runs/2026-11-21-to-22-01",
+      "candidate_sha256": "23eb86064b900beb2ec3d122e34db7b3cfa1a7cee8792450dcb917e55b1bd6b5",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+        "reports/runs/2026-11-14-to-15-01": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301",
+        "reports/runs/2026-11-15-to-16-01": "20b9b4dabd85722d9401a2eee31e5e8c2eea0088fb49f52070ca65047e002be8",
+        "reports/runs/2026-11-16-to-17-01": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6",
+        "reports/runs/2026-11-17-to-18-02": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+        "reports/runs/2026-11-11-to-12-nature-backfill-01": "c6e62a2cdb8593a7326d63ee4fbd658192e104d8d611f9e553de6f1e35ef26ef",
+        "reports/runs/2026-11-18-to-19-01": "67a6755feab9f9f22a9c7c4199b43a543a0d8d84a92f6e5cea8868aa4ea0a1ed",
+        "reports/runs/2026-11-19-to-20-01": "cda85df6eba4993d2297eb038848314f195f0245eef1b9c53e9549f9000ffdbb",
+        "reports/runs/2026-11-20-to-21-01": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3"
+      },
+      "counts": {
+        "in_window": 22,
+        "newly_reviewed": 22,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 21,
+          "transferable_application": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "572472559dbe5674c0b77fc3186af5b132664e4bacc8cdcccc7723f63ad5bb79"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/kwr4-pzn2",
+      "recommended_on": "2026-11-22",
+      "selection": "from_archive",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1103/kwr4-pzn2",
+        "title": "Why equal-time abundance correlations alone do not identify ecological interactions",
+        "sha256": "ce6bf028290045b70400cf46434ec17bd8af71be4a8d521dfbb8f02a4d6a67f4",
+        "version": "APS Version of Record, Physical Review Research 8, 043164, published 16 November 2026",
+        "source_url": "https://journals.aps.org/prresearch/abstract/10.1103/kwr4-pzn2",
+        "source_kind": "publisher_fulltext",
+        "pages": 20,
+        "read_scope": "Read the complete main text (Secs. I–V) of the 20-page Version of Record, checked Figs. 1–5 visually, and consulted supporting appendices for the matched-noise result, admissible counterexamples and consumer–resource limits. Technical derivations were not independently reproduced.",
+        "reviewed_at": "2026-11-21T23:45:19.605361+00:00"
+      },
+      "question": {
+        "zh": "物种丰度一起涨落时，什么额外证据才能帮助我们识别生态相互作用？",
+        "en": "What extra evidence distinguishes ecological interactions from shared environmental responses when species fluctuate together?"
+      },
+      "reading_comment": {
+        "zh": [
+          "同步涨落可以来自共同环境，竞争则会把丰度推向相反方向。论文以两者恰好匹配为基准，解释为什么存在相互作用的群落也可能呈现零等时相关。",
+          "先读图 5，再回到图 3 和图 4。图 5 给出多套相互作用矩阵产生同一相关矩阵的例子。后两图表明资源反馈速度和环境扰动进入群落的途径，会改变同一个相关信号的解释。"
+        ],
+        "en": [
+          "Shared environmental responses and competition can pull abundance correlations in opposite directions. The paper uses their exact cancellation as a benchmark for reading an apparently uncorrelated community.",
+          "Start with Fig. 5, which gives different interaction matrices with the same correlation matrix. Then read Figs. 3 and 4 to see how resource feedback times and the route of environmental forcing change what the signal can reveal."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "构造不可识别性的反例",
+            "en": "Construct an identifiability counterexample"
+          },
+          "text": {
+            "zh": "对候选相互作用矩阵反求环境噪声协方差，并检查它是否可实现。图 5 展示了同一等时相关矩阵仍可兼容强弱排序相反的竞争关系。",
+            "en": "Solve for the environmental covariance required by each candidate interaction matrix, then check its admissibility. Figure 5 shows that the same correlations can support even reversed competitive rankings."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把资源反馈时间作为独立信息",
+            "en": "Measure resource feedback time"
+          },
+          "text": {
+            "zh": "共同环境响应先发生、竞争反馈滞后时，即使两者的相似性结构匹配，相关也可随生态位重叠上升。图 3 提供了一个可复用的尺度对照。",
+            "en": "Figure 3 isolates delayed resource feedback. With matched shared forcing, the correlation can rise with overlap when competition responds slowly. This suggests an independent timescale measurement."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分共享资源与有效竞争",
+            "en": "Separate shared resources from competition"
+          },
+          "text": {
+            "zh": "资源扰动的传递取决于收益结构，有效竞争还取决于消耗结构。图 4 表明，固定生态位重叠仍可能得到正、零或负相关。",
+            "en": "Resource-mediated forcing depends on yield, while effective competition combines yield and depletion. Figure 4 shows that a fixed niche overlap can yield correlations of either sign."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "生态网络、时间序列推断和群落动力学研究者。",
+        "en": "Researchers in ecological networks, time-series inference, and community dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社正式版全部正文，并核对图 1–5 及相关附录。推导以稳定共存的竞争群落为背景，相关的机制解释依赖环境扰动路径或资源时间尺度等独立信息。未独立复现。",
+        "en": "Read the full main text of the publisher version, checked Figs. 1–5 and relevant appendices. The models assume stable coexistence in competitive communities. Interpreting correlations requires independent evidence about the forcing route or timescales. No independent reproduction."
+      },
+      "source_run": "reports/runs/2026-11-16-to-17-01",
+      "assessment_sha256": "57a92df0e14dbe56ba03bd3844b77ed15836e4da74d6b02775cab328a679be9d",
+      "input_sha256": "1be5aa2210bcc33439214a9d0e688a06addb1a4610c33ae319ca3f8004a94d64",
+      "evidence_sha256": "441233ad1bcb105cbc55309cf207a554e7881d5cc20fa3ee422a2d147afa0cad",
+      "reviewed_at": "2026-11-21T23:45:19.605361+00:00",
+      "publication_sha256": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
+    },
     {
       "doi": "10.1073/pnas.2527345123",
       "recommended_on": "2026-11-21",
@@ -49715,6 +50103,84 @@
       "publication_sha256": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3"
     },
     {
+      "doi": "10.1103/kwr4-pzn2",
+      "recommended_on": "2026-11-22",
+      "selection": "from_archive",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1103/kwr4-pzn2",
+        "title": "Why equal-time abundance correlations alone do not identify ecological interactions",
+        "sha256": "ce6bf028290045b70400cf46434ec17bd8af71be4a8d521dfbb8f02a4d6a67f4",
+        "version": "APS Version of Record, Physical Review Research 8, 043164, published 16 November 2026",
+        "source_url": "https://journals.aps.org/prresearch/abstract/10.1103/kwr4-pzn2",
+        "source_kind": "publisher_fulltext",
+        "pages": 20,
+        "read_scope": "Read the complete main text (Secs. I–V) of the 20-page Version of Record, checked Figs. 1–5 visually, and consulted supporting appendices for the matched-noise result, admissible counterexamples and consumer–resource limits. Technical derivations were not independently reproduced.",
+        "reviewed_at": "2026-11-21T23:45:19.605361+00:00"
+      },
+      "question": {
+        "zh": "物种丰度一起涨落时，什么额外证据才能帮助我们识别生态相互作用？",
+        "en": "What extra evidence distinguishes ecological interactions from shared environmental responses when species fluctuate together?"
+      },
+      "reading_comment": {
+        "zh": [
+          "同步涨落可以来自共同环境，竞争则会把丰度推向相反方向。论文以两者恰好匹配为基准，解释为什么存在相互作用的群落也可能呈现零等时相关。",
+          "先读图 5，再回到图 3 和图 4。图 5 给出多套相互作用矩阵产生同一相关矩阵的例子。后两图表明资源反馈速度和环境扰动进入群落的途径，会改变同一个相关信号的解释。"
+        ],
+        "en": [
+          "Shared environmental responses and competition can pull abundance correlations in opposite directions. The paper uses their exact cancellation as a benchmark for reading an apparently uncorrelated community.",
+          "Start with Fig. 5, which gives different interaction matrices with the same correlation matrix. Then read Figs. 3 and 4 to see how resource feedback times and the route of environmental forcing change what the signal can reveal."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "构造不可识别性的反例",
+            "en": "Construct an identifiability counterexample"
+          },
+          "text": {
+            "zh": "对候选相互作用矩阵反求环境噪声协方差，并检查它是否可实现。图 5 展示了同一等时相关矩阵仍可兼容强弱排序相反的竞争关系。",
+            "en": "Solve for the environmental covariance required by each candidate interaction matrix, then check its admissibility. Figure 5 shows that the same correlations can support even reversed competitive rankings."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把资源反馈时间作为独立信息",
+            "en": "Measure resource feedback time"
+          },
+          "text": {
+            "zh": "共同环境响应先发生、竞争反馈滞后时，即使两者的相似性结构匹配，相关也可随生态位重叠上升。图 3 提供了一个可复用的尺度对照。",
+            "en": "Figure 3 isolates delayed resource feedback. With matched shared forcing, the correlation can rise with overlap when competition responds slowly. This suggests an independent timescale measurement."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分共享资源与有效竞争",
+            "en": "Separate shared resources from competition"
+          },
+          "text": {
+            "zh": "资源扰动的传递取决于收益结构，有效竞争还取决于消耗结构。图 4 表明，固定生态位重叠仍可能得到正、零或负相关。",
+            "en": "Resource-mediated forcing depends on yield, while effective competition combines yield and depletion. Figure 4 shows that a fixed niche overlap can yield correlations of either sign."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "生态网络、时间序列推断和群落动力学研究者。",
+        "en": "Researchers in ecological networks, time-series inference, and community dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社正式版全部正文，并核对图 1–5 及相关附录。推导以稳定共存的竞争群落为背景，相关的机制解释依赖环境扰动路径或资源时间尺度等独立信息。未独立复现。",
+        "en": "Read the full main text of the publisher version, checked Figs. 1–5 and relevant appendices. The models assume stable coexistence in competitive communities. Interpreting correlations requires independent evidence about the forcing route or timescales. No independent reproduction."
+      },
+      "source_run": "reports/runs/2026-11-16-to-17-01",
+      "assessment_sha256": "57a92df0e14dbe56ba03bd3844b77ed15836e4da74d6b02775cab328a679be9d",
+      "input_sha256": "1be5aa2210bcc33439214a9d0e688a06addb1a4610c33ae319ca3f8004a94d64",
+      "evidence_sha256": "441233ad1bcb105cbc55309cf207a554e7881d5cc20fa3ee422a2d147afa0cad",
+      "reviewed_at": "2026-11-21T23:45:19.605361+00:00",
+      "publication_sha256": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -49794,5 +50260,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "edfc38fb5220d8bb84528ebb66f3f9a7caebabe347473a89844a22be188b86c2"
+  "daily_suggestions_sha256": "e705d9353c34bd966bdec166ef7fdc5203cc066f571c9b37c12f26df1ab6e598"
 }

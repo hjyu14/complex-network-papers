@@ -3566,6 +3566,84 @@
       "evidence_sha256": "81017c030f22b3a8b3e964571335eebc2ae3867aae0ecf42e875459c6cb18c5e",
       "reviewed_at": "2026-11-21T03:50:12.985999+00:00",
       "publication_sha256": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3"
+    },
+    {
+      "doi": "10.1103/kwr4-pzn2",
+      "recommended_on": "2026-11-22",
+      "selection": "from_archive",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1103/kwr4-pzn2",
+        "title": "Why equal-time abundance correlations alone do not identify ecological interactions",
+        "sha256": "ce6bf028290045b70400cf46434ec17bd8af71be4a8d521dfbb8f02a4d6a67f4",
+        "version": "APS Version of Record, Physical Review Research 8, 043164, published 16 November 2026",
+        "source_url": "https://journals.aps.org/prresearch/abstract/10.1103/kwr4-pzn2",
+        "source_kind": "publisher_fulltext",
+        "pages": 20,
+        "read_scope": "Read the complete main text (Secs. I–V) of the 20-page Version of Record, checked Figs. 1–5 visually, and consulted supporting appendices for the matched-noise result, admissible counterexamples and consumer–resource limits. Technical derivations were not independently reproduced.",
+        "reviewed_at": "2026-11-21T23:45:19.605361+00:00"
+      },
+      "question": {
+        "zh": "物种丰度一起涨落时，什么额外证据才能帮助我们识别生态相互作用？",
+        "en": "What extra evidence distinguishes ecological interactions from shared environmental responses when species fluctuate together?"
+      },
+      "reading_comment": {
+        "zh": [
+          "同步涨落可以来自共同环境，竞争则会把丰度推向相反方向。论文以两者恰好匹配为基准，解释为什么存在相互作用的群落也可能呈现零等时相关。",
+          "先读图 5，再回到图 3 和图 4。图 5 给出多套相互作用矩阵产生同一相关矩阵的例子。后两图表明资源反馈速度和环境扰动进入群落的途径，会改变同一个相关信号的解释。"
+        ],
+        "en": [
+          "Shared environmental responses and competition can pull abundance correlations in opposite directions. The paper uses their exact cancellation as a benchmark for reading an apparently uncorrelated community.",
+          "Start with Fig. 5, which gives different interaction matrices with the same correlation matrix. Then read Figs. 3 and 4 to see how resource feedback times and the route of environmental forcing change what the signal can reveal."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "构造不可识别性的反例",
+            "en": "Construct an identifiability counterexample"
+          },
+          "text": {
+            "zh": "对候选相互作用矩阵反求环境噪声协方差，并检查它是否可实现。图 5 展示了同一等时相关矩阵仍可兼容强弱排序相反的竞争关系。",
+            "en": "Solve for the environmental covariance required by each candidate interaction matrix, then check its admissibility. Figure 5 shows that the same correlations can support even reversed competitive rankings."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把资源反馈时间作为独立信息",
+            "en": "Measure resource feedback time"
+          },
+          "text": {
+            "zh": "共同环境响应先发生、竞争反馈滞后时，即使两者的相似性结构匹配，相关也可随生态位重叠上升。图 3 提供了一个可复用的尺度对照。",
+            "en": "Figure 3 isolates delayed resource feedback. With matched shared forcing, the correlation can rise with overlap when competition responds slowly. This suggests an independent timescale measurement."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分共享资源与有效竞争",
+            "en": "Separate shared resources from competition"
+          },
+          "text": {
+            "zh": "资源扰动的传递取决于收益结构，有效竞争还取决于消耗结构。图 4 表明，固定生态位重叠仍可能得到正、零或负相关。",
+            "en": "Resource-mediated forcing depends on yield, while effective competition combines yield and depletion. Figure 4 shows that a fixed niche overlap can yield correlations of either sign."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "生态网络、时间序列推断和群落动力学研究者。",
+        "en": "Researchers in ecological networks, time-series inference, and community dynamics."
+      },
+      "reading_caveat": {
+        "zh": "已读出版社正式版全部正文，并核对图 1–5 及相关附录。推导以稳定共存的竞争群落为背景，相关的机制解释依赖环境扰动路径或资源时间尺度等独立信息。未独立复现。",
+        "en": "Read the full main text of the publisher version, checked Figs. 1–5 and relevant appendices. The models assume stable coexistence in competitive communities. Interpreting correlations requires independent evidence about the forcing route or timescales. No independent reproduction."
+      },
+      "source_run": "reports/runs/2026-11-16-to-17-01",
+      "assessment_sha256": "57a92df0e14dbe56ba03bd3844b77ed15836e4da74d6b02775cab328a679be9d",
+      "input_sha256": "1be5aa2210bcc33439214a9d0e688a06addb1a4610c33ae319ca3f8004a94d64",
+      "evidence_sha256": "441233ad1bcb105cbc55309cf207a554e7881d5cc20fa3ee422a2d147afa0cad",
+      "reviewed_at": "2026-11-21T23:45:19.605361+00:00",
+      "publication_sha256": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
     }
   ],
   "revisions": [
