@@ -3488,6 +3488,84 @@
         "en": "Read all 12 pages of the PNAS version of record and inspected Figs. 1–12 and Tables 1–3. Validation used small oscillator systems with known topology. The illustrated iEEG example shows two hours from one patient without independently known edges. External code was not reviewed and no independent reproduction was performed."
       },
       "publication_sha256": "cda85df6eba4993d2297eb038848314f195f0245eef1b9c53e9549f9000ffdbb"
+    },
+    {
+      "doi": "10.1073/pnas.2527345123",
+      "recommended_on": "2026-11-21",
+      "selection": "new_in_update",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2527345123",
+        "title": "Knowledge gaps and scientific progress",
+        "sha256": "021031b03b20470378c22eee765df0f33fed11d06cfd9989ca63058de265b210",
+        "pages": 11,
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2527345123",
+        "source_kind": "user_provided_pdf",
+        "version": "Publisher Version of Record, PNAS 123(47), e2527345123, published November 20, 2026",
+        "read_scope": "Read all 11 pages of the version of record, including the concept-network construction, results, discussion, methods and references. Cross-checked figures 1–6 in rendered PDF pages. The separate SI Appendix, data and analysis code were outside the reading scope. No independent reproduction.",
+        "reviewed_at": "2026-11-21T03:50:12.985999+00:00"
+      },
+      "question": {
+        "zh": "在不断增长的概念共现网络中，什么样的新连边会围出一个可追踪的知识空洞？",
+        "en": "Which new edges create a traceable knowledge gap in an evolving concept co-occurrence network?"
+      },
+      "reading_comment": {
+        "zh": [
+          "作者以概念首次共现为连边时间，用持久同调记录新边何时闭合一条既有路径、围成尚未填充的环。图 1 值得和三组文章的定义一起读，它把连边的新颖性与连边对全局结构的改变区分开。",
+          "图 4 在同一长引文窗口样本上比较五年和二十年累计引文。MAG 中开洞论文相对从未引入新概念对的组，五年引文较少，二十年较多。图 5 对照其他数据库，但复核的是高被引与颠覆性指标，不能把二十年效应直接推广到每个数据库。"
+        ],
+        "en": [
+          "The authors time-stamp edges by the first co-occurrence of two concepts and use persistent homology to track when a new edge closes a path around an unfilled cycle. Figure 1 and the three comparison groups show how an edge can be novel without creating a hole.",
+          "Figure 4 compares five- and twenty-year citations within the same long-horizon sample. In MAG, gap-opening papers receive fewer citations after five years and more after twenty than papers with no novel pair. Figure 5 replicates high-citation and disruption associations across databases. It does not replicate the twenty-year comparison in every database."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "给空洞定义出生时间",
+            "en": "Date the birth of a hole"
+          },
+          "text": {
+            "zh": "用边的首次出现时间构造过滤，进而追踪结构空洞的形成与封闭。",
+            "en": "Filter the network by first edge appearance to locate the formation and filling of structural holes."
+          }
+        },
+        {
+          "heading": {
+            "zh": "保留恰当的比较组",
+            "en": "Use a meaningful comparison group"
+          },
+          "text": {
+            "zh": "对比同样首次连接概念但没有形成空洞的文章，可检验环结构带来的额外关联。",
+            "en": "Compare against papers that also add a new concept pair but open no hole to test the additional association with topology."
+          }
+        },
+        {
+          "heading": {
+            "zh": "核对结论对词表的敏感性",
+            "en": "Test sensitivity to concept vocabularies"
+          },
+          "text": {
+            "zh": "图 5 并列六套数据，高被引与颠覆性关联普遍出现，效应大小随数据和概念定义变化。",
+            "en": "Figure 5 compares six data sources. Associations with high citations and disruption recur, while their magnitude varies with the data and concept definitions."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究知识网络、科学计量或动态网络拓扑，并希望借用对照设计的读者。",
+        "en": "Readers working on knowledge networks, bibliometrics, or evolving network topology who want a concrete comparison design."
+      },
+      "reading_caveat": {
+        "zh": "已读 PNAS 正式版 11 页并核对图 1–6。连边表征语料中概念标签的首次共现，引文结果是观察性关联；未审读独立补充材料或复现。",
+        "en": "Read the 11-page PNAS version of record and inspected figures 1–6. Edges encode the first observed co-assignment of concept labels, and citation results are observational. The separate supplement, data and code were not independently checked."
+      },
+      "source_run": "reports/runs/2026-11-20-to-21-01",
+      "assessment_sha256": "8177a27da283f1788569890b315a46a81769c6f7976713449dadb2554393dcce",
+      "input_sha256": "4313550b9e5f70b52a1fc0039e20d26264dcfaaec82b63cca9922929ed11204e",
+      "evidence_sha256": "81017c030f22b3a8b3e964571335eebc2ae3867aae0ecf42e875459c6cb18c5e",
+      "reviewed_at": "2026-11-21T03:50:12.985999+00:00",
+      "publication_sha256": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3"
     }
   ],
   "revisions": [

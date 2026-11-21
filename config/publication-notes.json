@@ -2511,11 +2511,12 @@
     },
     "10.1103/4kgw-pk94": {
       "categories": [
-        "network_collective"
+        "network_collective",
+        "network_spreading"
       ],
-      "note_zh": "无标度神经网络中，起搏节点的位置与平均度决定全局放电的渐进或爆发式起始路径，并以双节点解析结果解释阈值。",
-      "note_en": "Pacemaker position and mean degree shape gradual versus explosive global-firing onset in scale-free neuronal networks, with two-node analysis explaining threshold behaviour.",
-      "assessment_sha256": "12059a330b8a498e61dc7a89e3d3eea7a1c13646b2652f7083764cafc6063856"
+      "note_zh": "比较无标度可兴奋网络中枢纽起搏引起的渐进招募和低度叶节点可能引起的突发全局放电。",
+      "note_en": "Hub pacemakers recruit activity gradually, while leaves with low-degree neighbors can trigger explosive global firing in scale-free excitable networks.",
+      "assessment_sha256": "b199fe34f8e84f3cc957da25fa00f7f0fee8f3aef67f7037f0b7443ea510d7c6"
     },
     "10.1103/r397-cxtl": {
       "categories": [
@@ -3082,6 +3083,87 @@
       "note_zh": "从比较基因组数据识别休眠相关的共进化基因模块，并检验模块与种内纬度适应信号的联系。",
       "note_en": "Comparative genomic data identify coevolving gene modules associated with diapause, with a follow-up test of links to within-species adaptation across latitudes.",
       "assessment_sha256": "f6c93ab004038a44a3625cbfd44c767ade6c6f798c02b0693392d83a31bb7779"
+    },
+    "10.1038/s42005-026-02950-8": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "比较趋化反馈与运动能力如何改变自组织团簇的分支和分形结构。",
+      "note_en": "Motility-dependent chemotactic feedback changes branching and the fractal organization of self-assembled clusters.",
+      "assessment_sha256": "5630bd7d26734c26c3b0da9f6b4cebf837c5578b52e880d199b43eb3811df064"
+    },
+    "10.1073/pnas.2527345123": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "以持久同调追踪概念共现网络中新连边围成的空洞，并比较不同概念重组方式的长期引文表现。",
+      "note_en": "Persistent homology tracks holes opened by new edges in concept co-occurrence networks and distinguishes their long-term citation patterns.",
+      "assessment_sha256": "8177a27da283f1788569890b315a46a81769c6f7976713449dadb2554393dcce"
+    },
+    "10.1126/sciadv.aec9323": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "以合成人工线路研究反应扩散调控的连接结构如何影响细菌的三维集体图案。",
+      "note_en": "A synthetic reaction–diffusion circuit illustrates how its regulatory architecture shapes collective three-dimensional bacterial patterns.",
+      "assessment_sha256": "00012c870614305bcbc893624ebf30822745997fbad70233c617ace6f9b51e87"
+    },
+    "10.1038/s41467-026-79229-7": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "通过谱分析识别随机反应网络动力学中的低维结构。",
+      "note_en": "A spectral approach identifies hidden low-dimensional dynamical structure in stochastic reaction networks.",
+      "assessment_sha256": "a6934201ff218611743a9ff70fa298daf87fade5aaa4c45db2089fbbc3497d61"
+    },
+    "10.1038/s41467-026-79493-7": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_zh": "从染色质接触中追踪 SMC5/6 对空间区室和拓扑关联域边界的维持作用。",
+      "note_en": "Chromatin contact analysis shows how SMC5/6 maintains spatial compartments and topologically associating domain boundaries.",
+      "assessment_sha256": "6bd042bafb4fcd25e39988250976555a589edff8a1f43ed59541f5f4afc0830c"
+    },
+    "10.1103/c98q-fhbn": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "用 Clifford 剪枝精确分析森林相互作用图上的对易 Ising 演化，构造魔性密度有限而纠缠密度消失的情形。",
+      "note_en": "Clifford pruning exactly analyzes commuting Ising evolution on forest interaction graphs and constructs examples with finite magic density and vanishing entanglement density.",
+      "assessment_sha256": "c2b1378b474295673905ae695cf943eddf6e348d1a9c517185726ce1ac61fa92"
+    },
+    "10.1103/yk2y-z44b": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "环形振子网络中，多种高阶耦合共同作用可稳定单独耦合无法稳定的扭转态。",
+      "note_en": "Combinations of higher-order interactions stabilize twisted states that are unstable under individual coupling terms on oscillator rings.",
+      "assessment_sha256": "881e6faee4232aaa00007a8120c7e6d2c97ff76afb0d35e9a062e5d33a1510a7"
+    },
+    "10.1103/fpcf-fbsg": {
+      "categories": [
+        "network_inference"
+      ],
+      "note_zh": "用投影协调局部布尔阈值与下游连线约束，在较高间隔条件下得到稀疏逻辑网络。",
+      "note_en": "A projection method reconciles local Boolean thresholds with downstream connectivity constraints and yields sparse logic networks at sufficiently large margins.",
+      "assessment_sha256": "5fe5e1d589329176d4bbee611314069a957358e52d30d58eeb8f4be368b8d73f"
+    },
+    "10.1103/tcvh-ds28": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "不对随机突触权重取平均，用图解展开解析固定递归连接下的自发相关与扰动响应。",
+      "note_en": "A diagrammatic expansion relates fixed recurrent connectivity to spontaneous correlations and perturbation response without averaging over synaptic weights.",
+      "assessment_sha256": "f8e6e136fcc195925ae5cf497201e502037553ea35dd8405314c1cff62ed3524"
+    },
+    "10.1103/wrzg-9vr6": {
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "note_zh": "阿基米德晶格的包含关系组织混合位点—键渗流相图，并解释部分晶格的纯位点与纯键阈值反序。",
+      "note_en": "Inclusion relations organize mixed site–bond percolation phase diagrams of Archimedean lattices and explain threshold-order reversals for some lattice pairs.",
+      "assessment_sha256": "5f1811b7855d6edc4606b390dbb3b14b62a5152c5c931eb8b570295f45d58998"
     }
   }
 }

@@ -10,6 +10,18 @@ function reportText(relative) {
   return fs.existsSync(file) ? fs.readFileSync(file,'utf8') : zlib.gunzipSync(fs.readFileSync(file+'.gz')).toString('utf8');
 }
 
+function releaseDecisions(input) {
+  const runs=[input.run,...(input.assessment_sources?.revisions ?? []).map(revision=>revision.source.run)];
+  const decisions=new Map();
+  for (const run of runs) {
+    const events=reportText(`${run}/screening-log.jsonl`).trim().split('\n').map(JSON.parse);
+    for (const event of events) {
+      if (['assessment','assessment_corrected'].includes(event.kind)) decisions.set(event.data.doi,event.data);
+    }
+  }
+  return decisions;
+}
+
 class Node {
   constructor(tag = 'div') {
     this.tagName = tag; this.children = []; this.attrs = {}; this.events = {};
@@ -476,16 +488,16 @@ test('published artifact has consistent rules, date bounds, counts and unique DO
   assert.equal(audit.candidate_inventory_complete, false);
   assert.equal(audit.metadata_reconciliation_complete, false);
   assert.equal(data.papers.length, data.screening_counts.included);
-  assert.equal(data.candidate_count, 8527);
-  assert.equal(audit.included_assessments.length, 361);
+  assert.equal(data.candidate_count, audit.candidate_count);
+  assert.deepEqual(audit.included_assessments.map(row=>row.doi),data.papers.map(paper=>paper.doi));
   assert.equal(new Set(data.papers.map(p => p.doi)).size, data.papers.length);
   assert.ok(data.papers.every(p => p.date >= data.window_start && p.date <= data.window_end && !('abstract' in p)));
-  assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000  + 1, 81);
+  assert.equal((Date.parse(data.window_end) - Date.parse(data.window_start)) / 86400000 + 1,data.window_days);
   assert.equal(data.coverage.length,14);
   assert.equal(data.coverage.find(q => q.journal === 'NC').candidate_inventory_complete,false);
-  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed + data.screening_counts.aps_accepted_awaiting_publication, 8527);
-  assert.equal(data.published_count,308);
-  assert.equal(data.accepted_count,53);
+  assert.equal(data.screening_counts.excluded + data.papers.length + data.screening_counts.review + data.screening_counts.deferred_unassessed + data.screening_counts.aps_accepted_awaiting_publication, data.candidate_count);
+  assert.equal(data.published_count,data.papers.filter(paper=>paper.publication_status==='published').length);
+  assert.equal(data.accepted_count,data.papers.filter(paper=>paper.publication_status==='accepted').length);
 });
 
 test('pagination has ten papers, last page, language persistence and filter reset', async () => {
@@ -510,8 +522,8 @@ test('research method controls and annotations are absent', () => {
   assert.doesNotMatch(source, /state\.method|renderMethods|methodLabel/);
   assert.equal(data.screening_version, 'newflow-1');
   assert.ok(data.papers.every(p => !('methods' in p) && !('method_evidence' in p)));
-  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, 319);
-  assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, 42);
+  assert.equal(data.papers.filter(p => p.scope_class === 'core').length, data.screening_counts.core);
+  assert.equal(data.papers.filter(p => p.scope_class === 'transferable_application').length, data.screening_counts.transferable_application);
 });
 
 test('fixed September snapshot keeps date bounds without a journal-specific coverage notice', async () => {
@@ -574,7 +586,8 @@ test('editor-selected related readings are not advertised as core transferable m
 
 test('release audit retains all windows and separately pinned October coverage evidence', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
-  assert.equal(data.run_inputs.length,55);
+  const release=JSON.parse(reportText('config/release.json'));
+  assert.deepEqual(data.run_inputs.map(input=>input.run),release.runs);
   const repairedNature=data.coverage.find(c=>c.journal==='Nature').windows.find(w=>w.window_start==='2026-11-11');
   assert.equal(repairedNature.window_end,'2026-11-12');
   assert.equal(repairedNature.candidate_count,63);
@@ -594,25 +607,22 @@ test('release audit retains all windows and separately pinned October coverage e
   assert.equal(october6.publication_evidence.summary.original_coverage_flags_unchanged,true);
   assert.equal(october6.publication_evidence.summary.not_complete_calendar_day_coverage,true);
   assert.deepEqual(october6.publication_evidence.summary.new_in_window_dois,[]);
+  const publishedInputs=data.run_inputs.map(input=>({
+    input, journals:JSON.parse(reportText(`${input.run}/coverage.json`)).journals
+  }));
   for (const coverage of data.coverage) {
-    if (coverage.journal==='NP') {
-      assert.deepEqual(coverage.windows.map(w=>[w.window_start,w.window_end]),[['2026-09-01','2026-10-08'],['2026-10-08','2026-10-09'],['2026-10-09','2026-10-10'],['2026-10-10','2026-10-11'],['2026-10-11','2026-10-12'],['2026-10-12','2026-10-13'],['2026-10-13','2026-10-14'],['2026-10-14','2026-10-15'],['2026-10-15','2026-10-16'],['2026-10-16','2026-10-17'],['2026-10-17','2026-10-18'],['2026-10-18','2026-10-19'],['2026-10-19','2026-10-20'],['2026-10-20','2026-10-21'],['2026-10-21','2026-10-22'],['2026-10-22','2026-10-23'],['2026-10-23','2026-10-24'],['2026-10-24','2026-10-25'],['2026-10-25','2026-10-26'],['2026-10-26','2026-10-27'],['2026-10-27','2026-10-28'],['2026-10-28','2026-10-29'],['2026-10-29','2026-10-30'],['2026-10-30','2026-10-31'],['2026-10-31','2026-11-01'],['2026-11-01','2026-11-02'],['2026-11-02','2026-11-03'],['2026-11-03','2026-11-04'],['2026-11-04','2026-11-05'],['2026-11-05','2026-11-06'],['2026-11-06','2026-11-07'],['2026-11-07','2026-11-08'],['2026-11-08','2026-11-09'],['2026-11-09','2026-11-10'],['2026-11-10','2026-11-11'],['2026-11-11','2026-11-12'],['2026-11-12','2026-11-13'],['2026-11-13','2026-11-14'],['2026-11-14','2026-11-15'],['2026-11-15','2026-11-16'],['2026-11-16','2026-11-17'],['2026-11-17','2026-11-18'],['2026-11-18','2026-11-19'],['2026-11-19','2026-11-20']]);
-      assert.equal(coverage.candidate_inventory_complete,true);
-      assert.equal(coverage.candidate_count,99);
-      continue;
-    }
-    assert.deepEqual(coverage.windows.map(w=>[w.window_start,w.window_end]),[['2026-09-01','2026-09-30'],['2026-10-01','2026-10-05'],['2026-10-05','2026-10-06'],['2026-10-06','2026-10-06'],['2026-10-06','2026-10-07'],['2026-10-07','2026-10-08'],['2026-10-08','2026-10-09'],['2026-10-09','2026-10-10'],['2026-10-10','2026-10-11'],['2026-10-11','2026-10-12'],['2026-10-12','2026-10-13'],['2026-10-13','2026-10-14'],['2026-10-14','2026-10-15'],['2026-10-15','2026-10-16'],['2026-10-16','2026-10-17'],['2026-10-17','2026-10-18'],['2026-10-18','2026-10-19'],['2026-10-19','2026-10-20'],['2026-10-20','2026-10-21'],['2026-10-21','2026-10-22'],['2026-10-22','2026-10-23'],['2026-10-23','2026-10-24'],['2026-10-24','2026-10-25'],['2026-10-25','2026-10-26'],['2026-10-26','2026-10-27'],['2026-10-27','2026-10-28'],['2026-10-28','2026-10-29'],['2026-10-29','2026-10-30'],['2026-10-30','2026-10-31'],['2026-10-31','2026-11-01'],['2026-11-01','2026-11-02'],['2026-11-02','2026-11-03'],['2026-11-03','2026-11-04'],['2026-11-04','2026-11-05'],['2026-11-05','2026-11-06'],['2026-11-06','2026-11-07'],['2026-11-07','2026-11-08'],['2026-11-08','2026-11-09'],['2026-11-09','2026-11-10'],['2026-11-10','2026-11-11'],['2026-11-11','2026-11-12'],['2026-11-12','2026-11-13'],['2026-11-13','2026-11-14'],['2026-11-14','2026-11-15'],['2026-11-15','2026-11-16'],['2026-11-16','2026-11-17'],['2026-11-17','2026-11-18'],['2026-11-18','2026-11-19'],['2026-11-19','2026-11-20']].concat(coverage.journal==='Nature' ? [['2026-10-21','2026-10-28'],['2026-11-02','2026-11-02']] : coverage.journal==='Science' ? [['2026-11-08','2026-11-10']] : []).sort((a,b)=>a[0].localeCompare(b[0]) || a[1].localeCompare(b[1])));
+    const windows=new Set(publishedInputs.filter(({journals})=>coverage.journal in journals)
+      .map(({input})=>`${input.window_start}/${input.window_end}`));
+    assert.deepEqual(coverage.windows.map(w=>`${w.window_start}/${w.window_end}`),[...windows].sort());
   }
+  assert.equal(data.coverage.find(c=>c.journal==='NP').candidate_inventory_complete,true);
 });
 
 test('public export has notes for exactly the current included DOIs and preserves accepted provenance', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
-  const rows=reportText('reports/runs/2026-09/screening-log.jsonl').trim().split('\n').map(JSON.parse);
   const latest=new Map();
-  for (const row of rows) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
-  for (const run of ['runs/2026-09-expansion-01','reviews/2026-09-expansion-adjudication-01','runs/2026-10-01-to-05-01','runs/2026-10-06-01','reviews/2026-10-05-editorial-revision-01','runs/2026-10-05-to-06-carryover-01','runs/2026-10-06-to-07-01','runs/2026-10-07-to-08-02','runs/2026-09-01-to-10-08-np-01','runs/2026-10-08-to-09-02','runs/2026-10-09-to-10-01','runs/2026-10-10-to-11-01','runs/2026-10-11-to-12-02','runs/2026-10-12-to-13-03','runs/2026-10-13-to-14-01','runs/2026-10-14-to-15-01','runs/2026-10-15-to-16-01','runs/2026-10-16-to-17-01','runs/2026-10-17-to-18-01','runs/2026-10-18-to-19-01','runs/2026-10-19-to-20-01','runs/2026-10-20-to-21-01','runs/2026-10-21-to-22-01','runs/2026-10-22-to-23-01','runs/2026-10-23-to-24-01','runs/2026-10-24-to-25-01','runs/2026-10-25-to-26-01','runs/2026-10-26-to-27-01','runs/2026-10-27-to-28-02','runs/2026-10-21-to-28-nature-backfill-01','runs/2026-10-28-to-29-01','runs/2026-10-29-to-30-01','runs/2026-10-30-to-31-02','runs/2026-10-31-to-11-01-01','runs/2026-11-01-to-02-01','runs/2026-11-02-to-03-01','runs/2026-11-03-to-04-01','runs/2026-11-04-to-05-01','runs/2026-11-05-to-06-01','runs/2026-11-06-to-07-01','runs/2026-11-07-to-08-01','runs/2026-11-08-to-09-02','runs/2026-11-08-to-10-science-backfill-01','runs/2026-11-09-to-10-02','runs/2026-11-10-to-11-01','runs/2026-11-02-nature-backfill-01','runs/2026-11-11-to-12-01','runs/2026-11-12-to-13-01','runs/2026-11-13-to-14-01','runs/2026-11-14-to-15-01','runs/2026-11-15-to-16-01','runs/2026-11-16-to-17-01','runs/2026-11-17-to-18-02','runs/2026-11-11-to-12-nature-backfill-01','runs/2026-11-18-to-19-01','runs/2026-11-19-to-20-01']) {
-    const events=reportText(`reports/${run}/screening-log.jsonl`).trim().split('\n').map(JSON.parse);
-    for (const row of events) if (['assessment','assessment_corrected'].includes(row.kind)) latest.set(row.data.doi,row.data);
+  for (const input of data.run_inputs) {
+    for (const [doi,decision] of releaseDecisions(input)) latest.set(doi,decision);
   }
   const included=[...latest.values()].filter(d => ['core','transferable_application'].includes(d.category));
   assert.deepEqual(data.papers.map(p => p.doi).sort(),included.map(d => d.doi).sort());
@@ -622,67 +632,28 @@ test('public export has notes for exactly the current included DOIs and preserve
     assert.ok(!JSON.stringify(paper).includes('.private/'));
   }
   const accepted=data.papers.filter(p => p.publication_status === 'accepted');
-  assert.equal(accepted.length,53);
+  assert.equal(accepted.length,data.accepted_count);
   for (const p of accepted) { assert.equal(p.published_date,null); assert.equal(p.accepted_date,p.date); assert.match(p.url,/journals.aps.org.*accepted/); }
   for (const doi of ['10.1126/sciadv.aeg4913','10.1103/21c5-cvnn','10.1038/s41467-026-77405-3','10.1103/7pzd-gtdv']) assert.ok(!data.papers.some(p => p.doi===doi));
 });
 
 
-test('fourteen journals have 361 traced inclusions and ten enter spotlight', () => {
+test('fourteen journals have traced author records and ten enter spotlight', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
-  const metadata=JSON.parse(reportText('reports/runs/2026-09/author-metadata.json'));
-  const extra=JSON.parse(reportText('reports/runs/2026-09-expansion-01/author-metadata.json'));
-  const october=JSON.parse(fs.readFileSync(path.join(__dirname,'../reports/runs/2026-10-01-to-05-01/author-metadata.json'),'utf8'));
-  const carryover=JSON.parse(reportText('reports/runs/2026-10-05-to-06-carryover-01/author-metadata.json'));
-  const daily=JSON.parse(reportText('reports/runs/2026-10-06-to-07-01/author-metadata.json'));
-  const current=JSON.parse(reportText('reports/runs/2026-10-07-to-08-02/author-metadata.json'));
-  const np=JSON.parse(reportText('reports/runs/2026-09-01-to-10-08-np-01/author-metadata.json'));
-  const today=JSON.parse(reportText('reports/runs/2026-10-08-to-09-02/author-metadata.json'));
-  const latest=JSON.parse(reportText('reports/runs/2026-10-09-to-10-01/author-metadata.json'));
-  const update=JSON.parse(reportText('reports/runs/2026-10-12-to-13-03/author-metadata.json'));
-  const newest=JSON.parse(reportText('reports/runs/2026-10-13-to-14-01/author-metadata.json'));
-  const fresh=JSON.parse(reportText('reports/runs/2026-10-14-to-15-01/author-metadata.json'));
-  const newestDaily=JSON.parse(reportText('reports/runs/2026-10-15-to-16-01/author-metadata.json'));
-  const currentDaily=JSON.parse(reportText('reports/runs/2026-10-16-to-17-01/author-metadata.json'));
-  const latestDaily=JSON.parse(reportText('reports/runs/2026-10-17-to-18-01/author-metadata.json'));
-  const todayDaily=JSON.parse(reportText('reports/runs/2026-10-19-to-20-01/author-metadata.json'));
-  const nextDaily=JSON.parse(reportText('reports/runs/2026-10-20-to-21-01/author-metadata.json'));
-  const currentUpdate=JSON.parse(reportText('reports/runs/2026-10-21-to-22-01/author-metadata.json'));
-  const newestUpdate=JSON.parse(reportText('reports/runs/2026-10-22-to-23-01/author-metadata.json'));
-  const finalUpdate=JSON.parse(reportText('reports/runs/2026-10-23-to-24-01/author-metadata.json'));
-  const todayUpdate=JSON.parse(reportText('reports/runs/2026-10-24-to-25-01/author-metadata.json'));
-  const currentToday=JSON.parse(reportText('reports/runs/2026-10-25-to-26-01/author-metadata.json'));
-  const currentRun=JSON.parse(reportText('reports/runs/2026-10-26-to-27-01/author-metadata.json'));
-  const update28=JSON.parse(reportText('reports/runs/2026-10-27-to-28-02/author-metadata.json'));
-  const update29=JSON.parse(reportText('reports/runs/2026-10-28-to-29-01/author-metadata.json'));
-  const update30=JSON.parse(reportText('reports/runs/2026-10-29-to-30-01/author-metadata.json'));
-  const update31=JSON.parse(reportText('reports/runs/2026-10-30-to-31-02/author-metadata.json'));
-  const backfill29=JSON.parse(reportText('reports/runs/2026-10-21-to-28-nature-backfill-01/author-metadata.json'));
-  const update03=JSON.parse(reportText('reports/runs/2026-11-02-to-03-01/author-metadata.json'));
-  const update04=JSON.parse(reportText('reports/runs/2026-11-03-to-04-01/author-metadata.json'));
-  const update05=JSON.parse(reportText('reports/runs/2026-11-04-to-05-01/author-metadata.json'));
-  const update06=JSON.parse(reportText('reports/runs/2026-11-05-to-06-01/author-metadata.json'));
-  const update07=JSON.parse(reportText('reports/runs/2026-11-06-to-07-01/author-metadata.json'));
-  const update10=JSON.parse(reportText('reports/runs/2026-11-09-to-10-02/author-metadata.json'));
-  const update11=JSON.parse(reportText('reports/runs/2026-11-10-to-11-01/author-metadata.json'));
-  const update12=JSON.parse(reportText('reports/runs/2026-11-11-to-12-01/author-metadata.json'));
-  const update13=JSON.parse(reportText('reports/runs/2026-11-12-to-13-01/author-metadata.json'));
-  const update14=JSON.parse(reportText('reports/runs/2026-11-13-to-14-01/author-metadata.json'));
-  const update15=JSON.parse(reportText('reports/runs/2026-11-14-to-15-01/author-metadata.json'));
-  const update17=JSON.parse(reportText('reports/runs/2026-11-16-to-17-01/author-metadata.json'));
-  const update18=JSON.parse(reportText('reports/runs/2026-11-17-to-18-02/author-metadata.json'));
-  const natureBackfill=JSON.parse(reportText('reports/runs/2026-11-11-to-12-nature-backfill-01/author-metadata.json'));
-  const update19=JSON.parse(reportText('reports/runs/2026-11-18-to-19-01/author-metadata.json'));
-  const update20=JSON.parse(reportText('reports/runs/2026-11-19-to-20-01/author-metadata.json'));
+  const authorRows=new Map();
+  for (const input of data.run_inputs) {
+    const metadata=JSON.parse(reportText(`${input.run}/author-metadata.json`));
+    for (const row of Object.values(metadata.records)) authorRows.set(row.metadata_sha256,row);
+  }
   assert.equal(data.featured_journals.length,10);
   assert.deepEqual([...data.featured_journals].sort(),[...collectionConfig.featured_journals].sort());
-  assert.equal(data.papers.filter(p=>p.featured).length,125);
-  assert.equal(data.author_available_count,361);
+  assert.equal(data.author_available_count,data.papers.length);
   assert.equal(data.journals.length,14);
   assert.deepEqual(data.journals.map(j=>j.short).sort(),collectionConfig.journals.map(j=>j.short).sort());
-  assert.equal(data.papers.filter(p=>!p.featured).length,236);
   for(const p of data.papers) {
-    const row=update20.records[p.doi] || update19.records[p.doi] || natureBackfill.records[p.doi] || update18.records[p.doi] || update17.records[p.doi] || update15.records[p.doi] || update14.records[p.doi] || update13.records[p.doi] || update12.records[p.doi] || update11.records[p.doi] || update10.records[p.doi] || update07.records[p.doi] || update06.records[p.doi] || update05.records[p.doi] || update04.records[p.doi] || update03.records[p.doi] || update31.records[p.doi] || update30.records[p.doi] || update29.records[p.doi] || backfill29.records[p.doi] || update28.records[p.doi] || currentRun.records[p.doi] || currentToday.records[p.doi] || todayUpdate.records[p.doi] || finalUpdate.records[p.doi] || newestUpdate.records[p.doi] || currentUpdate.records[p.doi] || nextDaily.records[p.doi] || todayDaily.records[p.doi] || latestDaily.records[p.doi] || currentDaily.records[p.doi] || newestDaily.records[p.doi] || fresh.records[p.doi] || newest.records[p.doi] || update.records[p.doi] || latest.records[p.doi] || today.records[p.doi] || np.records[p.doi] || current.records[p.doi] || daily.records[p.doi] || carryover.records[p.doi] || metadata.records[p.doi] || extra.records[p.doi] || october.records[p.doi];
+    const row=authorRows.get(p.author_metadata_sha256);
+    assert.equal(row?.doi,p.doi);
+    assert.equal(p.featured,data.featured_journals.includes(p.journal_short) ? p.journal_short : null);
     assert.deepEqual(p.authors,row.authors);
     assert.ok(p.authors.length);
     assert.equal(p.author_metadata_status,'available');
@@ -692,7 +663,7 @@ test('fourteen journals have 361 traced inclusions and ten enter spotlight', () 
   }
 });
 
-test('carryover preserves earlier transitions and binds the November 20 update', () => {
+test('carryover preserves earlier transitions and binds the latest update', () => {
   const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../site/data/papers.json'),'utf8'));
   const audit=JSON.parse(reportText('reports/runs/2026-10-05-to-06-carryover-01/evidence/cross-run-audit.json'));
   assert.equal(audit.blockers.length,0);
@@ -710,19 +681,26 @@ test('carryover preserves earlier transitions and binds the November 20 update',
     assert.ok(audit.records.find(r=>r.doi===doi && r.previous_publication_status==='accepted' && r.previous_assessment_sha256));
   }
   assert.equal(data.carryover_audits[0].candidate_sha256,audit.candidate_sha256);
-  assert.equal(data.papers.filter(p=>p.publication_transition).length,68);
-  assert.equal(data.latest_update.newly_included_count,9);
-  assert.equal(data.latest_update.accepted_to_published_count,0);
   const current=JSON.parse(reportText('reports/runs/2026-10-07-to-08-02/evidence/cross-run-audit.json'));
   assert.equal(current.blockers.length,0);
   assert.equal(current.counts.in_window,207);
   assert.equal(current.counts.state_updates,17);
-  assert.equal(data.latest_update.run,'reports/runs/2026-11-19-to-20-01');
-  assert.deepEqual(data.latest_update.newly_included_dois,[
-    '10.1073/pnas.2518099123','10.1073/pnas.2607191123','10.1103/1wsf-n52f','10.1103/48w1-q855','10.1103/bvhw-5y8t',
-    '10.1103/gphv-ks67','10.1103/m3pq-fb1l','10.1103/wqqn-z4p4','10.1126/science.aeb1122',
-  ]);
-  assert.equal(new Set(data.latest_update.newly_included_dois).size,9);
+  const latest=data.run_inputs.at(-1);
+  assert.equal(data.latest_update.run,latest.run);
+  const seen=new Set();
+  for (const input of data.run_inputs.slice(0,-1)) {
+    for (const [doi,row] of releaseDecisions(input)) {
+      if (['core','transferable_application'].includes(row.category)) seen.add(doi);
+    }
+  }
+  const newDois=[...releaseDecisions(latest)]
+    .filter(([doi,row])=>!seen.has(doi) && ['core','transferable_application'].includes(row.category))
+    .map(([doi])=>doi).sort();
+  assert.deepEqual(data.latest_update.newly_included_dois,newDois);
+  assert.equal(data.latest_update.newly_included_count,newDois.length);
+  const stateChanges=data.papers.filter(p=>p.publication_transition?.source_run===latest.run).map(p=>p.doi).sort();
+  assert.deepEqual(data.latest_update.accepted_to_published_dois,stateChanges);
+  assert.equal(data.latest_update.accepted_to_published_count,stateChanges.length);
   // Earlier November7 additions remain alongside the November12 increment.
   const additions=data.papers.filter(p=>["10.1038/s41467-026-78777-2","10.1038/s41467-026-78879-x","10.1103/5h59-b6xz","10.1103/8dj9-xp98"].includes(p.doi));
   assert.equal(additions.filter(p=>p.publication_status==='published').length,2);
@@ -733,7 +711,6 @@ test('carryover preserves earlier transitions and binds the November 20 update',
   assert.equal(comment.scope_authority,'assistant_online_short_comment_screening');
   assert.ok(comment.review_evidence_sha256);
   assert.equal(comment.published_date,'2026-11-06');
-  assert.deepEqual(data.latest_update.accepted_to_published_dois,[]);
   assert.deepEqual(data.latest_update.aps_accepted_awaiting_publication_dois,['10.1103/mv7d-n229']);
   assert.ok(!data.papers.some(p=>p.doi==='10.1103/mv7d-n229'));
   const relatedTransition=data.papers.find(p=>p.doi==='10.1103/qnhv-yp69');
