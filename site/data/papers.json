@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-21T23:53:02.178359+00:00",
+  "generated_at": "2026-11-22T23:52:05.594771+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-22",
-  "window_days": 83,
+  "window_end": "2026-11-23",
+  "window_days": 84,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
   "reading_notes_sha256": "f590f676afc958c91030441f4509c48e1349fcb62955807ef49b7aa7d9954357",
-  "author_metadata_sha256": "258488a3d6b30bf67d56625a1f4d10cc11d1c9123d0f2893fd01914a4147f406",
+  "author_metadata_sha256": "52040abac21f414e2f3af42d9043bb88960cae6f244b62b49bf8d329084eb209",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3684,6 +3684,50 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-22-to-23-01",
+      "config_sha256": "5a4f0e1e67a5ff08acf39235ba13cbbd6d92fff0f66f1d9a181423611ed9d9bf",
+      "window_start": "2026-11-22",
+      "window_end": "2026-11-23",
+      "rule_sha256": "f77252b765cf170af035b5443c7b7035b334e32c99845e6ccb21faa4eb5bd50b",
+      "screening_log_sha256": "fdc9255bf58fc1be21c4ca752510796fac69314e19ee5c8b198b77b588cf8953",
+      "candidate_sha256": "713bceb3c4855b349ebb958f0720bf8a2cddd784597cac153d2e345440e3a86c",
+      "author_metadata_sha256": "1db56b29b4db394e9abe355504a0eafab44453b71934d99f362df4b5e928b428",
+      "run_manifest_sha256": "a9a7da63af08ff3285b749a91c66d4e446e4c75c7d5932b2eeeceb94b1c49da3",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-22-to-23-01",
+          "files": {
+            "candidates.json": "713bceb3c4855b349ebb958f0720bf8a2cddd784597cac153d2e345440e3a86c",
+            "coverage.json": "e49c1f87e7ce1e16ee4bfc7b43fcce9cccafa8f6e77e24048abb056ba5e9f671",
+            "collection-log.jsonl": "7ffc1f8bcb9a9d87ba2b0eaeb0ca4b0a1ec3f3b707c925be2407b1999dec3563",
+            "screening-log.jsonl": "3c804719929c32988321d657268a33a16330b5cb6f0b12619b89feeb7e547b52",
+            "inputs/manifest.json": "bc665199736b90299494ac9d67b63e68ad3209a5cc77dbdded6ece4c5b93d814",
+            "inputs/sources.json": "2e3fd28be6422e0ae71beda0d98899ce474dafb5065925463360adc1f293f72a",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "713bceb3c4855b349ebb958f0720bf8a2cddd784597cac153d2e345440e3a86c",
+          "rule_sha256": "f77252b765cf170af035b5443c7b7035b334e32c99845e6ccb21faa4eb5bd50b",
+          "screening_log_sha256": "fdc9255bf58fc1be21c4ca752510796fac69314e19ee5c8b198b77b588cf8953"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "1db56b29b4db394e9abe355504a0eafab44453b71934d99f362df4b5e928b428",
+          "audit": {
+            "path": "reports/runs/2026-11-22-to-23-01/screening-log.jsonl",
+            "sha256": "3c804719929c32988321d657268a33a16330b5cb6f0b12619b89feeb7e547b52"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "2bc5a65bf292b193b1fe8378558caaac39b3afc631d0e1398fa43a40185cbe1d"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
     }
   ],
   "author_available_count": 372,
@@ -4333,6 +4377,15 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "Nature",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -4810,13 +4863,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2321,
-      "publisher_verified_inventory_count": 2313,
+      "candidate_count": 2332,
+      "publisher_verified_inventory_count": 2324,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5276,6 +5338,15 @@
           "journal": "NC",
           "candidate_count": 18,
           "publisher_verified_inventory_count": 18,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "NC",
+          "candidate_count": 11,
+          "publisher_verified_inventory_count": 11,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5741,6 +5812,15 @@
         {
           "window_start": "2026-11-21",
           "window_end": "2026-11-22",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -6214,6 +6294,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -6677,6 +6766,15 @@
         {
           "window_start": "2026-11-21",
           "window_end": "2026-11-22",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
           "journal": "PRX",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -7150,6 +7248,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7613,6 +7720,15 @@
         {
           "window_start": "2026-11-21",
           "window_end": "2026-11-22",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
           "journal": "SA",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -8086,6 +8202,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -8554,13 +8679,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 494,
-      "publisher_verified_inventory_count": 494,
+      "candidate_count": 495,
+      "publisher_verified_inventory_count": 495,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -9022,6 +9156,15 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "PRResearch",
+          "candidate_count": 1,
+          "publisher_verified_inventory_count": 1,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -9485,6 +9628,15 @@
         {
           "window_start": "2026-11-21",
           "window_end": "2026-11-22",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
           "journal": "PRE",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -9958,6 +10110,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -10381,13 +10542,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-22",
+          "window_end": "2026-11-23",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 8712,
+  "candidate_count": 8724,
   "screening_counts": {
-    "excluded": 8339,
+    "excluded": 8351,
     "core": 326,
     "transferable_application": 46,
     "aps_accepted_awaiting_publication": 1,
@@ -10398,12 +10568,10 @@
   "published_count": 315,
   "accepted_count": 57,
   "latest_update": {
-    "run": "reports/runs/2026-11-21-to-22-01",
-    "reviewed_at": "2026-11-21T23:46:35.465210+00:00",
-    "newly_included_count": 1,
-    "newly_included_dois": [
-      "10.1038/s41467-026-79817-7"
-    ],
+    "run": "reports/runs/2026-11-22-to-23-01",
+    "reviewed_at": "2026-11-22T23:45:29.456919+00:00",
+    "newly_included_count": 0,
+    "newly_included_dois": [],
     "accepted_to_published_count": 0,
     "accepted_to_published_dois": [],
     "aps_accepted_awaiting_publication_dois": [
@@ -42864,9 +43032,163 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "572472559dbe5674c0b77fc3186af5b132664e4bacc8cdcccc7723f63ad5bb79"
+    },
+    {
+      "current_run": "reports/runs/2026-11-22-to-23-01",
+      "candidate_sha256": "713bceb3c4855b349ebb958f0720bf8a2cddd784597cac153d2e345440e3a86c",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+        "reports/runs/2026-11-14-to-15-01": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301",
+        "reports/runs/2026-11-15-to-16-01": "20b9b4dabd85722d9401a2eee31e5e8c2eea0088fb49f52070ca65047e002be8",
+        "reports/runs/2026-11-16-to-17-01": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6",
+        "reports/runs/2026-11-17-to-18-02": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+        "reports/runs/2026-11-11-to-12-nature-backfill-01": "c6e62a2cdb8593a7326d63ee4fbd658192e104d8d611f9e553de6f1e35ef26ef",
+        "reports/runs/2026-11-18-to-19-01": "67a6755feab9f9f22a9c7c4199b43a543a0d8d84a92f6e5cea8868aa4ea0a1ed",
+        "reports/runs/2026-11-19-to-20-01": "cda85df6eba4993d2297eb038848314f195f0245eef1b9c53e9549f9000ffdbb",
+        "reports/runs/2026-11-20-to-21-01": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3",
+        "reports/runs/2026-11-21-to-22-01": "143997f5d26feeb9be7b5978d9105bac5e18f4608426abef84f33166a60ff104"
+      },
+      "counts": {
+        "in_window": 12,
+        "newly_reviewed": 12,
+        "historically_reviewed": 0,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 12
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "9a85907db64c56aec2740bb75bf20c9c45bcfd119dc9ce53761e0c812f98607b"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/c9kq-kqbv",
+      "recommended_on": "2026-11-23",
+      "selection": "from_archive",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1103/c9kq-kqbv",
+        "title": "Information-thermodynamic principles unveil the response of complex networks to perturbations",
+        "sha256": "70c9b0b3facc2d3b24f8e46e439473cec907bf4d7ec2b464e6456445ac3d30d2",
+        "version": "APS Version of Record, Physical Review Research 8, 043171, published 17 November 2026",
+        "source_url": "https://journals.aps.org/prresearch/abstract/10.1103/c9kq-kqbv",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "reviewed_at": "2026-11-22T23:42:03.528391+00:00",
+        "read_scope": "Read Sections I–III and Appendices A–I of the 11-page publisher Version of Record and visually checked Figs. 1 and 2. Derivations and numerical results were not independently reproduced."
+      },
+      "question": {
+        "zh": "网络在什么条件下会让原本弱势的扰动模式重新变得重要，从而增加响应的多样性？",
+        "en": "When do previously weak perturbation modes regain weight and increase the diversity of a network’s response?"
+      },
+      "reading_comment": {
+        "zh": [
+          "先看图 1(b)：同一线虫神经网络上，拉普拉斯扩散没有出现响应熵上升的区间，所测试的非线性神经模型在较强耦合下出现了这样的区间。",
+          "再读式 (7) 和图 2。前者把熵增联系到已有模式权重与瞬时伸展率的关系，后者把扰动的平均收缩或放大，与偏离瞬时扩散参考的程度分开度量。"
+        ],
+        "en": [
+          "Start with Fig. 1(b). On the same worm connectome, Laplacian diffusion yields no interval of increasing response entropy, while the tested nonlinear neuronal model shows such intervals at stronger coupling.",
+          "Then read Eq. (7) and Fig. 2. The equation connects an entropy rise to the relation between accumulated mode weights and instantaneous stretching. The figure measures average contraction or amplification separately from departure from a local diffusive reference."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "固定扰动先验再比较动力学",
+            "en": "Fix the perturbation prior when comparing dynamics"
+          },
+          "text": {
+            "zh": "以等权正交扰动为共同起点，比较同一网络上的不同动力学。附录 E 说明，改变先验本身就可能让恒定对称扩散短时熵增。",
+            "en": "Use equally weighted orthogonal perturbations to compare dynamics on the same network. Appendix E shows that changing the prior alone can give transient entropy growth even under constant symmetric diffusion."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分响应强度和响应多样性",
+            "en": "Distinguish response strength from response diversity"
+          },
+          "text": {
+            "zh": "密度矩阵经迹归一化，熵反映响应模式的相对分布。式 (7) 解释先前权重较低的方向受到较强瞬时拉伸时，多样性为何可能回升。",
+            "en": "Trace normalization makes the entropy a measure of the relative spread across response modes. Equation (7) explains why stronger instantaneous stretching of previously underrepresented modes can raise that entropy."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用瞬时扩散参考做结构对照",
+            "en": "Compare structures against a local diffusive reference"
+          },
+          "text": {
+            "zh": "图 2 用自由能差比较每个系统与自身瞬时扩散参考，再对照实测网络、保度随机化网络和随机图。这个设计可检验哪些响应特征在打乱结构后仍能保留。",
+            "en": "Figure 2 measures the free-energy gap to each system’s own instantaneous diffusive reference, then compares empirical networks, degree-preserving nulls, and random graphs. This design helps test which response features survive structural randomization."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络扰动传播、局部稳定性和扩散近似的读者。",
+        "en": "Readers studying network perturbations, local stability, or diffusion approximations."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版正文与附录 A–I，并核对图 1、图 2。方法描述选定轨迹附近的小扰动。正熵率不能单独判定局部失稳，实测网络与随机模型的排序也只是算例中的趋势。未独立复现。",
+        "en": "Read the Version of Record and Appendices A–I and checked Figs. 1 and 2. The framework describes small perturbations along a chosen trajectory. Positive entropy rate alone does not diagnose local instability, and the ordering across network ensembles is a tendency in the examples. No independent reproduction."
+      },
+      "source_run": "reports/runs/2026-11-17-to-18-02",
+      "publication_sha256": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+      "assessment_sha256": "b1c7a6e84441bbb44c1a9fb199055c20a2f935eca1344bccf65957e6880d7497",
+      "input_sha256": "e865c6b82fab4a04ff0c6c0a5628214a53911546b07fcc980e68a3bc4302b435",
+      "evidence_sha256": "828e9cd623a29468c7010e3abfe541287e52ca93937bbf60c4dc8c298dc95eff",
+      "reviewed_at": "2026-11-22T23:42:03.528391+00:00"
+    },
     {
       "doi": "10.1103/kwr4-pzn2",
       "recommended_on": "2026-11-22",
@@ -50181,6 +50503,84 @@
       "publication_sha256": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6"
     },
     {
+      "doi": "10.1103/c9kq-kqbv",
+      "recommended_on": "2026-11-23",
+      "selection": "from_archive",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1103/c9kq-kqbv",
+        "title": "Information-thermodynamic principles unveil the response of complex networks to perturbations",
+        "sha256": "70c9b0b3facc2d3b24f8e46e439473cec907bf4d7ec2b464e6456445ac3d30d2",
+        "version": "APS Version of Record, Physical Review Research 8, 043171, published 17 November 2026",
+        "source_url": "https://journals.aps.org/prresearch/abstract/10.1103/c9kq-kqbv",
+        "source_kind": "publisher_fulltext",
+        "pages": 11,
+        "reviewed_at": "2026-11-22T23:42:03.528391+00:00",
+        "read_scope": "Read Sections I–III and Appendices A–I of the 11-page publisher Version of Record and visually checked Figs. 1 and 2. Derivations and numerical results were not independently reproduced."
+      },
+      "question": {
+        "zh": "网络在什么条件下会让原本弱势的扰动模式重新变得重要，从而增加响应的多样性？",
+        "en": "When do previously weak perturbation modes regain weight and increase the diversity of a network’s response?"
+      },
+      "reading_comment": {
+        "zh": [
+          "先看图 1(b)：同一线虫神经网络上，拉普拉斯扩散没有出现响应熵上升的区间，所测试的非线性神经模型在较强耦合下出现了这样的区间。",
+          "再读式 (7) 和图 2。前者把熵增联系到已有模式权重与瞬时伸展率的关系，后者把扰动的平均收缩或放大，与偏离瞬时扩散参考的程度分开度量。"
+        ],
+        "en": [
+          "Start with Fig. 1(b). On the same worm connectome, Laplacian diffusion yields no interval of increasing response entropy, while the tested nonlinear neuronal model shows such intervals at stronger coupling.",
+          "Then read Eq. (7) and Fig. 2. The equation connects an entropy rise to the relation between accumulated mode weights and instantaneous stretching. The figure measures average contraction or amplification separately from departure from a local diffusive reference."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "固定扰动先验再比较动力学",
+            "en": "Fix the perturbation prior when comparing dynamics"
+          },
+          "text": {
+            "zh": "以等权正交扰动为共同起点，比较同一网络上的不同动力学。附录 E 说明，改变先验本身就可能让恒定对称扩散短时熵增。",
+            "en": "Use equally weighted orthogonal perturbations to compare dynamics on the same network. Appendix E shows that changing the prior alone can give transient entropy growth even under constant symmetric diffusion."
+          }
+        },
+        {
+          "heading": {
+            "zh": "区分响应强度和响应多样性",
+            "en": "Distinguish response strength from response diversity"
+          },
+          "text": {
+            "zh": "密度矩阵经迹归一化，熵反映响应模式的相对分布。式 (7) 解释先前权重较低的方向受到较强瞬时拉伸时，多样性为何可能回升。",
+            "en": "Trace normalization makes the entropy a measure of the relative spread across response modes. Equation (7) explains why stronger instantaneous stretching of previously underrepresented modes can raise that entropy."
+          }
+        },
+        {
+          "heading": {
+            "zh": "用瞬时扩散参考做结构对照",
+            "en": "Compare structures against a local diffusive reference"
+          },
+          "text": {
+            "zh": "图 2 用自由能差比较每个系统与自身瞬时扩散参考，再对照实测网络、保度随机化网络和随机图。这个设计可检验哪些响应特征在打乱结构后仍能保留。",
+            "en": "Figure 2 measures the free-energy gap to each system’s own instantaneous diffusive reference, then compares empirical networks, degree-preserving nulls, and random graphs. This design helps test which response features survive structural randomization."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究网络扰动传播、局部稳定性和扩散近似的读者。",
+        "en": "Readers studying network perturbations, local stability, or diffusion approximations."
+      },
+      "reading_caveat": {
+        "zh": "已读正式版正文与附录 A–I，并核对图 1、图 2。方法描述选定轨迹附近的小扰动。正熵率不能单独判定局部失稳，实测网络与随机模型的排序也只是算例中的趋势。未独立复现。",
+        "en": "Read the Version of Record and Appendices A–I and checked Figs. 1 and 2. The framework describes small perturbations along a chosen trajectory. Positive entropy rate alone does not diagnose local instability, and the ordering across network ensembles is a tendency in the examples. No independent reproduction."
+      },
+      "source_run": "reports/runs/2026-11-17-to-18-02",
+      "publication_sha256": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+      "assessment_sha256": "b1c7a6e84441bbb44c1a9fb199055c20a2f935eca1344bccf65957e6880d7497",
+      "input_sha256": "e865c6b82fab4a04ff0c6c0a5628214a53911546b07fcc980e68a3bc4302b435",
+      "evidence_sha256": "828e9cd623a29468c7010e3abfe541287e52ca93937bbf60c4dc8c298dc95eff",
+      "reviewed_at": "2026-11-22T23:42:03.528391+00:00"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -50260,5 +50660,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "e705d9353c34bd966bdec166ef7fdc5203cc066f571c9b37c12f26df1ab6e598"
+  "daily_suggestions_sha256": "f8d9c322b5ea7931586d5d4f3ab995db5f300434832a58166bdc98e74ef32994"
 }
