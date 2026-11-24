@@ -1542,9 +1542,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_en": "Persistence probabilities reveal phase structure in biased q-voter models and its relation to fixed-point behavior.",
-      "note_zh": "用持续概率刻画偏置 q-voter 模型的相结构，并分析其与固定点行为的关系。",
-      "assessment_sha256": "78b77cc78591c5a78764b6b893ec58af7adf5ba5252579a748c3274b61ed7e56"
+      "note_zh": "用平均场与模拟比较两种有偏 q-voter 模型，发现两类意见各自的持久概率相图与固定点结构有关。",
+      "note_en": "Mean-field analysis and simulation link opinion-specific persistence regimes in two biased q-voter models to the structure of their fixed points.",
+      "assessment_sha256": "5639f077426762479cbef05c831c9fb3c139706b1292489d140983af2058b40c"
     },
     "10.1038/s41467-026-77672-0": {
       "categories": [
@@ -1927,9 +1927,9 @@
       "categories": [
         "network_structure"
       ],
-      "note_zh": "在独立源量子网络中用可分测量认证全网非局域性，并量化可提取的设备无关随机性。",
-      "note_en": "Uses separable measurements to certify full nonlocality and device-independent randomness across an independent-source quantum network.",
-      "assessment_sha256": "caaf9b5d32b459cf74c4b67e3f39e1d7a96de8a584832df16a3a50b964e0e84f"
+      "note_zh": "量子网络中的可分测量配合经典前馈可检验完全和最小网络非经典性，也可用于比较设备无关随机性。",
+      "note_en": "Separable measurements with classical feedforward certify full and minimal quantum network nonclassicality and provide a comparison for device-independent randomness.",
+      "assessment_sha256": "ddce06fba651e99a7462f9f85c54879cefb07b63da13e500296d8fbd5f2a03f8"
     },
     "10.1103/8nxh-kpt8": {
       "categories": [
@@ -2244,12 +2244,11 @@
     },
     "10.1103/y1tc-4ms4": {
       "categories": [
-        "network_inference",
-        "network_structure"
+        "network_inference"
       ],
-      "note_zh": "GC-KAN 从多变量时间序列稀疏推断预测父节点与滞后响应；这里的 Granger 关系是预测关系，不等同干预因果。",
-      "note_en": "GC-KAN sparsely infers predictive parents and lag responses from multivariate time series; Granger relations here are predictive, not intervention causal.",
-      "assessment_sha256": "dd7deffb0d79dc6c9e1f2ac76919d8e126758b12e2e713c1afa3d60a25558949"
+      "note_zh": "用稀疏 Kolmogorov–Arnold 模型从多变量时间序列筛选 Granger 预测父节点，并检查非线性响应及其时滞。",
+      "note_en": "Sparse Kolmogorov–Arnold models infer Granger-predictive parents in multivariate series and expose nonlinear responses at specific lags.",
+      "assessment_sha256": "366fbd1edcb7c25cecd45412ef394976c16f0c4f94be632f4a1f652401bd14a5"
     },
     "10.1073/pnas.2610672123": {
       "categories": [
@@ -2411,9 +2410,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_zh": "在三角形、四面体与 kagome 网络上，排斥相位耦合将神经时序挫折关联到简并能景和亚稳弛豫。",
-      "note_en": "Repulsive phase coupling on triangle, tetrahedral and kagome geometries links frustrated neural timing to degenerate energy landscapes and metastable relaxation.",
-      "assessment_sha256": "55afca5515b95f6a96ea1aca05bb7eed693bf47ee70cc4451342009e86733615"
+      "note_zh": "三角形、四面体和 kagome 晶格的相位约束不同，排斥耦合使局部时序有序可以与弱全局同步共存。",
+      "note_en": "Repulsive phase coupling in triangles, tetrahedra and kagome networks shows how frustrated local timing order can coexist with weak global coherence.",
+      "assessment_sha256": "26daf66e4a1ae8773011b85925492132f5df098977e659c86ee68cfab84d8e4b"
     },
     "10.1063/5.0344204": {
       "categories": [
@@ -3173,6 +3172,57 @@
       "note_zh": "地球系统模拟对比三种浮游生物食物网表示，发现较复杂的营养相互作用会放大模型中变暖导致的海洋碳输出减弱。",
       "note_en": "Earth-system simulations compare three plankton food-web representations and find a stronger warming-driven decline in ocean carbon export with greater modeled trophic complexity.",
       "assessment_sha256": "e45499a83e32243af852bf0fe2f30264f2d87ce495c77eb1b29148a8f13e74b0"
+    },
+    "10.1063/5.0361281": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "离散时间的全局耦合相振子出现与连续模型不同的同步阈值，阈值以上还可出现周期或混沌集体态。",
+      "note_en": "The discrete-time globally coupled oscillator model has an onset threshold distinct from its continuous-time counterpart and admits periodic and chaotic collective states.",
+      "assessment_sha256": "1763227f677e84fbc4958b4168800e4dd4b8906e31f389243e1477a2786cc62e"
+    },
+    "10.1073/pnas.2616213123": {
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "note_zh": "从三维 OCT 血管影像重建视网膜毛细血管图。早期糖尿病视网膜病变中两个相邻层间的连接呈反向变化。",
+      "note_en": "A three-dimensional retinal capillary graph reconstructed from OCT angiography reveals opposing connectivity changes across two adjacent layer interfaces in early diabetic retinopathy.",
+      "assessment_sha256": "26c024111b1d736255743dd20551d3d53556e3e3ab960bfd56f0c90b82c4d443"
+    },
+    "10.1073/pnas.2617434123": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "相位编码使模型神经群体能复制时空模式，晶格度决定局部竞争强度，并改变组合搜索中的探索与利用。",
+      "note_en": "Phase coding enables pattern replication in modeled neural populations. Lattice degree changes local competition and the exploration–exploitation trade-off in benchmark search tasks.",
+      "assessment_sha256": "d2abfde16f99da78fdee36acbe12db800170e48c5a30bf02d402a31c357ce5f3"
+    },
+    "10.1103/sd8g-h7p7": {
+      "categories": [
+        "network_structure",
+        "network_resilience"
+      ],
+      "note_zh": "比较四种空间建网方法，发现超均匀点阵生成的网络在有效电阻、随机游走混合和关键桥边上表现出依赖建网方式的差异。",
+      "note_en": "Across four spatial graph constructions, hyperuniform point patterns yield construction-dependent differences in effective resistance, random-walk mixing and the prevalence of critical bridges.",
+      "assessment_sha256": "5240c868ec136d917ec87d4a1cf2c21ec750ef4ebd65397653e2c27ea187c170"
+    },
+    "10.1103/rxqt-2psr": {
+      "categories": [
+        "network_collective",
+        "network_spreading"
+      ],
+      "note_zh": "在驱动无序自旋网络中，初态与最慢集体模态的重叠影响弛豫轨迹交叉出现的时刻。",
+      "note_en": "In a driven disordered spin network, the initial state’s overlap with a slow collective mode helps determine when relaxation trajectories cross.",
+      "assessment_sha256": "f110cfefc716c1389a6f5b556127799c92dc49129567e78d808e449867ef0f03"
+    },
+    "10.1103/wvr6-m58z": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "数值对照一维耦合相振子，确定噪声、无序与耦合非奇性如何移动有限系统中 Edwards–Wilkinson 到 KPZ 的标度交叉。",
+      "note_en": "Numerics map how noise, disorder and the nonodd part of coupling shift Edwards–Wilkinson to KPZ scaling crossovers in finite one-dimensional oscillator arrays.",
+      "assessment_sha256": "7efa7040e9fe3ade08e03b9d6fb2bbff5122c4c2a4bcb5fc45abdd32bf8564c8"
     }
   }
 }

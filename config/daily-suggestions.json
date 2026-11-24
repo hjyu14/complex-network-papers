@@ -3722,6 +3722,84 @@
       "input_sha256": "e865c6b82fab4a04ff0c6c0a5628214a53911546b07fcc980e68a3bc4302b435",
       "evidence_sha256": "828e9cd623a29468c7010e3abfe541287e52ca93937bbf60c4dc8c298dc95eff",
       "reviewed_at": "2026-11-22T23:42:03.528391+00:00"
+    },
+    {
+      "doi": "10.1073/pnas.2616213123",
+      "recommended_on": "2026-11-24",
+      "selection": "new_in_update",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2616213123",
+        "title": "Human retinal capillary network analysis using vascular interconnectivity optical coherence tomography angiography",
+        "sha256": "256c04409835eb982b64c9008d40d8fb1e5a0c9418b12af8cb919e8d16b6eb4c",
+        "version": "PNAS Version of Record, 123(48), e2616213123, first published online November 23, 2026",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2616213123",
+        "source_kind": "publisher_fulltext",
+        "pages": 12,
+        "reviewed_at": "2026-11-24T00:01:41.210774+00:00",
+        "read_scope": "Read the 12-page publisher Version of Record, including the introduction, results, discussion, methods and references. Visually checked Figures 1–8 and Table 1. The separate supporting-information PDF and movies were not read. No independent reproduction."
+      },
+      "question": {
+        "zh": "把三维影像重建为网络后，能看到哪些二维血管密度遗漏的层间连接变化？",
+        "en": "What changes in cross-layer connectivity become visible after reconstructing a graph from 3D imaging?"
+      },
+      "reading_comment": {
+        "zh": [
+          "先看图 3 和图 8。作者将分叉点和血管段映射为节点与边，从高置信血管图出发，利用连续性约束补接断端。建图假设决定了随后哪些连接可被检验。",
+          "再用图 4 对照表 1。轻度病变组中，浅层到中间层的连接减少，中间层到深层的连接增加，两类合计的差异不显著。图 5 将四节点模体数按总血管长度归一，考察留下的网络怎样组织。"
+        ],
+        "en": [
+          "Start with Figs. 3 and 8. The authors map bifurcations to nodes and vessel segments to edges. They reconnect endpoints in a high-confidence vascular map using a continuity constraint. That construction affects which connections can be tested.",
+          "Compare Fig. 4 with Table 1. In mild disease, superficial-to-intermediate links were fewer and intermediate-to-deep links were more numerous. The difference in their combined count was not significant. Figure 5 normalizes four-node motif counts by total vessel length to examine the remaining network."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把重建假设写进方法",
+            "en": "Make the reconstruction assumptions explicit"
+          },
+          "text": {
+            "zh": "图 8 展示如何以高置信掩膜为起点，用更宽松的掩膜补接血管。可借鉴这种先控制误检、再显式处理断连的思路，但补接仍依赖影像质量和连续性假设。",
+            "en": "Figure 8 starts from a selective mask and uses less selective masks to extend vessel endpoints. This makes the false-positive versus missing-edge trade-off explicit. Reconstruction still depends on image quality and the continuity assumption."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分层连接揭示抵消效应",
+            "en": "Compare the interfaces separately"
+          },
+          "text": {
+            "zh": "图 4 的两类层间连接反向变化，总数可能掩盖网络重组。对其他分层网络，可先按端点所属层分组，再比较总量和组别结果。",
+            "en": "The two interfaces change in opposite directions in Fig. 4, so pooled counts can obscure reorganization. Classify edges by the layers of both endpoints before comparing pooled and interface-specific outcomes."
+          }
+        },
+        {
+          "heading": {
+            "zh": "同时考察结构与血流代理量",
+            "en": "Pair graph structure with a flow proxy"
+          },
+          "text": {
+            "zh": "图 5 对模体数做血管长度归一，图 7 则把血流速度代理量对应到各血管段。两个例子说明怎样在同一张图上分别描述局部拓扑与功能。",
+            "en": "Figure 5 normalizes motif counts by vessel length. Figure 7 aligns a flow-speed proxy with individual segments. Together they illustrate how to characterize local organization and function on the same graph."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究空间网络、血管网络重建或结构与功能关联的读者。",
+        "en": "Readers studying spatial networks, vascular graph reconstruction, or structure–function relationships."
+      },
+      "reading_caveat": {
+        "zh": "实际阅读 PNAS 正式版 12 页并核对图 1–8 与表 1。病变样本较少，分析使用黄斑区域无向图，流速为代理量。研究未验证纵向预测，未独立复现，未读独立的补充材料与影片。",
+        "en": "Read all 12 pages of the PNAS Version of Record and checked Figs. 1–8 and Table 1. Pathology cohorts were modest, the macular graph was undirected, and flow speed was a proxy. Longitudinal prediction was not established. No independent reproduction. The separate supplement and movies were not read."
+      },
+      "source_run": "reports/runs/2026-11-23-to-24-01",
+      "publication_sha256": "a83e7377a514dfc35e2e17408f7fd1d77918016260e4888d976478eca53b2409",
+      "assessment_sha256": "26c024111b1d736255743dd20551d3d53556e3e3ab960bfd56f0c90b82c4d443",
+      "input_sha256": "86b336aa6b041855caa99dca0e3d10aa7b0ce0a630572ea5c5206a364b77d273",
+      "evidence_sha256": "39efaa8703d3f1d0fb453808c2b62d7a20ade40efcee50afd61d51981f8c1f3c",
+      "reviewed_at": "2026-11-24T00:01:41.210774+00:00"
     }
   ],
   "revisions": [

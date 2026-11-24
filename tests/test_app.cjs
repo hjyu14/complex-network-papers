@@ -711,8 +711,18 @@ test('carryover preserves earlier transitions and binds the latest update', () =
   assert.equal(comment.scope_authority,'assistant_online_short_comment_screening');
   assert.ok(comment.review_evidence_sha256);
   assert.equal(comment.published_date,'2026-11-06');
-  assert.deepEqual(data.latest_update.aps_accepted_awaiting_publication_dois,['10.1103/mv7d-n229']);
-  assert.ok(!data.papers.some(p=>p.doi==='10.1103/mv7d-n229'));
+  const deferred = new Set();
+  const assessed = new Set();
+  for (const input of data.run_inputs) {
+    const events = reportText(`${input.run}/screening-log.jsonl`).trim().split('\n').map(JSON.parse);
+    for (const { kind, data: record } of events) {
+      if (kind === 'aps_accepted_awaiting_publication') deferred.add(record.doi);
+    }
+    for (const doi of releaseDecisions(input).keys()) assessed.add(doi);
+  }
+  const awaitingPublication = [...deferred].filter(doi => !assessed.has(doi)).sort();
+  assert.deepEqual(data.latest_update.aps_accepted_awaiting_publication_dois ?? [], awaitingPublication);
+  for (const doi of awaitingPublication) assert.ok(!data.papers.some(p => p.doi === doi));
   const relatedTransition=data.papers.find(p=>p.doi==='10.1103/qnhv-yp69');
   assert.equal(relatedTransition.publication_status,'published');
   assert.equal(relatedTransition.published_date,'2026-11-05');
