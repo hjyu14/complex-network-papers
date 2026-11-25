@@ -1986,9 +1986,9 @@
         "network_structure",
         "network_resilience"
       ],
-      "note_zh": "比较节点删除下的有限尺寸标度和度分布诊断，区分无标度组织不同层次的退化。",
-      "note_en": "Compares finite-size scaling and degree-distribution diagnostics to distinguish levels of scale-free degradation under node removal.",
-      "assessment_sha256": "33e6e6b508668d524e4ce4d0004e216695e01cdf6208f5cd979eb07c644b63f7"
+      "note_zh": "对照有限尺寸标度塌缩与度分布诊断，发现优先移除枢纽时，跨规模标度可先于度分布的无标度外观消失。",
+      "note_en": "Under hub-focused removal, scale collapse across network sizes can fail before the degree distribution visibly loses its scale-free appearance.",
+      "assessment_sha256": "d5f5e919d95b382b0a8353fc586db2605b43ea995d9b88a68bb3d2822cae5c0b"
     },
     "10.1063/5.0357283": {
       "categories": [
@@ -2392,11 +2392,12 @@
     },
     "10.1103/ywrq-rpzh": {
       "categories": [
-        "network_resilience"
+        "network_resilience",
+        "network_spreading"
       ],
-      "note_zh": "以目标扩散时间反求最小新增边权，揭示边重要性与边间结构相关共同决定的最优分配和权重反转。",
-      "note_en": "Time-Weight Matching minimizes added edge weight for a target diffusion time, balancing edge importance and structural correlations and predicting target-dependent weight reversal.",
-      "assessment_sha256": "9e6a347716544060e4ca897b7eca9518c0649c291e1c8626890985190b3a080e"
+      "note_zh": "从目标扩散时间反推最少新增边权，分析单边作用和边间相关如何改变最优分配及边权排序。",
+      "note_en": "An inverse-design framework minimizes the edge weight needed for a target diffusion timescale and explains how edge correlations can reverse the allocation ranking.",
+      "assessment_sha256": "8e93c02d89e658b7942716005f821344bb308d2aec951c83965b02d250c1a3a6"
     },
     "10.1103/hy6f-3l9c": {
       "categories": [
@@ -3223,6 +3224,23 @@
       "note_zh": "数值对照一维耦合相振子，确定噪声、无序与耦合非奇性如何移动有限系统中 Edwards–Wilkinson 到 KPZ 的标度交叉。",
       "note_en": "Numerics map how noise, disorder and the nonodd part of coupling shift Edwards–Wilkinson to KPZ scaling crossovers in finite one-dimensional oscillator arrays.",
       "assessment_sha256": "7efa7040e9fe3ade08e03b9d6fb2bbff5122c4c2a4bcb5fc45abdd32bf8564c8"
+    },
+    "10.1073/pnas.2608506123": {
+      "categories": [
+        "network_spreading",
+        "network_structure"
+      ],
+      "note_zh": "由逐日病房共处记录构建患者时序网络，比较模拟定植风险按居住地和按医院汇总时呈现的不同空间结构。",
+      "note_en": "A patient-level temporal contact network reveals different spatial patterns in simulated colonization risk when aggregated by residence or by hospital.",
+      "assessment_sha256": "116ac0576c8adc4b1578a7e4e191c6cf4e24eb3ade8c255d4027776ec7fc1821"
+    },
+    "10.1103/bmyv-fbrj": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_zh": "用动力学平均场理论分析神经状态与突触权重共演的 Hopfield 网络，揭示适度可塑性改善记忆检索、过强时可能固化受损线索。",
+      "note_en": "A dynamical mean-field analysis of a plastic Hopfield network links moderate plasticity to better retrieval and excessive plasticity to imprinting a degraded cue.",
+      "assessment_sha256": "539d8954845a8e7c9c8f312d0854fdf5760f14a56c615b17bf5861b69f1ac1b5"
     }
   }
 }

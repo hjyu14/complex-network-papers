@@ -3800,6 +3800,84 @@
       "input_sha256": "86b336aa6b041855caa99dca0e3d10aa7b0ce0a630572ea5c5206a364b77d273",
       "evidence_sha256": "39efaa8703d3f1d0fb453808c2b62d7a20ade40efcee50afd61d51981f8c1f3c",
       "reviewed_at": "2026-11-24T00:01:41.210774+00:00"
+    },
+    {
+      "question": {
+        "zh": "用逐日病房共处记录建图后，按居住地与按就医医院汇总，会得到怎样不同的风险分布？",
+        "en": "How do risk patterns differ when the same patient trajectories are summarized by residence or by hospital of care?"
+      },
+      "reading_comment": {
+        "zh": [
+          "先看建图部分。论文以患者为节点，用同一病房的过夜共处记录构造有时间戳的边。共处只是接触机会的代理量，读结果时要保留这一层假设。",
+          "再对照图 1 和图 3。按居住地汇总的模拟风险呈现较明显的空间聚集，按医院汇总的空间聚集较弱。把两张图放在一起读，能看出同一批就医轨迹怎样随统计单位的变化呈现不同结构。"
+        ],
+        "en": [
+          "Start with network construction. Patients are nodes and overnight ward colocation is represented by a time-stamped edge. Colocation is a proxy for an opportunity for contact, which matters when interpreting the estimates.",
+          "Compare Figs. 1 and 3. The simulated risk clustered more strongly when summarized by residence than when summarized by hospital. The contrast shows how the same patient trajectories can yield different spatial patterns at different levels of aggregation."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "从数据记录到网络边",
+            "en": "Trace an edge back to its source"
+          },
+          "text": {
+            "zh": "作者交代了住院记录能观测的时间粒度和共处范围。可借鉴这种写法，在建图时就说明哪些接触能被数据支持、哪些只能作为模型假设。",
+            "en": "The construction makes the observation timescale and the meaning of colocation explicit. It is a useful example of documenting which interactions the data can support and where modeling assumptions begin."
+          }
+        },
+        {
+          "heading": {
+            "zh": "把汇总单位当作分析选择",
+            "en": "Treat the unit of aggregation as an analytical choice"
+          },
+          "text": {
+            "zh": "居住地和医院对应两种归属关系。分别呈现它们有助于看清风险分布的含义，也提醒读者不要把居住地的空间聚集解释成社区传播证据。",
+            "en": "Residence and hospital of care represent different ways of attributing risk. Reporting both clarifies what each pattern describes. Residential clustering does not establish community transmission."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分开报告校准与一致性检查",
+            "en": "Separate calibration from consistency checks"
+          },
+          "text": {
+            "zh": "图 2 的临床组比较涉及参与校准的监测数据。图 3C 改看单院是否有过报告，是不同层次的经验一致性检查。二者都应对应各自实际检验的问题。",
+            "en": "The clinical-group comparison in Fig. 2 uses surveillance information involved in calibration. Fig. 3C checks a different outcome at hospital level. The distinction helps readers assess exactly what each comparison supports."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究时序接触网络、医疗系统网络或多尺度网络汇总的读者。",
+        "en": "Readers working on temporal contact networks, healthcare systems, or aggregation across network scales."
+      },
+      "reading_caveat": {
+        "zh": "实际阅读 PNAS 正式版 12 页并目视核对图 1–4。过夜病房共处为接触代理，数据限于法国本土急性住院路径，风险来自模拟。未审读独立补充文件，未独立复现。",
+        "en": "Read the 12-page PNAS Version of Record and visually checked Figs. 1–4. Overnight ward colocation is a contact proxy, the data are limited to metropolitan French acute inpatient care, and the risk estimates are simulated. The separate supplement was not reviewed. No independent reproduction."
+      },
+      "doi": "10.1073/pnas.2608506123",
+      "recommended_on": "2026-11-25",
+      "selection": "new_in_update",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-25T02:18:21.814539+00:00",
+      "fulltext_review": {
+        "doi": "10.1073/pnas.2608506123",
+        "title": "Evidence for patterns of colonization risk in the nationwide hospitalized patient network in France",
+        "version": "PNAS Version of Record, 123(48), e2608506123, published online 2026-11-24",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.2608506123",
+        "source_kind": "user_provided_pdf",
+        "pages": 12,
+        "sha256": "fc626f68871ad6fdcf6cd0498198ea03601ae4323e6671aeae0e6a47d1c12ae6",
+        "reviewed_at": "2026-11-25T02:18:21.814539+00:00",
+        "read_scope": "Read the 12-page Version of Record, including introduction, results, discussion, methods and data availability. Visually checked Figs. 1–4. Separate supporting information was not read and analyses were not independently reproduced."
+      },
+      "source_run": "reports/runs/2026-11-24-to-25-01",
+      "publication_sha256": "d7db8a9eea094c97d2875916127d35d9428c8772b2114174d66c25472d564462",
+      "assessment_sha256": "116ac0576c8adc4b1578a7e4e191c6cf4e24eb3ade8c255d4027776ec7fc1821",
+      "input_sha256": "3036231812588db70c36b0f3c1b00ac1da0e98d2c7e5f346de36ff2e65f7ef9c",
+      "evidence_sha256": "784bcc8886bb5b304a13a5055410b19e506df6e3ab9f7bf09d6f9e712e9ad2d5"
     }
   ],
   "revisions": [
