@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-25T02:37:34.421283+00:00",
+  "generated_at": "2026-11-26T01:30:35.263393+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-25",
-  "window_days": 86,
+  "window_end": "2026-11-26",
+  "window_days": 87,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "f79af6577b52114d5ec281329cae3e0582a93ad1760f0448ab649e44ef5cb2ce",
-  "author_metadata_sha256": "28cbcb807dfc981edc0af5d17cc756a434fe594bf0d01f7a7ef64c5042b1a8e6",
+  "reading_notes_sha256": "d358ac2b057c7bef80b32184c24741dc70999f29656ca40a9beb3989ebb6c30f",
+  "author_metadata_sha256": "082bb647c86e61ae27f6a39c0920cffbabd2bb9a58ba0e5561e9c98f4d3345fa",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3816,9 +3816,97 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-10-28-nature-backfill-02",
+      "config_sha256": "769c821d26e1e4b361c654905e868d1106862df93633f0b609eff5e7921414be",
+      "window_start": "2026-10-28",
+      "window_end": "2026-10-28",
+      "rule_sha256": "8b0583a0abe6a3bdb2aac85bdee85efbab34c5901967994581fbe679d5b9970d",
+      "screening_log_sha256": "f22f33272b555a37785e97578a0c3a50641b423eded544368aa94b21857e4c98",
+      "candidate_sha256": "2aef6a94bff9a96f076e3d2d3b19897e3691120bbfcdfa71371277f853f53800",
+      "author_metadata_sha256": "8f72cef54ae5783c67a767df0d4934d3e1868a249de7ffa27e48a2b8b24e8c3f",
+      "run_manifest_sha256": "c31d135095095543625dc63060843b721aa99bef203c9b80e5447093367876a0",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-10-28-nature-backfill-02",
+          "files": {
+            "candidates.json": "2aef6a94bff9a96f076e3d2d3b19897e3691120bbfcdfa71371277f853f53800",
+            "coverage.json": "edbb64a98f09e33c67a4742db68aa01bbe45d5f8398f408dfed2436d8a358280",
+            "collection-log.jsonl": "d06a048a090c9c274982529a8bd4b4a1d04f64eb78aa505e275967f909b6b1b5",
+            "screening-log.jsonl": "7edbdfd8abdc11038770e44d8d68632ecf3c538b568d8141696e28d1ed6d6f8e",
+            "inputs/manifest.json": "32b62ef081ebb6ee53e444e63b5d87c1c9fa53976bb98c753a16d5fa5106253f",
+            "inputs/sources.json": "e42581fd9646d840adfd46c88e2782bcf1015b82bdc8c4030d2302e3e9918278",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "2aef6a94bff9a96f076e3d2d3b19897e3691120bbfcdfa71371277f853f53800",
+          "rule_sha256": "8b0583a0abe6a3bdb2aac85bdee85efbab34c5901967994581fbe679d5b9970d",
+          "screening_log_sha256": "f22f33272b555a37785e97578a0c3a50641b423eded544368aa94b21857e4c98"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "8f72cef54ae5783c67a767df0d4934d3e1868a249de7ffa27e48a2b8b24e8c3f",
+          "audit": {
+            "path": "reports/runs/2026-10-28-nature-backfill-02/screening-log.jsonl",
+            "sha256": "7edbdfd8abdc11038770e44d8d68632ecf3c538b568d8141696e28d1ed6d6f8e"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "29823d7f24310fdcf6dd30ea3e1ec92d2f37ddf6639bb896a879a1a4a606970d"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": true
+    },
+    {
+      "run": "reports/runs/2026-11-25-to-26-01",
+      "config_sha256": "8cec33b1296f8e6695af6ed48d76293288980d2e552d94b4d8432df25db953ca",
+      "window_start": "2026-11-25",
+      "window_end": "2026-11-26",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "screening_log_sha256": "6c7ee3322919877ab4ae328d7557039e45d73c3bcfe24c371211ad7f71301706",
+      "candidate_sha256": "4c8ddae6370492bbadad3e8b735c25745850d2a471c5fb57f9a88684348ea34c",
+      "author_metadata_sha256": "cbf20098f872fb4c30dd953aba57f0118a22351b95d17f30a8a1a81fd092111d",
+      "run_manifest_sha256": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-25-to-26-01",
+          "files": {
+            "candidates.json": "4c8ddae6370492bbadad3e8b735c25745850d2a471c5fb57f9a88684348ea34c",
+            "coverage.json": "ca17a73f57a2f7766e66b972385d8954b58a72d6df9a2590cec236583afdfc47",
+            "collection-log.jsonl": "40df681649c3cadc0a37ca990ce779202a100a89783bc8407ebcbda8fd2bca07",
+            "screening-log.jsonl": "4bb924bca0bf580ce2006d8e71b618cd07e6adeae363c3218d283bfc2541b4d3",
+            "inputs/manifest.json": "fec727b0c51f06575bc7a0c5b61ecd21b2c19efcbcce6162f0c103b6908f27c9",
+            "inputs/sources.json": "238bf86862b5cb9cafc190853cfda962ea80c77a435ffd95937168d4b8db0eb8",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "4c8ddae6370492bbadad3e8b735c25745850d2a471c5fb57f9a88684348ea34c",
+          "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+          "screening_log_sha256": "6c7ee3322919877ab4ae328d7557039e45d73c3bcfe24c371211ad7f71301706"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "cbf20098f872fb4c30dd953aba57f0118a22351b95d17f30a8a1a81fd092111d",
+          "audit": {
+            "path": "reports/runs/2026-11-25-to-26-01/screening-log.jsonl",
+            "sha256": "4bb924bca0bf580ce2006d8e71b618cd07e6adeae363c3218d283bfc2541b4d3"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "defad1c6fd48e3f961e990c7bb02f9c238d6d5f23a3a08c396d66aa0c867eb52"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 380,
+  "author_available_count": 386,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -3968,8 +4056,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 1093,
-      "publisher_verified_inventory_count": 1093,
+      "candidate_count": 1146,
+      "publisher_verified_inventory_count": 1146,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4213,6 +4301,15 @@
           "journal": "Nature",
           "candidate_count": 16,
           "publisher_verified_inventory_count": 16,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-10-28",
+          "window_end": "2026-10-28",
+          "journal": "Nature",
+          "candidate_count": 51,
+          "publisher_verified_inventory_count": 51,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         },
@@ -4490,6 +4587,15 @@
           "journal": "Nature",
           "candidate_count": 19,
           "publisher_verified_inventory_count": 19,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "Nature",
+          "candidate_count": 50,
+          "publisher_verified_inventory_count": 50,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -4996,13 +5102,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "Science",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2384,
-      "publisher_verified_inventory_count": 2376,
+      "candidate_count": 2416,
+      "publisher_verified_inventory_count": 2408,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5489,6 +5604,15 @@
           "journal": "NC",
           "candidate_count": 27,
           "publisher_verified_inventory_count": 27,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "NC",
+          "candidate_count": 32,
+          "publisher_verified_inventory_count": 32,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -5981,6 +6105,15 @@
         {
           "window_start": "2026-11-24",
           "window_end": "2026-11-25",
+          "journal": "NMI",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -6481,13 +6614,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRX",
-      "candidate_count": 117,
-      "publisher_verified_inventory_count": 117,
+      "candidate_count": 122,
+      "publisher_verified_inventory_count": 122,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -6976,13 +7118,22 @@
           "publisher_verified_inventory_count": 4,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "PRX",
+          "candidate_count": 7,
+          "publisher_verified_inventory_count": 7,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRL",
-      "candidate_count": 954,
-      "publisher_verified_inventory_count": 954,
+      "candidate_count": 968,
+      "publisher_verified_inventory_count": 968,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7471,13 +7622,22 @@
           "publisher_verified_inventory_count": 19,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "PRL",
+          "candidate_count": 34,
+          "publisher_verified_inventory_count": 34,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "SA",
-      "candidate_count": 1037,
-      "publisher_verified_inventory_count": 1037,
+      "candidate_count": 1081,
+      "publisher_verified_inventory_count": 1081,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -7966,13 +8126,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "SA",
+          "candidate_count": 44,
+          "publisher_verified_inventory_count": 44,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "PNAS",
-      "candidate_count": 1212,
-      "publisher_verified_inventory_count": 1212,
+      "candidate_count": 1235,
+      "publisher_verified_inventory_count": 1235,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -8459,6 +8628,15 @@
           "journal": "PNAS",
           "candidate_count": 28,
           "publisher_verified_inventory_count": 28,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "PNAS",
+          "candidate_count": 23,
+          "publisher_verified_inventory_count": 23,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -8956,13 +9134,22 @@
           "publisher_verified_inventory_count": 3,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 498,
-      "publisher_verified_inventory_count": 498,
+      "candidate_count": 501,
+      "publisher_verified_inventory_count": 501,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -9451,13 +9638,22 @@
           "publisher_verified_inventory_count": 11,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "PRResearch",
+          "candidate_count": 11,
+          "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRE",
-      "candidate_count": 673,
-      "publisher_verified_inventory_count": 673,
+      "candidate_count": 686,
+      "publisher_verified_inventory_count": 686,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -9944,6 +10140,15 @@
           "journal": "PRE",
           "candidate_count": 13,
           "publisher_verified_inventory_count": 13,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "PRE",
+          "candidate_count": 23,
+          "publisher_verified_inventory_count": 23,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -10441,13 +10646,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NP",
-      "candidate_count": 100,
-      "publisher_verified_inventory_count": 100,
+      "candidate_count": 102,
+      "publisher_verified_inventory_count": 102,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -10891,34 +11105,52 @@
           "publisher_verified_inventory_count": 1,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-25",
+          "window_end": "2026-11-26",
+          "journal": "NP",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 8922,
+  "candidate_count": 9111,
   "screening_counts": {
-    "excluded": 8540,
-    "core": 331,
-    "transferable_application": 49,
+    "excluded": 8723,
+    "core": 336,
+    "transferable_application": 50,
     "aps_accepted_awaiting_publication": 2,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 380
+    "included": 386
   },
-  "published_count": 325,
-  "accepted_count": 55,
+  "published_count": 334,
+  "accepted_count": 52,
   "latest_update": {
-    "run": "reports/runs/2026-11-24-to-25-01",
-    "reviewed_at": "2026-11-25T02:20:43.868352+00:00",
-    "newly_included_count": 2,
+    "run": "reports/runs/2026-11-25-to-26-01",
+    "reviewed_at": "2026-11-26T00:33:30.683957+00:00",
+    "newly_included_count": 6,
     "newly_included_dois": [
-      "10.1073/pnas.2608506123",
-      "10.1103/bmyv-fbrj"
+      "10.1103/5cv4-f1kx",
+      "10.1103/dhmz-wlwh",
+      "10.1103/pjtm-wk9m",
+      "10.1103/z6d3-mb2d",
+      "10.1126/sciadv.aee6574",
+      "10.1126/sciadv.aeh9321"
     ],
-    "accepted_to_published_count": 2,
+    "accepted_to_published_count": 7,
     "accepted_to_published_dois": [
-      "10.1103/cknx-xgnj",
-      "10.1103/ywrq-rpzh"
+      "10.1103/9mgt-48mf",
+      "10.1103/dgxp-yq1g",
+      "10.1103/dm26-5l3l",
+      "10.1103/html-hr8z",
+      "10.1103/r397-cxtl",
+      "10.1103/spjq-78dd",
+      "10.1103/ydgr-vs2w"
     ],
     "aps_accepted_awaiting_publication_dois": [
       "10.1103/mv7d-n229",
@@ -10933,6 +11165,1151 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1126/sciadv.aeh9321",
+      "url": "https://doi.org/10.1126/sciadv.aeh9321",
+      "title": "Errors in social network knowledge predict how ties evolve in the future",
+      "authors": [
+        "Alice Xia",
+        "Yi Yang Teoh",
+        "Apoorva Bhandari",
+        "Oriel FeldmanHall"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "f27a3f6a5e6a0eab4db40eb938a849d2147ab7d10848c4d0d43cc6324aa4c96f",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh9321",
+      "author_retrieved_at": "2026-11-26T00:26:28.951753+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "publisher.directory_item_date",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aeh9321",
+          "https://www.science.org/doi/10.1126/sciadv.aeh9321",
+          "https://www.science.org/toc/sciadv/current"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract reports original longitudinal tie measurements and a computational comparison of mechanisms for predicting network evolution.",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aeh9321",
+          "https://www.science.org/doi/10.1126/sciadv.aeh9321",
+          "https://www.science.org/toc/sciadv/current"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "In a longitudinal student cohort, errors about current friendships carry information about which ties appear or disappear later.",
+      "note_zh": "在纵向追踪的学生社交网络中，对当下友谊的误判含有未来连边形成与消失的信息。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b9db83e27143f6369471251451754650d633b369a9e60a49cbd5e06ae29b96b6",
+      "input_sha256": "aea2b8ca5a6b39c9d838b0d38321234d71e6360ba197453212ef3e0faf27aa59",
+      "material_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": "SA",
+      "evidence": [
+        "In a longitudinal social network, mistaken tie judgments anticipate subsequent formation or loss. Prediction quality is also associated with changes in centrality."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh9321",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aeh9321",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1126/sciadv.aee6574",
+      "url": "https://doi.org/10.1126/sciadv.aee6574",
+      "title": "Evolution of trans-regulatory architecture and gene expression dosage compensation after genome duplication",
+      "authors": [
+        "Célian Diblasi",
+        "Domniki Manousi",
+        "David Hazlerigg",
+        "Jonas Paulsen",
+        "Fabiana Patalano",
+        "Tomasz Podgorniak",
+        "Lars Grønvold",
+        "Nicola Jane Barson",
+        "Simen Rød Sandve",
+        "Marie Saitou"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3aebd6c1c5b7f3dfc81bfb893037ece028f4589fca2d40a75d5fc628c51634de",
+      "author_source_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee6574",
+      "author_retrieved_at": "2026-11-26T00:26:12.774381+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Science Advances",
+      "journal_short": "SA",
+      "issns": [
+        "2375-2548"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "publisher.directory_item_date",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aee6574",
+          "https://www.science.org/doi/10.1126/sciadv.aee6574",
+          "https://www.science.org/toc/sciadv/current"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": null,
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The explicit abstract reports original empirical tests of changes in the arrangement and retention of regulatory edges after genome duplication.",
+        "sources": [
+          "https://api.crossref.org/works/10.1126%2Fsciadv.aee6574",
+          "https://www.science.org/doi/10.1126/sciadv.aee6574",
+          "https://www.science.org/toc/sciadv/current"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "134f195f6926968868ee296e91b6b1c563acd42136ae46fd1c4fe5a1626a98c3",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Genome duplication offers a natural comparison of how regulatory connections are retained or reorganized during evolution.",
+      "note_zh": "利用基因组加倍这一自然演化事件，比较调控联系如何保留或重组。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "be1a57d44f83bddbf557d8967e9ecc833a0728d93c6262f32bd6a18c847c93ee",
+      "input_sha256": "bb5ab5cd06ae32aef7a98161078aa1c89d43926e95c4a6cd5f794e53e29245b6",
+      "material_sha256": "134f195f6926968868ee296e91b6b1c563acd42136ae46fd1c4fe5a1626a98c3",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "134f195f6926968868ee296e91b6b1c563acd42136ae46fd1c4fe5a1626a98c3",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": "SA",
+      "evidence": [
+        "The authors use regulatory associations and spatial contacts to identify selectively retained connections and shared dosage compensation after genome duplication."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee6574",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fsciadv.aee6574",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/z6d3-mb2d",
+      "url": "https://journals.aps.org/prl/accepted/10.1103/z6d3-mb2d",
+      "title": "Percolating multifractal domains at polymorphic phase boundary",
+      "authors": [
+        "Yuan-Jinsheng Liu",
+        "Jiahui Zhai",
+        "Xu Tian",
+        "Shi Liu"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4c7c97a85a4d83504e843eac54aecd542658597c78f446ac16dae171600225c6",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fz6d3-mb2d",
+      "author_retrieved_at": "2026-11-26T00:26:30.721451+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-11-25",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/z6d3-mb2d",
+          "https://journals.aps.org/prl/accepted?page=1"
+        ],
+        "accepted_date": "2026-11-25"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-25",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The accepted abstract defines an original polar-domain connectivity analysis and compares structural descriptors with responses over material phase regimes.",
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/z6d3-mb2d",
+          "https://journals.aps.org/prl/accepted?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "754ecfa35a81b7546b733fd618af4477abcb8c55f0bc87d3bdc0fb36ac577d4a",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "scope_class": "transferable_application",
+      "note_en": "Simulations link the connectivity of a spanning polar-domain backbone and its fractal organization to reversible material strain.",
+      "note_zh": "模拟把贯通极化畴骨架的连通性和分形组织，与材料的可逆应变联系起来。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "b3ce401cf33fd7e2456908e8354d017e25d83e9bea6178bfc86efe46a21d425c",
+      "input_sha256": "69eeea37a52aff454a245b38f77d9abe99f36674f07b0e1fb0495ff5ba752155",
+      "material_sha256": "754ecfa35a81b7546b733fd618af4477abcb8c55f0bc87d3bdc0fb36ac577d4a",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "754ecfa35a81b7546b733fd618af4477abcb8c55f0bc87d3bdc0fb36ac577d4a",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": "PRL",
+      "evidence": [
+        "Simulations connect polar-domain network geometry with a peak reversible response at intermediate spanning-domain fraction."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fz6d3-mb2d",
+      "evidence_url": "https://journals.aps.org/prl/accepted/10.1103/z6d3-mb2d",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/ydgr-vs2w",
+      "url": "https://doi.org/10.1103/ydgr-vs2w",
+      "title": "Local Imperfect Feedback Control in Nonequilibrium Biophysical Systems Enabled by Response Constraints",
+      "authors": [
+        "Carlos Floyd",
+        "Aaron R. Dinner",
+        "Suriyanarayanan Vaikuntanathan"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "db145ec992c44afed03e62a0f93211a962ffa66eec22cd7f585cad534ab8aefc",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fydgr-vs2w",
+      "author_retrieved_at": "2026-11-26T00:26:14.643217+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review X",
+      "journal_short": "PRX",
+      "issns": [
+        "2160-3308"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://journals.aps.org/prx/accepted/10.1103/ydgr-vs2w",
+          "https://journals.aps.org/prx/abstract/10.1103/ydgr-vs2w",
+          "https://journals.aps.org/prx/recent?page=1"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-26",
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The explicit abstract describes original graph-based response and feedback results for general transition networks, with examples from biochemical regulation.",
+        "sources": [
+          "https://journals.aps.org/prx/abstract/10.1103/ydgr-vs2w",
+          "https://journals.aps.org/prx/accepted/10.1103/ydgr-vs2w",
+          "https://journals.aps.org/prx/recent?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "78816fd6113f52cf867462df668eda3757d771d716a23c5a17e293a9d2ed523c",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_resilience"
+      ],
+      "scope_class": "core",
+      "note_en": "Graph coherence constrains steady-state responses and supports stable control with imperfect local feedback in Markov networks.",
+      "note_zh": "用图上的相干性约束马尔可夫网络的稳态响应，解释有限局部反馈何以维持稳定控制。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "7baf5357bdbfe7e69ed84d8dd4e7550482746dbe52377f0158c1dca241a3f48a",
+      "input_sha256": "5891219be56ffaabe8d3d9af46d78038d1c714439170edf52a32f422309b7bb4",
+      "material_sha256": "78816fd6113f52cf867462df668eda3757d771d716a23c5a17e293a9d2ed523c",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "78816fd6113f52cf867462df668eda3757d771d716a23c5a17e293a9d2ed523c",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": "PRX",
+      "evidence": [
+        "Formal abstract relates graph coherence to response monotonicity and limited-rate feedback to robust tracking in Markov networks."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fydgr-vs2w",
+      "evidence_url": "https://journals.aps.org/prx/abstract/10.1103/ydgr-vs2w",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-26",
+        "published_date": "2026-11-25",
+        "previous_run": "reports/runs/2026-10-26-to-27-01",
+        "source_run": "reports/runs/2026-11-25-to-26-01",
+        "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f",
+        "previous_assessment_sha256": "d308673d3a50e51837d194ce6fac90c9b28cb6b8d9eef9f9886531fc7239b80d",
+        "assessment_sha256": "7baf5357bdbfe7e69ed84d8dd4e7550482746dbe52377f0158c1dca241a3f48a"
+      }
+    },
+    {
+      "doi": "10.1103/spjq-78dd",
+      "url": "https://doi.org/10.1103/spjq-78dd",
+      "title": "Membrane anisotropy reshapes scale-free correlations and directional mechanical susceptibility in transmembrane proteins",
+      "authors": [
+        "Jian Wang",
+        "Zizheng He",
+        "Xiaoyi Chen",
+        "Guannan Wang",
+        "Qian-Yuan Tang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "d53e5c8878302abfbdb315a27321c443afd7a13f9e40e62d5d1a8981c79c0e9a",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fspjq-78dd",
+      "author_retrieved_at": "2026-11-26T00:26:19.967396+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/spjq-78dd",
+          "https://journals.aps.org/prresearch/abstract/10.1103/spjq-78dd",
+          "https://journals.aps.org/prresearch/recent?page=1"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-11-04",
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract reports an original directional network analysis and compares its prediction across thousands of experimentally grounded structures.",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/spjq-78dd",
+          "https://journals.aps.org/prresearch/accepted/10.1103/spjq-78dd",
+          "https://journals.aps.org/prresearch/recent?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "5d3497b793979f49d5816f9c13d84fa12e9c9d27e799856f5d68e7fb243390ed",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Anisotropy reorganizes directional, scale-free correlations in residue-interaction networks and changes their local mechanical response.",
+      "note_zh": "膜的各向异性改变残基相互作用网络中无标度相关的方向分布及局部力学响应。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "bdaa2f4e74946efc05dbc8fd97adcf06c4881e9996635623a57385275aaf3048",
+      "input_sha256": "1e7ad82e655d2c2dfa726d81172fe3b43bb4d00e04cdf411e9daad8b6b3431c7",
+      "material_sha256": "5d3497b793979f49d5816f9c13d84fa12e9c9d27e799856f5d68e7fb243390ed",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "5d3497b793979f49d5816f9c13d84fa12e9c9d27e799856f5d68e7fb243390ed",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": null,
+      "evidence": [
+        "Formal abstract retains the direction-dependent change in scale-free residue correlations, matching the anisotropic residue-interaction-network basis."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fspjq-78dd",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/spjq-78dd",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-11-04",
+        "published_date": "2026-11-25",
+        "previous_run": "reports/runs/2026-11-04-to-05-01",
+        "source_run": "reports/runs/2026-11-25-to-26-01",
+        "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f",
+        "previous_assessment_sha256": "3999d5e2a6bee7b4f7411e426ec523b32b877479f49108aa52d82bd94acb5d91",
+        "assessment_sha256": "bdaa2f4e74946efc05dbc8fd97adcf06c4881e9996635623a57385275aaf3048"
+      }
+    },
+    {
+      "doi": "10.1103/r397-cxtl",
+      "url": "https://doi.org/10.1103/r397-cxtl",
+      "title": "Embedding stochastic dynamics in latent manifolds of recurrent neural networks",
+      "authors": [
+        "Ramón Nartallo-Kaluarachchi",
+        "Renaud Lambiotte",
+        "Alain Goriely"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "bd232d12441b6f02ce5abd92e0bb43033d47b30083a4c7bbe16469259d2ac270",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fr397-cxtl",
+      "author_retrieved_at": "2026-11-26T00:26:16.516833+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
+          "https://journals.aps.org/prresearch/abstract/10.1103/r397-cxtl",
+          "https://journals.aps.org/prresearch/recent?page=1"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-11-05",
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract describes an original construction for encoding stochastic dynamics in recurrent networks and tests it using several dynamical examples.",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/r397-cxtl",
+          "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
+          "https://journals.aps.org/prresearch/recent?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "ec678011579b667149f5b5028f721670cad00327009104fa861501df34574d75",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Recurrent connectivity embeds low-dimensional stochastic dynamics, with asymmetry helping explain transitions among latent states.",
+      "note_zh": "循环网络的连接结构可嵌入低维随机动力学，连接不对称性有助于解释潜在状态间的转换。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "db1f5ce54a97021d614bcf6106523c7213ca46ed57faf8159952620ab17db0ef",
+      "input_sha256": "7bd78e96fe273d828cf2ae8102afb6f603ed09fe53cbb93dd51c1be428fded45",
+      "material_sha256": "ec678011579b667149f5b5028f721670cad00327009104fa861501df34574d75",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "ec678011579b667149f5b5028f721670cad00327009104fa861501df34574d75",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": null,
+      "evidence": [
+        "Formal abstract confirms low-dimensional SDE embedding in recurrent connectivity and decomposition by asymmetry and time irreversibility."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fr397-cxtl",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/r397-cxtl",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-11-05",
+        "published_date": "2026-11-25",
+        "previous_run": "reports/runs/2026-11-05-to-06-01",
+        "source_run": "reports/runs/2026-11-25-to-26-01",
+        "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f",
+        "previous_assessment_sha256": "af8c6350c734077ed8f77fd04cbe077a50abcd0df940b7965e30f3020f020521",
+        "assessment_sha256": "db1f5ce54a97021d614bcf6106523c7213ca46ed57faf8159952620ab17db0ef"
+      }
+    },
+    {
+      "doi": "10.1103/pjtm-wk9m",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/pjtm-wk9m",
+      "title": "Early warning signals for synchronization transitions from partial observations",
+      "authors": [
+        "Yusuke Kato",
+        "Naoki Masuda"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "a9997fb4fc30aaf8295422d5eac6b2a03bf24ec9cd24016acd0723cc823fac3d",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fpjtm-wk9m",
+      "author_retrieved_at": "2026-11-26T00:26:27.131192+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-25",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/pjtm-wk9m",
+          "https://journals.aps.org/pre/accepted?page=1"
+        ],
+        "accepted_date": "2026-11-25"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-25",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract reports a new comparison of sentinel selection and warning statistics for synchronization in networked oscillators.",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/pjtm-wk9m",
+          "https://journals.aps.org/pre/accepted?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "34b134fefd1f677a4bdf093aa874206146e6133eb46d270c858752e115dc7fee",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "In simulated oscillator networks, phase measurements at selected sentinel nodes provide early warnings of a synchronization transition.",
+      "note_zh": "在模拟振子网络中，利用选定哨兵节点的相位信息预警同步转变。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "d4645e2b1670a3d85cb9e64c7954f5ab69b0cbbfadf146bce7d2ffb72dee124f",
+      "input_sha256": "c499040770db072cd329608012436bef0040f3cd1a3c681db1191c9ad6f96d08",
+      "material_sha256": "34b134fefd1f677a4bdf093aa874206146e6133eb46d270c858752e115dc7fee",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "34b134fefd1f677a4bdf093aa874206146e6133eb46d270c858752e115dc7fee",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": null,
+      "evidence": [
+        "Simulated Kuramoto networks show that dynamical sentinel selection and suitable phase statistics improve early warning under sparse observation."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fpjtm-wk9m",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/pjtm-wk9m",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/html-hr8z",
+      "url": "https://doi.org/10.1103/html-hr8z",
+      "title": "Tunable elasticity and disorder-induced auxeticity in spring networks",
+      "authors": [
+        "Junchao Huang",
+        "Jiaqi Si",
+        "Hua Tong",
+        "Ning Xu"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "eeb82550b1784308328a8eae959dd098bad68cde12d9d1f63b2391a21e562c7c",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fhtml-hr8z",
+      "author_retrieved_at": "2026-11-26T00:26:23.362493+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/html-hr8z",
+          "https://journals.aps.org/pre/abstract/10.1103/html-hr8z",
+          "https://journals.aps.org/pre/recent?page=1"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-11-10",
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract proposes an original connectivity perturbation and tests its consequences across a parameter space of spring networks.",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/html-hr8z",
+          "https://journals.aps.org/pre/accepted/10.1103/html-hr8z",
+          "https://journals.aps.org/pre/recent?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "1eee9ca36ad80e0d37b6fc9d8965699ff562947d51c2426e7734a3547e153aab",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure",
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Changing spring-network connectivity through bond flips links structural disorder to auxetic deformation.",
+      "note_zh": "通过翻转弹簧网络中的连边，解释结构无序如何改变形变并产生负泊松比。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "cb0d551755d163c20128f8e3d65ca1ea8488bb05f08af0054ac711b1a1fdc5c6",
+      "input_sha256": "a929d648e2feffec73cd4d9ca63b7d294c704de35b2b73975bc1968cc1190ab3",
+      "material_sha256": "1eee9ca36ad80e0d37b6fc9d8965699ff562947d51c2426e7734a3547e153aab",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "1eee9ca36ad80e0d37b6fc9d8965699ff562947d51c2426e7734a3547e153aab",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": null,
+      "evidence": [
+        "Formal abstract attributes auxeticity to connectivity changes through bond flipping and the resulting nonaffine deformation of spring networks."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhtml-hr8z",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/html-hr8z",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-11-10",
+        "published_date": "2026-11-25",
+        "previous_run": "reports/runs/2026-11-10-to-11-01",
+        "source_run": "reports/runs/2026-11-25-to-26-01",
+        "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f",
+        "previous_assessment_sha256": "bac62510b1d293afd48ae2a60815d863ce9f5e7563a60d3d40e71a0ff00fa906",
+        "assessment_sha256": "cb0d551755d163c20128f8e3d65ca1ea8488bb05f08af0054ac711b1a1fdc5c6"
+      }
+    },
+    {
+      "doi": "10.1103/dm26-5l3l",
+      "url": "https://doi.org/10.1103/dm26-5l3l",
+      "title": "Facilitated Relaxation Overrides Energetic Pathways in a Multiphase Square-Kagome Artificial Spin Ice",
+      "authors": [
+        "Wen-Cheng Yue",
+        "Zixiong Yuan",
+        "Peiyuan Huang",
+        "Ziao Wang",
+        "Hangyu Liu",
+        "Tianyu Li",
+        "Nuo-Zhou Yang",
+        "Jingyue Gao",
+        "Chen Ku",
+        "Shuo Song",
+        "Jiyao Shang",
+        "Yang-Yang Lyu",
+        "Yihuang Xiong",
+        "Xuecou Tu",
+        "Liang He",
+        "Xun Cao",
+        "Ying Dong",
+        "Huabing Wang",
+        "Peiheng Wu",
+        "Cristiano Nisoli",
+        "Yong-Lei Wang"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "39878540386aeffe06978f0c15b1576b0a6ef65a7e5493385ad4c3f1410247cc",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fdm26-5l3l",
+      "author_retrieved_at": "2026-11-26T00:26:25.341862+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l",
+          "https://journals.aps.org/prl/abstract/10.1103/dm26-5l3l",
+          "https://journals.aps.org/prl/recent?page=1"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-11-09",
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract reports original experiments and simulation tests of how accessibility in a state transition network organizes relaxation.",
+        "sources": [
+          "https://journals.aps.org/prl/abstract/10.1103/dm26-5l3l",
+          "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l",
+          "https://journals.aps.org/prl/recent?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "b86071d5451743d4258205227ddd5a801320d4534420f0a9a68c5ddda52102dd",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Missing connections between accessible domain-wall states explain kinetic isolation despite favorable energies in artificial spin ice.",
+      "note_zh": "人工自旋冰中，畴壁状态之间缺少可达转移，解释了能量上有利的通道为何仍无法完成弛豫。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "a6b2169b4c71c787bba531b4cede2e7aea450e008f3cc1f595f584db2f0a36c6",
+      "input_sha256": "5be1c1bdb9293782f6f14f48090797ce762134ddd7e442f62f0c16e4cd6bc76d",
+      "material_sha256": "b86071d5451743d4258205227ddd5a801320d4534420f0a9a68c5ddda52102dd",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "b86071d5451743d4258205227ddd5a801320d4534420f0a9a68c5ddda52102dd",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": "PRL",
+      "evidence": [
+        "Formal abstract attributes kinetic isolation of domain-wall classes to missing facilitators that would connect the accessible transitions."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fdm26-5l3l",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/dm26-5l3l",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-11-09",
+        "published_date": "2026-11-25",
+        "previous_run": "reports/runs/2026-11-09-to-10-02",
+        "source_run": "reports/runs/2026-11-25-to-26-01",
+        "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f",
+        "previous_assessment_sha256": "34dd188cc11ffee69bfcf33d660a1f4835242b657fdbb2f129de24ece285ab93",
+        "assessment_sha256": "a6b2169b4c71c787bba531b4cede2e7aea450e008f3cc1f595f584db2f0a36c6"
+      }
+    },
+    {
+      "doi": "10.1103/dhmz-wlwh",
+      "url": "https://journals.aps.org/prl/accepted/10.1103/dhmz-wlwh",
+      "title": "Cycle affinity and winding localize eigenvalues of Markov generators",
+      "authors": [
+        "Artemy Kolchinsky",
+        "Naruo Ohga",
+        "Sosuke Ito"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "6e337dd1747773b213addd31e8534de45e68ee087afe54bfe080797c275a1a72",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fdhmz-wlwh",
+      "author_retrieved_at": "2026-11-26T00:26:21.639354+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Letters",
+      "journal_short": "PRL",
+      "issns": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "date": "2026-11-25",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/dhmz-wlwh",
+          "https://journals.aps.org/prl/accepted?page=1"
+        ],
+        "accepted_date": "2026-11-25"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-25",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract states original spectral theorems linking Markov-network cycles to relaxation and proves a previously conjectured bound.",
+        "sources": [
+          "https://journals.aps.org/prl/accepted/10.1103/dhmz-wlwh",
+          "https://journals.aps.org/prl/accepted?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "489d5772dec2ee7b87e01ea2e34c5e56da81b8a9a282147429b556d0bca65fff",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "Cycle affinity and eigenvector winding constrain the oscillation and decay rates of Markov network dynamics.",
+      "note_zh": "用环路亲和力和特征向量的绕转约束马尔可夫网络动力学的振荡与衰减速率。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "001ced36355ea6de2d2019f9f9f452121126c8e8327d976eeb2d384d9d049cae",
+      "input_sha256": "1285f872b2e462f900dba3e4d65d043d4829af5e73ca81254c3f72795180d6ba",
+      "material_sha256": "489d5772dec2ee7b87e01ea2e34c5e56da81b8a9a282147429b556d0bca65fff",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "489d5772dec2ee7b87e01ea2e34c5e56da81b8a9a282147429b556d0bca65fff",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": "PRL",
+      "evidence": [
+        "Cycle structure bounds oscillation and decay rates of Markov generators, including multicyclic examples."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fdhmz-wlwh",
+      "evidence_url": "https://journals.aps.org/prl/accepted/10.1103/dhmz-wlwh",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/dgxp-yq1g",
+      "url": "https://doi.org/10.1103/dgxp-yq1g",
+      "title": "Node role discovery reveals novel structural decompositions and topological shifts in complex networks",
+      "authors": [
+        "Luís F. Seoane"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "637f44cbe96b2dafe80ba8f26f339e99262eef9c8838ef35d209dc3dc3fded30",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fdgxp-yq1g",
+      "author_retrieved_at": "2026-11-26T00:26:10.867859+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/dgxp-yq1g",
+          "https://journals.aps.org/prresearch/abstract/10.1103/dgxp-yq1g",
+          "https://journals.aps.org/prresearch/recent?page=1"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-10-28",
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The explicit abstract presents an original role-analysis procedure and demonstrates its structural decompositions across multiple empirical networks.",
+        "sources": [
+          "https://journals.aps.org/prresearch/abstract/10.1103/dgxp-yq1g",
+          "https://journals.aps.org/prresearch/accepted/10.1103/dgxp-yq1g",
+          "https://journals.aps.org/prresearch/recent?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "e2983976251f2f18108d2b22c45774f06ef5539741baf8cdf39d609666773d4f",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "Topological roles uncover airport functions and shifts in legislative cosponsorship that complement community analysis.",
+      "note_zh": "用拓扑角色识别机场功能，以及议案联署模式的变化，为社群分析提供另一种结构视角。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "cf7313036368663969cc601efd3296b4e393016c62740290dee6ee9f37672892",
+      "input_sha256": "b994f60ff0858db45b381acf8d75a591b054990b2c71dd75820822435e7f8220",
+      "material_sha256": "e2983976251f2f18108d2b22c45774f06ef5539741baf8cdf39d609666773d4f",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "e2983976251f2f18108d2b22c45774f06ef5539741baf8cdf39d609666773d4f",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": null,
+      "evidence": [
+        "Formal abstract confirms topology-based node roles complement communities, identifying airport functions and a reorganization in House cosponsorship."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fdgxp-yq1g",
+      "evidence_url": "https://journals.aps.org/prresearch/abstract/10.1103/dgxp-yq1g",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-10-28",
+        "published_date": "2026-11-25",
+        "previous_run": "reports/runs/2026-10-28-to-29-01",
+        "source_run": "reports/runs/2026-11-25-to-26-01",
+        "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f",
+        "previous_assessment_sha256": "aab9a88af0b98310bd1ad3177ab02e8cbbd99fd1c112080fcbe22afd63d286b7",
+        "assessment_sha256": "cf7313036368663969cc601efd3296b4e393016c62740290dee6ee9f37672892"
+      }
+    },
+    {
+      "doi": "10.1103/9mgt-48mf",
+      "url": "https://doi.org/10.1103/9mgt-48mf",
+      "title": "Thermodynamic characterization of mesoscale organization via network density matrices",
+      "authors": [
+        "Arsham Ghavasieh",
+        "Satyaki Sikdar",
+        "Manlio De Domenico",
+        "Santo Fortunato"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "cdbf777210bba808d5b7b0568495d915b6f947e14eccb046a3b49196f99b5d6e",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F9mgt-48mf",
+      "author_retrieved_at": "2026-11-26T00:26:18.177198+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-25",
+      "date_source": "published-online",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "published-online",
+        "publication_status": "published",
+        "published_date": "2026-11-25",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf",
+          "https://journals.aps.org/pre/abstract/10.1103/9mgt-48mf",
+          "https://journals.aps.org/pre/recent?page=1"
+        ]
+      },
+      "publication_status": "published",
+      "accepted_date": "2026-09-08",
+      "published_date": "2026-11-25",
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The abstract derives a new network partition quantity and compares the resulting communities with established methods on synthetic and empirical graphs.",
+        "sources": [
+          "https://journals.aps.org/pre/abstract/10.1103/9mgt-48mf",
+          "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf",
+          "https://journals.aps.org/pre/recent?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "a968a2316bee9882ce0704ed92f351a1997ab5b16dd29832651614f00c5e5107",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_inference",
+        "network_structure"
+      ],
+      "scope_class": "core",
+      "note_en": "Multiscale leakage of network-flow correlations gives a partition criterion that reduces to modularity at zero diffusion time.",
+      "note_zh": "以网络流相关性在分区之间的泄漏刻画多尺度组织，零扩散时间下对应模块度。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "30e64124a0dfb9904e72e32be5b636f21959c824b81043e201d934ba8daf1037",
+      "input_sha256": "6ddefb1a7629a2ab366da4d3347cbb55116a01a4044cf966f8aa6bec22e9af91",
+      "material_sha256": "a968a2316bee9882ce0704ed92f351a1997ab5b16dd29832651614f00c5e5107",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "a968a2316bee9882ce0704ed92f351a1997ab5b16dd29832651614f00c5e5107",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": null,
+      "evidence": [
+        "Formal abstract defines multiscale internal energy through leakage across partitions and derives its equivalence to modularity at zero diffusion time."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F9mgt-48mf",
+      "evidence_url": "https://journals.aps.org/pre/abstract/10.1103/9mgt-48mf",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1",
+      "publication_transition": {
+        "kind": "accepted_to_published",
+        "accepted_date": "2026-09-08",
+        "published_date": "2026-11-25",
+        "previous_run": "reports/runs/2026-09-expansion-01",
+        "source_run": "reports/runs/2026-11-25-to-26-01",
+        "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f",
+        "previous_assessment_sha256": "4f671b5285f240af62556ba1a68983f638e4d40d5198b79e858e0cfea55a227d",
+        "assessment_sha256": "30e64124a0dfb9904e72e32be5b636f21959c824b81043e201d934ba8daf1037"
+      }
+    },
+    {
+      "doi": "10.1103/5cv4-f1kx",
+      "url": "https://journals.aps.org/pre/accepted/10.1103/5cv4-f1kx",
+      "title": "Dynamical mean-field reduction for recurrent networks with Cauchy couplings",
+      "authors": [
+        "Ryota Kojima"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "4e8cf0ad8a750fe57460a5a6c77c41abfbcf31c261ff656691fde30a0436da93",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F5cv4-f1kx",
+      "author_retrieved_at": "2026-11-26T00:26:09.082789+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review E",
+      "journal_short": "PRE",
+      "issns": [
+        "2470-0045",
+        "2470-0053"
+      ],
+      "date": "2026-11-25",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-25",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/5cv4-f1kx",
+          "https://journals.aps.org/pre/accepted?page=1"
+        ],
+        "accepted_date": "2026-11-25"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-25",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The explicit accepted abstract derives a new recurrent network closure, identifies regimes, and reports finite-network checks.",
+        "sources": [
+          "https://journals.aps.org/pre/accepted/10.1103/5cv4-f1kx",
+          "https://journals.aps.org/pre/accepted?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "510b90eb857921384103e810448863335876b34d2bed0892900274fcffc5bc0f",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "A dynamical mean-field reduction links heavy-tailed recurrent couplings to population activity and its onset.",
+      "note_zh": "用动力学平均场降维刻画重尾耦合循环网络的群体活动及其起始阈值。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "2083aa3a0af1b4888011a41d9f06c7223d0501bb10ece2370de9c33b2b7b43bd",
+      "input_sha256": "3b7ce79562e0bac0ae590665271bed86fe4a6afa6ceaa074e4e927e427608a34",
+      "material_sha256": "510b90eb857921384103e810448863335876b34d2bed0892900274fcffc5bc0f",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "510b90eb857921384103e810448863335876b34d2bed0892900274fcffc5bc0f",
+      "rule_sha256": "27508b31a4f8509eb8af5167623603322a5265a0ff9ea6713d4fc6e6dfab85f2",
+      "featured": null,
+      "evidence": [
+        "A scalar dynamical closure captures population response and activity onset for a class of recurrent networks with Cauchy couplings."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F5cv4-f1kx",
+      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/5cv4-f1kx",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1103/ywrq-rpzh",
       "url": "https://doi.org/10.1103/ywrq-rpzh",
@@ -18209,88 +19586,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/html-hr8z",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/html-hr8z",
-      "title": "Tunable elasticity and disorder-induced auxeticity in spring networks",
-      "authors": [
-        "Junchao Huang",
-        "Jiaqi Si",
-        "Hua Tong",
-        "Ning Xu"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "c65c9fbde0da35f0b2e40b8a7cdb80449c3d3c635050275ffe432fe3e62cfd45",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fhtml-hr8z",
-      "author_retrieved_at": "2026-11-11T00:11:33.399505+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-11-10",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-11-10",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "accepted_date": "2026-11-10",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/html-hr8z"
-        ],
-        "basis_detail": "Actual current official directory date; included published transition additionally verified on current formal article header and Abstract. Accepted date not claimed as published date."
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-11-10",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "dfb8f6472794c2f7fbe0100d45b3be3b29bc38478e83fff2edae2d38c89b89b7",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/html-hr8z"
-        ],
-        "basis": "Primary actual explicit Abstract reading confirms original research; exact official subtype not invented.",
-        "supporting_reason": "Controlled geometric and bond-flipping disorder in two-dimensional spring networks changes non-affine deformation, elasticity and Poisson ratio; disrupting Delaunay connectivity provides a structural mechanism for robust auxeticity."
-      },
-      "categories": [
-        "network_structure",
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Geometric distortion and bond flipping reshape non-affine response and Poisson ratio in two-dimensional spring networks; disrupting Delaunay connectivity enables tunable elasticity and auxeticity. Currently accepted.",
-      "note_zh": "二维弹簧网络中，几何扰动与键翻转改变非仿射形变及泊松比；破坏Delaunay连接提供调节弹性与负泊松比的结构途径，当前为接收稿。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "bac62510b1d293afd48ae2a60815d863ce9f5e7563a60d3d40e71a0ff00fa906",
-      "input_sha256": "aaa946a30f382627c0c5f095f04d07fcbedce22c0e4289cbd2b73d01a067784c",
-      "material_sha256": "dfb8f6472794c2f7fbe0100d45b3be3b29bc38478e83fff2edae2d38c89b89b7",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "dfb8f6472794c2f7fbe0100d45b3be3b29bc38478e83fff2edae2d38c89b89b7",
-      "rule_sha256": "6deb60a44a559f1076b66b2765ec3f4bf9d36e42f93e018bafbf2a06c5863455",
-      "featured": null,
-      "evidence": [
-        "Controlled geometric and bond-flipping disorder in two-dimensional spring networks changes non-affine deformation, elasticity and Poisson ratio; disrupting Delaunay connectivity provides a structural mechanism for robust auxeticity."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fhtml-hr8z",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/html-hr8z",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/6873-nqff",
       "url": "https://journals.aps.org/prresearch/accepted/10.1103/6873-nqff",
       "title": "Fast neural noise stabilizes associative memory against slow synaptic noise",
@@ -18788,105 +20083,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1103%2Fnck7-lpc7",
       "evidence_url": "https://journals.aps.org/prx/accepted/10.1103/nck7-lpc7",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/dm26-5l3l",
-      "url": "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l",
-      "title": "Facilitated relaxation overrides energetic pathways in a multiphase square-kagome artificial spin ice",
-      "authors": [
-        "Wen-Cheng Yue",
-        "Zixiong Yuan",
-        "Peiyuan Huang",
-        "Ziao Wang",
-        "Hangyu Liu",
-        "Tianyu Li",
-        "Nuo-Zhou Yang",
-        "Jingyue Gao",
-        "Chen Ku",
-        "Shuo Song",
-        "Jiyao Shang",
-        "Yang-Yang Lyu",
-        "Yihuang Xiong",
-        "Xuecou Tu",
-        "Liang He",
-        "Xun Cao",
-        "Ying Dong",
-        "Huabing Wang",
-        "Peiheng Wu",
-        "Cristiano Nisoli",
-        "Yong-Lei Wang"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "b307af534788129194328eb7eca53bcb4bc1dc1b2e9d8166bd9d271f8e811f01",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fdm26-5l3l",
-      "author_retrieved_at": "2026-11-10T00:36:02.309294+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review Letters",
-      "journal_short": "PRL",
-      "issns": [
-        "0031-9007",
-        "1079-7114"
-      ],
-      "date": "2026-11-09",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-11-09",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "accepted_date": "2026-11-09",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l"
-        ],
-        "basis_detail": "Actual official dated page and frozen current publisher directory checked; accepted date is not a publication date."
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-11-09",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "cc44adb601c5ba479baabf425a1c6ccc9fad011089bbb27ff1e9bbcd66ee7505",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l"
-        ],
-        "basis": "Actual explicit official Abstract verifies original research; exact official subtype is not invented.",
-        "supporting_reason": "Facilitator constraints in artificial spin ice disconnect classes of domain-wall states, so transition-network topology controls kinetic reachability and non-Boltzmann relaxation despite favorable energies. Experimental and Monte Carlo evidence link network organization to constrained dynamics."
-      },
-      "categories": [
-        "network_structure",
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Kinetic constraints in artificial spin ice disconnect domain-wall classes, making transition-network topology govern reachability and non-Boltzmann relaxation; currently accepted.",
-      "note_zh": "人工自旋冰中的动力学约束分离畴壁状态类别，使转移网络拓扑而非仅能量决定可达性与非玻尔兹曼弛豫；当前为接收稿。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "34dd188cc11ffee69bfcf33d660a1f4835242b657fdbb2f129de24ece285ab93",
-      "input_sha256": "5e481984d98d70b04deef201082365c680061f997d43cd08db8bf6c9494eeff5",
-      "material_sha256": "cc44adb601c5ba479baabf425a1c6ccc9fad011089bbb27ff1e9bbcd66ee7505",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "cc44adb601c5ba479baabf425a1c6ccc9fad011089bbb27ff1e9bbcd66ee7505",
-      "rule_sha256": "dc8107697dbfc9b2e05d5abfb4bced06ca5aa97396be15f149d6b6f21bfd0cac",
-      "featured": "PRL",
-      "evidence": [
-        "Facilitator constraints in artificial spin ice disconnect classes of domain-wall states, so transition-network topology controls kinetic reachability and non-Boltzmann relaxation despite favorable energies. Experimental and Monte Carlo evidence link network organization to constrained dynamics."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fdm26-5l3l",
-      "evidence_url": "https://journals.aps.org/prl/accepted/10.1103/dm26-5l3l",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -19897,85 +21093,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/r397-cxtl",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
-      "title": "Embedding stochastic dynamics in latent manifolds of recurrent neural networks",
-      "authors": [
-        "Ramón Nartallo-Kaluarachchi",
-        "Renaud Lambiotte",
-        "Alain Goriely"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "2664dc0e7a5d2341bada11e873449f5ba17f12124c6d9e9353b77326e2899ed5",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fr397-cxtl",
-      "author_retrieved_at": "2026-11-06T00:42:48.237050+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-11-05",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-11-05",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "accepted_date": "2026-11-05",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl"
-        ],
-        "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
-        "basis_detail": "Explicit individual Published/Accepted day in frozen source evidence, not issue-cover or metadata-update day."
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-11-05",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "basis": "Low-rank recurrent connectivity embeds prescribed nonlinear stochastic drift and diffusion in latent neural manifolds; asymmetric-connectivity and irreversibility decompositions explain associative/sequential network dynamics.",
-        "material_sha256": "29a76bb1c1a2a2e5eb35f4915ae709186a52f522c26ffdb340541aaa3e9e2d74",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl"
-        ]
-      },
-      "categories": [
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Low-rank recurrent connectivity embeds stochastic differential-equation drift and diffusion in latent manifolds, connecting asymmetric coupling, irreversible dynamics and memory organization.",
-      "note_zh": "低秩循环神经网络连接将随机微分方程的漂移与扩散嵌入潜在流形，联系非对称耦合、不可逆动力学与记忆组织。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "af8c6350c734077ed8f77fd04cbe077a50abcd0df940b7965e30f3020f020521",
-      "input_sha256": "f8442097ad24964bdef5b2fdfdeb4fa822dfef52ed1cd8ac02197cf0b1173c18",
-      "material_sha256": "29a76bb1c1a2a2e5eb35f4915ae709186a52f522c26ffdb340541aaa3e9e2d74",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "29a76bb1c1a2a2e5eb35f4915ae709186a52f522c26ffdb340541aaa3e9e2d74",
-      "rule_sha256": "f3690dab12aa6b8c26da8d065f8529b2a3b549640554123d2657af733d80edfc",
-      "featured": null,
-      "evidence": [
-        "Low-rank recurrent connectivity embeds prescribed nonlinear stochastic drift and diffusion in latent neural manifolds; asymmetric-connectivity and irreversibility decompositions explain associative/sequential network dynamics."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fr397-cxtl",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/r397-cxtl",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/qnhv-yp69",
       "url": "https://doi.org/10.1103/qnhv-yp69",
       "title": "Scaling of long-range loop-erased random walks",
@@ -20581,88 +21698,6 @@
         "previous_assessment_sha256": "bff00b5cd75fc1105c5cbe863d78d0911b068bd08d1cecef321b85b01f0e33fc",
         "assessment_sha256": "c923edd36ce8874cb5d1104e3df8599e6818ee60d35ef7615add81d8914d7df0"
       }
-    },
-    {
-      "doi": "10.1103/spjq-78dd",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/spjq-78dd",
-      "title": "Membrane anisotropy reshapes scale-free correlations and directional mechanical susceptibility in transmembrane proteins",
-      "authors": [
-        "Jian Wang",
-        "Zizheng He",
-        "Xiaoyi Chen",
-        "Guannan Wang",
-        "Qian-Yuan Tang"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "e0eb80ed704cb18b971f95483958dcaddd1b3dde48258b7016bf0d3a11dc35cc",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fspjq-78dd",
-      "author_retrieved_at": "2026-11-05T03:03:18.017368+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-11-04",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-11-04",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "accepted_date": "2026-11-04",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/spjq-78dd"
-        ],
-        "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/spjq-78dd",
-        "basis_detail": "Explicit item/article/history Published or Accepted day from frozen collection; issue cover/month not substituted."
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-11-04",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "basis": "Anisotropic residue-network modelling across thousands of membrane proteins explains directional reorganization of scale-free correlations and introduces directional response susceptibility; collective organization and perturbation response of protein networks are central.",
-        "material_sha256": "a9311d277a7c769cdd17596cf93a606f377278856349b37191c73a93a428fbd6",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/spjq-78dd"
-        ]
-      },
-      "categories": [
-        "network_collective",
-        "network_resilience"
-      ],
-      "scope_class": "core",
-      "note_en": "Anisotropic residue-network models explain directional reorganization of scale-free correlations in membrane proteins and quantify perturbation responses through directional mechanical susceptibility.",
-      "note_zh": "各向异性残基网络模型解释膜蛋白中无标度相关的方向重组，并以方向机械易感性刻画扰动响应。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "3999d5e2a6bee7b4f7411e426ec523b32b877479f49108aa52d82bd94acb5d91",
-      "input_sha256": "ee64cac48f490e7f00bb2519a2b9d7e94528158cc07c8c9fdccec94d52406781",
-      "material_sha256": "a9311d277a7c769cdd17596cf93a606f377278856349b37191c73a93a428fbd6",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "a9311d277a7c769cdd17596cf93a606f377278856349b37191c73a93a428fbd6",
-      "rule_sha256": "22aa811fa39ae418b7388baf2c2ad8e5cdcfaa1abc70d2962248fe2a7e53391a",
-      "featured": null,
-      "evidence": [
-        "Anisotropic residue-network modelling across thousands of membrane proteins explains directional reorganization of scale-free correlations and introduces directional response susceptibility; collective organization and perturbation response of protein networks are central."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fspjq-78dd",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/spjq-78dd",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
     },
     {
       "doi": "10.1103/rghw-4dhl",
@@ -22882,79 +23917,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/dgxp-yq1g",
-      "url": "https://journals.aps.org/prresearch/accepted/10.1103/dgxp-yq1g",
-      "title": "Node role discovery reveals novel structural decompositions and topological shifts in complex networks",
-      "authors": [
-        "Luís F. Seoane"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "045300467b93abb793f2171ef3aa4df946c040a8ac5f9ffa5d070a83d49dee31",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fdgxp-yq1g",
-      "author_retrieved_at": "2026-10-29T03:50:53.815275+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review Research",
-      "journal_short": "PRResearch",
-      "issns": [
-        "2643-1564"
-      ],
-      "date": "2026-10-28",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-28",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "source_url": "https://journals.aps.org/prresearch/accepted/10.1103/dgxp-yq1g"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-28",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "a88bb3421dceb7e702edef354afccb978803d084e05383c85611bd66dd5e128b",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "The abstract presents a network role analysis framework and empirical results; two words in the official abstract appear as empty braces.",
-        "sources": [
-          "https://journals.aps.org/prresearch/accepted/10.1103/dgxp-yq1g"
-        ]
-      },
-      "categories": [
-        "network_inference",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Structural-similarity node roles reveal network decompositions that complement community analysis in airport and collaboration networks.",
-      "note_zh": "按结构相似性发现节点角色，为机场与合作网络提供区别于社区划分的结构分解。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "aab9a88af0b98310bd1ad3177ab02e8cbbd99fd1c112080fcbe22afd63d286b7",
-      "input_sha256": "b926cf5961f9b0a1f502d9c520100c3364561ab19aeed718ec56c45c82c2aff8",
-      "material_sha256": "a88bb3421dceb7e702edef354afccb978803d084e05383c85611bd66dd5e128b",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "a88bb3421dceb7e702edef354afccb978803d084e05383c85611bd66dd5e128b",
-      "rule_sha256": "590e2a871e91c1c91fc362612c689002c8703965ba0f88c7895a1d7357488273",
-      "featured": null,
-      "evidence": [
-        "Node roles and topological decompositions in complex networks."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fdgxp-yq1g",
-      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/dgxp-yq1g",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/4vx7-ngvv",
       "url": "https://journals.aps.org/pre/accepted/10.1103/4vx7-ngvv",
       "title": "Inference of hierarchical core-periphery structure in temporal networks",
@@ -23197,9 +24159,9 @@
         "Bingni W. Brunton"
       ],
       "author_metadata_status": "available",
-      "author_metadata_sha256": "923c99f08a70ad879846bbe87014b5aae6acb7f24b2821b0b84b93f916b8bc8c",
+      "author_metadata_sha256": "091a6bfb9f8dd98cd90dee4a48279f7cc3fed50b5bef2a569a865cee6ce3cb5c",
       "author_source_url": "https://api.crossref.org/works/10.1038%2Fs41586-026-11195-y",
-      "author_retrieved_at": "2026-10-29T03:50:58.439113+00:00",
+      "author_retrieved_at": "2026-11-26T00:26:06.738104+00:00",
       "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
       "journal": "Nature",
       "journal_short": "Nature",
@@ -23235,13 +24197,13 @@
       "note_zh": "连接组约束的模拟与网络剪枝识别果蝇步行的候选最小节律回路；三神经元必要充分性是模拟结果。",
       "scope_authority": "assistant_abstract_screening",
       "editorial_support_sha256": null,
-      "assessment_sha256": "e626367bf7086b05266086dc129da43da306dcbab9d30a0a770bc874672cf82d",
-      "input_sha256": "8a1fc8d445d275667b854095619cce14822c92357a6e678c59ea4b0a6adc92d0",
+      "assessment_sha256": "1f49127411aa9e5bf88ee58fb85181bbca15a585fe76fc7b143e62f00f4203af",
+      "input_sha256": "a6c54bac375834867b9b6e7dd313383eae7118176a38a5a4d238550f7292a680",
       "material_sha256": "8f0b531e125ebf8835e74f414c4d07346456b99d7c85640c4ccd1920c0d565ec",
       "review_evidence_kind": "abstract",
       "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
       "review_evidence_sha256": "8f0b531e125ebf8835e74f414c4d07346456b99d7c85640c4ccd1920c0d565ec",
-      "rule_sha256": "590e2a871e91c1c91fc362612c689002c8703965ba0f88c7895a1d7357488273",
+      "rule_sha256": "8b0583a0abe6a3bdb2aac85bdee85efbab34c5901967994581fbe679d5b9970d",
       "featured": "Nature",
       "evidence": [
         "Connectome simulation and pruning isolate a putative rhythm-generating neural circuit."
@@ -23573,81 +24535,6 @@
       ],
       "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2607559123",
       "evidence_url": "https://api.crossref.org/works/10.1073%2Fpnas.2607559123",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
-      "doi": "10.1103/ydgr-vs2w",
-      "url": "https://journals.aps.org/prx/accepted/10.1103/ydgr-vs2w",
-      "title": "Local imperfect feedback control in nonequilibrium biophysical systems enabled by response constraints",
-      "authors": [
-        "Carlos Floyd",
-        "Aaron R. Dinner",
-        "Suriyanarayanan Vaikuntanathan"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "eab47eaa438c76b9793fa30ffb07006444893ed813ec36c495321d07b8a55db5",
-      "author_source_url": "https://api.crossref.org/works/10.1103%2Fydgr-vs2w",
-      "author_retrieved_at": "2026-10-27T02:20:23.763882+00:00",
-      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
-      "journal": "Physical Review X",
-      "journal_short": "PRX",
-      "issns": [
-        "2160-3308"
-      ],
-      "date": "2026-10-26",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-10-26",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "accepted_date": "2026-10-26"
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-10-26",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "basis_kind": "explicit_abstract_research_inference",
-        "research_nature": "original_research",
-        "material_sha256": "06f82c5cfceee894863e96a9fb0c0866318c201a66da1f7ee9243cd84ca81d57",
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "basis": "摘要解析导出马尔可夫跃迁网络的非平衡响应约束，提出图论 coherence 判据并证明局部反馈全局稳定条件，具有明确新理论和模型分析；无特殊类型冲突。",
-        "sources": [
-          "https://journals.aps.org/prx/accepted/10.1103/ydgr-vs2w"
-        ]
-      },
-      "categories": [
-        "network_resilience",
-        "network_collective"
-      ],
-      "scope_class": "core",
-      "note_en": "Thermodynamic response constraints and graph coherence identify stable-control conditions for simple local feedback in complex reaction networks.",
-      "note_zh": "热力学响应约束与图论 coherence 判据给出复杂反应网络中简单局部反馈的稳定控制条件。",
-      "scope_authority": "assistant_abstract_screening",
-      "editorial_support_sha256": null,
-      "assessment_sha256": "d308673d3a50e51837d194ce6fac90c9b28cb6b8d9eef9f9886531fc7239b80d",
-      "input_sha256": "0ca2185446e3b83183b207f38a27ce24658e320b9dcdc5c1f9f47402306f1254",
-      "material_sha256": "06f82c5cfceee894863e96a9fb0c0866318c201a66da1f7ee9243cd84ca81d57",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "06f82c5cfceee894863e96a9fb0c0866318c201a66da1f7ee9243cd84ca81d57",
-      "rule_sha256": "be9e88ce9c386ef2dae1315f3fbb78d445f8c71d75b7ae07699ef3d4d1d88194",
-      "featured": "PRX",
-      "evidence": [
-        "Thermodynamic response constraints and graph coherence connect network topology to monotonicity and global stability of local biochemical feedback control."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2Fydgr-vs2w",
-      "evidence_url": "https://journals.aps.org/prx/accepted/10.1103/ydgr-vs2w",
       "source": "Crossref and verified publisher/user evidence",
       "retrieved_by": [
         "Explicitly selected journal inventories; DOI-bound reviewed evidence"
@@ -39197,95 +40084,6 @@
       "screening_version": "newflow-1"
     },
     {
-      "doi": "10.1103/9mgt-48mf",
-      "url": "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf",
-      "title": "Thermodynamic characterization of mesoscale organization via network density matrices",
-      "authors": [
-        "Arsham Ghavasieh",
-        "Satyaki Sikdar",
-        "Manlio De Domenico",
-        "Santo Fortunato"
-      ],
-      "author_metadata_status": "available",
-      "author_metadata_sha256": "41c0c4f4e802235f9f4dda2c232456d8836d414932aa7a4c78ec6ae98e668612",
-      "author_source_url": "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf",
-      "author_retrieved_at": "2026-10-04T05:36:50.194Z",
-      "author_basis": "Official accepted-page visible full byline; DOI/title/journal and footer ISSN checked in browser",
-      "journal": "Physical Review E",
-      "journal_short": "PRE",
-      "issns": [
-        "2470-0045",
-        "2470-0053"
-      ],
-      "date": "2026-09-08",
-      "date_source": "publisher.accepted",
-      "date_provenance": {
-        "status": "verified",
-        "value": "2026-09-08",
-        "basis": "publisher.accepted",
-        "publication_status": "accepted",
-        "published_date": null,
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf"
-        ],
-        "limitations": []
-      },
-      "publication_status": "accepted",
-      "accepted_date": "2026-09-08",
-      "published_date": null,
-      "article_type": null,
-      "type_provenance": {
-        "status": "verified",
-        "value": null,
-        "research_nature": "original_research",
-        "basis_kind": "explicit_abstract_research_inference",
-        "basis": "摘要提出广义网络内能，证明与 modularity 的关系并比较社区检测，无特殊类型冲突。",
-        "material_sha256": "227f1658f7a85653657e067f5456f4ccf9728d5b83431466fa260bb86d06d930",
-        "abstract_sha256": "96f50ec292de705da86b0eb1117b81ed2481aab2d409064ac81b116f6cd48f60",
-        "sources": [
-          "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf"
-        ],
-        "special_type_check": "clear",
-        "specific_subtype": null,
-        "subtype_status": "not_required_for_inclusion",
-        "previous_check": {
-          "status": "unresolved",
-          "value": null,
-          "basis": "No specific official type established; generic Crossref journal-article is insufficient",
-          "sources": [
-            "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf"
-          ]
-        }
-      },
-      "categories": [
-        "network_inference",
-        "network_structure"
-      ],
-      "scope_class": "core",
-      "note_en": "Generalized network internal energy measures correlation leakage across partitions and connects multiscale community detection to modularity.",
-      "note_zh": "广义网络内能衡量分区间关联泄漏，将多尺度社区发现与模块度联系起来。",
-      "scope_authority": "human user in current conversation",
-      "editorial_support_sha256": "4f671b5285f240af62556ba1a68983f638e4d40d5198b79e858e0cfea55a227d",
-      "assessment_sha256": "4f671b5285f240af62556ba1a68983f638e4d40d5198b79e858e0cfea55a227d",
-      "input_sha256": "51500154d2640a7b5ecb242d0475108426c69c344e6e9534910bfd1e7db89d48",
-      "material_sha256": "227f1658f7a85653657e067f5456f4ccf9728d5b83431466fa260bb86d06d930",
-      "review_evidence_kind": "abstract",
-      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
-      "review_evidence_sha256": "227f1658f7a85653657e067f5456f4ccf9728d5b83431466fa260bb86d06d930",
-      "rule_sha256": "e08ea23c5a3282ae16790d67fe1c722247267e6d6f53822e90ce5e5cf9b3a59a",
-      "featured": null,
-      "evidence": [
-        "Generalized network internal energy measures correlation leakage across partitions, connects to modularity and supports multiscale community detection."
-      ],
-      "metadata_url": "https://api.crossref.org/works/10.1103%2F9mgt-48mf",
-      "evidence_url": "https://journals.aps.org/pre/accepted/10.1103/9mgt-48mf",
-      "source": "Crossref and verified publisher/user evidence",
-      "retrieved_by": [
-        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
-      ],
-      "screening_version": "newflow-1"
-    },
-    {
       "doi": "10.1103/73g3-b38r",
       "url": "https://doi.org/10.1103/73g3-b38r",
       "title": "Diffusion disorder in the contact process",
@@ -44323,9 +45121,249 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "3d15a7dc403e9ee215a370aee83c6acc186ed70239dda19edc19af0b84457380"
+    },
+    {
+      "current_run": "reports/runs/2026-10-28-nature-backfill-02",
+      "candidate_sha256": "2aef6a94bff9a96f076e3d2d3b19897e3691120bbfcdfa71371277f853f53800",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+        "reports/runs/2026-11-14-to-15-01": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301",
+        "reports/runs/2026-11-15-to-16-01": "20b9b4dabd85722d9401a2eee31e5e8c2eea0088fb49f52070ca65047e002be8",
+        "reports/runs/2026-11-16-to-17-01": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6",
+        "reports/runs/2026-11-17-to-18-02": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+        "reports/runs/2026-11-11-to-12-nature-backfill-01": "c6e62a2cdb8593a7326d63ee4fbd658192e104d8d611f9e553de6f1e35ef26ef",
+        "reports/runs/2026-11-18-to-19-01": "67a6755feab9f9f22a9c7c4199b43a543a0d8d84a92f6e5cea8868aa4ea0a1ed",
+        "reports/runs/2026-11-19-to-20-01": "cda85df6eba4993d2297eb038848314f195f0245eef1b9c53e9549f9000ffdbb",
+        "reports/runs/2026-11-20-to-21-01": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3",
+        "reports/runs/2026-11-21-to-22-01": "143997f5d26feeb9be7b5978d9105bac5e18f4608426abef84f33166a60ff104",
+        "reports/runs/2026-11-22-to-23-01": "a9a7da63af08ff3285b749a91c66d4e446e4c75c7d5932b2eeeceb94b1c49da3",
+        "reports/runs/2026-11-23-to-24-01": "a83e7377a514dfc35e2e17408f7fd1d77918016260e4888d976478eca53b2409",
+        "reports/runs/2026-11-24-to-25-01": "d7db8a9eea094c97d2875916127d35d9428c8772b2114174d66c25472d564462"
+      },
+      "counts": {
+        "in_window": 51,
+        "newly_reviewed": 3,
+        "historically_reviewed": 48,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 50,
+          "core": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "4d27d8b64e6b75dee910cf368c5c01bbb9a9e492512ca1ea0deed6f04fe3dfa0"
+    },
+    {
+      "current_run": "reports/runs/2026-11-25-to-26-01",
+      "candidate_sha256": "4c8ddae6370492bbadad3e8b735c25745850d2a471c5fb57f9a88684348ea34c",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+        "reports/runs/2026-11-14-to-15-01": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301",
+        "reports/runs/2026-11-15-to-16-01": "20b9b4dabd85722d9401a2eee31e5e8c2eea0088fb49f52070ca65047e002be8",
+        "reports/runs/2026-11-16-to-17-01": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6",
+        "reports/runs/2026-11-17-to-18-02": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+        "reports/runs/2026-11-11-to-12-nature-backfill-01": "c6e62a2cdb8593a7326d63ee4fbd658192e104d8d611f9e553de6f1e35ef26ef",
+        "reports/runs/2026-11-18-to-19-01": "67a6755feab9f9f22a9c7c4199b43a543a0d8d84a92f6e5cea8868aa4ea0a1ed",
+        "reports/runs/2026-11-19-to-20-01": "cda85df6eba4993d2297eb038848314f195f0245eef1b9c53e9549f9000ffdbb",
+        "reports/runs/2026-11-20-to-21-01": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3",
+        "reports/runs/2026-11-21-to-22-01": "143997f5d26feeb9be7b5978d9105bac5e18f4608426abef84f33166a60ff104",
+        "reports/runs/2026-11-22-to-23-01": "a9a7da63af08ff3285b749a91c66d4e446e4c75c7d5932b2eeeceb94b1c49da3",
+        "reports/runs/2026-11-23-to-24-01": "a83e7377a514dfc35e2e17408f7fd1d77918016260e4888d976478eca53b2409",
+        "reports/runs/2026-11-24-to-25-01": "d7db8a9eea094c97d2875916127d35d9428c8772b2114174d66c25472d564462",
+        "reports/runs/2026-10-28-nature-backfill-02": "c31d135095095543625dc63060843b721aa99bef203c9b80e5447093367876a0"
+      },
+      "counts": {
+        "in_window": 226,
+        "newly_reviewed": 186,
+        "historically_reviewed": 99,
+        "state_updates": 39,
+        "categories": {
+          "excluded": 213,
+          "core": 12,
+          "transferable_application": 1
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1126/sciadv.aeh9321",
+      "recommended_on": "2026-11-26",
+      "question": {
+        "zh": "当人们误判两位同学是否已是朋友时，这些误判能预测哪些关系后来会形成或消失吗？",
+        "en": "Do errors about who is friends today help predict which friendships will form or dissolve later?"
+      },
+      "reading_comment": {
+        "zh": [
+          "先对照图 1 和图 2。研究者用双方互相提名定义观测到的朋友关系，再用第三方对同一对人的判断预测后续变化。主分析中，误判为朋友的节点对后来成为朋友的比例是 6.76%，正确判断为非朋友的节点对为 2.38%。预测增益要和事件基线一起读。",
+          "再看图 3。个体化的 Katz 连通性吸收了误判对新连边形成的大部分预测信息，对连边消失的解释较弱。图 4 的中心性结果也取决于初始网络位置，是观测关联。"
+        ],
+        "en": [
+          "Read Figs. 1 and 2 together. Mutual nominations define observed friendships. Third-party assessments of the same pairs forecast later changes. In the primary analysis, friendship formed for 6.76% of pairs mistakenly judged to be friends versus 2.38% of pairs correctly judged to be nonfriends. Read the relative gain alongside the absolute rates.",
+          "Fig. 3 separates the two prediction tasks. A participant-specific Katz model accounts for much of the formation signal, with weaker evidence for dissolution. The centrality patterns in Fig. 4 are observational and depend on starting network position."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把网络测量与预测目标对齐",
+            "en": "Align the baseline graph with the outcome"
+          },
+          "text": {
+            "zh": "互相提名构造基准图，第三方判断提供独立观测。论文清楚交代判断、基准快照和结果快照的顺序，可借鉴来设计时序网络预测。",
+            "en": "The paper documents the order of the judgments, baseline snapshot and outcome snapshot. This is a useful design for separating perceived ties from their subsequent measured evolution."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分别评估新增边与消失边",
+            "en": "Evaluate link formation and dissolution separately"
+          },
+          "text": {
+            "zh": "作者按事件分别报告绝对发生率，并用保持个人应答倾向的置换对照检验预测信号。消失预测在控制同质性后的稳健性较弱。",
+            "en": "Event-specific rates and within-rater permutations make it possible to compare the findings without conflating formation with loss. The dissolution signal was less robust to homophily controls."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较多步路径与较简单的结构基线",
+            "en": "Benchmark multistep paths against simpler structure"
+          },
+          "text": {
+            "zh": "研究将个体化 Katz 路径模型与共同朋友数、同质性和基准图上的 Katz 值比较。这样的基线有助于定位预测信息来自哪一层结构。",
+            "en": "The participant-specific Katz model is compared with mutual friends, homophily and Katz connectivity on the observed graph. Those comparisons help isolate where the predictive information resides."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究时序社交网络、连边预测、网络认知或网络测量误差的读者。",
+        "en": "Readers studying temporal social networks, link prediction, social cognition or network measurement error."
+      },
+      "selection": "new_in_update",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.aeh9321",
+        "title": "Errors in social network knowledge predict how ties evolve in the future",
+        "version": "Science Advances Version of Record, 12(48), eaeh9321, published online 2026-11-25. The 13-page file contains 12 article pages and a publisher citation page.",
+        "source_url": "https://www.science.org/doi/10.1126/sciadv.aeh9321",
+        "source_kind": "user_provided_pdf",
+        "pages": 13,
+        "sha256": "fcd37062831e2957069fc49cd92f70a132951428258520f7c2bcdedea6bfb238",
+        "reviewed_at": "2026-11-26T01:23:35.911615+00:00",
+        "read_scope": "Read the published main text online: introduction, results, discussion, methods, four figure captions and data availability. Matched the user-provided Version of Record PDF against the publisher title, authors, DOI, online publication date and the results tied to Figs. 1–4. File has 12 article pages plus the publisher citation sheet. Separate supplement was not read and analyses were not independently reproduced."
+      },
+      "reading_caveat": {
+        "zh": "审读正式网页全文，并用用户提供的正式版 PDF 核对图 1–4 所对应的结果。文件为 12 页文章加 1 页出版方引文页。数据来自同一所大学三个宿舍的一届新生，主要由其中 100 人完成第三方判断。校外或宿舍外的人际关系未测量，中心性变化不能据此作因果解释。未审读独立补充文件，未独立复现。",
+        "en": "Read the published main text and checked the results associated with Figs. 1–4 against the Version of Record. The cohort came from three dormitories at one university, with 100 primary third-party raters. Ties outside the sampled setting were unmeasured, and centrality changes are observational. The separate supplement was not reviewed and the study was not independently reproduced."
+      },
+      "reviewed_at": "2026-11-26T01:23:35.911615+00:00",
+      "source_run": "reports/runs/2026-11-25-to-26-01",
+      "publication_sha256": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd",
+      "assessment_sha256": "b9db83e27143f6369471251451754650d633b369a9e60a49cbd5e06ae29b96b6",
+      "input_sha256": "aea2b8ca5a6b39c9d838b0d38321234d71e6360ba197453212ef3e0faf27aa59",
+      "evidence_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5"
+    },
     {
       "question": {
         "zh": "用逐日病房共处记录建图后，按居住地与按就医医院汇总，会得到怎样不同的风险分布？",
@@ -52108,6 +53146,84 @@
       "evidence_sha256": "784bcc8886bb5b304a13a5055410b19e506df6e3ab9f7bf09d6f9e712e9ad2d5"
     },
     {
+      "doi": "10.1126/sciadv.aeh9321",
+      "recommended_on": "2026-11-26",
+      "question": {
+        "zh": "当人们误判两位同学是否已是朋友时，这些误判能预测哪些关系后来会形成或消失吗？",
+        "en": "Do errors about who is friends today help predict which friendships will form or dissolve later?"
+      },
+      "reading_comment": {
+        "zh": [
+          "先对照图 1 和图 2。研究者用双方互相提名定义观测到的朋友关系，再用第三方对同一对人的判断预测后续变化。主分析中，误判为朋友的节点对后来成为朋友的比例是 6.76%，正确判断为非朋友的节点对为 2.38%。预测增益要和事件基线一起读。",
+          "再看图 3。个体化的 Katz 连通性吸收了误判对新连边形成的大部分预测信息，对连边消失的解释较弱。图 4 的中心性结果也取决于初始网络位置，是观测关联。"
+        ],
+        "en": [
+          "Read Figs. 1 and 2 together. Mutual nominations define observed friendships. Third-party assessments of the same pairs forecast later changes. In the primary analysis, friendship formed for 6.76% of pairs mistakenly judged to be friends versus 2.38% of pairs correctly judged to be nonfriends. Read the relative gain alongside the absolute rates.",
+          "Fig. 3 separates the two prediction tasks. A participant-specific Katz model accounts for much of the formation signal, with weaker evidence for dissolution. The centrality patterns in Fig. 4 are observational and depend on starting network position."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把网络测量与预测目标对齐",
+            "en": "Align the baseline graph with the outcome"
+          },
+          "text": {
+            "zh": "互相提名构造基准图，第三方判断提供独立观测。论文清楚交代判断、基准快照和结果快照的顺序，可借鉴来设计时序网络预测。",
+            "en": "The paper documents the order of the judgments, baseline snapshot and outcome snapshot. This is a useful design for separating perceived ties from their subsequent measured evolution."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分别评估新增边与消失边",
+            "en": "Evaluate link formation and dissolution separately"
+          },
+          "text": {
+            "zh": "作者按事件分别报告绝对发生率，并用保持个人应答倾向的置换对照检验预测信号。消失预测在控制同质性后的稳健性较弱。",
+            "en": "Event-specific rates and within-rater permutations make it possible to compare the findings without conflating formation with loss. The dissolution signal was less robust to homophily controls."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较多步路径与较简单的结构基线",
+            "en": "Benchmark multistep paths against simpler structure"
+          },
+          "text": {
+            "zh": "研究将个体化 Katz 路径模型与共同朋友数、同质性和基准图上的 Katz 值比较。这样的基线有助于定位预测信息来自哪一层结构。",
+            "en": "The participant-specific Katz model is compared with mutual friends, homophily and Katz connectivity on the observed graph. Those comparisons help isolate where the predictive information resides."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究时序社交网络、连边预测、网络认知或网络测量误差的读者。",
+        "en": "Readers studying temporal social networks, link prediction, social cognition or network measurement error."
+      },
+      "selection": "new_in_update",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.aeh9321",
+        "title": "Errors in social network knowledge predict how ties evolve in the future",
+        "version": "Science Advances Version of Record, 12(48), eaeh9321, published online 2026-11-25. The 13-page file contains 12 article pages and a publisher citation page.",
+        "source_url": "https://www.science.org/doi/10.1126/sciadv.aeh9321",
+        "source_kind": "user_provided_pdf",
+        "pages": 13,
+        "sha256": "fcd37062831e2957069fc49cd92f70a132951428258520f7c2bcdedea6bfb238",
+        "reviewed_at": "2026-11-26T01:23:35.911615+00:00",
+        "read_scope": "Read the published main text online: introduction, results, discussion, methods, four figure captions and data availability. Matched the user-provided Version of Record PDF against the publisher title, authors, DOI, online publication date and the results tied to Figs. 1–4. File has 12 article pages plus the publisher citation sheet. Separate supplement was not read and analyses were not independently reproduced."
+      },
+      "reading_caveat": {
+        "zh": "审读正式网页全文，并用用户提供的正式版 PDF 核对图 1–4 所对应的结果。文件为 12 页文章加 1 页出版方引文页。数据来自同一所大学三个宿舍的一届新生，主要由其中 100 人完成第三方判断。校外或宿舍外的人际关系未测量，中心性变化不能据此作因果解释。未审读独立补充文件，未独立复现。",
+        "en": "Read the published main text and checked the results associated with Figs. 1–4 against the Version of Record. The cohort came from three dormitories at one university, with 100 primary third-party raters. Ties outside the sampled setting were unmeasured, and centrality changes are observational. The separate supplement was not reviewed and the study was not independently reproduced."
+      },
+      "reviewed_at": "2026-11-26T01:23:35.911615+00:00",
+      "source_run": "reports/runs/2026-11-25-to-26-01",
+      "publication_sha256": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd",
+      "assessment_sha256": "b9db83e27143f6369471251451754650d633b369a9e60a49cbd5e06ae29b96b6",
+      "input_sha256": "aea2b8ca5a6b39c9d838b0d38321234d71e6360ba197453212ef3e0faf27aa59",
+      "evidence_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5"
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -52187,5 +53303,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "429259c182816a665abe8e651cde92e2f90efaef008cfe47102a84c57b262c33"
+  "daily_suggestions_sha256": "0a36dd4225a3a4b03ddeba7b33586ba67ecad091144023cc3a0432d31c1ded83"
 }

@@ -3878,6 +3878,84 @@
       "assessment_sha256": "116ac0576c8adc4b1578a7e4e191c6cf4e24eb3ade8c255d4027776ec7fc1821",
       "input_sha256": "3036231812588db70c36b0f3c1b00ac1da0e98d2c7e5f346de36ff2e65f7ef9c",
       "evidence_sha256": "784bcc8886bb5b304a13a5055410b19e506df6e3ab9f7bf09d6f9e712e9ad2d5"
+    },
+    {
+      "doi": "10.1126/sciadv.aeh9321",
+      "recommended_on": "2026-11-26",
+      "question": {
+        "zh": "当人们误判两位同学是否已是朋友时，这些误判能预测哪些关系后来会形成或消失吗？",
+        "en": "Do errors about who is friends today help predict which friendships will form or dissolve later?"
+      },
+      "reading_comment": {
+        "zh": [
+          "先对照图 1 和图 2。研究者用双方互相提名定义观测到的朋友关系，再用第三方对同一对人的判断预测后续变化。主分析中，误判为朋友的节点对后来成为朋友的比例是 6.76%，正确判断为非朋友的节点对为 2.38%。预测增益要和事件基线一起读。",
+          "再看图 3。个体化的 Katz 连通性吸收了误判对新连边形成的大部分预测信息，对连边消失的解释较弱。图 4 的中心性结果也取决于初始网络位置，是观测关联。"
+        ],
+        "en": [
+          "Read Figs. 1 and 2 together. Mutual nominations define observed friendships. Third-party assessments of the same pairs forecast later changes. In the primary analysis, friendship formed for 6.76% of pairs mistakenly judged to be friends versus 2.38% of pairs correctly judged to be nonfriends. Read the relative gain alongside the absolute rates.",
+          "Fig. 3 separates the two prediction tasks. A participant-specific Katz model accounts for much of the formation signal, with weaker evidence for dissolution. The centrality patterns in Fig. 4 are observational and depend on starting network position."
+        ]
+      },
+      "reasons": [
+        {
+          "heading": {
+            "zh": "把网络测量与预测目标对齐",
+            "en": "Align the baseline graph with the outcome"
+          },
+          "text": {
+            "zh": "互相提名构造基准图，第三方判断提供独立观测。论文清楚交代判断、基准快照和结果快照的顺序，可借鉴来设计时序网络预测。",
+            "en": "The paper documents the order of the judgments, baseline snapshot and outcome snapshot. This is a useful design for separating perceived ties from their subsequent measured evolution."
+          }
+        },
+        {
+          "heading": {
+            "zh": "分别评估新增边与消失边",
+            "en": "Evaluate link formation and dissolution separately"
+          },
+          "text": {
+            "zh": "作者按事件分别报告绝对发生率，并用保持个人应答倾向的置换对照检验预测信号。消失预测在控制同质性后的稳健性较弱。",
+            "en": "Event-specific rates and within-rater permutations make it possible to compare the findings without conflating formation with loss. The dissolution signal was less robust to homophily controls."
+          }
+        },
+        {
+          "heading": {
+            "zh": "比较多步路径与较简单的结构基线",
+            "en": "Benchmark multistep paths against simpler structure"
+          },
+          "text": {
+            "zh": "研究将个体化 Katz 路径模型与共同朋友数、同质性和基准图上的 Katz 值比较。这样的基线有助于定位预测信息来自哪一层结构。",
+            "en": "The participant-specific Katz model is compared with mutual friends, homophily and Katz connectivity on the observed graph. Those comparisons help isolate where the predictive information resides."
+          }
+        }
+      ],
+      "audience": {
+        "zh": "研究时序社交网络、连边预测、网络认知或网络测量误差的读者。",
+        "en": "Readers studying temporal social networks, link prediction, social cognition or network measurement error."
+      },
+      "selection": "new_in_update",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "fulltext_review": {
+        "doi": "10.1126/sciadv.aeh9321",
+        "title": "Errors in social network knowledge predict how ties evolve in the future",
+        "version": "Science Advances Version of Record, 12(48), eaeh9321, published online 2026-11-25. The 13-page file contains 12 article pages and a publisher citation page.",
+        "source_url": "https://www.science.org/doi/10.1126/sciadv.aeh9321",
+        "source_kind": "user_provided_pdf",
+        "pages": 13,
+        "sha256": "fcd37062831e2957069fc49cd92f70a132951428258520f7c2bcdedea6bfb238",
+        "reviewed_at": "2026-11-26T01:23:35.911615+00:00",
+        "read_scope": "Read the published main text online: introduction, results, discussion, methods, four figure captions and data availability. Matched the user-provided Version of Record PDF against the publisher title, authors, DOI, online publication date and the results tied to Figs. 1–4. File has 12 article pages plus the publisher citation sheet. Separate supplement was not read and analyses were not independently reproduced."
+      },
+      "reading_caveat": {
+        "zh": "审读正式网页全文，并用用户提供的正式版 PDF 核对图 1–4 所对应的结果。文件为 12 页文章加 1 页出版方引文页。数据来自同一所大学三个宿舍的一届新生，主要由其中 100 人完成第三方判断。校外或宿舍外的人际关系未测量，中心性变化不能据此作因果解释。未审读独立补充文件，未独立复现。",
+        "en": "Read the published main text and checked the results associated with Figs. 1–4 against the Version of Record. The cohort came from three dormitories at one university, with 100 primary third-party raters. Ties outside the sampled setting were unmeasured, and centrality changes are observational. The separate supplement was not reviewed and the study was not independently reproduced."
+      },
+      "reviewed_at": "2026-11-26T01:23:35.911615+00:00",
+      "source_run": "reports/runs/2026-11-25-to-26-01",
+      "publication_sha256": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd",
+      "assessment_sha256": "b9db83e27143f6369471251451754650d633b369a9e60a49cbd5e06ae29b96b6",
+      "input_sha256": "aea2b8ca5a6b39c9d838b0d38321234d71e6360ba197453212ef3e0faf27aa59",
+      "evidence_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5"
     }
   ],
   "revisions": [

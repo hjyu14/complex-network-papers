@@ -603,9 +603,9 @@
         "network_inference",
         "network_structure"
       ],
-      "note_en": "Generalized network internal energy measures correlation leakage across partitions and connects multiscale community detection to modularity.",
-      "note_zh": "广义网络内能衡量分区间关联泄漏，将多尺度社区发现与模块度联系起来。",
-      "assessment_sha256": "4f671b5285f240af62556ba1a68983f638e4d40d5198b79e858e0cfea55a227d"
+      "note_en": "Multiscale leakage of network-flow correlations gives a partition criterion that reduces to modularity at zero diffusion time.",
+      "note_zh": "以网络流相关性在分区之间的泄漏刻画多尺度组织，零扩散时间下对应模块度。",
+      "assessment_sha256": "30e64124a0dfb9904e72e32be5b636f21959c824b81043e201d934ba8daf1037"
     },
     "10.1103/9q1j-dlw8": {
       "categories": [
@@ -2208,12 +2208,11 @@
     },
     "10.1103/ydgr-vs2w": {
       "categories": [
-        "network_resilience",
-        "network_collective"
+        "network_resilience"
       ],
-      "note_zh": "热力学响应约束与图论 coherence 判据给出复杂反应网络中简单局部反馈的稳定控制条件。",
-      "note_en": "Thermodynamic response constraints and graph coherence identify stable-control conditions for simple local feedback in complex reaction networks.",
-      "assessment_sha256": "d308673d3a50e51837d194ce6fac90c9b28cb6b8d9eef9f9886531fc7239b80d"
+      "note_en": "Graph coherence constrains steady-state responses and supports stable control with imperfect local feedback in Markov networks.",
+      "note_zh": "用图上的相干性约束马尔可夫网络的稳态响应，解释有限局部反馈何以维持稳定控制。",
+      "assessment_sha256": "7baf5357bdbfe7e69ed84d8dd4e7550482746dbe52377f0158c1dca241a3f48a"
     },
     "10.1073/pnas.2321155123": {
       "categories": [
@@ -2266,7 +2265,7 @@
       ],
       "note_zh": "连接组约束的模拟与网络剪枝识别果蝇步行的候选最小节律回路；三神经元必要充分性是模拟结果。",
       "note_en": "Connectome-constrained simulations and pruning identify a putative minimal walking rhythm circuit; the three-neuron necessity and sufficiency result is computational.",
-      "assessment_sha256": "e626367bf7086b05266086dc129da43da306dcbab9d30a0a770bc874672cf82d"
+      "assessment_sha256": "1f49127411aa9e5bf88ee58fb85181bbca15a585fe76fc7b143e62f00f4203af"
     },
     "10.1103/4vx7-ngvv": {
       "categories": [
@@ -2279,12 +2278,12 @@
     },
     "10.1103/dgxp-yq1g": {
       "categories": [
-        "network_inference",
-        "network_structure"
+        "network_structure",
+        "network_inference"
       ],
-      "note_zh": "按结构相似性发现节点角色，为机场与合作网络提供区别于社区划分的结构分解。",
-      "note_en": "Structural-similarity node roles reveal network decompositions that complement community analysis in airport and collaboration networks.",
-      "assessment_sha256": "aab9a88af0b98310bd1ad3177ab02e8cbbd99fd1c112080fcbe22afd63d286b7"
+      "note_en": "Topological roles uncover airport functions and shifts in legislative cosponsorship that complement community analysis.",
+      "note_zh": "用拓扑角色识别机场功能，以及议案联署模式的变化，为社群分析提供另一种结构视角。",
+      "assessment_sha256": "cf7313036368663969cc601efd3296b4e393016c62740290dee6ee9f37672892"
     },
     "10.1073/pnas.2610932123": {
       "categories": [
@@ -2442,12 +2441,11 @@
     },
     "10.1103/spjq-78dd": {
       "categories": [
-        "network_collective",
-        "network_resilience"
+        "network_collective"
       ],
-      "note_zh": "各向异性残基网络模型解释膜蛋白中无标度相关的方向重组，并以方向机械易感性刻画扰动响应。",
-      "note_en": "Anisotropic residue-network models explain directional reorganization of scale-free correlations in membrane proteins and quantify perturbation responses through directional mechanical susceptibility.",
-      "assessment_sha256": "3999d5e2a6bee7b4f7411e426ec523b32b877479f49108aa52d82bd94acb5d91"
+      "note_en": "Anisotropy reorganizes directional, scale-free correlations in residue-interaction networks and changes their local mechanical response.",
+      "note_zh": "膜的各向异性改变残基相互作用网络中无标度相关的方向分布及局部力学响应。",
+      "assessment_sha256": "bdaa2f4e74946efc05dbc8fd97adcf06c4881e9996635623a57385275aaf3048"
     },
     "10.1038/s41586-026-11177-0": {
       "categories": [
@@ -2522,9 +2520,9 @@
       "categories": [
         "network_collective"
       ],
-      "note_zh": "低秩循环神经网络连接将随机微分方程的漂移与扩散嵌入潜在流形，联系非对称耦合、不可逆动力学与记忆组织。",
-      "note_en": "Low-rank recurrent connectivity embeds stochastic differential-equation drift and diffusion in latent manifolds, connecting asymmetric coupling, irreversible dynamics and memory organization.",
-      "assessment_sha256": "af8c6350c734077ed8f77fd04cbe077a50abcd0df940b7965e30f3020f020521"
+      "note_en": "Recurrent connectivity embeds low-dimensional stochastic dynamics, with asymmetry helping explain transitions among latent states.",
+      "note_zh": "循环网络的连接结构可嵌入低维随机动力学，连接不对称性有助于解释潜在状态间的转换。",
+      "assessment_sha256": "db1f5ce54a97021d614bcf6106523c7213ca46ed57faf8159952620ab17db0ef"
     },
     "10.1038/s41467-026-78777-2": {
       "categories": [
@@ -2590,12 +2588,11 @@
     },
     "10.1103/dm26-5l3l": {
       "categories": [
-        "network_structure",
         "network_collective"
       ],
-      "note_zh": "人工自旋冰中的动力学约束分离畴壁状态类别，使转移网络拓扑而非仅能量决定可达性与非玻尔兹曼弛豫；当前为接收稿。",
-      "note_en": "Kinetic constraints in artificial spin ice disconnect domain-wall classes, making transition-network topology govern reachability and non-Boltzmann relaxation; currently accepted.",
-      "assessment_sha256": "34dd188cc11ffee69bfcf33d660a1f4835242b657fdbb2f129de24ece285ab93"
+      "note_en": "Missing connections between accessible domain-wall states explain kinetic isolation despite favorable energies in artificial spin ice.",
+      "note_zh": "人工自旋冰中，畴壁状态之间缺少可达转移，解释了能量上有利的通道为何仍无法完成弛豫。",
+      "assessment_sha256": "a6b2169b4c71c787bba531b4cede2e7aea450e008f3cc1f595f584db2f0a36c6"
     },
     "10.1038/s41467-026-77954-7": {
       "categories": [
@@ -2636,9 +2633,9 @@
         "network_structure",
         "network_collective"
       ],
-      "note_zh": "二维弹簧网络中，几何扰动与键翻转改变非仿射形变及泊松比；破坏Delaunay连接提供调节弹性与负泊松比的结构途径，当前为接收稿。",
-      "note_en": "Geometric distortion and bond flipping reshape non-affine response and Poisson ratio in two-dimensional spring networks; disrupting Delaunay connectivity enables tunable elasticity and auxeticity. Currently accepted.",
-      "assessment_sha256": "bac62510b1d293afd48ae2a60815d863ce9f5e7563a60d3d40e71a0ff00fa906"
+      "note_en": "Changing spring-network connectivity through bond flips links structural disorder to auxetic deformation.",
+      "note_zh": "通过翻转弹簧网络中的连边，解释结构无序如何改变形变并产生负泊松比。",
+      "assessment_sha256": "cb0d551755d163c20128f8e3d65ca1ea8488bb05f08af0054ac711b1a1fdc5c6"
     },
     "10.1103/m49t-nsyx": {
       "categories": [
@@ -3241,6 +3238,57 @@
       "note_zh": "用动力学平均场理论分析神经状态与突触权重共演的 Hopfield 网络，揭示适度可塑性改善记忆检索、过强时可能固化受损线索。",
       "note_en": "A dynamical mean-field analysis of a plastic Hopfield network links moderate plasticity to better retrieval and excessive plasticity to imprinting a degraded cue.",
       "assessment_sha256": "539d8954845a8e7c9c8f312d0854fdf5760f14a56c615b17bf5861b69f1ac1b5"
+    },
+    "10.1103/5cv4-f1kx": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_en": "A dynamical mean-field reduction links heavy-tailed recurrent couplings to population activity and its onset.",
+      "note_zh": "用动力学平均场降维刻画重尾耦合循环网络的群体活动及其起始阈值。",
+      "assessment_sha256": "2083aa3a0af1b4888011a41d9f06c7223d0501bb10ece2370de9c33b2b7b43bd"
+    },
+    "10.1126/sciadv.aee6574": {
+      "categories": [
+        "network_structure"
+      ],
+      "note_en": "Genome duplication offers a natural comparison of how regulatory connections are retained or reorganized during evolution.",
+      "note_zh": "利用基因组加倍这一自然演化事件，比较调控联系如何保留或重组。",
+      "assessment_sha256": "be1a57d44f83bddbf557d8967e9ecc833a0728d93c6262f32bd6a18c847c93ee"
+    },
+    "10.1103/dhmz-wlwh": {
+      "categories": [
+        "network_collective"
+      ],
+      "note_en": "Cycle affinity and eigenvector winding constrain the oscillation and decay rates of Markov network dynamics.",
+      "note_zh": "用环路亲和力和特征向量的绕转约束马尔可夫网络动力学的振荡与衰减速率。",
+      "assessment_sha256": "001ced36355ea6de2d2019f9f9f452121126c8e8327d976eeb2d384d9d049cae"
+    },
+    "10.1103/pjtm-wk9m": {
+      "categories": [
+        "network_collective",
+        "network_inference"
+      ],
+      "note_en": "In simulated oscillator networks, phase measurements at selected sentinel nodes provide early warnings of a synchronization transition.",
+      "note_zh": "在模拟振子网络中，利用选定哨兵节点的相位信息预警同步转变。",
+      "assessment_sha256": "d4645e2b1670a3d85cb9e64c7954f5ab69b0cbbfadf146bce7d2ffb72dee124f"
+    },
+    "10.1126/sciadv.aeh9321": {
+      "categories": [
+        "network_structure",
+        "network_inference"
+      ],
+      "note_en": "In a longitudinal student cohort, errors about current friendships carry information about which ties appear or disappear later.",
+      "note_zh": "在纵向追踪的学生社交网络中，对当下友谊的误判含有未来连边形成与消失的信息。",
+      "assessment_sha256": "b9db83e27143f6369471251451754650d633b369a9e60a49cbd5e06ae29b96b6"
+    },
+    "10.1103/z6d3-mb2d": {
+      "categories": [
+        "network_spreading",
+        "network_collective"
+      ],
+      "note_en": "Simulations link the connectivity of a spanning polar-domain backbone and its fractal organization to reversible material strain.",
+      "note_zh": "模拟把贯通极化畴骨架的连通性和分形组织，与材料的可逆应变联系起来。",
+      "assessment_sha256": "b3ce401cf33fd7e2456908e8354d017e25d83e9bea6178bfc86efe46a21d425c"
     }
   }
 }
