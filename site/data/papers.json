@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-26T01:30:35.263393+00:00",
+  "generated_at": "2026-11-27T02:55:41.943801+00:00",
   "window_start": "2026-09-01",
-  "window_end": "2026-11-26",
-  "window_days": 87,
+  "window_end": "2026-11-27",
+  "window_days": 88,
   "release_kind": "reviewed_multi_run_snapshot",
   "screening_version": "newflow-1",
   "config_sha256": "7b1905a2f8293293caacfdd6e4f9f25a97714ced33bf14e4c7a7bbc21fba9931",
   "current_rule_sha256": null,
   "screening_log_sha256": null,
-  "reading_notes_sha256": "d358ac2b057c7bef80b32184c24741dc70999f29656ca40a9beb3989ebb6c30f",
-  "author_metadata_sha256": "082bb647c86e61ae27f6a39c0920cffbabd2bb9a58ba0e5561e9c98f4d3345fa",
+  "reading_notes_sha256": "268438a755308a1d8f67569b3f4da62a23d81bee7067123392bc85b40a80b321",
+  "author_metadata_sha256": "af4e7259c8eff141d11c84b2dbb9fa819c0f03c00761dadfa8160e3ce93633f4",
   "run_inputs": [
     {
       "run": "reports/runs/2026-09",
@@ -3904,9 +3904,53 @@
       },
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": false
+    },
+    {
+      "run": "reports/runs/2026-11-26-to-27-01",
+      "config_sha256": "b1b2e211253edb1c5be4d988f14b4816f84049950ac7037d0adf489cbdf6cf96",
+      "window_start": "2026-11-26",
+      "window_end": "2026-11-27",
+      "rule_sha256": "274bd5c3cd3bccd6341816e21c221c644d7451490baeb37b58876c817f47cc7c",
+      "screening_log_sha256": "2e4f26a92f0e06ea34af467369c7435ffbf8382185af0df6b6b8c379a45db55b",
+      "candidate_sha256": "659b6ab97cafdae2c1c11a5b749e1db58b55520a4f18454675a6b0cc98f8c971",
+      "author_metadata_sha256": "875c0e6d43a2365845992d65557405073677e02dc185386ecfa54233e6ecc1e9",
+      "run_manifest_sha256": "ad9a1883a4bb3bc55f42ca487236f8bcb71d357c28ef93d6b46ecd7b4f175c60",
+      "assessment_sources": {
+        "version": "flat-publication-1",
+        "inventory": {
+          "run": "reports/runs/2026-11-26-to-27-01",
+          "files": {
+            "candidates.json": "659b6ab97cafdae2c1c11a5b749e1db58b55520a4f18454675a6b0cc98f8c971",
+            "coverage.json": "6e8e8bdae41823d683defdde338759673586f4f4a622bc60e0475fc96bea2447",
+            "collection-log.jsonl": "94a6675a70c16c1e54b356c6bbf472069a09ee2f8306becc293a9e9fc84907bd",
+            "screening-log.jsonl": "424e72603fbc3e51c2250e2ada1636bff3aa7a51316d58ae5845ec9bc1c5ce44",
+            "inputs/manifest.json": "1336316f72cc4dbd49937117182e4b3b70aed1bc289721ec25f8a077a9257bad",
+            "inputs/sources.json": "781ec46d8183f93daca73c2fa2fa04d075b804b71972c67554b05aa57818b91b",
+            "inputs/screening-protocol.md": "a384e552beb7bdca660bb4dab11a41ffa7724e4484c98cbf4d923501c940ce18"
+          },
+          "candidate_sha256": "659b6ab97cafdae2c1c11a5b749e1db58b55520a4f18454675a6b0cc98f8c971",
+          "rule_sha256": "274bd5c3cd3bccd6341816e21c221c644d7451490baeb37b58876c817f47cc7c",
+          "screening_log_sha256": "2e4f26a92f0e06ea34af467369c7435ffbf8382185af0df6b6b8c379a45db55b"
+        },
+        "revisions": [],
+        "authors": {
+          "file": "author-metadata.json",
+          "metadata_sha256": "875c0e6d43a2365845992d65557405073677e02dc185386ecfa54233e6ecc1e9",
+          "audit": {
+            "path": "reports/runs/2026-11-26-to-27-01/screening-log.jsonl",
+            "sha256": "424e72603fbc3e51c2250e2ada1636bff3aa7a51316d58ae5845ec9bc1c5ce44"
+          }
+        },
+        "carryover_audit": {
+          "file": "evidence/cross-run-audit.json",
+          "sha256": "02fce5f787dd656151749e2cacc4660bf5ccfdca642f403a2dda38065e4880c3"
+        }
+      },
+      "candidate_inventory_complete": true,
+      "metadata_reconciliation_complete": false
     }
   ],
-  "author_available_count": 386,
+  "author_available_count": 388,
   "source": "Explicit journal inventory runs and traced screening decisions",
   "categories": [
     {
@@ -4056,8 +4100,8 @@
   "coverage": [
     {
       "journal": "Nature",
-      "candidate_count": 1146,
-      "publisher_verified_inventory_count": 1146,
+      "candidate_count": 1151,
+      "publisher_verified_inventory_count": 1151,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -4598,13 +4642,22 @@
           "publisher_verified_inventory_count": 50,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "Nature",
+          "candidate_count": 5,
+          "publisher_verified_inventory_count": 5,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "Science",
-      "candidate_count": 497,
-      "publisher_verified_inventory_count": 497,
+      "candidate_count": 530,
+      "publisher_verified_inventory_count": 530,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5111,13 +5164,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "Science",
+          "candidate_count": 36,
+          "publisher_verified_inventory_count": 36,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": false
         }
       ]
     },
     {
       "journal": "NC",
-      "candidate_count": 2416,
-      "publisher_verified_inventory_count": 2408,
+      "candidate_count": 2435,
+      "publisher_verified_inventory_count": 2427,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -5615,13 +5677,22 @@
           "publisher_verified_inventory_count": 32,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "NC",
+          "candidate_count": 19,
+          "publisher_verified_inventory_count": 19,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "NMI",
-      "candidate_count": 35,
-      "publisher_verified_inventory_count": 35,
+      "candidate_count": 37,
+      "publisher_verified_inventory_count": 37,
       "candidate_inventory_complete": true,
       "metadata_reconciliation_complete": true,
       "windows": [
@@ -6117,6 +6188,15 @@
           "journal": "NMI",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "NMI",
+          "candidate_count": 2,
+          "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -6618,6 +6698,15 @@
         {
           "window_start": "2026-11-25",
           "window_end": "2026-11-26",
+          "journal": "NCS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
           "journal": "NCS",
           "candidate_count": 0,
           "publisher_verified_inventory_count": 0,
@@ -7127,6 +7216,15 @@
           "publisher_verified_inventory_count": 7,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "PRX",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -7629,6 +7727,15 @@
           "journal": "PRL",
           "candidate_count": 34,
           "publisher_verified_inventory_count": 34,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "PRL",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -8135,6 +8242,15 @@
           "publisher_verified_inventory_count": 44,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": false
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "SA",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -8637,6 +8753,15 @@
           "journal": "PNAS",
           "candidate_count": 23,
           "publisher_verified_inventory_count": 23,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "PNAS",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -9143,13 +9268,22 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "CP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
     {
       "journal": "PRResearch",
-      "candidate_count": 501,
-      "publisher_verified_inventory_count": 501,
+      "candidate_count": 508,
+      "publisher_verified_inventory_count": 508,
       "candidate_inventory_complete": false,
       "metadata_reconciliation_complete": false,
       "windows": [
@@ -9645,6 +9779,15 @@
           "journal": "PRResearch",
           "candidate_count": 11,
           "publisher_verified_inventory_count": 11,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "PRResearch",
+          "candidate_count": 7,
+          "publisher_verified_inventory_count": 7,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
         }
@@ -10151,6 +10294,15 @@
           "publisher_verified_inventory_count": 23,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "PRE",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -10655,6 +10807,15 @@
           "publisher_verified_inventory_count": 0,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "Chaos",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     },
@@ -11114,44 +11275,41 @@
           "publisher_verified_inventory_count": 2,
           "candidate_inventory_complete": true,
           "metadata_reconciliation_complete": true
+        },
+        {
+          "window_start": "2026-11-26",
+          "window_end": "2026-11-27",
+          "journal": "NP",
+          "candidate_count": 0,
+          "publisher_verified_inventory_count": 0,
+          "candidate_inventory_complete": true,
+          "metadata_reconciliation_complete": true
         }
       ]
     }
   ],
-  "candidate_count": 9111,
+  "candidate_count": 9177,
   "screening_counts": {
-    "excluded": 8723,
-    "core": 336,
+    "excluded": 8787,
+    "core": 338,
     "transferable_application": 50,
     "aps_accepted_awaiting_publication": 2,
     "review": 0,
     "deferred_unassessed": 0,
-    "included": 386
+    "included": 388
   },
   "published_count": 334,
-  "accepted_count": 52,
+  "accepted_count": 54,
   "latest_update": {
-    "run": "reports/runs/2026-11-25-to-26-01",
-    "reviewed_at": "2026-11-26T00:33:30.683957+00:00",
-    "newly_included_count": 6,
+    "run": "reports/runs/2026-11-26-to-27-01",
+    "reviewed_at": "2026-11-27T02:48:27.322744+00:00",
+    "newly_included_count": 2,
     "newly_included_dois": [
-      "10.1103/5cv4-f1kx",
-      "10.1103/dhmz-wlwh",
-      "10.1103/pjtm-wk9m",
-      "10.1103/z6d3-mb2d",
-      "10.1126/sciadv.aee6574",
-      "10.1126/sciadv.aeh9321"
+      "10.1103/4zps-v22g",
+      "10.1103/v6rn-hyp7"
     ],
-    "accepted_to_published_count": 7,
-    "accepted_to_published_dois": [
-      "10.1103/9mgt-48mf",
-      "10.1103/dgxp-yq1g",
-      "10.1103/dm26-5l3l",
-      "10.1103/html-hr8z",
-      "10.1103/r397-cxtl",
-      "10.1103/spjq-78dd",
-      "10.1103/ydgr-vs2w"
-    ],
+    "accepted_to_published_count": 0,
+    "accepted_to_published_dois": [],
     "aps_accepted_awaiting_publication_dois": [
       "10.1103/mv7d-n229",
       "10.1103/xcv2-qlby"
@@ -11165,6 +11323,165 @@
     "Assistant screening of authorized evidence and explicit user decisions; not full-text expert review."
   ],
   "papers": [
+    {
+      "doi": "10.1103/v6rn-hyp7",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/v6rn-hyp7",
+      "title": "Matrix-product belief propagation for continuous-state-space variables",
+      "authors": [
+        "Federico Florio",
+        "Alfredo Braunstein"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "3429aa253c9fcda88d63e833a4e48a270385fb7700eca8865151cdc7f859a1e3",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2Fv6rn-hyp7",
+      "author_retrieved_at": "2026-11-27T02:34:47.279656+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-26",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-26",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/v6rn-hyp7",
+          "https://journals.aps.org/prresearch/accepted?page=1"
+        ],
+        "accepted_date": "2026-11-26"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-26",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The explicit accepted abstract introduces a new algorithm, gives computational scaling for sparse tree-like networks, and reports a quantitative Monte Carlo comparison.",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/v6rn-hyp7",
+          "https://journals.aps.org/prresearch/accepted?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "361e301fe2929f1c666995830e7ccbca4c90c07d79bfe15fa350befa833de416",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective",
+        "network_inference"
+      ],
+      "scope_class": "core",
+      "note_en": "A tunable basis expansion extends matrix-product belief propagation on sparse networks to continuous or mixed variables, with checks on kinetic Ising dynamics.",
+      "note_zh": "用可调函数基展开，将稀疏网络上的矩阵乘积置信传播推广到连续或混合变量，并在动力学伊辛模型上核验。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "712050d3a64f29128201dff716661a1a060c41643729068273353d2bf8afe653",
+      "input_sha256": "14c92ca42b252e42143b80fdfc97d28c25ffa0cf1b52e2993094a7635022ab30",
+      "material_sha256": "361e301fe2929f1c666995830e7ccbca4c90c07d79bfe15fa350befa833de416",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "361e301fe2929f1c666995830e7ccbca4c90c07d79bfe15fa350befa833de416",
+      "rule_sha256": "274bd5c3cd3bccd6341816e21c221c644d7451490baeb37b58876c817f47cc7c",
+      "featured": null,
+      "evidence": [
+        "A tunable basis expansion extends matrix-product belief propagation to continuous variables and estimates trajectories and rare events in a kinetic Ising network."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2Fv6rn-hyp7",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/v6rn-hyp7",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
+    {
+      "doi": "10.1103/4zps-v22g",
+      "url": "https://journals.aps.org/prresearch/accepted/10.1103/4zps-v22g",
+      "title": "Fractalization of basin boundaries in coupled phase oscillators",
+      "authors": [
+        "Jin Yan",
+        "Ayumi Ozawa",
+        "Hiroshi Kori",
+        "Yuzuru Sato"
+      ],
+      "author_metadata_status": "available",
+      "author_metadata_sha256": "f19b1b0093e051d712eec85516083692f8b03bedbd2400607d013eb32eec16bf",
+      "author_source_url": "https://api.crossref.org/works/10.1103%2F4zps-v22g",
+      "author_retrieved_at": "2026-11-27T02:34:45.509766+00:00",
+      "author_basis": "crossref.author; DOI, normalized title and whitelist ISSN matched",
+      "journal": "Physical Review Research",
+      "journal_short": "PRResearch",
+      "issns": [
+        "2643-1564"
+      ],
+      "date": "2026-11-26",
+      "date_source": "publisher.accepted",
+      "date_provenance": {
+        "status": "verified",
+        "value": "2026-11-26",
+        "basis": "publisher.accepted",
+        "publication_status": "accepted",
+        "published_date": null,
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/4zps-v22g",
+          "https://journals.aps.org/prresearch/accepted?page=1"
+        ],
+        "accepted_date": "2026-11-26"
+      },
+      "publication_status": "accepted",
+      "accepted_date": "2026-11-26",
+      "published_date": null,
+      "article_type": null,
+      "type_provenance": {
+        "status": "verified",
+        "value": null,
+        "basis": "The publisher's accepted abstract states the original basin and transient analysis for the nearest-neighbor coupled system and gives the resulting scaling trend.",
+        "sources": [
+          "https://journals.aps.org/prresearch/accepted/10.1103/4zps-v22g",
+          "https://journals.aps.org/prresearch/accepted?page=1"
+        ],
+        "basis_kind": "explicit_abstract_research_inference",
+        "research_nature": "original_research",
+        "material_sha256": "88ebf47edda095e3702cc6cf72a2cf994b16c3618699fc3212aabcff57b0b5d2",
+        "special_type_check": "clear",
+        "specific_subtype": null,
+        "subtype_status": "not_required_for_inclusion"
+      },
+      "categories": [
+        "network_collective"
+      ],
+      "scope_class": "core",
+      "note_en": "In nearest-neighbor phase oscillators, increasing phase lag makes the basins of twisted states more intricate and produces long-lived transients.",
+      "note_zh": "在最近邻耦合的相位振子中，增大相位滞后会使扭转态吸引盆边界更复杂，并产生长寿命瞬态。",
+      "scope_authority": "assistant_abstract_screening",
+      "editorial_support_sha256": null,
+      "assessment_sha256": "2cd55444f8df3f4bd57bf6f917aa082ccc8d9ccb24a032a400a9b75c688937c2",
+      "input_sha256": "f171af09b778355400c8271af3b874ba92957fa49fff8bca1b7a6e9ba754998f",
+      "material_sha256": "88ebf47edda095e3702cc6cf72a2cf994b16c3618699fc3212aabcff57b0b5d2",
+      "review_evidence_kind": "abstract",
+      "review_basis": "title, explicit abstract and bibliographic evidence; assistant screening, not full-text expert review",
+      "review_evidence_sha256": "88ebf47edda095e3702cc6cf72a2cf994b16c3618699fc3212aabcff57b0b5d2",
+      "rule_sha256": "274bd5c3cd3bccd6341816e21c221c644d7451490baeb37b58876c817f47cc7c",
+      "featured": null,
+      "evidence": [
+        "Increasing phase lag makes basin boundaries of twisted states increasingly intricate and produces long transients even before the conservative limit."
+      ],
+      "metadata_url": "https://api.crossref.org/works/10.1103%2F4zps-v22g",
+      "evidence_url": "https://journals.aps.org/prresearch/accepted/10.1103/4zps-v22g",
+      "source": "Crossref and verified publisher/user evidence",
+      "retrieved_by": [
+        "Explicitly selected journal inventories; DOI-bound reviewed evidence"
+      ],
+      "screening_version": "newflow-1"
+    },
     {
       "doi": "10.1126/sciadv.aeh9321",
       "url": "https://doi.org/10.1126/sciadv.aeh9321",
@@ -45283,9 +45600,167 @@
         "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
       ],
       "audit_sha256": "1bddc5687cf240fc601ff7f1542176086b1fa9839e7ab01378a5253c80a4fa9f"
+    },
+    {
+      "current_run": "reports/runs/2026-11-26-to-27-01",
+      "candidate_sha256": "659b6ab97cafdae2c1c11a5b749e1db58b55520a4f18454675a6b0cc98f8c971",
+      "previous_publications": {
+        "reports/runs/2026-09": "d7aa21c1c69ddfdeec8bb5ec57a64dfcd21e680507bc4992c9d143dec98b4aac",
+        "reports/runs/2026-09-expansion-01": "0cf57ba8a1e9bc05401576c10ba97285350e7fe163200e917decf5922e3f369e",
+        "reports/runs/2026-10-01-to-05-01": "0697a9139931667ca802f81eea2f8034661671c52cdb8f22e65bee8be761936e",
+        "reports/runs/2026-10-06-01": "63a924d0841bbbcf1c292337bbeb11bd8261466aeb20124b4ad842f5e7c936af",
+        "reports/runs/2026-10-05-to-06-carryover-01": "97eb3c1939c32d7bab8f27277a0de717a35aceee84a866053f143ec34c32a297",
+        "reports/runs/2026-10-06-to-07-01": "53c0febe4453aeef5637398099a5c1699e5ef1b64625bf544c1a17ff3ead75a9",
+        "reports/runs/2026-10-07-to-08-02": "be4b15d3ed032f8e2f36fbbd4bc495255a7b14649c435c26aee23414b86db8a8",
+        "reports/runs/2026-09-01-to-10-08-np-01": "95437a868684d968d7d52fe234660afbf9d09f22066bb8ce059690d40d75fe8c",
+        "reports/runs/2026-10-08-to-09-02": "3e68111e5b663d18d66af9769d3c7008ffd1d19e17e54e6cc145ce49f07f246f",
+        "reports/runs/2026-10-09-to-10-01": "66aadf1a83ea8e543ad2866883a434842dbadd4191edda22adb9f5f759b47edf",
+        "reports/runs/2026-10-10-to-11-01": "df34ae38c540b280c8031ef8ed185c1fc9ad99b1836784b0f3bdb627ceb28189",
+        "reports/runs/2026-10-11-to-12-02": "9c45f5863107e377595afae63d8ea1b0e75468c16898974c8ab13cd03e853a39",
+        "reports/runs/2026-10-12-to-13-03": "2a405f46e1d295e3a8a36bf08ff7857fb8a22042dea5892d5dd25059ed24ca32",
+        "reports/runs/2026-10-13-to-14-01": "24a936e56da094886799247fcc3fae5767ca1e6677d6e01c15b4d880aced5ad5",
+        "reports/runs/2026-10-14-to-15-01": "6d38d1c968ba807694b0ec0166e7891b5d1ce35104f34f3acd2bf4a262b0e0a8",
+        "reports/runs/2026-10-15-to-16-01": "12b03338adfccbea8188169dccf523fc78774c6b2f485e4a511bea7bd2937a81",
+        "reports/runs/2026-10-16-to-17-01": "9132cb83a7ea6587cd3d4db325e0c68a1334906ddca7cb571046f46cc85d5604",
+        "reports/runs/2026-10-17-to-18-01": "7d0fc2898de84f7650d7f0e2200e2b982ceba1a42372c95bd10e990c98ef703d",
+        "reports/runs/2026-10-18-to-19-01": "5cadc177123c01defcbaf915e0de25f697a01b06ace73a5a2c07f576d6e0c945",
+        "reports/runs/2026-10-19-to-20-01": "5b1de1f7bbf33ab5d1a61407ea55b86ab31aba549c84c0d91ca408a7e69065f0",
+        "reports/runs/2026-10-20-to-21-01": "578f3a6d1fec9ad96b3d2c4be48858c155bfde641ccf41eb834f255d75a5e323",
+        "reports/runs/2026-10-21-to-22-01": "3d317bb6f270f83455cbe18bb930800ca7aaf8881e3d99c69018b2f1f916a8d9",
+        "reports/runs/2026-10-22-to-23-01": "dde7d3e47953c8cd228190763bd4e91ccafdf6fa38fb6867d0b8570aac26cad3",
+        "reports/runs/2026-10-23-to-24-01": "6edf48904c773741696b500bd23eb1ec84b4ef61ca5b6916c0c80ebcf2c55de0",
+        "reports/runs/2026-10-24-to-25-01": "307ea97da17a73f6db8eb576b0695ef280a552f077898f22bbf5aa4f0ac3981c",
+        "reports/runs/2026-10-25-to-26-01": "b9a736a44fff052686b2c957303782282a33b10f7741e59b0dd13d5249dfc1ac",
+        "reports/runs/2026-10-26-to-27-01": "fb9c44c86537c653e37b39c9c0a15c76f3c5af2d826f911c9c112a84e84d1057",
+        "reports/runs/2026-10-27-to-28-02": "986b5def0dce2dc52f2eee5b506a4a157fdbca10641a063a21596dce074dd8c5",
+        "reports/runs/2026-10-21-to-28-nature-backfill-01": "24bf9c03f3e5b8bd40f6c2e973a42298356fbbe084c2c711099cfdb1e2beff31",
+        "reports/runs/2026-10-28-to-29-01": "181b4987dce9fcdc0d4e38c833fd0ec37d51f247b58bea85eddda112289192fd",
+        "reports/runs/2026-10-29-to-30-01": "16a717d6a0c5d5e364a9ddd7c6d5ce2ff67971aedc37c587cef7630d8d458293",
+        "reports/runs/2026-10-30-to-31-02": "104acce3b61ab944a261fea31e248b4576b02c580b548c8ceeadd6d865aedfe2",
+        "reports/runs/2026-10-31-to-11-01-01": "ad77218e95a6c8cb378854ad6a743bba3176173917fbe7b5ed863e7044582dce",
+        "reports/runs/2026-11-01-to-02-01": "7d96cf2079d345cc457b772d064b17fa99d588b164ef59ba076908764d8421a4",
+        "reports/runs/2026-11-02-to-03-01": "8251199bf9436150d873221ef72edd49ea4f283c2632ef5ea9f7d7568954ba49",
+        "reports/runs/2026-11-03-to-04-01": "433287647538c2939372fed91f9361ab4b59cee5298a109cd93066d15562abc3",
+        "reports/runs/2026-11-04-to-05-01": "57aa0bfe8a4af5e804d6a5704e4252b13d7697975d4c3ca89e5cc86b8e63f595",
+        "reports/runs/2026-11-05-to-06-01": "f89dd33bf47c57845c93cbb0c21c847584c53a7f4b14a700381f509c70aa4a8d",
+        "reports/runs/2026-11-06-to-07-01": "f044624cc4947568249399d1360fd2547141af19a6b51877f01d18ac877cddba",
+        "reports/runs/2026-11-07-to-08-01": "7b82dd83c8b5e889fea2a05538f82ea17a41e2d879d609f4cee34d46a075ddd1",
+        "reports/runs/2026-11-08-to-09-02": "438bdeca6b9a3255acb44180d9a235177e0e21dc255dad5ed8d1110fed09b5df",
+        "reports/runs/2026-11-08-to-10-science-backfill-01": "6521b7cc928632151076ea26069d9c4b354f9281252e7a4c29bcc5b09051732c",
+        "reports/runs/2026-11-09-to-10-02": "437a33962e541e96b88f6794bc8c136926514a01520ff18949b2c211cec85280",
+        "reports/runs/2026-11-10-to-11-01": "dbbd5053a1b70a1978331a79f3491e7744140e5003bb704d01fce2acb35d7df0",
+        "reports/runs/2026-11-02-nature-backfill-01": "9030cf9957bd03da604c10f6a6d7fde0b79588dd42ecb2a2c9a4e1875dde818e",
+        "reports/runs/2026-11-11-to-12-01": "ad4a08ed83bdac33ac21128c6922cf1aca85dc20be26d30c56f0d64c7616ed1d",
+        "reports/runs/2026-11-12-to-13-01": "eddca5e40dd67dd57467db78009e6343290e10eaea907abd39dda30a4a329b54",
+        "reports/runs/2026-11-13-to-14-01": "7ebccfe7954480128dae2fdb71710c3fb77e6bde3d9cd31f0a9ded01390f45bc",
+        "reports/runs/2026-11-14-to-15-01": "f626264fd87ce9b8178e40c8ea717defc58604232f72d242ae5bbecbeed45301",
+        "reports/runs/2026-11-15-to-16-01": "20b9b4dabd85722d9401a2eee31e5e8c2eea0088fb49f52070ca65047e002be8",
+        "reports/runs/2026-11-16-to-17-01": "7de06630294d7ca99b4963fad7fd5d5332ab2f35ef7d8d5bcd031b11cf60caf6",
+        "reports/runs/2026-11-17-to-18-02": "b02968c95dbaf36de81bddd434c6e824d7ab757a9bb542cef48e2db2fc03827c",
+        "reports/runs/2026-11-11-to-12-nature-backfill-01": "c6e62a2cdb8593a7326d63ee4fbd658192e104d8d611f9e553de6f1e35ef26ef",
+        "reports/runs/2026-11-18-to-19-01": "67a6755feab9f9f22a9c7c4199b43a543a0d8d84a92f6e5cea8868aa4ea0a1ed",
+        "reports/runs/2026-11-19-to-20-01": "cda85df6eba4993d2297eb038848314f195f0245eef1b9c53e9549f9000ffdbb",
+        "reports/runs/2026-11-20-to-21-01": "e01776f44cc4dc33405decce591c4f09ad9be8b75fd4fc5cdecd4c27189342c3",
+        "reports/runs/2026-11-21-to-22-01": "143997f5d26feeb9be7b5978d9105bac5e18f4608426abef84f33166a60ff104",
+        "reports/runs/2026-11-22-to-23-01": "a9a7da63af08ff3285b749a91c66d4e446e4c75c7d5932b2eeeceb94b1c49da3",
+        "reports/runs/2026-11-23-to-24-01": "a83e7377a514dfc35e2e17408f7fd1d77918016260e4888d976478eca53b2409",
+        "reports/runs/2026-11-24-to-25-01": "d7db8a9eea094c97d2875916127d35d9428c8772b2114174d66c25472d564462",
+        "reports/runs/2026-10-28-nature-backfill-02": "c31d135095095543625dc63060843b721aa99bef203c9b80e5447093367876a0",
+        "reports/runs/2026-11-25-to-26-01": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd"
+      },
+      "counts": {
+        "in_window": 69,
+        "newly_reviewed": 66,
+        "historically_reviewed": 114,
+        "state_updates": 0,
+        "categories": {
+          "excluded": 67,
+          "core": 2
+        }
+      },
+      "limitations": [
+        "Coverage ends at recorded source retrieval times; short overlap does not guarantee detection of arbitrarily old backfills."
+      ],
+      "audit_sha256": "a45976b4fb01512b32bd6820063e6bb5a21ac14ec5bf9783016968d2c3de2951"
     }
   ],
   "daily_suggestions": [
+    {
+      "doi": "10.1103/dgxp-yq1g",
+      "recommended_on": "2026-11-27",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-25-to-26-01",
+      "publication_sha256": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd",
+      "assessment_sha256": "cf7313036368663969cc601efd3296b4e393016c62740290dee6ee9f37672892",
+      "input_sha256": "b994f60ff0858db45b381acf8d75a591b054990b2c71dd75820822435e7f8220",
+      "evidence_sha256": "e2983976251f2f18108d2b22c45774f06ef5539741baf8cdf39d609666773d4f",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-27T02:38:18.948325+00:00",
+      "question": {
+        "en": "How can we group nodes by the structural jobs they perform and detect changes in those roles across network snapshots?",
+        "zh": "怎样根据节点承担的结构角色进行分组，并从网络快照中识别这些角色的变化？"
+      },
+      "reasons": [
+        {
+          "heading": {
+            "en": "A second view of network structure",
+            "zh": "给社群划分补一张图"
+          },
+          "text": {
+            "en": "Combining a node’s own topology with means and variation among its neighbors reveals roles that can recur in distant parts of a graph. Comparing them with communities makes the difference interpretable.",
+            "zh": "把节点自身的拓扑特征与邻居特征的均值、离散程度合起来看，可以找到分布在网络远处却承担相似任务的节点。与社群结果并排看，更容易解释差异。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Airport hubs have different roles",
+            "zh": "同样是枢纽，角色也不同"
+          },
+          "text": {
+            "en": "The airport example separates a global backbone from a dense U.S. group even though both score high on centrality. Local connectivity and the links between role groups help explain the distinction.",
+            "zh": "机场案例把同样具有较高中心性的全球骨干和美国机场群区分开。比较局部连边和角色组之间的连接，可以看出它们各自承担的功能。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Compare roles across time",
+            "zh": "用角色比较历时网络"
+          },
+          "text": {
+            "en": "House cosponsorship snapshots show a sharp shift near the 104th Congress. Party composition within roles offers a structural diagnostic to compare with more gradual polarization measures.",
+            "zh": "美国众议院议案联署的历届快照在第 104 届前后发生明显变化。角色内部的两党比例提供了一个结构指标，可以与较为平缓的极化指标对照。"
+          }
+        }
+      ],
+      "audience": {
+        "en": "Readers studying structural equivalence, network reduction, or changes in collaboration between network snapshots.",
+        "zh": "适合研究结构等价、网络粗粒化或协作结构变化的读者。"
+      },
+      "reading_caveat": {
+        "en": "Read the 27-page version of record, including the results, figure captions, appendices and reference list. Examples use undirected, unweighted graphs. The role count is chosen for illustration and the observed legislative shift does not identify a causal mechanism. I did not rerun the analyses.",
+        "zh": "阅读了 27 页正式版的正文、图注、附录与参考文献表。实证使用无向无权图，角色数量为展示所选。联署结构的变化不能单独识别因果机制，此次未复现分析。"
+      },
+      "fulltext_review": {
+        "doi": "10.1103/dgxp-yq1g",
+        "title": "Node role discovery reveals novel structural decompositions and topological shifts in complex networks",
+        "sha256": "4b0d0c7710ed5966d41d673094e5b1004a43d062d32dda2288437a788313a02f",
+        "version": "Publisher Version of Record, Physical Review Research 8, 043197",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/dgxp-yq1g",
+        "source_kind": "publisher_fulltext",
+        "pages": 27,
+        "read_scope": "Publisher Version of Record, pages 1–27. Main text, figure captions, appendices A–G and reference list. External cited papers, data and code were not rerun or independently reviewed.",
+        "reviewed_at": "2026-11-27T02:38:18.948325+00:00"
+      },
+      "reading_comment": {
+        "en": [
+          "Start with the collaboration-network example in Fig. 2: its shell and peripheral roles can recur across different neighborhoods. Then compare the airport role maps and community map in Fig. 3. The comparison shows what is gained by building a coarse-grained graph around structural jobs."
+        ],
+        "zh": [
+          "建议先看图 2 的科研合作网络。拓扑角色能分出跨越不同邻域的外壳和外围节点。再对照图 3 的机场角色图和社群图，理解按结构功能粗粒化后，能读出哪些按地理邻近性分组时容易被忽略的联系。"
+        ]
+      }
+    },
     {
       "doi": "10.1126/sciadv.aeh9321",
       "recommended_on": "2026-11-26",
@@ -53224,6 +53699,82 @@
       "evidence_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5"
     },
     {
+      "doi": "10.1103/dgxp-yq1g",
+      "recommended_on": "2026-11-27",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-25-to-26-01",
+      "publication_sha256": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd",
+      "assessment_sha256": "cf7313036368663969cc601efd3296b4e393016c62740290dee6ee9f37672892",
+      "input_sha256": "b994f60ff0858db45b381acf8d75a591b054990b2c71dd75820822435e7f8220",
+      "evidence_sha256": "e2983976251f2f18108d2b22c45774f06ef5539741baf8cdf39d609666773d4f",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-27T02:38:18.948325+00:00",
+      "question": {
+        "en": "How can we group nodes by the structural jobs they perform and detect changes in those roles across network snapshots?",
+        "zh": "怎样根据节点承担的结构角色进行分组，并从网络快照中识别这些角色的变化？"
+      },
+      "reasons": [
+        {
+          "heading": {
+            "en": "A second view of network structure",
+            "zh": "给社群划分补一张图"
+          },
+          "text": {
+            "en": "Combining a node’s own topology with means and variation among its neighbors reveals roles that can recur in distant parts of a graph. Comparing them with communities makes the difference interpretable.",
+            "zh": "把节点自身的拓扑特征与邻居特征的均值、离散程度合起来看，可以找到分布在网络远处却承担相似任务的节点。与社群结果并排看，更容易解释差异。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Airport hubs have different roles",
+            "zh": "同样是枢纽，角色也不同"
+          },
+          "text": {
+            "en": "The airport example separates a global backbone from a dense U.S. group even though both score high on centrality. Local connectivity and the links between role groups help explain the distinction.",
+            "zh": "机场案例把同样具有较高中心性的全球骨干和美国机场群区分开。比较局部连边和角色组之间的连接，可以看出它们各自承担的功能。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Compare roles across time",
+            "zh": "用角色比较历时网络"
+          },
+          "text": {
+            "en": "House cosponsorship snapshots show a sharp shift near the 104th Congress. Party composition within roles offers a structural diagnostic to compare with more gradual polarization measures.",
+            "zh": "美国众议院议案联署的历届快照在第 104 届前后发生明显变化。角色内部的两党比例提供了一个结构指标，可以与较为平缓的极化指标对照。"
+          }
+        }
+      ],
+      "audience": {
+        "en": "Readers studying structural equivalence, network reduction, or changes in collaboration between network snapshots.",
+        "zh": "适合研究结构等价、网络粗粒化或协作结构变化的读者。"
+      },
+      "reading_caveat": {
+        "en": "Read the 27-page version of record, including the results, figure captions, appendices and reference list. Examples use undirected, unweighted graphs. The role count is chosen for illustration and the observed legislative shift does not identify a causal mechanism. I did not rerun the analyses.",
+        "zh": "阅读了 27 页正式版的正文、图注、附录与参考文献表。实证使用无向无权图，角色数量为展示所选。联署结构的变化不能单独识别因果机制，此次未复现分析。"
+      },
+      "fulltext_review": {
+        "doi": "10.1103/dgxp-yq1g",
+        "title": "Node role discovery reveals novel structural decompositions and topological shifts in complex networks",
+        "sha256": "4b0d0c7710ed5966d41d673094e5b1004a43d062d32dda2288437a788313a02f",
+        "version": "Publisher Version of Record, Physical Review Research 8, 043197",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/dgxp-yq1g",
+        "source_kind": "publisher_fulltext",
+        "pages": 27,
+        "read_scope": "Publisher Version of Record, pages 1–27. Main text, figure captions, appendices A–G and reference list. External cited papers, data and code were not rerun or independently reviewed.",
+        "reviewed_at": "2026-11-27T02:38:18.948325+00:00"
+      },
+      "reading_comment": {
+        "en": [
+          "Start with the collaboration-network example in Fig. 2: its shell and peripheral roles can recur across different neighborhoods. Then compare the airport role maps and community map in Fig. 3. The comparison shows what is gained by building a coarse-grained graph around structural jobs."
+        ],
+        "zh": [
+          "建议先看图 2 的科研合作网络。拓扑角色能分出跨越不同邻域的外壳和外围节点。再对照图 3 的机场角色图和社群图，理解按结构功能粗粒化后，能读出哪些按地理邻近性分组时容易被忽略的联系。"
+        ]
+      }
+    },
+    {
       "doi": "10.1103/pngx-s5xx",
       "recommended_on": "2026-10-06",
       "selection": "new_in_update",
@@ -53303,5 +53854,5 @@
       }
     }
   ],
-  "daily_suggestions_sha256": "0a36dd4225a3a4b03ddeba7b33586ba67ecad091144023cc3a0432d31c1ded83"
+  "daily_suggestions_sha256": "4571e2055898a74bb3a0b2ea3a3e41509e16d23d1faefd8ead365f902da7aaf6"
 }

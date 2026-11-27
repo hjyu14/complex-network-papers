@@ -3956,6 +3956,82 @@
       "assessment_sha256": "b9db83e27143f6369471251451754650d633b369a9e60a49cbd5e06ae29b96b6",
       "input_sha256": "aea2b8ca5a6b39c9d838b0d38321234d71e6360ba197453212ef3e0faf27aa59",
       "evidence_sha256": "700dae2e0c7744c6e67805df3666a25f50aa56fbe8bc3efb3e1f5ce6d0c415e5"
+    },
+    {
+      "doi": "10.1103/dgxp-yq1g",
+      "recommended_on": "2026-11-27",
+      "selection": "from_archive",
+      "source_run": "reports/runs/2026-11-25-to-26-01",
+      "publication_sha256": "905a433503264fdf17148325df2df4efc1110929d3bc867af8ee47d185d370bd",
+      "assessment_sha256": "cf7313036368663969cc601efd3296b4e393016c62740290dee6ee9f37672892",
+      "input_sha256": "b994f60ff0858db45b381acf8d75a591b054990b2c71dd75820822435e7f8220",
+      "evidence_sha256": "e2983976251f2f18108d2b22c45774f06ef5539741baf8cdf39d609666773d4f",
+      "review_evidence_kind": "fulltext",
+      "screening_evidence_kind": "abstract",
+      "reviewed_at": "2026-11-27T02:38:18.948325+00:00",
+      "question": {
+        "en": "How can we group nodes by the structural jobs they perform and detect changes in those roles across network snapshots?",
+        "zh": "怎样根据节点承担的结构角色进行分组，并从网络快照中识别这些角色的变化？"
+      },
+      "reasons": [
+        {
+          "heading": {
+            "en": "A second view of network structure",
+            "zh": "给社群划分补一张图"
+          },
+          "text": {
+            "en": "Combining a node’s own topology with means and variation among its neighbors reveals roles that can recur in distant parts of a graph. Comparing them with communities makes the difference interpretable.",
+            "zh": "把节点自身的拓扑特征与邻居特征的均值、离散程度合起来看，可以找到分布在网络远处却承担相似任务的节点。与社群结果并排看，更容易解释差异。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Airport hubs have different roles",
+            "zh": "同样是枢纽，角色也不同"
+          },
+          "text": {
+            "en": "The airport example separates a global backbone from a dense U.S. group even though both score high on centrality. Local connectivity and the links between role groups help explain the distinction.",
+            "zh": "机场案例把同样具有较高中心性的全球骨干和美国机场群区分开。比较局部连边和角色组之间的连接，可以看出它们各自承担的功能。"
+          }
+        },
+        {
+          "heading": {
+            "en": "Compare roles across time",
+            "zh": "用角色比较历时网络"
+          },
+          "text": {
+            "en": "House cosponsorship snapshots show a sharp shift near the 104th Congress. Party composition within roles offers a structural diagnostic to compare with more gradual polarization measures.",
+            "zh": "美国众议院议案联署的历届快照在第 104 届前后发生明显变化。角色内部的两党比例提供了一个结构指标，可以与较为平缓的极化指标对照。"
+          }
+        }
+      ],
+      "audience": {
+        "en": "Readers studying structural equivalence, network reduction, or changes in collaboration between network snapshots.",
+        "zh": "适合研究结构等价、网络粗粒化或协作结构变化的读者。"
+      },
+      "reading_caveat": {
+        "en": "Read the 27-page version of record, including the results, figure captions, appendices and reference list. Examples use undirected, unweighted graphs. The role count is chosen for illustration and the observed legislative shift does not identify a causal mechanism. I did not rerun the analyses.",
+        "zh": "阅读了 27 页正式版的正文、图注、附录与参考文献表。实证使用无向无权图，角色数量为展示所选。联署结构的变化不能单独识别因果机制，此次未复现分析。"
+      },
+      "fulltext_review": {
+        "doi": "10.1103/dgxp-yq1g",
+        "title": "Node role discovery reveals novel structural decompositions and topological shifts in complex networks",
+        "sha256": "4b0d0c7710ed5966d41d673094e5b1004a43d062d32dda2288437a788313a02f",
+        "version": "Publisher Version of Record, Physical Review Research 8, 043197",
+        "source_url": "https://journals.aps.org/prresearch/pdf/10.1103/dgxp-yq1g",
+        "source_kind": "publisher_fulltext",
+        "pages": 27,
+        "read_scope": "Publisher Version of Record, pages 1–27. Main text, figure captions, appendices A–G and reference list. External cited papers, data and code were not rerun or independently reviewed.",
+        "reviewed_at": "2026-11-27T02:38:18.948325+00:00"
+      },
+      "reading_comment": {
+        "en": [
+          "Start with the collaboration-network example in Fig. 2: its shell and peripheral roles can recur across different neighborhoods. Then compare the airport role maps and community map in Fig. 3. The comparison shows what is gained by building a coarse-grained graph around structural jobs."
+        ],
+        "zh": [
+          "建议先看图 2 的科研合作网络。拓扑角色能分出跨越不同邻域的外壳和外围节点。再对照图 3 的机场角色图和社群图，理解按结构功能粗粒化后，能读出哪些按地理邻近性分组时容易被忽略的联系。"
+        ]
+      }
     }
   ],
   "revisions": [
